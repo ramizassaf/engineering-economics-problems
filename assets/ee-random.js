@@ -68,10 +68,10 @@
       if (kind === 'example') {
         const title = it.title ? ': ' + EE.render(it.title.trim(), env) : '';
         html = md('**مثال ' + label + title + '**\n\n' + statement(it, env)) + figure(it, env) +
-               md('**الحل:**\n\n' + solution(it, env));
+               '<details class="ee-sol"><summary>إظهار الحل</summary>' + md(solution(it, env)) + '</details>';
       } else {
         html = md('**' + label + '** ' + statement(it, env)) + figure(it, env) +
-               '<details class="ee-sol"><summary>الحل بهذه الأرقام</summary>' + md(solution(it, env)) + '</details>';
+               '<details class="ee-sol"><summary>إظهار الحل</summary>' + md(solution(it, env)) + '</details>';
       }
       body.innerHTML = html;
       body.classList.add('ee-random');
