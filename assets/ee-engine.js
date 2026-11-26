@@ -23,8 +23,7 @@
     for (let t = 0; t < flows.length; t++) s += flows[t] / (1 + i) ** t;
     return s;
   };
-  const IRR = (flows) => {
-    let lo = -0.9, hi = 1.0;
+  const IRR = (flows, lo = -0.9, hi = 1.0) => {
     for (let k = 0; k < 100; k++) {
       const mid = (lo + hi) / 2;
       if (NPV(mid, flows) > 0) lo = mid; else hi = mid;

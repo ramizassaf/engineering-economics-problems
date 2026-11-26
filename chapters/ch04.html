@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; معدل العائد الداخلي – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch03.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-4-irr" id="toc-sec-4-irr" class="nav-link active" data-scroll-target="#sec-4-irr"><span class="header-section-number">4.1</span> تعريف المعدل وحسابه</a></li>
+  <li><a href="#sec-4-decision" id="toc-sec-4-decision" class="nav-link" data-scroll-target="#sec-4-decision"><span class="header-section-number">4.2</span> القبول والرفض</a></li>
+  <li><a href="#sec-4-incremental" id="toc-sec-4-incremental" class="nav-link" data-scroll-target="#sec-4-incremental"><span class="header-section-number">4.3</span> مقارنة البدائل: التحليل التزايدي</a></li>
+  <li><a href="#sec-4-multiple" id="toc-sec-4-multiple" class="nav-link" data-scroll-target="#sec-4-multiple"><span class="header-section-number">4.4</span> تعدد المعدلات</a></li>
+  <li><a href="#sec-4-mirr" id="toc-sec-4-mirr" class="nav-link" data-scroll-target="#sec-4-mirr"><span class="header-section-number">4.5</span> المعدل المعدل</a></li>
+  <li><a href="#sec-4-daily" id="toc-sec-4-daily" class="nav-link" data-scroll-target="#sec-4-daily"><span class="header-section-number">4.6</span> المعدل في الحياة اليومية</a></li>
+  <li><a href="#sec-4-bc" id="toc-sec-4-bc" class="nav-link" data-scroll-target="#sec-4-bc"><span class="header-section-number">4.7</span> نسبة المنفعة إلى التكلفة</a></li>
+  <li><a href="#sec-4-python" id="toc-sec-4-python" class="nav-link" data-scroll-target="#sec-4-python"><span class="header-section-number">4.8</span> Python: حساب المعدل بالتنصيف</a></li>
+  <li><a href="#sec-4-problems" id="toc-sec-4-problems" class="nav-link" data-scroll-target="#sec-4-problems"><span class="header-section-number">4.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-حساب-معدل-العائد-الداخلي" id="toc-الجزء-ب-حساب-معدل-العائد-الداخلي" class="nav-link" data-scroll-target="#الجزء-ب-حساب-معدل-العائد-الداخلي">الجزء ب: حساب معدل العائد الداخلي</a></li>
+  <li><a href="#الجزء-ج-القبول-والرفض" id="toc-الجزء-ج-القبول-والرفض" class="nav-link" data-scroll-target="#الجزء-ج-القبول-والرفض">الجزء ج: القبول والرفض</a></li>
+  <li><a href="#الجزء-د-التحليل-التزايدي-لبديلين" id="toc-الجزء-د-التحليل-التزايدي-لبديلين" class="nav-link" data-scroll-target="#الجزء-د-التحليل-التزايدي-لبديلين">الجزء د: التحليل التزايدي لبديلين</a></li>
+  <li><a href="#الجزء-هـ-أكثر-من-بديلين" id="toc-الجزء-هـ-أكثر-من-بديلين" class="nav-link" data-scroll-target="#الجزء-هـ-أكثر-من-بديلين">الجزء هـ: أكثر من بديلين</a></li>
+  <li><a href="#الجزء-و-تعدد-الحلول-والمعدل-المعدل" id="toc-الجزء-و-تعدد-الحلول-والمعدل-المعدل" class="nav-link" data-scroll-target="#الجزء-و-تعدد-الحلول-والمعدل-المعدل">الجزء و: تعدد الحلول والمعدل المعدل</a></li>
+  <li><a href="#الجزء-ز-نسبة-المنفعة-إلى-التكلفة" id="toc-الجزء-ز-نسبة-المنفعة-إلى-التكلفة" class="nav-link" data-scroll-target="#الجزء-ز-نسبة-المنفعة-إلى-التكلفة">الجزء ز: نسبة المنفعة إلى التكلفة</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch4" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>القيمة الحالية تعطي الجواب بالدينار. المديرون يسألون غالبا سؤالا آخر: كم نسبة العائد؟ معدل العائد الداخلي يجيب بنسبة مئوية يسهل مقارنتها بتكلفة التمويل أو بعائد البنك. في هذا الفصل تتعلم حسابه ومعناه، ثم ثلاثة أخطاء شائعة في استخدامه: الاختيار بأعلى معدل، وتجاهل تعدد المعدلات، وافتراض إعادة الاستثمار. في آخر الفصل قسم عن نسبة المنفعة إلى التكلفة، وهي الطريقة المستخدمة في المشاريع العامة.</p>
+<section id="sec-4-irr" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-4-irr"><span class="header-section-number">4.1</span> تعريف المعدل وحسابه</h2>
+<p>معدل العائد الداخلي هو النسبة التي تجعل القيمة الحالية للمشروع صفرا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>i</mi><mo>*</mo></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+\sum_{t=0}^{n} \frac{CF_t}{(1+i^*)^t} = 0
+</annotation></semantics></math></p>
+<p>المعادلة لا تحل مباشرة إلا في حالات بسيطة. باليد نجرب نسبا حتى تتغير إشارة القيمة الحالية، ثم نستكمل بين النسبتين. في Excel الدالة IRR تعمل ذلك تلقائيا.</p>
+<div id="ex-4-1" class="ee-item" data-id="c04-ex-irr-trial" data-kind="example" data-label="4.1">
+<p><strong>مثال 4.1: حساب المعدل بالتجربة والاستكمال</strong></p>
+<p>مشروع يكلف 60,000 دينار، ويعطي 14,000 دينار سنويا لمدة 6 سنوات، ثم يباع بقيمة 10,000 دينار. ما معدل العائد الداخلي؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch04-ex01.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>معدل العائد الداخلي هو النسبة i التي تجعل القيمة الحالية صفرا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>14</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+-60\mathord{,}000 + 14\mathord{,}000\,(P/A,\ i,\ 6) + 10\mathord{,}000\,(P/F,\ i,\ 6) = 0
+</annotation></semantics></math></p>
+<p>لا يوجد حل مباشر لهذه المعادلة، فنجرب نسبا حتى تتغير إشارة القيمة الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo stretchy="false" form="prefix">(</mo><mn>13</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>768.88</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><mi>W</mi><mo stretchy="false" form="prefix">(</mo><mn>14</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn><mi>,</mi><mn>002.79</mn></mrow><annotation encoding="application/x-tex">
+PW(13\%) = 768.88, \qquad PW(14\%) = -1\mathord{,}002.79
+</annotation></semantics></math></p>
+<p>الإشارة تتغير بين النسبتين، فالمعدل بينهما. نقدره بالاستكمال الخطي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≈</mo><mn>13</mn><mi>%</mi><mo>+</mo><mn>1</mn><mi>%</mi><mo>×</mo><mfrac><mn>768.88</mn><mrow><mn>768.88</mn><mo>−</mo><mi>−</mi><mn>1</mn><mi>,</mi><mn>002.79</mn></mrow></mfrac><mo>=</mo><mn>13.43</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i \approx 13\% + 1\% \times \frac{768.88}{768.88 - -1\mathord{,}002.79} = 13.43\%
+</annotation></semantics></math></p>
+<p>في Excel اكتب التدفقات من السنة 0 إلى السنة 6 في الخلايا من B1 إلى B7:</p>
+<pre class="excel"><code>=IRR(B1:B7)</code></pre>
+<p>في Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span><span class="dv">60000</span>] <span class="op">+</span> [ <span class="dv">14000</span> ] <span class="op">*</span> <span class="dv">5</span> <span class="op">+</span> [ <span class="dv">24000</span> ]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.irr(flows), <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>المعدل الدقيق 13.43%. الاستكمال يعطي تقديرا قريبا جدا لأن المسافة بين النسبتين صغيرة.</p>
+</div>
+<p>عندما يكون الدخل دفعات متساوية بدون قيمة بيع، تكفي الدالة RATE، أو جدول P/A في الملحق.</p>
+<div id="ex-4-2" class="ee-item" data-id="c04-ex-irr-annuity" data-kind="example" data-label="4.2">
+<p><strong>مثال 4.2: المعدل لدفعات متساوية</strong></p>
+<p>آلة تكلف 45,000 دينار وتوفر 11,000 دينار سنويا لمدة 6 سنوات بدون قيمة بيع. ما معدل العائد الداخلي؟</p>
+<p><strong>الحل:</strong></p>
+<p>القيمة الحالية صفر عندما يساوي المعامل P/A نسبة التكلفة إلى التوفير:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>45</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>11</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>4.0909</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ i,\ 6) = \frac{45\mathord{,}000}{11\mathord{,}000} = 4.0909
+</annotation></semantics></math></p>
+<p>في جدول P/A ابحث في عمود 6 سنوات عن القيمة الأقرب، ثم استكمل بين صفين. في Excel الدالة RATE تعطي الجواب مباشرة:</p>
+<pre class="excel"><code>=RATE(6, 11000, -45000)</code></pre>
+<p>المعدل 12.18%.</p>
+</div>
+<p>ما معنى المعدل بالضبط؟ هو العائد على المال الذي لم يسترد بعد في كل سنة، وليس على كامل الاستثمار طوال المدة.</p>
+<div id="ex-4-3" class="ee-item" data-id="c04-ex-unrecovered" data-kind="example" data-label="4.3">
+<p><strong>مثال 4.3: معنى المعدل: الرصيد غير المسترد</strong></p>
+<p>مشروع يكلف 10,000 دينار ويعطي 3,200 دينار سنويا لمدة 4 سنوات. معدل العائد الداخلي 10.66%. ابن جدولا يبين المبلغ غير المسترد من الاستثمار في نهاية كل سنة.</p>
+<p><strong>الحل:</strong></p>
+<p>نعامل المشروع كأنه قرض أعطته الشركة للمشروع بنسبة تساوي المعدل. كل سنة يضاف عائد على الرصيد، ويطرح الدخل:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الرصيد في البداية</th>
+<th>العائد على الرصيد</th>
+<th>الدخل</th>
+<th>الرصيد في النهاية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10,000.00</td>
+<td>1,066.15</td>
+<td>3,200.00</td>
+<td>7,866.15</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>7,866.15</td>
+<td>838.65</td>
+<td>3,200.00</td>
+<td>5,504.80</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5,504.80</td>
+<td>586.90</td>
+<td>3,200.00</td>
+<td>2,891.70</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2,891.70</td>
+<td>308.30</td>
+<td>3,200.00</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<p>الرصيد يصل إلى الصفر بالضبط في نهاية العمر. هذا هو معنى معدل العائد الداخلي: النسبة التي يكسبها المال الذي لم يسترد بعد. المعدل لا يقول إن كل الاستثمار يكسب هذه النسبة طوال المدة.</p>
+</div>
+<div id="ex-4-4" class="ee-item" data-id="c04-ex-irr-gradient" data-kind="example" data-label="4.4">
+<p><strong>مثال 4.4: المعدل لدخل متدرج</strong></p>
+<p>متجر جديد يكلف 40,000 دينار. صافي دخله 6,000 دينار في السنة الأولى، ويزيد 2,000 دينار كل سنة لمدة 5 سنوات. ما معدل العائد الداخلي؟</p>
+<p><strong>الحل:</strong></p>
+<p>نبحث عن i التي تحقق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+-40\mathord{,}000 + 6\mathord{,}000\,(P/A,\ i,\ 5) + 2\mathord{,}000\,(P/G,\ i,\ 5) = 0
+</annotation></semantics></math></p>
+<p>التدفقات في Excel: -40000 ثم 6000 و8000 و10000 و12000 و14000. الدالة IRR تعطي المعدل 6.91%. للتأكد نعوض المعدل في المعادلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6.91</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6.91</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.00</mn></mrow><annotation encoding="application/x-tex">
+-40\mathord{,}000 + 6\mathord{,}000\,(P/A,\ 6.91\%,\ 5) + 2\mathord{,}000\,(P/G,\ 6.91\%,\ 5) = 0.00
+</annotation></semantics></math></p>
+</div>
+</section>
+<section id="sec-4-decision" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-4-decision"><span class="header-section-number">4.2</span> القبول والرفض</h2>
+<p>لمشروع واحد القاعدة بسيطة:</p>
+<ul>
+<li>المعدل أكبر من الحد الأدنى للعائد أو يساويه: المشروع مقبول.</li>
+<li>المعدل أقل من الحد الأدنى للعائد: المشروع مرفوض.</li>
+</ul>
+<p>هذه القاعدة تعطي نفس قرار القيمة الحالية دائما لمشروع تدفقاته عادية: استثمار في البداية، ثم دخل.</p>
+<div id="ex-4-5" class="ee-item" data-id="c04-ex-irr-decision" data-kind="example" data-label="4.5">
+<p><strong>مثال 4.5: القرار بالمعدل وبالقيمة الحالية</strong></p>
+<p>مشروع يكلف 80,000 دينار، ويعطي 15,000 دينار سنويا لمدة 8 سنوات، وقيمة بيعه 12,000 دينار. الحد الأدنى للعائد 12%. هل يقبل؟ قرر بالمعدل، ثم بالقيمة الحالية.</p>
+<p><strong>الحل:</strong></p>
+<pre class="excel"><code>=IRR(B1:B9)</code></pre>
+<p>المعدل 11.78%، وهو أقل من الحد الأدنى 12%. القاعدة: يقبل المشروع إذا كان معدله أكبر من الحد الأدنى للعائد أو يساويه.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>80</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>638.80</mn></mrow><annotation encoding="application/x-tex">
+PW = -80\mathord{,}000 + 15\mathord{,}000\,(P/A,\ 12\%,\ 8) + 12\mathord{,}000\,(P/F,\ 12\%,\ 8) = -638.80
+</annotation></semantics></math></p>
+<p>الطريقتان تعطيان نفس القرار: المشروع مرفوض. هذا صحيح دائما لمشروع واحد بتدفقات عادية، لأن القيمة الحالية تكون موجبة عند كل نسبة أقل من المعدل.</p>
+</div>
+</section>
+<section id="sec-4-incremental" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-4-incremental"><span class="header-section-number">4.3</span> مقارنة البدائل: التحليل التزايدي</h2>
+<p>في البدائل المتنافية، أعلى معدل لا يعني أفضل بديل. المثال التالي يبين السبب.</p>
+<div id="ex-4-6" class="ee-item" data-id="c04-ex-ranking-trap" data-kind="example" data-label="4.6">
+<p><strong>مثال 4.6: أعلى معدل ليس دائما الأفضل</strong></p>
+<p>مشروعان متنافيان، عمر كل منهما 5 سنوات، والحد الأدنى للعائد 10%. المشروع X يكلف 10,000 دينار ويعطي 4,000 دينار سنويا. المشروع Y يكلف 30,000 دينار ويعطي 10,000 دينار سنويا. أيهما تختار؟</p>
+<p><strong>الحل:</strong></p>
+<p>معدل كل مشروع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>X</mi></msub><mo>=</mo><mn>28.65</mn><mi>%</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>r</mi><mi>Y</mi></msub><mo>=</mo><mn>19.86</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+r_X = 28.65\%, \qquad r_Y = 19.86\%
+</annotation></semantics></math></p>
+<p>كلاهما أعلى من 10%، والمشروع X معدله أعلى. لكن القيمة الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>X</mi></msub><mo>=</mo><mn>5</mn><mi>,</mi><mn>163.15</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mi>Y</mi></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>907.87</mn></mrow><annotation encoding="application/x-tex">
+PW_X = 5\mathord{,}163.15, \qquad PW_Y = 7\mathord{,}907.87
+</annotation></semantics></math></p>
+<p>المشروع Y يضيف ثروة أكبر. المعدل نسبة، والنسبة العالية على مبلغ صغير قد تعطي ربحا أقل من نسبة أقل على مبلغ كبير. المشروع X يترك 20,000 دينار تستثمر بنسبة 10% فقط، بينما المشروع Y يستثمرها بنسبة أعلى. لذلك لا نختار بين بدائل متنافية بأعلى معدل. الطريقة الصحيحة هي التحليل التزايدي في المثال التالي.</p>
+</div>
+<p>الطريقة الصحيحة: نبدأ بالبديل الأرخص، ثم نسأل عن كل مبلغ إضافي: هل يعطي الحد الأدنى للعائد على الأقل؟ معدل الفرق بين بديلين يسمى المعدل التزايدي.</p>
+<div id="ex-4-7" class="ee-item" data-id="c04-ex-incremental-two" data-kind="example" data-label="4.7">
+<p><strong>مثال 4.7: التحليل التزايدي لمشروعين</strong></p>
+<p>مشروعان متنافيان، عمر كل منهما 8 سنوات، والحد الأدنى للعائد 10%. المشروع أ يكلف 50,000 دينار ويعطي 12,000 دينار سنويا. المشروع ب يكلف 80,000 دينار ويعطي 18,000 دينار سنويا. اختر بالتحليل التزايدي.</p>
+<p><strong>الحل:</strong></p>
+<p>الخطوة 1: المشروع الأرخص أولا. معدله 17.31%، وهو أعلى من 10%، فهو مقبول ويصبح البديل الحالي.</p>
+<p>الخطوة 2: ندرس الفرق. المشروع ب يحتاج استثمارا إضافيا 30,000 دينار، ويعطي دخلا إضافيا 6,000 دينار سنويا. معدل هذا الفرق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>=</mo><mn>11.81</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+6\mathord{,}000\,(P/A,\ \Delta i,\ 8) = 30\mathord{,}000 \quad\Rightarrow\quad \Delta i = 11.81\%
+</annotation></semantics></math></p>
+<p>الخطوة 3: القرار. إذا كان معدل الفرق أعلى من الحد الأدنى، فالمال الإضافي يستحق، ونختار البديل الأغلى. هنا المعدل أعلى، فنختار المشروع ب.</p>
+<p>لاحظ أن معدل المشروع ب وحده 15.29%، وهو لا يدخل في القرار. القيمة الحالية تؤكد القرار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>14</mn><mi>,</mi><mn>019.11</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>16</mn><mi>,</mi><mn>028.67</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 14\mathord{,}019.11, \qquad PW_b = 16\mathord{,}028.67
+</annotation></semantics></math></p>
+</div>
+<p>في بدائل التكاليف لا يوجد معدل لكل بديل وحده، لأنه لا يوجد دخل. لكن الفرق بين بديلين له معدل: الاستثمار الإضافي يقابله توفير.</p>
+<div id="ex-4-8" class="ee-item" data-id="c04-ex-incremental-cost" data-kind="example" data-label="4.8">
+<p><strong>مثال 4.8: التحليل التزايدي لبدائل تكاليف</strong></p>
+<p>آلتان لنفس العمل، عمر كل منهما 6 سنوات بدون قيمة بيع. الآلة أ تكلف 30,000 دينار وتشغيلها 12,000 دينار سنويا. الآلة ب تكلف 45,000 دينار وتشغيلها 8,500 دينار سنويا. اختر بالتحليل التزايدي بنسبة 10%.</p>
+<p><strong>الحل:</strong></p>
+<p>في بدائل التكاليف لا يوجد دخل، فلا معنى لمعدل كل آلة وحدها. ندرس الفرق فقط: الآلة ب تكلف 15,000 دينار زيادة، وتوفر 3,500 دينار سنويا.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>=</mo><mn>10.55</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+3\mathord{,}500\,(P/A,\ \Delta i,\ 6) = 15\mathord{,}000 \quad\Rightarrow\quad \Delta i = 10.55\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(6, 3500, -15000)</code></pre>
+<p>معدل الفرق أعلى من 10%، فنختار الآلة ب. القيمة الحالية للتكاليف تؤكد ذلك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>82</mn><mi>,</mi><mn>263.13</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>82</mn><mi>,</mi><mn>019.72</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 82\mathord{,}263.13, \qquad PW_b = 82\mathord{,}019.72
+</annotation></semantics></math></p>
+</div>
+<p>مع أكثر من بديلين، نرتب البدائل حسب التكلفة، ونقارن كل بديل بالأفضل قبله. البديل الذي يفوز يبقى، والذي يخسر يستبعد.</p>
+<div id="ex-4-9" class="ee-item" data-id="c04-ex-incremental-three" data-kind="example" data-label="4.9">
+<p><strong>مثال 4.9: ثلاثة بدائل بالتحليل التزايدي</strong></p>
+<p>ثلاثة بدائل متنافية، عمر كل منها 8 سنوات، والحد الأدنى للعائد 12%. أيها تختار؟</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة</th>
+<th>الدخل السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>20,000</td>
+<td>6,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>30,000</td>
+<td>8,500</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>45,000</td>
+<td>11,500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الحل:</strong></p>
+<p>نرتب البدائل حسب التكلفة، ونبدأ بعدم التنفيذ.</p>
+<p>المقارنة الأولى، البديل 1 مقابل عدم التنفيذ:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn><mo>,</mo><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi>i</mi><mo>=</mo><mn>24.95</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+6{,}000\,(P/A,\ i,\ 8) = 20{,}000 \quad\Rightarrow\quad i = 24.95\%
+</annotation></semantics></math></p>
+<p>أعلى من 12%، فالبديل 1 هو الأفضل حتى الآن.</p>
+<p>المقارنة الثانية، البديل 2 مقابل البديل 1. الفرق استثمار 10,000 دينار ودخل 2,500 دينار سنويا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>,</mo><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mo>,</mo><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>=</mo><mn>18.62</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+2{,}500\,(P/A,\ \Delta i,\ 8) = 10{,}000 \quad\Rightarrow\quad \Delta i = 18.62\%
+</annotation></semantics></math></p>
+<p>أعلى من 12%، فالبديل 2 يصبح الأفضل.</p>
+<p>المقارنة الثالثة، البديل 3 مقابل البديل 2. الفرق استثمار 15,000 دينار ودخل 3,000 دينار سنويا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15</mn><mo>,</mo><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi mathvariant="normal">Δ</mi><mi>i</mi><mo>=</mo><mn>11.81</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+3{,}000\,(P/A,\ \Delta i,\ 8) = 15{,}000 \quad\Rightarrow\quad \Delta i = 11.81\%
+</annotation></semantics></math></p>
+<p>أقل من 12%، فالاستثمار الإضافي لا يستحق. القرار: البديل 2.</p>
+<p>للتأكد بالقيمة الحالية:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>9,805.84</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>12,224.94</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12,127.86</td>
+</tr>
+</tbody>
+</table>
+<p>لاحظ أن معدل البديل 3 وحده 19.35%، أعلى من 12%. لو حكمنا بمعدل كل بديل وحده لقبلناه خطأ.</p>
+</div>
+<p>لماذا يختلف ترتيب المعدلات عن ترتيب القيم الحالية؟ منحنى القيمة الحالية يجيب.</p>
+<div id="ex-4-10" class="ee-item" data-id="c04-ex-crossover" data-kind="example" data-label="4.10">
+<p><strong>مثال 4.10: منحنى القيمة الحالية ونقطة التقاطع</strong></p>
+<p>للمشروعين X وY في مثال سابق، احسب القيمة الحالية لكل منهما عند النسب من 5% إلى 25%. عند أي نسبة يتساويان؟ وكيف يتغير القرار مع الحد الأدنى للعائد؟</p>
+<p><strong>الحل:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>النسبة</th>
+<th>المشروع X</th>
+<th>المشروع Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5%</td>
+<td>7,317.91</td>
+<td>13,294.77</td>
+</tr>
+<tr class="even">
+<td>10%</td>
+<td>5,163.15</td>
+<td>7,907.87</td>
+</tr>
+<tr class="odd">
+<td>15%</td>
+<td>3,408.62</td>
+<td>3,521.55</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>1,962.45</td>
+<td>-93.88</td>
+</tr>
+<tr class="odd">
+<td>25%</td>
+<td>757.12</td>
+<td>-3,107.20</td>
+</tr>
+</tbody>
+</table>
+<p>منحنى Y أشد انحدارا، لأن دخله أكبر وأبعد في الزمن نسبيا، فيتأثر بالخصم أكثر. المنحنيان يتقاطعان عند النسبة التي تجعل قيمة الفرق صفرا، أي عند معدل الفرق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn><mo>,</mo><mn>000</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi>i</mi><mo>=</mo><mn>15.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+6{,}000\,(P/A,\ i,\ 5) = 20{,}000 \quad\Rightarrow\quad i = 15.24\%
+</annotation></semantics></math></p>
+<p>إذا كان الحد الأدنى للعائد أقل من 15.24% نختار Y، وإذا كان أعلى نختار X. هذا يفسر لماذا قد يختلف ترتيب المعدلات عن ترتيب القيم الحالية.</p>
+</div>
+<p>القاعدة العامة: التحليل التزايدي بالمعدل، والمقارنة بالقيمة الحالية، يعطيان نفس القرار دائما. أما ترتيب البدائل حسب معدل كل منها وحده فلا يعطيه.</p>
+</section>
+<section id="sec-4-multiple" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-4-multiple"><span class="header-section-number">4.4</span> تعدد المعدلات</h2>
+<p>معادلة المعدل كثيرة حدود في المتغير x الذي يساوي مقلوب واحد زائد i. كثيرة الحدود قد يكون لها أكثر من جذر. يحدث هذا عندما تتغير إشارة التدفقات أكثر من مرة، مثل مشروع ينتهي بتكلفة إزالة أو إعادة تأهيل.</p>
+<div id="ex-4-11" class="ee-item" data-id="c04-ex-multiple-irr" data-kind="example" data-label="4.11">
+<p><strong>مثال 4.11: مشروع له معدلان</strong></p>
+<p>مقاول يدفع 1,000 دينار اليوم لتجهيز موقع، ويقبض 2,300 دينار بعد سنة، ثم يدفع 1,320 دينار في السنة الثانية لإعادة الموقع إلى حالته. ما معدل العائد الداخلي؟</p>
+<p><strong>الحل:</strong></p>
+<p>نحسب القيمة الحالية عند عدة نسب:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>النسبة</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>-20.00</td>
+</tr>
+<tr class="even">
+<td>5%</td>
+<td>-6.80</td>
+</tr>
+<tr class="odd">
+<td>10%</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>15%</td>
+<td>1.89</td>
+</tr>
+<tr class="odd">
+<td>20%</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>25%</td>
+<td>-4.80</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الحالية صفر عند 10% وعند 20%. للمشروع معدلان، وكلاهما صحيح رياضيا. السبب أن إشارة التدفقات تتغير مرتين: سالب ثم موجب ثم سالب.</p>
+<p>أي المعدلين نقارن بالحد الأدنى للعائد؟ لا هذا ولا ذاك. في هذه الحالة نستخدم القيمة الحالية بالحد الأدنى للعائد، أو المعدل المعدل في المثال التالي.</p>
+</div>
+<div id="ex-4-12" class="ee-item" data-id="c04-ex-sign-test" data-kind="example" data-label="4.12">
+<p><strong>مثال 4.12: كيف تعرف عدد المعدلات قبل الحساب</strong></p>
+<p>مشروع تدفقاته من السنة 0 إلى السنة 4: -20,000 ثم 8,000 و9,000 و10,000، ثم -4,000 تكلفة إزالة. كم معدلا يمكن أن يكون له؟ احسبه.</p>
+<p><strong>الحل:</strong></p>
+<p><strong>قاعدة الإشارات:</strong> عدد المعدلات الموجبة لا يزيد عن عدد مرات تغير الإشارة في التدفقات. هنا الإشارة تتغير مرتين، فقد يوجد معدلان.</p>
+<p><strong>اختبار المجموع التراكمي:</strong> نجمع التدفقات تراكميا:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التدفق</td>
+<td>-20,000</td>
+<td>8,000</td>
+<td>9,000</td>
+<td>10,000</td>
+<td>-4,000</td>
+</tr>
+<tr class="even">
+<td>التراكمي</td>
+<td>-20,000</td>
+<td>-12,000</td>
+<td>-3,000</td>
+<td>7,000</td>
+<td>3,000</td>
+</tr>
+</tbody>
+</table>
+<p>إذا بدأ التراكمي سالبا، وتغيرت إشارته مرة واحدة فقط، وانتهى موجبا، فللمشروع معدل موجب واحد فقط. الشرطان متحققان هنا.</p>
+<p>المعدل 8.38%. في Excel تعطيه الدالة IRR مباشرة، لأنه الحل الوحيد الموجب.</p>
+</div>
+</section>
+<section id="sec-4-mirr" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-4-mirr"><span class="header-section-number">4.5</span> المعدل المعدل</h2>
+<p>المعدل المعدل يستخدم نسبتين واقعيتين: نسبة تمويل تنقل بها التكاليف إلى البداية، ونسبة إعادة استثمار تنقل بها الدخل إلى النهاية. النتيجة نسبة واحدة دائما:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>I</mi><mi>R</mi><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>F</mi><msub><mi>V</mi><mo>+</mo></msub></mrow><mrow><mi>P</mi><msub><mi>V</mi><mo>−</mo></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+MIRR = \left(\frac{FV_+}{PV_-}\right)^{1/n} - 1
+</annotation></semantics></math></p>
+<div id="ex-4-13" class="ee-item" data-id="c04-ex-mirr" data-kind="example" data-label="4.13">
+<p><strong>مثال 4.13: معدل العائد الداخلي المعدل</strong></p>
+<p>مشروع يكلف 50,000 دينار، ويعطي في السنوات من 1 إلى 5 المبالغ 12,000 و15,000 و18,000 و15,000 و12,000 دينار. الشركة تعيد استثمار الدخل بنسبة 10%. احسب المعدل والمعدل المعدل.</p>
+<p><strong>الحل:</strong></p>
+<p>معدل العائد الداخلي يفترض ضمنا أن كل دخل يعاد استثماره بنفس المعدل. هذا غير واقعي عندما يكون المعدل عاليا. المعدل المعدل يستخدم نسبة إعادة استثمار واقعية.</p>
+<p>الخطوة 1: ننقل كل الدخل إلى السنة 5 بنسبة إعادة الاستثمار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>V</mi><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>87</mn><mi>,</mi><mn>814.20</mn></mrow><annotation encoding="application/x-tex">
+FV = 12\mathord{,}000\,(F/P,\ 10\%,\ 4) + 15\mathord{,}000\,(F/P,\ 10\%,\ 3) + \cdots + 12\mathord{,}000 = 87\mathord{,}814.20
+</annotation></semantics></math></p>
+<p>الخطوة 2: نبحث عن النسبة التي تحول الاستثمار إلى هذا المبلغ:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>I</mi><mi>R</mi><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>87</mn><mi>,</mi><mn>814.20</mn></mrow><mrow><mn>50</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>5</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>11.92</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+MIRR = \left(\frac{87\mathord{,}814.20}{50\mathord{,}000}\right)^{1/5} - 1 = 11.92\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=MIRR(B1:B6, 10%, 10%)</code></pre>
+<p>المعدل العادي 13.45%. المعدل المعدل أقرب إلى نسبة إعادة الاستثمار، لأن جزءا من العائد يأتي منها.</p>
+</div>
+<div id="ex-4-14" class="ee-item" data-id="c04-ex-mirr-multiple" data-kind="example" data-label="4.14">
+<p><strong>مثال 4.14: المعدل المعدل يحل مشكلة تعدد المعدلات</strong></p>
+<p>للمشروع الذي له معدلان في مثال سابق، احسب المعدل المعدل بنسبة تمويل وإعادة استثمار 12%. هل يقبل المشروع إذا كان الحد الأدنى للعائد 12%؟</p>
+<p><strong>الحل:</strong></p>
+<p>ننقل التدفقات السالبة إلى السنة 0، والموجبة إلى السنة 2:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>V</mi><mo>−</mo></msub><mo>=</mo><mn>1</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>1</mn><mo>,</mo><mn>320</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>052.30</mn></mrow><annotation encoding="application/x-tex">
+PV_- = 1{,}000 + 1{,}320\,(P/F,\ 12\%,\ 2) = 2\mathord{,}052.30
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><msub><mi>V</mi><mo>+</mo></msub><mo>=</mo><mn>2</mn><mo>,</mo><mn>300</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>576.00</mn></mrow><annotation encoding="application/x-tex">
+FV_+ = 2{,}300\,(F/P,\ 12\%,\ 1) = 2\mathord{,}576.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>I</mi><mi>R</mi><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>2</mn><mi>,</mi><mn>576.00</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>052.30</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>12.03</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+MIRR = \left(\frac{2\mathord{,}576.00}{2\mathord{,}052.30}\right)^{1/2} - 1 = 12.03\%
+</annotation></semantics></math></p>
+<p>المعدل المعدل له قيمة واحدة دائما. هو أعلى من 12%، فالمشروع مقبول. القيمة الحالية 1.28 تعطي نفس القرار.</p>
+</div>
+</section>
+<section id="sec-4-daily" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-4-daily"><span class="header-section-number">4.6</span> المعدل في الحياة اليومية</h2>
+<p>المعدل أداة لكشف التكلفة الحقيقية للعروض التجارية والقروض، وليس للمشاريع فقط.</p>
+<div id="ex-4-15" class="ee-item" data-id="c04-ex-irr-monthly" data-kind="example" data-label="4.15">
+<p><strong>مثال 4.15: التكلفة الحقيقية للتقسيط</strong></p>
+<p>محل يبيع هاتفا بسعر 1,200 دينار نقدا، أو بأقساط 115 دينار شهريا لمدة 12 شهرا، ويعلن: الزيادة 180 دينار فقط. ما المعدل الفعلي الذي يدفعه المشتري؟</p>
+<p><strong>الحل:</strong></p>
+<p>القسط هو الدخل للمحل، والسعر النقدي هو ما يتنازل عنه اليوم. المعدل الشهري:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>115</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>i</mi><mi>m</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>200</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>2.22</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+115\,(P/A,\ i_m,\ 12) = 1\mathord{,}200 \quad\Rightarrow\quad i_m = 2.22\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(12, 115, -1200)</code></pre>
+<p>المعدل الفعلي السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.0222</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>12</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>30.12</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = (1 + 0.0222)^{12} - 1 = 30.12\%
+</annotation></semantics></math></p>
+<p>الزيادة تبدو صغيرة، لكن المشتري يسدد جزءا من السعر كل شهر، فمتوسط ما يقترضه نصف السعر تقريبا. لذلك المعدل الحقيقي أعلى بكثير مما يوحي به المبلغ.</p>
+</div>
+<div id="ex-4-16" class="ee-item" data-id="c04-ex-loan-fees" data-kind="example" data-label="4.16">
+<p><strong>مثال 4.16: أثر رسوم القرض على تكلفته</strong></p>
+<p>بنك يقرض شركة 20,000 دينار بفائدة 8% لمدة 5 سنوات بأقساط سنوية، ويخصم رسوم فتح ملف 3% من القرض عند صرفه. ما التكلفة الحقيقية للقرض؟</p>
+<p><strong>الحل:</strong></p>
+<p>القسط يحسب على كامل القرض:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>009.13</mn></mrow><annotation encoding="application/x-tex">
+A = 20\mathord{,}000\,(A/P,\ 8\%,\ 5) = 5\mathord{,}009.13
+</annotation></semantics></math></p>
+<p>لكن الشركة تستلم 19,400.00 دينار فقط. التكلفة الحقيقية هي المعدل الذي يجعل الأقساط تساوي ما استلمته:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>,</mi><mn>009.13</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>400.00</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi>i</mi><mo>=</mo><mn>9.17</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+5\mathord{,}009.13\,(P/A,\ i,\ 5) = 19\mathord{,}400.00 \quad\Rightarrow\quad i = 9.17\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(5, 5009.13, -19400.00)</code></pre>
+<p>الرسوم ترفع التكلفة من 8% إلى 9.17%. أثرها أكبر في القروض القصيرة، لأنها تتوزع على سنوات أقل.</p>
+</div>
+</section>
+<section id="sec-4-bc" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sec-4-bc"><span class="header-section-number">4.7</span> نسبة المنفعة إلى التكلفة</h2>
+<p>في المشاريع العامة، مثل الطرق والمستشفيات وشبكات المياه، المنافع تعود للمواطنين وليس للجهة التي تدفع. لذلك نقارن القيمة الحالية للمنافع بالقيمة الحالية للتكاليف. المشروع مجد إذا كانت النسبة 1 أو أكثر.</p>
+<div id="ex-4-17" class="ee-item" data-id="c04-ex-bc" data-kind="example" data-label="4.17">
+<p><strong>مثال 4.17: نسبة المنفعة إلى التكلفة لمشروع عام</strong></p>
+<p>وزارة الأشغال تدرس طريقا التفافيا يكلف 2,000,000 دينار، وصيانته 60,000 دينار سنويا لمدة 25 سنة. المنافع للمواطنين، من توفير الوقت والوقود وتقليل الحوادث، تقدر بمبلغ 350,000 دينار سنويا. هل المشروع مجد بنسبة 6%؟</p>
+<p><strong>الحل:</strong></p>
+<p>في المشاريع العامة لا يوجد إيراد للحكومة. المنافع تعود للمواطنين، والتكاليف تدفعها الحكومة. نقارن بينهما بالنسبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>b</mi><mi>e</mi><mi>n</mi><mi>e</mi><mi>f</mi><mi>i</mi><mi>t</mi><mi>s</mi></mrow></msub></mrow><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>c</mi><mi>o</mi><mi>s</mi><mi>t</mi><mi>s</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{PW_{benefits}}{PW_{costs}}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12.7834</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 25) = 12.7834
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>350</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12.7834</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12.7834</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>474</mn><mi>,</mi><mn>174.66</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>767</mn><mi>,</mi><mn>001.37</mn></mrow></mfrac><mo>=</mo><mn>1.6170</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{350\mathord{,}000 \times 12.7834}{2\mathord{,}000\mathord{,}000 + 60\mathord{,}000 \times 12.7834} = \frac{4\mathord{,}474\mathord{,}174.66}{2\mathord{,}767\mathord{,}001.37} = 1.6170
+</annotation></semantics></math></p>
+<p>بعض الجهات تطرح الصيانة من المنافع بدل إضافتها إلى التكاليف، فتسمى النسبة المعدلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>474</mn><mi>,</mi><mn>174.66</mn><mo>−</mo><mn>767</mn><mi>,</mi><mn>001.37</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.8536</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{4\mathord{,}474\mathord{,}174.66 - 767\mathord{,}001.37}{2\mathord{,}000\mathord{,}000} = 1.8536
+</annotation></semantics></math></p>
+<p>النسبتان مختلفتان في القيمة، لكنهما تعطيان نفس القرار دائما: المشروع مجد، لأن النسبة أكبر من 1.</p>
+</div>
+<p>ومثل المعدل، المقارنة بين بدائل تحتاج نسبة تزايدية.</p>
+<div id="ex-4-18" class="ee-item" data-id="c04-ex-bc-incremental" data-kind="example" data-label="4.18">
+<p><strong>مثال 4.18: اختيار تصميم بالنسبة التزايدية</strong></p>
+<p>بلدية تختار بين تصميمين لسوق خضار مركزي، والنسبة المستخدمة 6% لمدة 20 سنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>التصميم الأول</th>
+<th>التصميم الثاني</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>تكلفة البناء</td>
+<td>1,500,000</td>
+<td>2,100,000</td>
+</tr>
+<tr class="even">
+<td>الصيانة السنوية</td>
+<td>40,000</td>
+<td>45,000</td>
+</tr>
+<tr class="odd">
+<td>المنافع السنوية</td>
+<td>220,000</td>
+<td>290,000</td>
+</tr>
+</tbody>
+</table>
+<p>أيهما تختار؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.4699</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 20) = 11.4699
+</annotation></semantics></math></p>
+<p>نسبة كل تصميم وحده:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>B</mi><mi>C</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>1</mn></msub><mo>=</mo><mn>1.2882</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>B</mi><mi>C</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msub><mo>=</mo><mn>1.2714</mn></mrow><annotation encoding="application/x-tex">
+\left(\frac{B}{C}\right)_1 = 1.2882, \qquad \left(\frac{B}{C}\right)_2 = 1.2714
+</annotation></semantics></math></p>
+<p>التصميمان مجديان، والأول نسبته أعلى. لكن كما في المعدل، لا نختار بأعلى نسبة. ندرس الفرق: التصميم الثاني يضيف منافع ويضيف تكاليف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi><mo>=</mo><mn>70</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>11.4699</mn><mo>=</mo><mn>802</mn><mi>,</mi><mn>894.49</mn></mrow><annotation encoding="application/x-tex">
+\Delta B = 70{,}000 \times 11.4699 = 802\mathord{,}894.49
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi><mo>=</mo><mn>600</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>5</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>11.4699</mn><mo>=</mo><mn>657</mn><mi>,</mi><mn>349.61</mn></mrow><annotation encoding="application/x-tex">
+\Delta C = 600{,}000 + 5{,}000 \times 11.4699 = 657\mathord{,}349.61
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>1.2214</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 1.2214
+</annotation></semantics></math></p>
+<p>النسبة التزايدية أكبر من 1، فالمبلغ الإضافي يستحق، وتختار البلدية التصميم الثاني.</p>
+</div>
+</section>
+<section id="sec-4-python" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="sec-4-python"><span class="header-section-number">4.8</span> Python: حساب المعدل بالتنصيف</h2>
+<p>الدالة irr في numpy_financial تحسب المعدل مباشرة. لكن فهم طريقة الحساب يساعدك عندما تفشل الدالة، كما في المشاريع التي لها أكثر من معدل. أبسط طريقة هي التنصيف: نبدأ بنسبتين قيمتاهما الحاليتان بإشارتين مختلفتين، ثم نقسم المسافة بينهما إلى نصفين مرة بعد مرة:</p>
+<div id="ada71ed7" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> npv(i, flows):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(cf <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> t <span class="cf">for</span> t, cf <span class="kw">in</span> <span class="bu">enumerate</span>(flows))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> irr_bisect(flows, lo, hi, tol<span class="op">=</span><span class="fl">1e-8</span>):</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">200</span>):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        mid <span class="op">=</span> (lo <span class="op">+</span> hi) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> npv(lo, flows) <span class="op">*</span> npv(mid, flows) <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            hi <span class="op">=</span> mid</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            lo <span class="op">=</span> mid</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> hi <span class="op">-</span> lo <span class="op">&lt;</span> tol:</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (lo <span class="op">+</span> hi) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span><span class="dv">60000</span>, <span class="dv">14000</span>, <span class="dv">14000</span>, <span class="dv">14000</span>, <span class="dv">14000</span>, <span class="dv">14000</span>, <span class="dv">24000</span>]</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(irr_bisect(flows, <span class="fl">0.0</span>, <span class="fl">0.5</span>), <span class="dv">6</span>))</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>two_roots <span class="op">=</span> [<span class="op">-</span><span class="dv">1000</span>, <span class="dv">2300</span>, <span class="op">-</span><span class="dv">1320</span>]</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(irr_bisect(two_roots, <span class="fl">0.0</span>, <span class="fl">0.15</span>), <span class="dv">6</span>), <span class="bu">round</span>(irr_bisect(two_roots, <span class="fl">0.15</span>, <span class="fl">0.5</span>), <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.134282
+0.1 0.2</code></pre>
+</div>
+</div>
+<p>البرنامج يجد المعدلين في المشروع الثاني، لأننا حددنا له مجالين منفصلين. هذا يبين لماذا تعطي الدالة IRR في Excel معدلا واحدا فقط: هي تبدأ من تخمين واحد، وتقف عند أول جذر تصل إليه.</p>
+<p>ورسم منحنى القيمة الحالية أفضل طريقة لرؤية كل المعدلات معا:</p>
+<div id="9d38ec0d" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">0.3</span>, <span class="dv">7</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> rates:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>r<span class="sc">:5.0%}</span><span class="ss">  </span><span class="sc">{</span>npv(r, two_roots)<span class="sc">:8.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   0%    -20.00
+   5%     -6.80
+  10%     -0.00
+  15%      1.89
+  20%      0.00
+  25%     -4.80
+  30%    -11.83</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-4-problems" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="sec-4-problems"><span class="header-section-number">4.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-4-1" class="ee-item" data-id="c04-a-01" data-kind="problem" data-label="4.1">
+<p><strong>4.1</strong> عرف معدل العائد الداخلي بجملة واحدة.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-1">الحل</a></span></p>
+</div>
+<div id="prob-4-2" class="ee-item" data-id="c04-a-02" data-kind="problem" data-label="4.2">
+<p><strong>4.2</strong> مشروع معدله 15%. هل يعني هذا أن كل الاستثمار يكسب 15% طوال عمر المشروع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-2">الحل</a></span></p>
+</div>
+<div id="prob-4-3" class="ee-item" data-id="c04-a-03" data-kind="problem" data-label="4.3">
+<p><strong>4.3</strong> لماذا لا نختار بين بديلين متنافيين بأعلى معدل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-3">الحل</a></span></p>
+</div>
+<div id="prob-4-4" class="ee-item" data-id="c04-a-04" data-kind="problem" data-label="4.4">
+<p><strong>4.4</strong> ما المعدل التزايدي؟ وكيف تتخذ القرار به؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-4">الحل</a></span></p>
+</div>
+<div id="prob-4-5" class="ee-item" data-id="c04-a-05" data-kind="problem" data-label="4.5">
+<p><strong>4.5</strong> لماذا لا نحسب معدلا لكل بديل في بدائل التكاليف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-5">الحل</a></span></p>
+</div>
+<div id="prob-4-6" class="ee-item" data-id="c04-a-06" data-kind="problem" data-label="4.6">
+<p><strong>4.6</strong> متى يمكن أن يكون لمشروع أكثر من معدل؟ أعط مثالا من الواقع.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-6">الحل</a></span></p>
+</div>
+<div id="prob-4-7" class="ee-item" data-id="c04-a-07" data-kind="problem" data-label="4.7">
+<p><strong>4.7</strong> ما الافتراض الضمني في معدل العائد الداخلي عن الدخل الذي يأتي خلال عمر المشروع؟ وكيف يعالجه المعدل المعدل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-7">الحل</a></span></p>
+</div>
+<div id="prob-4-8" class="ee-item" data-id="c04-a-08" data-kind="problem" data-label="4.8">
+<p><strong>4.8</strong> منحنى القيمة الحالية لمشروعين يتقاطع عند 14%. والحد الأدنى للعائد 10%. أي المشروعين نختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-8">الحل</a></span></p>
+</div>
+<div id="prob-4-9" class="ee-item" data-id="c04-a-09" data-kind="problem" data-label="4.9">
+<p><strong>4.9</strong> لماذا تستخدم الحكومات نسبة المنفعة إلى التكلفة بدل معدل العائد على الاستثمار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-9">الحل</a></span></p>
+</div>
+<div id="prob-4-10" class="ee-item" data-id="c04-a-10" data-kind="problem" data-label="4.10">
+<p><strong>4.10</strong> قرض بفائدة معلنة 8% مع رسوم إدارية تخصم عند الصرف. هل التكلفة الحقيقية أكبر أم أصغر من 8%؟ لماذا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-10">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-حساب-معدل-العائد-الداخلي" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-حساب-معدل-العائد-الداخلي">الجزء ب: حساب معدل العائد الداخلي</h3>
+<div id="prob-4-11" class="ee-item" data-id="c04-b-01" data-kind="problem" data-label="4.11">
+<p><strong>4.11</strong> استثمار يكلف 25,000 دينار ويعطي 7,000 دينار سنويا لمدة 5 سنوات. ما معدل العائد الداخلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-11">الحل</a></span></p>
+</div>
+<div id="prob-4-12" class="ee-item" data-id="c04-b-02" data-kind="problem" data-label="4.12">
+<p><strong>4.12</strong> اشترى شخص قطعة أرض بسعر 10,000 دينار، وباعها بعد 5 سنوات بسعر 16,000 دينار. ما معدل العائد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-12">الحل</a></span></p>
+</div>
+<div id="prob-4-13" class="ee-item" data-id="c04-b-03" data-kind="problem" data-label="4.13">
+<p><strong>4.13</strong> آلة تكلف 40,000 دينار، وتوفر 9,000 دينار سنويا لمدة 5 سنوات، وتباع بقيمة 8,000 دينار. ما معدل العائد الداخلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-13">الحل</a></span></p>
+</div>
+<div id="prob-4-14" class="ee-item" data-id="c04-b-04" data-kind="problem" data-label="4.14">
+<p><strong>4.14</strong> للآلة في المسألة السابقة: احسب القيمة الحالية عند نسبتين متتاليتين يقع المعدل بينهما، ثم قدر المعدل بالاستكمال الخطي. ما الخطأ في التقدير؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-14">الحل</a></span></p>
+</div>
+<div id="prob-4-15" class="ee-item" data-id="c04-b-05" data-kind="problem" data-label="4.15">
+<p><strong>4.15</strong> مشروع يكلف 30,000 دينار، ويعطي في السنوات من 1 إلى 4 المبالغ 5,000 و9,000 و12,000 و14,000 دينار. ما معدل العائد الداخلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-15">الحل</a></span></p>
+</div>
+<div id="prob-4-16" class="ee-item" data-id="c04-b-06" data-kind="problem" data-label="4.16">
+<p><strong>4.16</strong> مشروع يكلف 20,000 دينار. دخله 3,000 دينار في السنة الأولى، ويزيد 1,500 دينار كل سنة لمدة 6 سنوات. ما معدل العائد الداخلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-16">الحل</a></span></p>
+</div>
+<div id="prob-4-17" class="ee-item" data-id="c04-b-07" data-kind="problem" data-label="4.17">
+<p><strong>4.17</strong> نظام طاقة شمسية يكلف 50,000 دينار، ويوفر 8,000 دينار في السنة الأولى. التوفير يزيد 6% سنويا لمدة 8 سنوات. ما معدل العائد الداخلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-17">الحل</a></span></p>
+</div>
+<div id="prob-4-18" class="ee-item" data-id="c04-b-08" data-kind="problem" data-label="4.18">
+<p><strong>4.18</strong> معرض أجهزة كهربائية يبيع ثلاجة وغسالة معا بسعر 5,000 دينار نقدا، أو بأقساط 240 دينار شهريا لمدة 24 شهرا. ما المعدل الشهري؟ وما المعدل الفعلي السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-18">الحل</a></span></p>
+</div>
+<div id="prob-4-19" class="ee-item" data-id="c04-b-09" data-kind="problem" data-label="4.19">
+<p><strong>4.19</strong> سيارة مستعملة سعرها 8,000 دينار نقدا. التاجر يقبل دفعة أولى 2,000 دينار، ثم 290 دينار شهريا لمدة 24 شهرا. ما المعدل الفعلي السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-19">الحل</a></span></p>
+</div>
+<div id="prob-4-20" class="ee-item" data-id="c04-b-10" data-kind="problem" data-label="4.20">
+<p><strong>4.20</strong> سند قيمته الاسمية 1,000 دينار، يدفع فائدة 70 دينار في نهاية كل سنة لمدة 10 سنوات، ثم يعيد 1,000 دينار في النهاية. اشتراه مستثمر بسعر 950 دينار. ما معدل العائد الذي يحققه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-20">الحل</a></span></p>
+</div>
+<div id="prob-4-21" class="ee-item" data-id="c04-b-11" data-kind="problem" data-label="4.21">
+<p><strong>4.21</strong> استخدم جدول P/A في الملحق لتقدير معدل استثمار يكلف 15,000 دينار ويعطي 3,600 دينار سنويا لمدة 6 سنوات. ثم تأكد بالدالة RATE.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-21">الحل</a></span></p>
+</div>
+<div id="prob-4-22" class="ee-item" data-id="c04-b-12" data-kind="problem" data-label="4.22">
+<p><strong>4.22</strong> مشروع يكلف 12,000 دينار اليوم، لكن دخله يبدأ بعد سنتين من الإنشاء: 3,000 دينار سنويا لمدة 6 سنوات، أولها في السنة 3. ما المعدل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-22">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-القبول-والرفض" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-القبول-والرفض">الجزء ج: القبول والرفض</h3>
+<p>قارن المعدل بالحد الأدنى للعائد، وتأكد أن القيمة الحالية تعطي نفس القرار.</p>
+<div id="prob-4-23" class="ee-item" data-id="c04-c-01" data-kind="problem" data-label="4.23">
+<p><strong>4.23</strong> مشروع يكلف 70,000 دينار ويعطي 16,000 دينار سنويا لمدة 7 سنوات. الحد الأدنى للعائد 12%. احسب المعدل، وقرر، ثم تأكد بالقيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-23">الحل</a></span></p>
+</div>
+<div id="prob-4-24" class="ee-item" data-id="c04-c-02" data-kind="problem" data-label="4.24">
+<p><strong>4.24</strong> مشروع يكلف 70,000 دينار وعمره 7 سنوات. ما أقل دخل سنوي يجعل معدله يساوي الحد الأدنى للعائد 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-24">الحل</a></span></p>
+</div>
+<div id="prob-4-25" class="ee-item" data-id="c04-c-03" data-kind="problem" data-label="4.25">
+<p><strong>4.25</strong> آلة توفر 12,000 دينار سنويا لمدة 8 سنوات. ما أعلى سعر يجعل معدلها لا يقل عن 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-25">الحل</a></span></p>
+</div>
+<div id="prob-4-26" class="ee-item" data-id="c04-c-04" data-kind="problem" data-label="4.26">
+<p><strong>4.26</strong> مشروع يكلف 50,000 دينار ويعطي 12,000 دينار سنويا لمدة 6 سنوات. ما المعدل؟ هل تقبله شركة حدها الأدنى 8%؟ وأخرى حدها 15%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-26">الحل</a></span></p>
+</div>
+<div id="prob-4-27" class="ee-item" data-id="c04-c-05" data-kind="problem" data-label="4.27">
+<p><strong>4.27</strong> مشروع يكلف 30,000 دينار، ويعطي 7,000 دينار سنويا لمدة 5 سنوات، وقيمة بيعه 5,000 دينار. ما المعدل؟ وكم ينقص إذا لم يبع بشيء؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-27">الحل</a></span></p>
+</div>
+<div id="prob-4-28" class="ee-item" data-id="c04-c-06" data-kind="problem" data-label="4.28">
+<p><strong>4.28</strong> مشروع يكلف 100,000 دينار، ودخله المتوقع 22,000 دينار سنويا لمدة 8 سنوات. الحد الأدنى للعائد 12%. ماذا يحدث للمعدل وللقرار إذا جاء الدخل أقل من المتوقع بنسبة 25%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-28">الحل</a></span></p>
+</div>
+<div id="prob-4-29" class="ee-item" data-id="c04-c-07" data-kind="problem" data-label="4.29">
+<p><strong>4.29</strong> مشروع يكلف 80,000 دينار ويعطي 17,000 دينار سنويا. ما أقل عمر يجعل معدله يساوي 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-29">الحل</a></span></p>
+</div>
+<div id="prob-4-30" class="ee-item" data-id="c04-c-08" data-kind="problem" data-label="4.30">
+<p><strong>4.30</strong> لمشروع يكلف 60,000 دينار ويعطي 15,000 دينار سنويا لمدة 6 سنوات، احسب القيمة الحالية والسنوية والمستقبلية بنسبة 10%، ثم المعدل. هل تتفق الطرق الأربع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-30">الحل</a></span></p>
+</div>
+<div id="prob-4-31" class="ee-item" data-id="c04-c-09" data-kind="problem" data-label="4.31">
+<p><strong>4.31</strong> قرض 30,000 دينار بفائدة 7% لمدة 4 سنوات بأقساط سنوية. البنك يأخذ رسوما ثابتة 600 دينار عند الصرف. ما التكلفة الحقيقية للقرض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-31">الحل</a></span></p>
+</div>
+<div id="prob-4-32" class="ee-item" data-id="c04-c-10" data-kind="problem" data-label="4.32">
+<p><strong>4.32</strong> مورد يعطي شركة خصما 4% إذا دفعت فاتورة 40,000 دينار نقدا اليوم، وإلا تدفعها كاملة بعد سنة. إذا لم تدفع نقدا، فكأنها اقترضت المبلغ المخصوم لمدة سنة. ما معدل هذا الاقتراض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-32">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-التحليل-التزايدي-لبديلين" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-التحليل-التزايدي-لبديلين">الجزء د: التحليل التزايدي لبديلين</h3>
+<p>لا تختر البديل صاحب أعلى معدل. احسب معدل الفرق بين البديلين.</p>
+<div id="prob-4-33" class="ee-item" data-id="c04-d-01" data-kind="problem" data-label="4.33">
+<p><strong>4.33</strong> مشروعان متنافيان، عمر كل منهما 6 سنوات. الأول يكلف 20,000 دينار ويعطي 6,000 دينار سنويا. الثاني يكلف 35,000 دينار ويعطي 9,500 دينار سنويا. اختر بالتحليل التزايدي بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-33">الحل</a></span></p>
+</div>
+<div id="prob-4-34" class="ee-item" data-id="c04-d-02" data-kind="problem" data-label="4.34">
+<p><strong>4.34</strong> حل المسألة السابقة بالقيمة الحالية. هل تحصل على نفس القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-34">الحل</a></span></p>
+</div>
+<div id="prob-4-35" class="ee-item" data-id="c04-d-03" data-kind="problem" data-label="4.35">
+<p><strong>4.35</strong> مكبس هيدروليكي من النوع أ يكلف 25,000 دينار وتشغيله 9,000 دينار سنويا. النوع ب يكلف 37,000 دينار وتشغيله 6,200 دينار سنويا. عمر كل منهما 7 سنوات. أيهما تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-35">الحل</a></span></p>
+</div>
+<div id="prob-4-36" class="ee-item" data-id="c04-d-04" data-kind="problem" data-label="4.36">
+<p><strong>4.36</strong> آلة أ تكلف 25,000 دينار، وتشغيلها 9,000 دينار سنويا، وقيمة بيعها 3,000 دينار. آلة ب تكلف 37,000 دينار، وتشغيلها 6,500 دينار سنويا، وقيمة بيعها 6,000 دينار. عمر كل منهما 6 سنوات. احسب المعدل التزايدي واختر بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-36">الحل</a></span></p>
+</div>
+<div id="prob-4-37" class="ee-item" data-id="c04-d-05" data-kind="problem" data-label="4.37">
+<p><strong>4.37</strong> مشروع أ يكلف 10,000 دينار ويعطي 3,500 دينار سنويا لمدة 4 سنوات. مشروع ب يكلف 25,000 دينار ويعطي 8,000 دينار سنويا لمدة 4 سنوات. الحد الأدنى للعائد 8%. أي المشروعين صاحب المعدل الأعلى؟ وأيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-37">الحل</a></span></p>
+</div>
+<div id="prob-4-38" class="ee-item" data-id="c04-d-06" data-kind="problem" data-label="4.38">
+<p><strong>4.38</strong> للمشروعين في المسألة السابقة: ما النسبة التي تتساوى عندها قيمتاهما الحاليتان؟ ومتى يتغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-38">الحل</a></span></p>
+</div>
+<div id="prob-4-39" class="ee-item" data-id="c04-d-07" data-kind="problem" data-label="4.39">
+<p><strong>4.39</strong> مشروع صغير يكلف 10,000 دينار ويعطي 3,718.47 دينار سنويا لمدة 5 سنوات، ومعدله 25%. مشروع كبير يكلف 30,000 دينار ويعطي 9,593.34 دينار سنويا لمدة 5 سنوات، ومعدله 18%. الحد الأدنى للعائد 10%. اختر.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-39">الحل</a></span></p>
+</div>
+<div id="prob-4-40" class="ee-item" data-id="c04-d-08" data-kind="problem" data-label="4.40">
+<p><strong>4.40</strong> سخان مياه شمسي يكلف 13,000 دينار وتكلفة طاقته 1,500 دينار سنويا. سخان كهربائي يكلف 8,000 دينار وتكلفة طاقته 2,600 دينار سنويا. عمر كل منهما 5 سنوات. هل الاستثمار الإضافي في الشمسي يستحق بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-40">الحل</a></span></p>
+</div>
+<div id="prob-4-41" class="ee-item" data-id="c04-d-09" data-kind="problem" data-label="4.41">
+<p><strong>4.41</strong> مشروعان متنافيان، عمر كل منهما 6 سنوات، والحد الأدنى للعائد 12%. الأول يكلف 30,000 دينار ويعطي 9,000.00 دينار سنويا. الثاني يكلف 50,000 دينار ويعطي 13,000.00 دينار سنويا. ماذا تختار؟ انتبه للخطوة الأولى.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-41">الحل</a></span></p>
+</div>
+<div id="prob-4-42" class="ee-item" data-id="c04-d-10" data-kind="problem" data-label="4.42">
+<p><strong>4.42</strong> طالب قارن مشروعين عمرهما 8 سنوات بمعدل كل منهما: الأول يكلف 40,000 دينار ويعطي 11,000.00 دينار سنويا، والثاني يكلف 60,000 دينار ويعطي 15,500.00 دينار سنويا. اختار صاحب المعدل الأعلى. هل قراره صحيح بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-42">الحل</a></span></p>
+</div>
+<div id="prob-4-43" class="ee-item" data-id="c04-d-11" data-kind="problem" data-label="4.43">
+<p><strong>4.43</strong> خطا إنتاج لعمر 10 سنوات. الأول يكلف 15,000 دينار وتشغيله 4,000 دينار سنويا. الثاني يكلف 24,000 دينار وتشغيله 2,600 دينار سنويا. احسب المعدل التزايدي، وتأكد بالقيمة السنوية بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-43">الحل</a></span></p>
+</div>
+<div id="prob-4-44" class="ee-item" data-id="c04-d-12" data-kind="problem" data-label="4.44">
+<p><strong>4.44</strong> مشروع يكلف 9,000 دينار ويعطي 2,500 دينار سنويا لمدة 5 سنوات. إذا ضاعفنا المشروع 2 مرات، بالتكلفة والدخل، ماذا يحدث للمعدل؟ وللقيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-44">الحل</a></span></p>
+</div>
+<div id="prob-4-45" class="ee-item" data-id="c04-d-13" data-kind="problem" data-label="4.45">
+<p><strong>4.45</strong> شركة تحتاج سيارة لمدة 5 سنوات. تستطيع استئجارها بمبلغ 6,600 دينار سنويا يدفع في بداية كل سنة، أو شراءها بسعر 30,000 دينار وبيعها بعد 5 سنوات بقيمة 9,000 دينار. الصيانة على الشركة في الحالتين. ما المعدل التزايدي للشراء مقابل الاستئجار؟ وماذا تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-45">الحل</a></span></p>
+</div>
+<div id="prob-4-46" class="ee-item" data-id="c04-d-14" data-kind="problem" data-label="4.46">
+<p><strong>4.46</strong> مشروعان متنافيان يكلف كل منهما 20,000 دينار. المشروع أ يعطي 15,000 ثم 8,000 ثم 2,000 دينار. المشروع ب يعطي 2,000 ثم 9,000 ثم 16,000 دينار. الحد الأدنى للعائد 10%. احسب المعدلين والقيمتين الحاليتين. أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-46">الحل</a></span></p>
+</div>
+<div id="prob-4-47" class="ee-item" data-id="c04-d-15" data-kind="problem" data-label="4.47">
+<p><strong>4.47</strong> استخدم القيمة الحالية لتدفقات الفرق، بدل المعدل، للاختيار بين مشروعين عمرهما 5 سنوات: الأول يكلف 12,000 دينار ويعطي 4,000.00 دينار سنويا، والثاني يكلف 20,000 دينار ويعطي 5,800.00 دينار سنويا. النسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-47">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-أكثر-من-بديلين" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-أكثر-من-بديلين">الجزء هـ: أكثر من بديلين</h3>
+<p>رتب البدائل حسب التكلفة، ثم قارن كل بديل بالأفضل قبله.</p>
+<div id="prob-4-48" class="ee-item" data-id="c04-e-01" data-kind="problem" data-label="4.48">
+<p><strong>4.48</strong> ثلاثة بدائل متنافية عمرها 6 سنوات. البديل 1 يكلف 15,000 ويعطي 5,000 سنويا. البديل 2 يكلف 25,000 ويعطي 7,800 سنويا. البديل 3 يكلف 40,000 ويعطي 10,800 سنويا. اختر بالتحليل التزايدي بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-48">الحل</a></span></p>
+</div>
+<div id="prob-4-49" class="ee-item" data-id="c04-e-02" data-kind="problem" data-label="4.49">
+<p><strong>4.49</strong> ثلاثة بدائل عمرها 5 سنوات، والحد الأدنى 10%:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة</th>
+<th>الدخل السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10,000</td>
+<td>3,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>16,000</td>
+<td>4,600</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>25,000</td>
+<td>6,800</td>
+</tr>
+</tbody>
+</table>
+<p>اختر بالتحليل التزايدي، وانتبه لأي بديل تقارن به البديل 3.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-49">الحل</a></span></p>
+</div>
+<div id="prob-4-50" class="ee-item" data-id="c04-e-03" data-kind="problem" data-label="4.50">
+<p><strong>4.50</strong> أربعة أنظمة تكييف لمبنى، لعمر 8 سنوات، والحد الأدنى 10%:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>النظام</th>
+<th>التكلفة</th>
+<th>الكهرباء السنوية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>12,000</td>
+<td>5,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>16,000</td>
+<td>4,100</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>22,000</td>
+<td>2,600</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>29,000</td>
+<td>1,400</td>
+</tr>
+</tbody>
+</table>
+<p>اختر بالتحليل التزايدي.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-50">الحل</a></span></p>
+</div>
+<div id="prob-4-51" class="ee-item" data-id="c04-e-04" data-kind="problem" data-label="4.51">
+<p><strong>4.51</strong> طالب رتب ثلاثة مشاريع عمرها 10 سنوات حسب معدل كل منها: الأول يكلف 20,000 ويعطي 3,200 سنويا، والثاني يكلف 30,000 ويعطي 5,100 سنويا، والثالث يكلف 40,000 ويعطي 6,900 سنويا. ما المعدلات؟ لماذا لا يكفي هذا الترتيب لاختيار مشروع واحد بنسبة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-51">الحل</a></span></p>
+</div>
+<div id="prob-4-52" class="ee-item" data-id="c04-e-05" data-kind="problem" data-label="4.52">
+<p><strong>4.52</strong> أكمل المسألة السابقة بالتحليل التزايدي والقيمة الحالية بنسبة 9%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-52">الحل</a></span></p>
+</div>
+<div id="prob-4-53" class="ee-item" data-id="c04-e-06" data-kind="problem" data-label="4.53">
+<p><strong>4.53</strong> ثلاثة بدائل عمرها 6 سنوات: أ يكلف 50,000 ويعطي 14,000 سنويا، وب يكلف 80,000 ويعطي 20,500 سنويا، وج يكلف 65,000 ويعطي 17,500 سنويا. بأي ترتيب تجري المقارنات؟ ثم اختر بالقيمة الحالية بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-53">الحل</a></span></p>
+</div>
+<div id="prob-4-54" class="ee-item" data-id="c04-e-07" data-kind="problem" data-label="4.54">
+<p><strong>4.54</strong> مستثمر لديه 15,000 دينار. أمامه ثلاثة خيارات متنافية لمدة 5 سنوات: أ يكلف 5,000 ويعطي 2,000 سنويا، وب يكلف 15,000 ويعطي 4,300 سنويا، وج يكلف 10,000 ويعطي 3,200 سنويا. المال الذي لا يستثمره يبقى في البنك بنسبة 8%. ماذا يختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-54">الحل</a></span></p>
+</div>
+<div id="prob-4-55" class="ee-item" data-id="c04-e-08" data-kind="problem" data-label="4.55">
+<p><strong>4.55</strong> مصنع يدرس ثلاث درجات من الأتمتة لخط تعبئة، لعمر 4 سنوات، والحد الأدنى 10%. الدرجة الأولى تكلف 4,000 وتوفر 1,500 سنويا. الدرجة الثانية تضيف 3,000 على الأولى، وتضيف 1,200 توفير سنوي. الدرجة الثالثة تضيف 3,000 أخرى، وتضيف 1,000 توفير سنوي. إلى أي درجة يذهب المصنع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-55">الحل</a></span></p>
+</div>
+<div id="prob-4-56" class="ee-item" data-id="c04-e-09" data-kind="problem" data-label="4.56">
+<p><strong>4.56</strong> للمصنع في المسألة السابقة: ما معدل كل درجة وحدها، أي التكلفة الكلية مقابل التوفير الكلي؟ لماذا يختلف عن تحليل الخطوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-56">الحل</a></span></p>
+</div>
+<div id="prob-4-57" class="ee-item" data-id="c04-e-10" data-kind="problem" data-label="4.57">
+<p><strong>4.57</strong> للبدائل الثلاثة في مثال التحليل التزايدي لثلاثة بدائل في هذا الفصل: ماذا تختار إذا كان الحد الأدنى للعائد 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-57">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-تعدد-الحلول-والمعدل-المعدل" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-تعدد-الحلول-والمعدل-المعدل">الجزء و: تعدد الحلول والمعدل المعدل</h3>
+<div id="prob-4-58" class="ee-item" data-id="c04-f-01" data-kind="problem" data-label="4.58">
+<p><strong>4.58</strong> كم مرة تتغير الإشارة في كل من التدفقات التالية؟ وما أكبر عدد ممكن من المعدلات الموجبة؟</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>-100</td>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>-100</td>
+<td>80</td>
+<td>-20</td>
+<td>70</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>-100</td>
+<td>230</td>
+<td>-132</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>100</td>
+<td>-40</td>
+<td>-40</td>
+<td>-40</td>
+<td>-40</td>
+</tr>
+</tbody>
+</table>
+<p><span class="ee-sol-link"><a href="#sol-4-58">الحل</a></span></p>
+</div>
+<div id="prob-4-59" class="ee-item" data-id="c04-f-02" data-kind="problem" data-label="4.59">
+<p><strong>4.59</strong> طبق اختبار المجموع التراكمي على المشروع ب في المسألة السابقة. هل له معدل موجب واحد فقط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-59">الحل</a></span></p>
+</div>
+<div id="prob-4-60" class="ee-item" data-id="c04-f-03" data-kind="problem" data-label="4.60">
+<p><strong>4.60</strong> احسب المعدلين للمشروع ج في المسألة الأولى من هذا الجزء، بتجربة النسب أو بالتحليل.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-60">الحل</a></span></p>
+</div>
+<div id="prob-4-61" class="ee-item" data-id="c04-f-04" data-kind="problem" data-label="4.61">
+<p><strong>4.61</strong> للمشروع ج نفسه: احسب القيمة الحالية والمعدل المعدل بنسبة 12%. هل يقبل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-61">الحل</a></span></p>
+</div>
+<div id="prob-4-62" class="ee-item" data-id="c04-f-05" data-kind="problem" data-label="4.62">
+<p><strong>4.62</strong> مشروع يكلف 40,000 دينار، ويعطي 10,000 و12,000 و15,000 و14,000 و10,000 دينار في السنوات من 1 إلى 5. نسبة التمويل 8%، ونسبة إعادة الاستثمار 10%. احسب المعدل والمعدل المعدل.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-62">الحل</a></span></p>
+</div>
+<div id="prob-4-63" class="ee-item" data-id="c04-f-06" data-kind="problem" data-label="4.63">
+<p><strong>4.63</strong> مشروع تدفقاته من السنة 0 إلى السنة 4: -30,000 ثم 18,000 ثم -10,000 ثم 20,000 ثم 12,000. نسبة التمويل 8% ونسبة إعادة الاستثمار 10%. احسب المعدل المعدل.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-63">الحل</a></span></p>
+</div>
+<div id="prob-4-64" class="ee-item" data-id="c04-f-07" data-kind="problem" data-label="4.64">
+<p><strong>4.64</strong> منجم صغير يكلف 50,000 دينار، ويعطي 20,000 دينار سنويا لمدة 4 سنوات، ثم يحتاج 15,000 دينار لإعادة تأهيل الأرض في السنة 5. كم معدلا يمكن أن يكون له؟ احسبه، واحسب القيمة الحالية بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-64">الحل</a></span></p>
+</div>
+<div id="prob-4-65" class="ee-item" data-id="c04-f-08" data-kind="problem" data-label="4.65">
+<p><strong>4.65</strong> شركة تأخذ 10,000 دينار من عميل اليوم مقدما، وتقدم له خدمة تكلفها 2,600 دينار سنويا لمدة 5 سنوات. ما المعدل؟ وكيف تفسره؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-65">الحل</a></span></p>
+</div>
+<div id="prob-4-66" class="ee-item" data-id="c04-f-09" data-kind="problem" data-label="4.66">
+<p><strong>4.66</strong> مشروع تدفقاته -1,600 ثم 10,000 ثم -10,000. احسب القيمة الحالية عند 0% و25% و100% و400%. ما المعدلان؟ وهل لأي منهما معنى اقتصادي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-66">الحل</a></span></p>
+</div>
+<div id="prob-4-67" class="ee-item" data-id="c04-f-10" data-kind="problem" data-label="4.67">
+<p><strong>4.67</strong> للمشروع في المسألة السابقة، احسب القيمة الحالية والمعدل المعدل بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-67">الحل</a></span></p>
+</div>
+<div id="prob-4-68" class="ee-item" data-id="c04-f-11" data-kind="problem" data-label="4.68">
+<p><strong>4.68</strong> مشروع يكلف 30,000 دينار ويعطي 9,000 دينار سنويا لمدة 5 سنوات. احسب المعدل، ثم المعدل المعدل بنسبة إعادة استثمار 8%. أيهما أقرب للعائد الحقيقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-68">الحل</a></span></p>
+</div>
+<div id="prob-4-69" class="ee-item" data-id="c04-f-12" data-kind="problem" data-label="4.69">
+<p><strong>4.69</strong> مشروع تدفقاته -1,000 ثم 3,900 ثم -5,030 ثم 2,145. كم معدلا له؟ استخدم رسم القيمة الحالية في Python.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-69">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-نسبة-المنفعة-إلى-التكلفة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-نسبة-المنفعة-إلى-التكلفة">الجزء ز: نسبة المنفعة إلى التكلفة</h3>
+<div id="prob-4-70" class="ee-item" data-id="c04-g-01" data-kind="problem" data-label="4.70">
+<p><strong>4.70</strong> مشروع عام يكلف 1,200,000 دينار، وصيانته 30,000 دينار سنويا، ومنافعه 180,000 دينار سنويا لمدة 20 سنة. احسب نسبة المنفعة إلى التكلفة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-70">الحل</a></span></p>
+</div>
+<div id="prob-4-71" class="ee-item" data-id="c04-g-02" data-kind="problem" data-label="4.71">
+<p><strong>4.71</strong> احسب النسبة المعدلة للمشروع في المسألة السابقة، بطرح الصيانة من المنافع. هل يتغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-71">الحل</a></span></p>
+</div>
+<div id="prob-4-72" class="ee-item" data-id="c04-g-03" data-kind="problem" data-label="4.72">
+<p><strong>4.72</strong> سد لجمع مياه الأمطار يكلف 800,000 دينار، وصيانته 20,000 دينار سنويا لمدة 25 سنة. منافعه للمزارعين 95,000 دينار سنويا. لكنه يغمر أرضا كانت تعطي 15,000 دينار سنويا. احسب النسبة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-72">الحل</a></span></p>
+</div>
+<div id="prob-4-73" class="ee-item" data-id="c04-g-04" data-kind="problem" data-label="4.73">
+<p><strong>4.73</strong> مستشفى ميداني يكلف 2,500,000 دينار، وصيانة المبنى 40,000 دينار سنويا لمدة 30 سنة. ما أقل منافع سنوية تجعل النسبة تساوي 1 بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-73">الحل</a></span></p>
+</div>
+<div id="prob-4-74" class="ee-item" data-id="c04-g-05" data-kind="problem" data-label="4.74">
+<p><strong>4.74</strong> مشروع بنية تحتية يكلف 3,000,000 دينار، ويعطي منافع 220,000 دينار سنويا إلى الأبد، وصيانته 50,000 دينار سنويا. احسب النسبة عند 4% و6% و8%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-74">الحل</a></span></p>
+</div>
+<div id="prob-4-75" class="ee-item" data-id="c04-g-06" data-kind="problem" data-label="4.75">
+<p><strong>4.75</strong> خياران لمشروع تصريف مياه أمطار، لعمر 20 سنة ونسبة 5%. الأول يكلف 900,000 دينار وصيانته 20,000 سنويا ومنافعه 140,000 سنويا. الثاني يكلف 1,300,000 دينار وصيانته 22,000 سنويا ومنافعه 185,000 سنويا. اختر.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-75">الحل</a></span></p>
+</div>
+<div id="prob-4-76" class="ee-item" data-id="c04-g-07" data-kind="problem" data-label="4.76">
+<p><strong>4.76</strong> ثلاثة بدائل متنافية لمشروع عام، لعمر 15 سنة ونسبة 6%، بدون صيانة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة</th>
+<th>المنافع السنوية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>400,000</td>
+<td>60,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>650,000</td>
+<td>95,000</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>900,000</td>
+<td>120,000</td>
+</tr>
+</tbody>
+</table>
+<p>اختر بالنسبة التزايدية.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-76">الحل</a></span></p>
+</div>
+<div id="prob-4-77" class="ee-item" data-id="c04-g-08" data-kind="problem" data-label="4.77">
+<p><strong>4.77</strong> لمشروع عام يكلف 1,500,000 دينار، ومنافعه 160,000 وصيانته 25,000 دينار سنويا لمدة 20 سنة: احسب النسبة، والقيمة الحالية الصافية للمجتمع بنسبة 6%. ما العلاقة بينهما؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-77">الحل</a></span></p>
+</div>
+<div id="prob-4-78" class="ee-item" data-id="c04-g-09" data-kind="problem" data-label="4.78">
+<p><strong>4.78</strong> طريق جديد يكلف 2,000,000 دينار، وصيانته 50,000 سنويا، ومنافعه للمواطنين 300,000 دينار سنويا. الطريق يخفض أيضا تكلفة صيانة طريق قديم بمبلغ 20,000 دينار سنويا. حللين طالبان المشروع لعمر 20 سنة بنسبة 6%: الأول أضاف 20,000 إلى المنافع، والثاني طرحها من التكاليف. هل يختلف القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-78">الحل</a></span></p>
+</div>
+<div id="prob-4-79" class="ee-item" data-id="c04-g-10" data-kind="problem" data-label="4.79">
+<p><strong>4.79</strong> مشروع عام يكلف 1,800,000 دينار، ومنافعه 200,000 دينار سنويا، وصيانته 35,000 دينار سنويا لمدة 25 سنة. ما النسبة التي تجعل B/C تساوي 1؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-79">الحل</a></span></p>
+</div>
+<div id="prob-4-80" class="ee-item" data-id="c04-g-11" data-kind="problem" data-label="4.80">
+<p><strong>4.80</strong> مشروع عام نسبته 1.4، وآخر نسبته 1.8. المشروعان متنافيان. هل نختار الثاني لأن نسبته أعلى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-80">الحل</a></span></p>
+</div>
+<div id="prob-4-81" class="ee-item" data-id="c04-g-12" data-kind="problem" data-label="4.81">
+<p><strong>4.81</strong> حديقة عامة تكلف 600,000 دينار، وصيانتها 10,000 دينار سنويا، وتحتاج تجديدا كل 10 سنوات بتكلفة 150,000 دينار، لمدة 30 سنة. منافعها للسكان تقدر بمبلغ 70,000 دينار سنويا. احسب النسبة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-81">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-4-82" class="ee-item" data-id="c04-h-01" data-kind="problem" data-label="4.82">
+<p><strong>4.82</strong> اكتب التدفقات -50000 و8000 و12000 و16000 و18000 و20000 في Excel، واحسب المعدل. ثم تحقق بحساب القيمة الحالية عند المعدل نفسه.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-82">الحل</a></span></p>
+</div>
+<div id="prob-4-83" class="ee-item" data-id="c04-h-02" data-kind="problem" data-label="4.83">
+<p><strong>4.83</strong> اكتب في Python دالة بطريقة التنصيف تحسب معدل استثمار يكلف 40,000 دينار ويعطي 9,000 دينار سنويا لمدة 7 سنوات. قارن بالدالة irr.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-83">الحل</a></span></p>
+</div>
+<div id="prob-4-84" class="ee-item" data-id="c04-h-03" data-kind="problem" data-label="4.84">
+<p><strong>4.84</strong> ارسم في Excel منحنى القيمة الحالية لتدفقات -30,000 ثم 18,000 ثم -10,000 ثم 20,000 ثم 12,000، للنسب من 0% إلى 40%. كم مرة يقطع المنحنى المحور الأفقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-84">الحل</a></span></p>
+</div>
+<div id="prob-4-85" class="ee-item" data-id="c04-h-04" data-kind="problem" data-label="4.85">
+<p><strong>4.85</strong> اكتب برنامج Python يأخذ قائمة بدائل متنافية، لكل منها تكلفة ودخل سنوي ونفس العمر، ويطبق التحليل التزايدي تلقائيا. جربه على البدائل الثلاثة في مثال التحليل التزايدي بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-85">الحل</a></span></p>
+</div>
+<div id="prob-4-86" class="ee-item" data-id="c04-h-05" data-kind="problem" data-label="4.86">
+<p><strong>4.86</strong> محل يعرض جهازا بسعر 900 دينار نقدا، أو بأقساط 87 دينار شهريا لمدة 12 شهرا. احسب في Excel المعدل الشهري والفعلي السنوي بصيغة واحدة لكل منهما.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-86">الحل</a></span></p>
+</div>
+<div id="prob-4-87" class="ee-item" data-id="c04-h-06" data-kind="problem" data-label="4.87">
+<p><strong>4.87</strong> مستثمر دفع 10,000 دينار في 1 كانون الثاني 2026، وقبض 2,750 في 1 آذار 2026، و4,250 في 30 تشرين الأول 2026، و3,250 في 15 شباط 2027، و2,750 في 1 نيسان 2027. احسب المعدل بالدالة XIRR. لماذا لا تصلح الدالة IRR هنا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-87">الحل</a></span></p>
+</div>
+<div id="prob-4-88" class="ee-item" data-id="c04-h-07" data-kind="problem" data-label="4.88">
+<p><strong>4.88</strong> مشروع يكلف 50,000 دينار ويعطي 12,000 دينار سنويا لمدة 6 سنوات. ابن في Excel جدول حساسية يبين المعدل إذا نقص الدخل 10%، أو زادت التكلفة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-88">الحل</a></span></p>
+</div>
+<div id="prob-4-89" class="ee-item" data-id="c04-h-08" data-kind="problem" data-label="4.89">
+<p><strong>4.89</strong> احسب في Excel المعدل المعدل لتدفقات -50000 ثم 12000 و15000 و18000 و15000 و12000، بنسبة إعادة استثمار 6% ثم 12%. قارن بالمعدل العادي.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-89">الحل</a></span></p>
+</div>
+<div id="prob-4-90" class="ee-item" data-id="c04-h-09" data-kind="problem" data-label="4.90">
+<p><strong>4.90</strong> اكتب في Python دالة تحسب نسبة المنفعة إلى التكلفة لمشروع يكلف 2,000,000 دينار، ومنافعه 300,000 وصيانته 50,000 دينار سنويا لمدة 25 سنة، واطبعها للنسب 4% و6% و8% و10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-4-90">الحل</a></span></p>
+</div>
+<div id="prob-4-91" class="ee-item" data-id="c04-h-10" data-kind="problem" data-label="4.91">
+<p><strong>4.91</strong> ابن في Excel جدولا يبين التكلفة الحقيقية لقرض 25,000 دينار بفائدة 8% ورسوم 2%، لمدد من سنة إلى 10 سنوات. ما التكلفة عند 5 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-91">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-4-92" class="ee-item" data-id="c04-i-01" data-kind="problem" data-label="4.92">
+<p><strong>4.92</strong> مشروع يكلف 20,000 دينار ويعطي 5,000 دينار سنويا لمدة 6 سنوات. ما معدل العائد الداخلي؟</p>
+<p>أ) 25.00%<br>
+ب) 8.33%<br>
+ج) 12.98%<br>
+د) 6.99%</p>
+<p><span class="ee-sol-link"><a href="#sol-4-92">الحل</a></span></p>
+</div>
+<div id="prob-4-93" class="ee-item" data-id="c04-i-02" data-kind="problem" data-label="4.93">
+<p><strong>4.93</strong> مشروعان متنافيان: أ معدله 25% وقيمته الحالية 8,000 دينار، وب معدله 18% وقيمته الحالية 12,000 دينار، بنفس الحد الأدنى للعائد. ماذا تختار؟</p>
+<p>أ) أ لأن معدله أعلى<br>
+ب) ب لأن قيمته الحالية أعلى<br>
+ج) كلاهما<br>
+د) لا يمكن الحكم بدون التحليل التزايدي</p>
+<p><span class="ee-sol-link"><a href="#sol-4-93">الحل</a></span></p>
+</div>
+<div id="prob-4-94" class="ee-item" data-id="c04-i-03" data-kind="problem" data-label="4.94">
+<p><strong>4.94</strong> معدل الفرق بين بديلين أعلى من الحد الأدنى للعائد. ماذا يعني ذلك؟</p>
+<p>أ) البديل الأرخص أفضل<br>
+ب) البديل الأغلى أفضل<br>
+ج) البديلان متساويان<br>
+د) كلاهما مرفوض</p>
+<p><span class="ee-sol-link"><a href="#sol-4-94">الحل</a></span></p>
+</div>
+<div id="prob-4-95" class="ee-item" data-id="c04-i-04" data-kind="problem" data-label="4.95">
+<p><strong>4.95</strong> تدفقات مشروع: -100 ثم 60 ثم -20 ثم 80. ما أكبر عدد ممكن للمعدلات الموجبة؟</p>
+<p>أ) 1<br>
+ب) 2<br>
+ج) 3<br>
+د) 4</p>
+<p><span class="ee-sol-link"><a href="#sol-4-95">الحل</a></span></p>
+</div>
+<div id="prob-4-96" class="ee-item" data-id="c04-i-05" data-kind="problem" data-label="4.96">
+<p><strong>4.96</strong> استثمار 8,000 دينار يعطي 3,000 دينار سنويا لمدة 4 سنوات. نسبة إعادة الاستثمار 10%. ما المعدل المعدل؟</p>
+<p>أ) 18.45%<br>
+ب) 14.86%<br>
+ج) 10.00%<br>
+د) 10.67%</p>
+<p><span class="ee-sol-link"><a href="#sol-4-96">الحل</a></span></p>
+</div>
+<div id="prob-4-97" class="ee-item" data-id="c04-i-06" data-kind="problem" data-label="4.97">
+<p><strong>4.97</strong> بدائل تكاليف لنفس الخدمة. ما أول مقارنة في التحليل التزايدي؟</p>
+<p>أ) البديل الأرخص مقابل عدم التنفيذ<br>
+ب) البديل الأغلى مقابل الأرخص<br>
+ج) البديل الثاني في التكلفة مقابل الأرخص<br>
+د) كل بديل مقابل عدم التنفيذ</p>
+<p><span class="ee-sol-link"><a href="#sol-4-97">الحل</a></span></p>
+</div>
+<div id="prob-4-98" class="ee-item" data-id="c04-i-07" data-kind="problem" data-label="4.98">
+<p><strong>4.98</strong> قرض 10,000 دينار بفائدة 8% لمدة 3 سنوات بأقساط سنوية، ورسوم 3% تخصم عند الصرف. ما التكلفة الحقيقية؟</p>
+<p>أ) 8.00%<br>
+ب) 11.00%<br>
+ج) 9.71%<br>
+د) 9.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-4-98">الحل</a></span></p>
+</div>
+<div id="prob-4-99" class="ee-item" data-id="c04-i-08" data-kind="problem" data-label="4.99">
+<p><strong>4.99</strong> مشروع عام قيمته الحالية للمنافع 5 ملايين، وللتكاليف 4 ملايين. ماذا تعرف؟</p>
+<p>أ) النسبة 1.25 والمشروع مجد<br>
+ب) النسبة 0.80 والمشروع غير مجد<br>
+ج) النسبة 1.25 لكن لا يمكن الحكم بدون المعدل<br>
+د) القيمة الحالية الصافية سالبة</p>
+<p><span class="ee-sol-link"><a href="#sol-4-99">الحل</a></span></p>
+</div>
+<div id="prob-4-100" class="ee-item" data-id="c04-i-09" data-kind="problem" data-label="4.100">
+<p><strong>4.100</strong> ضاعفت شركة حجم مشروع، فضاعفت التكلفة وكل الدخل. ماذا يحدث؟</p>
+<p>أ) المعدل يتضاعف<br>
+ب) المعدل لا يتغير والقيمة الحالية تتضاعف<br>
+ج) المعدل والقيمة الحالية لا يتغيران<br>
+د) القيمة الحالية لا تتغير</p>
+<p><span class="ee-sol-link"><a href="#sol-4-100">الحل</a></span></p>
+</div>
+<div id="prob-4-101" class="ee-item" data-id="c04-i-10" data-kind="problem" data-label="4.101">
+<p><strong>4.101</strong> منحنيا القيمة الحالية لمشروعين يتقاطعان عند 12%. الحد الأدنى للعائد 15%. أي المشروعين نختار؟</p>
+<p>أ) صاحب المنحنى الأشد انحدارا<br>
+ب) صاحب المنحنى الأقل انحدارا<br>
+ج) أي منهما<br>
+د) لا يمكن الحكم</p>
+<p><span class="ee-sol-link"><a href="#sol-4-101">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة تجمع أكثر من فكرة من الفصل، وبعضها يضيف فكرة جديدة.</p>
+<div id="prob-4-102" class="ee-item" data-id="c04-j-01" data-kind="problem" data-label="4.102">
+<p><strong>4.102</strong> <strong>حالة 4.1: توسعة مصنع ألبان في جنين</strong></p>
+<p>مصنع ألبان يدرس خيارين متنافيين لزيادة إنتاجه، لمدة 10 سنوات، والحد الأدنى للعائد 12%:</p>
+<ul>
+<li>الخيار أ: خط تعبئة إضافي بتكلفة 120,000 دينار، يزيد الربح 28,000 دينار سنويا.</li>
+<li>الخيار ب: خط جديد للأجبان بتكلفة 200,000 دينار. الربح يبدأ بمبلغ 30,000 دينار في السنة الأولى، ويزيد 5,000 دينار سنويا حتى يصل 50,000 دينار في السنة الخامسة، ثم يبقى ثابتا.</li>
+</ul>
+<p>(أ) ما معدل كل خيار؟ (ب) ما القيمة الحالية لكل خيار؟ (ج) اختر بالتحليل التزايدي. (د) المدير المالي يقول: الخيار أ أفضل لأن معدله أعلى. بماذا ترد؟ (هـ) ما المعدل المعدل للخيار ب بنسبة إعادة استثمار 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-102">الحل</a></span></p>
+</div>
+<div id="prob-4-103" class="ee-item" data-id="c04-j-02" data-kind="problem" data-label="4.103">
+<p><strong>4.103</strong> <strong>حالة 4.2: تقسيط أم قرض شخصي</strong></p>
+<p>موظفة تريد شراء أثاث سعره النقدي 5,000 دينار. أمامها خياران:</p>
+<ul>
+<li>الخيار الأول: المعرض يقبل دفعة أولى 200 دينار، ثم 160 دينار شهريا لمدة 36 شهرا، بدون فوائد معلنة.</li>
+<li>الخيار الثاني: تدفع 500 دينار من مدخراتها، وتأخذ قرضا شخصيا بقيمة 4,500 دينار من البنك بفائدة 8.5% سنويا تحسب شهريا لمدة 36 شهرا، مع رسوم 2% تخصم من القرض، فتدفع الفرق الناتج عن الرسوم من مدخراتها أيضا.</li>
+</ul>
+<p>(أ) ما المعدل الفعلي السنوي للتقسيط؟ (ب) ما القسط الشهري للقرض؟ (ج) ما التكلفة الفعلية للقرض مع الرسوم؟ (د) ما مجموع ما تدفعه في كل خيار؟ (هـ) أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-103">الحل</a></span></p>
+</div>
+<div id="prob-4-104" class="ee-item" data-id="c04-j-03" data-kind="problem" data-label="4.104">
+<p><strong>4.104</strong> <strong>حالة 4.3: محطة تحلية مياه لقطاع ساحلي</strong></p>
+<p>سلطة المياه تدرس محطتي تحلية لمدة 30 سنة، بنسبة خصم 5% للمشاريع العامة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>المحطة الصغيرة</th>
+<th>المحطة الكبيرة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>تكلفة البناء</td>
+<td>6,000,000</td>
+<td>9,000,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل والصيانة السنوية</td>
+<td>150,000</td>
+<td>180,000</td>
+</tr>
+<tr class="odd">
+<td>المنافع السنوية للسكان</td>
+<td>900,000</td>
+<td>1,100,000</td>
+</tr>
+</tbody>
+</table>
+<p>المنافع تشمل توفير شراء المياه المنقولة وتحسين الصحة العامة. لكن كلا المحطتين تسببان ضررا بيئيا للصيد البحري يقدر بمبلغ 100,000 دينار سنويا.</p>
+<p>(أ) احسب نسبة المنفعة إلى التكلفة لكل محطة. (ب) أيهما تختار بالنسبة التزايدية؟ (ج) ما معدل العائد الداخلي للمجتمع للمحطة الصغيرة؟ (د) جهة مانحة تقترح نسبة خصم 3%. هل يتغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-4-104">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch03.html" class="pagination-link" aria-label="القيمة الحالية والقيمة السنوية ومقارنة البدائل">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
