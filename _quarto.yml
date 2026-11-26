@@ -20,14 +20,17 @@ book:
     - chapters/ch02.qmd
     - chapters/ch03.qmd
     - chapters/ch04.qmd
+    - chapters/ch05.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
     - appendices/excel-functions.qmd
+    - appendices/tax-countries.qmd
     - appendices/solutions-ch01.qmd
     - appendices/solutions-ch02.qmd
     - appendices/solutions-ch03.qmd
     - appendices/solutions-ch04.qmd
+    - appendices/solutions-ch05.qmd
 
 lang: ar
 dir: rtl

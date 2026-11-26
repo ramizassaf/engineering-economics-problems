@@ -136,7 +136,35 @@ CHECKS = {
     "c04-j-01": {"rd": lambda v: npf.irr([-80000, 2000, 7000, 12000, 17000] + [22000] * 6),
                  "MB": lambda v: npf.mirr([-200000, 30000, 35000, 40000, 45000] + [50000] * 6, 0.12, 0.12)},
     "c04-j-02": {"im2": lambda v: npf.rate(36, npf.pmt(0.085 / 12, 36, -4500), -4410, 0)},
+    # ---------------------------------------------------------------- chapter 5
+    "c05-ex-ddb-switch": {"D3": lambda v: ddb_sched(v["B"], v["S"], 6)[2], "b6": lambda v: v["B"] - sum(ddb_sched(v["B"], v["S"], 6))},
+    "c05-ex-syd": {"D2": lambda v: syd_sched(v["B"], v["S"], 5)[1]},
+    "c05-ex-compare-pv": {"TD": lambda v: v["t"] * npf.npv(v["i"], [0] + ddb_sched(v["B"], 0, 5)),
+                          "TY": lambda v: v["t"] * npf.npv(v["i"], [0] + syd_sched(v["B"], 0, 5))},
+    "c05-ex-tax-basic": {"CF": lambda v: (v["R"] - v["O"]) * (1 - v["t"]) + v["t"] * v["B"] / 5},
+    "c05-ex-tax-shield": {"P": lambda v: npf.pv(v["i"], v["n"], -v["t"] * v["B"] / v["n"])},
+    "c05-ex-disposal-gain": {"net": lambda v: v["M"] - v["t"] * (v["M"] - (v["B"] - v["k"] * v["B"] / v["n"]))},
+    "c05-c-07": {"D4": lambda v: ddb_sched(v["B"], 0, 5)[3]},
+    "c05-c-09": {"dd": lambda v: npf.npv(v["i"], [0] + ddb_sched(v["B"], 0, 5))},
+    "c05-e-02": {"half": lambda v: npf.npv(v["i"], [0, v["B"] / v["n"] / 2] + [v["B"] / v["n"]] * (v["n"] - 1) + [v["B"] / v["n"] / 2])},
+    "c05-j-01": {"Pdd": lambda v: 0.15 * npf.npv(0.10, [0] + ddb_sched(165000, 0, 6))},
 }
+
+
+def ddb_sched(B, S, n):
+    """Double declining balance with the switch to straight line, written independently."""
+    out, bv = [], B
+    for t in range(n):
+        left = n - t
+        dep = min(max(bv * 2 / n, (bv - S) / left), bv - S)
+        out.append(dep)
+        bv -= dep
+    return out
+
+
+def syd_sched(B, S, n):
+    tot = n * (n + 1) / 2
+    return [(B - S) * (n - t) / tot for t in range(n)]
 
 
 def lcm_flows(C, O, S, life, L):
