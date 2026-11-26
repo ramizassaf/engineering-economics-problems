@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; الاستهلاك والضرائب – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch04.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-5-concept" id="toc-sec-5-concept" class="nav-link active" data-scroll-target="#sec-5-concept"><span class="header-section-number">5.1</span> ما الاستهلاك؟</a></li>
+  <li><a href="#sec-5-sl" id="toc-sec-5-sl" class="nav-link" data-scroll-target="#sec-5-sl"><span class="header-section-number">5.2</span> القسط الثابت</a></li>
+  <li><a href="#sec-5-db" id="toc-sec-5-db" class="nav-link" data-scroll-target="#sec-5-db"><span class="header-section-number">5.3</span> القسط المتناقص</a></li>
+  <li><a href="#sec-5-syd" id="toc-sec-5-syd" class="nav-link" data-scroll-target="#sec-5-syd"><span class="header-section-number">5.4</span> مجموع أرقام السنوات ووحدات الإنتاج</a></li>
+  <li><a href="#sec-5-tax-rules" id="toc-sec-5-tax-rules" class="nav-link" data-scroll-target="#sec-5-tax-rules"><span class="header-section-number">5.5</span> قواعد القوانين الضريبية</a></li>
+  <li><a href="#sec-5-tax" id="toc-sec-5-tax" class="nav-link" data-scroll-target="#sec-5-tax"><span class="header-section-number">5.6</span> ضريبة الدخل</a></li>
+  <li><a href="#sec-5-disposal" id="toc-sec-5-disposal" class="nav-link" data-scroll-target="#sec-5-disposal"><span class="header-section-number">5.7</span> بيع الأصل وترحيل الخسائر</a></li>
+  <li><a href="#sec-5-python" id="toc-sec-5-python" class="nav-link" data-scroll-target="#sec-5-python"><span class="header-section-number">5.8</span> Python: جداول الاستهلاك</a></li>
+  <li><a href="#sec-5-problems" id="toc-sec-5-problems" class="nav-link" data-scroll-target="#sec-5-problems"><span class="header-section-number">5.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-القسط-الثابت" id="toc-الجزء-ب-القسط-الثابت" class="nav-link" data-scroll-target="#الجزء-ب-القسط-الثابت">الجزء ب: القسط الثابت</a></li>
+  <li><a href="#الجزء-ج-القسط-المتناقص" id="toc-الجزء-ج-القسط-المتناقص" class="nav-link" data-scroll-target="#الجزء-ج-القسط-المتناقص">الجزء ج: القسط المتناقص</a></li>
+  <li><a href="#الجزء-د-مجموع-أرقام-السنوات-ووحدات-الإنتاج" id="toc-الجزء-د-مجموع-أرقام-السنوات-ووحدات-الإنتاج" class="nav-link" data-scroll-target="#الجزء-د-مجموع-أرقام-السنوات-ووحدات-الإنتاج">الجزء د: مجموع أرقام السنوات ووحدات الإنتاج</a></li>
+  <li><a href="#الجزء-هـ-نصف-السنة-والمجموعات" id="toc-الجزء-هـ-نصف-السنة-والمجموعات" class="nav-link" data-scroll-target="#الجزء-هـ-نصف-السنة-والمجموعات">الجزء هـ: نصف السنة والمجموعات</a></li>
+  <li><a href="#الجزء-و-ضريبة-الدخل-والوفر-الضريبي" id="toc-الجزء-و-ضريبة-الدخل-والوفر-الضريبي" class="nav-link" data-scroll-target="#الجزء-و-ضريبة-الدخل-والوفر-الضريبي">الجزء و: ضريبة الدخل والوفر الضريبي</a></li>
+  <li><a href="#الجزء-ز-بيع-الأصل-وترحيل-الخسائر" id="toc-الجزء-ز-بيع-الأصل-وترحيل-الخسائر" class="nav-link" data-scroll-target="#الجزء-ز-بيع-الأصل-وترحيل-الخسائر">الجزء ز: بيع الأصل وترحيل الخسائر</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch5" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>حتى الآن قارنا المشاريع قبل الضريبة. لكن الشركات تدفع ضريبة على أرباحها، والضريبة تغير التدفقات النقدية، وقد تغير القرار. الاستهلاك هو الجسر بين الاثنين: ليس نقدا يخرج من الشركة، لكنه مصروف يخفض الضريبة. في هذا الفصل نشرح طرق الاستهلاك وحساب الضريبة بشكل عام، لأن المبادئ واحدة في كل الدول. أما النسب والقواعد في فلسطين والسعودية والأردن ومصر ففي ملحق مستقل، لأنها تتغير مع تعديل القوانين.</p>
+<section id="sec-5-concept" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-5-concept"><span class="header-section-number">5.1</span> ما الاستهلاك؟</h2>
+<p>الآلة تخدم سنوات، فلا يصح أن نحمل ثمنها كاملا على سنة الشراء. الاستهلاك يوزع تكلفة الأصل على سنوات عمره. أربعة مصطلحات نحتاجها:</p>
+<ul>
+<li>أساس الاستهلاك B: تكلفة الأصل جاهزا للعمل، أي السعر والنقل والتركيب والتجربة.</li>
+<li>القيمة المقدرة S: ما نتوقع أن يباع به الأصل في نهاية عمره.</li>
+<li>العمر n: عدد السنوات التي يسمح القانون أو المحاسبة بتوزيع التكلفة عليها.</li>
+<li>القيمة الدفترية BV: الأساس ناقص الاستهلاك المتراكم حتى تاريخه.</li>
+</ul>
+<p>الأرض لا تستهلك، لأنها لا تفقد قيمتها بالاستخدام.</p>
+<div id="ex-5-1" class="ee-item" data-id="c05-ex-basis" data-kind="example" data-label="5.1">
+<p><strong>مثال 5.1: أساس الاستهلاك</strong></p>
+<p>اشترى مصنع آلة سعرها 85,000 دينار. دفع 3,000 دينار للنقل، و4,500 دينار للتركيب، و1,500 دينار لتجربة التشغيل. ودفع أيضا 2,000 دينار لتدريب العمال على الآلة. ما أساس الاستهلاك؟</p>
+<p><strong>الحل:</strong></p>
+<p>أساس الاستهلاك هو كل ما ينفق لجعل الأصل جاهزا للعمل في مكانه: السعر والنقل والتركيب والتجربة.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>85</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>94</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+B = 85\mathord{,}000 + 3\mathord{,}000 + 4\mathord{,}500 + 1\mathord{,}500 = 94\mathord{,}000
+</annotation></semantics></math></p>
+<p>التدريب لا يدخل في الأساس، لأنه يزيد مهارة العمال وليس قيمة الآلة. يسجل مصروفا في سنته.</p>
+</div>
+</section>
+<section id="sec-5-sl" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-5-sl"><span class="header-section-number">5.2</span> القسط الثابت</h2>
+<p>أبسط طريقة وأكثرها استخداما. الاستهلاك نفسه كل سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">
+D = \frac{B - S}{n}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mi>t</mi></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
+BV_t = B - t\,D
+</annotation></semantics></math></p>
+<div id="ex-5-2" class="ee-item" data-id="c05-ex-sl" data-kind="example" data-label="5.2">
+<p><strong>مثال 5.2: القسط الثابت</strong></p>
+<p>آلة أساسها 60,000 دينار، وقيمتها المقدرة في نهاية عمرها 8,000 دينار، وعمرها 5 سنوات. احسب الاستهلاك السنوي بالقسط الثابت، والقيمة الدفترية بعد سنتين.</p>
+<p><strong>الحل:</strong></p>
+<p>القسط الثابت يوزع القيمة التي تضيع بالتساوي على سنوات العمر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>10</mn><mi>,</mi><mn>400.00</mn></mrow><annotation encoding="application/x-tex">
+D = \frac{B - S}{n} = \frac{60\mathord{,}000 - 8\mathord{,}000}{5} = 10\mathord{,}400.00
+</annotation></semantics></math></p>
+<p>القيمة الدفترية هي الأساس ناقص الاستهلاك المتراكم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>400.00</mn><mo>=</mo><mn>39</mn><mi>,</mi><mn>200.00</mn></mrow><annotation encoding="application/x-tex">
+BV_2 = 60\mathord{,}000 - 2 \times 10\mathord{,}400.00 = 39\mathord{,}200.00
+</annotation></semantics></math></p>
+<pre class="excel"><code>=SLN(60000, 8000, 5)</code></pre>
+</div>
+</section>
+<section id="sec-5-db" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-5-db"><span class="header-section-number">5.3</span> القسط المتناقص</h2>
+<p>نستهلك كل سنة نسبة ثابتة d من القيمة الدفترية في بداية السنة. الاستهلاك كبير في البداية ويصغر مع الزمن:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub><mo>=</mo><mi>d</mi><mo>×</mo><mi>B</mi><msub><mi>V</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">
+D_t = d \times BV_{t-1}
+</annotation></semantics></math></p>
+<p>أشهر صورة هي القسط المتناقص المضاعف، ونسبته ضعف نسبة القسط الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>2</mn><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">
+d = \frac{2}{n}
+</annotation></semantics></math></p>
+<div id="ex-5-3" class="ee-item" data-id="c05-ex-ddb" data-kind="example" data-label="5.3">
+<p><strong>مثال 5.3: القسط المتناقص المضاعف</strong></p>
+<p>آلة أساسها 50,000 دينار، وعمرها 5 سنوات، وقيمتها المقدرة 5,000 دينار. ابن جدول الاستهلاك بالقسط المتناقص المضاعف.</p>
+<p><strong>الحل:</strong></p>
+<p>نسبة القسط المتناقص المضاعف ضعف نسبة القسط الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>2</mn><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mn>40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+d = \frac{2}{n} = \frac{2}{5} = 40\%
+</annotation></semantics></math></p>
+<p>كل سنة نستهلك 40% من القيمة الدفترية في بدايتها، وليس من الأساس. القيمة المقدرة لا تطرح في البداية، لكن القيمة الدفترية لا تنزل تحتها.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>القيمة في البداية</th>
+<th>الاستهلاك</th>
+<th>القيمة في النهاية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>50,000.00</td>
+<td>20,000.00</td>
+<td>30,000.00</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>30,000.00</td>
+<td>12,000.00</td>
+<td>18,000.00</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>18,000.00</td>
+<td>7,200.00</td>
+<td>10,800.00</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>10,800.00</td>
+<td>4,320.00</td>
+<td>6,480.00</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>6,480.00</td>
+<td>1,480.00</td>
+<td>5,000.00</td>
+</tr>
+</tbody>
+</table>
+<pre class="excel"><code>=DDB(50000, 5000, 5, 1)</code></pre>
+<p>غير الرقم الأخير من 1 إلى 5 لكل سنة. لاحظ أن الاستهلاك كبير في البداية ويصغر مع الزمن، وهذا يناسب أصولا تفقد قيمتها بسرعة، مثل السيارات والحواسيب.</p>
+</div>
+<p>القسط المتناقص لا يصل وحده إلى القيمة المقدرة في نهاية العمر. لذلك نتحول إلى القسط الثابت في السنة التي يصبح فيها أكبر.</p>
+<div id="ex-5-4" class="ee-item" data-id="c05-ex-ddb-switch" data-kind="example" data-label="5.4">
+<p><strong>مثال 5.4: التحول من المتناقص إلى الثابت</strong></p>
+<p>آلة أساسها 50,000 دينار، وعمرها 6 سنوات، وقيمتها المقدرة 5,000 دينار. استخدم القسط المتناقص المضاعف، مع التحول إلى القسط الثابت في السنة التي يصبح فيها أكبر.</p>
+<p><strong>الحل:</strong></p>
+<p>المشكلة في القسط المتناقص أن القيمة الدفترية لا تصل إلى القيمة المقدرة في نهاية العمر. الحل: نقارن كل سنة بين قسطين، ونأخذ الأكبر:</p>
+<ul>
+<li>قسط المتناقص: النسبة مضروبة في القيمة في بداية السنة.</li>
+<li>قسط الثابت للباقي: القيمة في بداية السنة ناقص القيمة المقدرة، مقسومة على السنوات الباقية.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>البداية</th>
+<th>المتناقص</th>
+<th>الثابت للباقي</th>
+<th>الاستهلاك</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>50,000.00</td>
+<td>16,666.67</td>
+<td>7,500.00</td>
+<td>16,666.67</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>33,333.33</td>
+<td>11,111.11</td>
+<td>5,666.67</td>
+<td>11,111.11</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>22,222.22</td>
+<td>7,407.41</td>
+<td>4,305.56</td>
+<td>7,407.41</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>14,814.81</td>
+<td>4,938.27</td>
+<td>3,271.60</td>
+<td>4,938.27</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>9,876.54</td>
+<td>3,292.18</td>
+<td>2,438.27</td>
+<td>3,292.18</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6,584.36</td>
+<td>2,194.79</td>
+<td>1,584.36</td>
+<td>1,584.36</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الدفترية في النهاية 5,000.00 دينار، أي القيمة المقدرة بالضبط. الدالة VDB في Excel تعمل هذا التحول تلقائيا:</p>
+<pre class="excel"><code>=VDB(50000, 5000, 6, 0, 1)</code></pre>
+<p>للسنة الثالثة مثلا، المدخلان الأخيران 2 و3.</p>
+</div>
+</section>
+<section id="sec-5-syd" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-5-syd"><span class="header-section-number">5.4</span> مجموع أرقام السنوات ووحدات الإنتاج</h2>
+<p>طريقة مجموع أرقام السنوات سريعة في البداية مثل المتناقص، لكنها تصل إلى القيمة المقدرة بالضبط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mi>t</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>−</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+D_t = \frac{n - t + 1}{n(n+1)/2}\,(B - S)
+</annotation></semantics></math></p>
+<div id="ex-5-5" class="ee-item" data-id="c05-ex-syd" data-kind="example" data-label="5.5">
+<p><strong>مثال 5.5: مجموع أرقام السنوات</strong></p>
+<p>معدات أساسها 40,000 دينار، وعمرها 5 سنوات، وقيمتها المقدرة 4,000 دينار. احسب الاستهلاك بطريقة مجموع أرقام السنوات.</p>
+<p><strong>الحل:</strong></p>
+<p>مجموع أرقام السنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>5</mn><mo>=</mo><mfrac><mrow><mn>5</mn><mo>×</mo><mn>6</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">
+1 + 2 + 3 + 4 + 5 = \frac{5 \times 6}{2} = 15
+</annotation></semantics></math></p>
+<p>استهلاك السنة الأولى 5 من 15 من القيمة التي تضيع، والثانية 4 من 15، وهكذا:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الكسر</th>
+<th>الاستهلاك</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>5/15</td>
+<td>12,000.00</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4/15</td>
+<td>9,600.00</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3/15</td>
+<td>7,200.00</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2/15</td>
+<td>4,800.00</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1/15</td>
+<td>2,400.00</td>
+</tr>
+</tbody>
+</table>
+<p>المجموع 36,000.00 دينار، أي الأساس ناقص القيمة المقدرة.</p>
+<pre class="excel"><code>=SYD(40000, 4000, 5, 1)</code></pre>
+</div>
+<p>وطريقة وحدات الإنتاج تربط الاستهلاك بالاستخدام الفعلي، وليس بالزمن.</p>
+<div id="ex-5-6" class="ee-item" data-id="c05-ex-units" data-kind="example" data-label="5.6">
+<p><strong>مثال 5.6: وحدات الإنتاج</strong></p>
+<p>آلة تعبئة أساسها 180,000 دينار، وقيمتها المقدرة 20,000 دينار، وتنتج خلال عمرها 400,000 عبوة. أنتجت 70,000 عبوة في السنة الأولى و95,000 في الثانية. احسب الاستهلاك.</p>
+<p><strong>الحل:</strong></p>
+<p>استهلاك العبوة الواحدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mfrac><mrow><mn>180</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>20</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>400</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.4000</mn></mrow><annotation encoding="application/x-tex">
+r = \frac{180\mathord{,}000 - 20\mathord{,}000}{400\mathord{,}000} = 0.4000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>0.4000</mn><mo>×</mo><mn>70</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>28</mn><mi>,</mi><mn>000.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mn>0.4000</mn><mo>×</mo><mn>95</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>38</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+D_1 = 0.4000 \times 70\mathord{,}000 = 28\mathord{,}000.00, \qquad D_2 = 0.4000 \times 95\mathord{,}000 = 38\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>هذه الطريقة تناسب أصلا يتلف بالاستخدام وليس بالزمن، مثل الشاحنات والقوالب.</p>
+</div>
+</section>
+<section id="sec-5-tax-rules" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="sec-5-tax-rules"><span class="header-section-number">5.5</span> قواعد القوانين الضريبية</h2>
+<p>المحاسبة تختار الطريقة التي تعكس استهلاك الأصل الحقيقي. أما قانون الضريبة فيحدد الطريقة والنسبة المسموح بطرحها من الدخل. الطريقتان قد تختلفان في نفس الشركة. في التحليل الاقتصادي نستخدم استهلاك القانون الضريبي، لأنه الذي يؤثر في الضريبة المدفوعة.</p>
+<p>قاعدتان شائعتان في القوانين: قاعدة نصف السنة، والاستهلاك على مستوى المجموعة.</p>
+<div id="ex-5-7" class="ee-item" data-id="c05-ex-half-year" data-kind="example" data-label="5.7">
+<p><strong>مثال 5.7: قاعدة نصف السنة</strong></p>
+<p>اشترت شركة معدات بمبلغ 36,000 دينار في منتصف السنة، وعمرها 4 سنوات بدون قيمة مقدرة. قانون الضريبة يطبق قاعدة نصف السنة. وزع الاستهلاك بالقسط الثابت.</p>
+<p><strong>الحل:</strong></p>
+<p>قاعدة نصف السنة تفترض أن كل أصل يشترى في منتصف السنة، مهما كان تاريخ شرائه الفعلي. لذلك ينزل نصف قسط في السنة الأولى، والنصف الباقي في سنة إضافية بعد نهاية العمر.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mn>36</mn><mi>,</mi><mn>000</mn></mrow><mn>4</mn></mfrac><mo>=</mo><mn>9</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+D = \frac{36\mathord{,}000}{4} = 9\mathord{,}000.00
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الاستهلاك</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>4,500.00</td>
+</tr>
+<tr class="even">
+<td>من 2 إلى 4</td>
+<td>9,000.00 كل سنة</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>4,500.00</td>
+</tr>
+</tbody>
+</table>
+<p>الاستهلاك يمتد على 5 سنة ضريبية. القوانين تختلف في التفاصيل، وملحق الضرائب في الدول الأربع يبين قاعدة كل دولة.</p>
+</div>
+<div id="ex-5-8" class="ee-item" data-id="c05-ex-pool" data-kind="example" data-label="5.8">
+<p><strong>مثال 5.8: الاستهلاك على مستوى المجموعة</strong></p>
+<p>شركة تجمع آلاتها في مجموعة واحدة، وتستهلكها بالقسط المتناقص بنسبة 25% على رصيد المجموعة. الرصيد في بداية السنة 200,000 دينار. اشترت خلال السنة آلات بمبلغ 60,000 دينار، وباعت آلات بمبلغ 15,000 دينار. احسب الاستهلاك ورصيد نهاية السنة.</p>
+<p><strong>الحل:</strong></p>
+<p>في طريقة المجموعات لا نتابع كل آلة وحدها. نضيف المشتريات إلى الرصيد، ونطرح ثمن البيع، ثم نطبق النسبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">base</mtext><mo>=</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>245</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\text{base} = 200\mathord{,}000 + 60\mathord{,}000 - 15\mathord{,}000 = 245\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>0.25</mn><mo>×</mo><mn>245</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>61</mn><mi>,</mi><mn>250.00</mn></mrow><annotation encoding="application/x-tex">
+D = 0.25 \times 245\mathord{,}000 = 61\mathord{,}250.00
+</annotation></semantics></math></p>
+<p>رصيد السنة التالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>245</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>61</mn><mi>,</mi><mn>250.00</mn><mo>=</mo><mn>183</mn><mi>,</mi><mn>750.00</mn></mrow><annotation encoding="application/x-tex">
+245\mathord{,}000 - 61\mathord{,}250.00 = 183\mathord{,}750.00
+</annotation></semantics></math></p>
+<p>الطريقة بسيطة جدا للشركات التي تملك مئات الأصول. لاحظ أن البيع لا يولد ربحا أو خسارة منفصلة، لأن ثمنه يطرح من رصيد المجموعة. بعض القوانين تضيف نصف المشتريات فقط في سنة الشراء.</p>
+</div>
+<p>لماذا تهتم الشركة بسرعة الاستهلاك، ما دام المجموع واحدا؟</p>
+<div id="ex-5-9" class="ee-item" data-id="c05-ex-compare-pv" data-kind="example" data-label="5.9">
+<p><strong>مثال 5.9: أي طريقة أفضل للشركة؟</strong></p>
+<p>معدات أساسها 100,000 دينار، وعمرها 5 سنوات بدون قيمة مقدرة. نسبة الضريبة 20% والحد الأدنى للعائد 10%. قارن القيمة الحالية للوفر الضريبي من الاستهلاك بثلاث طرق: القسط الثابت، ومجموع أرقام السنوات، والمتناقص المضاعف مع التحول.</p>
+<p><strong>الحل:</strong></p>
+<p>مجموع الاستهلاك في كل الطرق 100,000 دينار. الفرق في التوقيت فقط. كل دينار استهلاك يخفض الضريبة بمقدار 20% منه، فالوفر الضريبي في كل سنة يساوي النسبة مضروبة في الاستهلاك.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الطريقة</th>
+<th>القيمة الحالية للاستهلاك</th>
+<th>القيمة الحالية للوفر</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القسط الثابت</td>
+<td>75,815.74</td>
+<td>15,163.15</td>
+</tr>
+<tr class="even">
+<td>مجموع أرقام السنوات</td>
+<td>80,614.22</td>
+<td>16,122.84</td>
+</tr>
+<tr class="odd">
+<td>المتناقص المضاعف مع التحول</td>
+<td>81,099.78</td>
+<td>16,219.96</td>
+</tr>
+</tbody>
+</table>
+<p>الطريقة الأسرع تعطي وفرا أكبر بالقيمة الحالية، لأن الضريبة المؤجلة أفضل من الضريبة المدفوعة اليوم. لذلك تختار الشركات أسرع طريقة يسمح بها القانون.</p>
+</div>
+</section>
+<section id="sec-5-tax" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="sec-5-tax"><span class="header-section-number">5.6</span> ضريبة الدخل</h2>
+<p>الضريبة تحسب على الدخل الخاضع للضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>I</mi><mo>=</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo>−</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">
+TI = R - O - D
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>t</mi><mo>×</mo><mi>T</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">
+T = t \times TI
+</annotation></semantics></math></p>
+<p>حيث R الإيراد، وO تكاليف التشغيل النقدية، وD الاستهلاك، وt نسبة الضريبة. التدفق النقدي بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo>−</mo><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
+CF = R - O - T = (R - O)(1 - t) + t\,D
+</annotation></semantics></math></p>
+<p>الحد الأخير هو الوفر الضريبي من الاستهلاك.</p>
+<div id="ex-5-10" class="ee-item" data-id="c05-ex-tax-basic" data-kind="example" data-label="5.10">
+<p><strong>مثال 5.10: من الإيراد إلى التدفق النقدي بعد الضريبة</strong></p>
+<p>شركة إيرادها السنوي 120,000 دينار، وتكاليف تشغيلها 55,000 دينار. تملك معدات أساسها 100,000 دينار تستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%. احسب الدخل الخاضع للضريبة، والضريبة، وصافي الربح، والتدفق النقدي بعد الضريبة.</p>
+<p><strong>الحل:</strong></p>
+<p>الاستهلاك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mn>100</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>20</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+D = \frac{100\mathord{,}000}{5} = 20\mathord{,}000.00
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المبلغ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td>120,000.00</td>
+</tr>
+<tr class="even">
+<td>تكاليف التشغيل</td>
+<td>-55,000.00</td>
+</tr>
+<tr class="odd">
+<td>الاستهلاك</td>
+<td>-20,000.00</td>
+</tr>
+<tr class="even">
+<td>الدخل الخاضع للضريبة</td>
+<td>45,000.00</td>
+</tr>
+<tr class="odd">
+<td>الضريبة</td>
+<td>-9,000.00</td>
+</tr>
+<tr class="even">
+<td>صافي الربح</td>
+<td>36,000.00</td>
+</tr>
+</tbody>
+</table>
+<p>الاستهلاك ليس نقدا يخرج من الشركة. المال خرج مرة واحدة عند الشراء. لذلك التدفق النقدي بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mn>120</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>55</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>56</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+CF = 120\mathord{,}000 - 55\mathord{,}000 - 9\mathord{,}000.00 = 56\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>ويساوي صافي الربح زائد الاستهلاك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36</mn><mi>,</mi><mn>000.00</mn><mo>+</mo><mn>20</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>56</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+36\mathord{,}000.00 + 20\mathord{,}000.00 = 56\mathord{,}000.00
+</annotation></semantics></math></p>
+</div>
+<div id="ex-5-11" class="ee-item" data-id="c05-ex-tax-shield" data-kind="example" data-label="5.11">
+<p><strong>مثال 5.11: قيمة الوفر الضريبي</strong></p>
+<p>آلة تكلف 80,000 دينار، وتستهلك بالقسط الثابت على 8 سنوات بدون قيمة مقدرة. نسبة الضريبة 20%. ما الوفر الضريبي السنوي؟ وما قيمته الحالية بنسبة 10%؟ وما التكلفة الحقيقية للآلة بعد الضريبة؟</p>
+<p><strong>الحل:</strong></p>
+<p>الاستهلاك السنوي 10,000.00 دينار، وهو مصروف يخفض الدخل الخاضع للضريبة. فالضريبة تقل كل سنة بمقدار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>×</mo><mi>D</mi><mo>=</mo><mn>0.2</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>2</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+t \times D = 0.2 \times 10\mathord{,}000.00 = 2\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>669.85</mn></mrow><annotation encoding="application/x-tex">
+P = 2\mathord{,}000.00\,(P/A,\ 10\%,\ 8) = 10\mathord{,}669.85
+</annotation></semantics></math></p>
+<p>التكلفة الحقيقية للآلة بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>10</mn><mi>,</mi><mn>669.85</mn><mo>=</mo><mn>69</mn><mi>,</mi><mn>330.15</mn></mrow><annotation encoding="application/x-tex">
+80\mathord{,}000 - 10\mathord{,}669.85 = 69\mathord{,}330.15
+</annotation></semantics></math></p>
+<p>الحكومة تسترد للشركة جزءا من ثمن الآلة على شكل ضريبة أقل، لكن على سنوات. كلما كان الاستهلاك أسرع كبرت قيمة هذا الجزء.</p>
+</div>
+</section>
+<section id="sec-5-disposal" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="sec-5-disposal"><span class="header-section-number">5.7</span> بيع الأصل وترحيل الخسائر</h2>
+<p>عندما يباع أصل بأكثر من قيمته الدفترية، فالفرق ربح يخضع للضريبة. وإذا بيع بأقل، فالفرق خسارة تخفض الضريبة.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mi>M</mi><mo>−</mo><mi>B</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">
+G = M - BV
+</annotation></semantics></math></p>
+<div id="ex-5-12" class="ee-item" data-id="c05-ex-disposal-gain" data-kind="example" data-label="5.12">
+<p><strong>مثال 5.12: بيع أصل بأكثر من قيمته الدفترية</strong></p>
+<p>آلة أساسها 60,000 دينار، وتستهلك بالقسط الثابت على 6 سنوات بدون قيمة مقدرة. بيعت بعد 4 سنوات بمبلغ 25,000 دينار. نسبة الضريبة 20%. ما الربح أو الخسارة الضريبية؟ وما صافي ما يبقى من ثمن البيع؟</p>
+<p><strong>الحل:</strong></p>
+<p>القيمة الدفترية عند البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>V</mi><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>4</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>20</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+BV = 60\mathord{,}000 - 4 \times 10\mathord{,}000.00 = 20\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الفرق بين ثمن البيع والقيمة الدفترية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mn>25</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>20</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>5</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+G = 25\mathord{,}000 - 20\mathord{,}000.00 = 5\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الفرق موجب، أي ربح. معناه أن الاستهلاك الذي نزل في السنوات السابقة كان أكثر من النقص الحقيقي في قيمة الآلة، فالضريبة تسترد الفرق.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>0.2</mn><mo>×</mo><mn>5</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+T = 0.2 \times 5\mathord{,}000.00 = 1\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>صافي ما يبقى من البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>24</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+25\mathord{,}000 - 1\mathord{,}000.00 = 24\mathord{,}000.00
+</annotation></semantics></math></p>
+</div>
+<p>وعندما تخسر الشركة في سنة، لا تسترد الضريبة نقدا، لكنها تطرح الخسارة من أرباح السنوات التالية، ضمن مدة يحددها القانون.</p>
+<div id="ex-5-13" class="ee-item" data-id="c05-ex-loss-carry" data-kind="example" data-label="5.13">
+<p><strong>مثال 5.13: ترحيل الخسائر</strong></p>
+<p>مصنع جديد حقق النتائج التالية قبل الضريبة. نسبة الضريبة 15%، والقانون يسمح بترحيل الخسارة إلى خمس سنوات تالية. احسب الضريبة في كل سنة.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الربح أو الخسارة</td>
+<td>-40,000</td>
+<td>15,000</td>
+<td>20,000</td>
+<td>30,000</td>
+<td>35,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الحل:</strong></p>
+<p>خسارة السنة الأولى 40,000 دينار لا تسترد نقدا، لكنها تطرح من أرباح السنوات التالية حتى تنتهي:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الربح</th>
+<th>خسارة مستخدمة</th>
+<th>الخسارة الباقية</th>
+<th>الدخل الخاضع</th>
+<th>الضريبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>-40,000</td>
+<td>0</td>
+<td>40,000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>15,000</td>
+<td>15,000</td>
+<td>25,000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>20,000</td>
+<td>20,000</td>
+<td>5,000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>30,000</td>
+<td>5,000</td>
+<td>0</td>
+<td>25,000</td>
+<td>3,750.00</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>35,000</td>
+<td>0</td>
+<td>0</td>
+<td>35,000</td>
+<td>5,250.00</td>
+</tr>
+</tbody>
+</table>
+<p>الترحيل لا يلغي الضريبة، لكنه يؤجلها. لو انتهت مدة الترحيل قبل أن تستخدم الخسارة كاملة، لضاع الجزء الباقي. لذلك تهتم المشاريع الجديدة بمدة الترحيل المسموحة، وبأي حد سنوي يضعه القانون.</p>
+</div>
+<div id="ex-5-14" class="ee-item" data-id="c05-ex-combined-rate" data-kind="example" data-label="5.14">
+<p><strong>مثال 5.14: ضريبتان على نفس الدخل</strong></p>
+<p>شركة دخلها الخاضع للضريبة 500,000 دينار. تدفع ضريبة دخل 20%، وضريبة ثانية 1% على نفس الدخل. ما النسبة الكلية إذا حسبت الضريبتان على نفس الأساس؟ وما النسبة إذا كانت الضريبة الثانية مصروفا يطرح قبل حساب الأولى؟</p>
+<p><strong>الحل:</strong></p>
+<p>إذا حسبت الضريبتان على نفس الأساس، تجمع النسبتان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0.2</mn><mo>+</mo><mn>0.01</mn><mo>=</mo><mn>21</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+t = 0.2 + 0.01 = 21\%
+</annotation></semantics></math></p>
+<p>الضريبة الكلية 105,000.00 دينار.</p>
+<p>إذا كانت الضريبة الثانية تطرح قبل الأولى، فالدخل الذي تحسب عليه الأولى أقل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><msub><mi>t</mi><mn>2</mn></msub><mo>+</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>t</mi><mn>1</mn></msub><mo>+</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+t = t_2 + t_1(1 - t_2) = t_1 + t_2(1 - t_1) = 20.80\%
+</annotation></semantics></math></p>
+<p>الضريبة الكلية 104,000.00 دينار. في التحليل الاقتصادي نستخدم نسبة واحدة تجمع كل الضرائب على الدخل، ونسميها النسبة الفعلية للضريبة. ملحق الضرائب يبين كيف تجمع النسب في الدول الأربع.</p>
+</div>
+</section>
+<section id="sec-5-python" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="sec-5-python"><span class="header-section-number">5.8</span> Python: جداول الاستهلاك</h2>
+<p>هذا البرنامج يبني جداول الطرق الأربع لنفس الأصل، ويقارن القيمة الحالية للاستهلاك بنسبة 10%:</p>
+<div id="d606113b" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> straight_line(B, S, n):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(B <span class="op">-</span> S) <span class="op">/</span> n] <span class="op">*</span> n</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> syd(B, S, n):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> n <span class="op">*</span> (n <span class="op">+</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(n <span class="op">-</span> t <span class="op">+</span> <span class="dv">1</span>) <span class="op">/</span> total <span class="op">*</span> (B <span class="op">-</span> S) <span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>)]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ddb_switch(B, S, n):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    d, bv, out <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> n, B, []</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        dep <span class="op">=</span> <span class="bu">max</span>(d <span class="op">*</span> bv, (bv <span class="op">-</span> S) <span class="op">/</span> (n <span class="op">-</span> t <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        dep <span class="op">=</span> <span class="bu">min</span>(dep, bv <span class="op">-</span> S)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        out.append(dep)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        bv <span class="op">-=</span> dep</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pv(flows, i):</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(x <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> t <span class="cf">for</span> t, x <span class="kw">in</span> <span class="bu">enumerate</span>(flows, start<span class="op">=</span><span class="dv">1</span>))</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>B, S, n, i <span class="op">=</span> <span class="dv">100000</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="fl">0.10</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, f <span class="kw">in</span> [(<span class="st">"SL"</span>, straight_line), (<span class="st">"SYD"</span>, syd), (<span class="st">"DDB"</span>, ddb_switch)]:</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    dep <span class="op">=</span> f(B, S, n)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">:4s}</span><span class="ss">"</span>, [<span class="bu">round</span>(x) <span class="cf">for</span> x <span class="kw">in</span> dep], <span class="bu">round</span>(pv(dep, i), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SL   [20000, 20000, 20000, 20000, 20000] 75815.74
+SYD  [33333, 26667, 20000, 13333, 6667] 80614.22
+DDB  [40000, 24000, 14400, 10800, 10800] 81099.78</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-5-problems" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="sec-5-problems"><span class="header-section-number">5.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-5-1" class="ee-item" data-id="c05-a-01" data-kind="problem" data-label="5.1">
+<p><strong>5.1</strong> لماذا لا يحمل ثمن الآلة كاملا على سنة شرائها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-1">الحل</a></span></p>
+</div>
+<div id="prob-5-2" class="ee-item" data-id="c05-a-02" data-kind="problem" data-label="5.2">
+<p><strong>5.2</strong> هل الاستهلاك تدفق نقدي؟ لماذا يدخل إذن في التحليل الاقتصادي بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-2">الحل</a></span></p>
+</div>
+<div id="prob-5-3" class="ee-item" data-id="c05-a-03" data-kind="problem" data-label="5.3">
+<p><strong>5.3</strong> ما الفرق بين القيمة الدفترية والقيمة السوقية لأصل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-3">الحل</a></span></p>
+</div>
+<div id="prob-5-4" class="ee-item" data-id="c05-a-04" data-kind="problem" data-label="5.4">
+<p><strong>5.4</strong> لماذا لا تستهلك الأرض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-4">الحل</a></span></p>
+</div>
+<div id="prob-5-5" class="ee-item" data-id="c05-a-05" data-kind="problem" data-label="5.5">
+<p><strong>5.5</strong> مجموع الاستهلاك واحد في كل الطرق. لماذا تفضل الشركة الطرق السريعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-5">الحل</a></span></p>
+</div>
+<div id="prob-5-6" class="ee-item" data-id="c05-a-06" data-kind="problem" data-label="5.6">
+<p><strong>5.6</strong> ما المشكلة في القسط المتناقص وحده؟ وكيف تحل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-6">الحل</a></span></p>
+</div>
+<div id="prob-5-7" class="ee-item" data-id="c05-a-07" data-kind="problem" data-label="5.7">
+<p><strong>5.7</strong> ما الوفر الضريبي من الاستهلاك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-7">الحل</a></span></p>
+</div>
+<div id="prob-5-8" class="ee-item" data-id="c05-a-08" data-kind="problem" data-label="5.8">
+<p><strong>5.8</strong> بيع أصل بأكثر من قيمته الدفترية. لماذا يخضع الفرق للضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-8">الحل</a></span></p>
+</div>
+<div id="prob-5-9" class="ee-item" data-id="c05-a-09" data-kind="problem" data-label="5.9">
+<p><strong>5.9</strong> لماذا قد تختلف طريقة الاستهلاك في الدفاتر المحاسبية عنها في الإقرار الضريبي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-9">الحل</a></span></p>
+</div>
+<div id="prob-5-10" class="ee-item" data-id="c05-a-10" data-kind="problem" data-label="5.10">
+<p><strong>5.10</strong> شركة خاسرة لا تدفع ضريبة هذه السنة. هل يفيدها الاستهلاك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-10">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-القسط-الثابت" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-القسط-الثابت">الجزء ب: القسط الثابت</h3>
+<div id="prob-5-11" class="ee-item" data-id="c05-b-01" data-kind="problem" data-label="5.11">
+<p><strong>5.11</strong> أصل أساسه 45,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 8 سنوات. ما الاستهلاك السنوي بالقسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-11">الحل</a></span></p>
+</div>
+<div id="prob-5-12" class="ee-item" data-id="c05-b-02" data-kind="problem" data-label="5.12">
+<p><strong>5.12</strong> للأصل السابق، ما القيمة الدفترية بعد 3 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-12">الحل</a></span></p>
+</div>
+<div id="prob-5-13" class="ee-item" data-id="c05-b-03" data-kind="problem" data-label="5.13">
+<p><strong>5.13</strong> آلة سعرها 70,000 دينار، ونقلها 2,500 وتركيبها 6,000 دينار. عمرها 10 سنوات وقيمتها المقدرة 7,000 دينار. ما الاستهلاك السنوي بالقسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-13">الحل</a></span></p>
+</div>
+<div id="prob-5-14" class="ee-item" data-id="c05-b-04" data-kind="problem" data-label="5.14">
+<p><strong>5.14</strong> القيمة الدفترية لأصل بعد 4 سنوات 16,500 دينار، وأساسه 30,000 دينار. ما الاستهلاك السنوي بالقسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-14">الحل</a></span></p>
+</div>
+<div id="prob-5-15" class="ee-item" data-id="c05-b-05" data-kind="problem" data-label="5.15">
+<p><strong>5.15</strong> أصل أساسه 30,000 دينار، وقيمته المقدرة 3,000 دينار، واستهلاكه السنوي بالقسط الثابت 2,700.00 دينار. ما عمره؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-15">الحل</a></span></p>
+</div>
+<div id="prob-5-16" class="ee-item" data-id="c05-b-06" data-kind="problem" data-label="5.16">
+<p><strong>5.16</strong> حاسوب خادم أساسه 24,000 دينار، وعمره 6 سنوات بدون قيمة مقدرة. ما نسبة الاستهلاك السنوية؟ وما الاستهلاك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-16">الحل</a></span></p>
+</div>
+<div id="prob-5-17" class="ee-item" data-id="c05-b-07" data-kind="problem" data-label="5.17">
+<p><strong>5.17</strong> ابن جدول القيمة الدفترية لأول ثلاث سنوات لأصل أساسه 50,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 5 سنوات، بالقسط الثابت.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-17">الحل</a></span></p>
+</div>
+<div id="prob-5-18" class="ee-item" data-id="c05-b-08" data-kind="problem" data-label="5.18">
+<p><strong>5.18</strong> شركة اشترت مبنى مع أرضه بمبلغ 400,000 دينار، منها 100,000 دينار قيمة الأرض. عمر المبنى 25 سنة بدون قيمة مقدرة. ما الاستهلاك السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-18">الحل</a></span></p>
+</div>
+<div id="prob-5-19" class="ee-item" data-id="c05-b-09" data-kind="problem" data-label="5.19">
+<p><strong>5.19</strong> آلة CNC أساسها 90,000 دينار، وقيمتها المقدرة 10,000 دينار، وعمرها 8 سنوات. تعمل 3,000 ساعة في السنة. ما تكلفة الاستهلاك لكل ساعة تشغيل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-19">الحل</a></span></p>
+</div>
+<div id="prob-5-20" class="ee-item" data-id="c05-b-10" data-kind="problem" data-label="5.20">
+<p><strong>5.20</strong> آلة أساسها 60,000 دينار، وعمرها المقدر 6 سنوات بدون قيمة مقدرة. بعد سنتين تبين أنها ستعمل 6 سنوات أخرى. ما الاستهلاك السنوي الجديد بالقسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-20">الحل</a></span></p>
+</div>
+<div id="prob-5-21" class="ee-item" data-id="c05-b-11" data-kind="problem" data-label="5.21">
+<p><strong>5.21</strong> ما القيمة الحالية لاستهلاك أصل أساسه 25,000 دينار، وقيمته المقدرة 2,500 دينار، وعمره 5 سنوات، بالقسط الثابت بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-21">الحل</a></span></p>
+</div>
+<div id="prob-5-22" class="ee-item" data-id="c05-b-12" data-kind="problem" data-label="5.22">
+<p><strong>5.22</strong> أصل أساسه 40,000 دينار، وقيمته المقدرة 4,000 دينار، وعمره 6 سنوات. قيمته السوقية بعد 4 سنوات 15,000 دينار. قارن القيمة السوقية بالقيمة الدفترية.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-22">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-القسط-المتناقص" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-القسط-المتناقص">الجزء ج: القسط المتناقص</h3>
+<div id="prob-5-23" class="ee-item" data-id="c05-c-01" data-kind="problem" data-label="5.23">
+<p><strong>5.23</strong> أصل أساسه 40,000 دينار، وعمره 5 سنوات. ما نسبة القسط المتناقص المضاعف؟ وما استهلاك أول سنتين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-23">الحل</a></span></p>
+</div>
+<div id="prob-5-24" class="ee-item" data-id="c05-c-02" data-kind="problem" data-label="5.24">
+<p><strong>5.24</strong> للأصل السابق، ما القيمة الدفترية بعد 3 سنوات بالقسط المتناقص المضاعف، بدون تحول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-24">الحل</a></span></p>
+</div>
+<div id="prob-5-25" class="ee-item" data-id="c05-c-03" data-kind="problem" data-label="5.25">
+<p><strong>5.25</strong> للأصل السابق، ما استهلاك السنة 3 وحدها، بالقسط المتناقص المضاعف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-25">الحل</a></span></p>
+</div>
+<div id="prob-5-26" class="ee-item" data-id="c05-c-04" data-kind="problem" data-label="5.26">
+<p><strong>5.26</strong> قانون ضريبة يسمح بالقسط المتناقص بنسبة 25% لمعدات أساسها 30,000 دينار. ابن جدول أول ثلاث سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-26">الحل</a></span></p>
+</div>
+<div id="prob-5-27" class="ee-item" data-id="c05-c-05" data-kind="problem" data-label="5.27">
+<p><strong>5.27</strong> بالقسط المتناقص بنسبة 25%، بعد كم سنة تنزل القيمة الدفترية لأصل أساسه 30,000 دينار إلى 10% من أساسه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-27">الحل</a></span></p>
+</div>
+<div id="prob-5-28" class="ee-item" data-id="c05-c-06" data-kind="problem" data-label="5.28">
+<p><strong>5.28</strong> سيارة توصيل أساسها 60,000 دينار، وعمرها 5 سنوات، وقيمتها المقدرة 6,000 دينار. ابن جدول القسط المتناقص المضاعف، بحيث لا تنزل القيمة الدفترية تحت القيمة المقدرة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-28">الحل</a></span></p>
+</div>
+<div id="prob-5-29" class="ee-item" data-id="c05-c-07" data-kind="problem" data-label="5.29">
+<p><strong>5.29</strong> أصل أساسه 60,000 دينار، وعمره 5 سنوات بدون قيمة مقدرة. ابن جدول القسط المتناقص المضاعف مع التحول إلى القسط الثابت. في أي سنة يحدث التحول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-29">الحل</a></span></p>
+</div>
+<div id="prob-5-30" class="ee-item" data-id="c05-c-08" data-kind="problem" data-label="5.30">
+<p><strong>5.30</strong> بعض القوانين تستخدم القسط المتناقص بنسبة 150% من نسبة القسط الثابت. ما النسبة لأصل عمره 8 سنوات؟ وما استهلاك أول سنتين لأصل أساسه 80,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-30">الحل</a></span></p>
+</div>
+<div id="prob-5-31" class="ee-item" data-id="c05-c-09" data-kind="problem" data-label="5.31">
+<p><strong>5.31</strong> قارن القيمة الحالية للاستهلاك بنسبة 10% لأصل أساسه 50,000 دينار وعمره 5 سنوات بدون قيمة مقدرة: بالقسط الثابت، وبالمتناقص المضاعف مع التحول.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-31">الحل</a></span></p>
+</div>
+<div id="prob-5-32" class="ee-item" data-id="c05-c-10" data-kind="problem" data-label="5.32">
+<p><strong>5.32</strong> ما النسبة الثابتة للقسط المتناقص التي تجعل القيمة الدفترية لأصل أساسه 20,000 دينار تساوي قيمته المقدرة 2,000 دينار بالضبط بعد 4 سنوات؟ لماذا لا تصلح إذا كانت القيمة المقدرة صفرا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-32">الحل</a></span></p>
+</div>
+<div id="prob-5-33" class="ee-item" data-id="c05-c-11" data-kind="problem" data-label="5.33">
+<p><strong>5.33</strong> بالقسط المتناقص بنسبة 25%، ما مجموع الاستهلاك خلال أول 4 سنوات لأصل أساسه 30,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-33">الحل</a></span></p>
+</div>
+<div id="prob-5-34" class="ee-item" data-id="c05-c-12" data-kind="problem" data-label="5.34">
+<p><strong>5.34</strong> ما الوفر الضريبي في السنة الأولى لأصل أساسه 45,000 دينار وعمره 6 سنوات، بنسبة ضريبة 20%: بالقسط الثابت، وبالمتناقص المضاعف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-34">الحل</a></span></p>
+</div>
+<div id="prob-5-35" class="ee-item" data-id="c05-c-13" data-kind="problem" data-label="5.35">
+<p><strong>5.35</strong> احسب الاستهلاك بالدالة DB في Excel لأصل أساسه 50,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 5 سنوات. ما النسبة التي تستخدمها الدالة؟ وما استهلاك أول سنتين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-35">الحل</a></span></p>
+</div>
+<div id="prob-5-36" class="ee-item" data-id="c05-c-14" data-kind="problem" data-label="5.36">
+<p><strong>5.36</strong> قانون ضريبة يسمح باستهلاك الحواسيب بنسبة 50% في السنة الأولى، ثم 25% من الرصيد الباقي في كل سنة بعدها. ما استهلاك أول ثلاث سنوات لحواسيب أساسها 25,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-36">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-مجموع-أرقام-السنوات-ووحدات-الإنتاج" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-مجموع-أرقام-السنوات-ووحدات-الإنتاج">الجزء د: مجموع أرقام السنوات ووحدات الإنتاج</h3>
+<div id="prob-5-37" class="ee-item" data-id="c05-d-01" data-kind="problem" data-label="5.37">
+<p><strong>5.37</strong> أصل أساسه 30,000 دينار، وقيمته المقدرة 3,000 دينار، وعمره 4 سنوات. احسب بطريقة مجموع أرقام السنوات استهلاك السنة الأولى والأخيرة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-37">الحل</a></span></p>
+</div>
+<div id="prob-5-38" class="ee-item" data-id="c05-d-02" data-kind="problem" data-label="5.38">
+<p><strong>5.38</strong> بطريقة مجموع أرقام السنوات، ما استهلاك السنة 3 لأصل أساسه 30,000 دينار، وقيمته المقدرة 3,000 دينار، وعمره 6 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-38">الحل</a></span></p>
+</div>
+<div id="prob-5-39" class="ee-item" data-id="c05-d-03" data-kind="problem" data-label="5.39">
+<p><strong>5.39</strong> للأصل السابق، ما القيمة الدفترية بعد 3 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-39">الحل</a></span></p>
+</div>
+<div id="prob-5-40" class="ee-item" data-id="c05-d-04" data-kind="problem" data-label="5.40">
+<p><strong>5.40</strong> قارن القيمة الحالية للاستهلاك بنسبة 10% بطريقتي مجموع أرقام السنوات والقسط الثابت، لأصل أساسه 40,000 دينار، وقيمته المقدرة 4,000 دينار، وعمره 4 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-40">الحل</a></span></p>
+</div>
+<div id="prob-5-41" class="ee-item" data-id="c05-d-05" data-kind="problem" data-label="5.41">
+<p><strong>5.41</strong> شاحنة أساسها 120,000 دينار، وقيمتها المقدرة 10,000 دينار، وتقطع خلال عمرها 500,000 كيلومتر. قطعت هذه السنة 85,000 كيلومتر. ما الاستهلاك بطريقة وحدات الإنتاج؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-41">الحل</a></span></p>
+</div>
+<div id="prob-5-42" class="ee-item" data-id="c05-d-06" data-kind="problem" data-label="5.42">
+<p><strong>5.42</strong> حفارة أساسها 90,000 دينار، وقيمتها المقدرة 6,000 دينار، وعمرها 20,000 ساعة عمل. عملت 3,500 و5,200 و4,800 ساعة في أول ثلاث سنوات. احسب الاستهلاك والقيمة الدفترية بعد ثلاث سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-42">الحل</a></span></p>
+</div>
+<div id="prob-5-43" class="ee-item" data-id="c05-d-07" data-kind="problem" data-label="5.43">
+<p><strong>5.43</strong> لأصل أساسه 50,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 5 سنوات: قارن استهلاك السنة الأولى بالقسط الثابت، ومجموع أرقام السنوات، والمتناقص المضاعف.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-43">الحل</a></span></p>
+</div>
+<div id="prob-5-44" class="ee-item" data-id="c05-d-08" data-kind="problem" data-label="5.44">
+<p><strong>5.44</strong> برنامج حاسوب أساسه 30,000 دينار، وعمره 3 سنوات بدون قيمة مقدرة. احسب الاستهلاك بطريقة مجموع أرقام السنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-44">الحل</a></span></p>
+</div>
+<div id="prob-5-45" class="ee-item" data-id="c05-d-09" data-kind="problem" data-label="5.45">
+<p><strong>5.45</strong> قالب حقن بلاستيك أساسه 70,000 دينار، وقيمته المقدرة 5,000 دينار، وينتج خلال عمره 1,000,000 قطعة، أو يعيش 5 سنوات. أنتج في السنة الأولى 300,000 قطعة. قارن الاستهلاك بوحدات الإنتاج وبالقسط الثابت. أي الطريقتين أنسب؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-45">الحل</a></span></p>
+</div>
+<div id="prob-5-46" class="ee-item" data-id="c05-d-10" data-kind="problem" data-label="5.46">
+<p><strong>5.46</strong> ما الكسر الذي يستهلك في السنة الأولى بطريقة مجموع أرقام السنوات لأصل عمره 8 سنوات؟ قارنه بنسبة القسط المتناقص المضاعف.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-46">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-نصف-السنة-والمجموعات" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-نصف-السنة-والمجموعات">الجزء هـ: نصف السنة والمجموعات</h3>
+<div id="prob-5-47" class="ee-item" data-id="c05-e-01" data-kind="problem" data-label="5.47">
+<p><strong>5.47</strong> معدات أساسها 48,000 دينار، وعمرها 6 سنوات بدون قيمة مقدرة. وزع الاستهلاك بالقسط الثابت مع قاعدة نصف السنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-47">الحل</a></span></p>
+</div>
+<div id="prob-5-48" class="ee-item" data-id="c05-e-02" data-kind="problem" data-label="5.48">
+<p><strong>5.48</strong> للمعدات السابقة: كم تخسر الشركة من القيمة الحالية للاستهلاك بنسبة 10% بسبب قاعدة نصف السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-48">الحل</a></span></p>
+</div>
+<div id="prob-5-49" class="ee-item" data-id="c05-e-03" data-kind="problem" data-label="5.49">
+<p><strong>5.49</strong> قانون ضريبة ينص على أن الأصل الذي يدخل الخدمة في النصف الأول من السنة يستهلك عن سنة كاملة، والذي يدخل في النصف الثاني يستهلك عن نصف سنة. شركة اشترت معدات بمبلغ 36,000 دينار في الشهر 9، وعمرها 4 سنوات. ما استهلاك السنة الأولى بالقسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-49">الحل</a></span></p>
+</div>
+<div id="prob-5-50" class="ee-item" data-id="c05-e-04" data-kind="problem" data-label="5.50">
+<p><strong>5.50</strong> مجموعة آلات رصيدها في بداية السنة 150,000 دينار. أضيفت آلات بمبلغ 40,000 دينار، وبيعت آلات بمبلغ 10,000 دينار. النسبة 25% على الرصيد. ما الاستهلاك ورصيد نهاية السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-50">الحل</a></span></p>
+</div>
+<div id="prob-5-51" class="ee-item" data-id="c05-e-05" data-kind="problem" data-label="5.51">
+<p><strong>5.51</strong> أعد المسألة السابقة إذا كان القانون يضيف نصف المشتريات ويطرح نصف المبيعات فقط في سنتها، والنصف الآخر في السنة التالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-51">الحل</a></span></p>
+</div>
+<div id="prob-5-52" class="ee-item" data-id="c05-e-06" data-kind="problem" data-label="5.52">
+<p><strong>5.52</strong> شركة جديدة اشترت معدات بمبلغ 100,000 دينار، ولا تملك أصولا أخرى في المجموعة. النسبة 25% على الرصيد. ما استهلاك أول ثلاث سنوات إذا لم تشتر أو تبع شيئا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-52">الحل</a></span></p>
+</div>
+<div id="prob-5-53" class="ee-item" data-id="c05-e-07" data-kind="problem" data-label="5.53">
+<p><strong>5.53</strong> مجموعة آلات رصيدها 20,000 دينار. باعت الشركة آلات قديمة بمبلغ 35,000 دينار، أكثر من الرصيد كله. ماذا يحدث؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-53">الحل</a></span></p>
+</div>
+<div id="prob-5-54" class="ee-item" data-id="c05-e-08" data-kind="problem" data-label="5.54">
+<p><strong>5.54</strong> معدات أساسها 60,000 دينار، وعمرها 5 سنوات، تستهلك بالقسط الثابت مع قاعدة نصف السنة. ما القيمة الدفترية في نهاية السنة 5؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-54">الحل</a></span></p>
+</div>
+<div id="prob-5-55" class="ee-item" data-id="c05-e-09" data-kind="problem" data-label="5.55">
+<p><strong>5.55</strong> قانون ضريبة يحدد للآلات نسبة 20% بالقسط الثابت، ويسمح للمكلف بزيادتها حتى ثلاثة أمثالها بشرط الثبات على النسبة. شركة اختارت 3 أمثال النسبة لآلات أساسها 25,000 دينار. ما الاستهلاك السنوي؟ وكم سنة تستغرق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-55">الحل</a></span></p>
+</div>
+<div id="prob-5-56" class="ee-item" data-id="c05-e-10" data-kind="problem" data-label="5.56">
+<p><strong>5.56</strong> قارن القيمة الحالية للوفر الضريبي لمدة 5 سنوات بنسبة 10% وضريبة 20% لآلة أساسها 50,000 دينار: بالقسط الثابت 20%، وبطريقة المجموعة بنسبة 25%.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-56">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-ضريبة-الدخل-والوفر-الضريبي" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-ضريبة-الدخل-والوفر-الضريبي">الجزء و: ضريبة الدخل والوفر الضريبي</h3>
+<div id="prob-5-57" class="ee-item" data-id="c05-f-01" data-kind="problem" data-label="5.57">
+<p><strong>5.57</strong> إيراد شركة 200,000 دينار، وتكاليفها النقدية 90,000 دينار، واستهلاكها 25,000 دينار. نسبة الضريبة 15%. ما الدخل الخاضع للضريبة؟ وما الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-57">الحل</a></span></p>
+</div>
+<div id="prob-5-58" class="ee-item" data-id="c05-f-02" data-kind="problem" data-label="5.58">
+<p><strong>5.58</strong> للشركة السابقة: احسب صافي الربح والتدفق النقدي بعد الضريبة. لماذا يختلفان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-58">الحل</a></span></p>
+</div>
+<div id="prob-5-59" class="ee-item" data-id="c05-f-03" data-kind="problem" data-label="5.59">
+<p><strong>5.59</strong> مشروع إيراده 50,000 دينار، وتكاليفه 20,000 دينار، واستهلاكه 8,000 دينار. نسبة الضريبة 20%. احسب التدفق النقدي بعد الضريبة بصيغة الوفر الضريبي، وتأكد بالحساب المباشر.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-59">الحل</a></span></p>
+</div>
+<div id="prob-5-60" class="ee-item" data-id="c05-f-04" data-kind="problem" data-label="5.60">
+<p><strong>5.60</strong> استهلاك سنوي 12,000 دينار، ونسبة الضريبة 20%. ما الوفر الضريبي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-60">الحل</a></span></p>
+</div>
+<div id="prob-5-61" class="ee-item" data-id="c05-f-05" data-kind="problem" data-label="5.61">
+<p><strong>5.61</strong> آلة تكلف 90,000 دينار، وتستهلك بالقسط الثابت على 6 سنوات. ما القيمة الحالية للوفر الضريبي بنسبة 12% وضريبة 20%؟ وما نسبتها من ثمن الآلة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-61">الحل</a></span></p>
+</div>
+<div id="prob-5-62" class="ee-item" data-id="c05-f-06" data-kind="problem" data-label="5.62">
+<p><strong>5.62</strong> شركة رابحة تدفع راتبا إضافيا لمهندس جودة 30,000 دينار سنويا. نسبة الضريبة 20%. ما التكلفة الحقيقية للراتب على الشركة بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-62">الحل</a></span></p>
+</div>
+<div id="prob-5-63" class="ee-item" data-id="c05-f-07" data-kind="problem" data-label="5.63">
+<p><strong>5.63</strong> مشروع يوفر 25,000 دينار سنويا من تكاليف الطاقة. نسبة الضريبة 20%. كم يبقى من التوفير بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-63">الحل</a></span></p>
+</div>
+<div id="prob-5-64" class="ee-item" data-id="c05-f-08" data-kind="problem" data-label="5.64">
+<p><strong>5.64</strong> آلة تكلف 60,000 دينار، وتوفر 22,000 دينار سنويا قبل الضريبة لمدة 5 سنوات، وتستهلك بالقسط الثابت. نسبة الضريبة 20%. ما التدفق النقدي السنوي بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-64">الحل</a></span></p>
+</div>
+<div id="prob-5-65" class="ee-item" data-id="c05-f-09" data-kind="problem" data-label="5.65">
+<p><strong>5.65</strong> للآلة السابقة: احسب القيمة الحالية بعد الضريبة بنسبة 10%. قارنها بالقيمة الحالية قبل الضريبة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-65">الحل</a></span></p>
+</div>
+<div id="prob-5-66" class="ee-item" data-id="c05-f-10" data-kind="problem" data-label="5.66">
+<p><strong>5.66</strong> شركة دخلها الخاضع 300,000 دينار، وتدفع ضريبة دخل 20% ومساهمة 1% على نفس الدخل. ما مجموع الضريبتين؟ وما النسبة الفعلية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-66">الحل</a></span></p>
+</div>
+<div id="prob-5-67" class="ee-item" data-id="c05-f-11" data-kind="problem" data-label="5.67">
+<p><strong>5.67</strong> ضريبة محلية 5% تطرح كمصروف قبل حساب ضريبة الدخل 20%. ما النسبة الفعلية الكلية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-67">الحل</a></span></p>
+</div>
+<div id="prob-5-68" class="ee-item" data-id="c05-f-12" data-kind="problem" data-label="5.68">
+<p><strong>5.68</strong> شركة إيرادها 100,000 دينار وتكاليفها 40,000 دينار، واشترت معدات بمبلغ 120,000 دينار عمرها 5 سنوات. نسبة الضريبة 20%. قارن ضريبة السنة الأولى بالقسط الثابت وبالمتناقص المضاعف.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-68">الحل</a></span></p>
+</div>
+<div id="prob-5-69" class="ee-item" data-id="c05-f-13" data-kind="problem" data-label="5.69">
+<p><strong>5.69</strong> عقد صيانة يكلف 15,000 دينار سنويا لمدة 6 سنوات. ما القيمة الحالية لتكلفته بعد الضريبة بنسبة 10% وضريبة 20%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-69">الحل</a></span></p>
+</div>
+<div id="prob-5-70" class="ee-item" data-id="c05-f-14" data-kind="problem" data-label="5.70">
+<p><strong>5.70</strong> شركة تحتاج أداة بمبلغ 40,000 دينار. القانون يسمح بطرحها مصروفا في سنة الشراء، أو باستهلاكها على 4 سنوات بالقسط الثابت. نسبة الضريبة 20%. ما التكلفة بعد الضريبة بالقيمة الحالية في كل حالة بنسبة 10%؟ افترض أن الوفر يأتي في نهاية كل سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-70">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-بيع-الأصل-وترحيل-الخسائر" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-بيع-الأصل-وترحيل-الخسائر">الجزء ز: بيع الأصل وترحيل الخسائر</h3>
+<div id="prob-5-71" class="ee-item" data-id="c05-g-01" data-kind="problem" data-label="5.71">
+<p><strong>5.71</strong> آلة أساسها 50,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بدون قيمة مقدرة. بيعت بعد 3 سنوات بمبلغ 25,000 دينار. نسبة الضريبة 20%. ما صافي ما يبقى من البيع بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-71">الحل</a></span></p>
+</div>
+<div id="prob-5-72" class="ee-item" data-id="c05-g-02" data-kind="problem" data-label="5.72">
+<p><strong>5.72</strong> آلة أساسها 50,000 دينار، وعمرها 5 سنوات، تستهلك بالمتناقص المضاعف. بيعت بعد سنتين بمبلغ 8,000 دينار. نسبة الضريبة 20%. ما الربح أو الخسارة؟ وما صافي ما يبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-72">الحل</a></span></p>
+</div>
+<div id="prob-5-73" class="ee-item" data-id="c05-g-03" data-kind="problem" data-label="5.73">
+<p><strong>5.73</strong> أصل قيمته الدفترية 12,000 دينار بيع بمبلغ 20,000 دينار. نسبة الضريبة 20%. ما صافي ما يبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-73">الحل</a></span></p>
+</div>
+<div id="prob-5-74" class="ee-item" data-id="c05-g-04" data-kind="problem" data-label="5.74">
+<p><strong>5.74</strong> آلة أساسها 80,000 دينار، وتستهلك بالقسط الثابت على 8 سنوات. بعد 5 سنوات تريد الشركة بيعها. بأي ثمن لا يكون للبيع أثر ضريبي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-74">الحل</a></span></p>
+</div>
+<div id="prob-5-75" class="ee-item" data-id="c05-g-05" data-kind="problem" data-label="5.75">
+<p><strong>5.75</strong> آلة أساسها 30,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات. تعطلت بعد 3 سنوات ولا قيمة لها. نسبة الضريبة 20%. هل تستفيد الشركة ضريبيا من التخلص منها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-75">الحل</a></span></p>
+</div>
+<div id="prob-5-76" class="ee-item" data-id="c05-g-06" data-kind="problem" data-label="5.76">
+<p><strong>5.76</strong> شركة ترحل الخسائر لخمس سنوات، ونسبة الضريبة 20%. نتائجها قبل الضريبة: -50,000 ثم -30,000 ثم 70,000 ثم 60,000 ثم 70,000. احسب الضريبة كل سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-76">الحل</a></span></p>
+</div>
+<div id="prob-5-77" class="ee-item" data-id="c05-g-07" data-kind="problem" data-label="5.77">
+<p><strong>5.77</strong> قانون يسمح بترحيل الخسائر بدون حد زمني، لكن لا يجوز أن تطرح في أي سنة أكثر من 25% من ربح تلك السنة. شركة لديها خسارة مرحلة 120,000 دينار، وتربح 100,000 دينار سنويا. نسبة الضريبة 20%. احسب الضريبة في أول أربع سنوات، وما يبقى من الخسارة.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-77">الحل</a></span></p>
+</div>
+<div id="prob-5-78" class="ee-item" data-id="c05-g-08" data-kind="problem" data-label="5.78">
+<p><strong>5.78</strong> مشروع خسر 90,000 دينار في سنته الأولى، ثم ربح 10,000 و15,000 و20,000 و25,000 ثم 0 في السنوات من 2 إلى 6. القانون يسمح بالترحيل خمس سنوات. كم يضيع من الخسارة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-78">الحل</a></span></p>
+</div>
+<div id="prob-5-79" class="ee-item" data-id="c05-g-09" data-kind="problem" data-label="5.79">
+<p><strong>5.79</strong> معدات أساسها 70,000 دينار، وعمرها 5 سنوات بدون قيمة مقدرة، تستهلك بمجموع أرقام السنوات. بيعت بعد 3 سنوات بمبلغ 30,000 دينار. نسبة الضريبة 20%. ما صافي ما يبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-79">الحل</a></span></p>
+</div>
+<div id="prob-5-80" class="ee-item" data-id="c05-g-10" data-kind="problem" data-label="5.80">
+<p><strong>5.80</strong> آلة أساسها 50,000 دينار، وعمرها 5 سنوات، بيعت بعد سنتين بمبلغ 20,000 دينار. نسبة الضريبة 20%. قارن صافي البيع إذا كانت تستهلك بالقسط الثابت، أو بالمتناقص المضاعف. لماذا يختلف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-80">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-5-81" class="ee-item" data-id="c05-h-01" data-kind="problem" data-label="5.81">
+<p><strong>5.81</strong> ابن في Excel جدولا يقارن الاستهلاك السنوي بالطرق SLN وSYD وDDB وVDB لأصل أساسه 50,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 5 سنوات. ما استهلاك السنة الأولى بالقسط الثابت ومجموع أرقام السنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-81">الحل</a></span></p>
+</div>
+<div id="prob-5-82" class="ee-item" data-id="c05-h-02" data-kind="problem" data-label="5.82">
+<p><strong>5.82</strong> اكتب في Python دالة تبني جدول القسط المتناقص المضاعف مع التحول إلى القسط الثابت، وجربها على أصل أساسه 50,000 دينار، وقيمته المقدرة 5,000 دينار، وعمره 5 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-82">الحل</a></span></p>
+</div>
+<div id="prob-5-83" class="ee-item" data-id="c05-h-03" data-kind="problem" data-label="5.83">
+<p><strong>5.83</strong> ابن في Excel جدولا يبين القيمة الحالية للوفر الضريبي من استهلاك أصل أساسه 100,000 دينار بالقسط الثابت على 5 سنوات، بضريبة 20%، عند النسب 5% و10% و15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-83">الحل</a></span></p>
+</div>
+<div id="prob-5-84" class="ee-item" data-id="c05-h-04" data-kind="problem" data-label="5.84">
+<p><strong>5.84</strong> ابن في Excel قائمة دخل لخمس سنوات لمشروع إيراده 150,000 دينار، وتكاليفه 70,000 دينار، ومعداته 120,000 دينار تستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%. ما التدفق النقدي السنوي بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-84">الحل</a></span></p>
+</div>
+<div id="prob-5-85" class="ee-item" data-id="c05-h-05" data-kind="problem" data-label="5.85">
+<p><strong>5.85</strong> اكتب في Python برنامجا يتابع رصيد مجموعة آلات بنسبة 25% لثلاث سنوات. الرصيد الأول 300,000 دينار، والمشتريات 50,000 ثم 80,000 ثم 30,000 دينار، بدون مبيعات.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-85">الحل</a></span></p>
+</div>
+<div id="prob-5-86" class="ee-item" data-id="c05-h-06" data-kind="problem" data-label="5.86">
+<p><strong>5.86</strong> استخدم الدالة DB لحساب استهلاك أصل أساسه 30,000 دينار، وقيمته المقدرة 3,000 دينار، وعمره 4 سنوات. ما النسبة؟ وما استهلاك السنة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-86">الحل</a></span></p>
+</div>
+<div id="prob-5-87" class="ee-item" data-id="c05-h-07" data-kind="problem" data-label="5.87">
+<p><strong>5.87</strong> اكتب في Excel صيغة واحدة تحسب صافي البيع بعد الضريبة لآلة أساسها 60,000 دينار، تستهلك بالقسط الثابت على 6 سنوات، وبيعت بعد 3 سنوات بمبلغ 20,000 دينار، بضريبة 20%.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-87">الحل</a></span></p>
+</div>
+<div id="prob-5-88" class="ee-item" data-id="c05-h-08" data-kind="problem" data-label="5.88">
+<p><strong>5.88</strong> اكتب في Python دالة تحسب الضريبة كل سنة مع ترحيل الخسائر لخمس سنوات. جربها على النتائج -40,000 ثم 15,000 و20,000 و30,000 و35,000، بنسبة 15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-88">الحل</a></span></p>
+</div>
+<div id="prob-5-89" class="ee-item" data-id="c05-h-09" data-kind="problem" data-label="5.89">
+<p><strong>5.89</strong> قارن في Python القيمة الحالية للوفر الضريبي لأول 10 سنوات لأصل أساسه 80,000 دينار: بطريقة المجموعة بنسبة 25%، وبالقسط الثابت على 10 سنوات. الضريبة 20% والنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-5-89">الحل</a></span></p>
+</div>
+<div id="prob-5-90" class="ee-item" data-id="c05-h-10" data-kind="problem" data-label="5.90">
+<p><strong>5.90</strong> ما الصيغة في Excel التي تعطي استهلاك السنة الثالثة بمجموع أرقام السنوات لأصل أساسه 40,000 دينار، وقيمته المقدرة 4,000 دينار، وعمره 5 سنوات؟ وما نتيجتها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-90">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-5-91" class="ee-item" data-id="c05-i-01" data-kind="problem" data-label="5.91">
+<p><strong>5.91</strong> آلة سعرها 40,000 دينار، ونقلها 2,000، وتركيبها 3,000، وتدريب العمال عليها 1,500 دينار. ما أساس الاستهلاك؟</p>
+<p>أ) 40,000 دينار<br>
+ب) 46,500 دينار<br>
+ج) 45,000 دينار<br>
+د) 43,000 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-5-91">الحل</a></span></p>
+</div>
+<div id="prob-5-92" class="ee-item" data-id="c05-i-02" data-kind="problem" data-label="5.92">
+<p><strong>5.92</strong> ما استهلاك السنة الأولى بالمتناقص المضاعف لأصل أساسه 50,000 دينار وعمره 5 سنوات؟</p>
+<p>أ) 10,000.00 دينار<br>
+ب) 20,000.00 دينار<br>
+ج) 12,000.00 دينار<br>
+د) 16,000.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-5-92">الحل</a></span></p>
+</div>
+<div id="prob-5-93" class="ee-item" data-id="c05-i-03" data-kind="problem" data-label="5.93">
+<p><strong>5.93</strong> أي الطرق التالية تصل إلى القيمة المقدرة بالضبط في نهاية العمر بدون تعديل؟</p>
+<p>أ) القسط المتناقص المضاعف<br>
+ب) مجموع أرقام السنوات<br>
+ج) القسط المتناقص بنسبة 25%<br>
+د) طريقة المجموعة</p>
+<p><span class="ee-sol-link"><a href="#sol-5-93">الحل</a></span></p>
+</div>
+<div id="prob-5-94" class="ee-item" data-id="c05-i-04" data-kind="problem" data-label="5.94">
+<p><strong>5.94</strong> إيراد 80,000 وتكاليف 30,000 واستهلاك 10,000 دينار، والضريبة 20%. ما التدفق النقدي بعد الضريبة؟</p>
+<p>أ) 40,000.00 دينار<br>
+ب) 32,000.00 دينار<br>
+ج) 42,000.00 دينار<br>
+د) 40,000.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-5-94">الحل</a></span></p>
+</div>
+<div id="prob-5-95" class="ee-item" data-id="c05-i-05" data-kind="problem" data-label="5.95">
+<p><strong>5.95</strong> أصل قيمته الدفترية 12,000 دينار بيع بمبلغ 20,000 دينار، والضريبة 20%. ما صافي البيع؟</p>
+<p>أ) 16,000.00 دينار<br>
+ب) 20,000.00 دينار<br>
+ج) 17,600.00 دينار<br>
+د) 18,400.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-5-95">الحل</a></span></p>
+</div>
+<div id="prob-5-96" class="ee-item" data-id="c05-i-06" data-kind="problem" data-label="5.96">
+<p><strong>5.96</strong> شركتان متطابقتان، الأولى تستهلك بالقسط الثابت والثانية بالمتناقص المضاعف. أي العبارات صحيحة على كامل عمر الأصل؟</p>
+<p>أ) الثانية تدفع ضريبة أقل في المجموع<br>
+ب) الأولى تدفع ضريبة أقل في المجموع<br>
+ج) المجموع واحد، لكن الثانية تدفع لاحقا<br>
+د) المجموع واحد والتوقيت واحد</p>
+<p><span class="ee-sol-link"><a href="#sol-5-96">الحل</a></span></p>
+</div>
+<div id="prob-5-97" class="ee-item" data-id="c05-i-07" data-kind="problem" data-label="5.97">
+<p><strong>5.97</strong> ضريبة محلية 5% تطرح قبل حساب ضريبة الدخل 20%. ما النسبة الفعلية؟</p>
+<p>أ) 25.00%<br>
+ب) 24.00%<br>
+ج) 1.00%<br>
+د) 19.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-5-97">الحل</a></span></p>
+</div>
+<div id="prob-5-98" class="ee-item" data-id="c05-i-08" data-kind="problem" data-label="5.98">
+<p><strong>5.98</strong> لماذا نستخدم استهلاك القانون الضريبي، وليس الاستهلاك المحاسبي، في التحليل الاقتصادي؟</p>
+<p>أ) لأنه أدق في تمثيل قيمة الأصل<br>
+ب) لأنه الذي يحدد الضريبة المدفوعة فعلا<br>
+ج) لأنه أسرع دائما<br>
+د) لأن المحاسبة لا تستخدم الاستهلاك</p>
+<p><span class="ee-sol-link"><a href="#sol-5-98">الحل</a></span></p>
+</div>
+<div id="prob-5-99" class="ee-item" data-id="c05-i-09" data-kind="problem" data-label="5.99">
+<p><strong>5.99</strong> بالقسط الثابت مع قاعدة نصف السنة، ما استهلاك السنة الأولى لأصل أساسه 60,000 دينار وعمره 6 سنوات بدون قيمة مقدرة؟</p>
+<p>أ) 10,000.00 دينار<br>
+ب) 8,571.43 دينار<br>
+ج) 5,000.00 دينار<br>
+د) 10,000.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-5-99">الحل</a></span></p>
+</div>
+<div id="prob-5-100" class="ee-item" data-id="c05-i-10" data-kind="problem" data-label="5.100">
+<p><strong>5.100</strong> شركة خسرت هذه السنة، والقانون يسمح بترحيل الخسارة خمس سنوات. ما أثر زيادة الاستهلاك هذه السنة؟</p>
+<p>أ) لا أثر لأن الشركة لا تدفع ضريبة<br>
+ب) يزيد الخسارة المرحلة فيخفض ضريبة السنوات القادمة<br>
+ج) يرد الضريبة نقدا هذه السنة<br>
+د) يزيد الضريبة</p>
+<p><span class="ee-sol-link"><a href="#sol-5-100">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة تجمع أكثر من فكرة من الفصل، وبعضها يضيف فكرة جديدة.</p>
+<div id="prob-5-101" class="ee-item" data-id="c05-j-01" data-kind="problem" data-label="5.101">
+<p><strong>5.101</strong> <strong>حالة 5.1: خط إنتاج جديد في مصنع أدوية</strong></p>
+<p>مصنع أدوية اشترى خط تعبئة بسعر 150,000 دينار، ونقله 6,000 وتركيبه 9,000 دينار. عمره 6 سنوات بدون قيمة مقدرة. نسبة الضريبة 15%، والحد الأدنى للعائد 10%.</p>
+<p>(أ) ما أساس الاستهلاك؟ (ب) ابن جدول الاستهلاك بالقسط الثابت، ثم بالمتناقص المضاعف مع التحول. (ج) ما القيمة الحالية للوفر الضريبي بكل طريقة؟ (د) المحاسب يقول إن الطريقتين تعطيان نفس الوفر لأن المجموع واحد. هل هذا صحيح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-101">الحل</a></span></p>
+</div>
+<div id="prob-5-102" class="ee-item" data-id="c05-j-02" data-kind="problem" data-label="5.102">
+<p><strong>5.102</strong> <strong>حالة 5.2: استبدال رافعة شوكية</strong></p>
+<p>شركة لوجستية اشترت رافعة شوكية قبل 4 سنوات بمبلغ 90,000 دينار، وتستهلكها بالقسط الثابت على 8 سنوات بدون قيمة مقدرة. عرض عليها وكيل رافعة كهربائية جديدة بسعر 130,000 دينار، ويشتري القديمة بمبلغ 52,000 دينار. نسبة الضريبة 20%.</p>
+<p>(أ) ما القيمة الدفترية للرافعة القديمة؟ (ب) ما الربح الضريبي من بيعها؟ (ج) كم يبقى للشركة من ثمن البيع بعد الضريبة؟ (د) إذا استهلكت الجديدة بالقسط الثابت على 8 سنوات، ما الوفر الضريبي السنوي منها؟ (هـ) لماذا يجب أن يدخل صافي البيع، وليس ثمنه، في قرار الاستبدال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-102">الحل</a></span></p>
+</div>
+<div id="prob-5-103" class="ee-item" data-id="c05-j-03" data-kind="problem" data-label="5.103">
+<p><strong>5.103</strong> <strong>حالة 5.3: مشروع جديد وقواعد ترحيل مختلفة</strong></p>
+<p>مصنع جديد يتوقع النتائج التالية قبل الضريبة، بالدينار، لست سنوات: -60,000 ثم -20,000 ثم 30,000 ثم 70,000 ثم 90,000 ثم 90,000. نسبة الضريبة 15%. قارن الضريبة في كل سنة بين قانونين:</p>
+<ul>
+<li>القانون الأول يرحل الخسارة خمس سنوات بدون حد سنوي.</li>
+<li>القانون الثاني يرحل بدون حد زمني، لكن لا يطرح في أي سنة أكثر من 25% من ربحها.</li>
+</ul>
+<p>(أ) ابن جدول الضريبة لكل قانون. (ب) أي القانونين أفضل لهذا المصنع؟ (ج) متى يكون القانون الثاني أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-5-103">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch04.html" class="pagination-link" aria-label="معدل العائد الداخلي">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
