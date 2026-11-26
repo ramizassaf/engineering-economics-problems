@@ -4,7 +4,7 @@ Equations, Excel formulas, code and factor notation go on their own line
 ($$ display math or a fenced code block). A line that mixes Arabic text with
 any of these renders reversed in right-to-left layout.
 
-Checks chapters/src/*.qmd, index.qmd and every text field in bank/*/*.yaml.
+Checks chapters/src/*.qmd, index.qmd, appendices/derivations.qmd and every text field in bank/*/*.yaml.
 Exit code 1 if anything is found.
 """
 import re
@@ -69,7 +69,7 @@ def check_text(text: str, where: str):
 
 def main():
     found = []
-    for f in sorted((ROOT / "chapters" / "src").glob("*.qmd")) + [ROOT / "index.qmd"]:
+    for f in sorted((ROOT / "chapters" / "src").glob("*.qmd")) + [ROOT / "index.qmd", ROOT / "appendices" / "derivations.qmd"]:
         if f.exists():
             found += check_text(f.read_text(encoding="utf-8"), f.relative_to(ROOT).as_posix())
     for f in sorted((ROOT / "bank").glob("*/*.yaml")):

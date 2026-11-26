@@ -126,7 +126,11 @@ def build_chapter(ch: str):
                 f'::: {{.ee-item #prob-{num}-{k} data-id="{it["id"]}" data-kind="problem" data-label="{tag}"}}\n'
                 f"**{tag}** {first}" + (f"\n\n{rest}" if rest else "") + fig +
                 f"\n\n[[الحل](#sol-{num}-{k})]{{.ee-sol-link .content-visible when-format=\"html\"}}\n:::\n")
-            s_lines.append(f"[**{tag}**]{{#sol-{num}-{k}}} " + solution(it, env) + "\n")
+            body = solution(it, env)
+            # A solution that opens with a block (code, display math, table, list)
+            # needs the block on its own line, or Markdown reads it as plain text.
+            sep = "\n\n" if body.lstrip().startswith(("```", "$$", "|", "- ")) else " "
+            s_lines.append(f"[**{tag}**]{{#sol-{num}-{k}}}" + sep + body + "\n")
     out = out.replace("@problems", "\n".join(p_lines))
 
     (ROOT / "chapters" / f"{ch}.qmd").write_text(out, encoding="utf-8")

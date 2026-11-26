@@ -85,7 +85,43 @@ CHECKS = {
     "c02-i-01": {"A1": lambda v: npf.pmt(0.08, 5, -30000, 10000)},
     "c02-i-02": {"N": lambda v: npf.npv(0.09, [-95000] + [14000 * (1.05 * 0.993) ** (t - 1) - (1500 + 100 * (t - 1)) for t in range(1, 21)])},
     "c02-i-03": {"W": lambda v: npf.pmt(0.06, 20, -npf.fv(0.06, 25, 0, -npf.npv(0.06, [0] + [1200 * 1.03 ** (t - 1) for t in range(1, 26)])))},
+    # ---------------------------------------------------------------- chapter 3
+    "c03-ex-monthly-payment": {"A": lambda v: npf.pmt(v["r"] / 12, 12 * v["y"], -v["P"])},
+    "c03-ex-monthly-deposit": {"A": lambda v: npf.pmt((1 + v["ia"]) ** (1 / 12) - 1, 12 * v["y"], 0, -v["F"])},
+    "c03-ex-pw-project": {"PW": lambda v: npf.npv(v["i"], [-v["C"]] + [v["R"]] * (v["n"] - 1) + [v["R"] + v["S"]])},
+    "c03-ex-pw-cost": {"PW": lambda v: -npf.npv(v["i"], [-v["C"], -v["O"], -v["O"], -v["O"], -v["O"] - v["H"], -v["O"], -v["O"], -v["O"], -v["O"] + v["S"]])},
+    "c03-ex-lcm": {"Pa": lambda v: -npf.npv(v["i"], lcm_flows(v["Ca"], v["Oa"], v["Sa"], 3, 12)),
+                   "AWa": lambda v: -npf.pmt(v["i"], 12, -npf.npv(v["i"], lcm_flows(v["Ca"], v["Oa"], v["Sa"], 3, 12)))},
+    "c03-ex-aw-project": {"AW": lambda v: npf.pmt(v["i"], v["n"], -npf.npv(v["i"], [-v["C"]] + [v["R"]] * (v["n"] - 1) + [v["R"] + v["S"]]))},
+    "c03-ex-capital-recovery": {"CR2": lambda v: npf.pmt(v["i"], v["n"], -v["P"], v["S"])},
+    "c03-ex-aw-irregular": {"AW": lambda v: npf.pmt(v["i"], 5, -npf.npv(v["i"], [-v["c0"], v["c1"], v["c2"], v["c3"], v["c4"], v["c5"]]))},
+    "c03-ex-capcost-periodic": {"CC": lambda v: v["C"] + (v["M"] + npf.pmt(v["i"], v["k"], 0, -v["R"])) / v["i"]},
+    "c03-ex-payback": {"nd": lambda v: npf.nper(v["i"], v["R"], -v["C"])},
+    "c03-ex-breakeven": {"R": lambda v: npf.pmt(v["i"], v["n"], -v["C"], v["S"])},
+    "c03-ex-monthly-project": {"PW": lambda v: npf.npv((1 + v["ia"]) ** (1 / 12) - 1, [-v["C"]] + [v["rent"]] * 119 + [v["rent"] + v["S"]])},
+    "c03-b-10": {"B": lambda v: npf.fv(v["r"] / 12, 12 * v["k"], npf.pmt(v["r"] / 12, 12 * v["y"], -v["P"]), -v["P"])},
+    "c03-b-11": {"im": lambda v: npf.rate(12 * v["y"], -v["A"], v["P"], 0)},
+    "c03-c-04": {"PW": lambda v: npf.npv(v["i"], [-v["C"]] + [v["A1"] + v["G"] * (t - 1) for t in range(1, v["n"] + 1)])},
+    "c03-c-10": {"PW": lambda v: npf.npv(v["i"], [-v["C"]] + [0] * v["d"] + [v["R"]] * v["n"])},
+    "c03-d-05": {"R": lambda v: solve_linear(lambda X: npf.pv(v["i"], 8, -X, 0, "begin") - (v["C"] + npf.pv(v["i"], 8, -v["O"])))},
+    "c03-e-03": {"Pb": lambda v: -npf.npv(v["i"], lcm_flows(v["Cb"], v["Ob"], v["Sb"], 6, 24))},
+    "c03-f-04": {"AW": lambda v: npf.pmt(v["i"], v["n"], -npf.npv(v["i"], [v["C"]] + [v["O1"] + v["G"] * (t - 1) for t in range(1, v["n"] + 1)]))},
+    "c03-f-08": {"AW": lambda v: npf.pmt(v["i"], 8, -npf.npv(v["i"], [v["C"]] + [v["O"]] * 3 + [v["O"] + v["H"]] + [v["O"]] * 3 + [v["O"] - v["S"]]))},
+    "c03-g-08": {"CC": lambda v: v["C"] + npf.npv(v["i"], [0] + [v["M1"]] * 10) + v["M2"] / v["i"] / (1 + v["i"]) ** 10},
+    "c03-h-05": {"x": lambda v: solve_linear(lambda x: npf.pmt(v["i"], v["n"], -v["Fa"]) + v["va"] * x - npf.pmt(v["i"], v["n"], -v["Fb"]) - v["vb"] * x)},
+    "c03-i-08": {"r": lambda v: npf.rate(v["n"], v["Oa"] - v["Ob"], -(v["Cb"] - v["Ca"]), 0)},
+    "c03-k-02": {"kmx": lambda v: solve_linear(lambda x: npf.pmt(0.10, 8, -140000, 20000) + 0.42 * x - npf.pmt(0.10, 10, -220000, 30000) - 4000 - 0.144 * x)},
 }
+
+
+def lcm_flows(C, O, S, life, L):
+    """Cost flows, costs positive, for an asset renewed every `life` years over L years."""
+    f = [C] + [O] * L
+    for t in range(life, L + 1, life):
+        f[t] -= S
+        if t < L:
+            f[t] += C
+    return [-x for x in f]
 
 
 def last_payment(P, A, i):

@@ -34,6 +34,11 @@ local function wrap(el)
   if not s:find("%d") then
     return nil
   end
+  -- Names such as A1, B2 or x2 already read left to right. Splitting the
+  -- digit from its letter would print them reversed (1A), so leave them.
+  if s:find("[A-Za-z]") then
+    return nil
+  end
   local out, pos = {}, 1
   while true do
     local a = s:find("%d", pos)
@@ -56,7 +61,34 @@ end
 
 -- Walk the body only. Metadata holds LaTeX options such as font sizes,
 -- which must stay plain text.
+-- In headings, Latin words such as Excel and Python are also set as English
+-- runs. The page header repeats the heading outside its paragraph, where the
+-- word order would otherwise come out reversed.
+local function wrap_latin(el)
+  local s = el.text
+  if not s:find("[A-Za-z]") then
+    return nil
+  end
+  local out, pos = {}, 1
+  while true do
+    local a, b = s:find("[A-Za-z][A-Za-z0-9/]*", pos)
+    if not a then
+      break
+    end
+    if a > pos then
+      table.insert(out, pandoc.Str(s:sub(pos, a - 1)))
+    end
+    table.insert(out, pandoc.RawInline("latex", "\\babelsublr{\\foreignlanguage{english}{" .. s:sub(a, b) .. "}}"))
+    pos = b + 1
+  end
+  if pos <= #s then
+    table.insert(out, pandoc.Str(s:sub(pos)))
+  end
+  return out
+end
+
 function Pandoc(doc)
+  doc.blocks = doc.blocks:walk({ Header = function(h) return h:walk({ Str = wrap_latin }) end })
   doc.blocks = doc.blocks:walk({ Str = wrap })
   return doc
 end
