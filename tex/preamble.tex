@@ -8,6 +8,8 @@
 \addtokomafont{disposition}{\rmfamily}
 \usepackage{etoolbox}
 \babelprovide[import]{english}
+% Numbers set as English runs use the Latin shapes of the same font.
+\babelfont[english]{rm}{Amiri}
 \AtBeginEnvironment{Shaded}{\bodydir TLT\pardir TLT\textdir TLT}
 \AtBeginEnvironment{verbatim}{\selectlanguage{english}\pardir TLT\textdir TLT}
 \AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}

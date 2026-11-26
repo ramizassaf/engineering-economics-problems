@@ -58,3 +58,4 @@ format:
     default-image-extension: pdf
     number-depth: 2
     include-in-header: tex/preamble.tex
+    filters: [tex/percent-ltr.lua]
