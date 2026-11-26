@@ -1,0 +1,14 @@
+% Arabic, right-to-left book with LuaLaTeX and babel.
+% Fixes found while testing Quarto output:
+%  - the sans font (titles) needs Script=Arabic, otherwise letters do not join
+%  - code blocks and verbatim output must be English and left to right,
+%    otherwise lines and brackets are reversed
+%  - selnolig.sty in the project root is an empty stub: the real package breaks Arabic
+\babelfont{sf}[Script=Arabic,Renderer=HarfBuzz]{Noto Naskh Arabic}
+\addtokomafont{disposition}{\rmfamily}
+\usepackage{etoolbox}
+\babelprovide[import]{english}
+\AtBeginEnvironment{Shaded}{\bodydir TLT\pardir TLT\textdir TLT}
+\AtBeginEnvironment{verbatim}{\selectlanguage{english}\pardir TLT\textdir TLT}
+\AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}
+\setlength{\parskip}{0.45em}

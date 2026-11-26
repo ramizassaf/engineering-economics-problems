@@ -1,0 +1,10 @@
+/_book/
+/.quarto/
+/node_modules/
+*.log
+*.aux
+*.toc
+__pycache__/
+/*.tex
+
+**/*.quarto_ipynb

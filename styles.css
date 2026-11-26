@@ -1,0 +1,32 @@
+/* Code, Excel formulas, Python output and equations always read left to right */
+pre, code, div.sourceCode, .cell-output, .cell-output pre, math {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+math[display="block"] { margin: 0.8em auto; font-size: 1.08em; display: block; text-align: center; }
+pre.excel, div.sourceCode:has(> pre.excel) { background: #f1f6f1; }
+
+/* Worked examples and problems */
+.ee-item { margin: 1.4em 0; }
+.ee-item[data-kind="example"] {
+  border-inline-start: 4px solid #1f4e8c;
+  padding: 0.3em 1em 0.6em;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+.ee-item[data-kind="problem"] { border-bottom: 1px solid #e5e7eb; padding-bottom: 0.6em; }
+.ee-sol-link { font-size: 0.9em; }
+.ee-item svg, .ee-fig svg { max-width: 100%; height: auto; direction: ltr; }
+.ee-fig { text-align: center; margin: 0.8em 0; }
+
+/* New-numbers bar */
+.ee-bar { display: flex; gap: 0.5em; justify-content: flex-end; margin-bottom: 0.3em; }
+.ee-btn {
+  font: inherit; font-size: 0.85em; padding: 0.2em 0.8em;
+  border: 1px solid #1f4e8c; color: #1f4e8c; background: #fff; border-radius: 999px; cursor: pointer;
+}
+.ee-btn:hover { background: #1f4e8c; color: #fff; }
+.ee-random { outline: 2px dashed #d4a72c; outline-offset: 6px; border-radius: 2px; }
+details.ee-sol { margin-top: 0.6em; }
+details.ee-sol summary { cursor: pointer; color: #1f4e8c; }

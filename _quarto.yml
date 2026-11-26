@@ -1,0 +1,58 @@
+project:
+  type: book
+  output-dir: _book
+  pre-render:
+    - python3 tools/lint_rtl.py
+    - python3 tools/build.py
+    - python3 tools/tables.py
+  resources:
+    - assets/**
+
+book:
+  title: "مسائل في الاقتصاد الهندسي"
+  subtitle: "أمثلة محلولة ومسائل بحلول كاملة، بالمعادلة وExcel وPython"
+  author: "رامز عساف"
+  date: last-modified
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - chapters/ch01.qmd
+  appendices:
+    - appendices/tables.qmd
+    - appendices/solutions-ch01.qmd
+
+lang: ar
+dir: rtl
+toc-title: "المحتويات"
+language:
+  toc-title-document: "المحتويات"
+  section-title-appendices: "الملاحق"
+  search-text-placeholder: "بحث"
+
+execute:
+  echo: true
+  freeze: auto
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: mathml
+    css: styles.css
+    default-image-extension: svg
+    number-depth: 2
+    include-after-body: tex/load-scripts.html
+  pdf:
+    documentclass: scrbook
+    classoption: [oneside]
+    papersize: a4
+    geometry: [margin=2.2cm]
+    pdf-engine: lualatex
+    babeloptions: ["provide=*", "layout=tabular.lists"]
+    mainfont: "Amiri"
+    mainfontoptions: ["Script=Arabic", "Renderer=HarfBuzz"]
+    sansfont: "Noto Naskh Arabic"
+    sansfontoptions: ["Script=Arabic", "Renderer=HarfBuzz"]
+    monofont: "DejaVu Sans Mono"
+    default-image-extension: pdf
+    number-depth: 2
+    include-in-header: tex/preamble.tex
