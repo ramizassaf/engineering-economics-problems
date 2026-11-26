@@ -69,7 +69,7 @@ def check_text(text: str, where: str):
 
 def main():
     found = []
-    for f in sorted((ROOT / "chapters" / "src").glob("*.qmd")) + [ROOT / "index.qmd", ROOT / "appendices" / "derivations.qmd", ROOT / "appendices" / "excel-functions.qmd", ROOT / "appendices" / "tax-countries.qmd"]:
+    for f in sorted((ROOT / "chapters" / "src").glob("*.qmd")) + [ROOT / "index.qmd", ROOT / "appendices" / "derivations.qmd", ROOT / "appendices" / "excel-functions.qmd", ROOT / "appendices" / "tax-countries.qmd", ROOT / "appendices" / "capital-budgeting.qmd"]:
         if f.exists():
             found += check_text(f.read_text(encoding="utf-8"), f.relative_to(ROOT).as_posix())
     for f in sorted((ROOT / "bank").glob("*/*.yaml")):

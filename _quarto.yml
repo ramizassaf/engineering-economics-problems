@@ -24,6 +24,7 @@ book:
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
+    - appendices/capital-budgeting.qmd
     - appendices/excel-functions.qmd
     - appendices/tax-countries.qmd
     - appendices/solutions-ch01.qmd

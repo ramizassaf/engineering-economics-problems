@@ -2,3 +2,4 @@ pyyaml
 numpy
 numpy-financial
 jupyter
+pulp==2.9.0
