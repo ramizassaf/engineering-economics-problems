@@ -1,6 +1,7 @@
 meta:
   number: 1
-  title: نقل المال عبر الزمن
+  title: |
+    نقل المال عبر الزمن
   parts:
     - key: A
       title: "الجزء أ: أسئلة مفاهيم"

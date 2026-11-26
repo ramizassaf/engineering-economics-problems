@@ -17,9 +17,11 @@ book:
   chapters:
     - index.qmd
     - chapters/ch01.qmd
+    - chapters/ch02.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/solutions-ch01.qmd
+    - appendices/solutions-ch02.qmd
 
 lang: ar
 dir: rtl

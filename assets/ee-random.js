@@ -66,7 +66,7 @@
       while (!Object.values(env).every((v) => typeof v !== 'number' || Number.isFinite(v)) && tries < 20);
       let html;
       if (kind === 'example') {
-        const title = it.title ? ': ' + EE.render(it.title, env) : '';
+        const title = it.title ? ': ' + EE.render(it.title.trim(), env) : '';
         html = md('**مثال ' + label + title + '**\n\n' + statement(it, env)) + figure(it, env) +
                md('**الحل:**\n\n' + solution(it, env));
       } else {

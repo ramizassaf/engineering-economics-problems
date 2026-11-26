@@ -809,7 +809,10 @@ $$
 
 ::: {.ee-item #prob-1-9 data-id="c01-a-09" data-kind="problem" data-label="1.9"}
 **1.9** كتب طالب في Excel الصيغة التالية فظهر الجواب سالبا. ما السبب، وكيف يصلحه؟
-```excel =FV(6%, 10, 0, 2000) ```
+
+```excel
+=FV(6%, 10, 0, 2000)
+```
 
 [[الحل](#sol-1-9)]{.ee-sol-link .content-visible when-format="html"}
 :::

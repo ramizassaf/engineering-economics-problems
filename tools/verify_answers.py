@@ -55,7 +55,47 @@ CHECKS = {
                  "Y": lambda v: solve_linear(lambda Y: pv(0.08, 1, Y / 2) + pv(0.08, 3, Y) - sum(fv(0.05, k, 4000) for k in (1, 2, 3, 4)))},
     "c01-h-02": {"r": lambda v: npf.rate(3, 0, -60000, 75000)},
     "c01-h-03": {"F10": lambda v: fv(0.07, 6, fv(0.05, 4, 20000))},
+    # ---------------------------------------------------------------- chapter 2
+    "c02-ex-ap-loan": {"A": lambda v: npf.pmt(v["i"], v["n"], -v["P"])},
+    "c02-ex-amort": {"I3": lambda v: npf.ipmt(v["i"], 3, 5, -v["P"]), "Q4": lambda v: npf.ppmt(v["i"], 4, 5, -v["P"])},
+    "c02-ex-pa-car": {"P": lambda v: npf.pv(v["i"], v["n"], -v["A"])},
+    "c02-ex-fa-saving": {"F": lambda v: npf.fv(v["i"], v["n"], -v["A"], 0)},
+    "c02-ex-af-retire": {"A": lambda v: npf.pmt(v["i"], v["n"], 0, -v["F"])},
+    "c02-ex-deferred-pv": {"P0": lambda v: npf.npv(v["i"], [0] * v["s"] + [v["A"]] * (v["e"] - v["s"] + 1))},
+    "c02-ex-machine-salvage": {"N": lambda v: -v["C"] + npf.pv(v["i"], v["n"], -v["S"], -v["R"])},
+    "c02-ex-annuity-due": {"P": lambda v: npf.pv(v["i"], v["n"], -v["A"], 0, "begin")},
+    "c02-ex-find-n": {"n": lambda v: npf.nper(v["i"], -v["A"], v["P"])},
+    "c02-ex-gradient": {"P": lambda v: npf.npv(v["i"], [0] + [v["A1"] + v["G"] * (t - 1) for t in range(1, v["n"] + 1)])},
+    "c02-ex-gradient-shift": {"P0": lambda v: npf.npv(v["i"], [0] * v["s"] + [v["A1"] + v["G"] * k for k in range(v["n"])])},
+    "c02-ex-geometric": {"P": lambda v: npf.npv(v["i"], [0] + [v["A1"] * (1 + v["g"]) ** (t - 1) for t in range(1, v["n"] + 1)])},
+    "c02-ex-irregular": {"P": lambda v: npf.npv(v["i"], [v["c0"], v["c1"], v["c2"], v["c3"], v["c4"], v["c5"]])},
+    "c02-b-13": {"B": lambda v: npf.pv(v["i"], v["n"] - v["k"], -npf.pmt(v["i"], v["n"], -v["P"]))},
+    "c02-b-18": {"RATEX": lambda v: npf.rate(v["n"], -v["A1"], v["P"], 0)},
+    "c02-c-06": {"n": lambda v: npf.nper(v["i"], -v["A"], 0, v["F"])},
+    "c02-c-10": {"r": lambda v: npf.rate(v["n"], -v["A"], 0, v["F"])},
+    "c02-c-12": {"A": lambda v: npf.pmt(v["i"], v["n"], v["P"], -v["F"])},
+    "c02-d-05": {"P": lambda v: npf.npv(v["i"], [0] + [v["A"]] * v["k"] + [v["B"]] * (v["n"] - v["k"]))},
+    "c02-d-07": {"A": lambda v: npf.pmt(v["i"], v["n"], -npf.fv(v["i"], v["g"], 0, -v["P"]))},
+    "c02-d-14": {"W": lambda v: npf.pmt(v["i"], v["n"], -npf.fv(v["i"], v["k"], 0, -npf.fv(v["i"], v["n"], -v["A"], 0)))},
+    "c02-d-16": {"Bk": lambda v: last_payment(v["P"], v["A"], v["i"])},
+    "c02-e-07": {"G": lambda v: solve_linear(lambda G: npf.npv(v["i"], [0] + [v["A1"] + G * (t - 1) for t in range(1, v["n"] + 1)]) - v["P"])},
+    "c02-e-13": {"P": lambda v: npf.npv(v["i"], [-v["C"]] + [v["A1"] - v["G"] * (t - 1) for t in range(1, v["n"] + 1)])},
+    "c02-f-08": {"A1": lambda v: solve_linear(lambda a: npf.npv(v["i"], [0] + [a * (1 + v["g"]) ** (t - 1) for t in range(1, v["n"] + 1)]) - v["P"])},
+    "c02-g-07": {"r": lambda v: npf.irr([-v["C"]] + [v["A"]] * v["n"])},
+    "c02-i-01": {"A1": lambda v: npf.pmt(0.08, 5, -30000, 10000)},
+    "c02-i-02": {"N": lambda v: npf.npv(0.09, [-95000] + [14000 * (1.05 * 0.993) ** (t - 1) - (1500 + 100 * (t - 1)) for t in range(1, 21)])},
+    "c02-i-03": {"W": lambda v: npf.pmt(0.06, 20, -npf.fv(0.06, 25, 0, -npf.npv(0.06, [0] + [1200 * 1.03 ** (t - 1) for t in range(1, 26)])))},
 }
+
+
+def last_payment(P, A, i):
+    """Simulate the loan year by year and return the final, smaller payment."""
+    b = P
+    while True:
+        b *= 1 + i
+        if b <= A:
+            return b
+        b -= A
 
 
 def solve_linear(f):

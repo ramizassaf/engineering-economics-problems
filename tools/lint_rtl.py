@@ -23,6 +23,7 @@ RULES = [
     (re.compile(r"[A-Za-z0-9)]\s*[=^]\s*[A-Za-z0-9(]"), "equation (= or ^)"),
     (re.compile(r"\*\*?\s*[A-Za-z0-9(]|[A-Za-z0-9)]\s*\*"), "operator *"),
     (re.compile(r"[A-Za-z0-9)]\s*[×÷]\s*[A-Za-z0-9(]"), "operator × or ÷"),
+    (re.compile(r"[A-Za-z][A-Za-z0-9]*\s*[+−]\s*[A-Za-z0-9(]|[A-Za-z0-9)]\s*[+−]\s*[A-Za-z(]"), "operator + or −"),
     (re.compile(r"\([^()؀-ۿ]*[A-Za-z][^()؀-ۿ]*[,+\-*/][^()؀-ۿ]*\)"), "Latin expression in parentheses"),
     (re.compile(r"\d\s*-\s*[A-Za-z]|[A-Za-z]\d*\s*-\s*\d"), "subtraction with a cell or symbol"),
 ]

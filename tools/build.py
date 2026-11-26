@@ -89,7 +89,7 @@ def build_chapter(ch: str):
         ex_no[iid] = len(ex_no) + 1
         k = ex_no[iid]
         env = compute(it)
-        title = render(it.get("title", ""), env)
+        title = render(it.get("title", "").strip(), env)
         head = f"**مثال {num}.{k}: {title}**" if title else f"**مثال {num}.{k}**"
         body = statement(it, env)
         fig = figure(it, env, f"{ch}-ex{k:02d}")

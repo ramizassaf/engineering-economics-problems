@@ -50,6 +50,47 @@ def AG(i, n):
     return 1 / i - n / ((1 + i) ** n - 1)
 
 
+def PGEO(g, i, n):
+    """Present worth factor of a geometric series with first payment 1."""
+    return n / (1 + i) if abs(i - g) < 1e-12 else (1 - ((1 + g) / (1 + i)) ** n) / (i - g)
+
+
+def RATE(n, A, P):
+    """Interest rate where P equals the present worth of n payments A (bisection)."""
+    lo, hi = 1e-9, 1.0
+    for _ in range(100):
+        mid = (lo + hi) / 2
+        if A * PA(mid, n) > P:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
+def RATEF(n, A, F):
+    """Interest rate where n payments A grow to F (bisection)."""
+    lo, hi = 1e-9, 1.0
+    for _ in range(100):
+        mid = (lo + hi) / 2
+        if A * FA(mid, n) < F:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
+def GROWTH(A1, P, i, n):
+    """Growth rate g where a geometric series starting at A1 has present worth P (bisection)."""
+    lo, hi = -0.5, 1.0
+    for _ in range(100):
+        mid = (lo + hi) / 2
+        if A1 * PGEO(mid, i, n) < P:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
 def ln(x):
     return math.log(x)
 
@@ -79,7 +120,7 @@ def r2(x):
 
 HELPERS = {
     "FP": FP, "PF": PF, "PA": PA, "AP": AP, "FA": FA, "AF": AF,
-    "PG": PG, "AG": AG, "ln": ln, "abs": abs, "max": max, "min": min,
+    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "GROWTH": GROWTH, "ln": ln, "abs": abs, "max": max, "min": min,
     "pick": pick, "yrs": yrs, "r4": r4, "r2": r2, "floor": math.floor, "ceil": math.ceil,
 }
 
@@ -181,11 +222,25 @@ def diagram_svg(spec: dict, env: dict) -> str:
     n = int(round(ev(str(spec["n"]), env)))
     rate = spec.get("i")
     flows = []
-    for f in spec["flows"]:
+    for f in spec.get("flows", []) or []:
         t = ev(str(f[0]), env)
         a = ev(str(f[1]), env)
         lab = render(f[2], env) if len(f) > 2 else fmt(abs(a), "g")
         flows.append((t, a, lab))
+    # series: [from, to, amount, label?]; amount and label may use the year t.
+    # Long series without a label show the amount on the first and last arrows only.
+    for s in spec.get("series", []) or []:
+        t1, t2 = int(round(ev(str(s[0]), env))), int(round(ev(str(s[1]), env)))
+        for t in range(t1, t2 + 1):
+            e2 = {**env, "t": t}
+            a = ev(str(s[2]), e2)
+            if len(s) > 3:
+                lab = render(s[3], e2)
+            elif (t2 - t1 + 1 > 8 or n > 10) and t not in (t1, t2):
+                lab = ""
+            else:
+                lab = fmt(abs(a), "g")
+            flows.append((t, a, lab))
     return svg_draw(n, flows, render(rate, env) if rate else "")
 
 
@@ -195,7 +250,7 @@ def _c(v):
 
 
 def svg_draw(n, flows, rate_label):
-    W, H, L, R = 640, 250, 50, 590
+    W, H, L, R = 640, 250, 50, 570
     ax = 125
     step = (R - L) / max(n, 1)
     big = max([abs(a) for _, a, _ in flows] + [1])
@@ -206,10 +261,10 @@ def svg_draw(n, flows, rate_label):
         parts.append(f'<line x1="{_c(x)}" y1="{ax - 5}" x2="{_c(x)}" y2="{ax + 5}" stroke="#444"/>')
         parts.append(f'<text x="{_c(x + 4)}" y="{ax + 18}" fill="#555" font-size="12">{k}</text>')
     if rate_label:
-        parts.append(f'<text x="{R + 15}" y="22" text-anchor="end" fill="#222">{rate_label}</text>')
+        parts.append(f'<text x="{R + 15}" y="16" text-anchor="end" fill="#222">{rate_label}</text>')
     for t, a, lab in flows:
         x = L + t * step
-        h = 30 + 60 * abs(a) / big
+        h = 30 + 50 * abs(a) / big
         up = a > 0
         y2 = ax - h if up else ax + h
         col = "#1b6e3a" if up else "#1f4e8c"

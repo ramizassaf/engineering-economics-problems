@@ -4,7 +4,7 @@ pre, code, div.sourceCode, .cell-output, .cell-output pre, math {
   text-align: left;
   unicode-bidi: isolate;
 }
-math[display="block"] { margin: 0.8em auto; font-size: 1.08em; display: block; text-align: center; }
+math[display="block"] { margin: 0.8em auto; font-size: 1.08em; display: block; text-align: center; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 pre.excel, div.sourceCode:has(> pre.excel) { background: #f1f6f1; }
 
 /* Worked examples and problems */
@@ -32,5 +32,5 @@ details.ee-sol { margin-top: 0.6em; }
 details.ee-sol summary { cursor: pointer; color: #1f4e8c; }
 
 /* Equations drawn by the new-numbers widget */
-.ee-math { text-align: center; direction: ltr; margin: 0.8em 0; font-size: 1.08em; }
+.ee-math { text-align: center; direction: ltr; margin: 0.8em 0; font-size: 1.08em; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .ee-math math { display: inline-block; }

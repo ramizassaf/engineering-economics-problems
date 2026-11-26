@@ -9,10 +9,35 @@
   const AF = (i, n) => 1 / FA(i, n);
   const PG = (i, n) => (Math.pow(1 + i, n) - i * n - 1) / (i * i * Math.pow(1 + i, n));
   const AG = (i, n) => 1 / i - n / (Math.pow(1 + i, n) - 1);
+  const PGEO = (g, i, n) => (Math.abs(i - g) < 1e-12 ? n / (1 + i) : (1 - Math.pow((1 + g) / (1 + i), n)) / (i - g));
+  const RATE = (n, A, P) => {
+    let lo = 1e-9, hi = 1.0;
+    for (let k = 0; k < 100; k++) {
+      const mid = (lo + hi) / 2;
+      if (A * PA(mid, n) > P) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  };
+  const RATEF = (n, A, F) => {
+    let lo = 1e-9, hi = 1.0;
+    for (let k = 0; k < 100; k++) {
+      const mid = (lo + hi) / 2;
+      if (A * FA(mid, n) < F) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  };
+  const GROWTH = (A1, P, i, n) => {
+    let lo = -0.5, hi = 1.0;
+    for (let k = 0; k < 100; k++) {
+      const mid = (lo + hi) / 2;
+      if (A1 * PGEO(mid, i, n) < P) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  };
   const r4 = (x) => Number(x.toFixed(4));
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
-    FP, PF, PA, AP, FA, AF, PG, AG, r4, r2,
+    FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, r4, r2,
     ln: Math.log, abs: Math.abs, max: Math.max, min: Math.min,
     floor: Math.floor, ceil: Math.ceil,
     pick: (c, a, b) => (c ? a : b),
@@ -82,7 +107,7 @@
 
   const c1 = (v) => (Math.floor(v * 10 + 0.5) / 10).toFixed(1);
   function svgDraw(n, flows, rateLabel) {
-    const W = 640, H = 250, L = 50, R = 590, ax = 125;
+    const W = 640, H = 250, L = 50, R = 570, ax = 125;
     const step = (R - L) / Math.max(n, 1);
     const big = Math.max(1, ...flows.map((f) => Math.abs(f[1])));
     const p = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="DejaVu Sans, Arial, sans-serif" font-size="13">`,
@@ -92,9 +117,9 @@
       p.push(`<line x1="${c1(x)}" y1="${ax - 5}" x2="${c1(x)}" y2="${ax + 5}" stroke="#444"/>`);
       p.push(`<text x="${c1(x + 4)}" y="${ax + 18}" fill="#555" font-size="12">${k}</text>`);
     }
-    if (rateLabel) p.push(`<text x="${R + 15}" y="22" text-anchor="end" fill="#222">${rateLabel}</text>`);
+    if (rateLabel) p.push(`<text x="${R + 15}" y="16" text-anchor="end" fill="#222">${rateLabel}</text>`);
     for (const [t, a, lab] of flows) {
-      const x = L + t * step, h = 30 + 60 * Math.abs(a) / big, up = a > 0;
+      const x = L + t * step, h = 30 + 50 * Math.abs(a) / big, up = a > 0;
       const y2 = up ? ax - h : ax + h, col = up ? '#1b6e3a' : '#1f4e8c', tip = up ? 8 : -8;
       p.push(`<line x1="${c1(x)}" y1="${ax}" x2="${c1(x)}" y2="${c1(y2 + tip)}" stroke="${col}" stroke-width="2.2"/>`);
       p.push(`<path d="M${c1(x - 5)} ${c1(y2 + tip)} L${c1(x + 5)} ${c1(y2 + tip)} L${c1(x)} ${c1(y2)} Z" fill="${col}"/>`);
@@ -107,10 +132,22 @@
 
   function diagramSvg(spec, env) {
     const n = Math.round(ev(String(spec.n), env));
-    const flows = spec.flows.map((f) => {
+    const flows = (spec.flows || []).map((f) => {
       const t = ev(String(f[0]), env), a = ev(String(f[1]), env);
       return [t, a, f.length > 2 ? render(f[2], env) : fmt(Math.abs(a), 'g')];
     });
+    for (const s of spec.series || []) {
+      const t1 = Math.round(ev(String(s[0]), env)), t2 = Math.round(ev(String(s[1]), env));
+      for (let t = t1; t <= t2; t++) {
+        const e2 = Object.assign({}, env, { t });
+        const a = ev(String(s[2]), e2);
+        let lab;
+        if (s.length > 3) lab = render(s[3], e2);
+        else if ((t2 - t1 + 1 > 8 || n > 10) && t !== t1 && t !== t2) lab = '';
+        else lab = fmt(Math.abs(a), 'g');
+        flows.push([t, a, lab]);
+      }
+    }
     return svgDraw(n, flows, spec.i ? render(spec.i, env) : '');
   }
 
