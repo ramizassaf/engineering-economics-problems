@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; القيمة الحالية والقيمة السنوية ومقارنة البدائل – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch02.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-3-monthly" id="toc-sec-3-monthly" class="nav-link active" data-scroll-target="#sec-3-monthly"><span class="header-section-number">3.1</span> الفائدة الشهرية والسنوية</a></li>
+  <li><a href="#sec-3-pw" id="toc-sec-3-pw" class="nav-link" data-scroll-target="#sec-3-pw"><span class="header-section-number">3.2</span> القيمة الحالية لمشروع</a></li>
+  <li><a href="#sec-3-equal" id="toc-sec-3-equal" class="nav-link" data-scroll-target="#sec-3-equal"><span class="header-section-number">3.3</span> مقارنة بدائل بأعمار متساوية</a></li>
+  <li><a href="#sec-3-unequal" id="toc-sec-3-unequal" class="nav-link" data-scroll-target="#sec-3-unequal"><span class="header-section-number">3.4</span> بدائل بأعمار مختلفة</a></li>
+  <li><a href="#sec-3-aw" id="toc-sec-3-aw" class="nav-link" data-scroll-target="#sec-3-aw"><span class="header-section-number">3.5</span> القيمة السنوية</a></li>
+  <li><a href="#sec-3-capcost" id="toc-sec-3-capcost" class="nav-link" data-scroll-target="#sec-3-capcost"><span class="header-section-number">3.6</span> التكلفة المرسملة</a></li>
+  <li><a href="#sec-3-payback" id="toc-sec-3-payback" class="nav-link" data-scroll-target="#sec-3-payback"><span class="header-section-number">3.7</span> فترة الاسترداد ونقطة التعادل</a></li>
+  <li><a href="#sec-3-monthly-project" id="toc-sec-3-monthly-project" class="nav-link" data-scroll-target="#sec-3-monthly-project"><span class="header-section-number">3.8</span> تدفقات شهرية في مشروع</a></li>
+  <li><a href="#sec-3-python" id="toc-sec-3-python" class="nav-link" data-scroll-target="#sec-3-python"><span class="header-section-number">3.9</span> Python: مقارنة البدائل</a></li>
+  <li><a href="#sec-3-problems" id="toc-sec-3-problems" class="nav-link" data-scroll-target="#sec-3-problems"><span class="header-section-number">3.10</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-الفائدة-الشهرية-والسنوية" id="toc-الجزء-ب-الفائدة-الشهرية-والسنوية" class="nav-link" data-scroll-target="#الجزء-ب-الفائدة-الشهرية-والسنوية">الجزء ب: الفائدة الشهرية والسنوية</a></li>
+  <li><a href="#الجزء-ج-القيمة-الحالية-لمشروع-واحد" id="toc-الجزء-ج-القيمة-الحالية-لمشروع-واحد" class="nav-link" data-scroll-target="#الجزء-ج-القيمة-الحالية-لمشروع-واحد">الجزء ج: القيمة الحالية لمشروع واحد</a></li>
+  <li><a href="#الجزء-د-مقارنة-بدائل-بأعمار-متساوية" id="toc-الجزء-د-مقارنة-بدائل-بأعمار-متساوية" class="nav-link" data-scroll-target="#الجزء-د-مقارنة-بدائل-بأعمار-متساوية">الجزء د: مقارنة بدائل بأعمار متساوية</a></li>
+  <li><a href="#الجزء-هـ-بدائل-بأعمار-مختلفة" id="toc-الجزء-هـ-بدائل-بأعمار-مختلفة" class="nav-link" data-scroll-target="#الجزء-هـ-بدائل-بأعمار-مختلفة">الجزء هـ: بدائل بأعمار مختلفة</a></li>
+  <li><a href="#الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال" id="toc-الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال" class="nav-link" data-scroll-target="#الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال">الجزء و: القيمة السنوية وتكلفة استرداد رأس المال</a></li>
+  <li><a href="#الجزء-ز-التكلفة-المرسملة" id="toc-الجزء-ز-التكلفة-المرسملة" class="nav-link" data-scroll-target="#الجزء-ز-التكلفة-المرسملة">الجزء ز: التكلفة المرسملة</a></li>
+  <li><a href="#الجزء-ح-فترة-الاسترداد-ونقطة-التعادل" id="toc-الجزء-ح-فترة-الاسترداد-ونقطة-التعادل" class="nav-link" data-scroll-target="#الجزء-ح-فترة-الاسترداد-ونقطة-التعادل">الجزء ح: فترة الاسترداد ونقطة التعادل</a></li>
+  <li><a href="#الجزء-ط-مسائل-excel-وpython" id="toc-الجزء-ط-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ط-مسائل-excel-وpython">الجزء ط: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ي-اختيار-من-متعدد" id="toc-الجزء-ي-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ي-اختيار-من-متعدد">الجزء ي: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ك-حالات-مصغرة" id="toc-الجزء-ك-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ك-حالات-مصغرة">الجزء ك: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch3" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>في الفصلين الأول والثاني تعلمت نقل المال عبر الزمن. في هذا الفصل تستخدم ذلك لاتخاذ قرار: هل ننفذ المشروع؟ وأي آلة نشتري؟ الطريقتان الأساسيتان هما القيمة الحالية والقيمة السنوية، وتعطيان نفس القرار دائما. نبدأ بقسم عملي عن الفائدة الشهرية، لأن أغلب القروض والإيجارات في الواقع شهرية.</p>
+<section id="sec-3-monthly" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-3-monthly"><span class="header-section-number">3.1</span> الفائدة الشهرية والسنوية</h2>
+<p>البنوك تعلن عادة نسبة سنوية، وتحسب الفائدة شهريا. النسبة المعلنة تسمى النسبة الاسمية، ونرمز لها r. نسبة الشهر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mfrac><mi>r</mi><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">
+i_m = \frac{r}{12}
+</annotation></semantics></math></p>
+<p>القاعدة الأهم في هذا القسم: النسبة يجب أن تطابق فترة الدفعات. الأقساط الشهرية تحتاج نسبة شهرية وعدد أشهر.</p>
+<div id="ex-3-1" class="ee-item" data-id="c03-ex-monthly-payment" data-kind="example" data-label="3.1">
+<p><strong>مثال 3.1: قسط شهري لقرض سيارة</strong></p>
+<p>اشترى مهندس سيارة بقرض 18,000 دينار، بفائدة 9% سنويا تحسب شهريا، لمدة 4 سنوات. ما القسط الشهري؟ وما النسبة الفعلية السنوية التي يدفعها؟</p>
+<p><strong>الحل:</strong></p>
+<p>الأقساط شهرية، فنعمل بالشهر. نسبة الشهر وعدد الأشهر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><mn>9</mn><mi>%</mi></mrow><mn>12</mn></mfrac><mo>=</mo><mn>0.75</mn><mi>%</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>N</mi><mo>=</mo><mn>12</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>48</mn></mrow><annotation encoding="application/x-tex">
+i_m = \frac{9\%}{12} = 0.75\%, \qquad N = 12 \times 4 = 48
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>18</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>0.75</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>48</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>447.93</mn></mrow><annotation encoding="application/x-tex">
+A = 18\mathord{,}000\,(A/P,\ 0.75\%,\ 48) = 447.93
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=PMT(9%/12, 48, -18000)</code></pre>
+<p>النسبة الفعلية السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.0075</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>12</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>9.38</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = (1 + 0.0075)^{12} - 1 = 9.38\%
+</annotation></semantics></math></p>
+<p>النسبة الفعلية أعلى من 9% لأن فائدة كل شهر تكسب فائدة في الأشهر التالية. مجموع الفوائد على القرض 3,500.68 دينار.</p>
+</div>
+<p>لأن فائدة كل شهر تكسب فائدة في الأشهر التالية، تكون الزيادة الحقيقية في سنة أكبر من النسبة الاسمية. هذه الزيادة تسمى النسبة الفعلية السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mi>r</mi><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>12</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+i_a = \left(1 + \frac{r}{12}\right)^{12} - 1
+</annotation></semantics></math></p>
+<p>النسبة الفعلية هي التي تقارن بها بين العروض.</p>
+<div id="ex-3-2" class="ee-item" data-id="c03-ex-effective-compare" data-kind="example" data-label="3.2">
+<p><strong>مثال 3.2: مقارنة عرضين من بنكين</strong></p>
+<p>تريد شركة قرضا لمدة سنة. البنك الأول يعرض 9.60% سنويا تحسب شهريا. البنك الثاني يعرض 9.80% سنويا تحسب مرة واحدة في نهاية السنة. أي العرضين أرخص؟</p>
+<p><strong>الحل:</strong></p>
+<p>لا نقارن النسب المعلنة مباشرة، لأن عدد مرات حساب الفائدة مختلف. نحول كل نسبة إلى نسبة فعلية سنوية.</p>
+<p>البنك الأول:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>0.096</mn><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>12</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.03</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = \left(1 + \frac{0.096}{12}\right)^{12} - 1 = 10.03\%
+</annotation></semantics></math></p>
+<p>البنك الثاني يحسب الفائدة مرة واحدة، فنسبته الفعلية هي المعلنة: 9.80%.</p>
+<p>العرض الأرخص: البنك الثاني. النسبة المعلنة الأقل لا تعني دائما التكلفة الأقل.</p>
+</div>
+<p>أحيانا تعرف النسبة الفعلية السنوية، وتحتاج النسبة الشهرية التي تكافئها. هنا لا تقسم على 12، بل تأخذ الجذر الثاني عشر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>a</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+i_m = (1 + i_a)^{1/12} - 1
+</annotation></semantics></math></p>
+<div id="ex-3-3" class="ee-item" data-id="c03-ex-monthly-deposit" data-kind="example" data-label="3.3">
+<p><strong>مثال 3.3: إيداع شهري بنسبة سنوية فعلية</strong></p>
+<p>يعلن بنك أن حساب التوفير يعطي 7% نسبة فعلية سنوية. يريد شخص أن يجمع 20,000 دينار بعد 5 سنوات بإيداع مبلغ ثابت في نهاية كل شهر. كم يودع شهريا؟</p>
+<p><strong>الحل:</strong></p>
+<p>النسبة المعطاة فعلية، أي تشمل أثر الفائدة الشهرية. نبحث عن النسبة الشهرية التي تعطي نفس الزيادة في سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>m</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>12</mn></msup><mo>=</mo><mn>1</mn><mo>+</mo><mn>0.07</mn><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>0.57</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + i_m)^{12} = 1 + 0.07 \quad\Rightarrow\quad i_m = 0.57\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>0.57</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>60</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>280.92</mn></mrow><annotation encoding="application/x-tex">
+A = 20\mathord{,}000\,(A/F,\ 0.57\%,\ 60) = 280.92
+</annotation></semantics></math></p>
+<p>الخطأ الشائع قسمة النسبة الفعلية على 12. هذا يعطي 279.36 دينار، وهو أقل من اللازم لأن نسبة الشهر الناتجة أعلى من الصحيحة.</p>
+</div>
+<p>في Excel الدالة EFFECT تحول النسبة الاسمية إلى فعلية، والدالة NOMINAL تعمل العكس:</p>
+<pre class="excel"><code>=EFFECT(9%, 12)
+=NOMINAL(9.38%, 12)</code></pre>
+<p>اشتقاق معادلة النسبة الفعلية في ملحق اشتقاق المعادلات.</p>
+</section>
+<section id="sec-3-pw" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-3-pw"><span class="header-section-number">3.2</span> القيمة الحالية لمشروع</h2>
+<p>لتقييم مشروع ننقل كل تدفقاته إلى السنة 0 بنسبة تسمى الحد الأدنى للعائد. هذه النسبة أقل عائد تقبله الشركة، لأنها تستطيع تحقيقه باستثمار المال في مكان آخر.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+PW = \sum_{t=0}^{n} \frac{CF_t}{(1+i)^t}
+</annotation></semantics></math></p>
+<p>القاعدة:</p>
+<ul>
+<li>القيمة الحالية موجبة: المشروع يعطي أكثر من الحد الأدنى للعائد، فيقبل.</li>
+<li>القيمة الحالية صفر: المشروع يعطي الحد الأدنى بالضبط.</li>
+<li>القيمة الحالية سالبة: المشروع يرفض.</li>
+</ul>
+<div id="ex-3-4" class="ee-item" data-id="c03-ex-pw-project" data-kind="example" data-label="3.4">
+<p><strong>مثال 3.4: قبول مشروع أو رفضه بالقيمة الحالية</strong></p>
+<p>خط إنتاج جديد يكلف 120,000 دينار، ويعطي صافي دخل 28,000 دينار سنويا لمدة 8 سنوات، ثم يباع بقيمة 15,000 دينار. الحد الأدنى للعائد 10%. هل تنفذ الشركة المشروع؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch03-ex04.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>ننقل كل التدفقات إلى السنة 0 ونجمعها. التكلفة سالبة، والدخل والبيع موجبان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>120</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>28</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW = -120\mathord{,}000 + 28\mathord{,}000\,(P/A,\ 10\%,\ 8) + 15\mathord{,}000\,(P/F,\ 10\%,\ 8)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>120</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>149</mn><mi>,</mi><mn>377.93</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>997.61</mn><mo>=</mo><mn>36</mn><mi>,</mi><mn>375.54</mn></mrow><annotation encoding="application/x-tex">
+PW = -120\mathord{,}000 + 149\mathord{,}377.93 + 6\mathord{,}997.61 = 36\mathord{,}375.54
+</annotation></semantics></math></p>
+<p>القيمة الحالية موجبة، فالمشروع يعطي أكثر من الحد الأدنى للعائد ويقبل.</p>
+<p>في Excel اكتب التدفقات من السنة 0 إلى السنة 8 في الخلايا من B1 إلى B9:</p>
+<pre class="excel"><code>=B1 + NPV(10%, B2:B9)</code></pre>
+</div>
+<p>عندما تكون كل التدفقات تكاليف، الأسهل أن تكتب التكاليف موجبة وتطرح قيمة البيع. النتيجة تسمى القيمة الحالية للتكاليف.</p>
+<div id="ex-3-5" class="ee-item" data-id="c03-ex-pw-cost" data-kind="example" data-label="3.5">
+<p><strong>مثال 3.5: القيمة الحالية للتكاليف</strong></p>
+<p>آلة تكلف 60,000 دينار، وتكلفة تشغيلها 9,000 دينار سنويا لمدة 8 سنوات. تحتاج صيانة كبيرة في السنة 4 بتكلفة 5,000 دينار، وتباع في نهاية السنة 8 بقيمة 8,000 دينار. ما القيمة الحالية لتكلفة الآلة بنسبة 8%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch03-ex05.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>هنا كل التدفقات تكاليف إلا قيمة البيع. نكتب التكاليف موجبة ونطرح قيمة البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW_c = 60\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 8\%,\ 8) + 5\mathord{,}000\,(P/F,\ 8\%,\ 4) - 8\mathord{,}000\,(P/F,\ 8\%,\ 8)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>51</mn><mi>,</mi><mn>719.75</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>675.15</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>322.15</mn><mo>=</mo><mn>111</mn><mi>,</mi><mn>072.75</mn></mrow><annotation encoding="application/x-tex">
+PW_c = 60\mathord{,}000 + 51\mathord{,}719.75 + 3\mathord{,}675.15 - 4\mathord{,}322.15 = 111\mathord{,}072.75
+</annotation></semantics></math></p>
+<p>كتابة التكاليف موجبة أسهل عندما تكون كل البدائل تكاليف. المهم أن تلتزم بنفس الإشارة في كل البدائل.</p>
+</div>
+</section>
+<section id="sec-3-equal" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-3-equal"><span class="header-section-number">3.3</span> مقارنة بدائل بأعمار متساوية</h2>
+<p>البدائل المتنافية هي بدائل نختار منها واحدا فقط، مثل آلتين لنفس العمل. قبل المقارنة حدد نوع البدائل:</p>
+<ul>
+<li>بدائل تكاليف: تؤدي نفس الخدمة، والإيراد واحد. اختر الأقل قيمة حالية للتكاليف.</li>
+<li>بدائل إيرادات: لكل بديل دخل مختلف. اختر الأكبر قيمة حالية، بشرط أن تكون موجبة.</li>
+</ul>
+<div id="ex-3-6" class="ee-item" data-id="c03-ex-pw-two-machines" data-kind="example" data-label="3.6">
+<p><strong>مثال 3.6: اختيار آلة بأقل تكلفة</strong></p>
+<p>مصنع يختار بين آلتين لنفس العمل، وعمر كل منهما 6 سنوات. الحد الأدنى للعائد 10%.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>الآلة أ</th>
+<th>الآلة ب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>السعر</td>
+<td>40,000</td>
+<td>55,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل السنوي</td>
+<td>11,000</td>
+<td>8,000</td>
+</tr>
+<tr class="odd">
+<td>قيمة البيع</td>
+<td>4,500</td>
+<td>8,000</td>
+</tr>
+</tbody>
+</table>
+<p>أي آلة يختار؟</p>
+<p><strong>الحل:</strong></p>
+<p>الآلتان تؤديان نفس العمل، فالإيراد واحد ولا يؤثر في القرار. نقارن القيمة الحالية للتكاليف ونختار الأقل.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>11</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>4</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>85</mn><mi>,</mi><mn>367.74</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 40\mathord{,}000 + 11\mathord{,}000\,(P/A,\ 10\%,\ 6) - 4\mathord{,}500\,(P/F,\ 10\%,\ 6) = 85\mathord{,}367.74
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>55</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>85</mn><mi>,</mi><mn>326.29</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 55\mathord{,}000 + 8\mathord{,}000\,(P/A,\ 10\%,\ 6) - 8\mathord{,}000\,(P/F,\ 10\%,\ 6) = 85\mathord{,}326.29
+</annotation></semantics></math></p>
+<p>يختار المصنع الآلة ب، والفرق 41.44 دينار بالقيمة الحالية.</p>
+</div>
+<div id="ex-3-7" class="ee-item" data-id="c03-ex-pw-revenue" data-kind="example" data-label="3.7">
+<p><strong>مثال 3.7: مشروعان بإيرادات</strong></p>
+<p>أمام شركة مشروعان، ولا تستطيع تنفيذ إلا واحدا. المشروع الأول يكلف 80,000 دينار ويعطي 24,000 دينار سنويا. المشروع الثاني يكلف 110,000 دينار ويعطي 31,000 دينار سنويا. عمر كل منهما 5 سنوات بدون قيمة بيع، والحد الأدنى للعائد 12%. ماذا تختار؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>80</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>24</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><mi>,</mi><mn>514.63</mn></mrow><annotation encoding="application/x-tex">
+PW_1 = -80\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 12\%,\ 5) = 6\mathord{,}514.63
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>2</mn></msub><mo>=</mo><mi>−</mi><mn>110</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>31</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>748.06</mn></mrow><annotation encoding="application/x-tex">
+PW_2 = -110\mathord{,}000 + 31\mathord{,}000\,(P/A,\ 12\%,\ 5) = 1\mathord{,}748.06
+</annotation></semantics></math></p>
+<p>القاعدة: اختر البديل صاحب أكبر قيمة حالية، بشرط أن تكون موجبة. إذا كانت كل القيم سالبة فالأفضل عدم التنفيذ. القرار: المشروع الأول.</p>
+</div>
+<p>في بدائل الإيرادات يوجد دائما خيار إضافي: عدم التنفيذ. قيمته الحالية صفر.</p>
+<div id="ex-3-8" class="ee-item" data-id="c03-ex-three-projects" data-kind="example" data-label="3.8">
+<p><strong>مثال 3.8: ثلاثة مشاريع وخيار عدم التنفيذ</strong></p>
+<p>ثلاثة مشاريع متنافية، عمر كل منها 10 سنوات، والحد الأدنى للعائد 15%. أيها تختار الشركة؟</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>التكلفة</th>
+<th>الدخل السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>100,000</td>
+<td>22,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>150,000</td>
+<td>30,000</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>200,000</td>
+<td>37,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الحل:</strong></p>
+<p>كل المشاريع لها نفس العمر، فنستخدم نفس المعامل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5.0188</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 15\%,\ 10) = 5.0188
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10,412.91</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>563.06</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>-14,305.56</td>
+</tr>
+<tr class="even">
+<td>عدم التنفيذ</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>الخيار الأفضل: المشروع 1. خيار عدم التنفيذ قيمته الحالية صفر، وهو يعني استثمار المال بالحد الأدنى للعائد في مكان آخر. لذلك لا يقبل مشروع بقيمة حالية سالبة حتى لو كان الوحيد المتاح.</p>
+</div>
+</section>
+<section id="sec-3-unequal" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-3-unequal"><span class="header-section-number">3.4</span> بدائل بأعمار مختلفة</h2>
+<p>القيمة الحالية لآلة تخدم 3 سنوات لا تقارن بالقيمة الحالية لآلة تخدم 4 سنوات، لأن الثانية تقدم خدمة أطول. يوجد حلان:</p>
+<ul>
+<li>المضاعف المشترك: نكرر كل بديل حتى تتساوى المدتان، بافتراض أن التكاليف تتكرر كما هي.</li>
+<li>فترة الدراسة: نختار مدة تناسب الحاجة الفعلية، ونقيم كل بديل بقيمته السوقية في نهايتها.</li>
+</ul>
+<div id="ex-3-9" class="ee-item" data-id="c03-ex-lcm" data-kind="example" data-label="3.9">
+<p><strong>مثال 3.9: أعمار مختلفة: المضاعف المشترك</strong></p>
+<p>الآلة أ تكلف 15,000 دينار، وتشغيلها 3,500 دينار سنويا، وعمرها 3 سنوات، وقيمة بيعها 1,000 دينار. الآلة ب تكلف 22,000 دينار، وتشغيلها 3,000 دينار سنويا، وعمرها 4 سنوات، وقيمة بيعها 2,000 دينار. قارن بينهما بالقيمة الحالية بنسبة 10%.</p>
+<p><strong>الحل:</strong></p>
+<p>لا نقارن 3 سنوات من خدمة الآلة أ مع 4 سنوات من خدمة الآلة ب. نقارن على فترة واحدة تساوي المضاعف المشترك الأصغر للعمرين، أي 12 سنة، ونفترض أن كل آلة تستبدل بنفس التكاليف في نهاية عمرها.</p>
+<p>الآلة أ تشترى في السنوات 0 و3 و6 و9. عند كل استبدال تباع القديمة وتشترى الجديدة، فالصافي سعر الشراء ناقص قيمة البيع.</p>
+<p>مجموع معاملات النقل لسنوات الاستبدال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.7399</mn></mrow><annotation encoding="application/x-tex">
+(P/F,\ 10\%,\ 3) + (P/F,\ 10\%,\ 6) + (P/F,\ 10\%,\ 9) = 1.7399
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>14</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>1.7399</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW_a = 15\mathord{,}000 + 14\mathord{,}000 \times 1.7399 + 3\mathord{,}500\,(P/A,\ 10\%,\ 12)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="2.0em"></mspace><mo>−</mo><mn>1</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>62</mn><mi>,</mi><mn>887.70</mn></mrow><annotation encoding="application/x-tex">
+\qquad - 1\mathord{,}000\,(P/F,\ 10\%,\ 12) = 62\mathord{,}887.70
+</annotation></semantics></math></p>
+<p>الآلة ب تشترى في السنوات 0 و4 و8:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.1495</mn></mrow><annotation encoding="application/x-tex">
+(P/F,\ 10\%,\ 4) + (P/F,\ 10\%,\ 8) = 1.1495
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>22</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>1.1495</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW_b = 22\mathord{,}000 + 20\mathord{,}000 \times 1.1495 + 3\mathord{,}000\,(P/A,\ 10\%,\ 12)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="2.0em"></mspace><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>64</mn><mi>,</mi><mn>794.23</mn></mrow><annotation encoding="application/x-tex">
+\qquad - 2\mathord{,}000\,(P/F,\ 10\%,\ 12) = 64\mathord{,}794.23
+</annotation></semantics></math></p>
+<p>الأقل تكلفة: الآلة أ.</p>
+<p>الطريقة أطول من اللازم. القيمة السنوية لعمر واحد تعطي نفس القرار مباشرة، كما في قسم القيمة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>229.61</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>509.42</mn></mrow><annotation encoding="application/x-tex">
+AW_a = 9\mathord{,}229.61, \qquad AW_b = 9\mathord{,}509.42
+</annotation></semantics></math></p>
+</div>
+<div id="ex-3-10" class="ee-item" data-id="c03-ex-study-period" data-kind="example" data-label="3.10">
+<p><strong>مثال 3.10: أعمار مختلفة: فترة الدراسة</strong></p>
+<p>عقد تشغيل محطة مياه مدته 5 سنوات، ولا تحتاج الشركة المضخة بعده. المضخة أ تكلف 30,000 دينار، وتشغيلها 4,000 دينار سنويا، وعمرها 9 سنوات، ويقدر أن تباع بعد 5 سنوات بقيمة 12,000 دينار. المضخة ب تكلف 22,000 دينار، وتشغيلها 5,500 دينار سنويا، وعمرها 5 سنوات، وقيمة بيعها 2,000 دينار. أيهما تختار بنسبة 8%؟</p>
+<p><strong>الحل:</strong></p>
+<p>المضاعف المشترك هنا 45 سنة، وهذا غير منطقي لعقد مدته 5 سنوات. نستخدم فترة الدراسة: 5 سنوات. المضخة أ تقيم بقيمتها السوقية المتوقعة في نهاية الفترة، وليس بقيمتها في نهاية عمرها.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>37</mn><mi>,</mi><mn>803.84</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 30\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 8\%,\ 5) - 12\mathord{,}000\,(P/F,\ 8\%,\ 5) = 37\mathord{,}803.84
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>22</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>5</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>42</mn><mi>,</mi><mn>598.74</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 22\mathord{,}000 + 5\mathord{,}500\,(P/A,\ 8\%,\ 5) - 2\mathord{,}000\,(P/F,\ 8\%,\ 5) = 42\mathord{,}598.74
+</annotation></semantics></math></p>
+<p>الأقل تكلفة: المضخة أ. القرار يعتمد كثيرا على تقدير القيمة السوقية بعد 5 سنوات، فتأكد من هذا الرقم قبل القرار.</p>
+</div>
+</section>
+<section id="sec-3-aw" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-3-aw"><span class="header-section-number">3.5</span> القيمة السنوية</h2>
+<p>القيمة السنوية تحول كل تدفقات البديل إلى مبلغ ثابت كل سنة. للمشروع صاحب الدخل الثابت يكفي أن نحول السعر وقيمة البيع. الناتج يسمى تكلفة استرداد رأس المال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>S</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+CR = P\,(A/P,\ i,\ n) - S\,(A/F,\ i,\ n)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mi>R</mi><mo>−</mo><mi>C</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">
+AW = R - CR
+</annotation></semantics></math></p>
+<div id="ex-3-11" class="ee-item" data-id="c03-ex-aw-project" data-kind="example" data-label="3.11">
+<p><strong>مثال 3.11: القيمة السنوية لمشروع</strong></p>
+<p>شاحنة نقل تكلف 90,000 دينار، وتعطي صافي دخل 25,000 دينار سنويا لمدة 6 سنوات، ثم تباع بقيمة 20,000 دينار. ما القيمة السنوية للمشروع بنسبة 12%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch03-ex11.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>القيمة السنوية تحول كل التدفقات إلى مبلغ ثابت كل سنة. الدخل السنوي ثابت أصلا. نحول السعر وقيمة البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>90</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>425.80</mn></mrow><annotation encoding="application/x-tex">
+CR = 90\mathord{,}000\,(A/P,\ 12\%,\ 6) - 20\mathord{,}000\,(A/F,\ 12\%,\ 6) = 19\mathord{,}425.80
+</annotation></semantics></math></p>
+<p>هذا المبلغ يسمى تكلفة استرداد رأس المال: ما يجب أن يعطيه المشروع كل سنة ليسترد ثمنه مع الحد الأدنى للعائد.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>25</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>19</mn><mi>,</mi><mn>425.80</mn><mo>=</mo><mn>5</mn><mi>,</mi><mn>574.20</mn></mrow><annotation encoding="application/x-tex">
+AW = 25\mathord{,}000 - 19\mathord{,}425.80 = 5\mathord{,}574.20
+</annotation></semantics></math></p>
+<p>المشروع مقبول. القيمة السنوية والقيمة الحالية تعطيان نفس القرار دائما، لأن:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>A</mi><mi>W</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>22</mn><mi>,</mi><mn>917.81</mn></mrow><annotation encoding="application/x-tex">
+PW = AW\,(P/A,\ 12\%,\ 6) = 22\mathord{,}917.81
+</annotation></semantics></math></p>
+</div>
+<div id="ex-3-12" class="ee-item" data-id="c03-ex-capital-recovery" data-kind="example" data-label="3.12">
+<p><strong>مثال 3.12: صيغتان لتكلفة استرداد رأس المال</strong></p>
+<p>معدات تكلف 50,000 دينار وتباع بعد 5 سنوات بقيمة 10,000 دينار. احسب تكلفة استرداد رأس المال بنسبة 10% بصيغتين، وتأكد أنهما متساويتان.</p>
+<p><strong>الحل:</strong></p>
+<p>الصيغة الأولى:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11</mn><mi>,</mi><mn>551.90</mn></mrow><annotation encoding="application/x-tex">
+CR = 50\mathord{,}000\,(A/P,\ 10\%,\ 5) - 10\mathord{,}000\,(A/F,\ 10\%,\ 5) = 11\mathord{,}551.90
+</annotation></semantics></math></p>
+<p>الصيغة الثانية تقسم القيمة إلى جزء يضيع وجزء يعود:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.1</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>551.90</mn></mrow><annotation encoding="application/x-tex">
+CR = (50\mathord{,}000 - 10\mathord{,}000)\,(A/P,\ 10\%,\ 5) + 10\mathord{,}000 \times 0.1 = 11\mathord{,}551.90
+</annotation></semantics></math></p>
+<p>الجزء الذي يضيع من قيمة المعدات يسترد بأقساط. الجزء الذي يعود عند البيع تدفع عليه فائدة سنوية فقط. اشتقاق التساوي في ملحق اشتقاق المعادلات.</p>
+</div>
+<p>أهم ميزة للقيمة السنوية: تقارن بدائل بأعمار مختلفة مباشرة، بدون مضاعف مشترك.</p>
+<div id="ex-3-13" class="ee-item" data-id="c03-ex-aw-unequal" data-kind="example" data-label="3.13">
+<p><strong>مثال 3.13: القيمة السنوية لبدائل بأعمار مختلفة</strong></p>
+<p>البديل أ يكلف 18,000 دينار، وتشغيله 4,000 دينار سنويا، وعمره 4 سنوات، وقيمة بيعه 2,000 دينار. البديل ب يكلف 30,000 دينار، وتشغيله 3,000 دينار سنويا، وعمره 6 سنوات، وقيمة بيعه 4,000 دينار. قارن بالقيمة السنوية بنسبة 12%.</p>
+<p><strong>الحل:</strong></p>
+<p>نحسب القيمة السنوية لكل بديل على عمره هو، بدون مضاعف مشترك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>18</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>507.75</mn></mrow><annotation encoding="application/x-tex">
+AW_a = 18\mathord{,}000\,(A/P,\ 12\%,\ 4) - 2\mathord{,}000\,(A/F,\ 12\%,\ 4) + 4\mathord{,}000 = 9\mathord{,}507.75
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>803.87</mn></mrow><annotation encoding="application/x-tex">
+AW_b = 30\mathord{,}000\,(A/P,\ 12\%,\ 6) - 4\mathord{,}000\,(A/F,\ 12\%,\ 6) + 3\mathord{,}000 = 9\mathord{,}803.87
+</annotation></semantics></math></p>
+<p>الأقل تكلفة: البديل أ.</p>
+<p>لماذا يصح هذا؟ إذا تكرر البديل بنفس التكاليف، فكل دورة لها نفس القيمة السنوية. لذلك القيمة السنوية لدورة واحدة تساوي القيمة السنوية على المضاعف المشترك، ونوفر الحساب الطويل. هذا الافتراض نفسه هو افتراض طريقة المضاعف المشترك.</p>
+</div>
+<p>للتدفقات غير المنتظمة نحسب القيمة الحالية أولا، ثم نضربها في معامل استرداد رأس المال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mi>P</mi><mi>W</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+AW = PW\,(A/P,\ i,\ n)
+</annotation></semantics></math></p>
+<div id="ex-3-14" class="ee-item" data-id="c03-ex-aw-irregular" data-kind="example" data-label="3.14">
+<p><strong>مثال 3.14: القيمة السنوية لتدفقات غير منتظمة</strong></p>
+<p>مشروع يكلف 50,000 دينار، ويعطي في السنوات من 1 إلى 5 المبالغ 12,000 و15,000 و18,000 و15,000 و12,000 دينار. ما قيمته السنوية بنسبة 10%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch03-ex14.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>التدفقات غير منتظمة، فلا يوجد معامل يحولها مباشرة. نحسب القيمة الحالية أولا، ثم نوزعها على 5 سنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mi>,</mi><mn>525.71</mn></mrow><annotation encoding="application/x-tex">
+PW = -50\mathord{,}000 + 12\mathord{,}000\,(P/F,\ 10\%,\ 1) + \cdots + 12\mathord{,}000\,(P/F,\ 10\%,\ 5) = 4\mathord{,}525.71
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>4</mn><mi>,</mi><mn>525.71</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>193.87</mn></mrow><annotation encoding="application/x-tex">
+AW = 4\mathord{,}525.71\,(A/P,\ 10\%,\ 5) = 1\mathord{,}193.87
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=PMT(10%, 5, -NPV(10%, 12000, 15000, 18000, 15000, 12000) + 50000)</code></pre>
+</div>
+</section>
+<section id="sec-3-capcost" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-3-capcost"><span class="header-section-number">3.6</span> التكلفة المرسملة</h2>
+<p>مشاريع البنية التحتية مثل الطرق والجسور وشبكات المياه تخدم مدة طويلة جدا. نعاملها كأن عمرها بلا نهاية. عندما تكبر n يقترب معامل القيمة الحالية من مقلوب النسبة، فتصبح القيمة الحالية لدفعة سنوية دائمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mi>A</mi><mi>i</mi></mfrac></mrow><annotation encoding="application/x-tex">
+P = \frac{A}{i}
+</annotation></semantics></math></p>
+<p>القيمة الحالية لمشروع عمره بلا نهاية تسمى التكلفة المرسملة.</p>
+<div id="ex-3-15" class="ee-item" data-id="c03-ex-capcost" data-kind="example" data-label="3.15">
+<p><strong>مثال 3.15: التكلفة المرسملة لطريق</strong></p>
+<p>بلدية تبني طريقا بتكلفة 800,000 دينار، وصيانته 25,000 دينار سنويا إلى ما لا نهاية. ما التكلفة المرسملة بنسبة 6%؟</p>
+<p><strong>الحل:</strong></p>
+<p>التكلفة المرسملة هي القيمة الحالية لمشروع عمره بلا نهاية. القيمة الحالية لدفعة سنوية دائمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mi>A</mi><mi>i</mi></mfrac><mo>=</mo><mfrac><mrow><mn>25</mn><mi>,</mi><mn>000</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>416</mn><mi>,</mi><mn>666.67</mn></mrow><annotation encoding="application/x-tex">
+P = \frac{A}{i} = \frac{25\mathord{,}000}{0.06} = 416\mathord{,}666.67
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>C</mi><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>416</mn><mi>,</mi><mn>666.67</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>216</mn><mi>,</mi><mn>666.67</mn></mrow><annotation encoding="application/x-tex">
+CC = 800\mathord{,}000 + 416\mathord{,}666.67 = 1\mathord{,}216\mathord{,}666.67
+</annotation></semantics></math></p>
+<p>المعنى: إذا وضعت البلدية 1,216,666.67 دينار اليوم، تبني الطريق بجزء منه، والباقي يعطي فائدة سنوية تكفي الصيانة إلى الأبد.</p>
+</div>
+<div id="ex-3-16" class="ee-item" data-id="c03-ex-capcost-periodic" data-kind="example" data-label="3.16">
+<p><strong>مثال 3.16: تكلفة مرسملة مع إعادة تأهيل دورية</strong></p>
+<p>للطريق في المثال السابق تكلفة 800,000 دينار وصيانة 25,000 دينار سنويا. يحتاج أيضا إعادة تعبيد كل 10 سنوات بتكلفة 120,000 دينار، أولها في نهاية السنة 10. ما التكلفة المرسملة بنسبة 6%؟</p>
+<p><strong>الحل:</strong></p>
+<p>القانون P يساوي A مقسومة على i يحتاج دفعة كل سنة. إعادة التعبيد كل 10 سنوات، فنحولها أولا إلى دفعة سنوية مكافئة. الدفعة في نهاية كل دورة، فنستخدم A/F:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>R</mi></msub><mo>=</mo><mn>120</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>104.15</mn></mrow><annotation encoding="application/x-tex">
+A_R = 120\mathord{,}000\,(A/F,\ 6\%,\ 10) = 9\mathord{,}104.15
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>C</mi><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>25</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>104.15</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>1</mn><mi>,</mi><mn>368</mn><mi>,</mi><mn>402.58</mn></mrow><annotation encoding="application/x-tex">
+CC = 800\mathord{,}000 + \frac{25\mathord{,}000 + 9\mathord{,}104.15}{0.06} = 1\mathord{,}368\mathord{,}402.58
+</annotation></semantics></math></p>
+</div>
+</section>
+<section id="sec-3-payback" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="sec-3-payback"><span class="header-section-number">3.7</span> فترة الاسترداد ونقطة التعادل</h2>
+<p>فترة الاسترداد هي عدد السنوات اللازم لاسترجاع تكلفة المشروع. الفترة البسيطة تجمع التدفقات بدون فائدة. الفترة المخصومة تجمع قيمها الحالية.</p>
+<div id="ex-3-17" class="ee-item" data-id="c03-ex-payback" data-kind="example" data-label="3.17">
+<p><strong>مثال 3.17: فترة الاسترداد البسيطة والمخصومة</strong></p>
+<p>نظام تحكم يكلف 60,000 دينار ويوفر 15,000 دينار سنويا. احسب فترة الاسترداد البسيطة، ثم المخصومة بنسبة 10%.</p>
+<p><strong>الحل:</strong></p>
+<p>فترة الاسترداد البسيطة تتجاهل قيمة المال مع الزمن:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>4.00</mn></mrow><annotation encoding="application/x-tex">
+n_s = \frac{60\mathord{,}000}{15\mathord{,}000} = 4.00
+</annotation></semantics></math></p>
+<p>فترة الاسترداد المخصومة هي عدد السنوات الذي يجعل القيمة الحالية للتوفير تساوي التكلفة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+15\mathord{,}000\,(P/A,\ 10\%,\ n) = 60\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mi>−</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.1</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1.1</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>5.36</mn></mrow><annotation encoding="application/x-tex">
+n = \frac{-\ln\left(1 - \frac{60\mathord{,}000 \times 0.1}{15\mathord{,}000}\right)}{\ln(1.1)} = 5.36
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=NPER(10%, 15000, -60000)</code></pre>
+<p>الفترة المخصومة أطول دائما. فترة الاسترداد تقيس سرعة رجوع المال، وليس ربح المشروع، لأنها تتجاهل ما يحدث بعدها. استخدمها معيارا مساعدا، وليس بديلا عن القيمة الحالية.</p>
+</div>
+<div id="ex-3-18" class="ee-item" data-id="c03-ex-payback-table" data-kind="example" data-label="3.18">
+<p><strong>مثال 3.18: فترة الاسترداد لتدفقات غير منتظمة</strong></p>
+<p>مشروع يكلف 60,000 دينار، ويعطي في السنوات من 1 إلى 5 المبالغ 14,000 و16,000 و18,000 و20,000 و22,000 دينار. احسب فترة الاسترداد البسيطة والمخصومة بنسبة 10%.</p>
+<p><strong>الحل:</strong></p>
+<p>نبني جدولا تراكميا. العمود المخصوم يضرب كل تدفق في معامل P/F لسنته:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>التدفق</th>
+<th>التراكمي</th>
+<th>المخصوم</th>
+<th>التراكمي المخصوم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>-60,000</td>
+<td>-60,000</td>
+<td>-60,000</td>
+<td>-60,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>14,000</td>
+<td>-46,000</td>
+<td>12,727.27</td>
+<td>-47,272.73</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>16,000</td>
+<td>-30,000</td>
+<td>13,223.14</td>
+<td>-34,049.59</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>18,000</td>
+<td>-12,000</td>
+<td>13,523.67</td>
+<td>-20,525.92</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>20,000</td>
+<td>8,000</td>
+<td>13,660.27</td>
+<td>-6,865.65</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>22,000</td>
+<td>30,000</td>
+<td>13,660.27</td>
+<td>6,794.62</td>
+</tr>
+</tbody>
+</table>
+<p>التراكمي البسيط يصبح موجبا خلال السنة 4. بقي في بدايتها 12,000 دينار من 20,000، فالفترة البسيطة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>s</mi></msub><mo>=</mo><mn>3</mn><mo>+</mo><mfrac><mrow><mn>12</mn><mo>,</mo><mn>000</mn></mrow><mrow><mn>20</mn><mo>,</mo><mn>000</mn></mrow></mfrac><mo>=</mo><mn>3.6</mn></mrow><annotation encoding="application/x-tex">
+n_s = 3 + \frac{12{,}000}{20{,}000} = 3.6
+</annotation></semantics></math></p>
+<p>التراكمي المخصوم يصبح موجبا خلال السنة 5:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>d</mi></msub><mo>=</mo><mn>4</mn><mo>+</mo><mfrac><mrow><mn>6</mn><mi>,</mi><mn>865.65</mn></mrow><mrow><mn>13</mn><mi>,</mi><mn>660.27</mn></mrow></mfrac><mo>=</mo><mn>4.50</mn></mrow><annotation encoding="application/x-tex">
+n_d = 4 + \frac{6\mathord{,}865.65}{13\mathord{,}660.27} = 4.50
+</annotation></semantics></math></p>
+</div>
+<p>نقطة التعادل هي قيمة المتغير التي تجعل القيمة الحالية أو السنوية صفرا. نستخدمها عندما يكون رقم واحد غير مؤكد، فنسأل: ما الحد الذي يتغير عنده القرار؟</p>
+<div id="ex-3-19" class="ee-item" data-id="c03-ex-breakeven" data-kind="example" data-label="3.19">
+<p><strong>مثال 3.19: أقل توفير يبرر الاستثمار</strong></p>
+<p>روبوت تغليف يكلف 45,000 دينار، ويباع بعد 7 سنوات بقيمة 5,000 دينار. ما أقل توفير سنوي في الأجور يجعل شراءه مقبولا بنسبة 12%؟</p>
+<p><strong>الحل:</strong></p>
+<p>الشراء مقبول إذا كانت القيمة السنوية موجبة أو صفرا. نقطة التعادل عندما تساوي صفرا، أي عندما يساوي التوفير تكلفة استرداد رأس المال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>45</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>364.71</mn></mrow><annotation encoding="application/x-tex">
+R = 45\mathord{,}000\,(A/P,\ 12\%,\ 7) - 5\mathord{,}000\,(A/F,\ 12\%,\ 7) = 9\mathord{,}364.71
+</annotation></semantics></math></p>
+<p>إذا وفر الروبوت أكثر من 9,364.71 دينار سنويا فالشراء مقبول. هذا الرقم يسهل النقاش مع الإدارة: بدل سؤال هل المشروع مربح، نسأل هل يوفر الروبوت عمل عامل واحد على الأقل.</p>
+</div>
+</section>
+<section id="sec-3-monthly-project" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="sec-3-monthly-project"><span class="header-section-number">3.8</span> تدفقات شهرية في مشروع</h2>
+<p>بعض المشاريع لها تدفقات شهرية وتدفقات سنوية معا. خصم كل تدفق بالنسبة التي تناسب فترته.</p>
+<div id="ex-3-20" class="ee-item" data-id="c03-ex-monthly-project" data-kind="example" data-label="3.20">
+<p><strong>مثال 3.20: شقة للإيجار بتدفقات شهرية</strong></p>
+<p>مستثمر يشتري شقة بسعر 90,000 دينار، ويؤجرها بمبلغ 450 دينار في نهاية كل شهر لمدة 10 سنوات، ثم يبيعها بسعر 100,000 دينار. الحد الأدنى للعائد 9% نسبة فعلية سنوية. هل الشراء مقبول؟</p>
+<p><strong>الحل:</strong></p>
+<p>الإيجار شهري، فنحتاج نسبة شهرية تكافئ 9% سنويا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.09</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>0.72</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = (1 + 0.09)^{1/12} - 1 = 0.72\%
+</annotation></semantics></math></p>
+<p>القيمة الحالية للإيجار على 120 شهرا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>R</mi></msub><mo>=</mo><mn>450</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>0.72</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>120</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>36</mn><mi>,</mi><mn>062.64</mn></mrow><annotation encoding="application/x-tex">
+P_R = 450\,(P/A,\ 0.72\%,\ 120) = 36\mathord{,}062.64
+</annotation></semantics></math></p>
+<p>البيع مبلغ واحد بعد 10 سنوات، فنستخدم النسبة السنوية مباشرة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>S</mi></msub><mo>=</mo><mn>100</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>42</mn><mi>,</mi><mn>241.08</mn></mrow><annotation encoding="application/x-tex">
+P_S = 100\mathord{,}000\,(P/F,\ 9\%,\ 10) = 42\mathord{,}241.08
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>90</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>36</mn><mi>,</mi><mn>062.64</mn><mo>+</mo><mn>42</mn><mi>,</mi><mn>241.08</mn><mo>=</mo><mi>−</mi><mn>11</mn><mi>,</mi><mn>696.28</mn></mrow><annotation encoding="application/x-tex">
+PW = -90\mathord{,}000 + 36\mathord{,}062.64 + 42\mathord{,}241.08 = -11\mathord{,}696.28
+</annotation></semantics></math></p>
+<p>الشراء مرفوض. لاحظ أن كل تدفق خصم بنسبة تناسب فترته: الشهري بالنسبة الشهرية، والسنوي بالنسبة السنوية.</p>
+</div>
+</section>
+<section id="sec-3-python" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="sec-3-python"><span class="header-section-number">3.9</span> Python: مقارنة البدائل</h2>
+<p>هذا البرنامج يقارن آلتين بأعمار مختلفة بالقيمة السنوية. الدالة pmt تحسب تكلفة استرداد رأس المال، والإشارات فيها تتبع قاعدة Excel:</p>
+<div id="4f80031d" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="fl">0.12</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>machines <span class="op">=</span> {</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"A"</span>: {<span class="st">"cost"</span>: <span class="dv">18000</span>, <span class="st">"oper"</span>: <span class="dv">4000</span>, <span class="st">"salvage"</span>: <span class="dv">2000</span>, <span class="st">"life"</span>: <span class="dv">4</span>},</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"B"</span>: {<span class="st">"cost"</span>: <span class="dv">30000</span>, <span class="st">"oper"</span>: <span class="dv">3000</span>, <span class="st">"salvage"</span>: <span class="dv">4000</span>, <span class="st">"life"</span>: <span class="dv">6</span>},</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, m <span class="kw">in</span> machines.items():</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    cr <span class="op">=</span> npf.pmt(i, m[<span class="st">"life"</span>], <span class="op">-</span>m[<span class="st">"cost"</span>], m[<span class="st">"salvage"</span>])</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    aw <span class="op">=</span> cr <span class="op">+</span> m[<span class="st">"oper"</span>]</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: CR = </span><span class="sc">{</span>cr<span class="sc">:9.2f}</span><span class="ss">   AW = </span><span class="sc">{</span>aw<span class="sc">:9.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A: CR =   5507.75   AW =   9507.75
+B: CR =   6803.87   AW =   9803.87</code></pre>
+</div>
+</div>
+<p>والبرنامج التالي يحول نسبة اسمية إلى فعلية لعدة نسب، ويبين أن الفرق يكبر مع ارتفاع النسبة:</p>
+<div id="3449330b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> [<span class="fl">0.06</span>, <span class="fl">0.09</span>, <span class="fl">0.12</span>, <span class="fl">0.15</span>, <span class="fl">0.18</span>]:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ia <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> r <span class="op">/</span> <span class="dv">12</span>) <span class="op">**</span> <span class="dv">12</span> <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"nominal </span><span class="sc">{</span>r<span class="sc">:5.1%}</span><span class="ss">   effective </span><span class="sc">{</span>ia<span class="sc">:6.2%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>nominal  6.0%   effective  6.17%
+nominal  9.0%   effective  9.38%
+nominal 12.0%   effective 12.68%
+nominal 15.0%   effective 16.08%
+nominal 18.0%   effective 19.56%</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-3-problems" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="sec-3-problems"><span class="header-section-number">3.10</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-3-1" class="ee-item" data-id="c03-a-01" data-kind="problem" data-label="3.1">
+<p><strong>3.1</strong> ما الفرق بين النسبة الاسمية والنسبة الفعلية؟ ومتى تتساويان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-1">الحل</a></span></p>
+</div>
+<div id="prob-3-2" class="ee-item" data-id="c03-a-02" data-kind="problem" data-label="3.2">
+<p><strong>3.2</strong> قرض بأقساط شهرية ونسبة سنوية معلنة. ما النسبة وعدد الفترات اللذان تستخدمهما في المعامل A/P؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-2">الحل</a></span></p>
+</div>
+<div id="prob-3-3" class="ee-item" data-id="c03-a-03" data-kind="problem" data-label="3.3">
+<p><strong>3.3</strong> ماذا يعني الحد الأدنى للعائد؟ ولماذا لا تقبل شركة مشروعا عائده أقل منه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-3">الحل</a></span></p>
+</div>
+<div id="prob-3-4" class="ee-item" data-id="c03-a-04" data-kind="problem" data-label="3.4">
+<p><strong>3.4</strong> مشروع قيمته الحالية صفر. هل هو مشروع خاسر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-4">الحل</a></span></p>
+</div>
+<div id="prob-3-5" class="ee-item" data-id="c03-a-05" data-kind="problem" data-label="3.5">
+<p><strong>3.5</strong> ما الفرق بين بدائل التكاليف وبدائل الإيرادات؟ وكيف تختار في كل حالة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-5">الحل</a></span></p>
+</div>
+<div id="prob-3-6" class="ee-item" data-id="c03-a-06" data-kind="problem" data-label="3.6">
+<p><strong>3.6</strong> لماذا لا نقارن القيمة الحالية لآلة عمرها 3 سنوات مع آلة عمرها 5 سنوات مباشرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-6">الحل</a></span></p>
+</div>
+<div id="prob-3-7" class="ee-item" data-id="c03-a-07" data-kind="problem" data-label="3.7">
+<p><strong>3.7</strong> ما الافتراض الذي تبنى عليه طريقة المضاعف المشترك؟ اذكر حالة لا يصح فيها.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-7">الحل</a></span></p>
+</div>
+<div id="prob-3-8" class="ee-item" data-id="c03-a-08" data-kind="problem" data-label="3.8">
+<p><strong>3.8</strong> لماذا تعطي القيمة الحالية والقيمة السنوية نفس القرار دائما؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-8">الحل</a></span></p>
+</div>
+<div id="prob-3-9" class="ee-item" data-id="c03-a-09" data-kind="problem" data-label="3.9">
+<p><strong>3.9</strong> ما عيوب فترة الاسترداد معيارا وحيدا لقبول المشاريع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-9">الحل</a></span></p>
+</div>
+<div id="prob-3-10" class="ee-item" data-id="c03-a-10" data-kind="problem" data-label="3.10">
+<p><strong>3.10</strong> لماذا تستخدم التكلفة المرسملة لمشاريع مثل الطرق وشبكات المياه؟ وما معنى رقمها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-10">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-الفائدة-الشهرية-والسنوية" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-الفائدة-الشهرية-والسنوية">الجزء ب: الفائدة الشهرية والسنوية</h3>
+<p>حول النسبة إلى نفس فترة الدفعات قبل أي حساب.</p>
+<div id="prob-3-11" class="ee-item" data-id="c03-b-01" data-kind="problem" data-label="3.11">
+<p><strong>3.11</strong> بنك يعلن 12% سنويا تحسب شهريا. ما نسبة الشهر؟ وما النسبة الفعلية السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-11">الحل</a></span></p>
+</div>
+<div id="prob-3-12" class="ee-item" data-id="c03-b-02" data-kind="problem" data-label="3.12">
+<p><strong>3.12</strong> النسبة الفعلية السنوية 10%. ما نسبة الشهر التي تكافئها؟ وما النسبة الاسمية السنوية التي يعلنها البنك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-12">الحل</a></span></p>
+</div>
+<div id="prob-3-13" class="ee-item" data-id="c03-b-03" data-kind="problem" data-label="3.13">
+<p><strong>3.13</strong> قرض 25,000 دينار بفائدة 8% سنويا تحسب شهريا، يسدد بأقساط شهرية لمدة 5 سنوات. ما القسط الشهري؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-13">الحل</a></span></p>
+</div>
+<div id="prob-3-14" class="ee-item" data-id="c03-b-04" data-kind="problem" data-label="3.14">
+<p><strong>3.14</strong> يودع شخص 300 دينار في نهاية كل شهر لمدة 10 سنوات بفائدة 6% سنويا تحسب شهريا. كم يصبح رصيده؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-14">الحل</a></span></p>
+</div>
+<div id="prob-3-15" class="ee-item" data-id="c03-b-05" data-kind="problem" data-label="3.15">
+<p><strong>3.15</strong> يستطيع موظف دفع 650 دينار شهريا قسطا لسيارة. ما أكبر قرض يأخذه بفائدة 9% سنويا تحسب شهريا لمدة 4 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-15">الحل</a></span></p>
+</div>
+<div id="prob-3-16" class="ee-item" data-id="c03-b-06" data-kind="problem" data-label="3.16">
+<p><strong>3.16</strong> قرض بأحد عرضين: 10.00% سنويا تحسب شهريا، أو 10.40% سنويا تحسب مرة في السنة. أي العرضين أرخص للمقترض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-16">الحل</a></span></p>
+</div>
+<div id="prob-3-17" class="ee-item" data-id="c03-b-07" data-kind="problem" data-label="3.17">
+<p><strong>3.17</strong> طالبة تريد جمع 15,000 دينار بعد 3 سنوات لدراسة الماجستير. البنك يعطي 8% نسبة فعلية سنوية. كم تودع في نهاية كل شهر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-17">الحل</a></span></p>
+</div>
+<div id="prob-3-18" class="ee-item" data-id="c03-b-08" data-kind="problem" data-label="3.18">
+<p><strong>3.18</strong> أودع 10,000 دينار لمدة 3 سنوات بنسبة 9% سنويا. كم يصبح الرصيد إذا حسبت الفائدة شهريا؟ وكم إذا حسبت سنويا؟ وما الفرق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-18">الحل</a></span></p>
+</div>
+<div id="prob-3-19" class="ee-item" data-id="c03-b-09" data-kind="problem" data-label="3.19">
+<p><strong>3.19</strong> قرض سكني 120,000 دينار بفائدة 7.00% سنويا تحسب شهريا لمدة 20 سنة. ما القسط الشهري؟ وما مجموع الفوائد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-19">الحل</a></span></p>
+</div>
+<div id="prob-3-20" class="ee-item" data-id="c03-b-10" data-kind="problem" data-label="3.20">
+<p><strong>3.20</strong> للقرض السكني 120,000 دينار بفائدة 7.00% سنويا تحسب شهريا لمدة 20 سنة: كم يبقى على المقترض بعد 5 سنوات من السداد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-20">الحل</a></span></p>
+</div>
+<div id="prob-3-21" class="ee-item" data-id="c03-b-11" data-kind="problem" data-label="3.21">
+<p><strong>3.21</strong> محل أجهزة يبيع جهازا بسعر 8,000 دينار نقدا، أو بأقساط 260 دينار شهريا لمدة 3 سنوات. ما النسبة الفعلية السنوية التي يدفعها المشتري بالتقسيط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-21">الحل</a></span></p>
+</div>
+<div id="prob-3-22" class="ee-item" data-id="c03-b-12" data-kind="problem" data-label="3.22">
+<p><strong>3.22</strong> صندوق ادخار يعطي 6% نسبة فعلية سنوية. يودع موظف 400 دينار شهريا لمدة 15 سنة. كم يصبح رصيده؟ وكم يكون الخطأ لو قسم النسبة على 12؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-22">الحل</a></span></p>
+</div>
+<div id="prob-3-23" class="ee-item" data-id="c03-b-13" data-kind="problem" data-label="3.23">
+<p><strong>3.23</strong> قرض 30,000 دينار بنسبة 10% لمدة 4 سنوات. قارن بين السداد بأقساط شهرية بفائدة تحسب شهريا، والسداد بأقساط سنوية بفائدة تحسب سنويا. ما مجموع ما يدفع في كل حالة؟ ولماذا يختلف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-23">الحل</a></span></p>
+</div>
+<div id="prob-3-24" class="ee-item" data-id="c03-b-14" data-kind="problem" data-label="3.24">
+<p><strong>3.24</strong> قرض 50,000 دينار بفائدة 8% سنويا تحسب شهريا. يستطيع المقترض دفع 800 دينار شهريا. كم شهرا يحتاج للسداد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-24">الحل</a></span></p>
+</div>
+<div id="prob-3-25" class="ee-item" data-id="c03-b-15" data-kind="problem" data-label="3.25">
+<p><strong>3.25</strong> احسب النسبة الفعلية السنوية لنسبة اسمية 12% إذا حسبت الفائدة كل نصف سنة، وكل ربع سنة، وكل شهر، وكل يوم. ماذا تلاحظ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-25">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-القيمة-الحالية-لمشروع-واحد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-القيمة-الحالية-لمشروع-واحد">الجزء ج: القيمة الحالية لمشروع واحد</h3>
+<div id="prob-3-26" class="ee-item" data-id="c03-c-01" data-kind="problem" data-label="3.26">
+<p><strong>3.26</strong> مشروع يكلف 50,000 دينار، ويعطي 14,000 دينار سنويا لمدة 5 سنوات بدون قيمة بيع. احسب القيمة الحالية بنسبة 10%. هل يقبل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-26">الحل</a></span></p>
+</div>
+<div id="prob-3-27" class="ee-item" data-id="c03-c-02" data-kind="problem" data-label="3.27">
+<p><strong>3.27</strong> آلة تكلف 75,000 دينار، وتوفر 16,000 دينار سنويا لمدة 7 سنوات، ثم تباع بقيمة 10,000 دينار. هل شراؤها مقبول بنسبة 12%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch03-p027.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><span class="ee-sol-link"><a href="#sol-3-27">الحل</a></span></p>
+</div>
+<div id="prob-3-28" class="ee-item" data-id="c03-c-03" data-kind="problem" data-label="3.28">
+<p><strong>3.28</strong> مصنع صغير للتعبئة يكلف 200,000 دينار. إيراده السنوي 70,000 دينار، وتكاليف تشغيله 25,000 دينار سنويا. عمره 10 سنوات، وقيمة بيعه 30,000 دينار. احسب القيمة الحالية بنسبة 15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-28">الحل</a></span></p>
+</div>
+<div id="prob-3-29" class="ee-item" data-id="c03-c-04" data-kind="problem" data-label="3.29">
+<p><strong>3.29</strong> متجر إلكتروني جديد يكلف 40,000 دينار. صافي دخله 8,000 دينار في السنة الأولى، ويزيد 1,500 دينار كل سنة لمدة 6 سنوات. هل المشروع مقبول بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-29">الحل</a></span></p>
+</div>
+<div id="prob-3-30" class="ee-item" data-id="c03-c-05" data-kind="problem" data-label="3.30">
+<p><strong>3.30</strong> نظام طاقة شمسية يكلف 100,000 دينار، ويوفر 20,000 دينار في السنة الأولى. التوفير يزيد 5% سنويا مع ارتفاع سعر الكهرباء، لمدة 8 سنوات. احسب القيمة الحالية بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-30">الحل</a></span></p>
+</div>
+<div id="prob-3-31" class="ee-item" data-id="c03-c-06" data-kind="problem" data-label="3.31">
+<p><strong>3.31</strong> مشروع يكلف 60,000 دينار ويعطي 15,000 دينار سنويا لمدة 6 سنوات. ما أقل قيمة بيع في نهاية المدة تجعل المشروع مقبولا بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-31">الحل</a></span></p>
+</div>
+<div id="prob-3-32" class="ee-item" data-id="c03-c-07" data-kind="problem" data-label="3.32">
+<p><strong>3.32</strong> آلة توفر 12,000 دينار سنويا لمدة 6 سنوات، وتباع بعدها بقيمة 8,000 دينار. ما أعلى سعر تدفعه شركة حدها الأدنى للعائد 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-32">الحل</a></span></p>
+</div>
+<div id="prob-3-33" class="ee-item" data-id="c03-c-08" data-kind="problem" data-label="3.33">
+<p><strong>3.33</strong> مشروع يكلف 90,000 دينار ويعطي 22,000 دينار سنويا لمدة 8 سنوات. احسب القيمة الحالية عند النسب 6% و10% و14% و18%. ماذا يحدث للقيمة الحالية كلما زادت النسبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-33">الحل</a></span></p>
+</div>
+<div id="prob-3-34" class="ee-item" data-id="c03-c-09" data-kind="problem" data-label="3.34">
+<p><strong>3.34</strong> معدات تكلف 35,000 دينار، وتعطي 9,000 دينار سنويا، وصيانتها 1,500 دينار سنويا، لمدة 6 سنوات. تحتاج تجديدا في السنة 3 بتكلفة 6,000 دينار. احسب القيمة الحالية بنسبة 9%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-34">الحل</a></span></p>
+</div>
+<div id="prob-3-35" class="ee-item" data-id="c03-c-10" data-kind="problem" data-label="3.35">
+<p><strong>3.35</strong> مشروع يكلف 30,000 دينار اليوم، لكن الدخل لا يبدأ إلا بعد فترة إنشاء مدتها سنتين. بعدها يعطي 8,000 دينار سنويا لمدة 6 سنوات. احسب القيمة الحالية بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-35">الحل</a></span></p>
+</div>
+<div id="prob-3-36" class="ee-item" data-id="c03-c-11" data-kind="problem" data-label="3.36">
+<p><strong>3.36</strong> احسب القيمة المستقبلية في السنة 7 لمشروع يكلف 45,000 دينار ويعطي 11,000 دينار سنويا لمدة 7 سنوات بنسبة 10%. هل تعطي نفس قرار القيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-36">الحل</a></span></p>
+</div>
+<div id="prob-3-37" class="ee-item" data-id="c03-c-12" data-kind="problem" data-label="3.37">
+<p><strong>3.37</strong> مطعم يشتري آلة قهوة بسعر 25,000 دينار، فيزيد ربحه 600 دينار شهريا لمدة 5 سنوات. الحد الأدنى للعائد 10% نسبة فعلية سنوية. هل الشراء مقبول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-37">الحل</a></span></p>
+</div>
+<div id="prob-3-38" class="ee-item" data-id="c03-c-13" data-kind="problem" data-label="3.38">
+<p><strong>3.38</strong> شركتان تدرسان نفس المشروع: يكلف 150,000 دينار ويعطي 30,000 دينار سنويا لمدة 10 سنوات. الحد الأدنى للعائد في الشركة الأولى 8%، وفي الثانية 14%. هل تتخذان نفس القرار؟ لماذا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-38">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-مقارنة-بدائل-بأعمار-متساوية" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-مقارنة-بدائل-بأعمار-متساوية">الجزء د: مقارنة بدائل بأعمار متساوية</h3>
+<p>حدد أولا هل البدائل إيرادات أم تكاليف، ثم اختر الأكبر قيمة أو الأقل تكلفة.</p>
+<div id="prob-3-39" class="ee-item" data-id="c03-d-01" data-kind="problem" data-label="3.39">
+<p><strong>3.39</strong> آلتان لنفس العمل، عمر كل منهما 5 سنوات بدون قيمة بيع. الآلة أ تكلف 25,000 دينار وتشغيلها 6,000 دينار سنويا. الآلة ب تكلف 32,000 دينار وتشغيلها 4,500 دينار سنويا. أيهما تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-39">الحل</a></span></p>
+</div>
+<div id="prob-3-40" class="ee-item" data-id="c03-d-02" data-kind="problem" data-label="3.40">
+<p><strong>3.40</strong> نظاما تكييف لمبنى، عمر كل منهما 8 سنوات. النظام أ يكلف 40,000 دينار، وكهرباؤه 9,000 دينار سنويا، وقيمة بيعه 5,000 دينار. النظام ب يكلف 52,000 دينار، وكهرباؤه 7,000 دينار سنويا، وقيمة بيعه 9,000 دينار. أيهما أفضل بنسبة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-40">الحل</a></span></p>
+</div>
+<div id="prob-3-41" class="ee-item" data-id="c03-d-03" data-kind="problem" data-label="3.41">
+<p><strong>3.41</strong> مشروعان متنافيان، عمر كل منهما 6 سنوات. الأول يكلف 60,000 دينار ويعطي 17,000 دينار سنويا. الثاني يكلف 90,000 دينار ويعطي 24,000 دينار سنويا. ماذا تختار بنسبة 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-41">الحل</a></span></p>
+</div>
+<div id="prob-3-42" class="ee-item" data-id="c03-d-04" data-kind="problem" data-label="3.42">
+<p><strong>3.42</strong> للمشروعين في المسألة السابقة، احسب القيمة الحالية للفرق بينهما: الاستثمار الإضافي في المشروع الثاني مقابل الدخل الإضافي. ما علاقة النتيجة بالفرق بين القيمتين الحاليتين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-42">الحل</a></span></p>
+</div>
+<div id="prob-3-43" class="ee-item" data-id="c03-d-05" data-kind="problem" data-label="3.43">
+<p><strong>3.43</strong> شركة تحتاج سيارة لمدة 8 سنوات. شراؤها يكلف 12,000 دينار، وصيانتها 900 دينار سنويا، ولا قيمة لها في النهاية. ما أعلى إيجار سنوي يدفع في بداية كل سنة، ويشمل الصيانة، يجعل الإيجار أفضل من الشراء بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-43">الحل</a></span></p>
+</div>
+<div id="prob-3-44" class="ee-item" data-id="c03-d-06" data-kind="problem" data-label="3.44">
+<p><strong>3.44</strong> مصنع يحتاج محركا بقدرة 30 كيلوواط يعمل 4,000 ساعة سنويا لمدة 10 سنوات. سعر الكيلوواط ساعة 0.15 دينار. المحرك أ يكلف 8,000 دينار وكفاءته 85%. المحرك ب يكلف 11,000 دينار وكفاءته 93%. أيهما تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-44">الحل</a></span></p>
+</div>
+<div id="prob-3-45" class="ee-item" data-id="c03-d-07" data-kind="problem" data-label="3.45">
+<p><strong>3.45</strong> الآلة أ تكلف 30,000 دينار وتشغيلها 7,000 دينار سنويا. الآلة ب تكلف 42,000 دينار. عمر كل منهما 6 سنوات. ما أعلى تكلفة تشغيل سنوية للآلة ب تجعلها مساوية للآلة أ بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-45">الحل</a></span></p>
+</div>
+<div id="prob-3-46" class="ee-item" data-id="c03-d-08" data-kind="problem" data-label="3.46">
+<p><strong>3.46</strong> الخيار أ يكلف 70,000 دينار، ويعطي 30,000 دينار في السنة الأولى، ثم يقل 3,000 دينار كل سنة. الخيار ب يكلف 70,000 دينار، ويعطي 24,000 دينار ثابتة كل سنة. المدة 5 سنوات. أيهما تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-46">الحل</a></span></p>
+</div>
+<div id="prob-3-47" class="ee-item" data-id="c03-d-09" data-kind="problem" data-label="3.47">
+<p><strong>3.47</strong> استثمار في عزل مبنى يكلف 20,000 دينار ويوفر 4,500 دينار سنويا لمدة 6 سنوات. هل يتغير القرار إذا كان الحد الأدنى للعائد 5% أو 10% أو 15%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-47">الحل</a></span></p>
+</div>
+<div id="prob-3-48" class="ee-item" data-id="c03-d-10" data-kind="problem" data-label="3.48">
+<p><strong>3.48</strong> أربعة مشاريع متنافية عمر كل منها 6 سنوات. أيها تختار بنسبة 10%؟</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>التكلفة</th>
+<th>الدخل السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>50,000</td>
+<td>14,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>80,000</td>
+<td>21,000</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>30,000</td>
+<td>8,000</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>100,000</td>
+<td>25,000</td>
+</tr>
+</tbody>
+</table>
+<p><span class="ee-sol-link"><a href="#sol-3-48">الحل</a></span></p>
+</div>
+<div id="prob-3-49" class="ee-item" data-id="c03-d-11" data-kind="problem" data-label="3.49">
+<p><strong>3.49</strong> في المسألة السابقة، إذا كانت المشاريع مستقلة وليست متنافية، والميزانية 80,000 دينار، فأي مجموعة تنفذ الشركة؟ قارن مجموعة المشروعين 1 و3 مع المشروع 2 وحده.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-49">الحل</a></span></p>
+</div>
+<div id="prob-3-50" class="ee-item" data-id="c03-d-12" data-kind="problem" data-label="3.50">
+<p><strong>3.50</strong> مقاول يختار بين حفارة جديدة بسعر 45,000 دينار، وصيانتها 3,000 دينار سنويا، وتباع بعد 5 سنوات بقيمة 15,000 دينار، وحفارة مستعملة بسعر 20,000 دينار، وصيانتها 7,000 دينار سنويا، وتباع بعد 5 سنوات بقيمة 4,000 دينار. أيهما أفضل بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-50">الحل</a></span></p>
+</div>
+<div id="prob-3-51" class="ee-item" data-id="c03-d-13" data-kind="problem" data-label="3.51">
+<p><strong>3.51</strong> شركة تشتري معدات بسعر 100,000 دينار. البائع يعرض الدفع نقدا، أو بأقساط سنوية 15,582.01 دينار لمدة 10 سنوات. الحد الأدنى للعائد في الشركة 9%. أيهما أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-51">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-بدائل-بأعمار-مختلفة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-بدائل-بأعمار-مختلفة">الجزء هـ: بدائل بأعمار مختلفة</h3>
+<p>لا تقارن قيما حالية لأعمار مختلفة مباشرة. استخدم المضاعف المشترك أو فترة الدراسة أو القيمة السنوية.</p>
+<div id="prob-3-52" class="ee-item" data-id="c03-e-01" data-kind="problem" data-label="3.52">
+<p><strong>3.52</strong> الآلة أ تكلف 10,000 دينار، وتشغيلها 2,500 دينار سنويا، وعمرها سنتان. الآلة ب تكلف 16,000 دينار، وتشغيلها 2,000 دينار سنويا، وعمرها 3 سنوات. لا قيمة بيع لأي منهما. قارن بالقيمة الحالية على المضاعف المشترك بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-52">الحل</a></span></p>
+</div>
+<div id="prob-3-53" class="ee-item" data-id="c03-e-02" data-kind="problem" data-label="3.53">
+<p><strong>3.53</strong> حل المسألة السابقة بالقيمة السنوية، وتأكد أن القيمة السنوية مضروبة في المعامل P/A لست سنوات تعطي القيمة الحالية على المضاعف المشترك.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-53">الحل</a></span></p>
+</div>
+<div id="prob-3-54" class="ee-item" data-id="c03-e-03" data-kind="problem" data-label="3.54">
+<p><strong>3.54</strong> البديل أ يكلف 24,000 دينار، وتشغيله 5,000 دينار سنويا، وعمره 4 سنوات، وقيمة بيعه 3,000 دينار. البديل ب يكلف 38,000 دينار، وتشغيله 3,500 دينار سنويا، وعمره 6 سنوات، وقيمة بيعه 6,000 دينار. ما المضاعف المشترك؟ قارن بالقيمة الحالية عليه، ثم بالقيمة السنوية، بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-54">الحل</a></span></p>
+</div>
+<div id="prob-3-55" class="ee-item" data-id="c03-e-04" data-kind="problem" data-label="3.55">
+<p><strong>3.55</strong> مشروع إنشائي مدته 4 سنوات. الرافعة أ تكلف 18,000 دينار، وتشغيلها 3,000 دينار سنويا، وعمرها 8 سنوات، وقيمتها السوقية بعد 4 سنوات 7,000 دينار. الرافعة ب تكلف 12,000 دينار، وتشغيلها 4,200 دينار سنويا، وعمرها 4 سنوات، وقيمة بيعها 1,000 دينار. أيهما تختار بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-55">الحل</a></span></p>
+</div>
+<div id="prob-3-56" class="ee-item" data-id="c03-e-05" data-kind="problem" data-label="3.56">
+<p><strong>3.56</strong> في المسألة السابقة، ما أقل قيمة سوقية للرافعة أ بعد 4 سنوات تجعلها مساوية للرافعة ب؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-56">الحل</a></span></p>
+</div>
+<div id="prob-3-57" class="ee-item" data-id="c03-e-06" data-kind="problem" data-label="3.57">
+<p><strong>3.57</strong> حاسوب من النوع أ يكلف 5,000 دينار وصيانته 1,200 دينار سنويا ويستبدل كل 3 سنوات. النوع ب يكلف 9,000 دينار وصيانته 800 دينار سنويا ويستبدل كل 5 سنوات. أيهما أرخص بنسبة 8%؟ لماذا الأفضل هنا القيمة السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-57">الحل</a></span></p>
+</div>
+<div id="prob-3-58" class="ee-item" data-id="c03-e-07" data-kind="problem" data-label="3.58">
+<p><strong>3.58</strong> البديل أ عمره 5 سنوات: يكلف 40,000 دينار، وتشغيله 6,000 دينار سنويا، وقيمة بيعه 5,000 دينار. البديل ب عمره 10 سنوات: يكلف 65,000 دينار، وتشغيله 4,000 دينار سنويا، وقيمة بيعه في النهاية 10,000 دينار، وقيمته السوقية بعد 5 سنوات 30,000 دينار. قارن بفترة دراسة 5 سنوات، ثم بالقيمة السنوية لكل عمر. هل يتفق القراران؟ بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-58">الحل</a></span></p>
+</div>
+<div id="prob-3-59" class="ee-item" data-id="c03-e-08" data-kind="problem" data-label="3.59">
+<p><strong>3.59</strong> عيادة تختار جهاز تعقيم. الأول يكلف 3,000 دينار، وصيانته 400 دينار سنويا، ويستبدل كل سنتين. الثاني يكلف 4,500 دينار، وصيانته 300 دينار سنويا، ويستبدل كل 3 سنوات. أيهما أرخص بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-59">الحل</a></span></p>
+</div>
+<div id="prob-3-60" class="ee-item" data-id="c03-e-09" data-kind="problem" data-label="3.60">
+<p><strong>3.60</strong> مشروع أول يكلف 50,000 دينار ويعطي 16,000 دينار سنويا لمدة 5 سنوات. مشروع ثان يكلف 80,000 دينار ويعطي 18,000 دينار سنويا لمدة 10 سنوات. بافتراض إمكان تكرار المشروع الأول، ماذا تختار بنسبة 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-60">الحل</a></span></p>
+</div>
+<div id="prob-3-61" class="ee-item" data-id="c03-e-10" data-kind="problem" data-label="3.61">
+<p><strong>3.61</strong> طالب قارن المشروعين في المسألة السابقة بالقيمة الحالية لعمر كل منهما مباشرة. ما الخطأ في ذلك؟ صحح الحل.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-61">الحل</a></span></p>
+</div>
+<div id="prob-3-62" class="ee-item" data-id="c03-e-11" data-kind="problem" data-label="3.62">
+<p><strong>3.62</strong> خزان مياه معدني يكلف 3,500 دينار، وصيانته 150 دينار سنويا، وعمره 12 سنة. خزان بلاستيكي يكلف 900 دينار، وصيانته 120 دينار سنويا، وعمره 3 سنوات. أيهما أرخص بنسبة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-62">الحل</a></span></p>
+</div>
+<div id="prob-3-63" class="ee-item" data-id="c03-e-12" data-kind="problem" data-label="3.63">
+<p><strong>3.63</strong> البديل أ يكلف 20,000 دينار، وتشغيله 2,000 دينار سنويا، وعمره 4 سنوات. البديل ب يكلف 30,000 دينار، وتشغيله 1,500 دينار سنويا، وعمره 6 سنوات. قارن بالقيمة السنوية بنسبة 10%. ثم افترض أن سعر البديل أ يرتفع 25% عند كل استبدال، وأعد المقارنة على 12 سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-63">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال">الجزء و: القيمة السنوية وتكلفة استرداد رأس المال</h3>
+<div id="prob-3-64" class="ee-item" data-id="c03-f-01" data-kind="problem" data-label="3.64">
+<p><strong>3.64</strong> احسب تكلفة استرداد رأس المال لأصل يكلف 40,000 دينار ويباع بعد 6 سنوات بقيمة 6,000 دينار، بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-64">الحل</a></span></p>
+</div>
+<div id="prob-3-65" class="ee-item" data-id="c03-f-02" data-kind="problem" data-label="3.65">
+<p><strong>3.65</strong> حل المسألة السابقة بالصيغة الثانية لتكلفة استرداد رأس المال، واشرح معنى كل حد.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-65">الحل</a></span></p>
+</div>
+<div id="prob-3-66" class="ee-item" data-id="c03-f-03" data-kind="problem" data-label="3.66">
+<p><strong>3.66</strong> مشروع يكلف 70,000 دينار، وإيراده 20,000 دينار سنويا، وتشغيله 4,000 دينار سنويا، وعمره 8 سنوات، وقيمة بيعه 10,000 دينار. احسب القيمة السنوية بنسبة 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-66">الحل</a></span></p>
+</div>
+<div id="prob-3-67" class="ee-item" data-id="c03-f-04" data-kind="problem" data-label="3.67">
+<p><strong>3.67</strong> آلة تكلف 55,000 دينار بدون قيمة بيع. تكلفة صيانتها 3,000 دينار في السنة الأولى، وتزيد 400 دينار كل سنة، لمدة 7 سنوات. ما التكلفة السنوية المكافئة بنسبة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-67">الحل</a></span></p>
+</div>
+<div id="prob-3-68" class="ee-item" data-id="c03-f-05" data-kind="problem" data-label="3.68">
+<p><strong>3.68</strong> سيارة توصيل تكلف 25,000 دينار وتباع بعد 5 سنوات بقيمة 4,000 دينار. صاحب المطعم يريد أن يعرف كم يجب أن يكسب منها شهريا ليسترد ثمنها مع عائد 10%. احسب الرقم السنوي، ثم قسمه على 12 تقريبيا.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-68">الحل</a></span></p>
+</div>
+<div id="prob-3-69" class="ee-item" data-id="c03-f-06" data-kind="problem" data-label="3.69">
+<p><strong>3.69</strong> معدات تكلف 150,000 دينار وتعطي 40,000 دينار سنويا لمدة 10 سنوات. ما أقل قيمة بيع تجعل القيمة السنوية صفرا بنسبة 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-69">الحل</a></span></p>
+</div>
+<div id="prob-3-70" class="ee-item" data-id="c03-f-07" data-kind="problem" data-label="3.70">
+<p><strong>3.70</strong> مشروع يكلف 20,000 دينار، ويعطي في السنوات من 1 إلى 4 المبالغ 5,000 و8,000 و9,000 و6,000 دينار. ما قيمته السنوية بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-70">الحل</a></span></p>
+</div>
+<div id="prob-3-71" class="ee-item" data-id="c03-f-08" data-kind="problem" data-label="3.71">
+<p><strong>3.71</strong> حافلة تكلف 80,000 دينار، وتشغيلها 12,000 دينار سنويا لمدة 8 سنوات. تحتاج تجديد محرك في السنة 4 بتكلفة 15,000 دينار، وتباع بقيمة 10,000 دينار. ما التكلفة السنوية المكافئة بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-71">الحل</a></span></p>
+</div>
+<div id="prob-3-72" class="ee-item" data-id="c03-f-09" data-kind="problem" data-label="3.72">
+<p><strong>3.72</strong> معدات تكلف 30,000 دينار، وصيانتها 5,000 دينار سنويا، وعمرها 6 سنوات. الحد الأدنى للعائد 10% نسبة فعلية سنوية. ما التكلفة السنوية المكافئة؟ وما المبلغ الشهري الذي يكافئها، لو وزعت على أشهر السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-72">الحل</a></span></p>
+</div>
+<div id="prob-3-73" class="ee-item" data-id="c03-f-10" data-kind="problem" data-label="3.73">
+<p><strong>3.73</strong> أصل يكلف 12,000 دينار، وعمره 5 سنوات بدون قيمة بيع. احسب تكلفة استرداد رأس المال عند 5% و10% و15%. قارنها بالمبلغ الذي تحصل عليه بقسمة السعر على العمر.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-73">الحل</a></span></p>
+</div>
+<div id="prob-3-74" class="ee-item" data-id="c03-f-11" data-kind="problem" data-label="3.74">
+<p><strong>3.74</strong> مشروع يكلف 45,000 دينار، ويعطي 9,000 دينار سنويا لمدة 8 سنوات، وقيمة بيعه 5,000 دينار. احسب القيمة السنوية عند 6% و10% و14%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-74">الحل</a></span></p>
+</div>
+<div id="prob-3-75" class="ee-item" data-id="c03-f-12" data-kind="problem" data-label="3.75">
+<p><strong>3.75</strong> بلدية تقترض 300,000 دينار لمشروع صرف صحي بنسبة 7% لمدة 15 سنة. احسب القسط السنوي، ثم قسمه إلى فائدة سنوية على كامل القرض، وادخار سنوي يجمع أصل القرض في النهاية.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-75">الحل</a></span></p>
+</div>
+<div id="prob-3-76" class="ee-item" data-id="c03-f-13" data-kind="problem" data-label="3.76">
+<p><strong>3.76</strong> خياران لإضاءة مستودع لمدة 6 سنوات. الأول يكلف 9,000 دينار وكهرباؤه 1,800 دينار سنويا. الثاني يكلف 14,000 دينار وكهرباؤه 1,100 دينار سنويا. احسب الفرق في التكلفة السنوية بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-76">الحل</a></span></p>
+</div>
+<div id="prob-3-77" class="ee-item" data-id="c03-f-14" data-kind="problem" data-label="3.77">
+<p><strong>3.77</strong> مشروع يكلف 60,000 دينار، ودخله 15,000 دينار في السنة الأولى، ويزيد 4% سنويا لمدة 8 سنوات. ما قيمته السنوية بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-77">الحل</a></span></p>
+</div>
+<div id="prob-3-78" class="ee-item" data-id="c03-f-15" data-kind="problem" data-label="3.78">
+<p><strong>3.78</strong> ورشة تشتري آلة قص بسعر 50,000 دينار، وتبيعها بعد 6 سنوات بقيمة 8,000 دينار. تعمل الآلة 1,500 ساعة في السنة. كم يجب أن تحمل الورشة على كل ساعة عمل لتسترد ثمن الآلة بنسبة 10%، قبل تكاليف التشغيل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-78">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-التكلفة-المرسملة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-التكلفة-المرسملة">الجزء ز: التكلفة المرسملة</h3>
+<div id="prob-3-79" class="ee-item" data-id="c03-g-01" data-kind="problem" data-label="3.79">
+<p><strong>3.79</strong> كم يجب أن تودع جامعة اليوم لتمول منحة دراسية قيمتها 20,000 دينار كل سنة إلى الأبد، إذا كان العائد 8%؟ الدفعة الأولى بعد سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-79">الحل</a></span></p>
+</div>
+<div id="prob-3-80" class="ee-item" data-id="c03-g-02" data-kind="problem" data-label="3.80">
+<p><strong>3.80</strong> في المسألة السابقة، إذا أرادت الجامعة صرف المنحة الأولى اليوم، كم تودع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-80">الحل</a></span></p>
+</div>
+<div id="prob-3-81" class="ee-item" data-id="c03-g-03" data-kind="problem" data-label="3.81">
+<p><strong>3.81</strong> سد صغير يكلف 1,500,000 دينار، وصيانته 40,000 دينار سنويا إلى الأبد. ما التكلفة المرسملة بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-81">الحل</a></span></p>
+</div>
+<div id="prob-3-82" class="ee-item" data-id="c03-g-04" data-kind="problem" data-label="3.82">
+<p><strong>3.82</strong> جسر مشاة يكلف 600,000 دينار، وصيانته 15,000 دينار سنويا، ويحتاج دهانا كل 8 سنوات بتكلفة 80,000 دينار. ما التكلفة المرسملة بنسبة 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-82">الحل</a></span></p>
+</div>
+<div id="prob-3-83" class="ee-item" data-id="c03-g-05" data-kind="problem" data-label="3.83">
+<p><strong>3.83</strong> خياران لخط مياه رئيسي. الأول أنابيب حديد تكلف 900,000 دينار وصيانتها 30,000 دينار سنويا. الثاني أنابيب بلاستيك عالي الكثافة تكلف 1,200,000 دينار وصيانتها 12,000 دينار سنويا. بافتراض عمر بلا نهاية، أيهما أرخص بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-83">الحل</a></span></p>
+</div>
+<div id="prob-3-84" class="ee-item" data-id="c03-g-06" data-kind="problem" data-label="3.84">
+<p><strong>3.84</strong> مبنى مدرسة يكلف 250,000 دينار ويحتاج إعادة بناء كاملة كل 25 سنة بنفس التكلفة، إلى الأبد. ما التكلفة المرسملة بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-84">الحل</a></span></p>
+</div>
+<div id="prob-3-85" class="ee-item" data-id="c03-g-07" data-kind="problem" data-label="3.85">
+<p><strong>3.85</strong> وقف خيري قيمته 500,000 دينار يستثمر بعائد 7%. ما المبلغ الذي يصرف سنويا إلى الأبد دون أن ينقص أصل الوقف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-85">الحل</a></span></p>
+</div>
+<div id="prob-3-86" class="ee-item" data-id="c03-g-08" data-kind="problem" data-label="3.86">
+<p><strong>3.86</strong> شبكة صرف صحي جديدة تكلف 700,000 دينار. صيانتها 10,000 دينار سنويا في أول 10 سنوات، ثم 25,000 دينار سنويا إلى الأبد. ما التكلفة المرسملة بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-86">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-فترة-الاسترداد-ونقطة-التعادل" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-فترة-الاسترداد-ونقطة-التعادل">الجزء ح: فترة الاسترداد ونقطة التعادل</h3>
+<div id="prob-3-87" class="ee-item" data-id="c03-h-01" data-kind="problem" data-label="3.87">
+<p><strong>3.87</strong> استثمار يكلف 24,000 دينار ويوفر 6,000 دينار سنويا. احسب فترة الاسترداد البسيطة والمخصومة بنسبة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-87">الحل</a></span></p>
+</div>
+<div id="prob-3-88" class="ee-item" data-id="c03-h-02" data-kind="problem" data-label="3.88">
+<p><strong>3.88</strong> المشروع أ يكلف 30,000 دينار ويعطي 10,000 دينار سنويا لمدة 3 سنوات فقط. المشروع ب يكلف 30,000 دينار ويعطي 6,000 و8,000 و10,000 و12,000 و14,000 دينار في السنوات من 1 إلى 5. أي المشروعين أسرع استردادا؟ وأيهما أفضل بالقيمة الحالية بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-88">الحل</a></span></p>
+</div>
+<div id="prob-3-89" class="ee-item" data-id="c03-h-03" data-kind="problem" data-label="3.89">
+<p><strong>3.89</strong> برنامج إدارة مخازن يكلف 35,000 دينار، وعمره 6 سنوات، وقيمته في النهاية 0 دينار. ما أقل توفير سنوي يبرر شراءه بنسبة 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-89">الحل</a></span></p>
+</div>
+<div id="prob-3-90" class="ee-item" data-id="c03-h-04" data-kind="problem" data-label="3.90">
+<p><strong>3.90</strong> مشروع يكلف 40,000 دينار ويعطي 9,000 دينار سنويا. ما أقل عمر يجعل المشروع مقبولا بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-90">الحل</a></span></p>
+</div>
+<div id="prob-3-91" class="ee-item" data-id="c03-h-05" data-kind="problem" data-label="3.91">
+<p><strong>3.91</strong> طريقتان لإنتاج قطعة. الطريقة أ تحتاج قالبا بتكلفة 2,000 دينار، وتكلفة القطعة 12 دينار. الطريقة ب تحتاج قالبا بتكلفة 6,000 دينار، وتكلفة القطعة 8 دينار. عمر القالب 5 سنوات. ما عدد القطع السنوي الذي تتساوى عنده الطريقتان بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-91">الحل</a></span></p>
+</div>
+<div id="prob-3-92" class="ee-item" data-id="c03-h-06" data-kind="problem" data-label="3.92">
+<p><strong>3.92</strong> سائق تاكسي يفكر في تحويل سيارته إلى الغاز بتكلفة 8,000 دينار، وعمر التحويل 8 سنوات. تكلفة الوقود تنخفض من 0.12 إلى 0.06 دينار لكل كيلومتر. يقطع السائق 15,000 كيلومتر سنويا. ما أقل مسافة سنوية تبرر التحويل بنسبة 10%؟ وهل يحول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-92">الحل</a></span></p>
+</div>
+<div id="prob-3-93" class="ee-item" data-id="c03-h-07" data-kind="problem" data-label="3.93">
+<p><strong>3.93</strong> مشروع يكلف 20,000 دينار، ودخله 3,000 دينار في السنة الأولى، ويزيد 1,000 دينار كل سنة. ابن جدول القيمة الحالية التراكمية لست سنوات بنسبة 10%. في أي سنة يسترد المشروع تكلفته؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-93">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-مسائل-excel-وpython">الجزء ط: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-3-94" class="ee-item" data-id="c03-i-01" data-kind="problem" data-label="3.94">
+<p><strong>3.94</strong> اكتب التدفقات -50000 و12000 و15000 و18000 و15000 و10000 للسنوات من 0 إلى 5 في عمود Excel، واحسب القيمة الحالية بنسبة 10% بالصيغة الصحيحة. ما الرقم الخاطئ الذي يظهر لو أدخلت السنة 0 داخل الدالة NPV؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-94">الحل</a></span></p>
+</div>
+<div id="prob-3-95" class="ee-item" data-id="c03-i-02" data-kind="problem" data-label="3.95">
+<p><strong>3.95</strong> مشروع يكلف 60,000 دينار، ويعطي 16,000 دينار سنويا لمدة 6 سنوات، وقيمة بيعه 8,000 دينار. ارسم في Python منحنى القيمة الحالية مقابل النسبة من 0% إلى 25%. ما القيم عند 4% و8% و12% و16% و20%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-95">الحل</a></span></p>
+</div>
+<div id="prob-3-96" class="ee-item" data-id="c03-i-03" data-kind="problem" data-label="3.96">
+<p><strong>3.96</strong> ابن في Excel جدول إطفاء شهري لقرض 20,000 دينار بفائدة 9% سنويا تحسب شهريا لمدة 3 سنوات. ما القسط؟ وما الرصيد بعد 12 شهرا؟ وكم دفع المقترض فوائد في السنة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-96">الحل</a></span></p>
+</div>
+<div id="prob-3-97" class="ee-item" data-id="c03-i-04" data-kind="problem" data-label="3.97">
+<p><strong>3.97</strong> اكتب دالة Python تأخذ السعر والتشغيل وقيمة البيع والعمر والنسبة، وتعيد القيمة السنوية للتكاليف. استخدمها لمقارنة ثلاث آلات بنسبة 10%: الآلة أ بسعر 18,000 وتشغيل 4,000 وبيع 2,000 وعمر 4 سنوات، والآلة ب بسعر 30,000 وتشغيل 3,000 وبيع 4,000 وعمر 6 سنوات، والآلة ج بسعر 45,000 وتشغيل 2,200 وبيع 6,000 وعمر 9 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-97">الحل</a></span></p>
+</div>
+<div id="prob-3-98" class="ee-item" data-id="c03-i-05" data-kind="problem" data-label="3.98">
+<p><strong>3.98</strong> حول النسبة الاسمية 10% المحسوبة شهريا إلى نسبة فعلية بالدالة EFFECT، ثم أرجعها بالدالة NOMINAL. اكتب نفس الحساب في Python.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-98">الحل</a></span></p>
+</div>
+<div id="prob-3-99" class="ee-item" data-id="c03-i-06" data-kind="problem" data-label="3.99">
+<p><strong>3.99</strong> ابن في Excel جدولا يبين أقل توفير سنوي يبرر شراء معدات بسعر 45,000 دينار وقيمة بيع 5,000 دينار، لأعمار من 3 إلى 12 سنة ونسب من 6% إلى 14%. ما القيمة عند عمر 7 سنوات ونسبتي 8% و12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-99">الحل</a></span></p>
+</div>
+<div id="prob-3-100" class="ee-item" data-id="c03-i-07" data-kind="problem" data-label="3.100">
+<p><strong>3.100</strong> اكتب برنامج Python يحسب فترة الاسترداد المخصومة لمشروع يكلف 30,000 دينار، ودخله 4,000 دينار في السنة الأولى ويزيد 1,500 دينار كل سنة، بنسبة 10%. البرنامج يقف عند أول سنة يصبح فيها التراكمي موجبا، ويحسب الكسر داخل السنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-100">الحل</a></span></p>
+</div>
+<div id="prob-3-101" class="ee-item" data-id="c03-i-08" data-kind="problem" data-label="3.101">
+<p><strong>3.101</strong> الآلة أ تكلف 20,000 دينار وتشغيلها 5,000 دينار سنويا. الآلة ب تكلف 32,000 دينار وتشغيلها 3,000 دينار سنويا. عمر كل منهما 8 سنوات. استخدم Goal Seek في Excel لإيجاد النسبة التي تتساوى عندها الآلتان.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-101">الحل</a></span></p>
+</div>
+<div id="prob-3-102" class="ee-item" data-id="c03-i-09" data-kind="problem" data-label="3.102">
+<p><strong>3.102</strong> اكتب برنامج Python يحسب القيمة الحالية لشقة تشترى بسعر 75,000 دينار، وتؤجر بمبلغ 400 دينار شهريا لمدة 10 سنوات، ثم تباع بسعر 85,000 دينار. الحد الأدنى للعائد 8% نسبة فعلية سنوية. اكتب كل التدفقات في قائمة شهرية واحدة.</p>
+<p><span class="ee-sol-link"><a href="#sol-3-102">الحل</a></span></p>
+</div>
+<div id="prob-3-103" class="ee-item" data-id="c03-i-10" data-kind="problem" data-label="3.103">
+<p><strong>3.103</strong> مشروع بنية تحتية يكلف 100,000 دينار، وصيانته 12,000 دينار سنويا، ويحتاج تجديدا كل 10 سنوات بتكلفة 50,000 دينار. احسب في Python التكلفة المرسملة عند 4% و6% و8%. لماذا تتغير كثيرا مع النسبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-103">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-اختيار-من-متعدد">الجزء ي: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-3-104" class="ee-item" data-id="c03-j-01" data-kind="problem" data-label="3.104">
+<p><strong>3.104</strong> قرض 20,000 دينار بفائدة 12% سنويا تحسب شهريا، يسدد بأقساط شهرية لمدة 3 سنوات. ما القسط الشهري؟</p>
+<p>أ) 693.91 دينار<br>
+ب) 664.29 دينار<br>
+ج) 2,441.28 دينار<br>
+د) 755.56 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-3-104">الحل</a></span></p>
+</div>
+<div id="prob-3-105" class="ee-item" data-id="c03-j-02" data-kind="problem" data-label="3.105">
+<p><strong>3.105</strong> ما النسبة الفعلية السنوية لنسبة اسمية 12% تحسب شهريا؟</p>
+<p>أ) 12.00%<br>
+ب) 1.00%<br>
+ج) 12.68%<br>
+د) 289.60%</p>
+<p><span class="ee-sol-link"><a href="#sol-3-105">الحل</a></span></p>
+</div>
+<div id="prob-3-106" class="ee-item" data-id="c03-j-03" data-kind="problem" data-label="3.106">
+<p><strong>3.106</strong> ثلاث آلات لنفس العمل، أعمارها 3 و4 و6 سنوات. أسرع طريقة صحيحة للمقارنة:</p>
+<p>أ) القيمة الحالية لعمر كل آلة<br>
+ب) القيمة الحالية على 6 سنوات<br>
+ج) القيمة السنوية لعمر كل آلة<br>
+د) فترة الاسترداد</p>
+<p><span class="ee-sol-link"><a href="#sol-3-106">الحل</a></span></p>
+</div>
+<div id="prob-3-107" class="ee-item" data-id="c03-j-04" data-kind="problem" data-label="3.107">
+<p><strong>3.107</strong> ما القيمة الحالية لدفعة سنوية 30,000 دينار إلى الأبد بنسبة 6%؟</p>
+<p>أ) 1,800.00 دينار<br>
+ب) 472,855.82 دينار<br>
+ج) 500,000.00 دينار<br>
+د) 28,301.89 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-3-107">الحل</a></span></p>
+</div>
+<div id="prob-3-108" class="ee-item" data-id="c03-j-05" data-kind="problem" data-label="3.108">
+<p><strong>3.108</strong> مشروع قيمته الحالية سالبة بنسبة 12%. ماذا تعرف عن قيمته الحالية بنسبة 8%؟</p>
+<p>أ) سالبة حتما<br>
+ب) موجبة حتما<br>
+ج) أكبر من قيمتها بنسبة 12% لمشروع تكاليفه في البداية ودخله بعدها<br>
+د) تساوي قيمتها بنسبة 12%</p>
+<p><span class="ee-sol-link"><a href="#sol-3-108">الحل</a></span></p>
+</div>
+<div id="prob-3-109" class="ee-item" data-id="c03-j-06" data-kind="problem" data-label="3.109">
+<p><strong>3.109</strong> ما تكلفة استرداد رأس المال لأصل بسعر 40,000 دينار وقيمة بيع 5,000 دينار بعد 5 سنوات بنسبة 10%؟</p>
+<p>أ) 7,000.00 دينار<br>
+ب) 9,232.91 دينار<br>
+ج) 10,551.90 دينار<br>
+د) 9,732.91 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-3-109">الحل</a></span></p>
+</div>
+<div id="prob-3-110" class="ee-item" data-id="c03-j-07" data-kind="problem" data-label="3.110">
+<p><strong>3.110</strong> بدائل تكاليف لنفس الخدمة. القيم الحالية للتكاليف: 52,000 و48,000 و55,000 دينار. ماذا تختار؟</p>
+<p>أ) البديل الأول<br>
+ب) البديل الثاني<br>
+ج) البديل الثالث<br>
+د) عدم التنفيذ لأن كل القيم تكاليف</p>
+<p><span class="ee-sol-link"><a href="#sol-3-110">الحل</a></span></p>
+</div>
+<div id="prob-3-111" class="ee-item" data-id="c03-j-08" data-kind="problem" data-label="3.111">
+<p><strong>3.111</strong> النسبة الفعلية السنوية 9%. ما نسبة الشهر التي تكافئها؟</p>
+<p>أ) 0.75%<br>
+ب) 0.72%<br>
+ج) 9.38%<br>
+د) 9.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-3-111">الحل</a></span></p>
+</div>
+<div id="prob-3-112" class="ee-item" data-id="c03-j-09" data-kind="problem" data-label="3.112">
+<p><strong>3.112</strong> مشروع أ يسترد تكلفته في سنتين وقيمته الحالية 5,000 دينار. مشروع ب يسترد تكلفته في 4 سنوات وقيمته الحالية 20,000 دينار. المشروعان متنافيان، والشركة لا تعاني نقصا في السيولة. ماذا تختار؟</p>
+<p>أ) المشروع أ لأنه أسرع استردادا<br>
+ب) المشروع ب لأن قيمته الحالية أكبر<br>
+ج) المشروعين معا<br>
+د) لا يمكن الحكم</p>
+<p><span class="ee-sol-link"><a href="#sol-3-112">الحل</a></span></p>
+</div>
+<div id="prob-3-113" class="ee-item" data-id="c03-j-10" data-kind="problem" data-label="3.113">
+<p><strong>3.113</strong> في المقارنة بفترة دراسة أقصر من عمر الآلة، كيف تعامل الآلة في نهاية الفترة؟</p>
+<p>أ) نتجاهلها<br>
+ب) نطرح قيمة بيعها في نهاية عمرها<br>
+ج) نطرح قيمتها السوقية المتوقعة في نهاية الفترة<br>
+د) نضيف تكلفة استبدالها</p>
+<p><span class="ee-sol-link"><a href="#sol-3-113">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ك-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ك-حالات-مصغرة">الجزء ك: حالات مصغرة</h3>
+<p>كل حالة تجمع أكثر من فكرة من الفصل، وبعضها يضيف فكرة جديدة.</p>
+<div id="prob-3-114" class="ee-item" data-id="c03-k-01" data-kind="problem" data-label="3.114">
+<p><strong>3.114</strong> <strong>حالة 3.1: شراء مبنى المصنع أم استئجاره</strong></p>
+<p>مصنع أثاث في نابلس يستأجر مبناه بمبلغ 110,000 دينار سنويا، يدفع في بداية كل سنة. عرض عليه المالك بيع المبنى بسعر 1,200,000 دينار. المصنع يدفع 300,000 دينار نقدا، والباقي قرض بنكي بفائدة 7.5% سنويا تحسب شهريا لمدة 15 سنة. إذا اشترى المبنى، يدفع صيانة وضرائب 28,000 دينار سنويا. يتوقع أن تبلغ قيمة المبنى بعد 15 سنة 600,000 دينار، لأن المنطقة الصناعية تتوسع. الحد الأدنى للعائد في المصنع 10%.</p>
+<p>(أ) ما القسط الشهري للقرض؟ (ب) ما القيمة الحالية لتكلفة الاستئجار على 15 سنة؟ (ج) ما القيمة الحالية لتكلفة الشراء؟ (د) ماذا يختار المصنع؟ (هـ) لماذا لا نحتاج حساب أقساط القرض في الجزء (ج)؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-114">الحل</a></span></p>
+</div>
+<div id="prob-3-115" class="ee-item" data-id="c03-k-02" data-kind="problem" data-label="3.115">
+<p><strong>3.115</strong> <strong>حالة 3.2: حافلة ديزل أم حافلة كهربائية</strong></p>
+<p>شركة نقل في رام الله تشتري حافلة لخط يقطع 55,000 كيلومتر سنويا. الخيارات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>ديزل</th>
+<th>كهربائية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>السعر</td>
+<td>140,000</td>
+<td>220,000</td>
+</tr>
+<tr class="even">
+<td>العمر</td>
+<td>8 سنوات</td>
+<td>10 سنوات</td>
+</tr>
+<tr class="odd">
+<td>قيمة البيع</td>
+<td>20,000</td>
+<td>30,000</td>
+</tr>
+<tr class="even">
+<td>الطاقة لكل كيلومتر</td>
+<td>0.35 لتر</td>
+<td>1.2 كيلوواط ساعة</td>
+</tr>
+<tr class="odd">
+<td>سعر الوحدة</td>
+<td>1.2 دينار للتر</td>
+<td>0.12 دينار للكيلوواط ساعة</td>
+</tr>
+<tr class="even">
+<td>صيانة البطارية السنوية</td>
+<td>لا يوجد</td>
+<td>4,000</td>
+</tr>
+</tbody>
+</table>
+<p>لاحظ أن الديزل يقاس باللتر والكهرباء بالكيلوواط ساعة. الحد الأدنى للعائد 10%. صيانة المحرك متساوية في الخيارين.</p>
+<p>(أ) ما تكلفة الطاقة السنوية لكل حافلة؟ (ب) ما القيمة السنوية لكل خيار؟ (ج) أيهما تختار؟ (د) ما المسافة السنوية التي يتساوى عندها الخياران؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-115">الحل</a></span></p>
+</div>
+<div id="prob-3-116" class="ee-item" data-id="c03-k-03" data-kind="problem" data-label="3.116">
+<p><strong>3.116</strong> <strong>حالة 3.3: محطة معالجة مياه للبلدية</strong></p>
+<p>بلدية تختار بين تصميمين لمحطة معالجة مياه عادمة:</p>
+<ul>
+<li>التصميم الأول: تكلفة البناء 2,500,000 دينار، والتشغيل والصيانة 60,000 دينار سنويا، وتجديد المعدات كل 20 سنة بتكلفة 300,000 دينار.</li>
+<li>التصميم الثاني: تكلفة البناء 3,400,000 دينار، والتشغيل والصيانة 25,000 دينار سنويا، وتجديد المعدات كل 25 سنة بتكلفة 150,000 دينار.</li>
+</ul>
+<p>النسبة المستخدمة في المشاريع العامة 6%.</p>
+<p>(أ) ما التكلفة المرسملة لكل تصميم؟ (ب) أيهما تختار البلدية؟ (ج) جهة مانحة تقترح نسبة 4% للمشاريع العامة. هل يتغير القرار؟ (د) لماذا تؤثر النسبة في هذا القرار أكثر من قرارات المصانع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-3-116">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch02.html" class="pagination-link" aria-label="الدفعات المتكررة">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

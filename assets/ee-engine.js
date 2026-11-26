@@ -40,6 +40,7 @@
     FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, r4, r2,
     ln: Math.log, abs: Math.abs, max: Math.max, min: Math.min,
     floor: Math.floor, ceil: Math.ceil,
+    lcm: (a, b) => { a = Math.round(a); b = Math.round(b); const g = (x, y) => (y ? g(y, x % y) : x); return a / g(a, b) * b; },
     pick: (c, a, b) => (c ? a : b),
     yrs: (n) => { n = Math.round(n); return n === 1 ? 'سنة واحدة' : n === 2 ? 'سنتين' : (n >= 3 && n <= 10 ? n + ' سنوات' : n + ' سنة'); },
   };
