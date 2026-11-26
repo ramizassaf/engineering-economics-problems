@@ -18,6 +18,18 @@
     }
     return (lo + hi) / 2;
   };
+  const NPV = (i, flows) => {
+    let s = 0;
+    for (let t = 0; t < flows.length; t++) s += flows[t] / (1 + i) ** t;
+    return s;
+  };
+  const IRR = (flows, lo = -0.9, hi = 1.0) => {
+    for (let k = 0; k < 100; k++) {
+      const mid = (lo + hi) / 2;
+      if (NPV(mid, flows) > 0) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  };
   const RATEF = (n, A, F) => {
     let lo = 1e-9, hi = 1.0;
     for (let k = 0; k < 100; k++) {
@@ -37,7 +49,7 @@
   const r4 = (x) => Number(x.toFixed(4));
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
-    FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, r4, r2,
+    FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, NPV, IRR, r4, r2,
     ln: Math.log, abs: Math.abs, max: Math.max, min: Math.min,
     floor: Math.floor, ceil: Math.ceil,
     lcm: (a, b) => { a = Math.round(a); b = Math.round(b); const g = (x, y) => (y ? g(y, x % y) : x); return a / g(a, b) * b; },

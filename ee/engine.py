@@ -67,6 +67,26 @@ def RATE(n, A, P):
     return (lo + hi) / 2
 
 
+def NPV(i, flows):
+    """Present worth at year 0 of flows listed from year 0."""
+    s = 0.0
+    for t, c in enumerate(flows):
+        s += c / (1 + i) ** t
+    return s
+
+
+def IRR(flows, lo=-0.9, hi=1.0):
+    """Rate where NPV is zero, by bisection between lo and hi.
+    Assumes NPV is positive at lo and negative at hi, as in a conventional project."""
+    for _ in range(100):
+        mid = (lo + hi) / 2
+        if NPV(mid, flows) > 0:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
 def RATEF(n, A, F):
     """Interest rate where n payments A grow to F (bisection)."""
     lo, hi = 1e-9, 1.0
@@ -120,7 +140,7 @@ def r2(x):
 
 HELPERS = {
     "FP": FP, "PF": PF, "PA": PA, "AP": AP, "FA": FA, "AF": AF,
-    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "GROWTH": GROWTH, "ln": ln, "abs": abs, "max": max, "min": min,
+    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "abs": abs, "max": max, "min": min,
     "pick": pick, "yrs": yrs, "r4": r4, "r2": r2, "floor": math.floor, "ceil": math.ceil,
     "lcm": lambda a, b: math.lcm(int(round(a)), int(round(b))),
 }

@@ -22,6 +22,7 @@ book:
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
+    - appendices/excel-functions.qmd
     - appendices/solutions-ch01.qmd
     - appendices/solutions-ch02.qmd
     - appendices/solutions-ch03.qmd

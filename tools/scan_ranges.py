@@ -19,7 +19,7 @@ for f in sorted(glob.glob(str(ROOT / "bank" / "ch*" / "*.yaml"))):
         if not it.get("random"):
             continue
         calc = it.get("calc", []) or []
-        rates = [l.split("=")[0].strip() for l in calc if re.search(r"\b(RATE|RATEF|GROWTH)\(|\*\*\(1/", l)]
+        rates = [l.split("=")[0].strip() for l in calc if re.search(r"\b(RATE|RATEF|GROWTH|IRR)\(|\*\*\(1/", l)]
         years = [l.split("=")[0].strip() for l in calc if "ln(" in l and l.split("=")[0].strip().startswith("n")]
         for _ in range(200):
             env = compute(it, draw(it, rng))

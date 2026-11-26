@@ -46,6 +46,10 @@ local function wrap(el)
       break
     end
     local b = number_end(s, a)
+    -- Keep a leading minus sign with its number (-50,000).
+    if a > pos and s:sub(a - 1, a - 1) == "-" then
+      a = a - 1
+    end
     if a > pos then
       table.insert(out, pandoc.Str(s:sub(pos, a - 1)))
     end
