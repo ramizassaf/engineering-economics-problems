@@ -36,7 +36,8 @@
 
   function solution(it, env) {
     const s = EE.render(it.solution.trim(), env);
-    return it.kind === 'mcq' ? 'الجواب (' + LETTERS[it.correct] + '). ' + s : s;
+    const sep = /^(```|\$\$|\||- )/.test(s) ? '\n\n' : ' ';
+    return it.kind === 'mcq' ? 'الجواب (' + LETTERS[it.correct] + ').' + sep + s : s;
   }
 
   function figure(it, env) {

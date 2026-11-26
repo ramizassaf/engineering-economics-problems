@@ -19,6 +19,7 @@ book:
     - chapters/ch01.qmd
     - chapters/ch02.qmd
     - chapters/ch03.qmd
+    - chapters/ch04.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
@@ -26,6 +27,7 @@ book:
     - appendices/solutions-ch01.qmd
     - appendices/solutions-ch02.qmd
     - appendices/solutions-ch03.qmd
+    - appendices/solutions-ch04.qmd
 
 lang: ar
 dir: rtl

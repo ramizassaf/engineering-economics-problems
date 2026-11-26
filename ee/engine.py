@@ -145,7 +145,7 @@ HELPERS = {
     "lcm": lambda a, b: math.lcm(int(round(a)), int(round(b))),
 }
 
-_SAFE = re.compile(r"^[\w\s.+\-*/(),<>=!'\"؀-ۿ%:]*$")
+_SAFE = re.compile(r"^[\w\s.+\-*/(),<>=!'\"؀-ۿ%:\[\]]*$")
 
 
 def ev(expr: str, env: dict):

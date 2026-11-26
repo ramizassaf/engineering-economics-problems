@@ -24,6 +24,8 @@ for f in sorted(glob.glob(str(ROOT / "bank" / "ch*" / "*.yaml"))):
         for _ in range(200):
             env = compute(it, draw(it, rng))
             for k in rates:
+                if isinstance(env[k], str):
+                    continue
                 checked += 1
                 if not -0.2 < env[k] < 0.6:
                     bad += 1

@@ -70,7 +70,9 @@ def solution(item, env):
     if item.get("kind") == "mcq":
         letters = ["أ", "ب", "ج", "د", "هـ"]
         k = item["correct"]
-        return f"الجواب ({letters[k]}). " + render(item["solution"].strip(), env)
+        body = render(item["solution"].strip(), env)
+        sep = "\n\n" if body.startswith(("```", "$$", "|", "- ")) else " "
+        return f"الجواب ({letters[k]})." + sep + body
     return render(item["solution"].strip(), env)
 
 

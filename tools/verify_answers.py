@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 
 import numpy_financial as npf
+from datetime import date
+from scipy.optimize import brentq
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -111,6 +113,29 @@ CHECKS = {
     "c03-h-05": {"x": lambda v: solve_linear(lambda x: npf.pmt(v["i"], v["n"], -v["Fa"]) + v["va"] * x - npf.pmt(v["i"], v["n"], -v["Fb"]) - v["vb"] * x)},
     "c03-i-08": {"r": lambda v: npf.rate(v["n"], v["Oa"] - v["Ob"], -(v["Cb"] - v["Ca"]), 0)},
     "c03-k-02": {"kmx": lambda v: solve_linear(lambda x: npf.pmt(0.10, 8, -140000, 20000) + 0.42 * x - npf.pmt(0.10, 10, -220000, 30000) - 4000 - 0.144 * x)},
+    # ---------------------------------------------------------------- chapter 4
+    "c04-ex-irr-trial": {"r": lambda v: npf.irr([-v["C"]] + [v["R"]] * 5 + [v["R"] + v["S"]])},
+    "c04-ex-irr-annuity": {"r": lambda v: npf.irr([-v["C"]] + [v["R"]] * v["n"])},
+    "c04-ex-irr-decision": {"r": lambda v: npf.irr([-v["C"]] + [v["R"]] * 7 + [v["R"] + v["S"]])},
+    "c04-ex-irr-gradient": {"r": lambda v: npf.irr([-v["C"]] + [v["A1"] + v["G"] * k for k in range(5)])},
+    "c04-ex-incremental-two": {"rdd": lambda v: npf.rate(8, v["dR"], -v["dC"], 0)},
+    "c04-ex-incremental-three": {"r32": lambda v: npf.irr([-15000] + [3000] * 8)},
+    "c04-ex-sign-test": {"r": lambda v: npf.irr([-20000, 8000, 9000, 10000, -4000])},
+    "c04-ex-mirr": {"M": lambda v: npf.mirr([-v["c0"], v["c1"], v["c2"], v["c3"], v["c4"], v["c5"]], v["rr"], v["rr"])},
+    "c04-ex-mirr-multiple": {"M": lambda v: npf.mirr([-1000, 2300, -1320], v["i"], v["i"])},
+    "c04-ex-irr-monthly": {"im": lambda v: npf.rate(v["N"], v["A"], -v["P"], 0)},
+    "c04-ex-loan-fees": {"re": lambda v: npf.rate(v["n"], npf.pmt(v["r"], v["n"], -v["L"]), -v["L"] * (1 - v["f"]), 0)},
+    "c04-b-07": {"r": lambda v: npf.irr([-v["C"]] + [v["A1"] * (1 + v["g"]) ** k for k in range(8)])},
+    "c04-b-10": {"r": lambda v: npf.rate(10, v["A"], -v["P"], 1000)},
+    "c04-b-12": {"r": lambda v: npf.irr([-v["C"], 0, 0] + [v["R"]] * 6)},
+    "c04-d-04": {"rd": lambda v: npf.irr([-v["dC"]] + [v["dO"]] * 5 + [v["dO"] + v["dS"]])},
+    "c04-d-13": {"rd": lambda v: npf.irr([-(v["C"] - v["L"])] + [v["L"]] * 4 + [v["S"]])},
+    "c04-f-06": {"M": lambda v: npf.mirr([-30000, 18000, -10000, 20000, 12000], v["fr"], v["rr"])},
+    "c04-f-07": {"r": lambda v: npf.irr([-50000, 20000, 20000, 20000, 20000, -15000])},
+    "c04-h-06": {"r": lambda v: brentq(lambda r: sum(x / (1 + r) ** ((d - date(2026, 1, 1)).days / 365) for x, d in [(-10000, date(2026, 1, 1)), (2750, date(2026, 3, 1)), (4250, date(2026, 10, 30)), (3250, date(2027, 2, 15)), (2750, date(2027, 4, 1))]), -0.5, 2)},
+    "c04-j-01": {"rd": lambda v: npf.irr([-80000, 2000, 7000, 12000, 17000] + [22000] * 6),
+                 "MB": lambda v: npf.mirr([-200000, 30000, 35000, 40000, 45000] + [50000] * 6, 0.12, 0.12)},
+    "c04-j-02": {"im2": lambda v: npf.rate(36, npf.pmt(0.085 / 12, 36, -4500), -4410, 0)},
 }
 
 
