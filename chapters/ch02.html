@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; الدفعات المتكررة – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch01.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-2-shape" id="toc-sec-2-shape" class="nav-link active" data-scroll-target="#sec-2-shape"><span class="header-section-number">2.1</span> شكل السلسلة المتساوية</a></li>
+  <li><a href="#sec-2-ap" id="toc-sec-2-ap" class="nav-link" data-scroll-target="#sec-2-ap"><span class="header-section-number">2.2</span> القسط السنوي لقرض</a></li>
+  <li><a href="#sec-2-pa" id="toc-sec-2-pa" class="nav-link" data-scroll-target="#sec-2-pa"><span class="header-section-number">2.3</span> القيمة الحالية لسلسلة دفعات</a></li>
+  <li><a href="#sec-2-fa" id="toc-sec-2-fa" class="nav-link" data-scroll-target="#sec-2-fa"><span class="header-section-number">2.4</span> القيمة المستقبلية لسلسلة دفعات</a></li>
+  <li><a href="#sec-2-af" id="toc-sec-2-af" class="nav-link" data-scroll-target="#sec-2-af"><span class="header-section-number">2.5</span> الإيداع السنوي لهدف مستقبلي</a>
+  <ul class="collapse">
+  <li><a href="#ملخص-المعاملات-الستة" id="toc-ملخص-المعاملات-الستة" class="nav-link" data-scroll-target="#ملخص-المعاملات-الستة">ملخص المعاملات الستة</a></li>
+  </ul></li>
+  <li><a href="#sec-2-deferred" id="toc-sec-2-deferred" class="nav-link" data-scroll-target="#sec-2-deferred"><span class="header-section-number">2.6</span> السلاسل المؤجلة والمركبة</a>
+  <ul class="collapse">
+  <li><a href="#دفعات-في-بداية-السنة" id="toc-دفعات-في-بداية-السنة" class="nav-link" data-scroll-target="#دفعات-في-بداية-السنة">دفعات في بداية السنة</a></li>
+  <li><a href="#إيجاد-عدد-السنوات-ونسبة-الفائدة" id="toc-إيجاد-عدد-السنوات-ونسبة-الفائدة" class="nav-link" data-scroll-target="#إيجاد-عدد-السنوات-ونسبة-الفائدة">إيجاد عدد السنوات ونسبة الفائدة</a></li>
+  </ul></li>
+  <li><a href="#sec-2-gradient" id="toc-sec-2-gradient" class="nav-link" data-scroll-target="#sec-2-gradient"><span class="header-section-number">2.7</span> الدفعات المتدرجة خطيا</a></li>
+  <li><a href="#sec-2-geometric" id="toc-sec-2-geometric" class="nav-link" data-scroll-target="#sec-2-geometric"><span class="header-section-number">2.8</span> الدفعات المتدرجة نسبيا</a></li>
+  <li><a href="#sec-2-npv" id="toc-sec-2-npv" class="nav-link" data-scroll-target="#sec-2-npv"><span class="header-section-number">2.9</span> تدفقات غير منتظمة</a></li>
+  <li><a href="#sec-2-python" id="toc-sec-2-python" class="nav-link" data-scroll-target="#sec-2-python"><span class="header-section-number">2.10</span> Python: جدول إطفاء قرض</a></li>
+  <li><a href="#sec-2-summary" id="toc-sec-2-summary" class="nav-link" data-scroll-target="#sec-2-summary"><span class="header-section-number">2.11</span> ملخص الفصل</a></li>
+  <li><a href="#sec-2-problems" id="toc-sec-2-problems" class="nav-link" data-scroll-target="#sec-2-problems"><span class="header-section-number">2.12</span> مسائل الفصل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-الأقساط-والقيمة-الحالية-لسلسلة-دفعات" id="toc-الجزء-ب-الأقساط-والقيمة-الحالية-لسلسلة-دفعات" class="nav-link" data-scroll-target="#الجزء-ب-الأقساط-والقيمة-الحالية-لسلسلة-دفعات">الجزء ب: الأقساط والقيمة الحالية لسلسلة دفعات</a></li>
+  <li><a href="#الجزء-ج-الادخار-والقيمة-المستقبلية-لسلسلة-دفعات" id="toc-الجزء-ج-الادخار-والقيمة-المستقبلية-لسلسلة-دفعات" class="nav-link" data-scroll-target="#الجزء-ج-الادخار-والقيمة-المستقبلية-لسلسلة-دفعات">الجزء ج: الادخار والقيمة المستقبلية لسلسلة دفعات</a></li>
+  <li><a href="#الجزء-د-السلاسل-المؤجلة-والمركبة" id="toc-الجزء-د-السلاسل-المؤجلة-والمركبة" class="nav-link" data-scroll-target="#الجزء-د-السلاسل-المؤجلة-والمركبة">الجزء د: السلاسل المؤجلة والمركبة</a></li>
+  <li><a href="#الجزء-هـ-الدفعات-المتدرجة-خطيا" id="toc-الجزء-هـ-الدفعات-المتدرجة-خطيا" class="nav-link" data-scroll-target="#الجزء-هـ-الدفعات-المتدرجة-خطيا">الجزء هـ: الدفعات المتدرجة خطيا</a></li>
+  <li><a href="#الجزء-و-الدفعات-المتدرجة-نسبيا" id="toc-الجزء-و-الدفعات-المتدرجة-نسبيا" class="nav-link" data-scroll-target="#الجزء-و-الدفعات-المتدرجة-نسبيا">الجزء و: الدفعات المتدرجة نسبيا</a></li>
+  <li><a href="#الجزء-ز-مسائل-excel-وpython" id="toc-الجزء-ز-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ز-مسائل-excel-وpython">الجزء ز: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ح-اختيار-من-متعدد" id="toc-الجزء-ح-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ح-اختيار-من-متعدد">الجزء ح: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ط-حالات-مصغرة" id="toc-الجزء-ط-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ط-حالات-مصغرة">الجزء ط: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch2" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>القروض والأقساط والتوفير السنوي والإيجار وتكاليف التشغيل كلها دفعات تتكرر كل سنة. تستطيع نقل كل دفعة وحدها بقوانين الفصل الأول، لكن الحل يطول مع كل دفعة جديدة. في هذا الفصل تتعلم أربعة معاملات تنقل سلسلة دفعات متساوية بخطوة واحدة، ثم السلاسل التي تبدأ متأخرة، ثم الدفعات التي تزيد كل سنة بمقدار ثابت أو بنسبة ثابتة.</p>
+<section id="sec-2-shape" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-2-shape"><span class="header-section-number">2.1</span> شكل السلسلة المتساوية</h2>
+<p>كل معاملات هذا الفصل مبنية على شكل واحد:</p>
+<ul>
+<li>دفعات متساوية، قيمة كل منها A، في نهاية كل سنة من السنة 1 إلى السنة n.</li>
+<li>القيمة الحالية P تقع في السنة 0، أي قبل الدفعة الأولى بسنة.</li>
+<li>القيمة المستقبلية F تقع في السنة n، مع الدفعة الأخيرة.</li>
+</ul>
+<p>احفظ هذا الشكل. أغلب أخطاء الطلاب في هذا الفصل سببها نسيان أين يضع كل معامل قيمته.</p>
+</section>
+<section id="sec-2-ap" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-2-ap"><span class="header-section-number">2.2</span> القسط السنوي لقرض</h2>
+<p>إذا اقترضت P اليوم وتريد سداده بدفعات سنوية متساوية لمدة n سنة، فالدفعة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mfrac><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+A = P\,\frac{i(1+i)^n}{(1+i)^n - 1} = P\,(A/P,\ i,\ n)
+</annotation></semantics></math></p>
+<p>المعامل A/P يسمى معامل استرداد رأس المال. في Excel الدالة PMT تحسب القسط.</p>
+<div id="ex-2-1" class="ee-item" data-id="c02-ex-ap-loan" data-kind="example" data-label="2.1">
+<p><strong>مثال 2.1: قسط قرض سنوي</strong></p>
+<p>اقترضت شركة 125,000 دينار بفائدة 5% سنويا، وتسدد القرض بدفعات سنوية متساوية لمدة 7 سنوات. ما القسط السنوي؟ وما مجموع الفوائد التي تدفعها؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex01.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>القرض في السنة 0، والأقساط من السنة 1 إلى السنة 7. نطبق معامل استرداد رأس المال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mfrac><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>125</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>125</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.1728</mn><mo>=</mo><mn>21</mn><mi>,</mi><mn>602.48</mn></mrow><annotation encoding="application/x-tex">
+A = P\,\frac{i(1+i)^n}{(1+i)^n - 1} = 125\mathord{,}000\,(A/P,\ 5\%,\ 7) = 125\mathord{,}000 \times 0.1728 = 21\mathord{,}602.48
+</annotation></semantics></math></p>
+<p>بالجداول نحسب المعامل من جدول P/A في الملحق، لأن المعاملين مقلوبان لبعضهما. المعامل المقرب يعطي 21,600.00 دينار.</p>
+<p>في Excel:</p>
+<pre class="excel"><code>=PMT(5%, 7, -125000)</code></pre>
+<p>في Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.pmt(<span class="fl">0.05</span>, <span class="dv">7</span>, <span class="op">-</span><span class="dv">125000</span>), <span class="dv">2</span>))   <span class="co"># 21602.48</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>مجموع الأقساط 151,217.34 دينار، منها 26,217.34 دينار فوائد.</p>
+</div>
+<p>كل قسط يسدد جزءا من الفائدة وجزءا من أصل القرض. الجدول الذي يبين ذلك سنة بسنة يسمى جدول إطفاء القرض.</p>
+<div id="ex-2-2" class="ee-item" data-id="c02-ex-amort" data-kind="example" data-label="2.2">
+<p><strong>مثال 2.2: جدول إطفاء القرض</strong></p>
+<p>قرض 30,000 دينار بفائدة 8% يسدد بخمسة أقساط سنوية متساوية. اكتب جدول إطفاء القرض: الفائدة وسداد الأصل والرصيد في كل سنة.</p>
+<p><strong>الحل:</strong></p>
+<p>القسط السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>513.69</mn></mrow><annotation encoding="application/x-tex">
+A = 30\mathord{,}000\,(A/P,\ 8\%,\ 5) = 7\mathord{,}513.69
+</annotation></semantics></math></p>
+<p>فائدة كل سنة تساوي النسبة مضروبة في الرصيد في بداية السنة، والباقي من القسط يسدد من أصل القرض:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>القسط</th>
+<th>الفائدة</th>
+<th>سداد الأصل</th>
+<th>الرصيد في نهاية السنة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>30,000.00</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>7,513.69</td>
+<td>2,400.00</td>
+<td>5,113.69</td>
+<td>24,886.31</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>7,513.69</td>
+<td>1,990.90</td>
+<td>5,522.79</td>
+<td>19,363.52</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>7,513.69</td>
+<td>1,549.08</td>
+<td>5,964.61</td>
+<td>13,398.90</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>7,513.69</td>
+<td>1,071.91</td>
+<td>6,441.78</td>
+<td>6,957.12</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>7,513.69</td>
+<td>556.57</td>
+<td>6,957.12</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<p>الفائدة تقل كل سنة لأن الرصيد يقل، وسداد الأصل يزيد بنفس المقدار. في Excel الدالة IPMT تعطي فائدة السنة k، والدالة PPMT تعطي سداد الأصل فيها:</p>
+<pre class="excel"><code>=IPMT(8%, k, 5, -30000)
+=PPMT(8%, k, 5, -30000)</code></pre>
+</div>
+</section>
+<section id="sec-2-pa" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-2-pa"><span class="header-section-number">2.3</span> القيمة الحالية لسلسلة دفعات</h2>
+<p>هذا عكس القسط: تعرف الدفعة السنوية وتريد قيمتها اليوم.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow></mfrac><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = A\,\frac{(1+i)^n - 1}{i(1+i)^n} = A\,(P/A,\ i,\ n)
+</annotation></semantics></math></p>
+<p>المعاملان A/P وP/A مقلوبان لبعضهما. جدول P/A في الملحق يكفي للاثنين.</p>
+<div id="ex-2-3" class="ee-item" data-id="c02-ex-pa-car" data-kind="example" data-label="2.3">
+<p><strong>مثال 2.3: سعر سيارة بالأقساط</strong></p>
+<p>عرض على شخص شراء سيارة بأقساط 1,203 دينار سنويا لمدة 9 سنوات. ما سعر السيارة نقدا اليوم إذا كانت الفائدة على تمويل السيارات 12% سنويا؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex03.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>المجهول هو القيمة الحالية لسلسلة الأقساط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow></mfrac><mo>=</mo><mn>1</mn><mi>,</mi><mn>203</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>203</mn><mo>×</mo><mn>5.3282</mn><mo>=</mo><mn>6</mn><mi>,</mi><mn>409.88</mn></mrow><annotation encoding="application/x-tex">
+P = A\,\frac{(1+i)^n - 1}{i(1+i)^n} = 1\mathord{,}203\,(P/A,\ 12\%,\ 9) = 1\mathord{,}203 \times 5.3282 = 6\mathord{,}409.88
+</annotation></semantics></math></p>
+<p>بالمعامل المقرب لأربع خانات يكون الجواب 6,409.82 دينار.</p>
+<p>في Excel:</p>
+<pre class="excel"><code>=PV(12%, 9, -1203)</code></pre>
+<p>سعر السيارة نقدا 6,409.88 دينار. مجموع الأقساط 10,827.00 دينار، والفرق ثمن التأجيل.</p>
+</div>
+<div id="ex-2-4" class="ee-item" data-id="c02-ex-down-payment" data-kind="example" data-label="2.4">
+<p><strong>مثال 2.4: دفعة أولى وأقساط</strong></p>
+<p>عرض لشراء سيارة: دفعة أولى 12,000 دينار اليوم، ثم 5,000 دينار سنويا لمدة 5 سنوات. ما سعر السيارة نقدا إذا كانت الفائدة 12%؟</p>
+<p><strong>الحل:</strong></p>
+<p>الدفعة الأولى في السنة 0 لا تحتاج نقلا. الأقساط تنقل بالمعامل P/A:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>3.6048</mn><mo>=</mo><mn>30</mn><mi>,</mi><mn>023.88</mn></mrow><annotation encoding="application/x-tex">
+P = 12\mathord{,}000 + 5\mathord{,}000\,(P/A,\ 12\%,\ 5) = 12\mathord{,}000 + 5\mathord{,}000 \times 3.6048 = 30\mathord{,}023.88
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=12000 + PV(12%, 5, -5000)</code></pre>
+<p>السعر النقدي 30,023.88 دينار.</p>
+</div>
+<div id="ex-2-5" class="ee-item" data-id="c02-ex-max-price" data-kind="example" data-label="2.5">
+<p><strong>مثال 2.5: أعلى سعر لآلة توفر تكاليف</strong></p>
+<p>آلة جديدة توفر على مصنع 8,000 دينار سنويا لمدة 6 سنوات. ما أعلى سعر يدفعه المصنع للآلة اليوم إذا كان الحد الأدنى للعائد 12%؟</p>
+<p><strong>الحل:</strong></p>
+<p>الآلة تستحق سعرها إذا كانت القيمة الحالية للتوفير لا تقل عنه:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>32</mn><mi>,</mi><mn>891.26</mn></mrow><annotation encoding="application/x-tex">
+P = 8\mathord{,}000\,(P/A,\ 12\%,\ 6) = 32\mathord{,}891.26
+</annotation></semantics></math></p>
+<p>أعلى سعر 32,891.26 دينار. إذا كان السعر أعلى، فالمصنع يحقق عائدا أقل من 12%.</p>
+</div>
+</section>
+<section id="sec-2-fa" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-2-fa"><span class="header-section-number">2.4</span> القيمة المستقبلية لسلسلة دفعات</h2>
+<p>إذا أودعت A في نهاية كل سنة لمدة n سنة، يصبح الرصيد في السنة n:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mi>i</mi></mfrac><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+F = A\,\frac{(1+i)^n - 1}{i} = A\,(F/A,\ i,\ n)
+</annotation></semantics></math></p>
+<p>هذا المعامل يساوي حاصل ضرب معاملين تعرفهما. المعامل P/A ينقل السلسلة إلى السنة 0، ثم المعامل F/P ينقلها إلى السنة n:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+(F/A,\ i,\ n) = (P/A,\ i,\ n) \times (F/P,\ i,\ n)
+</annotation></semantics></math></p>
+<div id="ex-2-6" class="ee-item" data-id="c02-ex-fa-saving" data-kind="example" data-label="2.6">
+<p><strong>مثال 2.6: حساب توفير للدراسة الجامعية</strong></p>
+<p>فتح أب حساب توفير لابنته يوم ولادتها، ويودع 600 دينار في نهاية كل سنة لمدة 18 سنة. الحساب يعطي 5% سنويا. كم يصبح في الحساب بعد الإيداع الأخير؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex06.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><mi>i</mi></mfrac><mo>=</mo><mn>600</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>18</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>600</mn><mo>×</mo><mn>28.1324</mn><mo>=</mo><mn>16</mn><mi>,</mi><mn>879.43</mn></mrow><annotation encoding="application/x-tex">
+F = A\,\frac{(1+i)^n - 1}{i} = 600\,(F/A,\ 5\%,\ 18) = 600 \times 28.1324 = 16\mathord{,}879.43
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=FV(5%, 18, -600)</code></pre>
+<p>مجموع ما أودعه الأب 10,800.00 دينار، والباقي 6,079.43 دينار فوائد.</p>
+</div>
+</section>
+<section id="sec-2-af" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-2-af"><span class="header-section-number">2.5</span> الإيداع السنوي لهدف مستقبلي</h2>
+<p>تعرف المبلغ الذي تحتاجه في المستقبل، وتريد الإيداع السنوي الذي يوصلك إليه. هذا مقلوب المعامل F/A:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>F</mi><mspace width="0.167em"></mspace><mfrac><mi>i</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mi>F</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+A = F\,\frac{i}{(1+i)^n - 1} = F\,(A/F,\ i,\ n)
+</annotation></semantics></math></p>
+<p>بين المعاملين A/P وA/F علاقة مفيدة للتحقق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">
+(A/P,\ i,\ n) = (A/F,\ i,\ n) + i
+</annotation></semantics></math></p>
+<div id="ex-2-7" class="ee-item" data-id="c02-ex-af-debt" data-kind="example" data-label="2.7">
+<p><strong>مثال 2.7: ادخار لسداد دين مستقبلي</strong></p>
+<p>على شخص دين 10,000 دينار يستحق بعد 3 سنوات. يريد أن يودع مبلغا متساويا في نهاية كل سنة في حساب يعطي 8%، حتى يجمع مبلغ الدين. كم يودع سنويا؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex07.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>F</mi><mspace width="0.167em"></mspace><mfrac><mi>i</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.3080</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>080.34</mn></mrow><annotation encoding="application/x-tex">
+A = F\,\frac{i}{(1+i)^n - 1} = 10\mathord{,}000\,(A/F,\ 8\%,\ 3) = 10\mathord{,}000 \times 0.3080 = 3\mathord{,}080.34
+</annotation></semantics></math></p>
+<p>في Excel يكتب المبلغ في المدخل الرابع لأنه قيمة مستقبلية:</p>
+<pre class="excel"><code>=PMT(8%, 3, 0, -10000)</code></pre>
+<p>يودع 3,080.34 دينار سنويا.</p>
+</div>
+<div id="ex-2-8" class="ee-item" data-id="c02-ex-af-retire" data-kind="example" data-label="2.8">
+<p><strong>مثال 2.8: ادخار للتقاعد</strong></p>
+<p>يريد موظف أن يجمع 800,000 دينار عند تقاعده بعد 20 سنة. كم يجب أن يدخر سنويا إذا كان العائد 3%؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.0372</mn><mo>=</mo><mn>29</mn><mi>,</mi><mn>772.57</mn></mrow><annotation encoding="application/x-tex">
+A = 800\mathord{,}000\,(A/F,\ 3\%,\ 20) = 800\mathord{,}000 \times 0.0372 = 29\mathord{,}772.57
+</annotation></semantics></math></p>
+<pre class="excel"><code>=PMT(3%, 20, 0, -800000)</code></pre>
+<p>يدخر 29,772.57 دينار سنويا. لو استخدمنا المعامل مقربا لأربع خانات لحصلنا على 29,760.00 دينار، بفرق 12.57 دينار. عندما يكون المعامل صغيرا والمبلغ كبيرا يكبر أثر التقريب، فاستخدم القانون أو Excel.</p>
+</div>
+<section id="ملخص-المعاملات-الستة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ملخص-المعاملات-الستة">ملخص المعاملات الستة</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المعامل</th>
+<th>تعرف</th>
+<th>تريد</th>
+<th>دالة Excel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F/P</td>
+<td>P</td>
+<td>F</td>
+<td>FV</td>
+</tr>
+<tr class="even">
+<td>P/F</td>
+<td>F</td>
+<td>P</td>
+<td>PV</td>
+</tr>
+<tr class="odd">
+<td>A/P</td>
+<td>P</td>
+<td>A</td>
+<td>PMT</td>
+</tr>
+<tr class="even">
+<td>P/A</td>
+<td>A</td>
+<td>P</td>
+<td>PV</td>
+</tr>
+<tr class="odd">
+<td>F/A</td>
+<td>A</td>
+<td>F</td>
+<td>FV</td>
+</tr>
+<tr class="even">
+<td>A/F</td>
+<td>F</td>
+<td>A</td>
+<td>PMT</td>
+</tr>
+</tbody>
+</table>
+<p>في الدوال الثلاث FV وPV وPMT، المدخل الثالث للدفعة السنوية، والرابع لمبلغ مفرد في السنة 0 أو في السنة n.&nbsp;ضع 0 في المدخل الذي لا تحتاجه.</p>
+</section>
+</section>
+<section id="sec-2-deferred" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-2-deferred"><span class="header-section-number">2.6</span> السلاسل المؤجلة والمركبة</h2>
+<p>كثير من المسائل لا تأتي بالشكل الأساسي: السلسلة تبدأ بعد سنوات، أو تتوقف قبل نهاية الدراسة، أو معها مبالغ مفردة. القاعدة واحدة: استخدم المعامل على السلسلة كما هي، ثم انقل النتيجة.</p>
+<ul>
+<li>المعامل P/A يضع القيمة في السنة التي قبل الدفعة الأولى.</li>
+<li>المعامل F/A يضع القيمة في سنة الدفعة الأخيرة.</li>
+</ul>
+<p>مثلا، إذا بدأت السلسلة في السنة 4، فالمعامل P/A يعطي القيمة في السنة 3، وتنقلها إلى السنة 0 بالمعامل P/F لمدة 3 سنوات.</p>
+<div id="ex-2-9" class="ee-item" data-id="c02-ex-deferred-pv" data-kind="example" data-label="2.9">
+<p><strong>مثال 2.9: سلسلة تبدأ متأخرة</strong></p>
+<p>يستلم شخص 2,000 دينار سنويا من نهاية السنة 4 حتى نهاية السنة 10. ما القيمة الحالية لهذه الدفعات إذا كانت الفائدة 8%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex09.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>عدد الدفعات 7، من السنة 4 إلى السنة 10. المعامل P/A يضع القيمة قبل الدفعة الأولى بسنة، أي في السنة 3:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5.2064</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>412.74</mn></mrow><annotation encoding="application/x-tex">
+P_{3} = 2\mathord{,}000\,(P/A,\ 8\%,\ 7) = 2\mathord{,}000 \times 5.2064 = 10\mathord{,}412.74
+</annotation></semantics></math></p>
+<p>ثم ننقلها إلى السنة 0:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>412.74</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>412.74</mn><mo>×</mo><mn>0.7938</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>265.97</mn></mrow><annotation encoding="application/x-tex">
+P_0 = 10\mathord{,}412.74\,(P/F,\ 8\%,\ 3) = 10\mathord{,}412.74 \times 0.7938 = 8\mathord{,}265.97
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=PV(8%, 3, 0, -PV(8%, 7, -2000))</code></pre>
+<p>أكثر خطأ يقع فيه الطلاب هنا: نقل القيمة 4 سنوات بدل 3 سنوات.</p>
+</div>
+<div id="ex-2-10" class="ee-item" data-id="c02-ex-deferred-fv" data-kind="example" data-label="2.10">
+<p><strong>مثال 2.10: ادخار ثم انتظار</strong></p>
+<p>أودعت مهندسة 3,000 دينار في نهاية كل سنة لمدة 6 سنوات، ثم توقفت عن الإيداع وتركت الرصيد 4 سنوات أخرى. كم يصبح الرصيد في النهاية بفائدة 6%؟</p>
+<p><strong>الحل:</strong></p>
+<p>المعامل F/A يعطي الرصيد في السنة 6، مع الإيداع الأخير:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mn>6</mn></msub><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn><mi>,</mi><mn>925.96</mn></mrow><annotation encoding="application/x-tex">
+F_{6} = 3\mathord{,}000\,(F/A,\ 6\%,\ 6) = 20\mathord{,}925.96
+</annotation></semantics></math></p>
+<p>ثم ينمو الرصيد وحده 4 سنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>925.96</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>26</mn><mi>,</mi><mn>418.54</mn></mrow><annotation encoding="application/x-tex">
+F = 20\mathord{,}925.96\,(F/P,\ 6\%,\ 4) = 26\mathord{,}418.54
+</annotation></semantics></math></p>
+<pre class="excel"><code>=FV(6%, 4, 0, -FV(6%, 6, -3000))</code></pre>
+</div>
+<div id="ex-2-11" class="ee-item" data-id="c02-ex-machine-salvage" data-kind="example" data-label="2.11">
+<p><strong>مثال 2.11: توفير سنوي وقيمة بيع في النهاية</strong></p>
+<p>آلة سعرها 45,000 دينار، توفر 11,000 دينار سنويا لمدة 6 سنوات، وتباع في النهاية بمبلغ 6,000 دينار. هل تستحق الشراء بحد أدنى للعائد 10%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex11.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>نجمع القيمة الحالية للتوفير وقيمة البيع، ونطرح السعر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>−</mi><mn>45</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>11</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = -45\mathord{,}000 + 11\mathord{,}000\,(P/A,\ 10\%,\ 6) + 6\mathord{,}000\,(P/F,\ 10\%,\ 6)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>−</mi><mn>45</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>47</mn><mi>,</mi><mn>907.87</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>386.84</mn><mo>=</mo><mn>6</mn><mi>,</mi><mn>294.71</mn></mrow><annotation encoding="application/x-tex">
+P = -45\mathord{,}000 + 47\mathord{,}907.87 + 3\mathord{,}386.84 = 6\mathord{,}294.71
+</annotation></semantics></math></p>
+<p>في Excel تضع الدالة PV الدفعة السنوية وقيمة البيع معا:</p>
+<pre class="excel"><code>=-45000 + PV(10%, 6, -11000, -6000)</code></pre>
+<p>الآلة تستحق الشراء.</p>
+</div>
+<section id="دفعات-في-بداية-السنة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="دفعات-في-بداية-السنة">دفعات في بداية السنة</h3>
+<p>الإيجار والرسوم الدراسية والتأمين تدفع غالبا في بداية السنة. السلسلة عندها تبدأ في السنة 0 وتنتهي قبل السنة الأخيرة بسنة. لا تحتاج قانونا جديدا: الدفعة الأولى في السنة 0 تبقى كما هي، والباقي سلسلة عادية.</p>
+<div id="ex-2-12" class="ee-item" data-id="c02-ex-annuity-due" data-kind="example" data-label="2.12">
+<p><strong>مثال 2.12: إيجار يدفع في بداية كل سنة</strong></p>
+<p>يستأجر مكتب هندسي مقرا بمبلغ 9,000 دينار سنويا لمدة 5 سنوات، والإيجار يدفع في بداية كل سنة. ما القيمة الحالية للإيجار بفائدة 7%؟</p>
+<p><strong>الحل:</strong></p>
+<p>الدفعة الأولى في السنة 0، والباقي 4 دفعات من السنة 1 إلى السنة 4:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>39</mn><mi>,</mi><mn>484.90</mn></mrow><annotation encoding="application/x-tex">
+P = 9\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 7\%,\ 4) = 39\mathord{,}484.90
+</annotation></semantics></math></p>
+<p>في Excel المدخل الخامس للدالة PV يحدد موعد الدفعة: 1 يعني بداية السنة.</p>
+<pre class="excel"><code>=PV(7%, 5, -9000, 0, 1)</code></pre>
+<p>لو كان الإيجار في نهاية كل سنة، لكانت القيمة الحالية 36,901.78 دينار. الدفع المبكر يرفع القيمة الحالية.</p>
+</div>
+</section>
+<section id="إيجاد-عدد-السنوات-ونسبة-الفائدة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="إيجاد-عدد-السنوات-ونسبة-الفائدة">إيجاد عدد السنوات ونسبة الفائدة</h3>
+<p>إذا كان المجهول n، تحله بالدالة NPER أو باللوغاريتم. إذا كان المجهول i، فلا يوجد حل جبري، وتستخدم الدالة RATE أو التجربة في الجداول. الفصل الرابع يشرح طريقة التجربة بالتفصيل.</p>
+<div id="ex-2-13" class="ee-item" data-id="c02-ex-find-n" data-kind="example" data-label="2.13">
+<p><strong>مثال 2.13: كم سنة حتى يسدد القرض؟</strong></p>
+<p>اقترض شخص 20,000 دينار بفائدة 8%، ويستطيع أن يدفع 3,000 دينار سنويا. كم سنة يحتاج ليسدد القرض؟</p>
+<p><strong>الحل:</strong></p>
+<p>نحل معادلة القيمة الحالية لإيجاد n:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi>n</mi><mo>=</mo><mfrac><mrow><mi>−</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>P</mi><mspace width="0.167em"></mspace><mi>i</mi></mrow><mi>A</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>9.90</mn></mrow><annotation encoding="application/x-tex">
+20\mathord{,}000 = 3\mathord{,}000\,(P/A,\ 8\%,\ n) \quad\Rightarrow\quad n = \frac{-\ln\left(1 - \frac{P\,i}{A}\right)}{\ln(1+i)} = 9.90
+</annotation></semantics></math></p>
+<p>في Excel:</p>
+<pre class="excel"><code>=NPER(8%, -3000, 20000)</code></pre>
+<p>يحتاج 9 سنوات كاملة ودفعة أخيرة أصغر في السنة 10.</p>
+<p>ملاحظة: إذا كانت الدفعة السنوية أقل من فائدة السنة الأولى، أي أقل من 1,600.00 دينار، فلن يسدد القرض أبدا.</p>
+</div>
+<div id="ex-2-14" class="ee-item" data-id="c02-ex-find-i" data-kind="example" data-label="2.14">
+<p><strong>مثال 2.14: عائد استثمار بإيرادات متساوية</strong></p>
+<p>يستثمر شخص 25,000 دينار ويستلم 7,000 دينار سنويا لمدة 5 سنوات. ما نسبة العائد؟</p>
+<p><strong>الحل:</strong></p>
+<p>نبحث عن النسبة التي تجعل القيمة الحالية للإيرادات تساوي الاستثمار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3.5714</mn></mrow><annotation encoding="application/x-tex">
+25\mathord{,}000 = 7\mathord{,}000\,(P/A,\ i,\ 5) \quad\Rightarrow\quad (P/A,\ i,\ 5) = 3.5714
+</annotation></semantics></math></p>
+<p>لا يوجد حل جبري لهذه المعادلة. باليد تبحث في جدول P/A في عمود 5 عن نسبتين حول 3.5714 ثم تستكمل خطيا، وهذا موضوع الفصل الرابع. في Excel:</p>
+<pre class="excel"><code>=RATE(5, 7000, -25000)</code></pre>
+<p>وفي Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.rate(<span class="dv">5</span>, <span class="dv">7000</span>, <span class="op">-</span><span class="dv">25000</span>, <span class="dv">0</span>), <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="sec-2-gradient" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sec-2-gradient"><span class="header-section-number">2.7</span> الدفعات المتدرجة خطيا</h2>
+<p>في هذه السلسلة تزيد الدفعة كل سنة بمقدار ثابت G. الدفعة في السنة t هي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>G</mi></mrow><annotation encoding="application/x-tex">
+A_t = A_1 + (t - 1)\,G
+</annotation></semantics></math></p>
+<p>تكاليف صيانة آلة تتقادم مثال شائع.</p>
+<p>نقسم السلسلة إلى جزأين: سلسلة ثابتة قيمتها A1، وسلسلة متدرجة تبدأ بصفر في السنة 1 ثم G في السنة 2 ثم 2G في السنة 3:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>G</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = A_1\,(P/A,\ i,\ n) + G\,(P/G,\ i,\ n)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mi>i</mi><mspace width="0.167em"></mspace><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi>i</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+(P/G,\ i,\ n) = \frac{(1+i)^n - i\,n - 1}{i^2\,(1+i)^n}
+</annotation></semantics></math></p>
+<p>ولتحويل السلسلة كلها إلى دفعة سنوية متساوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo>+</mo><mi>G</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>i</mi></mfrac><mo>−</mo><mfrac><mi>n</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+A = A_1 + G\,(A/G,\ i,\ n), \qquad (A/G,\ i,\ n) = \frac{1}{i} - \frac{n}{(1+i)^n - 1}
+</annotation></semantics></math></p>
+<p>إذا كانت الدفعة تقل كل سنة، فالمقدار G سالب والقانون نفسه.</p>
+<div id="ex-2-15" class="ee-item" data-id="c02-ex-gradient" data-kind="example" data-label="2.15">
+<p><strong>مثال 2.15: تكاليف صيانة تزيد كل سنة</strong></p>
+<p>تكلفة صيانة آلة في مصنع 1,500 دينار في السنة الأولى، وتزيد 300 دينار كل سنة لمدة 8 سنوات. نسبة الفائدة 10%. (أ) ما القيمة الحالية لتكاليف الصيانة؟ (ب) ما التكلفة السنوية المتساوية المكافئة؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex15.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>نقسم السلسلة إلى جزأين: سلسلة ثابتة 1,500 دينار، وسلسلة متدرجة تبدأ بصفر في السنة 1 ثم 300 في السنة 2 وهكذا.</p>
+<p>(أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>300</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = 1\mathord{,}500\,(P/A,\ 10\%,\ 8) + 300\,(P/G,\ 10\%,\ 8)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>×</mo><mn>5.3349</mn><mo>+</mo><mn>300</mn><mo>×</mo><mn>16.0287</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>810.99</mn></mrow><annotation encoding="application/x-tex">
+P = 1\mathord{,}500 \times 5.3349 + 300 \times 16.0287 = 12\mathord{,}810.99
+</annotation></semantics></math></p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>300</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+A = 1\mathord{,}500 + 300\,(A/G,\ 10\%,\ 8)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>300</mn><mo>×</mo><mn>3.0045</mn><mo>=</mo><mn>2</mn><mi>,</mi><mn>401.34</mn></mrow><annotation encoding="application/x-tex">
+A = 1\mathord{,}500 + 300 \times 3.0045 = 2\mathord{,}401.34
+</annotation></semantics></math></p>
+<p>التكلفة تبدأ بـ 1,500 دينار وتنتهي بـ 3,600 دينار. توزيعها بالتساوي يكافئ 2,401.34 دينار سنويا.</p>
+<p>لا توجد في Excel دالة جاهزة للتدرج. اكتب التكاليف في عمود من B2 إلى B9، ثم:</p>
+<pre class="excel"><code>=NPV(10%, B2:B9)</code></pre>
+</div>
+<div id="ex-2-16" class="ee-item" data-id="c02-ex-gradient-down" data-kind="example" data-label="2.16">
+<p><strong>مثال 2.16: إيرادات تقل كل سنة</strong></p>
+<p>إيرادات منتج 20,000 دينار في السنة الأولى، وتقل 1,500 دينار كل سنة لمدة 6 سنوات. ما القيمة الحالية للإيرادات بنسبة 9%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex16.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>التدرج هنا سالب، فنطرح الجزء المتدرج:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>74</mn><mi>,</mi><mn>579.79</mn></mrow><annotation encoding="application/x-tex">
+P = 20\mathord{,}000\,(P/A,\ 9\%,\ 6) - 1\mathord{,}500\,(P/G,\ 9\%,\ 6) = 74\mathord{,}579.79
+</annotation></semantics></math></p>
+<p>الإيراد في السنة الأخيرة 12,500 دينار.</p>
+</div>
+<div id="ex-2-17" class="ee-item" data-id="c02-ex-gradient-shift" data-kind="example" data-label="2.17">
+<p><strong>مثال 2.17: تدرج يبدأ بعد سنوات</strong></p>
+<p>تكاليف تشغيل خط جديد تبدأ في نهاية السنة 3 بمبلغ 1,000 دينار، وتزيد 200 دينار كل سنة، وتستمر 6 سنوات. ما قيمتها الحالية بنسبة 8%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex17.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>معاملا P/A وP/G يضعان القيمة قبل الدفعة الأولى بسنة، أي في السنة 2:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>200</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><mi>,</mi><mn>727.53</mn></mrow><annotation encoding="application/x-tex">
+P_{2} = 1\mathord{,}000\,(P/A,\ 8\%,\ 6) + 200\,(P/G,\ 8\%,\ 6) = 6\mathord{,}727.53
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>=</mo><mn>6</mn><mi>,</mi><mn>727.53</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>767.78</mn></mrow><annotation encoding="application/x-tex">
+P_0 = 6\mathord{,}727.53\,(P/F,\ 8\%,\ 2) = 5\mathord{,}767.78
+</annotation></semantics></math></p>
+</div>
+</section>
+<section id="sec-2-geometric" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sec-2-geometric"><span class="header-section-number">2.8</span> الدفعات المتدرجة نسبيا</h2>
+<p>في هذه السلسلة تزيد الدفعة كل سنة بنسبة ثابتة g. الدفعة في السنة t هي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
+A_t = A_1\,(1 + g)^{t-1}
+</annotation></semantics></math></p>
+<p>الرواتب وأسعار الطاقة أمثلة شائعة.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>g</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup></mrow><mrow><mi>i</mi><mo>−</mo><mi>g</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>i</mi><mo>≠</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+P = A_1\,\frac{1 - \left(\frac{1+g}{1+i}\right)^n}{i - g}, \qquad i \neq g
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mspace width="0.167em"></mspace><msub><mi>A</mi><mn>1</mn></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>i</mi><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+P = \frac{n\,A_1}{1+i}, \qquad i = g
+</annotation></semantics></math></p>
+<div id="ex-2-18" class="ee-item" data-id="c02-ex-geometric" data-kind="example" data-label="2.18">
+<p><strong>مثال 2.18: تكلفة كهرباء ترتفع بنسبة ثابتة</strong></p>
+<p>تكلفة الكهرباء في ورشة 4,000 دينار في السنة الأولى، ويتوقع أن ترتفع 6% سنويا لمدة 10 سنوات. ما القيمة الحالية لتكاليف الكهرباء بنسبة 10%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex18.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>g</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup></mrow><mrow><mi>i</mi><mo>−</mo><mi>g</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+P = A_1\,\frac{1 - \left(\frac{1+g}{1+i}\right)^n}{i - g}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.1</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>10</mn></msup><mo>=</mo><mn>0.6904</mn></mrow><annotation encoding="application/x-tex">
+\left(\frac{1 + 0.06}{1 + 0.1}\right)^{10} = 0.6904
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>×</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mn>0.6904</mn></mrow><mrow><mn>0.1</mn><mo>−</mo><mn>0.06</mn></mrow></mfrac><mo>=</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>7.7388</mn><mo>=</mo><mn>30</mn><mi>,</mi><mn>955.07</mn></mrow><annotation encoding="application/x-tex">
+P = 4\mathord{,}000 \times \frac{1 - 0.6904}{0.1 - 0.06} = 4\mathord{,}000 \times 7.7388 = 30\mathord{,}955.07
+</annotation></semantics></math></p>
+<p>التكلفة في السنة الأخيرة 6,757.92 دينار. لا توجد جداول لهذا المعامل لأن فيه متغيرا ثالثا. في Excel اكتب الصيغة التالية في الخلية B2 واسحبها حتى السنة 10، ثم استخدم NPV:</p>
+<pre class="excel"><code>=4000*(1+6%)^(A2-1)</code></pre>
+</div>
+<div id="ex-2-19" class="ee-item" data-id="c02-ex-geometric-equal" data-kind="example" data-label="2.19">
+<p><strong>مثال 2.19: عندما تتساوى نسبة النمو ونسبة الفائدة</strong></p>
+<p>دفعة سنوية تبدأ بـ 5,000 دينار وتزيد 8% سنويا لمدة 6 سنوات. ما قيمتها الحالية إذا كانت الفائدة أيضا 8%؟</p>
+<p><strong>الحل:</strong></p>
+<p>القانون العام يقسم على صفر عندما تتساوى النسبتان. في هذه الحالة كل دفعة تكافئ في السنة 0 نفس المبلغ:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mfrac><msub><mi>A</mi><mn>1</mn></msub><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{A_1(1+g)^{t-1}}{(1+i)^t} = \frac{A_1}{1+i}
+</annotation></semantics></math></p>
+<p>فالقيمة الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mspace width="0.167em"></mspace><msub><mi>A</mi><mn>1</mn></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>6</mn><mo>×</mo><mn>5</mn><mi>,</mi><mn>000</mn></mrow><mn>1.08</mn></mfrac><mo>=</mo><mn>27</mn><mi>,</mi><mn>777.78</mn></mrow><annotation encoding="application/x-tex">
+P = \frac{n\,A_1}{1+i} = \frac{6 \times 5\mathord{,}000}{1.08} = 27\mathord{,}777.78
+</annotation></semantics></math></p>
+</div>
+</section>
+<section id="sec-2-npv" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="sec-2-npv"><span class="header-section-number">2.9</span> تدفقات غير منتظمة</h2>
+<p>عندما لا تتبع التدفقات أي نمط، اكتبها في عمود واحسب قيمتها الحالية بالدالة NPV. هذه الطريقة تعمل مع كل الحالات السابقة أيضا، ولذلك هي الطريقة العملية في الشركات.</p>
+<div id="ex-2-20" class="ee-item" data-id="c02-ex-irregular" data-kind="example" data-label="2.20">
+<p><strong>مثال 2.20: تدفقات غير منتظمة بالدالة NPV</strong></p>
+<p>مشروع يكلف 50,000 دينار، وإيراداته 12,000 دينار في السنة 1، و15,000 دينار في كل من السنوات 2 و3 و4، و20,000 دينار في السنة 5. ما صافي القيمة الحالية بنسبة 10%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-ex20.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><strong>الحل:</strong></p>
+<p>نستطيع الحل بالمعاملات: السنوات 2 إلى 4 سلسلة متساوية، المعامل P/A يضع قيمتها في السنة 1:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mn>10</mn><mi>%</mi><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mn>10</mn><mi>%</mi><mo>,</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mn>10</mn><mi>%</mi><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mn>10</mn><mi>%</mi><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = -50\mathord{,}000 + 12\mathord{,}000(P/F,10\%,1) + 15\mathord{,}000(P/A,10\%,3)(P/F,10\%,1) + 20\mathord{,}000(P/F,10\%,5)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>10</mn><mi>,</mi><mn>909.09</mn><mo>+</mo><mn>33</mn><mi>,</mi><mn>911.62</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>418.43</mn><mo>=</mo><mn>7</mn><mi>,</mi><mn>239.14</mn></mrow><annotation encoding="application/x-tex">
+P = -50\mathord{,}000 + 10\mathord{,}909.09 + 33\mathord{,}911.62 + 12\mathord{,}418.43 = 7\mathord{,}239.14
+</annotation></semantics></math></p>
+<p>الطريقة الأسهل في Excel: اكتب التدفقات في الخلايا من B1 إلى B6. الدالة NPV تبدأ من السنة 1، فتدفق السنة 0 يجمع خارجها:</p>
+<pre class="excel"><code>=B1 + NPV(10%, B2:B6)</code></pre>
+<p>وفي Python الدالة npv تبدأ من السنة 0:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [ <span class="op">-</span><span class="dv">50000</span>, <span class="dv">12000</span>, <span class="dv">15000</span>, <span class="dv">15000</span>, <span class="dv">15000</span>, <span class="dv">20000</span> ]</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.npv(<span class="fl">0.1</span>, flows), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>صافي القيمة الحالية 7,239.14 دينار.</p>
+</div>
+<p>انتبه لفرق مهم: الدالة NPV في Excel تفترض أن أول قيمة في النطاق في السنة 1، أما الدالة npv في numpy_financial فتفترض أن أول قيمة في السنة 0.</p>
+</section>
+<section id="sec-2-python" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="sec-2-python"><span class="header-section-number">2.10</span> Python: جدول إطفاء قرض</h2>
+<p>حلقة تكرار تبني جدول الإطفاء سنة بسنة. غير المدخلات في أول سطرين لأي قرض:</p>
+<div id="ff04f15e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>P, i, n <span class="op">=</span> <span class="dv">30000</span>, <span class="fl">0.08</span>, <span class="dv">5</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> npf.pmt(i, n, <span class="op">-</span>P)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>balance <span class="op">=</span> P</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"year  interest  principal  balance"</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    interest <span class="op">=</span> balance <span class="op">*</span> i</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    principal <span class="op">=</span> A <span class="op">-</span> interest</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    balance <span class="op">=</span> balance <span class="op">-</span> principal</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>year<span class="sc">:4d}</span><span class="ss"> </span><span class="sc">{</span>interest<span class="sc">:9.2f}</span><span class="ss"> </span><span class="sc">{</span>principal<span class="sc">:10.2f}</span><span class="ss"> </span><span class="sc">{</span>balance<span class="sc">:9.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>year  interest  principal  balance
+   1   2400.00    5113.69  24886.31
+   2   1990.90    5522.79  19363.52
+   3   1549.08    5964.61  13398.90
+   4   1071.91    6441.78   6957.12
+   5    556.57    6957.12      0.00</code></pre>
+</div>
+</div>
+<p>والقيمة الحالية لتكاليف متدرجة بدون جداول:</p>
+<div id="8e1edcb6" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>A1, G, n, i <span class="op">=</span> <span class="dv">1500</span>, <span class="dv">300</span>, <span class="dv">8</span>, <span class="fl">0.10</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>costs <span class="op">=</span> [A1 <span class="op">+</span> G <span class="op">*</span> (t <span class="op">-</span> <span class="dv">1</span>) <span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>)]</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(costs)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.npv(i, [<span class="dv">0</span>] <span class="op">+</span> costs), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1500, 1800, 2100, 2400, 2700, 3000, 3300, 3600]
+12810.99</code></pre>
+</div>
+</div>
+<p>القائمة تبدأ بصفر للسنة 0، لأن الدالة npv تبدأ من السنة 0.</p>
+</section>
+<section id="sec-2-summary" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="sec-2-summary"><span class="header-section-number">2.11</span> ملخص الفصل</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السلسلة</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>متساوية</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P = A\,(P/A,\ i,\ n)</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td>متدرجة خطيا</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P = A_1(P/A,\ i,\ n) + G(P/G,\ i,\ n)</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td>متدرجة نسبيا</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo stretchy="false" form="postfix">]</mo><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>−</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P = A_1\,[1 - ((1+g)/(1+i))^n]/(i-g)</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>المعامل P/A يضع القيمة قبل الدفعة الأولى بسنة، والمعامل F/A يضعها مع الدفعة الأخيرة.</li>
+<li>السلسلة المؤجلة: طبق المعامل ثم انقل النتيجة.</li>
+<li>عند الشك، اكتب التدفقات في عمود واستخدم NPV.</li>
+</ul>
+</section>
+<section id="sec-2-problems" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="sec-2-problems"><span class="header-section-number">2.12</span> مسائل الفصل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-2-1" class="ee-item" data-id="c02-a-01" data-kind="problem" data-label="2.1">
+<p><strong>2.1</strong> في السلسلة المتساوية الأساسية، في أي سنة تقع القيمة الحالية P؟ وفي أي سنة تقع القيمة المستقبلية F؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-1">الحل</a></span></p>
+</div>
+<div id="prob-2-2" class="ee-item" data-id="c02-a-02" data-kind="problem" data-label="2.2">
+<p><strong>2.2</strong> ما العلاقة بين المعاملين A/P وP/A؟ وما فائدتها عند استخدام الجداول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-2">الحل</a></span></p>
+</div>
+<div id="prob-2-3" class="ee-item" data-id="c02-a-03" data-kind="problem" data-label="2.3">
+<p><strong>2.3</strong> لماذا تقل الفائدة في كل قسط من أقساط القرض كلما تقدمت السنوات، مع أن القسط ثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-3">الحل</a></span></p>
+</div>
+<div id="prob-2-4" class="ee-item" data-id="c02-a-04" data-kind="problem" data-label="2.4">
+<p><strong>2.4</strong> سلسلة دفعات تبدأ في نهاية السنة 5 وتنتهي في نهاية السنة 12. في أي سنة يضع المعامل P/A قيمتها؟ وفي أي سنة يضع المعامل F/A قيمتها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-4">الحل</a></span></p>
+</div>
+<div id="prob-2-5" class="ee-item" data-id="c02-a-05" data-kind="problem" data-label="2.5">
+<p><strong>2.5</strong> ما الفرق بين سلسلة دفعات في نهاية السنة وسلسلة في بدايتها؟ أيهما قيمتها الحالية أكبر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-5">الحل</a></span></p>
+</div>
+<div id="prob-2-6" class="ee-item" data-id="c02-a-06" data-kind="problem" data-label="2.6">
+<p><strong>2.6</strong> في السلسلة المتدرجة خطيا، كم تساوي الدفعة التي يغطيها المعامل P/G في السنة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-6">الحل</a></span></p>
+</div>
+<div id="prob-2-7" class="ee-item" data-id="c02-a-07" data-kind="problem" data-label="2.7">
+<p><strong>2.7</strong> متى تستخدم الدالة NPV بدل المعاملات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-7">الحل</a></span></p>
+</div>
+<div id="prob-2-8" class="ee-item" data-id="c02-a-08" data-kind="problem" data-label="2.8">
+<p><strong>2.8</strong> موظف يدخر مبلغا ثابتا كل سنة. لماذا يكون رصيده في النهاية أكبر من مجموع ما أودعه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-8">الحل</a></span></p>
+</div>
+<div id="prob-2-9" class="ee-item" data-id="c02-a-09" data-kind="problem" data-label="2.9">
+<p><strong>2.9</strong> في السلسلة المتدرجة نسبيا، لماذا لا يوجد جدول معاملات في الملحق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-9">الحل</a></span></p>
+</div>
+<div id="prob-2-10" class="ee-item" data-id="c02-a-10" data-kind="problem" data-label="2.10">
+<p><strong>2.10</strong> قرض بدفعات سنوية متساوية. المقترض لا يستطيع أن يدفع أكثر من فائدة السنة الأولى. ماذا يحدث للقرض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-10">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-الأقساط-والقيمة-الحالية-لسلسلة-دفعات" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-الأقساط-والقيمة-الحالية-لسلسلة-دفعات">الجزء ب: الأقساط والقيمة الحالية لسلسلة دفعات</h3>
+<p>هذه المسائل تستخدم المعاملين A/P وP/A.</p>
+<div id="prob-2-11" class="ee-item" data-id="c02-b-01" data-kind="problem" data-label="2.11">
+<p><strong>2.11</strong> اقترض مهندس 45,000 دينار لشراء معدات، بفائدة 9% سنويا لمدة 5 سنوات. ما القسط السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-11">الحل</a></span></p>
+</div>
+<div id="prob-2-12" class="ee-item" data-id="c02-b-02" data-kind="problem" data-label="2.12">
+<p><strong>2.12</strong> سعر سيارة 60,000 دينار. دفع المشتري 15,000 دينار نقدا، وقسط الباقي على 4 سنوات بفائدة 10%. ما القسط السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-12">الحل</a></span></p>
+</div>
+<div id="prob-2-13" class="ee-item" data-id="c02-b-03" data-kind="problem" data-label="2.13">
+<p><strong>2.13</strong> آلة توفر على مصنع 8,000 دينار سنويا لمدة 6 سنوات. ما أعلى سعر يدفعه المصنع اليوم إذا كان الحد الأدنى للعائد 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-13">الحل</a></span></p>
+</div>
+<div id="prob-2-14" class="ee-item" data-id="c02-b-04" data-kind="problem" data-label="2.14">
+<p><strong>2.14</strong> في المسألة الأولى من هذا الجزء، احسب الفائدة وسداد الأصل في السنتين الأولى والثانية لقرض 45,000 دينار بفائدة 9% لمدة 5 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-14">الحل</a></span></p>
+</div>
+<div id="prob-2-15" class="ee-item" data-id="c02-b-05" data-kind="problem" data-label="2.15">
+<p><strong>2.15</strong> يعرض محل جهازا بأقساط 1,500 دينار سنويا لمدة 4 سنوات. ما السعر النقدي العادل إذا كانت الفائدة 8%؟ وكم يدفع المشتري زيادة إذا اختار الأقساط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-15">الحل</a></span></p>
+</div>
+<div id="prob-2-16" class="ee-item" data-id="c02-b-06" data-kind="problem" data-label="2.16">
+<p><strong>2.16</strong> قرض لشراء مستودع 200,000 دينار بفائدة 7% لمدة 15 سنة. ما القسط السنوي؟ وما مجموع الفوائد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-16">الحل</a></span></p>
+</div>
+<div id="prob-2-17" class="ee-item" data-id="c02-b-07" data-kind="problem" data-label="2.17">
+<p><strong>2.17</strong> قارن قرضا بمبلغ 50,000 دينار بفائدة 8% يسدد على 5 سنوات وقرضا بنفس المبلغ يسدد على 10 سنوات. ما القسط ومجموع الفوائد في كل حالة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-17">الحل</a></span></p>
+</div>
+<div id="prob-2-18" class="ee-item" data-id="c02-b-08" data-kind="problem" data-label="2.18">
+<p><strong>2.18</strong> تستطيع بلدية أن تخصص 12,000 دينار سنويا لمدة 8 سنوات لسداد قرض لمشروع تعبيد. ما أكبر قرض تستطيع أخذه بفائدة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-18">الحل</a></span></p>
+</div>
+<div id="prob-2-19" class="ee-item" data-id="c02-b-09" data-kind="problem" data-label="2.19">
+<p><strong>2.19</strong> احسب المعاملين A/P وA/F عند 9% و10 سنوات، وتحقق من العلاقة بينهما.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-19">الحل</a></span></p>
+</div>
+<div id="prob-2-20" class="ee-item" data-id="c02-b-10" data-kind="problem" data-label="2.20">
+<p><strong>2.20</strong> ربح شخص جائزة تدفع 3,500 دينار سنويا لمدة 20 سنة، أو مبلغا واحدا اليوم. ما أقل مبلغ واحد يقبله إذا كان يستطيع استثمار المال بعائد 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-20">الحل</a></span></p>
+</div>
+<div id="prob-2-21" class="ee-item" data-id="c02-b-11" data-kind="problem" data-label="2.21">
+<p><strong>2.21</strong> قرض سكن 120,000 دينار بفائدة 6.5% لمدة 12 سنة. ما القسط السنوي؟ وكم في المئة من القسط الأول يذهب إلى سداد الأصل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-21">الحل</a></span></p>
+</div>
+<div id="prob-2-22" class="ee-item" data-id="c02-b-12" data-kind="problem" data-label="2.22">
+<p><strong>2.22</strong> نظام تبريد يكلف 26,000 دينار، ويوفر 6,000 دينار سنويا لمدة 7 سنوات. هل يستحق الاستثمار بحد أدنى 11%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-22">الحل</a></span></p>
+</div>
+<div id="prob-2-23" class="ee-item" data-id="c02-b-13" data-kind="problem" data-label="2.23">
+<p><strong>2.23</strong> قرض 30,000 دينار بفائدة 8% لمدة 5 سنوات. بعد دفع القسط رقم 2، أراد المقترض سداد الباقي دفعة واحدة. كم يدفع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-23">الحل</a></span></p>
+</div>
+<div id="prob-2-24" class="ee-item" data-id="c02-b-14" data-kind="problem" data-label="2.24">
+<p><strong>2.24</strong> معرض يعرض سيارة بمبلغ 15,000 دينار نقدا، أو 4,000 دينار سنويا لمدة 5 سنوات. ما المعامل P/A الذي يجعل العرضين متساويين؟ وما الدالة التي تعطي نسبة الفائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-24">الحل</a></span></p>
+</div>
+<div id="prob-2-25" class="ee-item" data-id="c02-b-15" data-kind="problem" data-label="2.25">
+<p><strong>2.25</strong> احسب القيمة الحالية لدفعة 2,500 دينار سنويا بنسبة 7% لمدة 5 و10 و20 و40 سنة. ماذا تلاحظ؟ إلى أي رقم تقترب القيم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-25">الحل</a></span></p>
+</div>
+<div id="prob-2-26" class="ee-item" data-id="c02-b-16" data-kind="problem" data-label="2.26">
+<p><strong>2.26</strong> احسب قسط قرض 25,000 دينار بفائدة 10% لمدة 4 سنوات من جدول P/A في الملحق، ثم بالقانون. ما الفرق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-26">الحل</a></span></p>
+</div>
+<div id="prob-2-27" class="ee-item" data-id="c02-b-17" data-kind="problem" data-label="2.27">
+<p><strong>2.27</strong> أيهما أكبر، القيمة الحالية لدفعة 900 دينار لمدة 3 سنوات أم لمدة 6 سنوات؟ هل تضاعف القيمة بمضاعفة عدد السنوات؟ الفائدة 9%.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-27">الحل</a></span></p>
+</div>
+<div id="prob-2-28" class="ee-item" data-id="c02-b-18" data-kind="problem" data-label="2.28">
+<p><strong>2.28</strong> بنك يقرض 40,000 دينار على 5 سنوات بقسط 11,000 دينار سنويا. اكتب صيغة Excel وسطر Python يحسبان نسبة الفائدة التي يأخذها البنك.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-28">الحل</a></span></p>
+</div>
+<div id="prob-2-29" class="ee-item" data-id="c02-b-19" data-kind="problem" data-label="2.29">
+<p><strong>2.29</strong> مشروع يكلف 40,000 دينار ويعطي 7,000 دينار سنويا لمدة 10 سنوات. قارن الإيراد السنوي بالتكلفة السنوية المكافئة للاستثمار بنسبة 10%. هل المشروع مقبول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-29">الحل</a></span></p>
+</div>
+<div id="prob-2-30" class="ee-item" data-id="c02-b-20" data-kind="problem" data-label="2.30">
+<p><strong>2.30</strong> قرض 18,000 دينار بفائدة 12%. قارن طريقتين للسداد، أقساطا متساوية لمدة 3 سنوات أو دفعة واحدة في نهاية المدة. بين أن الطريقتين متكافئتان.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-30">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-الادخار-والقيمة-المستقبلية-لسلسلة-دفعات" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-الادخار-والقيمة-المستقبلية-لسلسلة-دفعات">الجزء ج: الادخار والقيمة المستقبلية لسلسلة دفعات</h3>
+<p>هذه المسائل تستخدم المعاملين F/A وA/F.</p>
+<div id="prob-2-31" class="ee-item" data-id="c02-c-01" data-kind="problem" data-label="2.31">
+<p><strong>2.31</strong> يدخر طالب 300 دينار في نهاية كل سنة لمدة 15 سنة في حساب يعطي 6% سنويا. كم يصبح في الحساب بعد الإيداع الأخير؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-31">الحل</a></span></p>
+</div>
+<div id="prob-2-32" class="ee-item" data-id="c02-c-02" data-kind="problem" data-label="2.32">
+<p><strong>2.32</strong> تحتاج شركة 60,000 دينار بعد 8 سنوات لاستبدال آلة. كم تودع سنويا في حساب يعطي 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-32">الحل</a></span></p>
+</div>
+<div id="prob-2-33" class="ee-item" data-id="c02-c-03" data-kind="problem" data-label="2.33">
+<p><strong>2.33</strong> تودع نقابة 5,000 دينار سنويا في صندوق طوارئ يعطي 5% لمدة 10 سنوات. كم يصبح الصندوق؟ وكم في المئة منه فوائد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-33">الحل</a></span></p>
+</div>
+<div id="prob-2-34" class="ee-item" data-id="c02-c-04" data-kind="problem" data-label="2.34">
+<p><strong>2.34</strong> كم يجمع شخص يدخر 2,000 دينار سنويا بعائد 8% خلال 10 و20 و30 سنة؟ لماذا لا يتضاعف الرصيد بمضاعفة المدة فقط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-34">الحل</a></span></p>
+</div>
+<div id="prob-2-35" class="ee-item" data-id="c02-c-05" data-kind="problem" data-label="2.35">
+<p><strong>2.35</strong> تريد عائلة أن تجمع 30,000 دينار لترميم بيتها بعد 6 سنوات. كم تودع سنويا بفائدة 6%؟ وكم توفر مقارنة بالادخار بدون فائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-35">الحل</a></span></p>
+</div>
+<div id="prob-2-36" class="ee-item" data-id="c02-c-06" data-kind="problem" data-label="2.36">
+<p><strong>2.36</strong> كم سنة يحتاج شخص يدخر 1,200 دينار سنويا ليجمع 20,000 دينار بعائد 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-36">الحل</a></span></p>
+</div>
+<div id="prob-2-37" class="ee-item" data-id="c02-c-07" data-kind="problem" data-label="2.37">
+<p><strong>2.37</strong> تحقق بالأرقام أن المعامل F/A يساوي حاصل ضرب المعاملين P/A وF/P، عند 9% و12 سنة. ثم احسب القيمة المستقبلية لدفعة 4,000 دينار.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-37">الحل</a></span></p>
+</div>
+<div id="prob-2-38" class="ee-item" data-id="c02-c-08" data-kind="problem" data-label="2.38">
+<p><strong>2.38</strong> يريد شاب أن يجمع 1,000,000 دينار قبل تقاعده بعد 30 سنة. كم يدخر سنويا بعائد 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-38">الحل</a></span></p>
+</div>
+<div id="prob-2-39" class="ee-item" data-id="c02-c-09" data-kind="problem" data-label="2.39">
+<p><strong>2.39</strong> أخوان يدخر كل منهما 2,500 دينار سنويا بعائد 7%. الأول يدخر في أول 10 سنوات ثم يتوقف ويترك رصيده، والثاني يبدأ بعد 10 سنوات ويدخر 10 سنوات. من رصيده أكبر في نهاية السنة 20؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-39">الحل</a></span></p>
+</div>
+<div id="prob-2-40" class="ee-item" data-id="c02-c-10" data-kind="problem" data-label="2.40">
+<p><strong>2.40</strong> يريد شخص أن يجمع 15,000 دينار بإيداع 2,000 دينار سنويا لمدة 6 سنوات. ما نسبة العائد التي يحتاجها؟ اكتب صيغة Excel.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-40">الحل</a></span></p>
+</div>
+<div id="prob-2-41" class="ee-item" data-id="c02-c-11" data-kind="problem" data-label="2.41">
+<p><strong>2.41</strong> في حساب توفير 3,000 دينار اليوم. صاحبه سيودع 750 دينار في نهاية كل سنة لمدة 8 سنوات. كم يصبح الرصيد بفائدة 5%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-41">الحل</a></span></p>
+</div>
+<div id="prob-2-42" class="ee-item" data-id="c02-c-12" data-kind="problem" data-label="2.42">
+<p><strong>2.42</strong> لدى صندوق 10,000 دينار، والهدف 50,000 دينار بعد 10 سنوات. كم يودع سنويا بفائدة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-42">الحل</a></span></p>
+</div>
+<div id="prob-2-43" class="ee-item" data-id="c02-c-13" data-kind="problem" data-label="2.43">
+<p><strong>2.43</strong> احسب القيمة المستقبلية لإيداع 1,000 دينار سنويا لمدة 5 سنوات بنسبة 10%، مرة بالمعامل F/A ومرة بنقل كل إيداع وحده. كم يساهم الإيداع الأول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-43">الحل</a></span></p>
+</div>
+<div id="prob-2-44" class="ee-item" data-id="c02-c-14" data-kind="problem" data-label="2.44">
+<p><strong>2.44</strong> قارن رصيد من يودع 3,000 دينار في بداية كل سنة لمدة 10 سنوات برصيد من يودع في نهايتها، بفائدة 7%، في نهاية السنة 10.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-44">الحل</a></span></p>
+</div>
+<div id="prob-2-45" class="ee-item" data-id="c02-c-15" data-kind="problem" data-label="2.45">
+<p><strong>2.45</strong> يريد شخص أن يجمع 25,000 دينار بعد 10 سنوات. كم يودع سنويا بعائد 4%؟ وكم بعائد 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-45">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-السلاسل-المؤجلة-والمركبة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-السلاسل-المؤجلة-والمركبة">الجزء د: السلاسل المؤجلة والمركبة</h3>
+<p>ارسم مخطط التدفق النقدي، وحدد أين يضع كل معامل قيمته قبل أن تبدأ.</p>
+<div id="prob-2-46" class="ee-item" data-id="c02-d-01" data-kind="problem" data-label="2.46">
+<p><strong>2.46</strong> يريد أب أن يدفع رسوم جامعة ابنه، 5,000 دينار سنويا لمدة 4 سنوات، أول دفعة في نهاية السنة 10 من اليوم. كم يستثمر اليوم بعائد 6% ليغطي الرسوم؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-p046.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><span class="ee-sol-link"><a href="#sol-2-46">الحل</a></span></p>
+</div>
+<div id="prob-2-47" class="ee-item" data-id="c02-d-02" data-kind="problem" data-label="2.47">
+<p><strong>2.47</strong> إيرادات مشروع 3,000 دينار سنويا من نهاية السنة 3 حتى نهاية السنة 8. ما قيمتها في نهاية السنة 8 بنسبة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-47">الحل</a></span></p>
+</div>
+<div id="prob-2-48" class="ee-item" data-id="c02-d-03" data-kind="problem" data-label="2.48">
+<p><strong>2.48</strong> احسب القيمة الحالية للسلسلة في المسألة السابقة بطريقتين: بالمعامل P/A ثم P/F، وبالمعامل F/A ثم P/F. تأكد أن الطريقتين تعطيان نفس الجواب.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-48">الحل</a></span></p>
+</div>
+<div id="prob-2-49" class="ee-item" data-id="c02-d-04" data-kind="problem" data-label="2.49">
+<p><strong>2.49</strong> مشروع يكلف 70,000 دينار، ويعطي 15,000 دينار سنويا لمدة 8 سنوات، وقيمة بيع في النهاية 10,000 دينار. ما صافي القيمة الحالية بنسبة 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-49">الحل</a></span></p>
+</div>
+<div id="prob-2-50" class="ee-item" data-id="c02-d-05" data-kind="problem" data-label="2.50">
+<p><strong>2.50</strong> عقد صيانة يدفع 2,000 دينار سنويا في أول 4 سنوات، ثم 5,000 دينار سنويا حتى نهاية السنة 10. ما القيمة الحالية للعقد بنسبة 8%؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-p050.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><span class="ee-sol-link"><a href="#sol-2-50">الحل</a></span></p>
+</div>
+<div id="prob-2-51" class="ee-item" data-id="c02-d-06" data-kind="problem" data-label="2.51">
+<p><strong>2.51</strong> حل المسألة السابقة بطريقة أخرى: اعتبر أن 5,000 دينار تدفع كل السنوات من 1 إلى 10، ثم اطرح الفرق في السنوات الأولى.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-51">الحل</a></span></p>
+</div>
+<div id="prob-2-52" class="ee-item" data-id="c02-d-07" data-kind="problem" data-label="2.52">
+<p><strong>2.52</strong> قرض 80,000 دينار بفائدة 10% فيه فترة سماح سنتين، لا يدفع فيها شيء وتتراكم الفائدة. بعدها يسدد بأقساط متساوية لمدة 6 سنوات. ما القسط؟</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_generated/fig/ch02-p052.svg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>مخطط التدفق النقدي</figcaption>
+</figure>
+</div>
+<p><span class="ee-sol-link"><a href="#sol-2-52">الحل</a></span></p>
+</div>
+<div id="prob-2-53" class="ee-item" data-id="c02-d-08" data-kind="problem" data-label="2.53">
+<p><strong>2.53</strong> يودع موظف 1,500 دينار في نهاية كل سنة لمدة 10 سنوات، لكنه توقف عن الإيداع في السنوات من 3 إلى 6. ما رصيده في نهاية السنة 10 بفائدة 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-53">الحل</a></span></p>
+</div>
+<div id="prob-2-54" class="ee-item" data-id="c02-d-09" data-kind="problem" data-label="2.54">
+<p><strong>2.54</strong> قرض 100,000 دينار بفائدة 7% يسدد بأقساط سنوية متساوية لمدة 10 سنوات، إضافة إلى دفعة خاصة 30,000 دينار في نهاية السنة 5. ما القسط السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-54">الحل</a></span></p>
+</div>
+<div id="prob-2-55" class="ee-item" data-id="c02-d-10" data-kind="problem" data-label="2.55">
+<p><strong>2.55</strong> رسوم برنامج تدريب 6,000 دينار سنويا لمدة 5 سنوات تدفع في بداية كل سنة. ما قيمتها الحالية بنسبة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-55">الحل</a></span></p>
+</div>
+<div id="prob-2-56" class="ee-item" data-id="c02-d-11" data-kind="problem" data-label="2.56">
+<p><strong>2.56</strong> سعر شاحنة 50,000 دينار. البائع يقبل دفعة أولى، ثم 9,000 دينار سنويا لمدة 8 سنوات بفائدة 10%. ما الدفعة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-56">الحل</a></span></p>
+</div>
+<div id="prob-2-57" class="ee-item" data-id="c02-d-12" data-kind="problem" data-label="2.57">
+<p><strong>2.57</strong> خطتا دفع لنفس الخدمة: 4,000 دينار سنويا في السنوات من 1 إلى 6، أو 6,000 دينار سنويا في السنوات من 7 إلى 12. أيهما أقل تكلفة بنسبة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-57">الحل</a></span></p>
+</div>
+<div id="prob-2-58" class="ee-item" data-id="c02-d-13" data-kind="problem" data-label="2.58">
+<p><strong>2.58</strong> يريد شخص أن يجمع 40,000 دينار بعد 10 سنوات. سيودع 2,500 دينار سنويا، ويريد أن يودع مبلغا إضافيا اليوم ليصل إلى الهدف. كم المبلغ الإضافي بفائدة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-58">الحل</a></span></p>
+</div>
+<div id="prob-2-59" class="ee-item" data-id="c02-d-14" data-kind="problem" data-label="2.59">
+<p><strong>2.59</strong> يدخر شخص 10,000 دينار سنويا لمدة 4 سنوات، ثم يترك الرصيد 3 سنوات، ثم يسحبه بدفعات سنوية متساوية لمدة 4 سنوات. كم يسحب سنويا بفائدة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-59">الحل</a></span></p>
+</div>
+<div id="prob-2-60" class="ee-item" data-id="c02-d-15" data-kind="problem" data-label="2.60">
+<p><strong>2.60</strong> سلسلة 800 دينار سنويا من السنة 1 إلى السنة 12 بفائدة 5%. ما قيمتها المكافئة في السنة 0؟ في السنة 12؟ في السنة 5؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-60">الحل</a></span></p>
+</div>
+<div id="prob-2-61" class="ee-item" data-id="c02-d-16" data-kind="problem" data-label="2.61">
+<p><strong>2.61</strong> قرض 25,000 دينار بفائدة 7%، يسدد بدفعة 4,000 دينار سنويا حتى ينتهي. كم دفعة كاملة؟ وما قيمة الدفعة الأخيرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-61">الحل</a></span></p>
+</div>
+<div id="prob-2-62" class="ee-item" data-id="c02-d-17" data-kind="problem" data-label="2.62">
+<p><strong>2.62</strong> يتوقع مصنع تكاليف إضافية 12,000 دينار سنويا لمدة 5 سنوات تبدأ في نهاية السنة 3. يريد أن يجمع اليوم مبلغا في حساب بفائدة 10% يغطيها. كم المبلغ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-62">الحل</a></span></p>
+</div>
+<div id="prob-2-63" class="ee-item" data-id="c02-d-18" data-kind="problem" data-label="2.63">
+<p><strong>2.63</strong> محطة طاقة شمسية لمصنع تكلف 300,000 دينار، وتوفر 45,000 دينار سنويا لمدة 15 سنة. حول التكلفة إلى مبلغ سنوي مكافئ بنسبة 10%، وقارنه بالتوفير.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-63">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-الدفعات-المتدرجة-خطيا" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-الدفعات-المتدرجة-خطيا">الجزء هـ: الدفعات المتدرجة خطيا</h3>
+<div id="prob-2-64" class="ee-item" data-id="c02-e-01" data-kind="problem" data-label="2.64">
+<p><strong>2.64</strong> تكلفة تشغيل شاحنة 2,000 دينار في السنة الأولى، وتزيد 250 دينار كل سنة لمدة 10 سنوات. نسبة الفائدة 8%. أوجد القيمة الحالية والتكلفة السنوية المكافئة.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-64">الحل</a></span></p>
+</div>
+<div id="prob-2-65" class="ee-item" data-id="c02-e-02" data-kind="problem" data-label="2.65">
+<p><strong>2.65</strong> إيراد منتج 20,000 دينار في السنة الأولى، ويقل 1,000 دينار كل سنة لمدة 6 سنوات. ما القيمة الحالية للإيرادات بنسبة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-65">الحل</a></span></p>
+</div>
+<div id="prob-2-66" class="ee-item" data-id="c02-e-03" data-kind="problem" data-label="2.66">
+<p><strong>2.66</strong> سلسلة متدرجة فقط: صفر في السنة 1، و500 في السنة 2، وتزيد 500 كل سنة حتى السنة 5. احسب قيمتها الحالية بالمعامل P/G، ثم بنقل كل دفعة وحدها. الفائدة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-66">الحل</a></span></p>
+</div>
+<div id="prob-2-67" class="ee-item" data-id="c02-e-04" data-kind="problem" data-label="2.67">
+<p><strong>2.67</strong> سلسلة تبدأ بـ 1,000 دينار وتزيد 200 كل سنة لمدة 8 سنوات. ما الدفعة في السنة الأخيرة؟ وما مجموع الدفعات بدون فائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-67">الحل</a></span></p>
+</div>
+<div id="prob-2-68" class="ee-item" data-id="c02-e-05" data-kind="problem" data-label="2.68">
+<p><strong>2.68</strong> إيداعات سنوية تبدأ بـ 3,000 دينار وتزيد 400 كل سنة لمدة 7 سنوات. كم يصبح الرصيد بعد الإيداع الأخير بفائدة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-68">الحل</a></span></p>
+</div>
+<div id="prob-2-69" class="ee-item" data-id="c02-e-06" data-kind="problem" data-label="2.69">
+<p><strong>2.69</strong> خياران لصيانة مبنى: عقد بقيمة ثابتة 8,000 دينار سنويا، أو دفع التكلفة الفعلية التي تبدأ بـ 5,000 دينار وتزيد 500 كل سنة. المدة 6 سنوات والفائدة 8%. أي الخيارين أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-69">الحل</a></span></p>
+</div>
+<div id="prob-2-70" class="ee-item" data-id="c02-e-07" data-kind="problem" data-label="2.70">
+<p><strong>2.70</strong> قرض 30,000 دينار بفائدة 10% يسدد بدفعات تبدأ بـ 4,000 دينار وتزيد بمقدار ثابت كل سنة لمدة 6 سنوات. ما مقدار الزيادة السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-70">الحل</a></span></p>
+</div>
+<div id="prob-2-71" class="ee-item" data-id="c02-e-08" data-kind="problem" data-label="2.71">
+<p><strong>2.71</strong> قرض 40,000 دينار بفائدة 9% يسدد بدفعات تزيد 600 دينار كل سنة لمدة 8 سنوات. ما الدفعة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-71">الحل</a></span></p>
+</div>
+<div id="prob-2-72" class="ee-item" data-id="c02-e-09" data-kind="problem" data-label="2.72">
+<p><strong>2.72</strong> تكاليف إصلاح تبدأ في نهاية السنة 3 بمبلغ 1,200 دينار وتزيد 150 كل سنة لمدة 5 سنوات. ما قيمتها الحالية بنسبة 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-72">الحل</a></span></p>
+</div>
+<div id="prob-2-73" class="ee-item" data-id="c02-e-10" data-kind="problem" data-label="2.73">
+<p><strong>2.73</strong> قارن القيمة الحالية لسلسلة تبدأ بـ 8,000 دينار وتزيد 800 كل سنة، بسلسلة تبدأ بنفس المبلغ وتقل 800 كل سنة. المدة 5 سنوات والفائدة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-73">الحل</a></span></p>
+</div>
+<div id="prob-2-74" class="ee-item" data-id="c02-e-11" data-kind="problem" data-label="2.74">
+<p><strong>2.74</strong> احسب المعاملين P/G وA/G عند 10% و10 سنوات، وتحقق أن A/G يساوي P/G مقسوما على P/A.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-74">الحل</a></span></p>
+</div>
+<div id="prob-2-75" class="ee-item" data-id="c02-e-12" data-kind="problem" data-label="2.75">
+<p><strong>2.75</strong> طالب يدخر 600 دينار في السنة الأولى، ويزيد ادخاره 100 دينار كل سنة لمدة 6 سنوات. احسب القيمة الحالية والمستقبلية والسنوية المكافئة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-75">الحل</a></span></p>
+</div>
+<div id="prob-2-76" class="ee-item" data-id="c02-e-13" data-kind="problem" data-label="2.76">
+<p><strong>2.76</strong> آلة تكلف 50,000 دينار. توفيرها 15,000 دينار في السنة الأولى، ويقل 1,500 كل سنة بسبب تقادمها، لمدة 8 سنوات. هل الآلة مقبولة بحد أدنى 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-76">الحل</a></span></p>
+</div>
+<div id="prob-2-77" class="ee-item" data-id="c02-e-14" data-kind="problem" data-label="2.77">
+<p><strong>2.77</strong> ابن جدولا في Excel للسلسلة التي تبدأ بـ 1,000 وتزيد 200 لمدة 6 سنوات، واحسب قيمتها الحالية بالدالة NPV بنسبة 8%. قارن بالمعاملات.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-77">الحل</a></span></p>
+</div>
+<div id="prob-2-78" class="ee-item" data-id="c02-e-15" data-kind="problem" data-label="2.78">
+<p><strong>2.78</strong> يريد صاحب مشروع أن يبدأ رواتب موظف بـ 3,000 دينار في السنة الأولى، ويزيدها مبلغا ثابتا كل سنة لمدة 8 سنوات، بحيث تكافئ راتبا ثابتا 5,000 دينار بنسبة 10%. ما الزيادة السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-78">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-الدفعات-المتدرجة-نسبيا" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-الدفعات-المتدرجة-نسبيا">الجزء و: الدفعات المتدرجة نسبيا</h3>
+<div id="prob-2-79" class="ee-item" data-id="c02-f-01" data-kind="problem" data-label="2.79">
+<p><strong>2.79</strong> راتب مهندس في السنة الأولى 30,000 دينار، ويزيد 5% سنويا. ما القيمة الحالية لرواتب أول 10 سنوات بنسبة 9%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-79">الحل</a></span></p>
+</div>
+<div id="prob-2-80" class="ee-item" data-id="c02-f-02" data-kind="problem" data-label="2.80">
+<p><strong>2.80</strong> دفعة سنوية تبدأ بـ 5,000 دينار وتزيد 8% سنويا لمدة 6 سنوات. ما قيمتها الحالية إذا كانت الفائدة أيضا 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-80">الحل</a></span></p>
+</div>
+<div id="prob-2-81" class="ee-item" data-id="c02-f-03" data-kind="problem" data-label="2.81">
+<p><strong>2.81</strong> دفعات تبدأ بـ 2,000 دينار وتزيد 6% كل سنة لمدة 8 سنوات. ما الدفعة الأخيرة؟ وما مجموعها بدون فائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-81">الحل</a></span></p>
+</div>
+<div id="prob-2-82" class="ee-item" data-id="c02-f-04" data-kind="problem" data-label="2.82">
+<p><strong>2.82</strong> تكلفة تشغيل محطة ضخ 12,000 دينار في السنة الأولى، وترتفع 4% سنويا لمدة 15 سنة. ما القيمة الحالية، وما التكلفة السنوية المتساوية المكافئة بنسبة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-82">الحل</a></span></p>
+</div>
+<div id="prob-2-83" class="ee-item" data-id="c02-f-05" data-kind="problem" data-label="2.83">
+<p><strong>2.83</strong> إيرادات متجر إلكتروني 10,000 دينار في السنة الأولى، وتنمو 10% سنويا لمدة 5 سنوات. ما قيمتها الحالية بنسبة 6%؟ لاحظ أن نسبة النمو أكبر من نسبة الفائدة.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-83">الحل</a></span></p>
+</div>
+<div id="prob-2-84" class="ee-item" data-id="c02-f-06" data-kind="problem" data-label="2.84">
+<p><strong>2.84</strong> كم تزيد القيمة الحالية لتكلفة 4,000 دينار سنويا لمدة 8 سنوات إذا ارتفعت 5% كل سنة بدل أن تبقى ثابتة؟ الفائدة 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-84">الحل</a></span></p>
+</div>
+<div id="prob-2-85" class="ee-item" data-id="c02-f-07" data-kind="problem" data-label="2.85">
+<p><strong>2.85</strong> إيداعات تبدأ بـ 4,000 دينار وتزيد 6% سنويا لمدة 10 سنوات. كم يصبح الرصيد بعد الإيداع الأخير بفائدة 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-85">الحل</a></span></p>
+</div>
+<div id="prob-2-86" class="ee-item" data-id="c02-f-08" data-kind="problem" data-label="2.86">
+<p><strong>2.86</strong> قرض 100,000 دينار بفائدة 8% يسدد بدفعات تزيد 4% كل سنة لمدة 10 سنوات، لأن دخل المقترض يزيد بنفس النسبة. ما الدفعة الأولى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-86">الحل</a></span></p>
+</div>
+<div id="prob-2-87" class="ee-item" data-id="c02-f-09" data-kind="problem" data-label="2.87">
+<p><strong>2.87</strong> احسب القيمة الحالية لسلسلة تبدأ بـ 8,000 وتزيد 3% لمدة 6 سنوات بنسبة 8%، بالقانون ثم بجدول Excel. ما مساهمة أول دفعتين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-87">الحل</a></span></p>
+</div>
+<div id="prob-2-88" class="ee-item" data-id="c02-f-10" data-kind="problem" data-label="2.88">
+<p><strong>2.88</strong> عرض عمل براتب ثابت 5,000 دينار سنويا لمدة 10 سنوات، وعرض آخر يبدأ بـ 4,000 دينار ويزيد بنسبة ثابتة. ما نسبة الزيادة التي تجعل العرضين متساويين بفائدة 8%؟ استخدم Goal Seek في Excel.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-88">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-مسائل-excel-وpython">الجزء ز: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-2-89" class="ee-item" data-id="c02-g-01" data-kind="problem" data-label="2.89">
+<p><strong>2.89</strong> ابن جدول إطفاء في Excel لقرض 30,000 دينار بفائدة 8% لمدة 5 سنوات، بأعمدة السنة والرصيد في البداية والفائدة والقسط وسداد الأصل والرصيد في النهاية. ما الرصيد بعد كل سنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-89">الحل</a></span></p>
+</div>
+<div id="prob-2-90" class="ee-item" data-id="c02-g-02" data-kind="problem" data-label="2.90">
+<p><strong>2.90</strong> للقرض في المسألة السابقة، احسب فائدة السنة الثالثة وسداد الأصل فيها بالدالتين IPMT وPPMT، ثم بمكتبة numpy_financial.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-90">الحل</a></span></p>
+</div>
+<div id="prob-2-91" class="ee-item" data-id="c02-g-03" data-kind="problem" data-label="2.91">
+<p><strong>2.91</strong> ابن جدول بيانات يبين قسط قرض 50,000 دينار عند النسبتين 6% و10% والمدتين 5 و10 سنوات، بصيغة واحدة تسحب في الاتجاهين.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-91">الحل</a></span></p>
+</div>
+<div id="prob-2-92" class="ee-item" data-id="c02-g-04" data-kind="problem" data-label="2.92">
+<p><strong>2.92</strong> اكتب برنامج Python يطبع رصيد حساب توفير سنة بسنة لإيداع 500 دينار في نهاية كل سنة لمدة 20 سنة بفائدة 7%. تحقق من الرصيد الأخير بالدالة fv.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-92">الحل</a></span></p>
+</div>
+<div id="prob-2-93" class="ee-item" data-id="c02-g-05" data-kind="problem" data-label="2.93">
+<p><strong>2.93</strong> اكتب دالة Python اسمها pw_gradient تأخذ A1 وG وi وn وتعيد القيمة الحالية لسلسلة متدرجة خطيا، مرة بالقانون ومرة بالجمع دفعة دفعة. اختبرها بالقيم 1,500 و300 و10% و8 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-93">الحل</a></span></p>
+</div>
+<div id="prob-2-94" class="ee-item" data-id="c02-g-06" data-kind="problem" data-label="2.94">
+<p><strong>2.94</strong> اكتب برنامج Python يحاكي سداد قرض 20,000 دينار بفائدة 8% بدفعة 3,000 دينار سنويا، ويطبع عدد السنوات وقيمة الدفعة الأخيرة. قارن بالدالة nper.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-94">الحل</a></span></p>
+</div>
+<div id="prob-2-95" class="ee-item" data-id="c02-g-07" data-kind="problem" data-label="2.95">
+<p><strong>2.95</strong> مشروع يكلف 40,000 دينار ويعطي 9,000 دينار سنويا لمدة 6 سنوات. احسب نسبة العائد بالدالة RATE، ثم بالدالة IRR على عمود التدفقات.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-95">الحل</a></span></p>
+</div>
+<div id="prob-2-96" class="ee-item" data-id="c02-g-08" data-kind="problem" data-label="2.96">
+<p><strong>2.96</strong> احسب في Python القيمة الحالية لسلسلة تبدأ بـ 4,000 وتزيد 6% لمدة 10 سنوات بنسبة 10%، بالقانون ثم بقائمة دفعات والدالة npv.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-96">الحل</a></span></p>
+</div>
+<div id="prob-2-97" class="ee-item" data-id="c02-g-09" data-kind="problem" data-label="2.97">
+<p><strong>2.97</strong> ارسم في Python أو Excel مجموع الفوائد على قرض 100,000 دينار بفائدة 7% مقابل مدة القرض من 5 إلى 30 سنة. ما مجموع الفوائد عند 10 و15 و20 و25 سنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-97">الحل</a></span></p>
+</div>
+<div id="prob-2-98" class="ee-item" data-id="c02-g-10" data-kind="problem" data-label="2.98">
+<p><strong>2.98</strong> قرض 80,000 دينار بفائدة 9% لمدة 8 سنوات. البنك يعرض أن يدفع المقترض نصف القسط العادي في أول سنتين، ثم قسطا ثابتا في السنوات من 3 إلى 8. ابن الحل في Excel بالدالة Goal Seek، وتحقق بالقانون.</p>
+<p><span class="ee-sol-link"><a href="#sol-2-98">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-اختيار-من-متعدد">الجزء ح: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-2-99" class="ee-item" data-id="c02-h-01" data-kind="problem" data-label="2.99">
+<p><strong>2.99</strong> ما القسط السنوي لقرض 20,000 دينار بفائدة 8% لمدة 5 سنوات؟</p>
+<p>أ) 4,000.00 دينار<br>
+ب) 3,409.13 دينار<br>
+ج) 5,009.13 دينار<br>
+د) 4,320.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-99">الحل</a></span></p>
+</div>
+<div id="prob-2-100" class="ee-item" data-id="c02-h-02" data-kind="problem" data-label="2.100">
+<p><strong>2.100</strong> ما القيمة الحالية لدفعة 1,000 دينار في نهاية كل سنة لمدة 6 سنوات بفائدة 10%؟</p>
+<p>أ) 6,000.00 دينار<br>
+ب) 4,355.26 دينار<br>
+ج) 7,715.61 دينار<br>
+د) 4,790.79 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-100">الحل</a></span></p>
+</div>
+<div id="prob-2-101" class="ee-item" data-id="c02-h-03" data-kind="problem" data-label="2.101">
+<p><strong>2.101</strong> سلسلة دفعات من نهاية السنة 4 إلى نهاية السنة 9. المعامل P/A يعطي قيمتها في السنة:</p>
+<p>أ) 0<br>
+ب) 3<br>
+ج) 4<br>
+د) 9</p>
+<p><span class="ee-sol-link"><a href="#sol-2-101">الحل</a></span></p>
+</div>
+<div id="prob-2-102" class="ee-item" data-id="c02-h-04" data-kind="problem" data-label="2.102">
+<p><strong>2.102</strong> ما القيمة الحالية لدفعة 2,000 دينار سنويا من نهاية السنة 4 إلى نهاية السنة 9 بفائدة 8%؟</p>
+<p>أ) 6,795.91 دينار<br>
+ب) 12,493.78 دينار<br>
+ج) 9,245.76 دينار<br>
+د) 7,339.58 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-102">الحل</a></span></p>
+</div>
+<div id="prob-2-103" class="ee-item" data-id="c02-h-05" data-kind="problem" data-label="2.103">
+<p><strong>2.103</strong> كم يودع شخص سنويا ليجمع 20,000 دينار بعد 8 سنوات بفائدة 6%؟</p>
+<p>أ) 3,220.72 دينار<br>
+ب) 2,020.72 دينار<br>
+ج) 2,500.00 دينار<br>
+د) 1,568.53 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-103">الحل</a></span></p>
+</div>
+<div id="prob-2-104" class="ee-item" data-id="c02-h-06" data-kind="problem" data-label="2.104">
+<p><strong>2.104</strong> أي الصيغ التالية تعطي الإيداع السنوي اللازم لجمع 50,000 دينار بعد 10 سنوات بفائدة 6%؟</p>
+<pre class="excel"><code>1:  =PMT(6%, 10, -50000)
+2:  =PMT(6%, 10, 0, -50000)
+3:  =FV(6%, 10, -50000)
+4:  =PV(6%, 10, 0, -50000)</code></pre>
+<p>أ) الصيغة 1<br>
+ب) الصيغة 2<br>
+ج) الصيغة 3<br>
+د) الصيغة 4</p>
+<p><span class="ee-sol-link"><a href="#sol-2-104">الحل</a></span></p>
+</div>
+<div id="prob-2-105" class="ee-item" data-id="c02-h-07" data-kind="problem" data-label="2.105">
+<p><strong>2.105</strong> تكاليف تبدأ بـ 1,000 دينار وتزيد 200 كل سنة لمدة 5 سنوات. ما قيمتها الحالية بنسبة 10%؟</p>
+<p>أ) 5,921.30 دينار<br>
+ب) 1,372.36 دينار<br>
+ج) 5,163.15 دينار<br>
+د) 4,666.41 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-105">الحل</a></span></p>
+</div>
+<div id="prob-2-106" class="ee-item" data-id="c02-h-08" data-kind="problem" data-label="2.106">
+<p><strong>2.106</strong> سلسلة تبدأ بـ 5000 دينار وتزيد 5% سنويا، والفائدة 5%. أي العبارات صحيحة؟</p>
+<p>أ) القانون العام يعطي الجواب مباشرة<br>
+ب) القيمة الحالية تساوي n مضروبة في 5000 مقسومة على 1.05<br>
+ج) القيمة الحالية تساوي n مضروبة في 5000<br>
+د) لا يمكن حساب القيمة الحالية</p>
+<p><span class="ee-sol-link"><a href="#sol-2-106">الحل</a></span></p>
+</div>
+<div id="prob-2-107" class="ee-item" data-id="c02-h-09" data-kind="problem" data-label="2.107">
+<p><strong>2.107</strong> قرض 30,000 دينار بفائدة 9% لمدة 6 سنوات بأقساط متساوية. كم فائدة السنة الأولى؟</p>
+<p>أ) 2,700.00 دينار<br>
+ب) 1,687.59 دينار<br>
+ج) 6,687.59 دينار<br>
+د) 5,000.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-107">الحل</a></span></p>
+</div>
+<div id="prob-2-108" class="ee-item" data-id="c02-h-10" data-kind="problem" data-label="2.108">
+<p><strong>2.108</strong> ما الفرق بين المعاملين A/P وA/F عند نفس النسبة ونفس عدد السنوات؟</p>
+<p>أ) يساوي 1<br>
+ب) يساوي نسبة الفائدة<br>
+ج) يساوي عدد السنوات<br>
+د) لا توجد علاقة ثابتة</p>
+<p><span class="ee-sol-link"><a href="#sol-2-108">الحل</a></span></p>
+</div>
+<div id="prob-2-109" class="ee-item" data-id="c02-h-11" data-kind="problem" data-label="2.109">
+<p><strong>2.109</strong> في Excel كتب طالب الصيغة التالية لحساب القيمة الحالية لتدفقات في السنوات من 0 إلى 5 مكتوبة في الخلايا من B1 إلى B6. ما الخطأ؟</p>
+<pre class="excel"><code>=NPV(10%, B1:B6)</code></pre>
+<p>أ) لا يوجد خطأ<br>
+ب) الدالة تعامل تدفق السنة 0 كأنه في السنة 1، فتخصم كل التدفقات سنة زائدة<br>
+ج) يجب كتابة النسبة 0.1 بدل 10%<br>
+د) الدالة NPV لا تقبل قيما سالبة</p>
+<p><span class="ee-sol-link"><a href="#sol-2-109">الحل</a></span></p>
+</div>
+<div id="prob-2-110" class="ee-item" data-id="c02-h-12" data-kind="problem" data-label="2.110">
+<p><strong>2.110</strong> يودع شخص 3,000 دينار في بداية كل سنة لمدة 10 سنوات بفائدة 7%. ما رصيده في نهاية السنة 10؟</p>
+<p>أ) 41,449.34 دينار<br>
+ب) 44,350.80 دينار<br>
+ج) 47,350.80 دينار<br>
+د) 32,100.00 دينار</p>
+<p><span class="ee-sol-link"><a href="#sol-2-110">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-حالات-مصغرة">الجزء ط: حالات مصغرة</h3>
+<p>كل حالة تجمع أكثر من فكرة من الفصل، وبعضها يضيف فكرة جديدة.</p>
+<div id="prob-2-111" class="ee-item" data-id="c02-i-01" data-kind="problem" data-label="2.111">
+<p><strong>2.111</strong> <strong>حالة 2.1: قرض سيارة بدفعة أخيرة كبيرة</strong></p>
+<p>يريد مهندس شراء سيارة بقرض 30,000 دينار بفائدة 8% لمدة 5 سنوات. عرض عليه البنك خطتين:</p>
+<ul>
+<li>الخطة العادية: أقساط سنوية متساوية.</li>
+<li>خطة الدفعة الأخيرة الكبيرة (balloon): أقساط سنوية متساوية أصغر، ثم دفعة إضافية 10,000 دينار مع القسط الأخير.</li>
+</ul>
+<p>(أ) ما القسط في كل خطة؟ (ب) ما مجموع الفوائد في كل خطة؟ لماذا تختلف؟ (ج) ما رصيد القرض بعد القسط الثالث في كل خطة؟ (د) في نهاية السنة 5 لم يجد المهندس 10,000 دينار، فأعاد البنك تمويلها بقرض جديد بفائدة 10% لمدة 3 سنوات. ما القسط الجديد؟ (هـ) هل الخطة الثانية أرخص فعلا بنسبة 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-111">الحل</a></span></p>
+</div>
+<div id="prob-2-112" class="ee-item" data-id="c02-i-02" data-kind="problem" data-label="2.112">
+<p><strong>2.112</strong> <strong>حالة 2.2: ألواح شمسية لمصنع في الخليل</strong></p>
+<p>يدرس مصنع تركيب ألواح شمسية بتكلفة 95,000 دينار. التوفير في فاتورة الكهرباء في السنة الأولى 14,000 دينار. سعر الكهرباء يرتفع 5% سنويا، وإنتاج الألواح يقل 0.7% سنويا بسبب التقادم. الصيانة 1500 دينار في السنة الأولى وتزيد 100 دينار كل سنة. عمر النظام 20 سنة، والحد الأدنى للعائد 9%.</p>
+<p>(أ) التوفير يتأثر بنسبتين: ارتفاع السعر وانخفاض الإنتاج. ما نسبة النمو الواحدة التي تجمعهما؟ (ب) ما القيمة الحالية للتوفير؟ (ج) ما القيمة الحالية للصيانة؟ (د) هل المشروع مقبول؟ (هـ) ما أعلى سعر يدفعه المصنع للنظام؟ (و) ما التوفير المتوقع في السنة العشرين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-112">الحل</a></span></p>
+</div>
+<div id="prob-2-113" class="ee-item" data-id="c02-i-03" data-kind="problem" data-label="2.113">
+<p><strong>2.113</strong> <strong>حالة 2.3: خطة تقاعد بمرحلتين</strong></p>
+<p>موظفة عمرها 30 سنة، راتبها السنوي 12,000 دينار ويزيد 3% سنويا. تدخر 10% من راتبها في نهاية كل سنة لمدة 25 سنة، بعائد 6%. بعد التقاعد تريد سحب مبلغ ثابت كل سنة لمدة 20 سنة.</p>
+<p>(أ) كم تدخر في السنة الأولى؟ (ب) كم يصبح رصيدها عند التقاعد؟ (ج) كم تسحب سنويا إذا كان السحب في نهاية كل سنة؟ (د) كم تسحب إذا كان في بداية كل سنة؟ (هـ) لو بقي الادخار ثابتا عند مبلغ السنة الأولى، كم ينقص السحب السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-2-113">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch01.html" class="pagination-link" aria-label="نقل المال عبر الزمن">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
