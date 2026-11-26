@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python3 tools/build.py          # bank -> chapters, solutions, website bank
 python3 tools/tables.py         # factor tables appendix
 quarto render                   # site in _book/ and the PDF
-python3 tools/dump_py.py > /tmp/py.json && node tools/check_js.mjs /tmp/py.json
+tools/check_all.sh              # layout rule, both engines, independent answers
 ```
 
 `chapters/chNN.qmd`, `appendices/` and `assets/bank/` are generated. Edit `chapters/src/` and `bank/` instead.

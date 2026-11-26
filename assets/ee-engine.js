@@ -92,7 +92,7 @@
       p.push(`<line x1="${c1(x)}" y1="${ax - 5}" x2="${c1(x)}" y2="${ax + 5}" stroke="#444"/>`);
       p.push(`<text x="${c1(x + 4)}" y="${ax + 18}" fill="#555" font-size="12">${k}</text>`);
     }
-    if (rateLabel) p.push(`<text x="${L + 10}" y="22" fill="#222">${rateLabel}</text>`);
+    if (rateLabel) p.push(`<text x="${R + 15}" y="22" text-anchor="end" fill="#222">${rateLabel}</text>`);
     for (const [t, a, lab] of flows) {
       const x = L + t * step, h = 30 + 60 * Math.abs(a) / big, up = a > 0;
       const y2 = up ? ax - h : ax + h, col = up ? '#1b6e3a' : '#1f4e8c', tip = up ? 8 : -8;

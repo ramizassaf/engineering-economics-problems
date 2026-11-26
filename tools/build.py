@@ -50,7 +50,7 @@ def figure(item, env, tag):
     svg.write_text(diagram_svg(spec, env), encoding="utf-8")
     subprocess.run(["rsvg-convert", "-f", "pdf", "-o", str(svg.with_suffix(".pdf")), str(svg)], check=True)
     cap = render(item.get("diagram_caption", "مخطط التدفق النقدي"), env)
-    return f"\n\n![{cap}](../_generated/fig/{tag}){{width=85%}}\n"
+    return f"\n\n![{cap}](../_generated/fig/{tag}){{width=70%}}\n"
 
 
 def mcq_block(item, env):
@@ -125,7 +125,7 @@ def build_chapter(ch: str):
             p_lines.append(
                 f'::: {{.ee-item #prob-{num}-{k} data-id="{it["id"]}" data-kind="problem" data-label="{tag}"}}\n'
                 f"**{tag}** {first}" + (f"\n\n{rest}" if rest else "") + fig +
-                f"\n\n[الحل](#sol-{num}-{k}){{.ee-sol-link}}\n:::\n")
+                f"\n\n[[الحل](#sol-{num}-{k})]{{.ee-sol-link .content-visible when-format=\"html\"}}\n:::\n")
             s_lines.append(f"[**{tag}**]{{#sol-{num}-{k}}} " + solution(it, env) + "\n")
     out = out.replace("@problems", "\n".join(p_lines))
 

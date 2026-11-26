@@ -206,7 +206,7 @@ def svg_draw(n, flows, rate_label):
         parts.append(f'<line x1="{_c(x)}" y1="{ax - 5}" x2="{_c(x)}" y2="{ax + 5}" stroke="#444"/>')
         parts.append(f'<text x="{_c(x + 4)}" y="{ax + 18}" fill="#555" font-size="12">{k}</text>')
     if rate_label:
-        parts.append(f'<text x="{L + 10}" y="22" fill="#222">{rate_label}</text>')
+        parts.append(f'<text x="{R + 15}" y="22" text-anchor="end" fill="#222">{rate_label}</text>')
     for t, a, lab in flows:
         x = L + t * step
         h = 30 + 60 * abs(a) / big

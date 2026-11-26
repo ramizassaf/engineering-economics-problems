@@ -30,3 +30,7 @@ pre.excel, div.sourceCode:has(> pre.excel) { background: #f1f6f1; }
 .ee-random { outline: 2px dashed #d4a72c; outline-offset: 6px; border-radius: 2px; }
 details.ee-sol { margin-top: 0.6em; }
 details.ee-sol summary { cursor: pointer; color: #1f4e8c; }
+
+/* Equations drawn by the new-numbers widget */
+.ee-math { text-align: center; direction: ltr; margin: 0.8em 0; font-size: 1.08em; }
+.ee-math math { display: inline-block; }

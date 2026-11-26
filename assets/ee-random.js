@@ -20,7 +20,7 @@
   function md(text) {
     const math = [];
     const src = text.replace(/\$\$([\s\S]+?)\$\$/g, (m, tex) => {
-      math.push(katex.renderToString(tex.trim(), { displayMode: true, output: 'mathml', throwOnError: false }));
+      math.push('<div class="ee-math">' + katex.renderToString(tex.trim(), { displayMode: true, output: 'mathml', throwOnError: false }) + '</div>');
       return '\n\n@@MATH' + (math.length - 1) + '@@\n\n';
     });
     let html = marked.parse(src, { gfm: true });

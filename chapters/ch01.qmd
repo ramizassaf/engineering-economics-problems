@@ -438,7 +438,7 @@ print(round(npf.nper(0.08, 0, -1, 2), 2))      # same as NPER in Excel
 
 استثمر شخص 1,000 دولار اليوم، ثم استثمر 1,200 دولار في نهاية السنة 4. كم يصبح لديه في نهاية السنة 7 إذا كان العائد 5% سنويا؟
 
-![مخطط التدفق النقدي: استثماران وقيمة مستقبلية في السنة 7](../_generated/fig/ch01-ex11){width=85%}
+![مخطط التدفق النقدي: استثماران وقيمة مستقبلية في السنة 7](../_generated/fig/ch01-ex11){width=70%}
 
 
 **الحل:**
@@ -475,7 +475,7 @@ $$
 
 يتوقع مصنع أن يحصل على 4,000 دولار في نهاية السنة 1، و6,000 دولار في نهاية السنة 3، و9,000 دولار في نهاية السنة 5. ما القيمة الحالية لهذه المبالغ إذا كانت الفائدة 9% سنويا؟
 
-![مخطط التدفق النقدي](../_generated/fig/ch01-ex12){width=85%}
+![مخطط التدفق النقدي](../_generated/fig/ch01-ex12){width=70%}
 
 
 **الحل:**
@@ -517,7 +517,7 @@ $$
 
 اقترض شخص 5,000 دولار بفائدة 3% سنويا. في نهاية السنة 2 احتاج مبلغا إضافيا، فوافق البنك على قرض ثان، بشرط أن يسدد كل الدين بدفعة واحدة قدرها 10,000 دولار في نهاية السنة 5. ما أكبر مبلغ يستطيع اقتراضه في السنة 2؟
 
-![مخطط التدفق النقدي](../_generated/fig/ch01-ex13){width=85%}
+![مخطط التدفق النقدي](../_generated/fig/ch01-ex13){width=70%}
 
 
 **الحل:**
@@ -598,7 +598,7 @@ $$
 
 اقترض مهندس 60,000 دولار بفائدة 7% سنويا، ويريد سداده بدفعتين: الأولى في نهاية السنة 2، والثانية في نهاية السنة 5. الدفعة الأولى تساوي نصف الثانية. أوجد الدفعتين.
 
-![مخطط التدفق النقدي](../_generated/fig/ch01-ex15){width=85%}
+![مخطط التدفق النقدي](../_generated/fig/ch01-ex15){width=70%}
 
 
 **الحل:**
@@ -751,4 +751,829 @@ $$
 
 ## مسائل الفصل {#sec-1-problems}
 
+### الجزء أ: أسئلة مفاهيم {.unnumbered}
+
+أجب بجملة أو جملتين، بدون حساب.
+
+::: {.ee-item #prob-1-1 data-id="c01-a-01" data-kind="problem" data-label="1.1"}
+**1.1** لماذا تساوي 1000 دولار اليوم أكثر من 1000 دولار بعد سنة، حتى لو لم يكن هناك تضخم؟
+
+[[الحل](#sol-1-1)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-2 data-id="c01-a-02" data-kind="problem" data-label="1.2"}
+**1.2** ما الفرق بين الفائدة البسيطة والفائدة المركبة؟ أيهما تستخدمه البنوك؟
+
+[[الحل](#sol-1-2)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-3 data-id="c01-a-03" data-kind="problem" data-label="1.3"}
+**1.3** مبلغ استثمر لمدة سنة واحدة. هل يختلف الجواب بين الفائدة البسيطة والمركبة؟ لماذا؟
+
+[[الحل](#sol-1-3)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-4 data-id="c01-a-04" data-kind="problem" data-label="1.4"}
+**1.4** ماذا يعني الرمز التالي بالكلمات؟ هل قيمته أكبر من 1 أم أصغر؟
+
+$$
+(P/F,\ 8\%,\ 5)
+$$
+
+[[الحل](#sol-1-4)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-5 data-id="c01-a-05" data-kind="problem" data-label="1.5"}
+**1.5** طالب نقل مبلغ 5000 دولار من السنة 6 إلى السنة 0 فحصل على 6200 دولار. كيف تعرف أن جوابه خطأ بدون أن تحسب؟
+
+[[الحل](#sol-1-5)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-6 data-id="c01-a-06" data-kind="problem" data-label="1.6"}
+**1.6** في مخطط التدفق النقدي، ماذا يعني سهم للأسفل في السنة 3؟ وماذا يعني سهم للأعلى؟
+
+[[الحل](#sol-1-6)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-7 data-id="c01-a-07" data-kind="problem" data-label="1.7"}
+**1.7** لماذا لا يجوز جمع 1000 دولار في السنة 2 و1000 دولار في السنة 5 مباشرة؟
+
+[[الحل](#sol-1-7)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-8 data-id="c01-a-08" data-kind="problem" data-label="1.8"}
+**1.8** في مسألة تكافؤ، هل يتغير القرار إذا قارنت البدائل في السنة 0 بدل السنة 10؟
+
+[[الحل](#sol-1-8)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-9 data-id="c01-a-09" data-kind="problem" data-label="1.9"}
+**1.9** كتب طالب في Excel الصيغة التالية فظهر الجواب سالبا. ما السبب، وكيف يصلحه؟
+```excel =FV(6%, 10, 0, 2000) ```
+
+[[الحل](#sol-1-9)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-10 data-id="c01-a-10" data-kind="problem" data-label="1.10"}
+**1.10** ما قاعدة 72؟ ومتى تكون غير دقيقة؟
+
+[[الحل](#sol-1-10)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء ب: الفائدة البسيطة والمركبة {.unnumbered}
+
+::: {.ee-item #prob-1-11 data-id="c01-b-01" data-kind="problem" data-label="1.11"}
+**1.11** اقترض شخص 4,000 دولار بفائدة بسيطة 7% سنويا لمدة 5 سنوات. ما مجموع الفائدة؟ وما المبلغ الذي يسدده في النهاية؟
+
+[[الحل](#sol-1-11)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-12 data-id="c01-b-02" data-kind="problem" data-label="1.12"}
+**1.12** أعد المسألة السابقة بفائدة مركبة 7% سنويا على مبلغ 4,000 دولار لمدة 5 سنوات. ما مجموع الفائدة؟
+
+[[الحل](#sol-1-12)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-13 data-id="c01-b-03" data-kind="problem" data-label="1.13"}
+**1.13** استثمر شخص 10,000 دولار بفائدة مركبة 9% سنويا. اكتب جدولا يبين الرصيد في بداية كل سنة، والفائدة، والرصيد في نهايتها، لمدة 4 سنوات.
+
+[[الحل](#sol-1-13)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-14 data-id="c01-b-04" data-kind="problem" data-label="1.14"}
+**1.14** كم يزيد المبلغ بالفائدة المركبة عن المبلغ بالفائدة البسيطة، لمبلغ 6,000 دولار بنسبة 10% سنويا لمدة 8 سنوات؟
+
+[[الحل](#sol-1-14)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-15 data-id="c01-b-05" data-kind="problem" data-label="1.15"}
+**1.15** اقترض شخص 2,500 دولار ورد 3,100 دولار بعد 4 سنوات. إذا كانت الفائدة بسيطة، ما نسبتها السنوية؟
+
+[[الحل](#sol-1-15)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-16 data-id="c01-b-06" data-kind="problem" data-label="1.16"}
+**1.16** دفع مقترض فائدة بسيطة مجموعها 900 دولار على قرض مدته 3 سنوات بنسبة 6% سنويا. ما مبلغ القرض؟
+
+[[الحل](#sol-1-16)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-17 data-id="c01-b-07" data-kind="problem" data-label="1.17"}
+**1.17** بعد كم سنة يتضاعف مبلغ 8,000 دولار بفائدة بسيطة 5% سنويا؟
+
+[[الحل](#sol-1-17)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-18 data-id="c01-b-08" data-kind="problem" data-label="1.18"}
+**1.18** يعرض بنك على مودع فائدة بسيطة 8% سنويا، ويعرض بنك آخر فائدة مركبة 7.5% سنويا. المبلغ 15,000 دولار والمدة 6 سنوات. أي العرضين أفضل للمودع؟
+
+[[الحل](#sol-1-18)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-19 data-id="c01-b-09" data-kind="problem" data-label="1.19"}
+**1.19** قرض 20,000 دولار بفائدة مركبة 12% سنويا، لا يسدد منه شيء. احسب الفائدة المضافة في كل سنة من السنوات الثلاث الأولى. لماذا تكبر كل سنة؟
+
+[[الحل](#sol-1-19)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-20 data-id="c01-b-10" data-kind="problem" data-label="1.20"}
+**1.20** يريد شخص أن يحصل على 7,500 دولار بعد 5 سنوات من حساب يعطي فائدة بسيطة 8% سنويا. كم يودع اليوم؟
+
+[[الحل](#sol-1-20)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-21 data-id="c01-b-11" data-kind="problem" data-label="1.21"}
+**1.21** اقترض شخص 3,000 دولار لمدة سنتين بنسبة 10%. احسب الفرق بين الفائدة المركبة والبسيطة، ثم بين أن الفرق يساوي فائدة السنة الثانية على فائدة السنة الأولى.
+
+[[الحل](#sol-1-21)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-22 data-id="c01-b-12" data-kind="problem" data-label="1.22"}
+**1.22** صندوق استثمار بدأ بمبلغ 50,000 دولار. ما قيمته بعد 25 سنة بعائد 6% سنويا، بالفائدة البسيطة ثم المركبة؟ كم ضعفا يساوي الثاني الأول؟
+
+[[الحل](#sol-1-22)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-23 data-id="c01-b-13" data-kind="problem" data-label="1.23"}
+**1.23** وديعة 12,000 دولار في بنك أعطى 5% في السنتين الأوليين، ثم رفع النسبة إلى 8% في السنة الثالثة. ما الرصيد في نهاية السنة الثالثة؟ وما مجموع الفوائد؟
+
+[[الحل](#sol-1-23)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-24 data-id="c01-b-14" data-kind="problem" data-label="1.24"}
+**1.24** اكتب جدولا يقارن قيمة 9,000 دولار بفائدة 11% البسيطة والمركبة بعد 2 و5 و10 سنوات. ماذا تلاحظ؟
+
+[[الحل](#sol-1-24)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-25 data-id="c01-b-15" data-kind="problem" data-label="1.25"}
+**1.25** بعد كم سنة يتضاعف مبلغ 1,000 دولار بنسبة 10%، بالفائدة البسيطة ثم بالمركبة؟
+
+[[الحل](#sol-1-25)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء ج: القيمة المستقبلية والحالية لمبلغ واحد {.unnumbered}
+
+حل كل مسألة بالمعادلة، ثم تحقق بالجداول أو Excel.
+
+::: {.ee-item #prob-1-26 data-id="c01-c-01" data-kind="problem" data-label="1.26"}
+**1.26** استثمر شخص 1,200 دولار في شركة تعطي عائدا 6% سنويا. كم يصبح لديه بعد 8 سنوات؟
+
+[[الحل](#sol-1-26)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-27 data-id="c01-c-02" data-kind="problem" data-label="1.27"}
+**1.27** اقترضت شركة 80,000 دولار بفائدة 5.5% سنويا، على أن تسدد القرض بدفعة واحدة بعد 3 سنوات. ما مبلغ الدفعة؟
+
+[[الحل](#sol-1-27)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-28 data-id="c01-c-03" data-kind="problem" data-label="1.28"}
+**1.28** يريد أب أن يكون لديه 50,000 دولار لدراسة ابنه الجامعية بعد 6 سنوات. كم يجب أن يودع اليوم في حساب يعطي 8% سنويا؟
+
+[[الحل](#sol-1-28)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-29 data-id="c01-c-04" data-kind="problem" data-label="1.29"}
+**1.29** مشروع كلف 600,000 دولار، ويتوقع أن يحقق عائدا 16% سنويا. بعد 4 سنوات عرضت شركة شراء المشروع بمبلغ 1,350,000 دولار. هل تقبل صاحبة المشروع العرض؟ وما العائد السنوي الذي يحققه البيع؟
+
+[[الحل](#sol-1-29)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-30 data-id="c01-c-05" data-kind="problem" data-label="1.30"}
+**1.30** تتوقع شركة أن تحصل على 25,000 دولار من بيع آلة بعد 5 سنوات. ما القيمة الحالية لهذا المبلغ بحد أدنى للعائد 12%؟
+
+[[الحل](#sol-1-30)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-31 data-id="c01-c-06" data-kind="problem" data-label="1.31"}
+**1.31** احسب معامل القيمة المستقبلية F/P ومعامل القيمة الحالية P/F عند نسبة 7% و9 سنوات، ثم اضربهما. ماذا تلاحظ؟
+
+[[الحل](#sol-1-31)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-32 data-id="c01-c-07" data-kind="problem" data-label="1.32"}
+**1.32** مبلغ 5,000 دولار مستثمر بعائد 9%. ما قيمته في نهاية السنة 3؟ وفي نهاية السنة 7؟ تحقق أن الانتقال من السنة 3 إلى السنة 7 يعطي نفس الجواب.
+
+[[الحل](#sol-1-32)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-33 data-id="c01-c-08" data-kind="problem" data-label="1.33"}
+**1.33** تستثمر شركة عقارية 3,000,000 دولار في مشروع سكني اليوم. بكم يجب أن تبيعه بعد 12 سنة لتحقق عائدا 15% سنويا؟
+
+[[الحل](#sol-1-33)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-34 data-id="c01-c-09" data-kind="problem" data-label="1.34"}
+**1.34** تكلفة صيانة سنوية لمولد كهرباء اليوم 450 دولار، ويتوقع أن ترتفع 4% كل سنة. كم ستكون التكلفة بعد 10 سنوات؟
+
+[[الحل](#sol-1-34)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-35 data-id="c01-c-10" data-kind="problem" data-label="1.35"}
+**1.35** ورثت مهندسة مبلغ 18,000 دولار يستحق بعد 4 سنوات. عرض عليها بنك أن يدفع لها قيمته اليوم مخصومة بنسبة 10% سنويا. كم تستلم؟ وكم يكسب البنك؟
+
+[[الحل](#sol-1-35)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-36 data-id="c01-c-11" data-kind="problem" data-label="1.36"}
+**1.36** احسب القيمة المستقبلية لمبلغ 7,000 دولار بعد 5 سنوات بنسبة 6.5%. حل بالمعادلة، ثم اكتب صيغة Excel وسطر Python.
+
+[[الحل](#sol-1-36)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-37 data-id="c01-c-12" data-kind="problem" data-label="1.37"}
+**1.37** يريد موظف مبلغ 120,000 دولار عند تقاعده بعد 15 سنة. كم يحتاج أن يستثمر اليوم دفعة واحدة بعائد 7%؟
+
+[[الحل](#sol-1-37)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-38 data-id="c01-c-13" data-kind="problem" data-label="1.38"}
+**1.38** قارن قيمة 10,000 دولار بعد 10 سنوات بعائد 6% وبعائد 9%. كم يكسب المستثمر من فرق النسبة؟
+
+[[الحل](#sol-1-38)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-39 data-id="c01-c-14" data-kind="problem" data-label="1.39"}
+**1.39** ما القيمة الحالية لمبلغ 8,000 دولار يستحق بعد 3 سنوات بنسبة 5%؟ وكم تصبح إذا تضاعفت النسبة؟
+
+[[الحل](#sol-1-39)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-40 data-id="c01-c-15" data-kind="problem" data-label="1.40"}
+**1.40** استثمر شخص 2,000 دولار بعائد 8%. ما قيمتها بعد 5 و10 و20 سنة؟
+
+[[الحل](#sol-1-40)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-41 data-id="c01-c-16" data-kind="problem" data-label="1.41"}
+**1.41** عرض على مستثمر سند يدفع 30,000 دولار بعد 5 سنوات، وسعره اليوم 20,000 دولار. إذا كان الحد الأدنى للعائد 9%، هل يشتري السند؟
+
+[[الحل](#sol-1-41)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-42 data-id="c01-c-17" data-kind="problem" data-label="1.42"}
+**1.42** وضعت شركة 15,000 دولار في وديعة بنسبة 4% لمدة سنتين، ثم جددت الوديعة بكامل رصيدها 5 سنوات أخرى بنفس النسبة. كم الرصيد في النهاية؟
+
+[[الحل](#sol-1-42)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-43 data-id="c01-c-18" data-kind="problem" data-label="1.43"}
+**1.43** احسب القيمة الحالية لمبلغ 4,000 دولار بعد 7 سنوات بنسبة 11%، بالقانون ثم بالمعامل المقرب لأربع خانات. ما الفرق؟
+
+[[الحل](#sol-1-43)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-44 data-id="c01-c-19" data-kind="problem" data-label="1.44"}
+**1.44** ودائع لمدة سنة واحدة بمبلغ 9,500 دولار بنسبة 5%. كم يصبح المبلغ؟ لماذا لا يهم هنا إن كانت الفائدة بسيطة أو مركبة؟
+
+[[الحل](#sol-1-44)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-45 data-id="c01-c-20" data-kind="problem" data-label="1.45"}
+**1.45** ما المبلغ الذي يكفي استثماره اليوم ليصبح مليون دولار تقريبا بعد 30 سنة بعائد 8%؟ استخدم 1,000,000 دولار هدفا.
+
+[[الحل](#sol-1-45)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-46 data-id="c01-c-21" data-kind="problem" data-label="1.46"}
+**1.46** سعر سيارة اليوم 12,000 دولار، ويرتفع 4% كل سنة. أراد شخص شراءها بعد 6 سنوات، فاستثمر اليوم مبلغا يساوي سعرها الحالي بعائد 7%. هل يكفي المبلغ لشرائها؟
+
+[[الحل](#sol-1-46)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-47 data-id="c01-c-22" data-kind="problem" data-label="1.47"}
+**1.47** كتب طالب أن القيمة الحالية لمبلغ 6,000 دولار بعد 4 سنوات بنسبة 6% تساوي حاصل ضرب المبلغ في المعامل F/P. صحح الخطأ واحسب الجواب الصحيح.
+
+[[الحل](#sol-1-47)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-48 data-id="c01-c-23" data-kind="problem" data-label="1.48"}
+**1.48** مبلغ 40,000 دولار مستثمر 5 سنوات بعائد 10%. ماذا يحدث للقيمة المستقبلية إذا تضاعف المبلغ؟ وإذا تضاعفت المدة؟
+
+[[الحل](#sol-1-48)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-49 data-id="c01-c-24" data-kind="problem" data-label="1.49"}
+**1.49** يتوقع مصنع دفع غرامة بيئية قدرها 75,000 دولار بعد 8 سنوات إذا لم يركب نظام معالجة. ما القيمة الحالية للغرامة بحد أدنى 9%؟ ما أقصى ما يدفعه المصنع اليوم لتجنبها؟
+
+[[الحل](#sol-1-49)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-50 data-id="c01-c-25" data-kind="problem" data-label="1.50"}
+**1.50** اشترى جد لحفيده عند ولادته سندا بمبلغ 500 دولار بعائد 12%. كم تصبح قيمته عندما يبلغ الحفيد 18 سنة؟
+
+[[الحل](#sol-1-50)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء د: مخطط التدفق النقدي والتكافؤ {.unnumbered}
+
+ارسم مخطط التدفق النقدي قبل أن تبدأ الحل.
+
+::: {.ee-item #prob-1-51 data-id="c01-d-01" data-kind="problem" data-label="1.51"}
+**1.51** أودع شخص 2,000 دولار اليوم و3,000 دولار في نهاية السنة 3. كم يصبح الرصيد في نهاية السنة 8 بفائدة 6%؟ ارسم مخطط التدفق النقدي.
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p051){width=70%}
+
+
+[[الحل](#sol-1-51)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-52 data-id="c01-d-02" data-kind="problem" data-label="1.52"}
+**1.52** مشروع يعطي 5,000 دولار في نهاية السنة 2، و7,000 دولار في نهاية السنة 4، و4,000 دولار في نهاية السنة 7. ما القيمة الحالية بنسبة 10%؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p052){width=70%}
+
+
+[[الحل](#sol-1-52)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-53 data-id="c01-d-03" data-kind="problem" data-label="1.53"}
+**1.53** اقترض أحمد 3,000 دولار بفائدة 7% سنويا، وسدد 1,000 دولار في نهاية السنة الأولى. كم يجب أن يدفع في نهاية السنة الخامسة ليغلق القرض؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p053){width=70%}
+
+
+[[الحل](#sol-1-53)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-54 data-id="c01-d-04" data-kind="problem" data-label="1.54"}
+**1.54** اقترض شخص 100,000 دولار بفائدة 6%، ويريد سداده بدفعتين في نهاية السنتين 3 و6. الدفعة الأولى تساوي نصف الثانية. أوجد الدفعتين.
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p054){width=70%}
+
+
+[[الحل](#sol-1-54)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-55 data-id="c01-d-05" data-kind="problem" data-label="1.55"}
+**1.55** اقترض شخص 100,000 دولار بفائدة 6%، ويريد سداده بثلاث دفعات في نهاية السنوات 3 و6 و9. الدفعتان الأولى والثالثة كل منهما نصف الدفعة الثانية. أوجد الدفعات.
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p055){width=70%}
+
+
+[[الحل](#sol-1-55)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-56 data-id="c01-d-06" data-kind="problem" data-label="1.56"}
+**1.56** على شركة دفعتان، 4,000 دولار في نهاية السنة 1 و6,000 دولار في نهاية السنة 6. تريد استبدالهما بدفعة واحدة في نهاية السنة 3. ما مبلغها بنسبة 8%؟
+
+[[الحل](#sol-1-56)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-57 data-id="c01-d-07" data-kind="problem" data-label="1.57"}
+**1.57** أودع طالب 3,000 دولار اليوم، ويريد أن يصبح رصيده 12,000 دولار في نهاية السنة 7. كم يجب أن يودع في نهاية السنة 2؟ الفائدة 7%.
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p057){width=70%}
+
+
+[[الحل](#sol-1-57)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-58 data-id="c01-d-08" data-kind="problem" data-label="1.58"}
+**1.58** احسب القيمة المكافئة للتدفقات التالية في السنة 3، بنسبة 5% سنويا. حل بالجداول وبـ Excel.
+
+| السنة | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| التدفق | -50 | -90 | -105 | 0 | 0 | -125 | -175 | -50 | 0 | -170 |
+
+[[الحل](#sol-1-58)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-59 data-id="c01-d-09" data-kind="problem" data-label="1.59"}
+**1.59** أعد المسألة السابقة بالأرقام الأصلية في الكتاب، بنسبة 7% ثم 9%. قارن النتائج. لماذا تقل القيمة المكافئة بالقيمة المطلقة عندما ترتفع الفائدة في هذه المسألة؟
+
+[[الحل](#sol-1-59)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-60 data-id="c01-d-10" data-kind="problem" data-label="1.60"}
+**1.60** قرض 40,000 دولار بفائدة 8% يسدد بدفعتين متساويتين في نهاية السنتين 2 و5. ما قيمة كل دفعة؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p060){width=70%}
+
+
+[[الحل](#sol-1-60)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-61 data-id="c01-d-11" data-kind="problem" data-label="1.61"}
+**1.61** تختار شركة بين خطتي سداد لنفس الدين. الأولى 5,000 دولار في نهاية السنة 1 و9,000 دولار في نهاية السنة 3. الثانية 6,000 دولار في نهاية السنة 2 و8,500 دولار في نهاية السنة 4. الفائدة 9%. أي الخطتين أقل تكلفة؟
+
+[[الحل](#sol-1-61)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-62 data-id="c01-d-12" data-kind="problem" data-label="1.62"}
+**1.62** على شخص دفعة 10,000 دولار مستحقة في نهاية السنة 5. يريد أن يدفعها مبكرا في نهاية السنة 2. كم يدفع إذا كانت الفائدة 7%؟
+
+[[الحل](#sol-1-62)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-63 data-id="c01-d-13" data-kind="problem" data-label="1.63"}
+**1.63** دفعة 8,000 دولار مستحقة في نهاية السنة 2، واتفق الطرفان على تأجيلها إلى نهاية السنة 5 بفائدة 6%. ما المبلغ المؤجل؟
+
+[[الحل](#sol-1-63)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-64 data-id="c01-d-14" data-kind="problem" data-label="1.64"}
+**1.64** اشترى مزارع جرارا بقرض 70,000 دولار بفائدة 7.5%. دفع 20,000 دولار في نهاية السنة 2. كم يدفع في نهاية السنة 6 ليغلق القرض؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p064){width=70%}
+
+
+[[الحل](#sol-1-64)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-65 data-id="c01-d-15" data-kind="problem" data-label="1.65"}
+**1.65** أودع شخص 25,000 دولار في حساب بفائدة 6%. سحب 8,000 دولار في نهاية السنة 3. كم يكون رصيده في نهاية السنة 7؟
+
+[[الحل](#sol-1-65)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-66 data-id="c01-d-16" data-kind="problem" data-label="1.66"}
+**1.66** تكاليف صيانة آلة في نهاية السنوات 1 إلى 4 هي 1,500 و2,200 و1,800 و2,600 دولار. ما قيمتها المكافئة في نهاية السنة 4 بنسبة 10%؟
+
+[[الحل](#sol-1-66)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-67 data-id="c01-d-17" data-kind="problem" data-label="1.67"}
+**1.67** سعر آلة 30,000 دولار. دفع المشتري 8,000 دولار نقدا، ويسدد الباقي بدفعتين متساويتين في نهاية السنتين 1 و3 بفائدة 9%. ما قيمة الدفعة؟
+
+[[الحل](#sol-1-67)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-68 data-id="c01-d-18" data-kind="problem" data-label="1.68"}
+**1.68** سعر آلة 30,000 دولار. البائع يقبل دفعة نقدية اليوم، ثم دفعتين قيمة كل منهما 12,000 دولار في نهاية السنتين 1 و3، بفائدة 9%. ما الدفعة النقدية المطلوبة؟
+
+[[الحل](#sol-1-68)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-69 data-id="c01-d-19" data-kind="problem" data-label="1.69"}
+**1.69** قرض 50,000 دولار بفائدة 7% يسدد بثلاث دفعات متساوية في نهاية السنوات 2 و4 و6. ما قيمة الدفعة؟
+
+[[الحل](#sol-1-69)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-70 data-id="c01-d-20" data-kind="problem" data-label="1.70"}
+**1.70** يريد شخص أن يجمع 30,000 دولار في نهاية السنة 8، بثلاث إيداعات متساوية اليوم وفي نهاية السنتين 2 و4. ما قيمة الإيداع بفائدة 6%؟
+
+[[الحل](#sol-1-70)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-71 data-id="c01-d-21" data-kind="problem" data-label="1.71"}
+**1.71** مشروع يكلف 80,000 دولار اليوم، ويعطي 30,000 و40,000 و35,000 دولار في نهاية السنوات 1 و2 و3. بحد أدنى للعائد 12%، ما صافي القيمة الحالية؟ هل المشروع مقبول؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p071){width=70%}
+
+
+[[الحل](#sol-1-71)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-72 data-id="c01-d-22" data-kind="problem" data-label="1.72"}
+**1.72** ثلاث دفعات 3,000 و5,000 و4,000 دولار في نهاية السنوات 2 و5 و8. احسب قيمتها المكافئة في السنة 0، ثم في السنة 10 من جواب السنة 0. الفائدة 8%.
+
+[[الحل](#sol-1-72)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-73 data-id="c01-d-23" data-kind="problem" data-label="1.73"}
+**1.73** عند أي نسبة فائدة يتكافأ مبلغ 10,000 دولار اليوم ومبلغ 13,500 دولار بعد 4 سنوات؟
+
+[[الحل](#sol-1-73)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-74 data-id="c01-d-24" data-kind="problem" data-label="1.74"}
+**1.74** قارن مبلغ 15,000 دولار اليوم ومبلغ 22,000 دولار بعد 5 سنوات، بنسبة 7%، في السنة 0 ثم في السنة 5. هل يتغير القرار؟
+
+[[الحل](#sol-1-74)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-75 data-id="c01-d-25" data-kind="problem" data-label="1.75"}
+**1.75** أودعت مهندسة 20,000 دولار اليوم، ثم أودعت 2,000 دولار في نهاية السنة 2، وسحبت 3,000 دولار في نهاية السنة 5. كم يكون رصيدها في نهاية السنة 6 بفائدة 5%؟
+
+![مخطط التدفق النقدي](../_generated/fig/ch01-p075){width=70%}
+
+
+[[الحل](#sol-1-75)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء هـ: إيجاد نسبة الفائدة وعدد السنوات {.unnumbered}
+
+::: {.ee-item #prob-1-76 data-id="c01-e-01" data-kind="problem" data-label="1.76"}
+**1.76** اشترى مزارع قطعة أرض بمبلغ 50,000 دولار وباعها بعد 6 سنوات بمبلغ 90,000 دولار. ما نسبة العائد السنوية؟ حل بالمعادلة وبالدالة RATE.
+
+[[الحل](#sol-1-76)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-77 data-id="c01-e-02" data-kind="problem" data-label="1.77"}
+**1.77** كم سنة يحتاج المبلغ ليصبح ثلاثة أضعاف بفائدة 9% سنويا؟ حل بالمعادلة وبالدالة NPER.
+
+[[الحل](#sol-1-77)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-78 data-id="c01-e-03" data-kind="problem" data-label="1.78"}
+**1.78** كم سنة يحتاج مبلغ 2,000 دولار ليصبح 3,500 دولار بعائد 7%؟ في نهاية أي سنة يتجاوز الرصيد الهدف؟
+
+[[الحل](#sol-1-78)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-79 data-id="c01-e-04" data-kind="problem" data-label="1.79"}
+**1.79** قارن عدد سنوات التضاعف الدقيق بقاعدة 72 عند نسبة 6%. ما الخطأ النسبي للقاعدة؟
+
+[[الحل](#sol-1-79)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-80 data-id="c01-e-05" data-kind="problem" data-label="1.80"}
+**1.80** اشترى مستثمر سندا بمبلغ 9,200 دولار، يسترد منه 12,000 دولار بعد 5 سنوات ولا يدفع شيئا قبل ذلك. ما العائد السنوي؟
+
+[[الحل](#sol-1-80)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-81 data-id="c01-e-06" data-kind="problem" data-label="1.81"}
+**1.81** كان مؤشر أسعار المستهلك في فلسطين 100.50 في سنة 1996، و206.93 في سنة 2021. ما متوسط الارتفاع السنوي في الأسعار؟
+
+[[الحل](#sol-1-81)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-82 data-id="c01-e-07" data-kind="problem" data-label="1.82"}
+**1.82** لدى صندوق ادخار 120,000 دولار. متى يصل إلى 150,000 دولار إذا نما بنسبة 4% سنويا؟
+
+[[الحل](#sol-1-82)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-83 data-id="c01-e-08" data-kind="problem" data-label="1.83"}
+**1.83** محل يعرض جهازا بسعر 800 دولار نقدا، أو 1,000 دولار تدفع دفعة واحدة بعد سنتين. ما نسبة الفائدة التي يأخذها المحل ضمنيا؟
+
+[[الحل](#sol-1-83)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-84 data-id="c01-e-09" data-kind="problem" data-label="1.84"}
+**1.84** ارتفعت قيمة شقة من 60,000 دولار إلى 75,000 دولار خلال 4 سنوات. صديقك يقول إن العائد السنوي 6.25% لأنه قسم الزيادة الكلية على عدد السنوات. هل هو محق؟ ما العائد الصحيح؟
+
+[[الحل](#sol-1-84)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-85 data-id="c01-e-10" data-kind="problem" data-label="1.85"}
+**1.85** بنسبة 12%، كم سنة يحتاج المبلغ ليتضاعف؟ ليصبح أربعة أضعاف؟ ثمانية أضعاف؟ ماذا تلاحظ؟
+
+[[الحل](#sol-1-85)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-86 data-id="c01-e-11" data-kind="problem" data-label="1.86"}
+**1.86** أصبحت وديعة 10,000 دولار تساوي 16,105.10 دولار بعد 5 سنوات. ما نسبة الفائدة؟ تحقق من جوابك في جدول المعاملات.
+
+[[الحل](#sol-1-86)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-87 data-id="c01-e-12" data-kind="problem" data-label="1.87"}
+**1.87** يريد شخص أن يضاعف مبلغ 5,000 دولار. كم سنة يوفر إذا استثمر بعائد 8% بدل 6%؟
+
+[[الحل](#sol-1-87)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-88 data-id="c01-e-13" data-kind="problem" data-label="1.88"}
+**1.88** مبلغ 1,000 دولار أصبح 1,260 دولار بعد 3 سنوات. ما النسبة السنوية إذا كانت الفائدة مركبة؟ وإذا كانت بسيطة؟
+
+[[الحل](#sol-1-88)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-89 data-id="c01-e-14" data-kind="problem" data-label="1.89"}
+**1.89** كم سنة يحتاج 3,000 دولار ليصبح 4,500 دولار بنسبة 5%؟ وكم إذا تضاعفت النسبة؟ هل تنقص المدة إلى النصف بالضبط؟
+
+[[الحل](#sol-1-89)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-90 data-id="c01-e-15" data-kind="problem" data-label="1.90"}
+**1.90** استثمار في مستودع يكلف 250,000 دولار، ويتوقع بيعه بعد 7 سنوات بمبلغ 400,000 دولار. الحد الأدنى للعائد في الشركة 8%. ما عائد الاستثمار؟ هل هو مقبول؟
+
+[[الحل](#sol-1-90)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء و: مسائل Excel وPython {.unnumbered}
+
+حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.
+
+::: {.ee-item #prob-1-91 data-id="c01-f-01" data-kind="problem" data-label="1.91"}
+**1.91** ابن جدولا في Excel للرصيد سنة بسنة لمبلغ 10,000 دولار بفائدة 7% لمدة 30 سنة. ما الرصيد بعد 10 و20 و30 سنة؟
+
+[[الحل](#sol-1-91)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-92 data-id="c01-f-02" data-kind="problem" data-label="1.92"}
+**1.92** ابن جدولا في Excel يبين قيمة 5,000 دولار بعد 10 سنوات عند النسب 4% و8% و12%. اكتب الصيغة مرة واحدة واسحبها.
+
+[[الحل](#sol-1-92)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-93 data-id="c01-f-03" data-kind="problem" data-label="1.93"}
+**1.93** اكتب برنامج Python يطبع الرصيد سنة بسنة لمبلغ 10,000 دولار بفائدة 7% لمدة 10 سنوات. ما الرصيد في السنة العاشرة؟
+
+[[الحل](#sol-1-93)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-94 data-id="c01-f-04" data-kind="problem" data-label="1.94"}
+**1.94** اكتب دالة Python اسمها years_to_double تأخذ نسبة الفائدة وتعيد عدد سنوات التضاعف. استخدمها للنسب 5% و10% و15%.
+
+[[الحل](#sol-1-94)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-95 data-id="c01-f-05" data-kind="problem" data-label="1.95"}
+**1.95** احسب القيمة الحالية للتدفقات التالية بنسبة 8% بالدالة NPV في Excel، ثم بمكتبة numpy_financial.
+
+| السنة | 0 | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- | --- |
+| التدفق | -20,000 | 5,000 | 6,000 | 0 | 7,000 | 9,000 |
+
+[[الحل](#sol-1-95)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-96 data-id="c01-f-06" data-kind="problem" data-label="1.96"}
+**1.96** استثمار 15,000 دولار يصبح 24,000 دولار. احسب بالدالة RATE نسبة العائد إذا تحقق ذلك خلال 5 أو 8 أو 12 سنة.
+
+[[الحل](#sol-1-96)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-97 data-id="c01-f-07" data-kind="problem" data-label="1.97"}
+**1.97** ابن جدول بيانات بصفين وعمودين يبين القيمة الحالية لمبلغ 20,000 دولار عند النسبتين 5% و10%، وبعد 5 و10 سنوات. اكتب صيغة واحدة تسحب في الاتجاهين.
+
+[[الحل](#sol-1-97)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-98 data-id="c01-f-08" data-kind="problem" data-label="1.98"}
+**1.98** حل المسألة التالية بـ Goal Seek في Excel، ثم تحقق بـ Python. قرض 60,000 دولار بفائدة 7% يسدد بدفعتين في نهاية السنتين 2 و5، الأولى نصف الثانية.
+
+[[الحل](#sol-1-98)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-99 data-id="c01-f-09" data-kind="problem" data-label="1.99"}
+**1.99** ارسم في Excel أو Python منحنى قيمة 1,000 دولار لمدة 30 سنة بنسبة 8%، بالفائدة البسيطة والمركبة على نفس الرسم. صف شكل كل منحنى.
+
+[[الحل](#sol-1-99)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-100 data-id="c01-f-10" data-kind="problem" data-label="1.100"}
+**1.100** احسب القيمة المستقبلية لمبلغ 25,000 دولار بعد 7 سنوات بنسبة 9% بأربع طرق، وتأكد أنها تعطي نفس الجواب. الطرق هي القانون، والدالة FV في Excel، وقانون مكتوب في Python، والدالة fv في numpy_financial.
+
+[[الحل](#sol-1-100)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء ز: اختيار من متعدد {.unnumbered}
+
+كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا. إذا اخترت خيارا خاطئا، ابحث عن الخطأ في طريقتك.
+
+::: {.ee-item #prob-1-101 data-id="c01-g-01" data-kind="problem" data-label="1.101"}
+**1.101** ما قيمة 5,000 دولار بعد 5 سنوات بفائدة مركبة 8%؟
+
+أ) 7,000.00 دولار\
+ب) 7,346.64 دولار\
+ج) 3,402.92 دولار\
+د) 27,000.00 دولار
+
+[[الحل](#sol-1-101)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-102 data-id="c01-g-02" data-kind="problem" data-label="1.102"}
+**1.102** ما القيمة الحالية لمبلغ 10,000 دولار بعد 4 سنوات بنسبة 7%؟
+
+أ) 13,107.96 دولار\
+ب) 7,200.00 دولار\
+ج) 7,628.95 دولار\
+د) 7,812.50 دولار
+
+[[الحل](#sol-1-102)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-103 data-id="c01-g-03" data-kind="problem" data-label="1.103"}
+**1.103** أي الصيغ التالية تعطي القيمة المستقبلية لمبلغ 2000 دولار بعد 5 سنوات بنسبة 6% بإشارة موجبة؟
+
+```excel
+1:  =FV(6%, 5, 0, 2000)
+2:  =FV(6%, 5, 0, -2000)
+3:  =FV(5, 6%, 0, -2000)
+4:  =FV(6%, 5, -2000)
+```
+
+أ) الصيغة 1\
+ب) الصيغة 2\
+ج) الصيغة 3\
+د) الصيغة 4
+
+[[الحل](#sol-1-103)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-104 data-id="c01-g-04" data-kind="problem" data-label="1.104"}
+**1.104** كم سنة تقريبا يحتاج المبلغ ليتضاعف بنسبة 9%؟
+
+أ) 11.11 سنة\
+ب) 22.22 سنة\
+ج) 8.04 سنة\
+د) 6.48 سنة
+
+[[الحل](#sol-1-104)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-105 data-id="c01-g-05" data-kind="problem" data-label="1.105"}
+**1.105** نقل طالب مبلغا 3000 دولار من السنة 6 إلى السنة 2 بنسبة 8%. أي معامل يستخدم؟
+
+$$
+\text{(1)}\ (F/P,\ 8\%,\ 4) \qquad \text{(2)}\ (P/F,\ 8\%,\ 6) \qquad \text{(3)}\ (P/F,\ 8\%,\ 4) \qquad \text{(4)}\ (P/F,\ 8\%,\ 2)
+$$
+
+أ) المعامل 1\
+ب) المعامل 2\
+ج) المعامل 3\
+د) المعامل 4
+
+[[الحل](#sol-1-105)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-106 data-id="c01-g-06" data-kind="problem" data-label="1.106"}
+**1.106** أودع شخص 1,000 دولار اليوم و1,000 دولار في نهاية السنة 3. ما الرصيد في نهاية السنة 5 بنسبة 10%؟
+
+أ) 3,221.02 دولار\
+ب) 2,820.51 دولار\
+ج) 2,420.00 دولار\
+د) 2,000.00 دولار
+
+[[الحل](#sol-1-106)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-107 data-id="c01-g-07" data-kind="problem" data-label="1.107"}
+**1.107** أي العبارات التالية صحيحة دائما ما دامت نسبة الفائدة موجبة؟
+
+أ) معامل القيمة الحالية P/F أكبر من 1\
+ب) معامل القيمة المستقبلية F/P يقل كلما زاد عدد السنوات\
+ج) معامل القيمة الحالية P/F يقل كلما زادت نسبة الفائدة\
+د) معامل القيمة المستقبلية ضعف معامل القيمة الحالية
+
+[[الحل](#sol-1-107)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-108 data-id="c01-g-08" data-kind="problem" data-label="1.108"}
+**1.108** مبلغ 4,000 دولار أصبح 6,000 دولار بعد 5 سنوات. ما نسبة العائد السنوية المركبة؟
+
+أ) 10.00%\
+ب) 50.00%\
+ج) 8.45%\
+د) 20.00%
+
+[[الحل](#sol-1-108)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-109 data-id="c01-g-09" data-kind="problem" data-label="1.109"}
+**1.109** في مخطط التدفق النقدي لقرض من وجهة نظر المقترض، أين يقع السهم الذي يمثل مبلغ القرض؟
+
+أ) للأسفل في السنة 0\
+ب) للأعلى في السنة 0\
+ج) للأعلى في السنة الأخيرة\
+د) للأسفل في السنة الأخيرة
+
+[[الحل](#sol-1-109)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-110 data-id="c01-g-10" data-kind="problem" data-label="1.110"}
+**1.110** عرض أول 12,000 دولار اليوم، وعرض ثان 15,000 دولار بعد 3 سنوات. بنسبة 8%، أي العرضين أفضل؟
+
+أ) العرض الأول، لأن قيمة العرض الثاني اليوم 11,907.48 دولار\
+ب) العرض الثاني، لأن قيمته اليوم 11,907.48 دولار
+
+[[الحل](#sol-1-110)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+### الجزء ح: حالات مصغرة {.unnumbered}
+
+كل حالة تجمع أكثر من فكرة من الفصل، وبعضها يضيف فكرة جديدة. اقرأ الحالة كاملة قبل الحل.
+
+::: {.ee-item #prob-1-111 data-id="c01-h-01" data-kind="problem" data-label="1.111"}
+**1.111** **حالة 1.1: قرض دراسة بفترة سماح**
+
+اقترضت سارة من صندوق إقراض الطلبة 4,000 دولار في بداية كل سنة دراسية من سنوات دراستها الأربع، أي في السنوات 0 و1 و2 و3. الصندوق يحسب فائدة 5% سنويا أثناء الدراسة. عند التخرج في نهاية السنة 4 ترتفع الفائدة إلى 8% سنويا. عرض عليها الصندوق طريقتين للسداد:
+
+- الطريقة الأولى: دفعة واحدة في نهاية السنة 6.
+- الطريقة الثانية: دفعتان، الأولى في نهاية السنة 5 والثانية في نهاية السنة 7، والأولى نصف الثانية.
+
+(أ) ارسم مخطط التدفق النقدي. (ب) ما رصيد الدين عند التخرج؟ (ج) ما الدفعة في الطريقة الأولى؟ (د) ما الدفعتان في الطريقة الثانية؟ (هـ) سارة تستطيع استثمار مالها بعائد 8% أيضا. هل تختلف الطريقتان بالنسبة لها؟ (و) ما متوسط النسبة السنوية التي دفعتها على القرض في الطريقة الأولى؟
+
+[[الحل](#sol-1-111)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-112 data-id="c01-h-02" data-kind="problem" data-label="1.112"}
+**1.112** **حالة 1.2: عرضان لشراء أرض في نابلس**
+
+يملك خالد قطعة أرض، وتلقى عرضين لشرائها:
+
+- العرض أ: 100,000 دولار نقدا اليوم.
+- العرض ب: 40,000 دولار اليوم، و75,000 دولار بعد 3 سنوات.
+
+(أ) خالد يستطيع استثمار المال بعائد 6% سنويا. أي العرضين أفضل له؟ (ب) أعد الحل بعائد 10%. (ج) عند أي عائد يتساوى العرضان؟ (د) خالد يقول إن العرض ب أفضل لأن مجموعه 115,000 دولار. ما الخطأ في كلامه؟ (هـ) ما المخاطرة التي يتحملها خالد في العرض ب ولا تظهر في الحساب؟
+
+[[الحل](#sol-1-112)]{.ee-sol-link .content-visible when-format="html"}
+:::
+
+::: {.ee-item #prob-1-113 data-id="c01-h-03" data-kind="problem" data-label="1.113"}
+**1.113** **حالة 1.3: صندوق ادخار بنسبة تتغير**
+
+أودعت نقابة المهندسين 20,000 دولار في صندوق ادخار لأحد أعضائها. الصندوق أعطى 5% سنويا في السنوات الأربع الأولى، ثم 7% سنويا في السنوات الست التالية.
+
+(أ) ما رصيد الصندوق بعد 10 سنوات؟ (ب) ما النسبة السنوية الثابتة التي تعطي نفس الرصيد؟ (ج) زميل حسب متوسط النسبة بأخذ متوسط النسبتين مرجحا بعدد السنوات. ما المتوسط الذي حسبه؟ وما الرصيد الذي يعطيه؟ لماذا يختلف؟ (د) على الصندوق التزام بدفع 50,000 دولار بعد 10 سنوات. ما القيمة الحالية لهذا الالتزام بنفس جدول النسب؟ (هـ) هل يتغير رصيد السنة 10 لو جاءت النسبة 7% أولا ثم 5%؟
+
+[[الحل](#sol-1-113)]{.ee-sol-link .content-visible when-format="html"}
+:::
 
