@@ -140,7 +140,7 @@ def r2(x):
 
 HELPERS = {
     "FP": FP, "PF": PF, "PA": PA, "AP": AP, "FA": FA, "AF": AF,
-    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "abs": abs, "max": max, "min": min,
+    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "exp": math.exp, "abs": abs, "max": max, "min": min,
     "pick": pick, "yrs": yrs, "r4": r4, "r2": r2, "floor": math.floor, "ceil": math.ceil,
     "lcm": lambda a, b: math.lcm(int(round(a)), int(round(b))),
 }

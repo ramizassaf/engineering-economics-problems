@@ -50,7 +50,7 @@
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
     FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, NPV, IRR, r4, r2,
-    ln: Math.log, abs: Math.abs, max: Math.max, min: Math.min,
+    ln: Math.log, exp: Math.exp, abs: Math.abs, max: Math.max, min: Math.min,
     floor: Math.floor, ceil: Math.ceil,
     lcm: (a, b) => { a = Math.round(a); b = Math.round(b); const g = (x, y) => (y ? g(y, x % y) : x); return a / g(a, b) * b; },
     pick: (c, a, b) => (c ? a : b),

@@ -91,8 +91,59 @@ local function wrap_latin(el)
   return out
 end
 
+-- A word made only of ASCII characters, with at least one Latin letter.
+local function latin_word(el)
+  return el and el.t == "Str" and not el.text:find("[\128-\255]") and el.text:find("[A-Za-z]") ~= nil
+end
+
+local function ltr(text)
+  -- Escape LaTeX special characters, such as the underscore in numpy_financial.
+  text = text:gsub("([_%%&#%$])", "\\%1")
+  return pandoc.RawInline("latex", "\\babelsublr{\\foreignlanguage{english}{" .. text .. "}}")
+end
+
+-- Headings: set a whole English phrase (Goal Seek, Scenario Manager, (P/A))
+-- as one left-to-right run. Wrapping each word alone reverses the word order.
+local function fix_header(h)
+  local inl, out, i = h.content, pandoc.Inlines({}), 1
+  while i <= #inl do
+    local el = inl[i]
+    -- An Arabic prefix glued to an English word, as in وGoogle: split it off.
+    local pre, rest
+    if el.t == "Str" then
+      pre, rest = el.text:match("^([\128-\255]+)([%w%p]+)$")
+    end
+    if pre and rest:find("[A-Za-z]") then
+      out:insert(pandoc.Str(pre))
+      el = pandoc.Str(rest)
+    end
+    if latin_word(el) then
+      local parts, j = { el.text }, i + 1
+      while inl[j] and inl[j].t == "Space" and latin_word(inl[j + 1]) do
+        table.insert(parts, inl[j + 1].text)
+        j = j + 2
+      end
+      out:insert(ltr(table.concat(parts, " ")))
+      i = j
+    elseif el.t == "Str" then
+      local r = wrap_latin(el)
+      if r then
+        for _, x in ipairs(r) do out:insert(x) end
+      else
+        out:insert(el)
+      end
+      i = i + 1
+    else
+      out:insert(el)
+      i = i + 1
+    end
+  end
+  h.content = out
+  return h
+end
+
 function Pandoc(doc)
-  doc.blocks = doc.blocks:walk({ Header = function(h) return h:walk({ Str = wrap_latin }) end })
+  doc.blocks = doc.blocks:walk({ Header = fix_header })
   doc.blocks = doc.blocks:walk({ Str = wrap })
   return doc
 end
