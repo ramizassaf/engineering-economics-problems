@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>الملحق S — حلول مسائل الفصل الثاني عشر – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/solutions-ch13.html" rel="next">
+<link href="../appendices/solutions-ch11.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch12.html"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني عشر</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">مسرد المصطلحات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">المراجع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثامن</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل التاسع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch12.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث عشر</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-المنافع-والأضرار-والتكاليف" id="toc-الجزء-ب-المنافع-والأضرار-والتكاليف" class="nav-link" data-scroll-target="#الجزء-ب-المنافع-والأضرار-والتكاليف">الجزء ب: المنافع والأضرار والتكاليف</a></li>
+  <li><a href="#الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" id="toc-الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" class="nav-link" data-scroll-target="#الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد">الجزء ج: نسبة المنفعة إلى التكلفة لمشروع واحد</a></li>
+  <li><a href="#الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" id="toc-الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" class="nav-link" data-scroll-target="#الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار">الجزء د: النسبة التقليدية والمعدلة والأضرار</a></li>
+  <li><a href="#الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" id="toc-الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" class="nav-link" data-scroll-target="#الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة">الجزء هـ: القيمة السنوية والمشاريع الدائمة</a></li>
+  <li><a href="#الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" id="toc-الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" class="nav-link" data-scroll-target="#الجزء-و-النسبة-التزايدية-للبدائل-المتنافية">الجزء و: النسبة التزايدية للبدائل المتنافية</a></li>
+  <li><a href="#الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" id="toc-الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" class="nav-link" data-scroll-target="#الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة">الجزء ز: المشاريع المستقلة والفعالية مقابل التكلفة</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch12.html"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني عشر</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sol-12" class="quarto-section-identifier">الملحق S — حلول مسائل الفصل الثاني عشر</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الحلول التالية محسوبة ببرنامج من نفس بنك الأسئلة الذي ولد نصوص المسائل. إذا حللت بالجداول قد يختلف جوابك في الخانة العشرية الأخيرة.</p>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h2>
+<p><span id="sol-12-1"><strong>12.1</strong></span> في المشروع العام تدفع الحكومة ويستفيد الناس، فلا يوجد إيراد يقاس به الربح. المنافع كثيرا ما تكون بلا سعر في السوق، مثل الوقت والصحة. والأعمار أطول، ونسبة الخصم أقل.</p>
+<p><span id="sol-12-2"><strong>12.2</strong></span> المنفعة ما يكسبه الناس من المشروع، مثل وقت السفر الذي يوفرونه. الضرر ما يخسره الناس بسببه، مثل الضجيج على سكان المنطقة القريبة. الاثنان يقعان على الناس، لا على الحكومة.</p>
+<p><span id="sol-12-3"><strong>12.3</strong></span> تقليل لتكلفة البلدية. الزائر يدفعها والبلدية تأخذها، فهي انتقال مال داخل المجتمع. المنفعة الحقيقية هي ما يكسبه الزائر من الحديقة، ونحسبها مرة واحدة فقط.</p>
+<p><span id="sol-12-4"><strong>12.4</strong></span> الحكومة تقترض بفائدة أقل، ولا تطلب ربحا فوق تكلفة المال. والمجتمع يهتم بالأجيال القادمة أكثر من المستثمر الفرد، فلا يخصم المستقبل بشدة.</p>
+<p><span id="sol-12-5"><strong>12.5</strong></span> تخفض القيمة الحالية للمنافع البعيدة كثيرا، بينما الاستثمار في البداية لا يتأثر. فتنخفض النسبة، وقد يرفض مشروع مجد.</p>
+<p><span id="sol-12-6"><strong>12.6</strong></span> لا. الاثنتان أكبر من 1 إذا وفقط إذا كانت المنافع الصافية أكبر من التكاليف الصافية. قيمتاهما تختلفان، لكن القرار واحد.</p>
+<p><span id="sol-12-7"><strong>12.7</strong></span> النسبة لا تقيس حجم المنفعة الصافية. بديل أغلى بنسبة أقل قد يعطي منفعة صافية أكبر، إذا كانت كل دينار إضافي فيه يعيد أكثر من دينار. لذلك نستخدم النسبة التزايدية.</p>
+<p><span id="sol-12-8"><strong>12.8</strong></span> عندما لا يتفق الناس على سعر للمنفعة، مثل حياة تنقذ أو طالب يتخرج. نقيس المنفعة بوحدتها، ونقارن تكلفة كل وحدة.</p>
+<p><span id="sol-12-9"><strong>12.9</strong></span> إذا لم توضع قيمة، فكأن المنفعة صفر، ويرفض مشروع ينقذ أرواحا. وضع قيمة صريحة يجعل الافتراض واضحا ويمكن نقاشه وتغييره.</p>
+<p><span id="sol-12-10"><strong>12.10</strong></span> أجور العمال جزء من تكلفة الإنشاء. إذا كان العمال سيعملون في مكان آخر بدون المشروع، فالوظائف لا تضيف للمجتمع شيئا. تعد منفعة فقط إذا كانوا عاطلين، وبقدر الفرق.</p>
+<p><span id="sol-12-11"><strong>12.11</strong></span> جزء كبير من المبيعات انتقل من مكان إلى آخر، ولم يزد في المجتمع. عد الزيادة وحدها يضخم المنافع. الانخفاض على الطريق القديم ضرر يجب أن يطرح.</p>
+<p><span id="sol-12-12"><strong>12.12</strong></span> نعم. المشاريع المستقلة لا تتنافس، وكل مشروع نسبته 1 أو أكثر يعطي المجتمع أكثر مما يكلف. النسبة التزايدية تلزم فقط للبدائل المتنافية.</p>
+</section>
+<section id="الجزء-ب-المنافع-والأضرار-والتكاليف" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-المنافع-والأضرار-والتكاليف">الجزء ب: المنافع والأضرار والتكاليف</h2>
+<p><span id="sol-12-13"><strong>12.13</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+B = 600\mathord{,}000 + 200\mathord{,}000 = 800\mathord{,}000
+</annotation></semantics></math></p>
+<p>الضرر على السكان 90,000 دينار، والتكلفة على الحكومة 70,000 دينار. المنافع ناقص الأضرار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>800</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>90</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>710</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+800\mathord{,}000 - 90\mathord{,}000 = 710\mathord{,}000
+</annotation></semantics></math></p>
+<p><span id="sol-12-14"><strong>12.14</strong></span> ساعات التوفير في السنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>250</mn><mo>×</mo><mfrac><mn>12</mn><mn>60</mn></mfrac><mo>=</mo><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+50\mathord{,}000 \times 250 \times \frac{12}{60} = 2\mathord{,}500\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+2\mathord{,}500\mathord{,}000 \times 4 = 10\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p>قيمة ساعة المسافر افتراض يجب أن يذكر صراحة، لأن النتيجة تتناسب معه.</p>
+<p><span id="sol-12-15"><strong>12.15</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>45</mn><mo>−</mo><mn>28</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>020</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+(45 - 28) \times 60\mathord{,}000 = 1\mathord{,}020\mathord{,}000
+</annotation></semantics></math></p>
+<p><span id="sol-12-16"><strong>12.16</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.80</mn><mo>×</mo><mn>450</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>080</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+B = 3\mathord{,}000 \times 0.80 \times 450 = 1\mathord{,}080\mathord{,}000
+</annotation></semantics></math></p>
+<p>الرسوم يدفعها المزارعون للحكومة. هي تقلل تكلفة الحكومة، ولا تطرح من المنفعة ولا تضاف إليها. المنفعة كاملة هي زيادة المحصول.</p>
+<p><span id="sol-12-17"><strong>12.17</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>800</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+800\mathord{,}000 - 100\mathord{,}000 - 500\mathord{,}000 = 200\mathord{,}000
+</annotation></semantics></math></p>
+<p>موجبة: المجتمع يكسب من المشروع.</p>
+<p><span id="sol-12-18"><strong>12.18</strong></span> (أ) تكلفة. (ب) منفعة. (ج) ضرر. (د) تقلل التكلفة، لأن البلدية تحصلها. (هـ) تقلل التكلفة، لأن البلدية هي التي توفر.</p>
+<p><span id="sol-12-19"><strong>12.19</strong></span> ارتفاع القيمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12</mn><mi>%</mi><mo>=</mo><mn>3</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+2\mathord{,}000 \times 15\mathord{,}000 \times 12\% = 3\mathord{,}600\mathord{,}000
+</annotation></semantics></math></p>
+<p>لا نضيفه. سعر البيت ارتفع لأن المشتري يتوقع نفس المنافع التي حسبناها: صحة أفضل وتوفير التفريغ. إضافته تحسب المنافع مرتين.</p>
+<p><span id="sol-12-20"><strong>12.20</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>250</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>+</mo><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>12</mn><mo>=</mo><mn>87</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+250 \times (4 + 25) \times 12 = 87\mathord{,}000
+</annotation></semantics></math></p>
+<p><span id="sol-12-21"><strong>12.21</strong></span> نعم. المجتمع فقد إنتاج الأرض:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>120</mn><mo>×</mo><mn>900</mn><mo>=</mo><mn>108</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 120 \times 900 = 108\mathord{,}000
+</annotation></semantics></math></p>
+<p>التعويض نقل مال من الحكومة إلى المزارعين، فهو تكلفة على الحكومة. لكنه لا يعيد الإنتاج المفقود. نحسب واحدا فقط: إما ثمن الأرض تكلفة في السنة 0، إذا كان يعكس قيمة إنتاجها، وإما الدخل الضائع ضررا سنويا. لا الاثنين.</p>
+<p><span id="sol-12-22"><strong>12.22</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>900</mn><mo>−</mo><mn>400</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>30</mn><mi>%</mi><mo>=</mo><mn>150.00</mn></mrow><annotation encoding="application/x-tex">
+(900 - 400) \times 30\% = 150.00
+</annotation></semantics></math></p>
+<p>قيمة إكمال الدراسة تشمل دخلا أعلى لاحقا، وأشياء لا سعر لها. تقديرها بالدنانير ممكن لكنه خلافي. الأوضح أن نقارن تكلفة كل طالب إضافي يكمل الدراسة بين البدائل، بتحليل الفعالية مقابل التكلفة.</p>
+</section>
+<section id="الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد">الجزء ج: نسبة المنفعة إلى التكلفة لمشروع واحد</h2>
+<p><span id="sol-12-23"><strong>12.23</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.4699</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 20) = 11.4699
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>210</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.4699</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.4699</mn></mrow></mfrac><mo>=</mo><mn>1.2297</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{210\mathord{,}000 \times 11.4699}{1\mathord{,}500\mathord{,}000 + 40\mathord{,}000 \times 11.4699} = 1.2297
+</annotation></semantics></math></p>
+<p>المشروع مجد.</p>
+<p><span id="sol-12-24"><strong>12.24</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15.3725</mn><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.2314</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 5\%,\ 30) = 15.3725 \qquad (P/F,\ 5\%,\ 30) = 0.2314
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi></mrow><mrow><mi>I</mi><mo>+</mo><mi>M</mi><mo>−</mo><mi>S</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>700</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>15.3725</mn></mrow><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>15.3725</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.2314</mn></mrow></mfrac><mo>=</mo><mn>1.1804</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D}{I + M - S} = \frac{(700\mathord{,}000 - 80\mathord{,}000) \times 15.3725}{6\mathord{,}000\mathord{,}000 + 150\mathord{,}000 \times 15.3725 - 1\mathord{,}000\mathord{,}000 \times 0.2314} = 1.1804
+</annotation></semantics></math></p>
+<p><span id="sol-12-25"><strong>12.25</strong></span> المنافع سلسلة متدرجة خطيا، كما في الفصل الثاني:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>B</mi></msub><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>124</mn><mi>,</mi><mn>347.50</mn></mrow><annotation encoding="application/x-tex">
+PW_B = 60\mathord{,}000\,(P/A,\ 6\%,\ 20) + 5\mathord{,}000\,(P/G,\ 6\%,\ 20) = 1\mathord{,}124\mathord{,}347.50
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>C</mi></msub><mo>=</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>129</mn><mi>,</mi><mn>398.42</mn></mrow><annotation encoding="application/x-tex">
+PW_C = 900\mathord{,}000 + 20\mathord{,}000\,(P/A,\ 6\%,\ 20) = 1\mathord{,}129\mathord{,}398.42
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mi>,</mi><mn>124</mn><mi>,</mi><mn>347.50</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>129</mn><mi>,</mi><mn>398.42</mn></mrow></mfrac><mo>=</mo><mn>0.9955</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{1\mathord{,}124\mathord{,}347.50}{1\mathord{,}129\mathord{,}398.42} = 0.9955
+</annotation></semantics></math></p>
+<p><span id="sol-12-26"><strong>12.26</strong></span> المنافع سلسلة متدرجة نسبيا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>B</mi></msub><mo>=</mo><mn>150</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>841</mn><mi>,</mi><mn>478.39</mn></mrow><annotation encoding="application/x-tex">
+PW_B = 150\mathord{,}000\,(P/A_1,\ 4\%,\ 6\%,\ 25) = 2\mathord{,}841\mathord{,}478.39
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>C</mi></msub><mo>=</mo><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>383</mn><mi>,</mi><mn>500.68</mn></mrow><annotation encoding="application/x-tex">
+PW_C = 2\mathord{,}000\mathord{,}000 + 30\mathord{,}000\,(P/A,\ 6\%,\ 25) = 2\mathord{,}383\mathord{,}500.68
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mn>1.1921</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = 1.1921
+</annotation></semantics></math></p>
+<p><span id="sol-12-27"><strong>12.27</strong></span> المشروع مجد إذا كانت النسبة 1 على الأقل، أي إذا غطت المنافع التكاليف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>80</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+B\,(P/A,\ 5\%,\ 30) = 3\mathord{,}000\mathord{,}000 + 80\mathord{,}000\,(P/A,\ 5\%,\ 30)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>275</mn><mi>,</mi><mn>154.31</mn></mrow><annotation encoding="application/x-tex">
+B = 3\mathord{,}000\mathord{,}000\,(A/P,\ 5\%,\ 30) + 80\mathord{,}000 = 275\mathord{,}154.31
+</annotation></semantics></math></p>
+<p><span id="sol-12-28"><strong>12.28</strong></span> المنفعة الصافية السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>500</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+600\mathord{,}000 - 100\mathord{,}000 = 500\mathord{,}000
+</annotation></semantics></math></p>
+<p>نبحث عن n التي تجعل قيمتها الحالية تساوي الاستثمار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+500\mathord{,}000\,(P/A,\ 5\%,\ n) = 5\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NPER(5%, 500000, -5000000)</code></pre>
+<p>n تساوي 14.21 سنة. إذا كان العمر المتوقع أطول، فالمشروع مجد.</p>
+<p><span id="sol-12-29"><strong>12.29</strong></span> النسبة تساوي 1 بالضبط عندما تتساوى القيمة الحالية للمنفعة الصافية مع الاستثمار. هذه هي نسبة الخصم التي تجعل القيمة الحالية الصافية صفرا، أي معدل العائد الداخلي للمشروع:</p>
+<pre class="excel"><code>=RATE(30, 290000, -4000000)</code></pre>
+<p>5.98%. بأي نسبة خصم أقل منها، النسبة أكبر من 1.</p>
+<p><span id="sol-12-30"><strong>12.30</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الخصم</th>
+<th>المنافع الحالية على التكاليف الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3%</td>
+<td>1.4907</td>
+</tr>
+<tr class="even">
+<td>6%</td>
+<td>1.1777</td>
+</tr>
+<tr class="odd">
+<td>9%</td>
+<td>0.9513</td>
+</tr>
+</tbody>
+</table>
+<p>مثال عند 6%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>140</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>25</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>1.1777</mn></mrow><annotation encoding="application/x-tex">
+\frac{140\mathord{,}000\,(P/A,\ 6\%,\ 25)}{1\mathord{,}200\mathord{,}000 + 25\mathord{,}000\,(P/A,\ 6\%,\ 25)} = 1.1777
+</annotation></semantics></math></p>
+<p>النسبة تنخفض كلما ارتفعت نسبة الخصم، لأن المنافع موزعة على السنين والاستثمار في البداية.</p>
+<p><span id="sol-12-31"><strong>12.31</strong></span> المنافع والتشغيل سلسلة تبدأ في السنة 2، فننقلها إلى السنة 1 بالمعامل P/A، ثم إلى السنة 0:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>B</mi></msub><mo>=</mo><mn>230</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>488</mn><mi>,</mi><mn>756.49</mn></mrow><annotation encoding="application/x-tex">
+PW_B = 230\mathord{,}000\,(P/A,\ 6\%,\ 20)\,(P/F,\ 6\%,\ 1) = 2\mathord{,}488\mathord{,}756.49
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>C</mi></msub><mo>=</mo><mn>800</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>600</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>690</mn><mi>,</mi><mn>658.15</mn></mrow><annotation encoding="application/x-tex">
+PW_C = 800\mathord{,}000 + 600\mathord{,}000\,(P/F,\ 6\%,\ 1) + 30\mathord{,}000\,(P/A,\ 6\%,\ 20)\,(P/F,\ 6\%,\ 1) = 1\mathord{,}690\mathord{,}658.15
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mn>1.4721</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = 1.4721
+</annotation></semantics></math></p>
+<p><span id="sol-12-32"><strong>12.32</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14.0939</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 5\%,\ 25) = 14.0939
+</annotation></semantics></math></p>
+<p>بالتقدير:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>300</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow></mfrac><mo>=</mo><mn>1.2638</mn></mrow><annotation encoding="application/x-tex">
+\frac{300\mathord{,}000 \times 14.0939}{2\mathord{,}500\mathord{,}000 + 60\mathord{,}000 \times 14.0939} = 1.2638
+</annotation></semantics></math></p>
+<p>بعد التجاوز:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>300</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow></mfrac><mo>=</mo><mn>1.0995</mn></mrow><annotation encoding="application/x-tex">
+\frac{300\mathord{,}000 \times 14.0939}{2\mathord{,}500\mathord{,}000 \times (1 + 20\%) + 60\mathord{,}000 \times 14.0939} = 1.0995
+</annotation></semantics></math></p>
+<p>المشروع يبقى مجديا حتى مع التجاوز.</p>
+<p><span id="sol-12-33"><strong>12.33</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>4</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2000</mn><mspace width="2.0em"></mspace><mn>4</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>700</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\frac{4\mathord{,}200\mathord{,}000}{3\mathord{,}500\mathord{,}000} = 1.2000 \qquad 4\mathord{,}200\mathord{,}000 - 3\mathord{,}500\mathord{,}000 = 700\mathord{,}000
+</annotation></semantics></math></p>
+<p>نعم، دائما: النسبة أكبر من 1 إذا وفقط إذا كانت القيمة الصافية موجبة. المشروع مجد.</p>
+<p><span id="sol-12-34"><strong>12.34</strong></span> بالقيمة الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>260</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12.7834</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12.7834</mn></mrow></mfrac><mo>=</mo><mn>1.3626</mn></mrow><annotation encoding="application/x-tex">
+\frac{260\mathord{,}000 \times 12.7834}{1\mathord{,}800\mathord{,}000 + 50\mathord{,}000 \times 12.7834} = 1.3626
+</annotation></semantics></math></p>
+<p>بالقيمة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>260</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>50</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3626</mn></mrow><annotation encoding="application/x-tex">
+\frac{260\mathord{,}000}{1\mathord{,}800\mathord{,}000\,(A/P,\ 6\%,\ 25) + 50\mathord{,}000} = 1.3626
+</annotation></semantics></math></p>
+<p>النتيجة واحدة: القسمة على نفس المعامل في البسط والمقام لا تغير النسبة.</p>
+</section>
+<section id="الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار">الجزء د: النسبة التقليدية والمعدلة والأضرار</h2>
+<p><span id="sol-12-35"><strong>12.35</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi></mrow><mrow><mi>I</mi><mo>+</mo><mi>M</mi><mo>−</mo><mi>S</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>500</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3750</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D}{I + M - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000}{3\mathord{,}000\mathord{,}000 + 1\mathord{,}200\mathord{,}000 - 200\mathord{,}000} = 1.3750
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi><mo>−</mo><mi>M</mi></mrow><mrow><mi>I</mi><mo>−</mo><mi>S</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>500</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.5357</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D - M}{I - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000 - 1\mathord{,}200\mathord{,}000}{3\mathord{,}000\mathord{,}000 - 200\mathord{,}000} = 1.5357
+</annotation></semantics></math></p>
+<p>القرار واحد: مجد.</p>
+<p><span id="sol-12-36"><strong>12.36</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15.3725</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 5\%,\ 30) = 15.3725
+</annotation></semantics></math></p>
+<p>التقليدية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>330</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>15.3725</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>70</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>15.3725</mn></mrow></mfrac><mo>=</mo><mn>1.2466</mn></mrow><annotation encoding="application/x-tex">
+\frac{(330\mathord{,}000 - 40\mathord{,}000) \times 15.3725}{2\mathord{,}500\mathord{,}000 + 70\mathord{,}000 \times 15.3725} = 1.2466
+</annotation></semantics></math></p>
+<p>المعدلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>330</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>70</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>15.3725</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3528</mn></mrow><annotation encoding="application/x-tex">
+\frac{(330\mathord{,}000 - 40\mathord{,}000 - 70\mathord{,}000) \times 15.3725}{2\mathord{,}500\mathord{,}000} = 1.3528
+</annotation></semantics></math></p>
+<p><span id="sol-12-37"><strong>12.37</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.0833</mn></mrow><annotation encoding="application/x-tex">
+\frac{3\mathord{,}000\mathord{,}000 - 400\mathord{,}000}{2\mathord{,}400\mathord{,}000} = 1.0833
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>400</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.0714</mn></mrow><annotation encoding="application/x-tex">
+\frac{3\mathord{,}000\mathord{,}000}{2\mathord{,}400\mathord{,}000 + 400\mathord{,}000} = 1.0714
+</annotation></semantics></math></p>
+<p>القيمتان مختلفتان، والقرار واحد: مجد. لذلك لا يقارن رقما نسبة من جهتين مختلفتين إلا إذا عرفنا كيف وضعت الأضرار.</p>
+<p><span id="sol-12-38"><strong>12.38</strong></span> المشروع مجد ما دامت المنافع ناقص الأضرار لا تقل عن التكاليف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mi>D</mi><mo>≥</mo><mn>4</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+5\mathord{,}000\mathord{,}000 - D \ge 4\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>≤</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D \le 1\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p>إذا قدرت الأضرار بأكثر من 1,000,000 دينار، يصبح المشروع غير مجد. هذا الرقم يحدد كم يستحق أن تنفق الجهة على عزل الضجيج.</p>
+<p><span id="sol-12-39"><strong>12.39</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>160</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.4699</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.4699</mn></mrow></mfrac><mo>=</mo><mn>1.1663</mn><mspace width="2.0em"></mspace><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>160</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>11.4699</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2617</mn></mrow><annotation encoding="application/x-tex">
+\frac{160\mathord{,}000 \times 11.4699}{1\mathord{,}000\mathord{,}000 + 50\mathord{,}000 \times 11.4699} = 1.1663 \qquad \frac{(160\mathord{,}000 - 50\mathord{,}000) \times 11.4699}{1\mathord{,}000\mathord{,}000} = 1.2617
+</annotation></semantics></math></p>
+<p>المعدلة أبعد عن 1 دائما. نقل نفس المبلغ من المقام إلى البسط، بإشارة سالبة، يكبر النسبة إذا كانت فوق 1، ويصغرها إذا كانت تحت 1.</p>
+<p><span id="sol-12-40"><strong>12.40</strong></span> عتبة 1 لا تتأثر بنوع النسبة، لكن أي عتبة أخرى تتأثر. مشروع قد تكون نسبته المعدلة 1.6 والتقليدية 1.3، فيقبل بواحدة ويرفض بالأخرى.</p>
+<p><span id="sol-12-41"><strong>12.41</strong></span> الرسوم تقلل تكلفة البلدية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>380</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>90</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>14.0939</mn></mrow></mfrac><mo>=</mo><mn>1.5647</mn></mrow><annotation encoding="application/x-tex">
+\frac{380\mathord{,}000 \times 14.0939}{3\mathord{,}000\mathord{,}000 + (90\mathord{,}000 - 60\mathord{,}000) \times 14.0939} = 1.5647
+</annotation></semantics></math></p>
+<p>الخطأ الشائع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>380</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>14.0939</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>90</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>14.0939</mn></mrow></mfrac><mo>=</mo><mn>1.4528</mn></mrow><annotation encoding="application/x-tex">
+\frac{(380\mathord{,}000 + 60\mathord{,}000) \times 14.0939}{3\mathord{,}000\mathord{,}000 + 90\mathord{,}000 \times 14.0939} = 1.4528
+</annotation></semantics></math></p>
+<p>الرقمان قريبان، لكن الثاني يخلط ما يكسبه الناس بما تجمعه البلدية منهم.</p>
+<p><span id="sol-12-42"><strong>12.42</strong></span> حساب المحلل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>7</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>4</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2727</mn></mrow><annotation encoding="application/x-tex">
+\frac{7\mathord{,}000\mathord{,}000}{4\mathord{,}000\mathord{,}000 + 1\mathord{,}500\mathord{,}000} = 1.2727
+</annotation></semantics></math></p>
+<p>الصحيح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>7</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>900</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>4</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.1091</mn></mrow><annotation encoding="application/x-tex">
+\frac{7\mathord{,}000\mathord{,}000 - 900\mathord{,}000}{4\mathord{,}000\mathord{,}000 + 1\mathord{,}500\mathord{,}000} = 1.1091
+</annotation></semantics></math></p>
+<p>القرار لم يتغير، لكن المشروع أقل جدوى مما بدا.</p>
+<p><span id="sol-12-43"><strong>12.43</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>220</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>220</mn><mi>,</mi><mn>488.18</mn></mrow><annotation encoding="application/x-tex">
+PW = (220\mathord{,}000 - 30\mathord{,}000 - 40\mathord{,}000)\,(P/A,\ 6\%,\ 20) - 1\mathord{,}500\mathord{,}000 = 220\mathord{,}488.18
+</annotation></semantics></math></p>
+<p>لمشروع واحد لا: القيمة الصافية الموجبة تعني نسبة أكبر من 1، وتعطي نفس القرار. كثير من الدول تطلب النسبة في التقارير لأنها مألوفة للمسؤولين.</p>
+<p><span id="sol-12-44"><strong>12.44</strong></span> المقام فيها الاستثمار فقط، وهو المورد المحدود في الميزانية الرأسمالية. فالنسبة تقيس المنفعة الصافية لكل دينار استثمار، مثل مؤشر الربحية في <a href="../chapters/ch11.html#sec-budget" class="quarto-xref"><span>القسم 11.7</span></a>.</p>
+</section>
+<section id="الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة">الجزء هـ: القيمة السنوية والمشاريع الدائمة</h2>
+<p><span id="sol-12-45"><strong>12.45</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5</mn><mi>%</mi><mo>+</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.4737</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}400\mathord{,}000}{15\mathord{,}000\mathord{,}000 \times 5\% + 200\mathord{,}000} = 1.4737
+</annotation></semantics></math></p>
+<p><span id="sol-12-46"><strong>12.46</strong></span> التجديد الدوري يتحول إلى مبلغ سنوي بمعامل صندوق الادخار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>41</mn><mi>,</mi><mn>645.47</mn></mrow><annotation encoding="application/x-tex">
+500\mathord{,}000\,(A/F,\ 4\%,\ 10) = 41\mathord{,}645.47
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>900</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>8</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>41</mn><mi>,</mi><mn>645.47</mn></mrow></mfrac><mo>=</mo><mn>1.7590</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{900\mathord{,}000}{8\mathord{,}000\mathord{,}000 \times 4\% + 150\mathord{,}000 + 41\mathord{,}645.47} = 1.7590
+</annotation></semantics></math></p>
+<p><span id="sol-12-47"><strong>12.47</strong></span> تكلفة استرداد رأس المال، كما في الفصل الثالث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>300</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>166</mn><mi>,</mi><mn>213.75</mn></mrow><annotation encoding="application/x-tex">
+CR = 2\mathord{,}000\mathord{,}000\,(A/P,\ 6\%,\ 20) - 300\mathord{,}000\,(A/F,\ 6\%,\ 20) = 166\mathord{,}213.75
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>320</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>166</mn><mi>,</mi><mn>213.75</mn><mo>+</mo><mn>60</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.4146</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{320\mathord{,}000}{166\mathord{,}213.75 + 60\mathord{,}000} = 1.4146
+</annotation></semantics></math></p>
+<p><span id="sol-12-48"><strong>12.48</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5</mn><mi>%</mi><mo>+</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>300</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+B = 20\mathord{,}000\mathord{,}000 \times 5\% + 300\mathord{,}000 = 1\mathord{,}300\mathord{,}000
+</annotation></semantics></math></p>
+<p><span id="sol-12-49"><strong>12.49</strong></span> المشروع مجد ما دام:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mi>i</mi><mo>+</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>≤</mo><mn>900</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000\mathord{,}000 \times i + 200\mathord{,}000 \le 900\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≤</mo><mfrac><mrow><mn>900</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>7.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i \le \frac{900\mathord{,}000 - 200\mathord{,}000}{10\mathord{,}000\mathord{,}000} = 7.00\%
+</annotation></semantics></math></p>
+<p><span id="sol-12-50"><strong>12.50</strong></span> بعمر 50 سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>12</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>50</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>250</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2124</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}100\mathord{,}000}{12\mathord{,}000\mathord{,}000\,(A/P,\ 5\%,\ 50) + 250\mathord{,}000} = 1.2124
+</annotation></semantics></math></p>
+<p>بلا نهاية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>12</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5</mn><mi>%</mi><mo>+</mo><mn>250</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2941</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}100\mathord{,}000}{12\mathord{,}000\mathord{,}000 \times 5\% + 250\mathord{,}000} = 1.2941
+</annotation></semantics></math></p>
+<p>الفرق صغير. بعد خمسين سنة تقريبا، القيمة الحالية للسنوات الإضافية قليلة، فافتراض العمر الدائم تقريب مقبول للمنشآت الطويلة.</p>
+<p><span id="sol-12-51"><strong>12.51</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>4</mn><mi>%</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+A = 30\mathord{,}000\mathord{,}000 \times 4\% = 1\mathord{,}200\mathord{,}000
+</annotation></semantics></math></p>
+<p>إذا كانت المنافع السنوية أكبر من هذا المبلغ، فالمشروع مجد.</p>
+<p><span id="sol-12-52"><strong>12.52</strong></span> الصيانة المتدرجة إلى مبلغ سنوي متساو:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>166</mn><mi>,</mi><mn>887.36</mn></mrow><annotation encoding="application/x-tex">
+100\mathord{,}000 + 5\mathord{,}000\,(A/G,\ 5\%,\ 40) = 166\mathord{,}887.36
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>700</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>166</mn><mi>,</mi><mn>887.36</mn></mrow></mfrac><mo>=</mo><mn>1.3551</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{700\mathord{,}000}{6\mathord{,}000\mathord{,}000\,(A/P,\ 5\%,\ 40) + 166\mathord{,}887.36} = 1.3551
+</annotation></semantics></math></p>
+<p><span id="sol-12-53"><strong>12.53</strong></span> منافع تبدأ في السنة الأولى:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.5372</mn></mrow><annotation encoding="application/x-tex">
+\frac{(600\mathord{,}000 - 100\mathord{,}000)\,(P/A,\ 5\%,\ 30)}{5\mathord{,}000\mathord{,}000} = 1.5372
+</annotation></semantics></math></p>
+<p>منافع مؤجلة 3 سنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3279</mn></mrow><annotation encoding="application/x-tex">
+\frac{(600\mathord{,}000 - 100\mathord{,}000)\,(P/A,\ 5\%,\ 30)\,(P/F,\ 5\%,\ 3)}{5\mathord{,}000\mathord{,}000} = 1.3279
+</annotation></semantics></math></p>
+<p>تأخير المنافع يخفض النسبة بنفس معامل الخصم. في المشاريع العامة، تأخير التنفيذ له ثمن.</p>
+<p><span id="sol-12-54"><strong>12.54</strong></span> إذا وضع المبلغ في حساب بهذه النسبة، فإن الفائدة السنوية عليه هي ما يمكن سحبه كل سنة بلا نهاية مع بقاء المبلغ. فهي القيمة السنوية المكافئة له.</p>
+</section>
+<section id="الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-و-النسبة-التزايدية-للبدائل-المتنافية">الجزء و: النسبة التزايدية للبدائل المتنافية</h2>
+<p><span id="sol-12-55"><strong>12.55</strong></span> الأول مجد منفردا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>2</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3000</mn></mrow><annotation encoding="application/x-tex">
+\frac{2\mathord{,}600\mathord{,}000}{2\mathord{,}000\mathord{,}000} = 1.3000
+</annotation></semantics></math></p>
+<p>الإضافة إلى الثاني:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn><mi>,</mi><mn>900</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.0833</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = \frac{3\mathord{,}900\mathord{,}000 - 2\mathord{,}600\mathord{,}000}{3\mathord{,}200\mathord{,}000 - 2\mathord{,}000\mathord{,}000} = 1.0833
+</annotation></semantics></math></p>
+<p>الإضافة تبرر تكلفتها: نختار الثاني.</p>
+<p><span id="sol-12-56"><strong>12.56</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12.7834</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 25) = 12.7834
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+<th>النسبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>س</td>
+<td>2,011,334</td>
+<td>2,173,171</td>
+<td>1.0805</td>
+</tr>
+<tr class="even">
+<td>ص</td>
+<td>2,939,168</td>
+<td>3,068,005</td>
+<td>1.0438</td>
+</tr>
+</tbody>
+</table>
+<p>س مجد مقابل عدم البناء. نقارن ص بـ س:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>0.9644</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 0.9644
+</annotation></semantics></math></p>
+<p>الاختيار: س.</p>
+<p><span id="sol-12-57"><strong>12.57</strong></span> البدائل مرتبة حسب التكاليف.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المقارنة</th>
+<th>الفرق في المنافع</th>
+<th>الفرق في التكاليف</th>
+<th>النسبة</th>
+<th>الأفضل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ مقابل لا شيء</td>
+<td>1,500</td>
+<td>1,200</td>
+<td>1.250</td>
+<td>أ</td>
+</tr>
+<tr class="even">
+<td>ب مقابل أ</td>
+<td>800</td>
+<td>600</td>
+<td>1.333</td>
+<td>ب</td>
+</tr>
+<tr class="odd">
+<td>ج مقابل ب</td>
+<td>650</td>
+<td>700</td>
+<td>0.929</td>
+<td>ب</td>
+</tr>
+<tr class="even">
+<td>د مقابل ب</td>
+<td>1,500</td>
+<td>1,300</td>
+<td>1.154</td>
+<td>د</td>
+</tr>
+</tbody>
+</table>
+<p>الاختيار د. لاحظ أن ج رفض، لكن د قورن بـ ب وليس بـ ج، لأن ب كان الأفضل حتى تلك الخطوة. المنفعة الصافية لـ د 700، وهي الأكبر.</p>
+<p><span id="sol-12-58"><strong>12.58</strong></span> ج رفض في خطوته، فلا يصلح أساسا للمقارنة. المقارنة تكون دائما مع أفضل بديل حتى الآن، وهو ب. القرار لم يتغير هنا، لأن د أفضل من ب أيضا. لكن نفس الخطأ قد يقبل بديلا أفضل من ج المرفوض وأسوأ من ب.</p>
+<p><span id="sol-12-59"><strong>12.59</strong></span> المنافع الصافية من الأضرار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mn>5</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>4</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+3\mathord{,}600\mathord{,}000 - 200\mathord{,}000 = 3\mathord{,}400\mathord{,}000 \qquad 5\mathord{,}100\mathord{,}000 - 500\mathord{,}000 = 4\mathord{,}600\mathord{,}000
+</annotation></semantics></math></p>
+<p>الأول مجد منفردا. الإضافة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>−</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>4</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.0000</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta (B - D)}{\Delta C} = \frac{4\mathord{,}600\mathord{,}000 - 3\mathord{,}400\mathord{,}000}{4\mathord{,}200\mathord{,}000 - 3\mathord{,}000\mathord{,}000} = 1.0000
+</annotation></semantics></math></p>
+<p>الثاني يبرر الإضافة. الأضرار الأكبر قرب المدينة تؤثر في الفرق، لا في كل بديل وحده فقط.</p>
+<p><span id="sol-12-60"><strong>12.60</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mi>,</mi><mn>950</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>900</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.9167</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = \frac{1\mathord{,}950\mathord{,}000 - 1\mathord{,}400\mathord{,}000}{1\mathord{,}500\mathord{,}000 - 900\mathord{,}000} = 0.9167
+</annotation></semantics></math></p>
+<p>المنفعة الصافية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>500</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mn>1</mn><mi>,</mi><mn>950</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>450</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+1\mathord{,}400\mathord{,}000 - 900\mathord{,}000 = 500\mathord{,}000 \qquad 1\mathord{,}950\mathord{,}000 - 1\mathord{,}500\mathord{,}000 = 450\mathord{,}000
+</annotation></semantics></math></p>
+<p>الطريقتان تختاران الأول.</p>
+<p><span id="sol-12-61"><strong>12.61</strong></span> كل التصاميم نسبتها أقل من 1، لكن الجسر ضروري. نبدأ بالأرخص بدل عدم البناء:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المقارنة</th>
+<th>الفرق في المنافع</th>
+<th>الفرق في التكاليف</th>
+<th>النسبة</th>
+<th>الأفضل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>معدني مقابل خرساني</td>
+<td>1,400</td>
+<td>1,200</td>
+<td>1.167</td>
+<td>معدني</td>
+</tr>
+<tr class="even">
+<td>معلق مقابل معدني</td>
+<td>1,400</td>
+<td>1,800</td>
+<td>0.778</td>
+<td>معدني</td>
+</tr>
+</tbody>
+</table>
+<p>نختار المعدني. عندما يكون المشروع إلزاميا، السؤال هو: هل يستحق الدينار الإضافي فوق الحد الأدنى؟</p>
+<p><span id="sol-12-62"><strong>12.62</strong></span> الأول منفردا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>280</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>1.7935</mn></mrow><annotation encoding="application/x-tex">
+\frac{280\mathord{,}000}{2\mathord{,}400\mathord{,}000\,(A/P,\ 5\%,\ 30)} = 1.7935
+</annotation></semantics></math></p>
+<p>الإضافة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>360</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>280</mn><mi>,</mi><mn>000</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>,</mi><mn>300</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>1.3664</mn></mrow><annotation encoding="application/x-tex">
+\frac{360\mathord{,}000 - 280\mathord{,}000}{(3\mathord{,}300\mathord{,}000 - 2\mathord{,}400\mathord{,}000)\,(A/P,\ 5\%,\ 30)} = 1.3664
+</annotation></semantics></math></p>
+<p>الاختيار: الثاني.</p>
+<p><span id="sol-12-63"><strong>12.63</strong></span> النسبة التزايدية تسأل: هل الدينار الإضافي في التكلفة يعيد دينارا أو أكثر؟ لذلك يجب أن يكون المقام، الفرق في التكاليف، موجبا. الترتيب حسب التكاليف يضمن ذلك.</p>
+<p><span id="sol-12-64"><strong>12.64</strong></span> الفرق في التكاليف صفر، فلا تحسب نسبة تزايدية. البديل صاحب المنافع الأكبر أفضل بوضوح: الثاني يعطي 300,000 دينار أكثر بنفس التكلفة.</p>
+<p><span id="sol-12-65"><strong>12.65</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>المنفعة الصافية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>لا شيء</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>الأول</td>
+<td>300,000</td>
+</tr>
+<tr class="odd">
+<td>الثاني</td>
+<td>300,000</td>
+</tr>
+<tr class="even">
+<td>الثالث</td>
+<td>200,000</td>
+</tr>
+</tbody>
+</table>
+<p>الاختيار: الأول. النسبة التزايدية الصحيحة تصل إلى نفس الجواب، بخطوات أكثر.</p>
+<p><span id="sol-12-66"><strong>12.66</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12.4622</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 5\%,\ 20) = 12.4622
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+<th>النسبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>عادية</td>
+<td>973,866</td>
+<td>1,183,910</td>
+<td>1.2157</td>
+</tr>
+<tr class="even">
+<td>شمسية</td>
+<td>1,211,555</td>
+<td>1,557,776</td>
+<td>1.2858</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>1.5729</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 1.5729
+</annotation></semantics></math></p>
+<p>الاختيار: الشمسية.</p>
+</section>
+<section id="الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة">الجزء ز: المشاريع المستقلة والفعالية مقابل التكلفة</h2>
+<p><span id="sol-12-67"><strong>12.67</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>النسبة</th>
+<th>القرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ممرات مشاة</td>
+<td>1.40</td>
+<td>يقبل</td>
+</tr>
+<tr class="even">
+<td>سوق خضار</td>
+<td>1.20</td>
+<td>يقبل</td>
+</tr>
+<tr class="odd">
+<td>ملعب</td>
+<td>0.94</td>
+<td>يرفض</td>
+</tr>
+<tr class="even">
+<td>موقف سيارات</td>
+<td>1.50</td>
+<td>يقبل</td>
+</tr>
+<tr class="odd">
+<td>مكتبة</td>
+<td>1.30</td>
+<td>يقبل</td>
+</tr>
+</tbody>
+</table>
+<p>أربعة مشاريع مقبولة، بتكلفة 2,300 ألف دينار، ومنفعة صافية 1,370 ألف دينار.</p>
+<p><span id="sol-12-68"><strong>12.68</strong></span> المشاريع المقبولة الأربعة، ومنافعها الصافية: الممرات 120، والسوق 180، والموقف 350، والمكتبة 120. أفضل المجموعات داخل 1,500:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المجموعة</th>
+<th>التكاليف</th>
+<th>المنفعة الصافية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الموقف والممرات والمكتبة</td>
+<td>1,400</td>
+<td>590</td>
+</tr>
+<tr class="even">
+<td>الموقف والسوق</td>
+<td>1,600</td>
+<td>لا تتسع</td>
+</tr>
+<tr class="odd">
+<td>السوق والممرات</td>
+<td>1,200</td>
+<td>300</td>
+</tr>
+<tr class="even">
+<td>السوق والمكتبة</td>
+<td>1,300</td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<p>نختار الموقف والممرات والمكتبة، بمنفعة صافية 590 ألف دينار.</p>
+<p><span id="sol-12-69"><strong>12.69</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mn>12</mn></mfrac><mo>=</mo><mn>250</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\frac{3\mathord{,}000\mathord{,}000}{12} = 250\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>هذا الرقم لا يقول إن البرنامج مجد أو غير مجد. يقارن ببرامج صحية أخرى تتنافس على نفس الميزانية.</p>
+<p><span id="sol-12-70"><strong>12.70</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>200</mn></mrow></mfrac><mo>=</mo><mn>333.33</mn><mspace width="2.0em"></mspace><mfrac><mrow><mn>700</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>800</mn></mrow></mfrac><mo>=</mo><mn>388.89</mn></mrow><annotation encoding="application/x-tex">
+\frac{400\mathord{,}000}{1\mathord{,}200} = 333.33 \qquad \frac{700\mathord{,}000}{1\mathord{,}800} = 388.89
+</annotation></semantics></math></p>
+<p>التكلفة الإضافية لكل متعلم إضافي في البرنامج الثاني:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>700</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>800</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>200</mn></mrow></mfrac><mo>=</mo><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\frac{700\mathord{,}000 - 400\mathord{,}000}{1\mathord{,}800 - 1\mathord{,}200} = 500.00
+</annotation></semantics></math></p>
+<p>إذا رأت الجهة أن متعلما إضافيا يستحق 500 دينار، تختار الثاني.</p>
+<p><span id="sol-12-71"><strong>12.71</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البرنامج</th>
+<th>تكلفة الطالب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>وجبة مدرسية</td>
+<td>4,000</td>
+</tr>
+<tr class="even">
+<td>منح نقل</td>
+<td>4,500</td>
+</tr>
+<tr class="odd">
+<td>معلمون مساندون</td>
+<td>5,000</td>
+</tr>
+</tbody>
+</table>
+<p>الإضافة من الوجبة إلى منح النقل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>900000</mn><mo>−</mo><mn>600000</mn></mrow><mrow><mn>200</mn><mo>−</mo><mn>150</mn></mrow></mfrac><mo>=</mo><mn>6000</mn></mrow><annotation encoding="application/x-tex">
+\frac{900000 - 600000}{200 - 150} = 6000
+</annotation></semantics></math></p>
+<p>الإضافة من منح النقل إلى المعلمين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1500000</mn><mo>−</mo><mn>900000</mn></mrow><mrow><mn>300</mn><mo>−</mo><mn>200</mn></mrow></mfrac><mo>=</mo><mn>6000</mn></mrow><annotation encoding="application/x-tex">
+\frac{1500000 - 900000}{300 - 200} = 6000
+</annotation></semantics></math></p>
+<p>كل طالب إضافي يكلف 6,000 دينار في الحالتين. إذا قبلت الجهة هذا الثمن، تختار المعلمين المساندين. وإلا تبقى عند الوجبة.</p>
+<p><span id="sol-12-72"><strong>12.72</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>30</mn><mo>−</mo><mn>18</mn></mrow></mfrac><mo>=</mo><mn>166</mn><mi>,</mi><mn>666.67</mn></mrow><annotation encoding="application/x-tex">
+\frac{2\mathord{,}000\mathord{,}000}{30 - 18} = 166\mathord{,}666.67
+</annotation></semantics></math></p>
+<p>التكلفة أعلى من القيمة التي تضعها الجهة، فالبرنامج غير مقبول بهذا المعيار.</p>
+<p><span id="sol-12-73"><strong>12.73</strong></span> الثاني قد ينقذ أرواحا أكثر، والميزانية تكفيه. السؤال هو التكلفة الإضافية لكل حياة إضافية، لا متوسط التكلفة. وقد يخدم الثاني فئة أكثر حاجة، وهذا معيار لا تقيسه الأرقام.</p>
+<p><span id="sol-12-74"><strong>12.74</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2000</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}800\mathord{,}000}{1\mathord{,}500\mathord{,}000} = 1.2000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.9600</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}800\mathord{,}000 \times (1 - 20\%)}{1\mathord{,}500\mathord{,}000} = 0.9600
+</annotation></semantics></math></p>
+<p>التصحيح يجعل المشروع غير مجد.</p>
+<p><span id="sol-12-75"><strong>12.75</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>40</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>10</mn></mrow></mfrac><mo>=</mo><mn>12.50</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000\mathord{,}000}{40\mathord{,}000 \times 10} = 12.50
+</annotation></semantics></math></p>
+<p>هذه وحدة فعالية بسيطة: سنة استفادة لشخص. الوزارات الصحية تستخدم وحدات أدق، مثل سنوات الحياة المعدلة بالجودة.</p>
+<p><span id="sol-12-76"><strong>12.76</strong></span> مثل مؤشر الربحية في <a href="../chapters/ch11.html#sec-budget" class="quarto-xref"><span>القسم 11.7</span></a>: الترتيب قد يترك جزءا من الميزانية بلا استخدام، فتختار مجموعة بمنفعة صافية أقل من الممكن. الصحيح أن نختار المجموعة بأكبر منفعة صافية داخل الميزانية.</p>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h2>
+<p><span id="sol-12-77"><strong>12.77</strong></span> في العمود A نسب الخصم، وفي B:</p>
+<pre class="excel"><code>=330000*PV(A2,30,-1)/(3000000+80000*PV(A2,30,-1))</code></pre>
+<p>عند 4% النسبة 1.3018، وعند 8% 0.9524. النسبة تساوي 1 عند معدل عائد المشروع:</p>
+<pre class="excel"><code>=RATE(30, 330000-80000, -3000000)</code></pre>
+<p>7.34%.</p>
+<p><span id="sol-12-78"><strong>12.78</strong></span> أضف بعد حساب rows:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cost, ben, name <span class="kw">in</span> rows:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name, <span class="st">"net benefit"</span>, <span class="bu">round</span>(ben <span class="op">-</span> cost))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>المنافع الصافية بنسبة 6%: أ 955,339، وب 1,107,119، وج 483,602. البرنامج يختار ب، وهو صاحب أكبر منفعة صافية، مع أن أ له أعلى نسبة منفردة.</p>
+<p><span id="sol-12-79"><strong>12.79</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> incremental_bc(alts):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""alts: list of (name, cost, benefit), present worth."""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    best <span class="op">=</span> (<span class="st">"do nothing"</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, cost, ben <span class="kw">in</span> <span class="bu">sorted</span>(alts, key<span class="op">=</span><span class="kw">lambda</span> a: a[<span class="dv">1</span>]):</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        ratio <span class="op">=</span> (ben <span class="op">-</span> best[<span class="dv">2</span>]) <span class="op">/</span> (cost <span class="op">-</span> best[<span class="dv">1</span>])</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ratio <span class="op">&gt;=</span> <span class="dv">1</span>:</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            best <span class="op">=</span> (name, cost, ben)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> best[<span class="dv">0</span>]</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(incremental_bc([(<span class="st">"A"</span>, <span class="dv">1200</span>, <span class="dv">1500</span>), (<span class="st">"B"</span>, <span class="dv">1800</span>, <span class="dv">2300</span>),</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                      (<span class="st">"C"</span>, <span class="dv">2500</span>, <span class="dv">2950</span>), (<span class="st">"D"</span>, <span class="dv">3100</span>, <span class="dv">3800</span>)]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>النتيجة D، كما في الحل باليد.</p>
+<p><span id="sol-12-80"><strong>12.80</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pa <span class="op">=</span> <span class="op">-</span>npf.pv(<span class="fl">0.05</span>, <span class="dv">30</span>, <span class="dv">1</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> <span class="dv">40000</span> <span class="op">*</span> <span class="dv">300</span> <span class="op">*</span> <span class="dv">10</span> <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>cost <span class="op">=</span> <span class="dv">25000000</span> <span class="op">+</span> <span class="dv">400000</span> <span class="op">*</span> pa</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> w <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">9</span>):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(w, <span class="bu">round</span>(hours <span class="op">*</span> w <span class="op">*</span> pa <span class="op">/</span> cost, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>ساعات التوفير السنوية 2,000,000. النسبة من 1.9741 عند 2 دينار إلى 7.8962 عند 8 دنانير. المشروع مجد إذا كانت قيمة الساعة 1.01 دينار أو أكثر. القرار كله يتوقف على هذا الافتراض.</p>
+<p><span id="sol-12-81"><strong>12.81</strong></span> اكتب السنوات في A2:A26، والمنافع في B2:</p>
+<pre class="excel"><code>=200000*1.03^(A2-1)</code></pre>
+<p>ثم:</p>
+<pre class="excel"><code>=NPV(6%, B2:B26) / (2500000 + PV(6%, 25, -50000))</code></pre>
+<p>القيمة الحالية للمنافع 3,414,350.73، وللتكاليف 3,139,167.81، والنسبة 1.0877.</p>
+<p><span id="sol-12-82"><strong>12.82</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> combinations</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>projects <span class="op">=</span> {<span class="st">"walkways"</span>: (<span class="dv">300</span>, <span class="dv">420</span>), <span class="st">"market"</span>: (<span class="dv">900</span>, <span class="dv">1080</span>), <span class="st">"field"</span>: (<span class="dv">500</span>, <span class="dv">470</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"parking"</span>: (<span class="dv">700</span>, <span class="dv">1050</span>), <span class="st">"library"</span>: (<span class="dv">400</span>, <span class="dv">520</span>)}</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> (<span class="dv">0</span>, ())</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(projects) <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> combo <span class="kw">in</span> combinations(projects, k):</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        cost <span class="op">=</span> <span class="bu">sum</span>(projects[p][<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> combo)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        net <span class="op">=</span> <span class="bu">sum</span>(projects[p][<span class="dv">1</span>] <span class="op">-</span> projects[p][<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> combo)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> cost <span class="op">&lt;=</span> <span class="dv">1500</span> <span class="kw">and</span> net <span class="op">&gt;</span> best[<span class="dv">0</span>]:</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>            best <span class="op">=</span> (net, combo)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(best)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>النتيجة: الموقف والممرات والمكتبة، بمنفعة صافية 590 ألف دينار. البرنامج لا يحتاج أن يستبعد الملعب يدويا: منفعته الصافية سالبة، فلا يدخل أفضل مجموعة.</p>
+<p><span id="sol-12-83"><strong>12.83</strong></span> التكاليف في B2:B4، والطلاب في C2:C4، مرتبة حسب التكلفة. تكلفة الطالب في D2:</p>
+<pre class="excel"><code>=B2/C2</code></pre>
+<p>التكلفة الإضافية في E3:</p>
+<pre class="excel"><code>=(B3-B2)/(C3-C2)</code></pre>
+<p>انسخ الصيغتين للأسفل. النتائج: 4,000 و4,500 و5,000 لكل طالب، و6,000 لكل طالب إضافي في الخطوتين.</p>
+<p><span id="sol-12-84"><strong>12.84</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> [k <span class="op">/</span> <span class="dv">1000</span> <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">121</span>)]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>ratios <span class="op">=</span> [<span class="dv">650000</span> <span class="op">*</span> <span class="op">-</span>npf.pv(r, <span class="dv">40</span>, <span class="dv">1</span>) <span class="op">/</span> (<span class="dv">8000000</span> <span class="op">+</span> <span class="dv">100000</span> <span class="op">*</span> <span class="op">-</span>npf.pv(r, <span class="dv">40</span>, <span class="dv">1</span>)) <span class="cf">for</span> r <span class="kw">in</span> rates]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">100</span> <span class="op">*</span> r <span class="cf">for</span> r <span class="kw">in</span> rates], ratios)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">1</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"discount rate (%)"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"B/C"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>المنحنى يقطع 1 عند 6.27%. فوقها المشروع غير مجد. الرسم يوضح للمسؤول كم القرار حساس لنسبة الخصم.</p>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h2>
+<p><span id="sol-12-85"><strong>12.85</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>500</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2500</mn></mrow><annotation encoding="application/x-tex">
+\frac{3\mathord{,}000\mathord{,}000 - 500\mathord{,}000}{2\mathord{,}000\mathord{,}000} = 1.2500
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي الأضرار. الخيار (ج) أضافها إلى المنافع. الخيار (د) حسب الأضرار مرتين: طرحها من المنافع وأضافها إلى التكاليف.</p>
+<p><span id="sol-12-86"><strong>12.86</strong></span> الجواب (ج). الرسوم يأخذها طرف من المجتمع من طرف آخر. للحكومة هي دخل يقلل تكلفتها. عدها منفعة أيضا يحسب نفس المال مرتين.</p>
+<p><span id="sol-12-87"><strong>12.87</strong></span> الجواب (ج). النسبتان تتفقان دائما على المقارنة مع 1. إذا كانت التقليدية أقل من 1، فالمعدلة أقل من 1 أيضا، وقيمتها أبعد عن 1.</p>
+<p><span id="sol-12-88"><strong>12.88</strong></span> الجواب (ج). النسب المنفردة تقول إن كل بديل أفضل من عدم البناء، ولا تقول أيها أفضل من الآخر. نحتاج نسبة الفرق بين كل بديلين.</p>
+<p><span id="sol-12-89"><strong>12.89</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5</mn><mi>%</mi><mo>+</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>700</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000\mathord{,}000 \times 5\% + 200\mathord{,}000 = 700\mathord{,}000
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي الصيانة. الخيار (ب) ضرب الصيانة أيضا في النسبة، والصيانة مبلغ سنوي أصلا.</p>
+<p><span id="sol-12-90"><strong>12.90</strong></span> الجواب (ب). الاستثمار في السنة 0 لا يخصم. المنافع موزعة على سنين طويلة، فتنخفض قيمتها الحالية كثيرا بالنسبة العالية.</p>
+<p><span id="sol-12-91"><strong>12.91</strong></span> الجواب (ب). الخسارة تقع على الناس، فهي ضرر. التعويض نقل مال، لا يعيد الإنتاج الضائع. نحسب الخسارة مرة واحدة فقط.</p>
+<p><span id="sol-12-92"><strong>12.92</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>2</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.1667</mn></mrow><annotation encoding="application/x-tex">
+\frac{2\mathord{,}200\mathord{,}000 - 1\mathord{,}500\mathord{,}000}{1\mathord{,}600\mathord{,}000 - 1\mathord{,}000\mathord{,}000} = 1.1667
+</annotation></semantics></math></p>
+<p>الخيار (أ) النسبة المنفردة للثاني. الخيار (ب) قسم فرق المنافع على تكاليف الثاني كلها. الخيار (د) جمع البديلين بدل أن يطرحهما.</p>
+<p><span id="sol-12-93"><strong>12.93</strong></span> الجواب (ب). مثل الأرواح التي تنقذ، أو الطلاب الذين يتخرجون. نقيس المنفعة بوحدتها ونقارن تكلفة الوحدة.</p>
+<p><span id="sol-12-94"><strong>12.94</strong></span> الجواب (ب). المشاريع المستقلة لا تتنافس. كل مشروع يعطي المجتمع أكثر مما يكلف يقبل.</p>
+<p><span id="sol-12-95"><strong>12.95</strong></span> الجواب (ج). المبيعات انتقلت ولم تزد في المجتمع. حساب الزيادة وحدها يضخم المنافع.</p>
+<p><span id="sol-12-96"><strong>12.96</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>210</mn><mi>,</mi><mn>485</mn></mrow><annotation encoding="application/x-tex">
+2\mathord{,}000\mathord{,}000\,(A/P,\ 5\%,\ 20) + 50\mathord{,}000 = 210\mathord{,}485
+</annotation></semantics></math></p>
+<p>الخيار (أ) نقل الاستثمار إلى نهاية العمر ثم قسمه على السنوات بدون خصم. الخيار (ب) نسي الصيانة. الخيار (ج) عامل المشروع كأنه دائم.</p>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h2>
+<p><span id="sol-12-97"><strong>12.97</strong></span> (أ) المنافع: الوقت، والحوادث، والوقود. الأضرار: الأرض الزراعية، وخسارة المحلات. التكاليف: الإنشاء، والصيانة، ناقص رسوم العبور.</p>
+<p>(ب) ساعات التوفير السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12000</mn><mo>×</mo><mn>300</mn><mo>×</mo><mfrac><mn>8</mn><mn>60</mn></mfrac><mo>=</mo><mn>480</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+12000 \times 300 \times \frac{8}{60} = 480\mathord{,}000
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المبلغ السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الوقت</td>
+<td>1,200,000</td>
+</tr>
+<tr class="even">
+<td>الحوادث</td>
+<td>1,000,000</td>
+</tr>
+<tr class="odd">
+<td>الوقود</td>
+<td>400,000</td>
+</tr>
+<tr class="even">
+<td>الأرض الزراعية</td>
+<td>‎-240,000</td>
+</tr>
+<tr class="odd">
+<td>المحلات</td>
+<td>‎-150,000</td>
+</tr>
+<tr class="even">
+<td>المنافع ناقص الأضرار</td>
+<td>2,210,000</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15.3725</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 5\%,\ 30) = 15.3725
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi></mrow><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>,</mi><mn>210</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>15.3725</mn></mrow><mrow><mn>30000000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>350000</mn><mo>−</mo><mn>120000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>15.3725</mn></mrow></mfrac><mo>=</mo><mn>1.0130</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D}{C} = \frac{2\mathord{,}210\mathord{,}000 \times 15.3725}{30000000 + (350000 - 120000) \times 15.3725} = 1.0130
+</annotation></semantics></math></p>
+<p>المشروع مجد، لكن النسبة قريبة جدا من 1.</p>
+<p>(ج) منفعة الوقت 46.15% من كل المنافع، وهي تتناسب مع قيمة ساعة المسافر. إذا كانت الساعة تساوي 2 دينار بدل 2.5، تنخفض النسبة تحت 1. هذا الرقم يحتاج دراسة قبل القرار، أكثر من أي رقم آخر.</p>
+<p><span id="sol-12-98"><strong>12.98</strong></span> (أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19.7928</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 4\%,\ 40) = 19.7928
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>التكاليف</th>
+<th>المنافع ناقص الأضرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>14,146,121</td>
+<td>16,230,075</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>18,437,832</td>
+<td>21,376,196</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>22,531,615</td>
+<td>24,345,112</td>
+</tr>
+</tbody>
+</table>
+<p>أ مقابل لا شيء: 1.1473. ب مقابل أ: 1.1991. ب أفضل. ج مقابل ب: 0.7252. الاختيار: ب.</p>
+<p>(ب) المنحة تخفض تكاليف ج على البلديات إلى 19,531,615. الفرق بين ج وب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>2.7144</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 2.7144
+</annotation></semantics></math></p>
+<p>من وجهة نظر البلديات يصبح ج الأفضل. لكن من وجهة نظر المجتمع كله، المنحة مال حقيقي له تكلفة على الممول. التحليل الوطني يحسب التكلفة كاملة.</p>
+<p><span id="sol-12-99"><strong>12.99</strong></span> (أ) النسب: الألواح 1.50، والمختبرات 1.28، والحافلات 1.25، والصيانة 1.55، والتدريب 1.39. كلها مقبولة. المنافع الصافية: 900، و700، و300، و1,100، و350.</p>
+<p>(ب) التكلفة الكلية 8,400، أكثر من الميزانية. أفضل المجموعات داخل 6,000:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المجموعة</th>
+<th>التكاليف</th>
+<th>المنفعة الصافية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الصيانة والألواح والتدريب والحافلات</td>
+<td>5,900</td>
+<td>2,650</td>
+</tr>
+<tr class="even">
+<td>الصيانة والألواح والمختبرات</td>
+<td>6,300</td>
+<td>لا تتسع</td>
+</tr>
+<tr class="odd">
+<td>الصيانة والمختبرات والتدريب</td>
+<td>5,400</td>
+<td>2,150</td>
+</tr>
+</tbody>
+</table>
+<p>نختار الصيانة والألواح والتدريب والحافلات، بمنفعة صافية 2,650.</p>
+<p>(ج) هنا الترتيب بالنسبة يعطي نفس المجموعة: الصيانة، ثم الألواح، ثم التدريب، ثم المختبرات لا تتسع، ثم الحافلات. لكنه لا يضمن ذلك دائما، كما في <a href="../chapters/ch11.html#sec-budget" class="quarto-xref"><span>القسم 11.7</span></a>.</p>
+<p><span id="sol-12-100"><strong>12.100</strong></span> (أ)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البرنامج</th>
+<th>تكلفة الوفاة التي تمنع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>المتطوعون</td>
+<td>40,000</td>
+</tr>
+<tr class="even">
+<td>الإسعاف</td>
+<td>42,857</td>
+</tr>
+<tr class="odd">
+<td>المراكز</td>
+<td>52,941</td>
+</tr>
+</tbody>
+</table>
+<p>(ب) من المتطوعين إلى الإسعاف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>3000000</mn><mo>−</mo><mn>1800000</mn></mrow><mrow><mn>70</mn><mo>−</mo><mn>45</mn></mrow></mfrac><mo>=</mo><mn>48</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\frac{3000000 - 1800000}{70 - 45} = 48\mathord{,}000
+</annotation></semantics></math></p>
+<p>من الإسعاف إلى المراكز:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>4500000</mn><mo>−</mo><mn>3000000</mn></mrow><mrow><mn>85</mn><mo>−</mo><mn>70</mn></mrow></mfrac><mo>=</mo><mn>100</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\frac{4500000 - 3000000}{85 - 70} = 100\mathord{,}000
+</annotation></semantics></math></p>
+<p>(ج) كل البرامج تكلف أقل من 60,000 لكل وفاة تمنع. الانتقال إلى الإسعاف يكلف 48,000 لكل وفاة إضافية، أقل من 60,000، فيستحق. الانتقال إلى المراكز يكلف 100,000، أكثر من 60,000، فلا يستحق. تختار الوزارة سيارات الإسعاف.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/solutions-ch11.html" class="pagination-link" aria-label="حلول مسائل الفصل الحادي عشر">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/solutions-ch13.html" class="pagination-link" aria-label="حلول مسائل الفصل الثالث عشر">
+        <span class="nav-page-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث عشر</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

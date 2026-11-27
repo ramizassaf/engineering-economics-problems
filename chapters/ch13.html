@@ -1,0 +1,2942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>13&nbsp; القرارات متعددة المعايير – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch12.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch13.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch13.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">مسرد المصطلحات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">المراجع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثامن</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل التاسع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث عشر</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-13-matrix" id="toc-sec-13-matrix" class="nav-link active" data-scroll-target="#sec-13-matrix"><span class="header-section-number">13.1</span> مصفوفة القرار</a></li>
+  <li><a href="#sec-13-noncomp" id="toc-sec-13-noncomp" class="nav-link" data-scroll-target="#sec-13-noncomp"><span class="header-section-number">13.2</span> الطرق غير التعويضية</a></li>
+  <li><a href="#sec-13-scale" id="toc-sec-13-scale" class="nav-link" data-scroll-target="#sec-13-scale"><span class="header-section-number">13.3</span> توحيد المقاييس</a></li>
+  <li><a href="#sec-13-additive" id="toc-sec-13-additive" class="nav-link" data-scroll-target="#sec-13-additive"><span class="header-section-number">13.4</span> المجموع المرجح</a></li>
+  <li><a href="#sec-13-weights" id="toc-sec-13-weights" class="nav-link" data-scroll-target="#sec-13-weights"><span class="header-section-number">13.5</span> تحديد الأوزان</a></li>
+  <li><a href="#sec-13-money" id="toc-sec-13-money" class="nav-link" data-scroll-target="#sec-13-money"><span class="header-section-number">13.6</span> المال معيار من المعايير</a></li>
+  <li><a href="#sec-13-sensitivity" id="toc-sec-13-sensitivity" class="nav-link" data-scroll-target="#sec-13-sensitivity"><span class="header-section-number">13.7</span> حساسية القرار للأوزان</a></li>
+  <li><a href="#sec-13-python" id="toc-sec-13-python" class="nav-link" data-scroll-target="#sec-13-python"><span class="header-section-number">13.8</span> Python: المجموع المرجح</a></li>
+  <li><a href="#sec-13-problems" id="toc-sec-13-problems" class="nav-link" data-scroll-target="#sec-13-problems"><span class="header-section-number">13.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-مصفوفة-القرار-والبدائل-المسيطر-عليها" id="toc-الجزء-ب-مصفوفة-القرار-والبدائل-المسيطر-عليها" class="nav-link" data-scroll-target="#الجزء-ب-مصفوفة-القرار-والبدائل-المسيطر-عليها">الجزء ب: مصفوفة القرار والبدائل المسيطر عليها</a></li>
+  <li><a href="#الجزء-ج-الطرق-غير-التعويضية" id="toc-الجزء-ج-الطرق-غير-التعويضية" class="nav-link" data-scroll-target="#الجزء-ج-الطرق-غير-التعويضية">الجزء ج: الطرق غير التعويضية</a></li>
+  <li><a href="#الجزء-د-توحيد-المقاييس" id="toc-الجزء-د-توحيد-المقاييس" class="nav-link" data-scroll-target="#الجزء-د-توحيد-المقاييس">الجزء د: توحيد المقاييس</a></li>
+  <li><a href="#الجزء-هـ-المجموع-المرجح" id="toc-الجزء-هـ-المجموع-المرجح" class="nav-link" data-scroll-target="#الجزء-هـ-المجموع-المرجح">الجزء هـ: المجموع المرجح</a></li>
+  <li><a href="#الجزء-و-تحديد-الأوزان" id="toc-الجزء-و-تحديد-الأوزان" class="nav-link" data-scroll-target="#الجزء-و-تحديد-الأوزان">الجزء و: تحديد الأوزان</a></li>
+  <li><a href="#الجزء-ز-المال-وحساسية-الأوزان" id="toc-الجزء-ز-المال-وحساسية-الأوزان" class="nav-link" data-scroll-target="#الجزء-ز-المال-وحساسية-الأوزان">الجزء ز: المال وحساسية الأوزان</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  <li><a href="#refs-ch13" id="toc-refs-ch13" class="nav-link" data-scroll-target="#refs-ch13">المراجع</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch13" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>كل الفصول السابقة اختزلت البدائل في رقم واحد بالدينار: القيمة الحالية، أو القيمة السنوية، أو المعدل. لكن قرارات كثيرة لها معايير لا تتحول إلى دنانير بسهولة: السلامة، والجودة، وأثر البيئة، ورضا العاملين، وسرعة الخدمة. المهندس الذي يختار موردا أو آلة أو موقعا يوازن بين هذه المعايير والتكلفة معا.</p>
+<p>هذا الفصل يعرض طرقا منظمة لهذا التوازن. فكرتها واحدة: نضع البدائل والمعايير في جدول، ثم نقارن بقاعدة واضحة يمكن مراجعتها، بدل الانطباع.</p>
+<section id="sec-13-matrix" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="sec-13-matrix"><span class="header-section-number">13.1</span> مصفوفة القرار</h2>
+<p>الصفوف هي البدائل، والأعمدة هي المعايير. لكل معيار اتجاه: التكلفة كلما قلت كان أفضل، والجودة كلما زادت كان أفضل. بعض المعايير تقاس بأرقام، مثل الأيام والدنانير. وبعضها بتقدير، مثل ممتاز وجيد ومقبول، فنحوله إلى سلم من 1 إلى 5 أو من 1 إلى 10.</p>
+<p><strong>البديل المسيطر عليه:</strong> إذا كان بديل أسوأ من بديل آخر، أو مساويا له، في كل المعايير، وأسوأ منه في واحد على الأقل، نحذفه قبل أي حساب. لا توجد أوزان تجعله الأفضل.</p>
+<div id="ex-13-1" class="ee-item" data-id="c13-ex-matrix" data-kind="example" data-label="13.1">
+<p><strong>مثال 13.1: مصفوفة القرار والبديل المسيطر عليه</strong></p>
+<p>شركة توزيع تختار نظام تتبع لشاحناتها. أربعة عروض:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>العرض</th>
+<th>التكلفة السنوية، دينار</th>
+<th>دقة الموقع، متر</th>
+<th>الدعم الفني، من 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>W</td>
+<td>14,000</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>X</td>
+<td>11,000</td>
+<td>8</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Y</td>
+<td>9,500</td>
+<td>15</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Z</td>
+<td>12,500</td>
+<td>10</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>التكلفة والدقة كلما قلتا كان أفضل، والدعم كلما زاد كان أفضل. هل يوجد عرض يمكن حذفه قبل أي حساب؟</p>
+<p><strong>الحل:</strong></p>
+<p>نقارن كل عرضين في المعايير الثلاثة. Z مقابل X:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المعيار</th>
+<th>X</th>
+<th>Z</th>
+<th>الأفضل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة</td>
+<td>11,000</td>
+<td>12,500</td>
+<td>X</td>
+</tr>
+<tr class="even">
+<td>الدقة</td>
+<td>8</td>
+<td>10</td>
+<td>X</td>
+</tr>
+<tr class="odd">
+<td>الدعم</td>
+<td>7</td>
+<td>6</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>X أفضل من Z في كل المعايير، فـ Z مسيطر عليه. نحذفه: لا توجد أوزان تجعله الأفضل.</p>
+<p>باقي العروض لا يسيطر أحدها على الآخر: W الأدق والأفضل دعما لكنه الأغلى، وY الأرخص لكنه الأقل دقة. الاختيار بينها يحتاج أوزانا أو حدودا دنيا.</p>
+</div>
+</section>
+<section id="sec-13-noncomp" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="sec-13-noncomp"><span class="header-section-number">13.2</span> الطرق غير التعويضية</h2>
+<p>في هذه الطرق، التفوق في معيار لا يعوض الضعف في معيار آخر.</p>
+<ul>
+<li><strong>الحد الأدنى لكل معيار:</strong> نضع حدا مقبولا لكل معيار، ونحذف كل بديل لا يحققه في أي معيار. تصلح لتصفية البدائل قبل التحليل.</li>
+<li><strong>التميز في معيار واحد:</strong> نقبل البديل إذا تفوق في معيار واحد على الأقل. تصلح لاختيار أصحاب المواهب الخاصة.</li>
+<li><strong>الترتيب المعجمي:</strong> نرتب المعايير حسب أهميتها. نختار الأفضل في المعيار الأول، وإذا تساوى بديلان ننتقل إلى المعيار الثاني، وهكذا.</li>
+</ul>
+<div id="ex-13-2" class="ee-item" data-id="c13-ex-satisfice" data-kind="example" data-label="13.2">
+<p><strong>مثال 13.2: الحد الأدنى لكل معيار والتميز في معيار</strong></p>
+<p>في المثال السابق، بعد حذف Z، وضعت الشركة حدودا مقبولة: التكلفة لا تزيد على 12,000 دينار، والدقة 10 أمتار أو أقل، والدعم 6 أو أكثر. (أ) أي العروض يبقى؟ (ب) لو قبلت الشركة أي عرض يتميز في معيار واحد على الأقل، بتكلفة أقل من 10,000، أو دقة 5 أمتار أو أقل، أو دعم 8 أو أكثر، فأيها يقبل؟</p>
+<p><strong>الحل:</strong></p>
+<p>(أ) الحد الأدنى لكل معيار:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العرض</th>
+<th>التكلفة</th>
+<th>الدقة</th>
+<th>الدعم</th>
+<th>النتيجة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>W</td>
+<td>لا</td>
+<td>نعم</td>
+<td>نعم</td>
+<td>يحذف</td>
+</tr>
+<tr class="even">
+<td>X</td>
+<td>نعم</td>
+<td>نعم</td>
+<td>نعم</td>
+<td>يبقى</td>
+</tr>
+<tr class="odd">
+<td>Y</td>
+<td>نعم</td>
+<td>لا</td>
+<td>نعم</td>
+<td>يحذف</td>
+</tr>
+</tbody>
+</table>
+<p>يبقى X وحده. الطريقة صارمة: W حذف بسبب معيار واحد، مع أنه الأفضل في معيارين.</p>
+<p>(ب) التميز في معيار واحد: W يتميز في الدقة والدعم، وY في التكلفة. X لا يتميز في أي معيار، فيحذف. الطريقتان أعطتا نتيجتين متعاكستين، لأن كلا منهما تسأل سؤالا مختلفا.</p>
+</div>
+<div id="ex-13-3" class="ee-item" data-id="c13-ex-lexico" data-kind="example" data-label="13.3">
+<p><strong>مثال 13.3: الترتيب المعجمي</strong></p>
+<p>لنفس العروض W وX وY، رتبت الإدارة المعايير: الدعم الفني أولا، ثم الدقة، ثم التكلفة. أي عرض تختار بالترتيب المعجمي؟ وماذا لو كانت التكلفة أولا؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>الدعم أولا:</strong> W يأخذ 8، أعلى من الباقين. نختار W مباشرة، ولا ننظر إلى المعايير الأخرى.</p>
+<p><strong>التكلفة أولا:</strong> Y أرخص الثلاثة، فنختاره.</p>
+<p>الطريقة سهلة وواضحة، لكنها تتجاهل كل شيء بعد المعيار الأول إذا لم يتساو بديلان فيه. فرق دينار واحد في التكلفة يكفي لتجاهل فرق كبير في الدقة. تصلح عندما يكون معيار أهم بكثير من الباقي، مثل السلامة.</p>
+</div>
+</section>
+<section id="sec-13-scale" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="sec-13-scale"><span class="header-section-number">13.3</span> توحيد المقاييس</h2>
+<p>لا يمكن جمع دنانير مع أيام مع درجات جودة. نحول كل معيار إلى رقم بين 0 و1: الأسوأ بين البدائل يأخذ 0، والأفضل يأخذ 1، والباقي بنسبته بينهما.</p>
+<p>للمعيار الذي كلما زاد كان أفضل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow><mrow><msub><mi>x</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>−</mo><msub><mi>x</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+s = \frac{x - x_{min}}{x_{max} - x_{min}}
+</annotation></semantics></math></p>
+<p>للمعيار الذي كلما قل كان أفضل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><msub><mi>x</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>−</mo><mi>x</mi></mrow><mrow><msub><mi>x</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>−</mo><msub><mi>x</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+s = \frac{x_{max} - x}{x_{max} - x_{min}}
+</annotation></semantics></math></p>
+<div id="ex-13-4" class="ee-item" data-id="c13-ex-scale" data-kind="example" data-label="13.4">
+<p><strong>مثال 13.4: توحيد المقاييس</strong></p>
+<p>مصنع يختار موردا لقطع الغيار. التقديرات للموردين الثلاثة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة، دينار</th>
+<th>الجودة، من 10</th>
+<th>مدة التسليم، يوم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>41,000</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>38,000</td>
+<td>6</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>47,000</td>
+<td>9</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><strong>الحل:</strong></p>
+<p>اتجاه المعايير: التكلفة كلما قل كان أفضل، والجودة كلما زاد كان أفضل، ومدة التسليم كلما قل كان أفضل. الأسوأ بين البدائل يأخذ 0، والأفضل يأخذ 1. مثال: درجة A في التكلفة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mn>47</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>41</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>47</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>38</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.6667</mn></mrow><annotation encoding="application/x-tex">
+s = \frac{47\mathord{,}000 - 41\mathord{,}000}{47\mathord{,}000 - 38\mathord{,}000} = 0.6667
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة</th>
+<th>الجودة</th>
+<th>مدة التسليم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>0.6000</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1.0000</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0.0000</td>
+<td>1.0000</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="sec-13-additive" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="sec-13-additive"><span class="header-section-number">13.4</span> المجموع المرجح</h2>
+<p>نعطي كل معيار وزنا يعبر عن أهميته، ومجموع الأوزان 1. درجة كل بديل هي مجموع درجاته الموحدة مضروبة في الأوزان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>w</mi><mi>j</mi></msub><mspace width="0.167em"></mspace><msub><mi>s</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
+S_k = \sum_j w_j\,s_{kj}
+</annotation></semantics></math></p>
+<p>البديل صاحب أعلى درجة هو الأفضل. هذه طريقة تعويضية: التفوق في معيار مهم يعوض الضعف في معيار أقل أهمية.</p>
+<div id="ex-13-5" class="ee-item" data-id="c13-ex-additive" data-kind="example" data-label="13.5">
+<p><strong>مثال 13.5: المجموع المرجح</strong></p>
+<p>نفس الموردين الثلاثة في المثال السابق:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة، دينار</th>
+<th>الجودة، من 10</th>
+<th>مدة التسليم، يوم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>41,000</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>38,000</td>
+<td>6</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>47,000</td>
+<td>9</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.50 و0.30 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><strong>الحل:</strong></p>
+<p>اتجاه المعايير: التكلفة كلما قل كان أفضل، والجودة كلما زاد كان أفضل، ومدة التسليم كلما قل كان أفضل. الأسوأ بين البدائل يأخذ 0، والأفضل يأخذ 1. مثال: درجة A في التكلفة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mn>47</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>41</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>47</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>38</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.6667</mn></mrow><annotation encoding="application/x-tex">
+s = \frac{47\mathord{,}000 - 41\mathord{,}000}{47\mathord{,}000 - 38\mathord{,}000} = 0.6667
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة</th>
+<th>الجودة</th>
+<th>مدة التسليم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>0.6000</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1.0000</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0.0000</td>
+<td>1.0000</td>
+<td>1.0000</td>
+</tr>
+</tbody>
+</table>
+<p>الدرجة المرجحة لكل بديل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>A</mi></msub><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>0.6667</mn><mo>+</mo><mn>0.30</mn><mo>×</mo><mn>0.6667</mn><mo>+</mo><mn>0.20</mn><mo>×</mo><mn>0.6000</mn><mo>=</mo><mn>0.6533</mn></mrow><annotation encoding="application/x-tex">
+S_A = 0.50 \times 0.6667 + 0.30 \times 0.6667 + 0.20 \times 0.6000 = 0.6533
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>1.0000</mn><mo>+</mo><mn>0.30</mn><mo>×</mo><mn>0.0000</mn><mo>+</mo><mn>0.20</mn><mo>×</mo><mn>0.0000</mn><mo>=</mo><mn>0.5000</mn></mrow><annotation encoding="application/x-tex">
+S_B = 0.50 \times 1.0000 + 0.30 \times 0.0000 + 0.20 \times 0.0000 = 0.5000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>C</mi></msub><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>0.0000</mn><mo>+</mo><mn>0.30</mn><mo>×</mo><mn>1.0000</mn><mo>+</mo><mn>0.20</mn><mo>×</mo><mn>1.0000</mn><mo>=</mo><mn>0.5000</mn></mrow><annotation encoding="application/x-tex">
+S_C = 0.50 \times 0.0000 + 0.30 \times 1.0000 + 0.20 \times 1.0000 = 0.5000
+</annotation></semantics></math></p>
+<p>الأفضل: A، بدرجة 0.6533.</p>
+</div>
+</section>
+<section id="sec-13-weights" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="sec-13-weights"><span class="header-section-number">13.5</span> تحديد الأوزان</h2>
+<p>الأوزان أهم خطوة وأكثرها خلافا. ثلاث طرق شائعة:</p>
+<ol type="1">
+<li><strong>توزيع النقاط:</strong> يوزع صاحب القرار 100 نقطة على المعايير، ثم نقسم كل نقطة على 100.</li>
+<li><strong>أوزان الترتيب:</strong> يرتب المعايير فقط. المعيار الأول من n معايير يأخذ n نقاط، والثاني n ناقص 1، والأخير نقطة واحدة. ثم نقسم على المجموع.</li>
+<li><strong>المقارنة الزوجية:</strong> نقارن كل معيارين: كم مرة أهم الأول من الثاني؟ ثم نحسب الوزن من الجدول. هذه فكرة طريقة التحليل الهرمي، المعروفة بـ AHP.</li>
+</ol>
+<div id="ex-13-6" class="ee-item" data-id="c13-ex-rankweights" data-kind="example" data-label="13.6">
+<p><strong>مثال 13.6: أوزان الترتيب وتوزيع النقاط</strong></p>
+<p>لجنة تختار موقعا لمستودع. رتبت المعايير الأربعة: التكلفة أولا، ثم القرب من الطريق السريع، ثم المساحة، ثم توفر العمالة. احسب الأوزان بطريقة الترتيب. ثم قارنها بأوزان من توزيع 100 نقطة: 45 و25 و20 و10.</p>
+<p><strong>الحل:</strong></p>
+<p>أربعة معايير: الأول يأخذ 4 نقاط، والأخير نقطة واحدة. المجموع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">
+4 + 3 + 2 + 1 = 10
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المعيار</th>
+<th>النقاط</th>
+<th>الوزن بالترتيب</th>
+<th>الوزن بالنقاط</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة</td>
+<td>4</td>
+<td>0.40</td>
+<td>0.45</td>
+</tr>
+<tr class="even">
+<td>القرب من الطريق</td>
+<td>3</td>
+<td>0.30</td>
+<td>0.25</td>
+</tr>
+<tr class="odd">
+<td>المساحة</td>
+<td>2</td>
+<td>0.20</td>
+<td>0.20</td>
+</tr>
+<tr class="even">
+<td>العمالة</td>
+<td>1</td>
+<td>0.10</td>
+<td>0.10</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان الترتيب سهلة، لأنها تحتاج ترتيبا فقط، لكنها تفترض أن الفرق بين كل معيارين متساو. توزيع النقاط يسمح للجنة بأن تقول إن التكلفة أهم بكثير من الباقي.</p>
+</div>
+<div id="ex-13-7" class="ee-item" data-id="c13-ex-pairwise" data-kind="example" data-label="13.7">
+<p><strong>مثال 13.7: الأوزان بالمقارنة الزوجية</strong></p>
+<p>مدير مشتريات قارن ثلاثة معايير لاختيار مورد، كل معيارين معا: التكلفة أهم من الجودة 2 مرة، والتكلفة أهم من مدة التسليم 4 مرة، والجودة أهم من مدة التسليم 2 مرة. احسب الأوزان.</p>
+<p><strong>الحل:</strong></p>
+<p>نكتب جدول المقارنة: الخانة في صف معيار وعمود آخر تقول كم مرة الأول أهم. القطر 1، والخانة المقابلة مقلوبها:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>التكلفة</th>
+<th>الجودة</th>
+<th>التسليم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>الجودة</td>
+<td>0.5000</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>التسليم</td>
+<td>0.2500</td>
+<td>0.5000</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>لكل صف نحسب الوسط الهندسي: الجذر الثالث لحاصل ضرب الخانات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>×</mo><mn>2</mn><mo>×</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msup><mo>=</mo><mn>2.0000</mn></mrow><annotation encoding="application/x-tex">
+g_1 = (1 \times 2 \times 4)^{1/3} = 2.0000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.5000</mn><mo>×</mo><mn>1</mn><mo>×</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msup><mo>=</mo><mn>1.0000</mn></mrow><annotation encoding="application/x-tex">
+g_2 = (0.5000 \times 1 \times 2)^{1/3} = 1.0000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mn>3</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0.2500</mn><mo>×</mo><mn>0.5000</mn><mo>×</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msup><mo>=</mo><mn>0.5000</mn></mrow><annotation encoding="application/x-tex">
+g_3 = (0.2500 \times 0.5000 \times 1)^{1/3} = 0.5000
+</annotation></semantics></math></p>
+<p>الوزن هو الوسط مقسوما على مجموع الأوساط 3.5000:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المعيار</th>
+<th>الوزن</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة</td>
+<td>0.5714</td>
+</tr>
+<tr class="even">
+<td>الجودة</td>
+<td>0.2857</td>
+</tr>
+<tr class="odd">
+<td>التسليم</td>
+<td>0.1429</td>
+</tr>
+</tbody>
+</table>
+<p>إذا كانت الأحكام متسقة، أي أن التكلفة على التسليم تساوي التكلفة على الجودة ضرب الجودة على التسليم، فالأوزان تعيد إنتاج الجدول بالضبط. هنا الأحكام متسقة تماما.</p>
+</div>
+</section>
+<section id="sec-13-money" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="sec-13-money"><span class="header-section-number">13.6</span> المال معيار من المعايير</h2>
+<p>التكلفة لا تختفي في هذا الفصل. نحسبها بطرق الفصول السابقة، القيمة السنوية مثلا، ثم ندخلها في المصفوفة معيارا. بهذا يبقى الحساب المالي صحيحا، ويضاف إليه ما لا يقاس بالمال.</p>
+</section>
+<section id="sec-13-sensitivity" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="sec-13-sensitivity"><span class="header-section-number">13.7</span> حساسية القرار للأوزان</h2>
+<p>الأوزان تقدير شخصي، فنسأل: إلى أي حد يجب أن يتغير الوزن حتى يتغير القرار؟ إذا كان القرار يتغير بتغير صغير، فهو هش، ويحتاج نقاشا مع أصحاب القرار. إذا بقي ثابتا في مدى واسع، فهو قوي.</p>
+<div id="ex-13-8" class="ee-item" data-id="c13-ex-flip" data-kind="example" data-label="13.8">
+<p><strong>مثال 13.8: الوزن الذي يقلب القرار</strong></p>
+<p>بديلان ومعياران، التكلفة والجودة، بالدرجات الموحدة: A يأخذ 0.80 في التكلفة و0.30 في الجودة. B يأخذ 0.20 و0.90. وزن التكلفة 0.60. أي بديل تختار؟ وعند أي وزن للتكلفة يتغير القرار؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>A</mi></msub><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>0.80</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>0.30</mn><mo>=</mo><mn>0.6000</mn></mrow><annotation encoding="application/x-tex">
+S_A = 0.60 \times 0.80 + 0.40 \times 0.30 = 0.6000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>B</mi></msub><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>0.20</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>0.90</mn><mo>=</mo><mn>0.4800</mn></mrow><annotation encoding="application/x-tex">
+S_B = 0.60 \times 0.20 + 0.40 \times 0.90 = 0.4800
+</annotation></semantics></math></p>
+<p>الأفضل A. نبحث عن وزن التكلفة w الذي تتساوى عنده الدرجتان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mspace width="0.167em"></mspace><mn>0.80</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>w</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mn>0.30</mn><mo>=</mo><mi>w</mi><mspace width="0.167em"></mspace><mn>0.20</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>w</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mn>0.90</mn></mrow><annotation encoding="application/x-tex">
+w\,0.80 + (1 - w)\,0.30 = w\,0.20 + (1 - w)\,0.90
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>w</mi><mo>*</mo></msup><mo>=</mo><mfrac><mrow><mn>0.90</mn><mo>−</mo><mn>0.30</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.80</mn><mo>−</mo><mn>0.20</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.90</mn><mo>−</mo><mn>0.30</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>0.5000</mn></mrow><annotation encoding="application/x-tex">
+w^* = \frac{0.90 - 0.30}{(0.80 - 0.20) + (0.90 - 0.30)} = 0.5000
+</annotation></semantics></math></p>
+<p>إذا زاد وزن التكلفة على 0.5000 يفضل A، وإذا قل يفضل B. الوزن الحالي 0.60 يبعد 0.1000 عن نقطة التحول. القرار هش: خلاف صغير على الأوزان يقلبه.</p>
+</div>
+</section>
+<section id="sec-13-python" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="sec-13-python"><span class="header-section-number">13.8</span> Python: المجموع المرجح</h2>
+<p>البرنامج التالي يوحد المقاييس، ويحسب الدرجات، ثم يختبر حساسية القرار لوزن التكلفة:</p>
+<div id="2772db21" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>alts <span class="op">=</span> {<span class="st">"A"</span>: [<span class="dv">41000</span>, <span class="dv">8</span>, <span class="dv">12</span>], <span class="st">"B"</span>: [<span class="dv">38000</span>, <span class="dv">6</span>, <span class="dv">15</span>], <span class="st">"C"</span>: [<span class="dv">47000</span>, <span class="dv">9</span>, <span class="dv">10</span>]}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>better <span class="op">=</span> [<span class="st">"low"</span>, <span class="st">"high"</span>, <span class="st">"low"</span>]          <span class="co"># cost, quality score, delivery days</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> [<span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> scale(alts, better):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    cols <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">*</span>alts.values()))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> {}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, row <span class="kw">in</span> alts.items():</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> []</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j, x <span class="kw">in</span> <span class="bu">enumerate</span>(row):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            lo, hi <span class="op">=</span> <span class="bu">min</span>(cols[j]), <span class="bu">max</span>(cols[j])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            s.append((x <span class="op">-</span> lo) <span class="op">/</span> (hi <span class="op">-</span> lo) <span class="cf">if</span> better[j] <span class="op">==</span> <span class="st">"high"</span> <span class="cf">else</span> (hi <span class="op">-</span> x) <span class="op">/</span> (hi <span class="op">-</span> lo))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        out[name] <span class="op">=</span> s</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> scale(alts, better)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, row <span class="kw">in</span> s.items():</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name, [<span class="bu">round</span>(v, <span class="dv">3</span>) <span class="cf">for</span> v <span class="kw">in</span> row], <span class="bu">round</span>(<span class="bu">sum</span>(wj <span class="op">*</span> v <span class="cf">for</span> wj, v <span class="kw">in</span> <span class="bu">zip</span>(w, row)), <span class="dv">3</span>))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># weight of cost from 0 to 1; the other two keep their 3 : 2 ratio</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    wc <span class="op">=</span> k <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    ww <span class="op">=</span> [wc, (<span class="dv">1</span> <span class="op">-</span> wc) <span class="op">*</span> <span class="fl">0.6</span>, (<span class="dv">1</span> <span class="op">-</span> wc) <span class="op">*</span> <span class="fl">0.4</span>]</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> {n: <span class="bu">sum</span>(a <span class="op">*</span> b <span class="cf">for</span> a, b <span class="kw">in</span> <span class="bu">zip</span>(ww, r)) <span class="cf">for</span> n, r <span class="kw">in</span> s.items()}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"cost weight </span><span class="sc">{</span>wc<span class="sc">:.1f}</span><span class="ss">: best </span><span class="sc">{</span><span class="bu">max</span>(scores, key<span class="op">=</span>scores.get)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A [0.667, 0.667, 0.6] 0.653
+B [1.0, 0.0, 0.0] 0.5
+C [0.0, 1.0, 1.0] 0.5
+cost weight 0.0: best C
+cost weight 0.1: best C
+cost weight 0.2: best C
+cost weight 0.3: best C
+cost weight 0.4: best A
+cost weight 0.5: best A
+cost weight 0.6: best A
+cost weight 0.7: best B
+cost weight 0.8: best B
+cost weight 0.9: best B
+cost weight 1.0: best B</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-13-problems" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="sec-13-problems"><span class="header-section-number">13.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-13-1" class="ee-item" data-id="c13-a-01" data-kind="problem" data-label="13.1">
+<p><strong>13.1</strong> لماذا لا تكفي القيمة الحالية وحدها لاختيار مورد لمواد طبية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-1">الحل</a></span></p>
+</div>
+<div id="prob-13-2" class="ee-item" data-id="c13-a-02" data-kind="problem" data-label="13.2">
+<p><strong>13.2</strong> ما مصفوفة القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-2">الحل</a></span></p>
+</div>
+<div id="prob-13-3" class="ee-item" data-id="c13-a-03" data-kind="problem" data-label="13.3">
+<p><strong>13.3</strong> متى نقول إن بديلا مسيطر عليه؟ ولماذا نحذفه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-3">الحل</a></span></p>
+</div>
+<div id="prob-13-4" class="ee-item" data-id="c13-a-04" data-kind="problem" data-label="13.4">
+<p><strong>13.4</strong> ما الفرق بين الطرق التعويضية وغير التعويضية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-4">الحل</a></span></p>
+</div>
+<div id="prob-13-5" class="ee-item" data-id="c13-a-05" data-kind="problem" data-label="13.5">
+<p><strong>13.5</strong> لماذا نوحد المقاييس قبل الجمع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-5">الحل</a></span></p>
+</div>
+<div id="prob-13-6" class="ee-item" data-id="c13-a-06" data-kind="problem" data-label="13.6">
+<p><strong>13.6</strong> في التوحيد، الأسوأ يأخذ 0 والأفضل يأخذ 1. ما مشكلة هذه الطريقة إذا كانت البدائل متقاربة جدا في معيار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-6">الحل</a></span></p>
+</div>
+<div id="prob-13-7" class="ee-item" data-id="c13-a-07" data-kind="problem" data-label="13.7">
+<p><strong>13.7</strong> متى يصلح الترتيب المعجمي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-7">الحل</a></span></p>
+</div>
+<div id="prob-13-8" class="ee-item" data-id="c13-a-08" data-kind="problem" data-label="13.8">
+<p><strong>13.8</strong> لماذا نختبر حساسية القرار للأوزان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-8">الحل</a></span></p>
+</div>
+<div id="prob-13-9" class="ee-item" data-id="c13-a-09" data-kind="problem" data-label="13.9">
+<p><strong>13.9</strong> كيف ندخل التكلفة في تحليل متعدد المعايير بدون أن نفقد ما تعلمناه في الفصول السابقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-9">الحل</a></span></p>
+</div>
+<div id="prob-13-10" class="ee-item" data-id="c13-a-10" data-kind="problem" data-label="13.10">
+<p><strong>13.10</strong> ما الخطر في أن يضع شخص واحد الأوزان بعد أن يرى نتائج البدائل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-10">الحل</a></span></p>
+</div>
+<div id="prob-13-11" class="ee-item" data-id="c13-a-11" data-kind="problem" data-label="13.11">
+<p><strong>13.11</strong> ما فكرة المقارنة الزوجية في تحديد الأوزان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-11">الحل</a></span></p>
+</div>
+<div id="prob-13-12" class="ee-item" data-id="c13-a-12" data-kind="problem" data-label="13.12">
+<p><strong>13.12</strong> لماذا يجب أن يكون مجموع الأوزان 1 في المجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-مصفوفة-القرار-والبدائل-المسيطر-عليها" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-مصفوفة-القرار-والبدائل-المسيطر-عليها">الجزء ب: مصفوفة القرار والبدائل المسيطر عليها</h3>
+<div id="prob-13-13" class="ee-item" data-id="c13-b-01" data-kind="problem" data-label="13.13">
+<p><strong>13.13</strong> خمسة عروض لمولد كهرباء احتياطي:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العرض</th>
+<th>الثمن، ألف دينار</th>
+<th>القدرة، كيلوواط</th>
+<th>الضجيج، ديسيبل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>18</td>
+<td>100</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>Q</td>
+<td>22</td>
+<td>120</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td>20</td>
+<td>100</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>S</td>
+<td>25</td>
+<td>150</td>
+<td>68</td>
+</tr>
+<tr class="odd">
+<td>T</td>
+<td>21</td>
+<td>110</td>
+<td>65</td>
+</tr>
+</tbody>
+</table>
+<p>الثمن والضجيج كلما قلا كان أفضل، والقدرة كلما زادت كان أفضل. أي العروض مسيطر عليها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-13">الحل</a></span></p>
+</div>
+<div id="prob-13-14" class="ee-item" data-id="c13-b-02" data-kind="problem" data-label="13.14">
+<p><strong>13.14</strong> أربعة مواقع لمحطة وقود: الأول إيجاره 4,000 دينار شهريا وحركة السيارات 9,000 يوميا. الثاني 3,500 و7,000. الثالث 4,500 و8,500. الرابع 3,000 و7,000. أي المواقع مسيطر عليها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-14">الحل</a></span></p>
+</div>
+<div id="prob-13-15" class="ee-item" data-id="c13-b-03" data-kind="problem" data-label="13.15">
+<p><strong>13.15</strong> حول التقديرات التالية إلى أرقام على سلم من 1 إلى 5: ضعيف، ومقبول، وجيد، وجيد جدا، وممتاز. ثم ابن مصفوفة القرار لثلاثة مكيفات: الأول سعره 900 دينار، وكفاءته جيد جدا، وضجيجه مقبول. الثاني 750، وجيد، وجيد جدا. الثالث 1,100، وممتاز، وممتاز.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-15">الحل</a></span></p>
+</div>
+<div id="prob-13-16" class="ee-item" data-id="c13-b-04" data-kind="problem" data-label="13.16">
+<p><strong>13.16</strong> لماذا يجب أن يكون لكل معيار في المصفوفة اتجاه واضح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-16">الحل</a></span></p>
+</div>
+<div id="prob-13-17" class="ee-item" data-id="c13-b-05" data-kind="problem" data-label="13.17">
+<p><strong>13.17</strong> شركة تقارن أربع رافعات شوكية: A بثمن 30 ألفا وحمولة 3 أطنان واستهلاك 4 لترات في الساعة. B بثمن 28 ألفا و2.5 طن و4 لترات. C بثمن 32 ألفا و3 أطنان و5 لترات. D بثمن 35 ألفا و4 أطنان و4.5 لتر. أيها مسيطر عليه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-17">الحل</a></span></p>
+</div>
+<div id="prob-13-18" class="ee-item" data-id="c13-b-06" data-kind="problem" data-label="13.18">
+<p><strong>13.18</strong> ما عدد المقارنات الزوجية التي تحتاجها لفحص السيطرة بين 6 بدائل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-18">الحل</a></span></p>
+</div>
+<div id="prob-13-19" class="ee-item" data-id="c13-b-07" data-kind="problem" data-label="13.19">
+<p><strong>13.19</strong> بعد حذف البدائل المسيطر عليها بقي بديل واحد. هل نحتاج أوزانا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-19">الحل</a></span></p>
+</div>
+<div id="prob-13-20" class="ee-item" data-id="c13-b-08" data-kind="problem" data-label="13.20">
+<p><strong>13.20</strong> ثلاثة عروض لبرنامج تخطيط موارد: الأول تكلفته السنوية بالقيمة السنوية المكافئة 42,000 دينار، ومدة تطبيقه 8 أشهر. الثاني 38,000 و10 أشهر. الثالث 45,000 و10 أشهر. هل يوجد مسيطر عليه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-20">الحل</a></span></p>
+</div>
+<div id="prob-13-21" class="ee-item" data-id="c13-b-09" data-kind="problem" data-label="13.21">
+<p><strong>13.21</strong> قيمت لجنة أربعة متقدمين لوظيفة مهندس صيانة في ثلاثة معايير، من 10: أحمد 8 و6 و7، وسلمى 7 و8 و7، وخالد 6 و6 و7، ونور 9 و5 و8. المعايير كلها كلما زادت كان أفضل. أي المتقدمين مسيطر عليه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-21">الحل</a></span></p>
+</div>
+<div id="prob-13-22" class="ee-item" data-id="c13-b-10" data-kind="problem" data-label="13.22">
+<p><strong>13.22</strong> لماذا لا نضع في المصفوفة معيارين يقيسان نفس الشيء تقريبا، مثل استهلاك الوقود وتكلفة الوقود؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-22">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-الطرق-غير-التعويضية" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-الطرق-غير-التعويضية">الجزء ج: الطرق غير التعويضية</h3>
+<div id="prob-13-23" class="ee-item" data-id="c13-c-01" data-kind="problem" data-label="13.23">
+<p><strong>13.23</strong> للمولدات في الجزء ب، المسألة الأولى، وضعت المستشفى حدودا: الثمن لا يزيد على 22 ألفا، والقدرة 110 كيلوواط أو أكثر، والضجيج 68 ديسيبل أو أقل. أي العروض تبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-23">الحل</a></span></p>
+</div>
+<div id="prob-13-24" class="ee-item" data-id="c13-c-02" data-kind="problem" data-label="13.24">
+<p><strong>13.24</strong> لنفس المولدات، اختر بالترتيب المعجمي: الضجيج أولا، ثم الثمن، ثم القدرة.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-24">الحل</a></span></p>
+</div>
+<div id="prob-13-25" class="ee-item" data-id="c13-c-03" data-kind="problem" data-label="13.25">
+<p><strong>13.25</strong> لنفس المولدات، اقبل كل عرض يتميز في معيار واحد على الأقل: ثمن 18 ألفا أو أقل، أو قدرة 150 أو أكثر، أو ضجيج 65 أو أقل.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-25">الحل</a></span></p>
+</div>
+<div id="prob-13-26" class="ee-item" data-id="c13-c-04" data-kind="problem" data-label="13.26">
+<p><strong>13.26</strong> للمتقدمين في الجزء ب، المسألة التاسعة، شرط الوظيفة 7 على الأقل في كل معيار. من يبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-26">الحل</a></span></p>
+</div>
+<div id="prob-13-27" class="ee-item" data-id="c13-c-05" data-kind="problem" data-label="13.27">
+<p><strong>13.27</strong> للمتقدمين أنفسهم، رتب المعايير: الأول أهم، ثم الثالث، ثم الثاني. من تختار بالترتيب المعجمي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-27">الحل</a></span></p>
+</div>
+<div id="prob-13-28" class="ee-item" data-id="c13-c-06" data-kind="problem" data-label="13.28">
+<p><strong>13.28</strong> لجنة وضعت حدودا دنيا عالية، فلم يبق أي بديل. ماذا تفعل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-28">الحل</a></span></p>
+</div>
+<div id="prob-13-29" class="ee-item" data-id="c13-c-07" data-kind="problem" data-label="13.29">
+<p><strong>13.29</strong> أربعة مواقع لروضة أطفال: الموقع 1 إيجاره 900 دينار شهريا، والمسافة إلى أقرب شارع رئيسي 50 مترا، والمساحة الخارجية 200 متر مربع. الموقع 2: 700، و400، و150. الموقع 3: 800، و150، و300. الموقع 4: 1,000، و300، و250. الشروط: الإيجار 850 أو أقل، والبعد عن الشارع الرئيسي 100 متر أو أكثر للسلامة، والمساحة 180 أو أكثر. أي المواقع تبقى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-29">الحل</a></span></p>
+</div>
+<div id="prob-13-30" class="ee-item" data-id="c13-c-08" data-kind="problem" data-label="13.30">
+<p><strong>13.30</strong> لنفس المواقع، اختر بالترتيب المعجمي: البعد عن الشارع أولا، ثم المساحة، ثم الإيجار.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-30">الحل</a></span></p>
+</div>
+<div id="prob-13-31" class="ee-item" data-id="c13-c-09" data-kind="problem" data-label="13.31">
+<p><strong>13.31</strong> لماذا نستخدم الحدود الدنيا غالبا قبل المجموع المرجح، وليس بدلا منه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-31">الحل</a></span></p>
+</div>
+<div id="prob-13-32" class="ee-item" data-id="c13-c-10" data-kind="problem" data-label="13.32">
+<p><strong>13.32</strong> عروض لشراء 20 حاسوبا: العرض 1 بثمن 650 دينار للجهاز وضمان سنتين. العرض 2 بثمن 600 وضمان سنة. العرض 3 بثمن 700 وضمان 3 سنوات. الشرط: ضمان سنتين على الأقل. ثم يختار الأرخص. أي عرض يفوز؟ وما تكلفة الشرط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-32">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-توحيد-المقاييس" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-توحيد-المقاييس">الجزء د: توحيد المقاييس</h3>
+<div id="prob-13-33" class="ee-item" data-id="c13-d-01" data-kind="problem" data-label="13.33">
+<p><strong>13.33</strong> شركة تختار آلة تغليف. البيانات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، دينار</th>
+<th>السرعة، عبوة في الدقيقة</th>
+<th>الأعطال، في السنة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>52,000</td>
+<td>120</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>47,000</td>
+<td>100</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>60,000</td>
+<td>150</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-33">الحل</a></span></p>
+</div>
+<div id="prob-13-34" class="ee-item" data-id="c13-d-02" data-kind="problem" data-label="13.34">
+<p><strong>13.34</strong> بلدية تختار موقعا لمدرسة جديدة:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>ثمن الأرض، ألف دينار</th>
+<th>المسافة إلى مركز الحي، متر</th>
+<th>المساحة، دونم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>320</td>
+<td>600</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>250</td>
+<td>1,200</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>410</td>
+<td>400</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-34">الحل</a></span></p>
+</div>
+<div id="prob-13-35" class="ee-item" data-id="c13-d-03" data-kind="problem" data-label="13.35">
+<p><strong>13.35</strong> مستشفى يختار جهاز تصوير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، ألف دينار</th>
+<th>دقة الصورة، من 10</th>
+<th>زمن الفحص، دقيقة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>8</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>520</td>
+<td>9</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>390</td>
+<td>6</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-35">الحل</a></span></p>
+</div>
+<div id="prob-13-36" class="ee-item" data-id="c13-d-04" data-kind="problem" data-label="13.36">
+<p><strong>13.36</strong> شركة نقل تختار شاحنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، دينار</th>
+<th>الحمولة، طن</th>
+<th>استهلاك الوقود، لتر لكل 100 كم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>85,000</td>
+<td>18</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>78,000</td>
+<td>16</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>92,000</td>
+<td>22</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-36">الحل</a></span></p>
+</div>
+<div id="prob-13-37" class="ee-item" data-id="c13-d-05" data-kind="problem" data-label="13.37">
+<p><strong>13.37</strong> جامعة تختار نظاما لإدارة التعلم:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الاشتراك السنوي، دينار</th>
+<th>سهولة الاستخدام، من 10</th>
+<th>زمن التدريب، ساعة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>24,000</td>
+<td>7</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>18,000</td>
+<td>6</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>30,000</td>
+<td>9</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-37">الحل</a></span></p>
+</div>
+<div id="prob-13-38" class="ee-item" data-id="c13-d-06" data-kind="problem" data-label="13.38">
+<p><strong>13.38</strong> مصنع يختار مقاولا لتوسعة مبنى:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>العرض، ألف دينار</th>
+<th>المدة، شهر</th>
+<th>الخبرة، مشاريع مشابهة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>640</td>
+<td>10</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>590</td>
+<td>12</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>700</td>
+<td>8</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-38">الحل</a></span></p>
+</div>
+<div id="prob-13-39" class="ee-item" data-id="c13-d-07" data-kind="problem" data-label="13.39">
+<p><strong>13.39</strong> شركة تختار مكتبا لفرعها الجديد:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الإيجار الشهري، دينار</th>
+<th>المساحة، متر مربع</th>
+<th>مواقف السيارات، موقف</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>3,200</td>
+<td>240</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>2,700</td>
+<td>200</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>3,900</td>
+<td>300</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-39">الحل</a></span></p>
+</div>
+<div id="prob-13-40" class="ee-item" data-id="c13-d-08" data-kind="problem" data-label="13.40">
+<p><strong>13.40</strong> مزرعة تختار نظام ري:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة، دينار للدونم</th>
+<th>توفير الماء، %</th>
+<th>ساعات الصيانة، في الشهر</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>30</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>380</td>
+<td>20</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>620</td>
+<td>45</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-40">الحل</a></span></p>
+</div>
+<div id="prob-13-41" class="ee-item" data-id="c13-d-09" data-kind="problem" data-label="13.41">
+<p><strong>13.41</strong> شركة تختار مزود خدمة إنترنت لمكاتبها:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الاشتراك الشهري، دينار</th>
+<th>السرعة، ميغابت</th>
+<th>الانقطاع، ساعة في السنة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>200</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>380</td>
+<td>100</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>520</td>
+<td>300</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-41">الحل</a></span></p>
+</div>
+<div id="prob-13-42" class="ee-item" data-id="c13-d-10" data-kind="problem" data-label="13.42">
+<p><strong>13.42</strong> وزارة تختار شركة لتنظيف مبانيها:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>العرض السنوي، ألف دينار</th>
+<th>تقييم الجودة، من 10</th>
+<th>عدد العاملين المدربين، عامل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>180</td>
+<td>7</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>150</td>
+<td>6</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>210</td>
+<td>9</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>حول كل معيار إلى درجة بين 0 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-42">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-المجموع-المرجح" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-المجموع-المرجح">الجزء هـ: المجموع المرجح</h3>
+<div id="prob-13-43" class="ee-item" data-id="c13-e-01" data-kind="problem" data-label="13.43">
+<p><strong>13.43</strong> مصنع يختار آلة تغليف:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، دينار</th>
+<th>السرعة، عبوة في الدقيقة</th>
+<th>الأعطال، في السنة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>52,000</td>
+<td>120</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>47,000</td>
+<td>100</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>60,000</td>
+<td>150</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.40 و0.40 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-43">الحل</a></span></p>
+</div>
+<div id="prob-13-44" class="ee-item" data-id="c13-e-02" data-kind="problem" data-label="13.44">
+<p><strong>13.44</strong> بلدية تختار موقعا لمدرسة:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>ثمن الأرض، ألف دينار</th>
+<th>المسافة إلى مركز الحي، متر</th>
+<th>المساحة، دونم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>320</td>
+<td>600</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>250</td>
+<td>1,200</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>410</td>
+<td>400</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.30 و0.40 و0.30. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-44">الحل</a></span></p>
+</div>
+<div id="prob-13-45" class="ee-item" data-id="c13-e-03" data-kind="problem" data-label="13.45">
+<p><strong>13.45</strong> مستشفى يختار جهاز تصوير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، ألف دينار</th>
+<th>دقة الصورة، من 10</th>
+<th>زمن الفحص، دقيقة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>8</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>520</td>
+<td>9</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>390</td>
+<td>6</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.30 و0.50 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-45">الحل</a></span></p>
+</div>
+<div id="prob-13-46" class="ee-item" data-id="c13-e-04" data-kind="problem" data-label="13.46">
+<p><strong>13.46</strong> شركة نقل تختار شاحنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الثمن، دينار</th>
+<th>الحمولة، طن</th>
+<th>استهلاك الوقود، لتر لكل 100 كم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>85,000</td>
+<td>18</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>78,000</td>
+<td>16</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>92,000</td>
+<td>22</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.50 و0.20 و0.30. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-46">الحل</a></span></p>
+</div>
+<div id="prob-13-47" class="ee-item" data-id="c13-e-05" data-kind="problem" data-label="13.47">
+<p><strong>13.47</strong> جامعة تختار نظاما لإدارة التعلم:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الاشتراك السنوي، دينار</th>
+<th>سهولة الاستخدام، من 10</th>
+<th>زمن التدريب، ساعة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>24,000</td>
+<td>7</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>18,000</td>
+<td>6</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>30,000</td>
+<td>9</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.30 و0.50 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-47">الحل</a></span></p>
+</div>
+<div id="prob-13-48" class="ee-item" data-id="c13-e-06" data-kind="problem" data-label="13.48">
+<p><strong>13.48</strong> مصنع يختار مقاولا:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>العرض، ألف دينار</th>
+<th>المدة، شهر</th>
+<th>الخبرة، مشاريع مشابهة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>640</td>
+<td>10</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>590</td>
+<td>12</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>700</td>
+<td>8</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.50 و0.30 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-48">الحل</a></span></p>
+</div>
+<div id="prob-13-49" class="ee-item" data-id="c13-e-07" data-kind="problem" data-label="13.49">
+<p><strong>13.49</strong> شركة تختار مكتبا:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الإيجار الشهري، دينار</th>
+<th>المساحة، متر مربع</th>
+<th>مواقف السيارات، موقف</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>3,200</td>
+<td>240</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>2,700</td>
+<td>200</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>3,900</td>
+<td>300</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.50 و0.30 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-49">الحل</a></span></p>
+</div>
+<div id="prob-13-50" class="ee-item" data-id="c13-e-08" data-kind="problem" data-label="13.50">
+<p><strong>13.50</strong> مزرعة تختار نظام ري:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكلفة، دينار للدونم</th>
+<th>توفير الماء، %</th>
+<th>ساعات الصيانة، في الشهر</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>30</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>380</td>
+<td>20</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>620</td>
+<td>45</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.40 و0.40 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-50">الحل</a></span></p>
+</div>
+<div id="prob-13-51" class="ee-item" data-id="c13-e-09" data-kind="problem" data-label="13.51">
+<p><strong>13.51</strong> مطعم يختار موردا للخضار:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>السعر، دينار للصندوق</th>
+<th>الطزاجة، من 10</th>
+<th>الالتزام بالمواعيد، % من الطلبات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>9</td>
+<td>8</td>
+<td>90</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>8</td>
+<td>6</td>
+<td>95</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>11</td>
+<td>9</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.40 و0.40 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-51">الحل</a></span></p>
+</div>
+<div id="prob-13-52" class="ee-item" data-id="c13-e-10" data-kind="problem" data-label="13.52">
+<p><strong>13.52</strong> شركة تختار برنامج محاسبة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>السعر، دينار</th>
+<th>عدد الوظائف، وظيفة</th>
+<th>الدعم الفني، من 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>5,000</td>
+<td>40</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>3,500</td>
+<td>30</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>8,000</td>
+<td>55</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.40 و0.30 و0.30. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-52">الحل</a></span></p>
+</div>
+<div id="prob-13-53" class="ee-item" data-id="c13-e-11" data-kind="problem" data-label="13.53">
+<p><strong>13.53</strong> شركة تختار مزود إنترنت:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>الاشتراك الشهري، دينار</th>
+<th>السرعة، ميغابت</th>
+<th>الانقطاع، ساعة في السنة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>450</td>
+<td>200</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>380</td>
+<td>100</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>520</td>
+<td>300</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.40 و0.40 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-53">الحل</a></span></p>
+</div>
+<div id="prob-13-54" class="ee-item" data-id="c13-e-12" data-kind="problem" data-label="13.54">
+<p><strong>13.54</strong> وزارة تختار شركة تنظيف:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>العرض السنوي، ألف دينار</th>
+<th>تقييم الجودة، من 10</th>
+<th>عدد العاملين المدربين، عامل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>180</td>
+<td>7</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>150</td>
+<td>6</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>210</td>
+<td>9</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>أوزان المعايير بالترتيب: 0.50 و0.30 و0.20. أي بديل تختار بالمجموع المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-54">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-تحديد-الأوزان" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-تحديد-الأوزان">الجزء و: تحديد الأوزان</h3>
+<div id="prob-13-55" class="ee-item" data-id="c13-f-01" data-kind="problem" data-label="13.55">
+<p><strong>13.55</strong> لجنة رتبت 5 معايير. ما وزن المعيار الأول، ووزن الأخير، بطريقة أوزان الترتيب؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-55">الحل</a></span></p>
+</div>
+<div id="prob-13-56" class="ee-item" data-id="c13-f-02" data-kind="problem" data-label="13.56">
+<p><strong>13.56</strong> مدير وزع 100 نقطة على أربعة معايير: التكلفة 40، والجودة 30، والتسليم 20، والخدمة ما بقي. ما الأوزان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-56">الحل</a></span></p>
+</div>
+<div id="prob-13-57" class="ee-item" data-id="c13-f-03" data-kind="problem" data-label="13.57">
+<p><strong>13.57</strong> مقارنة زوجية لثلاثة معايير لاختيار موقع مصنع: السلامة أهم من التكلفة 3 مرات، والسلامة أهم من القرب من السوق 6 مرات، والتكلفة أهم من القرب 2 مرة. احسب الأوزان بالوسط الهندسي.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-57">الحل</a></span></p>
+</div>
+<div id="prob-13-58" class="ee-item" data-id="c13-f-04" data-kind="problem" data-label="13.58">
+<p><strong>13.58</strong> في مقارنة زوجية، المعيار الأول أهم من الثاني 3 مرات، والثاني أهم من الثالث 2 مرة. كم مرة يجب أن يكون الأول أهم من الثالث حتى تكون الأحكام متسقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-58">الحل</a></span></p>
+</div>
+<div id="prob-13-59" class="ee-item" data-id="c13-f-05" data-kind="problem" data-label="13.59">
+<p><strong>13.59</strong> رتبت لجنة خمسة معايير. ثلاثة أعضاء أعطوا الترتيبات التالية، من 1 الأهم:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المعيار</th>
+<th>العضو الأول</th>
+<th>العضو الثاني</th>
+<th>العضو الثالث</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>الجودة</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>التسليم</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>الخدمة</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>البيئة</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>احسب أوزان الترتيب لكل عضو، ثم متوسطها.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-59">الحل</a></span></p>
+</div>
+<div id="prob-13-60" class="ee-item" data-id="c13-f-06" data-kind="problem" data-label="13.60">
+<p><strong>13.60</strong> ما عيب أوزان الترتيب مقارنة بتوزيع النقاط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-60">الحل</a></span></p>
+</div>
+<div id="prob-13-61" class="ee-item" data-id="c13-f-07" data-kind="problem" data-label="13.61">
+<p><strong>13.61</strong> مقارنة زوجية: الأول أهم من الثاني 2 مرة، والأول أهم من الثالث 3 مرات، والثاني أهم من الثالث 2 مرة. هل الأحكام متسقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-61">الحل</a></span></p>
+</div>
+<div id="prob-13-62" class="ee-item" data-id="c13-f-08" data-kind="problem" data-label="13.62">
+<p><strong>13.62</strong> حول أوزان النقاط التالية إلى أوزان مجموعها 1: الأمان 30، والتكلفة 50، والراحة 20، والمظهر 10.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-62">الحل</a></span></p>
+</div>
+<div id="prob-13-63" class="ee-item" data-id="c13-f-09" data-kind="problem" data-label="13.63">
+<p><strong>13.63</strong> لماذا يفضل أن تحدد الأوزان قبل جمع بيانات البدائل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-63">الحل</a></span></p>
+</div>
+<div id="prob-13-64" class="ee-item" data-id="c13-f-10" data-kind="problem" data-label="13.64">
+<p><strong>13.64</strong> كم حكما يحتاجه صاحب القرار لمقارنة زوجية بين 6 معايير؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-64">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-المال-وحساسية-الأوزان" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-المال-وحساسية-الأوزان">الجزء ز: المال وحساسية الأوزان</h3>
+<div id="prob-13-65" class="ee-item" data-id="c13-g-01" data-kind="problem" data-label="13.65">
+<p><strong>13.65</strong> بديلان ومعياران بالدرجات الموحدة: A يأخذ 0.90 و0.20، وB يأخذ 0.30 و0.80. وزن المعيار الأول 0.50. أي بديل تختار؟ وعند أي وزن يتغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-65">الحل</a></span></p>
+</div>
+<div id="prob-13-66" class="ee-item" data-id="c13-g-02" data-kind="problem" data-label="13.66">
+<p><strong>13.66</strong> آلتان: الأولى تكلفتها السنوية 52,000 دينار وجودتها 9 من 10. الثانية 46,000 دينار وجودتها 6. بالتوحيد على الآلتين فقط، عند أي وزن للتكلفة يتغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-66">الحل</a></span></p>
+</div>
+<div id="prob-13-67" class="ee-item" data-id="c13-g-03" data-kind="problem" data-label="13.67">
+<p><strong>13.67</strong> خطان للتعبئة. الأول يكلف 300,000 دينار، وتشغيله 72,000 دينار سنويا. الثاني يكلف 20% أكثر، وتشغيله 65,000 دينار سنويا، وأهدأ صوتا. العمر 8 سنوات، والحد الأدنى 10%. احسب التكلفة السنوية المكافئة لكل خط، لتدخل معيارا في المصفوفة.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-67">الحل</a></span></p>
+</div>
+<div id="prob-13-68" class="ee-item" data-id="c13-g-04" data-kind="problem" data-label="13.68">
+<p><strong>13.68</strong> لموردي المثال الأساسي في هذا الفصل، بالأوزان 0.5 و0.3 و0.2، كان A الأفضل. استخدم برنامج Python في آخر الشرح لتجد مدى وزن التكلفة الذي يبقى فيه A الأفضل، مع بقاء نسبة الجودة إلى التسليم 3 إلى 2.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-68">الحل</a></span></p>
+</div>
+<div id="prob-13-69" class="ee-item" data-id="c13-g-05" data-kind="problem" data-label="13.69">
+<p><strong>13.69</strong> بديلان وثلاثة معايير بالدرجات الموحدة: A يأخذ 0.70 و0.50 و0.60، وB يأخذ 0.40 و0.90 و0.50. الأوزان 0.40 و0.30 و0.30. أي بديل تختار؟ وما الفرق بين الدرجتين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-69">الحل</a></span></p>
+</div>
+<div id="prob-13-70" class="ee-item" data-id="c13-g-06" data-kind="problem" data-label="13.70">
+<p><strong>13.70</strong> درجة البديل الفائز 0.61، والثاني 0.60. ماذا تنصح اللجنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-70">الحل</a></span></p>
+</div>
+<div id="prob-13-71" class="ee-item" data-id="c13-g-07" data-kind="problem" data-label="13.71">
+<p><strong>13.71</strong> القيمة الحالية لتكاليف ثلاثة أنظمة تكييف لمبنى، خلال 15 سنة: 410,000 و380,000 و455,000 دينار. حولها إلى درجات معيار التكلفة.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-71">الحل</a></span></p>
+</div>
+<div id="prob-13-72" class="ee-item" data-id="c13-g-08" data-kind="problem" data-label="13.72">
+<p><strong>13.72</strong> بديل حصل على 0.60 في معيار وزنه 0.30. أعاد الخبير تقييمه في هذا المعيار فأعطاه 0. كم تنخفض درجته الكلية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-72">الحل</a></span></p>
+</div>
+<div id="prob-13-73" class="ee-item" data-id="c13-g-09" data-kind="problem" data-label="13.73">
+<p><strong>13.73</strong> ثلاثة بدائل ومعياران، بالدرجات الموحدة: A يأخذ 1 و0، وB يأخذ 0 و1، وC يأخذ 0.6 و0.6. اكتب درجة كل بديل بدلالة وزن المعيار الأول w. متى يفوز C؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-73">الحل</a></span></p>
+</div>
+<div id="prob-13-74" class="ee-item" data-id="c13-g-10" data-kind="problem" data-label="13.74">
+<p><strong>13.74</strong> لماذا يعتبر عرض نتيجة تحليل الحساسية للمسؤولين أهم من عرض الدرجة النهائية وحدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-74">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-13-75" class="ee-item" data-id="c13-h-01" data-kind="problem" data-label="13.75">
+<p><strong>13.75</strong> ابن في Excel مصفوفة المثال الأساسي في هذا الفصل، مع جدول الدرجات الموحدة والدرجة المرجحة، بحيث تتغير النتيجة تلقائيا إذا غيرت أي رقم أو وزن.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-75">الحل</a></span></p>
+</div>
+<div id="prob-13-76" class="ee-item" data-id="c13-h-02" data-kind="problem" data-label="13.76">
+<p><strong>13.76</strong> اكتب دالة Python تأخذ جدول بدائل، واتجاه كل معيار، والأوزان، وتعيد الدرجات المرجحة مرتبة. اختبرها على آلات التغليف في الجزء د.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-76">الحل</a></span></p>
+</div>
+<div id="prob-13-77" class="ee-item" data-id="c13-h-03" data-kind="problem" data-label="13.77">
+<p><strong>13.77</strong> عدل الدالة السابقة لتتجنب القسمة على صفر عندما تتساوى كل البدائل في معيار.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-77">الحل</a></span></p>
+</div>
+<div id="prob-13-78" class="ee-item" data-id="c13-h-04" data-kind="problem" data-label="13.78">
+<p><strong>13.78</strong> اكتب برنامج Python يحسب أوزان المقارنة الزوجية بالوسط الهندسي لأي عدد من المعايير، واختبره على مثال المقارنة الزوجية في هذا الفصل.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-78">الحل</a></span></p>
+</div>
+<div id="prob-13-79" class="ee-item" data-id="c13-h-05" data-kind="problem" data-label="13.79">
+<p><strong>13.79</strong> في Excel، ابن جدول حساسية لوزن التكلفة من 0 إلى 1 بخطوة 0.05 لموردي المثال الأساسي، وأضف عمودا يكتب اسم الأفضل في كل صف.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-79">الحل</a></span></p>
+</div>
+<div id="prob-13-80" class="ee-item" data-id="c13-h-06" data-kind="problem" data-label="13.80">
+<p><strong>13.80</strong> اكتب برنامج Python يحذف البدائل المسيطر عليها من أي مصفوفة. اختبره على المولدات في الجزء ب.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-80">الحل</a></span></p>
+</div>
+<div id="prob-13-81" class="ee-item" data-id="c13-h-07" data-kind="problem" data-label="13.81">
+<p><strong>13.81</strong> اكتب برنامج Python يطبق الترتيب المعجمي على أي مصفوفة، مع ترتيب للمعايير. اختبره على المولدات بترتيب الضجيج ثم الثمن ثم القدرة.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-81">الحل</a></span></p>
+</div>
+<div id="prob-13-82" class="ee-item" data-id="c13-h-08" data-kind="problem" data-label="13.82">
+<p><strong>13.82</strong> اكتب برنامج Python يسحب أوزانا عشوائية 10,000 مرة لموردي المثال الأساسي، ويحسب نسبة المرات التي يفوز فيها كل مورد.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-82">الحل</a></span></p>
+</div>
+<div id="prob-13-83" class="ee-item" data-id="c13-h-09" data-kind="problem" data-label="13.83">
+<p><strong>13.83</strong> في Excel، احسب أوزان الترتيب لثمانية معايير بصيغة واحدة تنسخ للأسفل.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-83">الحل</a></span></p>
+</div>
+<div id="prob-13-84" class="ee-item" data-id="c13-h-10" data-kind="problem" data-label="13.84">
+<p><strong>13.84</strong> اكتب برنامج Python يجمع خطوتين: يحذف البدائل التي لا تحقق الحدود الدنيا، ثم يختار من الباقي بالمجموع المرجح. اختبره على مواقع روضة الأطفال في الجزء ج، بأوزان 0.5 للإيجار و0.2 للبعد و0.3 للمساحة.</p>
+<p><span class="ee-sol-link"><a href="#sol-13-84">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-13-85" class="ee-item" data-id="c13-i-01" data-kind="problem" data-label="13.85">
+<p><strong>13.85</strong> بديل أسوأ من بديل آخر أو مساو له في كل المعايير، وأسوأ في واحد. هذا البديل:</p>
+<p>أ) يحتاج وزنا أعلى ليفوز<br>
+ب) مسيطر عليه ويحذف<br>
+ج) يفوز بالترتيب المعجمي<br>
+د) يحتاج توحيد المقاييس أولا</p>
+<p><span class="ee-sol-link"><a href="#sol-13-85">الحل</a></span></p>
+</div>
+<div id="prob-13-86" class="ee-item" data-id="c13-i-02" data-kind="problem" data-label="13.86">
+<p><strong>13.86</strong> تكلفة بديل 45,000 دينار، وأقل تكلفة بين البدائل 38,000، وأعلاها 50,000. ما درجته الموحدة في التكلفة؟</p>
+<p>أ) 0.5833<br>
+ب) 0.4167<br>
+ج) 0.9000<br>
+د) 0.1000</p>
+<p><span class="ee-sol-link"><a href="#sol-13-86">الحل</a></span></p>
+</div>
+<div id="prob-13-87" class="ee-item" data-id="c13-i-03" data-kind="problem" data-label="13.87">
+<p><strong>13.87</strong> أي الطرق التالية تعويضية؟</p>
+<p>أ) الحد الأدنى لكل معيار<br>
+ب) الترتيب المعجمي<br>
+ج) المجموع المرجح<br>
+د) التميز في معيار واحد</p>
+<p><span class="ee-sol-link"><a href="#sol-13-87">الحل</a></span></p>
+</div>
+<div id="prob-13-88" class="ee-item" data-id="c13-i-04" data-kind="problem" data-label="13.88">
+<p><strong>13.88</strong> بأوزان الترتيب، ما وزن المعيار الأول من 4 معايير؟</p>
+<p>أ) 0.2000<br>
+ب) 0.3000<br>
+ج) 0.4000<br>
+د) 0.1000</p>
+<p><span class="ee-sol-link"><a href="#sol-13-88">الحل</a></span></p>
+</div>
+<div id="prob-13-89" class="ee-item" data-id="c13-i-05" data-kind="problem" data-label="13.89">
+<p><strong>13.89</strong> في المقارنة الزوجية، المعيار الأول أهم من الثاني 3 مرات، والثاني أهم من الثالث مرتين. الحكم المتسق للأول مقابل الثالث:</p>
+<p>أ) 1.5<br>
+ب) 5<br>
+ج) 6<br>
+د) 9</p>
+<p><span class="ee-sol-link"><a href="#sol-13-89">الحل</a></span></p>
+</div>
+<div id="prob-13-90" class="ee-item" data-id="c13-i-06" data-kind="problem" data-label="13.90">
+<p><strong>13.90</strong> لماذا لا نجمع الدنانير والأيام ودرجات الجودة مباشرة؟</p>
+<p>أ) لأن الجمع غير ممكن في Excel<br>
+ب) لأن المعيار ذا الأرقام الكبيرة يطغى بدون قصد<br>
+ج) لأن الأيام أهم من الدنانير<br>
+د) لأن الدرجات أرقام صحيحة</p>
+<p><span class="ee-sol-link"><a href="#sol-13-90">الحل</a></span></p>
+</div>
+<div id="prob-13-91" class="ee-item" data-id="c13-i-07" data-kind="problem" data-label="13.91">
+<p><strong>13.91</strong> درجات بديل الموحدة 0.80 و0.40 و0.60، والأوزان 0.50 و0.30 و0.20. ما درجته المرجحة؟</p>
+<p>أ) 0.6000<br>
+ب) 0.5200<br>
+ج) 0.6400<br>
+د) 0.2133</p>
+<p><span class="ee-sol-link"><a href="#sol-13-91">الحل</a></span></p>
+</div>
+<div id="prob-13-92" class="ee-item" data-id="c13-i-08" data-kind="problem" data-label="13.92">
+<p><strong>13.92</strong> كيف ندخل ثمن آلة وتكاليف تشغيلها السنوية في تحليل متعدد المعايير؟</p>
+<p>أ) الثمن معيار، والتشغيل معيار آخر<br>
+ب) نهمل التشغيل لأنه صغير<br>
+ج) معيار واحد: القيمة السنوية المكافئة أو القيمة الحالية للتكاليف<br>
+د) نضع الثمن فقط لأنه يدفع الآن</p>
+<p><span class="ee-sol-link"><a href="#sol-13-92">الحل</a></span></p>
+</div>
+<div id="prob-13-93" class="ee-item" data-id="c13-i-09" data-kind="problem" data-label="13.93">
+<p><strong>13.93</strong> الترتيب المعجمي يختار:</p>
+<p>أ) البديل الأفضل في المعيار الأهم، ثم يفصل التعادل بالمعيار التالي<br>
+ب) البديل صاحب أعلى مجموع<br>
+ج) كل بديل يحقق الحدود الدنيا<br>
+د) البديل المتوازن في كل المعايير</p>
+<p><span class="ee-sol-link"><a href="#sol-13-93">الحل</a></span></p>
+</div>
+<div id="prob-13-94" class="ee-item" data-id="c13-i-10" data-kind="problem" data-label="13.94">
+<p><strong>13.94</strong> القرار يتغير إذا زاد وزن التكلفة من 0.50 إلى 0.52. القرار:</p>
+<p>أ) قوي<br>
+ب) هش ويحتاج نقاشا للأوزان<br>
+ج) خاطئ بالتأكيد<br>
+د) لا يتأثر بالأوزان</p>
+<p><span class="ee-sol-link"><a href="#sol-13-94">الحل</a></span></p>
+</div>
+<div id="prob-13-95" class="ee-item" data-id="c13-i-11" data-kind="problem" data-label="13.95">
+<p><strong>13.95</strong> كم حكما تحتاج المقارنة الزوجية لخمسة معايير؟</p>
+<p>أ) 5<br>
+ب) 10<br>
+ج) 20<br>
+د) 25</p>
+<p><span class="ee-sol-link"><a href="#sol-13-95">الحل</a></span></p>
+</div>
+<div id="prob-13-96" class="ee-item" data-id="c13-i-12" data-kind="problem" data-label="13.96">
+<p><strong>13.96</strong> لجنة غيرت الأوزان بعد أن رأت أن بديلها المفضل خسر. ما المشكلة؟</p>
+<p>أ) لا مشكلة، الأوزان تقدير شخصي<br>
+ب) التحليل صار يبرر قرارا متخذا مسبقا<br>
+ج) الأوزان يجب أن تكون متساوية<br>
+د) يجب إعادة توحيد المقاييس</p>
+<p><span class="ee-sol-link"><a href="#sol-13-96">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار كامل، من بناء المصفوفة إلى اختبار الحساسية.</p>
+<div id="prob-13-97" class="ee-item" data-id="c13-j-01" data-kind="problem" data-label="13.97">
+<p><strong>13.97</strong> <strong>حالة 13.1: خط تعبئة لمصنع ألبان</strong></p>
+<p>مصنع ألبان في جنين يختار خط تعبئة من ثلاثة عروض. العمر 10 سنوات، والحد الأدنى 10%:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>العرض</th>
+<th>الثمن، دينار</th>
+<th>التشغيل السنوي، دينار</th>
+<th>الهدر، %</th>
+<th>سهولة التنظيف، من 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أوروبي</td>
+<td>350,000</td>
+<td>42,000</td>
+<td>1.5</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>آسيوي</td>
+<td>300,000</td>
+<td>55,000</td>
+<td>2.5</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>محلي مطور</td>
+<td>420,000</td>
+<td>30,000</td>
+<td>0.5</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>الأوزان: التكلفة 0.5، والهدر 0.3، والتنظيف 0.2. (أ) احسب القيمة الحالية للتكاليف. (ب) وحد المقاييس واحسب الدرجات. (ج) أي عرض تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-97">الحل</a></span></p>
+</div>
+<div id="prob-13-98" class="ee-item" data-id="c13-j-02" data-kind="problem" data-label="13.98">
+<p><strong>13.98</strong> <strong>حالة 13.2: موقع مركز صحي في محافظة طوباس</strong></p>
+<p>وزارة الصحة تختار موقعا من أربعة. اللجنة وضعت حدودا دنيا: يخدم 8,000 نسمة على الأقل ضمن 5 كيلومترات، والأرض متاحة خلال سنة. ثم تختار بالمجموع المرجح: التكلفة 0.4، والسكان المخدومون 0.4، والوصول بالمواصلات العامة 0.2.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الموقع</th>
+<th>التكلفة، ألف دينار</th>
+<th>السكان</th>
+<th>الأرض متاحة خلال سنة</th>
+<th>المواصلات، من 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>900</td>
+<td>12,000</td>
+<td>نعم</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>750</td>
+<td>7,500</td>
+<td>نعم</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1,100</td>
+<td>15,000</td>
+<td>نعم</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>800</td>
+<td>10,000</td>
+<td>لا</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) أي المواقع تبقى بعد الحدود الدنيا؟ (ب) أي موقع تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-98">الحل</a></span></p>
+</div>
+<div id="prob-13-99" class="ee-item" data-id="c13-j-03" data-kind="problem" data-label="13.99">
+<p><strong>13.99</strong> <strong>حالة 13.3: مورد أدوية لمستشفى حكومي</strong></p>
+<p>المستشفى يقيم ثلاثة موردين بثلاثة معايير. المقارنة الزوجية: السعر أهم من الالتزام بالمواعيد 3 مرات، والسعر أهم من خدمة ما بعد البيع 5 مرات، والالتزام أهم من الخدمة مرتين. الدرجات الموحدة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المورد</th>
+<th>السعر</th>
+<th>الالتزام</th>
+<th>الخدمة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X</td>
+<td>1</td>
+<td>0.2</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Y</td>
+<td>0.6</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td>Z</td>
+<td>0</td>
+<td>0.7</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) احسب الأوزان. (ب) أي مورد تختار؟ (ج) هل الأحكام متسقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-99">الحل</a></span></p>
+</div>
+<div id="prob-13-100" class="ee-item" data-id="c13-j-04" data-kind="problem" data-label="13.100">
+<p><strong>13.100</strong> <strong>حالة 13.4: نظام طاقة لمدرسة</strong></p>
+<p>مديرية تربية تختار بين ثلاثة أنظمة طاقة لمدرسة نائية. القيمة الحالية لتكاليف 20 سنة: شبكة كهرباء مع مولد احتياطي 180 ألف دينار، وألواح شمسية مع بطاريات 210 ألفا، ونظام هجين 195 ألفا. ساعات الانقطاع المتوقعة في السنة: 120، و40، و15. أثر البيئة من 10، الأعلى أنظف: 3، و9، و7.</p>
+<p>(أ) هل يوجد نظام مسيطر عليه؟ (ب) بأوزان 0.4 للتكلفة و0.4 للانقطاع و0.2 للبيئة، أي نظام تختار؟ (ج) ما أقل وزن للتكلفة يجعل الشبكة الأفضل، إذا بقي الانقطاع والبيئة بنسبة 2 إلى 1؟</p>
+<p><span class="ee-sol-link"><a href="#sol-13-100">الحل</a></span></p>
+</div>
+</section>
+</section>
+<section id="refs-ch13" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="refs-ch13">المراجع</h2>
+<p>هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في <a href="../appendices/references.html" class="quarto-xref"><span>الملحق G</span></a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الكتاب</th>
+<th>الفصل</th>
+<th>عنوان الفصل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="en" dir="ltr">Blank &amp; Tarquin</span></td>
+<td><span class="en" dir="ltr">10</span></td>
+<td><span class="en" dir="ltr">Project Financing and Noneconomic Attributes</span></td>
+</tr>
+<tr class="even">
+<td><span class="en" dir="ltr">Sullivan et al.</span></td>
+<td><span class="en" dir="ltr">14</span></td>
+<td><span class="en" dir="ltr">Decision Making Considering Multiattributes</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch12.html" class="pagination-link" aria-label="المشاريع العامة ونسبة المنفعة إلى التكلفة">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

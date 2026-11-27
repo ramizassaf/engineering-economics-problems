@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; المشاريع العامة ونسبة المنفعة إلى التكلفة – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/ch13.html" rel="next">
+<link href="../chapters/ch11.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch12.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch12.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">مسرد المصطلحات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">المراجع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثامن</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل التاسع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني عشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث عشر</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-12-classify" id="toc-sec-12-classify" class="nav-link active" data-scroll-target="#sec-12-classify"><span class="header-section-number">12.1</span> المنافع والأضرار والتكاليف</a></li>
+  <li><a href="#sec-12-rate" id="toc-sec-12-rate" class="nav-link" data-scroll-target="#sec-12-rate"><span class="header-section-number">12.2</span> نسبة الخصم في المشاريع العامة</a></li>
+  <li><a href="#sec-12-ratios" id="toc-sec-12-ratios" class="nav-link" data-scroll-target="#sec-12-ratios"><span class="header-section-number">12.3</span> النسبة التقليدية والنسبة المعدلة</a></li>
+  <li><a href="#sec-12-aw" id="toc-sec-12-aw" class="nav-link" data-scroll-target="#sec-12-aw"><span class="header-section-number">12.4</span> النسبة بالقيمة السنوية والمشاريع الدائمة</a></li>
+  <li><a href="#sec-12-incremental" id="toc-sec-12-incremental" class="nav-link" data-scroll-target="#sec-12-incremental"><span class="header-section-number">12.5</span> مقارنة البدائل: النسبة التزايدية</a></li>
+  <li><a href="#sec-12-independent" id="toc-sec-12-independent" class="nav-link" data-scroll-target="#sec-12-independent"><span class="header-section-number">12.6</span> المشاريع المستقلة</a></li>
+  <li><a href="#sec-12-cea" id="toc-sec-12-cea" class="nav-link" data-scroll-target="#sec-12-cea"><span class="header-section-number">12.7</span> الفعالية مقابل التكلفة</a></li>
+  <li><a href="#sec-12-python" id="toc-sec-12-python" class="nav-link" data-scroll-target="#sec-12-python"><span class="header-section-number">12.8</span> Python: النسبة التزايدية</a></li>
+  <li><a href="#sec-12-problems" id="toc-sec-12-problems" class="nav-link" data-scroll-target="#sec-12-problems"><span class="header-section-number">12.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-المنافع-والأضرار-والتكاليف" id="toc-الجزء-ب-المنافع-والأضرار-والتكاليف" class="nav-link" data-scroll-target="#الجزء-ب-المنافع-والأضرار-والتكاليف">الجزء ب: المنافع والأضرار والتكاليف</a></li>
+  <li><a href="#الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" id="toc-الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" class="nav-link" data-scroll-target="#الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد">الجزء ج: نسبة المنفعة إلى التكلفة لمشروع واحد</a></li>
+  <li><a href="#الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" id="toc-الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" class="nav-link" data-scroll-target="#الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار">الجزء د: النسبة التقليدية والمعدلة والأضرار</a></li>
+  <li><a href="#الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" id="toc-الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" class="nav-link" data-scroll-target="#الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة">الجزء هـ: القيمة السنوية والمشاريع الدائمة</a></li>
+  <li><a href="#الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" id="toc-الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" class="nav-link" data-scroll-target="#الجزء-و-النسبة-التزايدية-للبدائل-المتنافية">الجزء و: النسبة التزايدية للبدائل المتنافية</a></li>
+  <li><a href="#الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" id="toc-الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" class="nav-link" data-scroll-target="#الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة">الجزء ز: المشاريع المستقلة والفعالية مقابل التكلفة</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  <li><a href="#refs-ch12" id="toc-refs-ch12" class="nav-link" data-scroll-target="#refs-ch12">المراجع</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch12" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">المشاريع العامة ونسبة المنفعة إلى التكلفة</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الفصل الرابع عرض نسبة المنفعة إلى التكلفة في قسم قصير. هذا الفصل يعرضها كاملة، لأنها الأداة الرسمية لتقييم المشاريع العامة: الطرق، والمدارس، وشبكات المياه، والسدود، ومحطات الكهرباء الحكومية.</p>
+<p>المشروع العام يختلف عن مشروع الشركة في أربعة أشياء:</p>
+<ol type="1">
+<li><strong>من يدفع ومن يستفيد:</strong> الحكومة تدفع، والمواطنون يستفيدون. لا يوجد إيراد يقاس به الربح.</li>
+<li><strong>المنافع صعبة التقدير:</strong> وقت السائق، والحياة التي تنقذ، والهواء الأنظف، ليس لها سعر في السوق.</li>
+<li><strong>الأعمار طويلة:</strong> طريق أو سد يخدم 30 أو 50 سنة، وأحيانا بلا نهاية.</li>
+<li><strong>نسبة الخصم أقل:</strong> الحكومة تقترض بنسبة أقل من الشركات، ولا تطلب ربحا.</li>
+</ol>
+<section id="sec-12-classify" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="sec-12-classify"><span class="header-section-number">12.1</span> المنافع والأضرار والتكاليف</h2>
+<p>نقسم كل تدفق في المشروع العام إلى واحد من ثلاثة أنواع:</p>
+<ul>
+<li><strong>المنافع:</strong> ما يكسبه الناس من المشروع، مثل توفير الوقت والوقود، وقلة الحوادث، وزيادة قيمة الأراضي.</li>
+<li><strong>الأضرار:</strong> ما يخسره الناس بسبب المشروع، مثل الضجيج، وأرض زراعية تضيع، وتجارة تتحول إلى مكان آخر.</li>
+<li><strong>التكاليف:</strong> ما تدفعه الحكومة، مثل الإنشاء والتشغيل والصيانة. إيرادات الحكومة من المشروع، مثل الرسوم، تطرح من التكاليف.</li>
+</ul>
+<p>القاعدة: نسأل من يتأثر. إذا كان الناس، فهو منفعة أو ضرر. إذا كانت الحكومة، فهو تكلفة أو وفر.</p>
+<div id="ex-12-1" class="ee-item" data-id="c12-ex-classify" data-kind="example" data-label="12.1">
+<p><strong>مثال 12.1: منفعة أم ضرر أم تكلفة؟</strong></p>
+<p>وزارة الأشغال تدرس طريقا سريعا بين مدينتين، يكلف إنشاؤه 12,000,000 دينار. التقديرات السنوية:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المبلغ السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>توفير وقت المسافرين</td>
+<td>900,000</td>
+</tr>
+<tr class="even">
+<td>توفير الوقود وصيانة السيارات</td>
+<td>300,000</td>
+</tr>
+<tr class="odd">
+<td>تقليل كلفة الحوادث</td>
+<td>150,000</td>
+</tr>
+<tr class="even">
+<td>دخل المزارعين الذي يضيع بسبب الأرض المأخوذة والضجيج</td>
+<td>120,000</td>
+</tr>
+<tr class="odd">
+<td>صيانة الطريق</td>
+<td>80,000</td>
+</tr>
+<tr class="even">
+<td>رسوم العبور التي تحصلها الوزارة</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table>
+<p>صنف كل بند، واحسب المنافع والأضرار والتكاليف السنوية.</p>
+<p><strong>الحل:</strong></p>
+<p>نسأل لكل بند: من يتأثر؟</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>من يتأثر</th>
+<th>النوع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>توفير الوقت</td>
+<td>الناس</td>
+<td>منفعة</td>
+</tr>
+<tr class="even">
+<td>توفير الوقود</td>
+<td>الناس</td>
+<td>منفعة</td>
+</tr>
+<tr class="odd">
+<td>تقليل الحوادث</td>
+<td>الناس</td>
+<td>منفعة</td>
+</tr>
+<tr class="even">
+<td>دخل المزارعين الضائع</td>
+<td>الناس</td>
+<td>ضرر</td>
+</tr>
+<tr class="odd">
+<td>الصيانة</td>
+<td>الحكومة</td>
+<td>تكلفة</td>
+</tr>
+<tr class="even">
+<td>رسوم العبور</td>
+<td>الحكومة</td>
+<td>وفر يطرح من التكاليف</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>350</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+B = 900\mathord{,}000 + 300\mathord{,}000 + 150\mathord{,}000 = 1\mathord{,}350\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>120</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 120\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>a</mi><mi>n</mi><mi>n</mi><mi>u</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+C_{annual} = 80\mathord{,}000 - 50\mathord{,}000 = 30\mathord{,}000
+</annotation></semantics></math></p>
+<p>والاستثمار 12,000,000 دينار في السنة 0. رسوم العبور يدفعها المسافرون للحكومة، فهي تنقل مالا بين طرفين من نفس المجتمع. لا نضيفها إلى المنافع أيضا، وإلا حسبناها مرتين.</p>
+</div>
+</section>
+<section id="sec-12-rate" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-12-rate"><span class="header-section-number">12.2</span> نسبة الخصم في المشاريع العامة</h2>
+<p>الحكومة لا تبحث عن ربح، لكن المال الذي تنفقه له تكلفة: تقترضه بفائدة، أو تأخذه ضرائب كان الناس سيستثمرونها. لذلك تستخدم نسبة الخصم الاجتماعية، وهي أقل عادة من الحد الأدنى للشركات. منافع المشاريع العامة تأتي متأخرة وطويلة، والتكلفة تأتي في البداية. فاختيار النسبة قد يقرر المشروع وحده.</p>
+<div id="ex-12-2" class="ee-item" data-id="c12-ex-rate" data-kind="example" data-label="12.2">
+<p><strong>مثال 12.2: أثر نسبة الخصم على القرار</strong></p>
+<p>سد صغير يكلف 8,000,000 دينار، وصيانته 100,000 دينار سنويا، ومنافعه للري ومياه الشرب 600,000 دينار سنويا لمدة 40 سنة. احسب نسبة المنفعة إلى التكلفة بنسبة خصم 3%، ثم بنسبة 8%.</p>
+<p><strong>الحل:</strong></p>
+<p>بنسبة 3%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23.1148</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 3\%,\ 40) = 23.1148
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>600</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>23.1148</mn></mrow><mrow><mn>8</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>23.1148</mn></mrow></mfrac><mo>=</mo><mn>1.3450</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{600\mathord{,}000 \times 23.1148}{8\mathord{,}000\mathord{,}000 + 100\mathord{,}000 \times 23.1148} = 1.3450
+</annotation></semantics></math></p>
+<p>بنسبة 8%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.9246</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 8\%,\ 40) = 11.9246
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>600</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.9246</mn></mrow><mrow><mn>8</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>11.9246</mn></mrow></mfrac><mo>=</mo><mn>0.7783</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{600\mathord{,}000 \times 11.9246}{8\mathord{,}000\mathord{,}000 + 100\mathord{,}000 \times 11.9246} = 0.7783
+</annotation></semantics></math></p>
+<p>الاستثمار في السنة 0 لا يتأثر بالخصم، والمنافع البعيدة تتأثر كثيرا. المشروع مجد بالنسبة المنخفضة وغير مجد بالمرتفعة: النسبة وحدها قررت المشروع.</p>
+</div>
+</section>
+<section id="sec-12-ratios" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="sec-12-ratios"><span class="header-section-number">12.3</span> النسبة التقليدية والنسبة المعدلة</h2>
+<p>كل القيم في النسبة قيم حالية، أو كلها قيم سنوية، بنفس نسبة الخصم. النسبة التقليدية تضع الأضرار مع المنافع، وكل ما تدفعه الحكومة في المقام:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi></mrow><mrow><mi>I</mi><mo>+</mo><mi>M</mi><mo>−</mo><mi>S</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{B - D}{I + M - S}
+</annotation></semantics></math></p>
+<p>حيث B المنافع، و D الأضرار، و I الاستثمار، و M التشغيل والصيانة، و S قيمة البيع في النهاية.</p>
+<p>النسبة المعدلة تنقل التشغيل والصيانة إلى البسط، فيبقى في المقام الاستثمار فقط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi><mo>−</mo><mi>M</mi></mrow><mrow><mi>I</mi><mo>−</mo><mi>S</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{B - D - M}{I - S}
+</annotation></semantics></math></p>
+<p>النسبتان تختلفان في القيمة، لكنهما تتفقان دائما على السؤال المهم: هل النسبة أكبر من 1؟ لأن الاثنتين أكبر من 1 فقط إذا كانت المنافع الصافية أكبر من التكاليف الصافية.</p>
+<div id="ex-12-3" class="ee-item" data-id="c12-ex-ratios" data-kind="example" data-label="12.3">
+<p><strong>مثال 12.3: النسبة التقليدية والنسبة المعدلة</strong></p>
+<p>مبنى مكتبة عامة يكلف 3,000,000 دينار، وتشغيله 90,000 دينار سنويا، ويباع بمبلغ 400,000 دينار بعد 25 سنة. منافعه للسكان 420,000 دينار سنويا، وأضراره 30,000 دينار سنويا. نسبة الخصم 6%. احسب النسبة التقليدية والنسبة المعدلة.</p>
+<p><strong>الحل:</strong></p>
+<p>القيم الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12.7834</mn><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.2330</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 25) = 12.7834 \qquad (P/F,\ 6\%,\ 25) = 0.2330
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>−</mo><mi>D</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>420</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>12.7834</mn><mo>=</mo><mn>4</mn><mi>,</mi><mn>985</mn><mi>,</mi><mn>508.90</mn></mrow><annotation encoding="application/x-tex">
+B - D = (420\mathord{,}000 - 30\mathord{,}000) \times 12.7834 = 4\mathord{,}985\mathord{,}508.90
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mn>90</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>12.7834</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>150</mn><mi>,</mi><mn>502.05</mn><mspace width="2.0em"></mspace><mi>S</mi><mo>=</mo><mn>400</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.2330</mn><mo>=</mo><mn>93</mn><mi>,</mi><mn>199.45</mn></mrow><annotation encoding="application/x-tex">
+M = 90\mathord{,}000 \times 12.7834 = 1\mathord{,}150\mathord{,}502.05 \qquad S = 400\mathord{,}000 \times 0.2330 = 93\mathord{,}199.45
+</annotation></semantics></math></p>
+<p><strong>النسبة التقليدية:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi></mrow><mrow><mi>I</mi><mo>+</mo><mi>M</mi><mo>−</mo><mi>S</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>985</mn><mi>,</mi><mn>508.90</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>150</mn><mi>,</mi><mn>502.05</mn><mo>−</mo><mn>93</mn><mi>,</mi><mn>199.45</mn></mrow></mfrac><mo>=</mo><mn>1.2288</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D}{I + M - S} = \frac{4\mathord{,}985\mathord{,}508.90}{3\mathord{,}000\mathord{,}000 + 1\mathord{,}150\mathord{,}502.05 - 93\mathord{,}199.45} = 1.2288
+</annotation></semantics></math></p>
+<p><strong>النسبة المعدلة:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>B</mi><mo>−</mo><mi>D</mi><mo>−</mo><mi>M</mi></mrow><mrow><mi>I</mi><mo>−</mo><mi>S</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>985</mn><mi>,</mi><mn>508.90</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>150</mn><mi>,</mi><mn>502.05</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>93</mn><mi>,</mi><mn>199.45</mn></mrow></mfrac><mo>=</mo><mn>1.3193</mn></mrow><annotation encoding="application/x-tex">
+\frac{B - D - M}{I - S} = \frac{4\mathord{,}985\mathord{,}508.90 - 1\mathord{,}150\mathord{,}502.05}{3\mathord{,}000\mathord{,}000 - 93\mathord{,}199.45} = 1.3193
+</annotation></semantics></math></p>
+<p>النسبتان أكبر من 1، فالمشروع مجد. المعدلة أكبر لأنها تقسم على مقام أصغر.</p>
+</div>
+<p>بعض الجهات تضيف الأضرار إلى التكاليف بدل طرحها من المنافع. قيمة النسبة تتغير، لكن القرار لا يتغير. الخطأ الوحيد أن تنسى الأضرار.</p>
+<div id="ex-12-4" class="ee-item" data-id="c12-ex-disbenefit" data-kind="example" data-label="12.4">
+<p><strong>مثال 12.4: أين نضع الأضرار؟</strong></p>
+<p>القيمة الحالية لمنافع مطار صغير 5,000,000 دينار، ولأضراره على السكان القريبين، من ضجيج وتلوث، 800,000 دينار، ولتكاليفه 3,500,000 دينار. احسب النسبة بطرح الأضرار من المنافع، ثم بإضافتها إلى التكاليف، ثم بنسيانها.</p>
+<p><strong>الحل:</strong></p>
+<p>طرح الأضرار من المنافع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>800</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2000</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000\mathord{,}000 - 800\mathord{,}000}{3\mathord{,}500\mathord{,}000} = 1.2000
+</annotation></semantics></math></p>
+<p>إضافة الأضرار إلى التكاليف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>800</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.1628</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000\mathord{,}000}{3\mathord{,}500\mathord{,}000 + 800\mathord{,}000} = 1.1628
+</annotation></semantics></math></p>
+<p>نسيان الأضرار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.4286</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000\mathord{,}000}{3\mathord{,}500\mathord{,}000} = 1.4286
+</annotation></semantics></math></p>
+<p>الطريقتان الأوليان تعطيان قيمتين مختلفتين، لكن كلتيهما أكبر من 1 أو كلتيهما أقل، لأن الاثنتين تقولان إن المنافع أكبر من التكاليف والأضرار معا أو لا. نسيان الأضرار لم يقلب القرار هنا، لكنه يضخم النسبة.</p>
+</div>
+</section>
+<section id="sec-12-aw" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="sec-12-aw"><span class="header-section-number">12.4</span> النسبة بالقيمة السنوية والمشاريع الدائمة</h2>
+<p>إذا كانت المنافع سنوية متساوية، فالأسهل أن نحول الاستثمار إلى قيمة سنوية. المشروع الذي يخدم بلا نهاية، مثل سد أو قناة، قيمته السنوية للاستثمار هي الفائدة عليه فقط، كما في التكلفة المرسملة في الفصل الثالث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>I</mi><mo>×</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">
+A = I \times i
+</annotation></semantics></math></p>
+<div id="ex-12-5" class="ee-item" data-id="c12-ex-perpetual" data-kind="example" data-label="12.5">
+<p><strong>مثال 12.5: مشروع دائم بالقيمة السنوية</strong></p>
+<p>قناة ري تكلف 20,000,000 دينار، وصيانتها 250,000 دينار سنويا، وتخدم بلا نهاية إذا صينت. منافعها للمزارعين 1,900,000 دينار سنويا، وأضرارها 150,000 دينار سنويا. نسبة الخصم 5%. هل المشروع مجد؟</p>
+<p><strong>الحل:</strong></p>
+<p>القيمة السنوية للاستثمار في مشروع دائم هي الفائدة عليه:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+A = 20\mathord{,}000\mathord{,}000 \times 5\% = 1\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>B</mi><mi>C</mi></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mi>,</mi><mn>900</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>150</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>250</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.4000</mn></mrow><annotation encoding="application/x-tex">
+\frac{B}{C} = \frac{1\mathord{,}900\mathord{,}000 - 150\mathord{,}000}{1\mathord{,}000\mathord{,}000 + 250\mathord{,}000} = 1.4000
+</annotation></semantics></math></p>
+<p>المشروع مجد. بالقيمة الحالية نحصل على نفس النسبة: كل مبلغ سنوي دائم قيمته الحالية المبلغ مقسوما على النسبة.</p>
+</div>
+</section>
+<section id="sec-12-incremental" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="sec-12-incremental"><span class="header-section-number">12.5</span> مقارنة البدائل: النسبة التزايدية</h2>
+<p>عندما تختار الحكومة بديلا واحدا من عدة بدائل متنافية، لا تختار صاحب أعلى نسبة. مثل معدل العائد في الفصل الرابع، نقارن الفرق بين كل بديلين:</p>
+<ol type="1">
+<li>احسب القيمة الحالية لتكاليف كل بديل، ورتب البدائل تصاعديا حسبها.</li>
+<li>ابدأ بعدم فعل شيء، أو بأرخص بديل إذا كان المشروع ضروريا.</li>
+<li>قارن البديل التالي بالأفضل حتى الآن بنسبة الفرق:</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mn>2</mn></msub><mo>−</mo><msub><mi>D</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mn>1</mn></msub><mo>−</mo><msub><mi>D</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>−</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = \frac{(B_2 - D_2) - (B_1 - D_1)}{C_2 - C_1}
+</annotation></semantics></math></p>
+<ol start="4" type="1">
+<li>إذا كانت النسبة 1 أو أكثر، يصبح البديل الأغلى هو الأفضل. وإلا يبقى الأرخص.</li>
+<li>كرر حتى تنتهي البدائل.</li>
+</ol>
+<div id="ex-12-6" class="ee-item" data-id="c12-ex-incremental" data-kind="example" data-label="12.6">
+<p><strong>مثال 12.6: النسبة التزايدية لثلاثة بدائل</strong></p>
+<p>بلدية تختار تصميما واحدا لمحطة معالجة مياه عادمة، أو لا تبني شيئا. العمر 30 سنة، ونسبة الخصم 6%. المبالغ بالدينار:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>الاستثمار</th>
+<th>التشغيل السنوي</th>
+<th>المنافع السنوية</th>
+<th>الأضرار السنوية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>4,000,000</td>
+<td>120,000</td>
+<td>520,000</td>
+<td>40,000</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>5,500,000</td>
+<td>150,000</td>
+<td>680,000</td>
+<td>50,000</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>7,500,000</td>
+<td>180,000</td>
+<td>820,000</td>
+<td>60,000</td>
+</tr>
+</tbody>
+</table>
+<p>أي تصميم تختار؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>30</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13.7648</mn></mrow><annotation encoding="application/x-tex">
+(P/A,\ 6\%,\ 30) = 13.7648
+</annotation></semantics></math></p>
+<p>القيم الحالية للتكاليف وللمنافع الصافية، مرتبة حسب التكاليف:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>التكاليف</th>
+<th>المنافع ناقص الأضرار</th>
+<th>النسبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>5,651,780</td>
+<td>6,607,119</td>
+<td>1.1690</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>7,564,725</td>
+<td>8,671,844</td>
+<td>1.1464</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>9,977,670</td>
+<td>10,461,272</td>
+<td>1.0485</td>
+</tr>
+</tbody>
+</table>
+<p><strong>أ مقابل عدم البناء:</strong> النسبة 1.1690. أ أفضل من عدم البناء.</p>
+<p><strong>ب مقابل أ:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>1.0793</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 1.0793
+</annotation></semantics></math></p>
+<p>الدينار الإضافي في ب يعيد أكثر من دينار، فيصبح ب الأفضل.</p>
+<p><strong>ج مقابل الأفضل حتى الآن:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mn>0.7416</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = 0.7416
+</annotation></semantics></math></p>
+<p>ج لا يبرر الإضافة.</p>
+<p>الاختيار: ب. لاحظ أن أعلى نسبة منفردة قد تكون لبديل آخر: النسبة المنفردة لا تختار بين البدائل.</p>
+</div>
+<p>البديل صاحب أعلى نسبة ليس الأفضل بالضرورة. الأفضل هو الذي يعطي أكبر منفعة صافية، وكل دينار إضافي فيه يعيد دينارا أو أكثر.</p>
+<div id="ex-12-7" class="ee-item" data-id="c12-ex-net" data-kind="example" data-label="12.7">
+<p><strong>مثال 12.7: أعلى نسبة ليست أفضل بديل</strong></p>
+<p>بديلان متنافيان لتحسين شبكة طرق داخل مدينة. القيم الحالية بالدينار:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>س</td>
+<td>1,000,000</td>
+<td>1,600,000</td>
+</tr>
+<tr class="even">
+<td>ص</td>
+<td>2,500,000</td>
+<td>3,400,000</td>
+</tr>
+</tbody>
+</table>
+<p>أيهما تختار؟</p>
+<p><strong>الحل:</strong></p>
+<p>النسب المنفردة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.6000</mn><mspace width="2.0em"></mspace><mfrac><mrow><mn>3</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.3600</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}600\mathord{,}000}{1\mathord{,}000\mathord{,}000} = 1.6000 \qquad \frac{3\mathord{,}400\mathord{,}000}{2\mathord{,}500\mathord{,}000} = 1.3600
+</annotation></semantics></math></p>
+<p>س أعلى نسبة. لكن السؤال: هل الإضافة إلى ص تستحق؟</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.2000</mn></mrow><annotation encoding="application/x-tex">
+\frac{\Delta B}{\Delta C} = \frac{3\mathord{,}400\mathord{,}000 - 1\mathord{,}600\mathord{,}000}{2\mathord{,}500\mathord{,}000 - 1\mathord{,}000\mathord{,}000} = 1.2000
+</annotation></semantics></math></p>
+<p>النسبة التزايدية أكبر من 1، فنختار ص. التأكد بالمنفعة الصافية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>600</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mn>3</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>900</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+1\mathord{,}600\mathord{,}000 - 1\mathord{,}000\mathord{,}000 = 600\mathord{,}000 \qquad 3\mathord{,}400\mathord{,}000 - 2\mathord{,}500\mathord{,}000 = 900\mathord{,}000
+</annotation></semantics></math></p>
+<p>ص يعطي المجتمع منفعة صافية أكبر. النسبة التزايدية والمنفعة الصافية تتفقان دائما.</p>
+</div>
+</section>
+<section id="sec-12-independent" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="sec-12-independent"><span class="header-section-number">12.6</span> المشاريع المستقلة</h2>
+<p>إذا كانت المشاريع مستقلة، فكل مشروع نسبته 1 أو أكثر مقبول، ما دامت الميزانية تكفي. إذا لم تكف، نختار المجموعة بأكبر منفعة صافية، كما في <a href="ch11.html#sec-budget" class="quarto-xref"><span>القسم 11.7</span></a>.</p>
+<div id="ex-12-8" class="ee-item" data-id="c12-ex-independent" data-kind="example" data-label="12.8">
+<p><strong>مثال 12.8: مشاريع مستقلة بميزانية محدودة</strong></p>
+<p>وزارة الصحة تدرس أربعة مشاريع مستقلة في محافظات مختلفة. القيم الحالية بآلاف الدنانير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>التكاليف</th>
+<th>المنافع ناقص الأضرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>عيادة متنقلة</td>
+<td>800</td>
+<td>1,150</td>
+</tr>
+<tr class="even">
+<td>قسم طوارئ</td>
+<td>2,400</td>
+<td>3,100</td>
+</tr>
+<tr class="odd">
+<td>مختبر مركزي</td>
+<td>1,500</td>
+<td>1,400</td>
+</tr>
+<tr class="even">
+<td>حملة تطعيم</td>
+<td>600</td>
+<td>1,020</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) أي المشاريع مقبولة إذا كانت الميزانية تكفي الجميع؟ (ب) وإذا كانت الميزانية 3,000 ألف دينار؟</p>
+<p><strong>الحل:</strong></p>
+<p>(أ) النسب:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>النسبة</th>
+<th>المنفعة الصافية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>عيادة متنقلة</td>
+<td>1.438</td>
+<td>350</td>
+</tr>
+<tr class="even">
+<td>قسم طوارئ</td>
+<td>1.292</td>
+<td>700</td>
+</tr>
+<tr class="odd">
+<td>مختبر مركزي</td>
+<td>0.933</td>
+<td>‎-100</td>
+</tr>
+<tr class="even">
+<td>حملة تطعيم</td>
+<td>1.700</td>
+<td>420</td>
+</tr>
+</tbody>
+</table>
+<p>المشاريع مستقلة، فكل مشروع نسبته 1 أو أكثر مقبول: العيادة والطوارئ والتطعيم. المختبر مرفوض.</p>
+<p>(ب) العيادة والطوارئ والتطعيم تكلف 3,800، أكثر من الميزانية. المجموعات الممكنة داخل 3,000:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المجموعة</th>
+<th>التكاليف</th>
+<th>المنفعة الصافية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الطوارئ والتطعيم</td>
+<td>3,000</td>
+<td>1,120</td>
+</tr>
+<tr class="even">
+<td>العيادة والتطعيم</td>
+<td>1,400</td>
+<td>770</td>
+</tr>
+<tr class="odd">
+<td>الطوارئ وحده</td>
+<td>2,400</td>
+<td>700</td>
+</tr>
+</tbody>
+</table>
+<p>نختار الطوارئ والتطعيم، بأكبر منفعة صافية. العيادة لها نسبة أعلى من الطوارئ، لكن المجموعة معها تترك 1,600 ألف بلا استخدام.</p>
+</div>
+</section>
+<section id="sec-12-cea" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="sec-12-cea"><span class="header-section-number">12.7</span> الفعالية مقابل التكلفة</h2>
+<p>بعض المنافع لا يتفق الناس على سعرها، مثل حياة إنسان، أو طالب يتخرج. عندها لا نحول المنفعة إلى دنانير. نقيسها بوحدتها، ونحسب تكلفة كل وحدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>C</mi><mi>E</mi></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{C}{E} = \frac{\mathrm{cost}}{\mathrm{effect}}
+</annotation></semantics></math></p>
+<p>البديل الأقل تكلفة لكل وحدة هو الأكفأ. وللمقارنة بين بديلين نحسب التكلفة الإضافية لكل وحدة إضافية.</p>
+<div id="ex-12-9" class="ee-item" data-id="c12-ex-cea" data-kind="example" data-label="12.9">
+<p><strong>مثال 12.9: تكلفة كل حادث يمنع</strong></p>
+<p>إدارة السير تختار برنامجا واحدا لتقليل الحوادث الخطيرة على طريق جبلي. البرنامج الأول، إشارات وإنارة، قيمته الحالية 1,200,000 دينار، ويمنع 40 حادثا خطيرا خلال عمره. الثاني، توسعة المنعطفات، يكلف 2,600,000 دينار، ويمنع 70 حادثا. قارن بينهما.</p>
+<p><strong>الحل:</strong></p>
+<p>تكلفة كل حادث يمنع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mn>40</mn></mfrac><mo>=</mo><mn>30</mn><mi>,</mi><mn>000.00</mn><mspace width="2.0em"></mspace><mfrac><mrow><mn>2</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mn>70</mn></mfrac><mo>=</mo><mn>37</mn><mi>,</mi><mn>142.86</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}200\mathord{,}000}{40} = 30\mathord{,}000.00 \qquad \frac{2\mathord{,}600\mathord{,}000}{70} = 37\mathord{,}142.86
+</annotation></semantics></math></p>
+<p>البرنامج الأول أكفأ لكل حادث. لكن الثاني يمنع حوادث أكثر. التكلفة الإضافية لكل حادث إضافي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>2</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>70</mn><mo>−</mo><mn>40</mn></mrow></mfrac><mo>=</mo><mn>46</mn><mi>,</mi><mn>666.67</mn></mrow><annotation encoding="application/x-tex">
+\frac{2\mathord{,}600\mathord{,}000 - 1\mathord{,}200\mathord{,}000}{70 - 40} = 46\mathord{,}666.67
+</annotation></semantics></math></p>
+<p>التحليل لا يقرر وحده. إذا كانت الجهة مستعدة لدفع 46,667 دينار أو أكثر لمنع حادث خطير، تختار الثاني. وإلا تختار الأول. هذا الرقم يجعل القرار واضحا للمسؤول، بدون أن نسعر حياة إنسان صراحة.</p>
+</div>
+</section>
+<section id="sec-12-python" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="sec-12-python"><span class="header-section-number">12.8</span> Python: النسبة التزايدية</h2>
+<p>البرنامج التالي يرتب البدائل حسب تكاليفها، ويطبق النسبة التزايدية خطوة خطوة:</p>
+<div id="1b99cd84" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="fl">0.06</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># name: (investment, annual O&amp;M, annual benefits, annual disbenefits)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>alts <span class="op">=</span> {<span class="st">"A"</span>: (<span class="dv">4000000</span>, <span class="dv">120000</span>, <span class="dv">520000</span>, <span class="dv">40000</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"B"</span>: (<span class="dv">5500000</span>, <span class="dv">150000</span>, <span class="dv">680000</span>, <span class="dv">50000</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"C"</span>: (<span class="dv">7500000</span>, <span class="dv">180000</span>, <span class="dv">820000</span>, <span class="dv">60000</span>)}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>pa <span class="op">=</span> <span class="op">-</span>npf.pv(i, n, <span class="dv">1</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, (I, M, B, D) <span class="kw">in</span> alts.items():</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    rows.append((I <span class="op">+</span> M <span class="op">*</span> pa, (B <span class="op">-</span> D) <span class="op">*</span> pa, name))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>rows.sort()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>best_cost, best_ben, best <span class="op">=</span> <span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="st">"do nothing"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cost, ben, name <span class="kw">in</span> rows:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    ratio <span class="op">=</span> (ben <span class="op">-</span> best_ben) <span class="op">/</span> (cost <span class="op">-</span> best_cost)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>best<span class="sc">}</span><span class="ss">: dB/dC = </span><span class="sc">{</span>ratio<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ratio <span class="op">&gt;=</span> <span class="dv">1</span>:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        best_cost, best_ben, best <span class="op">=</span> cost, ben, name</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"choose:"</span>, best)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A vs do nothing: dB/dC = 1.169
+B vs A: dB/dC = 1.079
+C vs B: dB/dC = 0.742
+choose: B</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-12-problems" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="sec-12-problems"><span class="header-section-number">12.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-12-1" class="ee-item" data-id="c12-a-01" data-kind="problem" data-label="12.1">
+<p><strong>12.1</strong> اذكر ثلاثة فروق بين تقييم مشروع عام وتقييم مشروع لشركة خاصة.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-1">الحل</a></span></p>
+</div>
+<div id="prob-12-2" class="ee-item" data-id="c12-a-02" data-kind="problem" data-label="12.2">
+<p><strong>12.2</strong> ما الفرق بين المنفعة والضرر في المشروع العام؟ أعط مثالا لكل منهما من مشروع مطار.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-2">الحل</a></span></p>
+</div>
+<div id="prob-12-3" class="ee-item" data-id="c12-a-03" data-kind="problem" data-label="12.3">
+<p><strong>12.3</strong> رسوم الدخول إلى حديقة عامة تحصلها البلدية. هل هي منفعة أم تقليل للتكلفة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-3">الحل</a></span></p>
+</div>
+<div id="prob-12-4" class="ee-item" data-id="c12-a-04" data-kind="problem" data-label="12.4">
+<p><strong>12.4</strong> لماذا تستخدم الحكومة نسبة خصم أقل من الشركات الخاصة عادة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-4">الحل</a></span></p>
+</div>
+<div id="prob-12-5" class="ee-item" data-id="c12-a-05" data-kind="problem" data-label="12.5">
+<p><strong>12.5</strong> كيف تؤثر نسبة الخصم المرتفعة على مشروع عام منافعه تمتد 50 سنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-5">الحل</a></span></p>
+</div>
+<div id="prob-12-6" class="ee-item" data-id="c12-a-06" data-kind="problem" data-label="12.6">
+<p><strong>12.6</strong> النسبة التقليدية لمشروع 1.25، والنسبة المعدلة 1.40. هل يمكن أن تكون إحداهما أكبر من 1 والأخرى أقل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-6">الحل</a></span></p>
+</div>
+<div id="prob-12-7" class="ee-item" data-id="c12-a-07" data-kind="problem" data-label="12.7">
+<p><strong>12.7</strong> لماذا لا نختار البديل صاحب أعلى نسبة منفعة إلى تكلفة بين عدة بدائل متنافية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-7">الحل</a></span></p>
+</div>
+<div id="prob-12-8" class="ee-item" data-id="c12-a-08" data-kind="problem" data-label="12.8">
+<p><strong>12.8</strong> متى نستخدم تحليل الفعالية مقابل التكلفة بدل نسبة المنفعة إلى التكلفة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-8">الحل</a></span></p>
+</div>
+<div id="prob-12-9" class="ee-item" data-id="c12-a-09" data-kind="problem" data-label="12.9">
+<p><strong>12.9</strong> مشروع طريق يقلل الحوادث. لماذا يحتاج تقدير منفعته إلى قيمة تضعها الجهة لحياة الإنسان أو للإصابة، حتى لو كان ذلك صعبا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-9">الحل</a></span></p>
+</div>
+<div id="prob-12-10" class="ee-item" data-id="c12-a-10" data-kind="problem" data-label="12.10">
+<p><strong>12.10</strong> في مشروع عام، لماذا لا نضيف الوظائف التي يوفرها بناء المشروع إلى منافعه دائما؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-10">الحل</a></span></p>
+</div>
+<div id="prob-12-11" class="ee-item" data-id="c12-a-11" data-kind="problem" data-label="12.11">
+<p><strong>12.11</strong> ما الخطأ في عد زيادة مبيعات محلات قريبة من طريق جديد منفعة، وتجاهل انخفاض مبيعات محلات على الطريق القديم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-11">الحل</a></span></p>
+</div>
+<div id="prob-12-12" class="ee-item" data-id="c12-a-12" data-kind="problem" data-label="12.12">
+<p><strong>12.12</strong> مشروعان عامان مستقلان، نسبة كل منهما أكبر من 1، والميزانية تكفي لهما. هل ننفذ الاثنين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-المنافع-والأضرار-والتكاليف" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-المنافع-والأضرار-والتكاليف">الجزء ب: المنافع والأضرار والتكاليف</h3>
+<div id="prob-12-13" class="ee-item" data-id="c12-b-01" data-kind="problem" data-label="12.13">
+<p><strong>12.13</strong> جسر جديد يوفر على السائقين 600,000 دينار سنويا من الوقت، و200,000 دينار من الوقود. سكان الحي المجاور يخسرون 90,000 دينار سنويا بسبب الضجيج وانخفاض قيمة بيوتهم. صيانة الجسر 70,000 دينار سنويا. ما المنافع والأضرار والتكاليف السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-13">الحل</a></span></p>
+</div>
+<div id="prob-12-14" class="ee-item" data-id="c12-b-02" data-kind="problem" data-label="12.14">
+<p><strong>12.14</strong> طريق التفافي يخدم 50,000 سيارة يوميا، ويوفر على كل منها 12 دقيقة. قيمة ساعة المسافر 4 دينار. الطريق يعمل 250 يوما في السنة. ما منفعة توفير الوقت السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-14">الحل</a></span></p>
+</div>
+<div id="prob-12-15" class="ee-item" data-id="c12-b-03" data-kind="problem" data-label="12.15">
+<p><strong>12.15</strong> عدد الحوادث مع إصابات على تقاطع 45 حادثا سنويا. إشارات ضوئية جديدة تخفضها إلى 28. تقدر الجهة المختصة متوسط كلفة الحادث، من علاج وأيام عمل وأضرار، بمبلغ 60,000 دينار. ما منفعة الإشارات السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-15">الحل</a></span></p>
+</div>
+<div id="prob-12-16" class="ee-item" data-id="c12-b-04" data-kind="problem" data-label="12.16">
+<p><strong>12.16</strong> مشروع ري يوصل الماء إلى 3,000 دونم كانت بعلية. يزيد المحصول 0.80 طن للدونم، وسعر الطن 450 دينار. يدفع المزارعون للحكومة رسوم مياه 1,200 دينار سنويا عن المشروع كله. ما المنافع السنوية؟ وأين توضع الرسوم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-16">الحل</a></span></p>
+</div>
+<div id="prob-12-17" class="ee-item" data-id="c12-b-05" data-kind="problem" data-label="12.17">
+<p><strong>12.17</strong> القيم السنوية لمشروع عام: منافع 800,000 دينار، وأضرار 100,000 دينار، وتكاليف 500,000 دينار. ما المنفعة الصافية للمجتمع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-17">الحل</a></span></p>
+</div>
+<div id="prob-12-18" class="ee-item" data-id="c12-b-06" data-kind="problem" data-label="12.18">
+<p><strong>12.18</strong> صنف كل بند في مشروع مكب نفايات صحي جديد: (أ) ثمن الأرض الذي دفعته البلدية. (ب) انخفاض أمراض الجهاز التنفسي في المدينة. (ج) الروائح على قرية قريبة. (د) رسوم تدفعها المصانع لرمي نفاياتها. (هـ) توفير تكلفة نقل النفايات إلى المكب القديم البعيد، الذي كانت تدفعه البلدية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-18">الحل</a></span></p>
+</div>
+<div id="prob-12-19" class="ee-item" data-id="c12-b-07" data-kind="problem" data-label="12.19">
+<p><strong>12.19</strong> خط مجاري جديد يخدم 2,000 بيتا. قيمة البيت المتوسط 15,000 دينار، ويتوقع المقيمون أن ترتفع قيمته 12% بسبب الخط. هل نضيف هذا الارتفاع إلى المنافع، إذا كنا قد حسبنا أيضا انخفاض أمراض السكان وتوفير تكلفة تفريغ الحفر الامتصاصية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-19">الحل</a></span></p>
+</div>
+<div id="prob-12-20" class="ee-item" data-id="c12-b-08" data-kind="problem" data-label="12.20">
+<p><strong>12.20</strong> مركز صحي في قرية يغني 250 مريضا شهريا عن السفر إلى المدينة. كل رحلة تكلف المريض 4 دينار مواصلات، وتضيع عليه يوم عمل قيمته 25 دينار. ما المنفعة السنوية من هذا التوفير وحده؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-20">الحل</a></span></p>
+</div>
+<div id="prob-12-21" class="ee-item" data-id="c12-b-09" data-kind="problem" data-label="12.21">
+<p><strong>12.21</strong> خزان سد يغمر 120 دونم أرض زراعية، كان صافي دخل الدونم منها 900 دينار سنويا. الحكومة دفعت تعويضا للمزارعين عن الأرض. هل يبقى دخل الأرض ضررا في تحليل المشروع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-21">الحل</a></span></p>
+</div>
+<div id="prob-12-22" class="ee-item" data-id="c12-b-10" data-kind="problem" data-label="12.22">
+<p><strong>12.22</strong> مدرسة جديدة في حي تخفض عدد الطلاب الذين يقطعون أكثر من 5 كيلومترات يوميا من 900 إلى 400. دراسة تقدر أن 30% ممن كانوا يقطعون هذه المسافة كانوا سيتركون الدراسة مبكرا. كم طالبا إضافيا يتوقع أن يكمل دراسته سنويا؟ ولماذا لا نحول هذا مباشرة إلى دنانير؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-22">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-نسبة-المنفعة-إلى-التكلفة-لمشروع-واحد">الجزء ج: نسبة المنفعة إلى التكلفة لمشروع واحد</h3>
+<div id="prob-12-23" class="ee-item" data-id="c12-c-01" data-kind="problem" data-label="12.23">
+<p><strong>12.23</strong> حديقة عامة تكلف 1,500,000 دينار، وصيانتها 40,000 دينار سنويا، ومنافعها 210,000 دينار سنويا لمدة 20 سنة. احسب نسبة المنفعة إلى التكلفة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-23">الحل</a></span></p>
+</div>
+<div id="prob-12-24" class="ee-item" data-id="c12-c-02" data-kind="problem" data-label="12.24">
+<p><strong>12.24</strong> محطة تحلية صغيرة تكلف 6,000,000 دينار، وتشغيلها 150,000 دينار سنويا، وتباع معداتها بمبلغ 1,000,000 دينار بعد 30 سنة. منافعها 700,000 دينار سنويا، وأضرارها على الشاطئ 80,000 دينار سنويا. احسب النسبة التقليدية بنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-24">الحل</a></span></p>
+</div>
+<div id="prob-12-25" class="ee-item" data-id="c12-c-03" data-kind="problem" data-label="12.25">
+<p><strong>12.25</strong> طريق إلى منطقة صناعية جديدة يكلف 900,000 دينار، وصيانته 20,000 دينار سنويا. منافعه 60,000 دينار في السنة الأولى، وتزيد 5,000 دينار كل سنة مع نمو المنطقة، لمدة 20 سنة. احسب النسبة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-25">الحل</a></span></p>
+</div>
+<div id="prob-12-26" class="ee-item" data-id="c12-c-04" data-kind="problem" data-label="12.26">
+<p><strong>12.26</strong> خط حافلات عامة يحتاج استثمارا 2,000,000 دينار، وتكاليف إضافية 30,000 دينار سنويا. منافع الركاب 150,000 دينار في السنة الأولى، وتنمو 4% سنويا، لمدة 25 سنة. احسب النسبة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-26">الحل</a></span></p>
+</div>
+<div id="prob-12-27" class="ee-item" data-id="c12-c-05" data-kind="problem" data-label="12.27">
+<p><strong>12.27</strong> محطة ضخ تكلف 3,000,000 دينار، وتشغيلها 80,000 دينار سنويا لمدة 30 سنة. ما أقل منفعة سنوية تجعل المشروع مجديا بنسبة 5%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-27">الحل</a></span></p>
+</div>
+<div id="prob-12-28" class="ee-item" data-id="c12-c-06" data-kind="problem" data-label="12.28">
+<p><strong>12.28</strong> مشروع عام يكلف 5,000,000 دينار، وصيانته 100,000 دينار سنويا، ومنافعه 600,000 دينار سنويا. نسبة الخصم 5%. كم سنة يجب أن يعمل المشروع حتى تصل النسبة إلى 1؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-28">الحل</a></span></p>
+</div>
+<div id="prob-12-29" class="ee-item" data-id="c12-c-07" data-kind="problem" data-label="12.29">
+<p><strong>12.29</strong> مشروع عام يكلف 4,000,000 دينار، وصيانته 100,000 دينار سنويا، ومنافعه 390,000 دينار سنويا لمدة 30 سنة. ما أعلى نسبة خصم يبقى المشروع عندها مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-29">الحل</a></span></p>
+</div>
+<div id="prob-12-30" class="ee-item" data-id="c12-c-08" data-kind="problem" data-label="12.30">
+<p><strong>12.30</strong> مشروع عام يكلف 1,200,000 دينار، وصيانته 25,000 دينار سنويا، ومنافعه 140,000 دينار سنويا لمدة 25 سنة. احسب النسبة عند 3% و6% و9%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-30">الحل</a></span></p>
+</div>
+<div id="prob-12-31" class="ee-item" data-id="c12-c-09" data-kind="problem" data-label="12.31">
+<p><strong>12.31</strong> مبنى مدرسة يبنى على سنتين: 800,000 دينار الآن، و600,000 دينار بعد سنة. تبدأ المدرسة العمل في نهاية السنة الثانية، فتعطي منافع 230,000 دينار سنويا وتكلف تشغيلا 30,000 دينار سنويا، من السنة 2 إلى السنة 21. احسب النسبة بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-31">الحل</a></span></p>
+</div>
+<div id="prob-12-32" class="ee-item" data-id="c12-c-10" data-kind="problem" data-label="12.32">
+<p><strong>12.32</strong> مشروع عام قدرت تكلفته 2,500,000 دينار، وصيانته 60,000 دينار سنويا، ومنافعه 300,000 دينار سنويا لمدة 25 سنة، بنسبة خصم 5%. المشاريع العامة المشابهة تجاوزت تقديرها بمتوسط 20%. احسب النسبة بالتقدير، ثم بعد التجاوز.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-32">الحل</a></span></p>
+</div>
+<div id="prob-12-33" class="ee-item" data-id="c12-c-11" data-kind="problem" data-label="12.33">
+<p><strong>12.33</strong> القيمة الحالية لمنافع مشروع 4,200,000 دينار، ولتكاليفه 3,500,000 دينار. احسب النسبة والقيمة الحالية الصافية للمجتمع. هل تتفقان على القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-33">الحل</a></span></p>
+</div>
+<div id="prob-12-34" class="ee-item" data-id="c12-c-12" data-kind="problem" data-label="12.34">
+<p><strong>12.34</strong> مشروع يكلف 1,800,000 دينار، وصيانته 50,000 دينار سنويا، ومنافعه 260,000 دينار سنويا لمدة 25 سنة. احسب النسبة بالقيمة الحالية، ثم بالقيمة السنوية، بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-34">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-النسبة-التقليدية-والمعدلة-والأضرار">الجزء د: النسبة التقليدية والمعدلة والأضرار</h3>
+<div id="prob-12-35" class="ee-item" data-id="c12-d-01" data-kind="problem" data-label="12.35">
+<p><strong>12.35</strong> القيم الحالية لمشروع: منافع 6,000,000، وأضرار 500,000، واستثمار 3,000,000، وتشغيل وصيانة 1,200,000، وقيمة بيع 200,000 دينار. احسب النسبة التقليدية والنسبة المعدلة.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-35">الحل</a></span></p>
+</div>
+<div id="prob-12-36" class="ee-item" data-id="c12-d-02" data-kind="problem" data-label="12.36">
+<p><strong>12.36</strong> مركز شباب يكلف 2,500,000 دينار، وتشغيله 70,000 دينار سنويا لمدة 30 سنة. منافعه 330,000 دينار سنويا، وأضراره على الجيران 40,000 دينار سنويا. احسب النسبتين بنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-36">الحل</a></span></p>
+</div>
+<div id="prob-12-37" class="ee-item" data-id="c12-d-03" data-kind="problem" data-label="12.37">
+<p><strong>12.37</strong> القيمة الحالية لمنافع مشروع 3,000,000 دينار، ولأضراره 400,000، ولتكاليفه 2,400,000. احسب النسبة مرة بطرح الأضرار من المنافع، ومرة بإضافتها إلى التكاليف.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-37">الحل</a></span></p>
+</div>
+<div id="prob-12-38" class="ee-item" data-id="c12-d-04" data-kind="problem" data-label="12.38">
+<p><strong>12.38</strong> القيمة الحالية لمنافع مشروع 5,000,000 دينار، ولتكاليفه 4,000,000 دينار. أهالي منطقة مجاورة يعترضون بسبب الضجيج. ما أكبر قيمة حالية للأضرار يبقى المشروع معها مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-38">الحل</a></span></p>
+</div>
+<div id="prob-12-39" class="ee-item" data-id="c12-d-05" data-kind="problem" data-label="12.39">
+<p><strong>12.39</strong> نسبة تقليدية ونسبة معدلة لمشروع يكلف 1,000,000 دينار، وتشغيله 50,000 دينار سنويا، ومنافعه 160,000 دينار سنويا لمدة 20 سنة، بنسبة 6%. أيهما أبعد عن 1؟ ولماذا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-39">الحل</a></span></p>
+</div>
+<div id="prob-12-40" class="ee-item" data-id="c12-d-06" data-kind="problem" data-label="12.40">
+<p><strong>12.40</strong> جهة مانحة تقبل المشاريع ذات النسبة الأعلى من 1.5 فقط. لماذا يجب أن تحدد الجهة أي نسبة تقصد، التقليدية أم المعدلة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-40">الحل</a></span></p>
+</div>
+<div id="prob-12-41" class="ee-item" data-id="c12-d-07" data-kind="problem" data-label="12.41">
+<p><strong>12.41</strong> مسبح بلدي يكلف 3,000,000 دينار، وتشغيله 90,000 دينار سنويا. البلدية تحصل رسوم دخول 60,000 دينار سنويا. منافع السكان من المسبح، بعد ما يدفعونه من رسوم، 380,000 دينار سنويا. العمر 25 سنة، والنسبة 5%. احسب النسبة الصحيحة. ثم احسبها بالخطأ الشائع: إضافة الرسوم إلى المنافع.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-41">الحل</a></span></p>
+</div>
+<div id="prob-12-42" class="ee-item" data-id="c12-d-08" data-kind="problem" data-label="12.42">
+<p><strong>12.42</strong> محلل حسب نسبة مشروع بدون الأضرار. القيم الحالية: منافع 7,000,000، وأضرار 900,000، واستثمار 4,000,000، وتشغيل 1,500,000 دينار. كم كانت نسبته؟ وكم النسبة الصحيحة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-42">الحل</a></span></p>
+</div>
+<div id="prob-12-43" class="ee-item" data-id="c12-d-09" data-kind="problem" data-label="12.43">
+<p><strong>12.43</strong> احسب القيمة الحالية الصافية للمجتمع لمشروع يكلف 1,500,000 دينار، وتشغيله 40,000 دينار سنويا، ومنافعه 220,000 وأضراره 30,000 دينار سنويا لمدة 20 سنة، بنسبة 6%. هل تحتاج النسبة بعدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-43">الحل</a></span></p>
+</div>
+<div id="prob-12-44" class="ee-item" data-id="c12-d-10" data-kind="problem" data-label="12.44">
+<p><strong>12.44</strong> لماذا تفضل بعض الجهات النسبة المعدلة لترتيب المشاريع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-44">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-القيمة-السنوية-والمشاريع-الدائمة">الجزء هـ: القيمة السنوية والمشاريع الدائمة</h3>
+<div id="prob-12-45" class="ee-item" data-id="c12-e-01" data-kind="problem" data-label="12.45">
+<p><strong>12.45</strong> سد يخدم بلا نهاية يكلف 15,000,000 دينار، وصيانته 200,000 دينار سنويا، ومنافعه 1,400,000 دينار سنويا. احسب النسبة بنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-45">الحل</a></span></p>
+</div>
+<div id="prob-12-46" class="ee-item" data-id="c12-e-02" data-kind="problem" data-label="12.46">
+<p><strong>12.46</strong> جسر حجري يخدم بلا نهاية. يكلف 8,000,000 دينار، وصيانته 150,000 دينار سنويا، ويحتاج تجديد سطحه كل 10 سنوات بتكلفة 500,000 دينار. منافعه 900,000 دينار سنويا. احسب النسبة بنسبة 4%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-46">الحل</a></span></p>
+</div>
+<div id="prob-12-47" class="ee-item" data-id="c12-e-03" data-kind="problem" data-label="12.47">
+<p><strong>12.47</strong> حافلات نقل مدرسي تكلف 2,000,000 دينار، وتشغيلها 60,000 دينار سنويا، وتباع بمبلغ 300,000 دينار بعد 20 سنة. منافعها 320,000 دينار سنويا. احسب النسبة بالقيمة السنوية، بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-47">الحل</a></span></p>
+</div>
+<div id="prob-12-48" class="ee-item" data-id="c12-e-04" data-kind="problem" data-label="12.48">
+<p><strong>12.48</strong> ميناء صيد يكلف 20,000,000 دينار، وصيانته 300,000 دينار سنويا، ويخدم بلا نهاية. ما أقل منفعة سنوية تجعله مجديا بنسبة 5%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-48">الحل</a></span></p>
+</div>
+<div id="prob-12-49" class="ee-item" data-id="c12-e-05" data-kind="problem" data-label="12.49">
+<p><strong>12.49</strong> مشروع دائم يكلف 10,000,000 دينار، وصيانته 200,000 دينار سنويا، ومنافعه 900,000 دينار سنويا. ما أعلى نسبة خصم يبقى عندها مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-49">الحل</a></span></p>
+</div>
+<div id="prob-12-50" class="ee-item" data-id="c12-e-06" data-kind="problem" data-label="12.50">
+<p><strong>12.50</strong> مشروع يكلف 12,000,000 دينار، وصيانته 250,000 دينار سنويا، ومنافعه 1,100,000 دينار سنويا. احسب النسبة إذا كان عمره 50 سنة، ثم إذا كان بلا نهاية، بنسبة 5%. ماذا تلاحظ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-50">الحل</a></span></p>
+</div>
+<div id="prob-12-51" class="ee-item" data-id="c12-e-07" data-kind="problem" data-label="12.51">
+<p><strong>12.51</strong> القيمة الحالية للتكاليف المرسملة لنظام صرف صحي دائم 30,000,000 دينار. ما القيمة السنوية المكافئة بنسبة 4%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-51">الحل</a></span></p>
+</div>
+<div id="prob-12-52" class="ee-item" data-id="c12-e-08" data-kind="problem" data-label="12.52">
+<p><strong>12.52</strong> طريق يكلف 6,000,000 دينار. صيانته 100,000 دينار في السنة الأولى، وتزيد 5,000 دينار كل سنة مع تقادمه، لمدة 40 سنة. منافعه 700,000 دينار سنويا. احسب النسبة بالقيمة السنوية، بنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-52">الحل</a></span></p>
+</div>
+<div id="prob-12-53" class="ee-item" data-id="c12-e-09" data-kind="problem" data-label="12.53">
+<p><strong>12.53</strong> مشروع يكلف 5,000,000 دينار اليوم. منافعه 600,000 دينار سنويا، وتشغيله 100,000 دينار سنويا، لمدة 30 سنة. التحليل الأول افترض أن المنافع تبدأ في السنة الأولى. الواقع أن البناء يأخذ 3 سنوات، فتبدأ المنافع في السنة 4. احسب النسبة المعدلة في الحالتين، بنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-53">الحل</a></span></p>
+</div>
+<div id="prob-12-54" class="ee-item" data-id="c12-e-10" data-kind="problem" data-label="12.54">
+<p><strong>12.54</strong> لماذا يكفي أن نضرب الاستثمار في نسبة الخصم لنحصل على قيمته السنوية في مشروع دائم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-54">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-النسبة-التزايدية-للبدائل-المتنافية" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-النسبة-التزايدية-للبدائل-المتنافية">الجزء و: النسبة التزايدية للبدائل المتنافية</h3>
+<div id="prob-12-55" class="ee-item" data-id="c12-f-01" data-kind="problem" data-label="12.55">
+<p><strong>12.55</strong> بديلان متنافيان لمحطة إطفاء. القيم الحالية: الأول تكاليفه 2,000,000 ومنافعه 2,600,000، والثاني تكاليفه 3,200,000 ومنافعه 3,900,000 دينار. أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-55">الحل</a></span></p>
+</div>
+<div id="prob-12-56" class="ee-item" data-id="c12-f-02" data-kind="problem" data-label="12.56">
+<p><strong>12.56</strong> تصميمان لمركز رعاية مسنين، والعمر 25 سنة. التصميم س يكلف 1,500,000 دينار، وتشغيله 40,000 سنويا، ومنافعه 170,000 سنويا. التصميم ص يكلف 2,300,000 دينار، وتشغيله 50,000، ومنافعه 240,000. أيهما تختار بنسبة 6%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-56">الحل</a></span></p>
+</div>
+<div id="prob-12-57" class="ee-item" data-id="c12-f-03" data-kind="problem" data-label="12.57">
+<p><strong>12.57</strong> أربعة بدائل متنافية لشبكة مياه في بلدة، بالقيمة الحالية بآلاف الدنانير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البديل</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>1,200</td>
+<td>1,500</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>1,800</td>
+<td>2,300</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>2,500</td>
+<td>2,950</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>3,100</td>
+<td>3,800</td>
+</tr>
+</tbody>
+</table>
+<p>طبق النسبة التزايدية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-57">الحل</a></span></p>
+</div>
+<div id="prob-12-58" class="ee-item" data-id="c12-f-04" data-kind="problem" data-label="12.58">
+<p><strong>12.58</strong> في المسألة السابقة، طالب قارن د بـ ج بدل ب، فحصل على نسبة تزايدية 1.40. ما الخطأ؟ وهل تغير القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-58">الحل</a></span></p>
+</div>
+<div id="prob-12-59" class="ee-item" data-id="c12-f-05" data-kind="problem" data-label="12.59">
+<p><strong>12.59</strong> موقعان لمكب نفايات. الأول: تكاليف 3,000,000، ومنافع 3,600,000، وأضرار 200,000 دينار. الثاني، أقرب إلى المدينة: تكاليف 4,200,000، ومنافع 5,100,000، وأضرار 500,000 دينار. كلها قيم حالية. أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-59">الحل</a></span></p>
+</div>
+<div id="prob-12-60" class="ee-item" data-id="c12-f-06" data-kind="problem" data-label="12.60">
+<p><strong>12.60</strong> بديلان متنافيان، بالقيم الحالية: الأول تكاليفه 900,000 ومنافعه 1,400,000، والثاني تكاليفه 1,500,000 ومنافعه 1,950,000 دينار. اختر بالنسبة التزايدية، ثم تأكد بالمنفعة الصافية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-60">الحل</a></span></p>
+</div>
+<div id="prob-12-61" class="ee-item" data-id="c12-f-07" data-kind="problem" data-label="12.61">
+<p><strong>12.61</strong> ثلاثة تصاميم لجسر ضروري، يجب بناء أحدها. بالقيم الحالية بآلاف الدنانير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>خرساني بسيط</td>
+<td>4,000</td>
+<td>3,700</td>
+</tr>
+<tr class="even">
+<td>معدني</td>
+<td>5,200</td>
+<td>5,100</td>
+</tr>
+<tr class="odd">
+<td>معلق</td>
+<td>7,000</td>
+<td>6,500</td>
+</tr>
+</tbody>
+</table>
+<p>أي تصميم تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-61">الحل</a></span></p>
+</div>
+<div id="prob-12-62" class="ee-item" data-id="c12-f-08" data-kind="problem" data-label="12.62">
+<p><strong>12.62</strong> موقعان لمحطة حافلات مركزية. الأول يكلف 2,400,000 دينار ومنافعه الصافية من التشغيل 280,000 دينار سنويا. الثاني يكلف 3,300,000 دينار ومنافعه الصافية 360,000 دينار سنويا. العمر 30 سنة، والنسبة 5%. اختر بالقيمة السنوية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-62">الحل</a></span></p>
+</div>
+<div id="prob-12-63" class="ee-item" data-id="c12-f-09" data-kind="problem" data-label="12.63">
+<p><strong>12.63</strong> لماذا نرتب البدائل حسب تكاليفها، وليس حسب منافعها، قبل النسبة التزايدية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-63">الحل</a></span></p>
+</div>
+<div id="prob-12-64" class="ee-item" data-id="c12-f-10" data-kind="problem" data-label="12.64">
+<p><strong>12.64</strong> بديلان لهما نفس القيمة الحالية للتكاليف، 2,000,000 دينار. منافع الأول 2,600,000، والثاني 2,900,000. كيف تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-64">الحل</a></span></p>
+</div>
+<div id="prob-12-65" class="ee-item" data-id="c12-f-11" data-kind="problem" data-label="12.65">
+<p><strong>12.65</strong> ثلاثة بدائل متنافية، بالقيم الحالية: الأول تكاليفه 1,000,000 ومنافعه 1,300,000، والثاني 1,600,000 و1,900,000، والثالث 2,500,000 و2,700,000 دينار. اختر بأكبر منفعة صافية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-65">الحل</a></span></p>
+</div>
+<div id="prob-12-66" class="ee-item" data-id="c12-f-12" data-kind="problem" data-label="12.66">
+<p><strong>12.66</strong> إنارة شارع رئيسي: أعمدة عادية تكلف 600,000 دينار، وكهرباؤها وصيانتها 30,000 سنويا، ومنافعها في الأمان والحركة 95,000 سنويا. أعمدة بألواح شمسية تكلف 900,000، وتشغيلها 25,000، ومنافعها 125,000 سنويا لأنها لا تنطفئ مع انقطاع الكهرباء. العمر 20 سنة، والنسبة 5%. أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-66">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-المشاريع-المستقلة-والفعالية-مقابل-التكلفة">الجزء ز: المشاريع المستقلة والفعالية مقابل التكلفة</h3>
+<div id="prob-12-67" class="ee-item" data-id="c12-g-01" data-kind="problem" data-label="12.67">
+<p><strong>12.67</strong> خمسة مشاريع مستقلة في بلدية، بالقيم الحالية بآلاف الدنانير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ممرات مشاة</td>
+<td>300</td>
+<td>420</td>
+</tr>
+<tr class="even">
+<td>سوق خضار</td>
+<td>900</td>
+<td>1,080</td>
+</tr>
+<tr class="odd">
+<td>ملعب</td>
+<td>500</td>
+<td>470</td>
+</tr>
+<tr class="even">
+<td>موقف سيارات</td>
+<td>700</td>
+<td>1,050</td>
+</tr>
+<tr class="odd">
+<td>مكتبة</td>
+<td>400</td>
+<td>520</td>
+</tr>
+</tbody>
+</table>
+<p>أيها يقبل إذا كانت الميزانية تكفي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-67">الحل</a></span></p>
+</div>
+<div id="prob-12-68" class="ee-item" data-id="c12-g-02" data-kind="problem" data-label="12.68">
+<p><strong>12.68</strong> في المسألة السابقة، الميزانية 1,500 ألف دينار. أي مجموعة تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-68">الحل</a></span></p>
+</div>
+<div id="prob-12-69" class="ee-item" data-id="c12-g-03" data-kind="problem" data-label="12.69">
+<p><strong>12.69</strong> برنامج فحص مبكر لسرطان الثدي يكلف بالقيمة الحالية 3,000,000 دينار، ويتوقع أن ينقذ 12 حياة. ما تكلفة كل حياة تنقذ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-69">الحل</a></span></p>
+</div>
+<div id="prob-12-70" class="ee-item" data-id="c12-g-04" data-kind="problem" data-label="12.70">
+<p><strong>12.70</strong> برنامجان لمحو أمية الكبار. الأول يكلف 400,000 دينار ويخرج 1,200 متعلما، والثاني يكلف 700,000 دينار ويخرج 1,800 متعلما. قارن بينهما.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-70">الحل</a></span></p>
+</div>
+<div id="prob-12-71" class="ee-item" data-id="c12-g-05" data-kind="problem" data-label="12.71">
+<p><strong>12.71</strong> ثلاثة برامج للحد من التسرب المدرسي، بالقيم الحالية:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البرنامج</th>
+<th>التكلفة</th>
+<th>الطلاب الذين يكملون الدراسة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>وجبة مدرسية</td>
+<td>600,000</td>
+<td>150</td>
+</tr>
+<tr class="even">
+<td>منح نقل</td>
+<td>900,000</td>
+<td>200</td>
+</tr>
+<tr class="odd">
+<td>معلمون مساندون</td>
+<td>1,500,000</td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<p>احسب تكلفة الطالب في كل برنامج، والتكلفة الإضافية لكل طالب إضافي.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-71">الحل</a></span></p>
+</div>
+<div id="prob-12-72" class="ee-item" data-id="c12-g-06" data-kind="problem" data-label="12.72">
+<p><strong>12.72</strong> حاجز وسطي على طريق سريع يكلف بالقيمة الحالية 2,000,000 دينار، ويخفض الحوادث القاتلة خلال عمره من 30 إلى 18. ما تكلفة كل حادث قاتل يمنع؟ وهل البرنامج مقبول إذا كانت الجهة تستخدم قيمة 120,000 دينار لكل حادث قاتل يمنع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-72">الحل</a></span></p>
+</div>
+<div id="prob-12-73" class="ee-item" data-id="c12-g-07" data-kind="problem" data-label="12.73">
+<p><strong>12.73</strong> برنامج صحي تكلفة الحياة التي ينقذها أقل من برنامج آخر. لماذا قد تختار الوزارة الثاني رغم ذلك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-73">الحل</a></span></p>
+</div>
+<div id="prob-12-74" class="ee-item" data-id="c12-g-08" data-kind="problem" data-label="12.74">
+<p><strong>12.74</strong> القيمة الحالية لمنافع مشروع 1,800,000 دينار، ولتكاليفه 1,500,000. تقديرات المنافع في مشاريع مشابهة كانت متفائلة بمتوسط 20%. احسب النسبة بالتقدير، ثم بعد تصحيح التفاؤل.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-74">الحل</a></span></p>
+</div>
+<div id="prob-12-75" class="ee-item" data-id="c12-g-09" data-kind="problem" data-label="12.75">
+<p><strong>12.75</strong> مشروع لتحسين جودة الهواء في مدينة يكلف بالقيمة الحالية 5,000,000 دينار، ويستفيد منه 40,000 ساكن لمدة 10 سنوات. ما تكلفة كل سنة استفادة لكل ساكن؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-75">الحل</a></span></p>
+</div>
+<div id="prob-12-76" class="ee-item" data-id="c12-g-10" data-kind="problem" data-label="12.76">
+<p><strong>12.76</strong> لماذا لا يكفي ترتيب المشاريع المستقلة حسب النسبة واختيارها من الأعلى، عندما تكون الميزانية محدودة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-76">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-12-77" class="ee-item" data-id="c12-h-01" data-kind="problem" data-label="12.77">
+<p><strong>12.77</strong> ابن في Excel جدولا يحسب النسبة التقليدية لمشروع يكلف 3,000,000 دينار، وصيانته 80,000 سنويا، ومنافعه 330,000 سنويا لمدة 30 سنة، لنسب خصم من 2% إلى 10%. عند أي نسبة تصبح النسبة 1؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-77">الحل</a></span></p>
+</div>
+<div id="prob-12-78" class="ee-item" data-id="c12-h-02" data-kind="problem" data-label="12.78">
+<p><strong>12.78</strong> عدل برنامج Python في <a href="#sec-ch12" class="quarto-xref"><span>الفصل 12</span></a> ليطبع، مع كل مقارنة، المنفعة الصافية لكل بديل. ثم تأكد أن البديل المختار له أكبر منفعة صافية.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-78">الحل</a></span></p>
+</div>
+<div id="prob-12-79" class="ee-item" data-id="c12-h-03" data-kind="problem" data-label="12.79">
+<p><strong>12.79</strong> اكتب دالة Python تأخذ قائمة بدائل، لكل منها القيمة الحالية للتكاليف وللمنافع، وتعيد البديل المختار بالنسبة التزايدية. اختبرها على البدائل أ وب وج ود في الجزء و، المسألة الثالثة.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-79">الحل</a></span></p>
+</div>
+<div id="prob-12-80" class="ee-item" data-id="c12-h-04" data-kind="problem" data-label="12.80">
+<p><strong>12.80</strong> اكتب برنامج Python يحسب منفعة توفير الوقت لطريق جديد، لقيم ساعة المسافر من 2 إلى 8 دنانير، ثم النسبة لكل قيمة. الطريق يخدم 40,000 سيارة يوميا، ويوفر 10 دقائق لكل منها، 300 يوم سنويا. التكلفة 25,000,000 دينار، والصيانة 400,000 سنويا، والعمر 30 سنة، والنسبة 5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-80">الحل</a></span></p>
+</div>
+<div id="prob-12-81" class="ee-item" data-id="c12-h-05" data-kind="problem" data-label="12.81">
+<p><strong>12.81</strong> في Excel، احسب النسبة لمشروع منافعه تبدأ 200,000 دينار وتنمو 3% سنويا لمدة 25 سنة، وتكلفته 2,500,000 دينار، وصيانته 50,000 سنويا، بنسبة 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-81">الحل</a></span></p>
+</div>
+<div id="prob-12-82" class="ee-item" data-id="c12-h-06" data-kind="problem" data-label="12.82">
+<p><strong>12.82</strong> اكتب برنامج Python يختار بين المشاريع المستقلة في الجزء ز، المسألة الأولى، بميزانية 1,500 ألف دينار، بالحصر الكامل.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-82">الحل</a></span></p>
+</div>
+<div id="prob-12-83" class="ee-item" data-id="c12-h-07" data-kind="problem" data-label="12.83">
+<p><strong>12.83</strong> ابن في Excel جدول تكلفة الفعالية لثلاثة برامج تسرب مدرسي في الجزء ز، مع عمود للتكلفة الإضافية لكل طالب إضافي.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-83">الحل</a></span></p>
+</div>
+<div id="prob-12-84" class="ee-item" data-id="c12-h-08" data-kind="problem" data-label="12.84">
+<p><strong>12.84</strong> اكتب برنامج Python يرسم النسبة لمشروع مقابل نسبة الخصم من 1% إلى 12%، لمشروع يكلف 8,000,000 دينار، وصيانته 100,000 سنويا، ومنافعه 650,000 سنويا لمدة 40 سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-12-84">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-12-85" class="ee-item" data-id="c12-i-01" data-kind="problem" data-label="12.85">
+<p><strong>12.85</strong> القيم الحالية: منافع 3,000,000، وأضرار 500,000، وتكاليف 2,000,000 دينار. ما النسبة التقليدية؟</p>
+<p>أ) 1.5000<br>
+ب) 1.2500<br>
+ج) 1.7500<br>
+د) 1.0000</p>
+<p><span class="ee-sol-link"><a href="#sol-12-85">الحل</a></span></p>
+</div>
+<div id="prob-12-86" class="ee-item" data-id="c12-i-02" data-kind="problem" data-label="12.86">
+<p><strong>12.86</strong> رسوم عبور تحصلها الحكومة من طريق جديد توضع في التحليل:</p>
+<p>أ) منفعة تضاف إلى البسط<br>
+ب) ضرر يطرح من البسط<br>
+ج) تقليل لتكلفة الحكومة<br>
+د) لا تدخل التحليل أبدا</p>
+<p><span class="ee-sol-link"><a href="#sol-12-86">الحل</a></span></p>
+</div>
+<div id="prob-12-87" class="ee-item" data-id="c12-i-03" data-kind="problem" data-label="12.87">
+<p><strong>12.87</strong> النسبة التقليدية لمشروع 0.92. النسبة المعدلة لنفس المشروع:</p>
+<p>أ) أكبر من 1<br>
+ب) تساوي 0.92<br>
+ج) أقل من 1<br>
+د) لا يمكن معرفة شيء عنها</p>
+<p><span class="ee-sol-link"><a href="#sol-12-87">الحل</a></span></p>
+</div>
+<div id="prob-12-88" class="ee-item" data-id="c12-i-04" data-kind="problem" data-label="12.88">
+<p><strong>12.88</strong> ثلاثة بدائل متنافية، نسبها المنفردة 1.6 و1.4 و1.2، مرتبة حسب التكاليف من الأقل. أيها نختار؟</p>
+<p>أ) الأول، لأن نسبته الأعلى<br>
+ب) الثالث، لأنه الأكبر<br>
+ج) لا نعرف بدون النسب التزايدية<br>
+د) أي واحد منها، لأنها كلها أكبر من 1</p>
+<p><span class="ee-sol-link"><a href="#sol-12-88">الحل</a></span></p>
+</div>
+<div id="prob-12-89" class="ee-item" data-id="c12-i-05" data-kind="problem" data-label="12.89">
+<p><strong>12.89</strong> مشروع دائم يكلف 10,000,000 دينار، وصيانته 200,000 دينار سنويا. ما التكلفة السنوية المكافئة بنسبة 5%؟</p>
+<p>أ) 500,000<br>
+ب) 510,000<br>
+ج) 700,000<br>
+د) 10,700,000</p>
+<p><span class="ee-sol-link"><a href="#sol-12-89">الحل</a></span></p>
+</div>
+<div id="prob-12-90" class="ee-item" data-id="c12-i-06" data-kind="problem" data-label="12.90">
+<p><strong>12.90</strong> لماذا قد يرفض مشروع عام مجد إذا استخدمت الحكومة نسبة خصم عالية؟</p>
+<p>أ) لأن الاستثمار يصبح أكبر<br>
+ب) لأن المنافع البعيدة تخصم أكثر من التكاليف الأولى<br>
+ج) لأن الأضرار تزيد<br>
+د) لأن النسبة لا تتأثر بالخصم</p>
+<p><span class="ee-sol-link"><a href="#sol-12-90">الحل</a></span></p>
+</div>
+<div id="prob-12-91" class="ee-item" data-id="c12-i-07" data-kind="problem" data-label="12.91">
+<p><strong>12.91</strong> مزارعون يخسرون دخلا سنويا لأن مشروع سد غمر أرضهم. هذا البند:</p>
+<p>أ) تكلفة على الحكومة<br>
+ب) ضرر على الناس<br>
+ج) منفعة سالبة لا تدخل<br>
+د) يلغيه التعويض الذي دفعته الحكومة</p>
+<p><span class="ee-sol-link"><a href="#sol-12-91">الحل</a></span></p>
+</div>
+<div id="prob-12-92" class="ee-item" data-id="c12-i-08" data-kind="problem" data-label="12.92">
+<p><strong>12.92</strong> بديلان: الأول تكاليفه 1,000,000 ومنافعه 1,500,000، والثاني 1,600,000 و2,200,000 دينار. ما النسبة التزايدية للثاني مقابل الأول؟</p>
+<p>أ) 1.3750<br>
+ب) 0.4375<br>
+ج) 1.1667<br>
+د) 1.4231</p>
+<p><span class="ee-sol-link"><a href="#sol-12-92">الحل</a></span></p>
+</div>
+<div id="prob-12-93" class="ee-item" data-id="c12-i-09" data-kind="problem" data-label="12.93">
+<p><strong>12.93</strong> متى نستخدم تحليل الفعالية مقابل التكلفة؟</p>
+<p>أ) عندما تكون التكاليف غير معروفة<br>
+ب) عندما لا نستطيع أو لا نريد تسعير المنفعة بالدنانير<br>
+ج) عندما تكون النسبة أقل من 1<br>
+د) عندما يكون المشروع دائما</p>
+<p><span class="ee-sol-link"><a href="#sol-12-93">الحل</a></span></p>
+</div>
+<div id="prob-12-94" class="ee-item" data-id="c12-i-10" data-kind="problem" data-label="12.94">
+<p><strong>12.94</strong> مشاريع مستقلة، والميزانية تكفي الجميع. أيها يقبل؟</p>
+<p>أ) صاحب أعلى نسبة فقط<br>
+ب) كل مشروع نسبته 1 أو أكثر<br>
+ج) المشاريع التي تتجاوز نسبتها 1.5<br>
+د) نحتاج نسبا تزايدية بينها</p>
+<p><span class="ee-sol-link"><a href="#sol-12-94">الحل</a></span></p>
+</div>
+<div id="prob-12-95" class="ee-item" data-id="c12-i-11" data-kind="problem" data-label="12.95">
+<p><strong>12.95</strong> طريق جديد يزيد مبيعات محلات قريبة منه، ويخفض مبيعات محلات على الطريق القديم بنفس المقدار تقريبا. في التحليل:</p>
+<p>أ) نضيف الزيادة منفعة<br>
+ب) نطرح الانخفاض ضررا ونهمل الزيادة<br>
+ج) الأثران يلغي أحدهما الآخر تقريبا<br>
+د) نضيف الزيادة ونطرح ضعف الانخفاض</p>
+<p><span class="ee-sol-link"><a href="#sol-12-95">الحل</a></span></p>
+</div>
+<div id="prob-12-96" class="ee-item" data-id="c12-i-12" data-kind="problem" data-label="12.96">
+<p><strong>12.96</strong> مشروع يكلف 2,000,000 دينار، وصيانته 50,000 دينار سنويا، وعمره 20 سنة. ما أقل منفعة سنوية تجعل النسبة 1 بنسبة 5%؟</p>
+<p>أ) 315,330<br>
+ب) 160,485<br>
+ج) 150,000<br>
+د) 210,485</p>
+<p><span class="ee-sol-link"><a href="#sol-12-96">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار عام كامل، من تصنيف البنود إلى الاختيار.</p>
+<div id="prob-12-97" class="ee-item" data-id="c12-j-01" data-kind="problem" data-label="12.97">
+<p><strong>12.97</strong> <strong>حالة 12.1: طريق التفافي حول مدينة نابلس</strong></p>
+<p>وزارة الأشغال تدرس طريقا التفافيا بطول 12 كيلومترا. التكلفة 30,000,000 دينار، والصيانة 350,000 سنويا، والعمر 30 سنة، ونسبة الخصم 5%. الطريق يأخذ رسوم عبور من الشاحنات تحصل منها الوزارة 120,000 دينار سنويا. التقديرات:</p>
+<ul>
+<li>12,000 مركبة يوميا توفر كل منها 8 دقائق، 300 يوم في السنة. قيمة ساعة المسافر 2.5 دينار.</li>
+<li>الحوادث مع إصابات تنخفض من 60 إلى 35 سنويا. كلفة الحادث 40,000 دينار.</li>
+<li>توفير الوقود وصيانة المركبات 400,000 دينار سنويا.</li>
+<li>الطريق يأخذ 300 دونم زراعية، صافي دخل الدونم 800 دينار سنويا.</li>
+<li>محلات وسط المدينة تقدر خسارتها من تحول الحركة بمبلغ 150,000 دينار سنويا.</li>
+</ul>
+<p>(أ) صنف البنود. (ب) احسب النسبة التقليدية. (ج) ما الافتراض الذي يقرر النتيجة أكثر من غيره؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-97">الحل</a></span></p>
+</div>
+<div id="prob-12-98" class="ee-item" data-id="c12-j-02" data-kind="problem" data-label="12.98">
+<p><strong>12.98</strong> <strong>حالة 12.2: محطة معالجة مياه عادمة لثلاث بلديات</strong></p>
+<p>ثلاث بلديات متجاورة تدرس محطة مشتركة. العمر 40 سنة، والنسبة 4%. التصاميم:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>التصميم</th>
+<th>الاستثمار</th>
+<th>التشغيل السنوي</th>
+<th>المنافع السنوية</th>
+<th>الأضرار السنوية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ: معالجة أولية</td>
+<td>9,000,000</td>
+<td>260,000</td>
+<td>880,000</td>
+<td>60,000</td>
+</tr>
+<tr class="even">
+<td>ب: معالجة ثانوية</td>
+<td>12,500,000</td>
+<td>300,000</td>
+<td>1,150,000</td>
+<td>70,000</td>
+</tr>
+<tr class="odd">
+<td>ج: معالجة ثلاثية لإعادة الاستخدام</td>
+<td>16,000,000</td>
+<td>330,000</td>
+<td>1,320,000</td>
+<td>90,000</td>
+</tr>
+</tbody>
+</table>
+<p>المنافع تشمل صحة السكان، ومياه الري المعالجة، وحماية المياه الجوفية. (أ) أي تصميم تختار؟ (ب) ممول دولي يدفع 3,000,000 دينار من تكلفة التصميم ج فقط. هل يتغير القرار من وجهة نظر البلديات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-98">الحل</a></span></p>
+</div>
+<div id="prob-12-99" class="ee-item" data-id="c12-j-03" data-kind="problem" data-label="12.99">
+<p><strong>12.99</strong> <strong>حالة 12.3: ميزانية وزارة التربية</strong></p>
+<p>الوزارة لديها 6,000 ألف دينار لمشاريع مستقلة. القيم الحالية بآلاف الدنانير:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>التكاليف</th>
+<th>المنافع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ألواح شمسية للمدارس</td>
+<td>1,800</td>
+<td>2,700</td>
+</tr>
+<tr class="even">
+<td>مختبرات علوم</td>
+<td>2,500</td>
+<td>3,200</td>
+</tr>
+<tr class="odd">
+<td>حافلات مدرسية</td>
+<td>1,200</td>
+<td>1,500</td>
+</tr>
+<tr class="even">
+<td>صيانة مبان قديمة</td>
+<td>2,000</td>
+<td>3,100</td>
+</tr>
+<tr class="odd">
+<td>تدريب معلمين</td>
+<td>900</td>
+<td>1,250</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) أي المشاريع مقبولة منفردة؟ (ب) أي مجموعة تختار داخل الميزانية؟ (ج) ما خطأ اختيار المشاريع بترتيب النسبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-99">الحل</a></span></p>
+</div>
+<div id="prob-12-100" class="ee-item" data-id="c12-j-04" data-kind="problem" data-label="12.100">
+<p><strong>12.100</strong> <strong>حالة 12.4: الإسعاف في المناطق الريفية</strong></p>
+<p>وزارة الصحة تختار برنامجا واحدا لتقليل وفيات الحوادث والجلطات في القرى البعيدة. القيم الحالية خلال 10 سنوات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البرنامج</th>
+<th>التكلفة</th>
+<th>الوفيات التي تمنع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>تدريب متطوعين على الإسعاف الأولي</td>
+<td>1,800,000</td>
+<td>45</td>
+</tr>
+<tr class="even">
+<td>سيارات إسعاف إضافية</td>
+<td>3,000,000</td>
+<td>70</td>
+</tr>
+<tr class="odd">
+<td>مراكز طوارئ صغيرة</td>
+<td>4,500,000</td>
+<td>85</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) احسب تكلفة كل وفاة تمنع. (ب) احسب التكلفة الإضافية لكل وفاة إضافية. (ج) إذا كانت الوزارة تعتمد 60,000 دينار لكل وفاة تمنع، أي برنامج تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-12-100">الحل</a></span></p>
+</div>
+</section>
+</section>
+<section id="refs-ch12" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="refs-ch12">المراجع</h2>
+<p>هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في <a href="../appendices/references.html" class="quarto-xref"><span>الملحق G</span></a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الكتاب</th>
+<th>الفصل</th>
+<th>عنوان الفصل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="en" dir="ltr">Park</span></td>
+<td><span class="en" dir="ltr">16</span></td>
+<td><span class="en" dir="ltr">Economic Analysis in the Service Sector</span></td>
+</tr>
+<tr class="even">
+<td><span class="en" dir="ltr">Blank &amp; Tarquin</span></td>
+<td><span class="en" dir="ltr">9</span></td>
+<td><span class="en" dir="ltr">Benefit/Cost Analysis and Public Sector Economics</span></td>
+</tr>
+<tr class="odd">
+<td><span class="en" dir="ltr">Sullivan et al.</span></td>
+<td><span class="en" dir="ltr">10</span></td>
+<td><span class="en" dir="ltr">Evaluating Projects with the Benefit-Cost Ratio Method</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch11.html" class="pagination-link" aria-label="تكلفة رأس المال والحد الأدنى للعائد">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/ch13.html" class="pagination-link" aria-label="القرارات متعددة المعايير">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">القرارات متعددة المعايير</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
