@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; قرار الاستبدال – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch08.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch09.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-9-terms" id="toc-sec-9-terms" class="nav-link active" data-scroll-target="#sec-9-terms"><span class="header-section-number">9.1</span> المدافع والمتحدي</a></li>
+  <li><a href="#sec-9-outsider" id="toc-sec-9-outsider" class="nav-link" data-scroll-target="#sec-9-outsider"><span class="header-section-number">9.2</span> مقارنة من وجهة نظر شخص من الخارج</a></li>
+  <li><a href="#sec-9-esl" id="toc-sec-9-esl" class="nav-link" data-scroll-target="#sec-9-esl"><span class="header-section-number">9.3</span> العمر الاقتصادي</a></li>
+  <li><a href="#sec-9-marginal" id="toc-sec-9-marginal" class="nav-link" data-scroll-target="#sec-9-marginal"><span class="header-section-number">9.4</span> التكلفة الحدية: متى نستبدل؟</a></li>
+  <li><a href="#sec-9-study" id="toc-sec-9-study" class="nav-link" data-scroll-target="#sec-9-study"><span class="header-section-number">9.5</span> فترة دراسة محددة</a></li>
+  <li><a href="#sec-9-overhaul" id="toc-sec-9-overhaul" class="nav-link" data-scroll-target="#sec-9-overhaul"><span class="header-section-number">9.6</span> الإصلاح الشامل والإيقاف</a></li>
+  <li><a href="#sec-9-tax" id="toc-sec-9-tax" class="nav-link" data-scroll-target="#sec-9-tax"><span class="header-section-number">9.7</span> الاستبدال بعد الضريبة</a></li>
+  <li><a href="#sec-9-python" id="toc-sec-9-python" class="nav-link" data-scroll-target="#sec-9-python"><span class="header-section-number">9.8</span> Python: جدول العمر الاقتصادي</a></li>
+  <li><a href="#sec-9-problems" id="toc-sec-9-problems" class="nav-link" data-scroll-target="#sec-9-problems"><span class="header-section-number">9.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" id="toc-الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" class="nav-link" data-scroll-target="#الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة">الجزء ب: قيمة الأصل القديم والتكلفة الغارقة</a></li>
+  <li><a href="#الجزء-ج-مقارنة-القديم-بالجديد" id="toc-الجزء-ج-مقارنة-القديم-بالجديد" class="nav-link" data-scroll-target="#الجزء-ج-مقارنة-القديم-بالجديد">الجزء ج: مقارنة القديم بالجديد</a></li>
+  <li><a href="#الجزء-د-العمر-الاقتصادي" id="toc-الجزء-د-العمر-الاقتصادي" class="nav-link" data-scroll-target="#الجزء-د-العمر-الاقتصادي">الجزء د: العمر الاقتصادي</a></li>
+  <li><a href="#الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" id="toc-الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" class="nav-link" data-scroll-target="#الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال">الجزء هـ: التكلفة الحدية وتوقيت الاستبدال</a></li>
+  <li><a href="#الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" id="toc-الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" class="nav-link" data-scroll-target="#الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف">الجزء و: فترة الدراسة والإصلاح الشامل والإيقاف</a></li>
+  <li><a href="#الجزء-ز-الاستبدال-بعد-الضريبة" id="toc-الجزء-ز-الاستبدال-بعد-الضريبة" class="nav-link" data-scroll-target="#الجزء-ز-الاستبدال-بعد-الضريبة">الجزء ز: الاستبدال بعد الضريبة</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch9" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>أغلب قرارات الاستثمار في المصانع ليست مشاريع جديدة، بل سؤال متكرر: الآلة الموجودة ما زالت تعمل، لكنها أبطأ، وأعطالها أكثر، وصيانتها أغلى. هل نستبدلها الآن؟ أم بعد سنة؟ أم نصلحها؟</p>
+<p>الأدوات هي نفسها من الفصول السابقة: القيمة الحالية والقيمة السنوية. الجديد في هذا الفصل ثلاثة أخطاء شائعة يجب تجنبها:</p>
+<ol type="1">
+<li>استخدام الثمن الأصلي أو القيمة الدفترية للآلة القديمة بدل قيمتها السوقية.</li>
+<li>مقارنة الآلتين بعمر خاطئ: عمر الآلة الجديدة يجب أن يكون عمرها الاقتصادي، وليس عمرها الفني.</li>
+<li>السؤال عن الاحتفاظ بالقديمة كل عمرها، بدل السؤال عن سنة واحدة أخرى.</li>
+</ol>
+<section id="sec-9-terms" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="sec-9-terms"><span class="header-section-number">9.1</span> المدافع والمتحدي</h2>
+<p>نسمي الأصل الموجود <strong>المدافع</strong>، والبديل المقترح <strong>المتحدي</strong>. قيمة المدافع في التحليل هي قيمته السوقية اليوم، لأن الاحتفاظ به يعني التنازل عن بيعه.</p>
+<div id="ex-9-1" class="ee-item" data-id="c09-ex-trade-in" data-kind="example" data-label="9.1">
+<p><strong>مثال 9.1: قيمة الآلة القديمة وعرض المبادلة</strong></p>
+<p>مصنع اشترى آلة قبل 5 سنوات بمبلغ 50,000 دينار، وقيمتها الدفترية اليوم 20,000 دينار. تاجر مستعمل يشتريها اليوم بمبلغ 12,000 دينار. وكيل آلة جديدة يعرض سعرا معلنا 60,000 دينار، ويقبل القديمة بدلا من 15,000 دينار من السعر. نفس الوكيل يبيع الجديدة نقدا بدون مبادلة بمبلغ 56,900 دينار. ما قيمة القديمة؟ وما ثمن الجديدة في التحليل؟</p>
+<p><strong>الحل:</strong></p>
+<p>نسمي الأصل الموجود <strong>المدافع</strong>، والأصل المقترح <strong>المتحدي</strong>.</p>
+<p>ثلاثة أرقام للقديمة، والصحيح واحد:</p>
+<ul>
+<li>الثمن الأصلي 50,000 دينار: صرف في الماضي، فهو تكلفة غارقة.</li>
+<li>القيمة الدفترية 20,000 دينار: رقم محاسبي يعتمد على طريقة الاستهلاك، وليس قيمة سوقية.</li>
+<li>القيمة السوقية 12,000 دينار: هذا ما تتنازل عنه الشركة إذا احتفظت بالآلة. هذه قيمة المدافع.</li>
+</ul>
+<p>عرض المبادلة يضخم قيمة القديمة ويضخم سعر الجديدة معا. الثمن الحقيقي للجديدة هو سعرها النقدي 56,900 دينار، وليس السعر المعلن.</p>
+<p>لنتأكد: صافي ما تدفعه الشركة في المبادلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>45</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+60\mathord{,}000 - 15\mathord{,}000 = 45\mathord{,}000
+</annotation></semantics></math></p>
+<p>وهو يساوي ثمن الجديدة ناقص قيمة القديمة بأرقامنا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>56</mn><mi>,</mi><mn>900</mn><mo>−</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>44</mn><mi>,</mi><mn>900</mn></mrow><annotation encoding="application/x-tex">
+56\mathord{,}900 - 12\mathord{,}000 = 44\mathord{,}900
+</annotation></semantics></math></p>
+<p>البيع للتاجر والشراء نقدا أرخص من المبادلة بمقدار 100 دينار. القرار بين المبادلة والبيع منفصل عن قرار الاستبدال نفسه.</p>
+<p>أما القيمة الدفترية، فالفرق بينها وبين السوق (8,000 دينار) خسارة حدثت في الماضي. لا يغيرها أي قرار اليوم.</p>
+</div>
+</section>
+<section id="sec-9-outsider" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="sec-9-outsider"><span class="header-section-number">9.2</span> مقارنة من وجهة نظر شخص من الخارج</h2>
+<p>أسهل طريقة لتجنب التكلفة الغارقة: تخيل شخصا لا يملك أيا من الآلتين، ويريد شراء واحدة. أمامه آلة مستعملة بسعرها السوقي، وآلة جديدة بسعرها. كل ما دفع في الماضي لا يعنيه.</p>
+<div id="ex-9-2" class="ee-item" data-id="c09-ex-outsider" data-kind="example" data-label="9.2">
+<p><strong>مثال 9.2: مقارنة المدافع بالمتحدي</strong></p>
+<p>آلة قديمة تباع اليوم بمبلغ 9,000 دينار. تشغيلها 9,000 دينار سنويا، وتخدم 3 سنوات أخرى، ثم تباع بمبلغ 3,000 دينار. آلة جديدة تكلف 35,000 دينار، وتشغيلها 4,000 دينار، وعمرها الاقتصادي 8 سنوات، وتباع بعده بمبلغ 5,000 دينار. الحد الأدنى 10%. هل تستبدل الشركة القديمة الآن؟</p>
+<p><strong>الحل:</strong></p>
+<p>ننظر إلى القرار كأننا شخص من الخارج لا يملك أيا من الآلتين: أمامه آلة مستعملة بسعر 9,000 دينار، وآلة جديدة بسعر 35,000 دينار. أيهما يشتري؟</p>
+<p>الأعمار مختلفة، فنقارن بالقيمة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>712.69</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 9\mathord{,}000\,(A/P,\ 10\%,\ 3) - 3\mathord{,}000\,(A/F,\ 10\%,\ 3) + 9\mathord{,}000 = 11\mathord{,}712.69
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>35</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>123.32</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 35\mathord{,}000\,(A/P,\ 10\%,\ 8) - 5\mathord{,}000\,(A/F,\ 10\%,\ 8) + 4\mathord{,}000 = 10\mathord{,}123.32
+</annotation></semantics></math></p>
+<p>الجديدة أرخص سنويا، فتستبدل الشركة الآن.</p>
+<p>القيمة السنوية تفترض أن الشركة ستحتاج الخدمة بعد عمر القديمة، وأن الجديدة ستتكرر بنفس تكاليفها.</p>
+</div>
+</section>
+<section id="sec-9-esl" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="sec-9-esl"><span class="header-section-number">9.3</span> العمر الاقتصادي</h2>
+<p>العمر الفني هو المدة التي تبقى فيها الآلة قادرة على العمل. العمر الاقتصادي هو المدة التي تعطي أقل تكلفة سنوية. الأول قد يكون عشرين سنة، والثاني خمسا فقط، لأن الصيانة ترتفع مع العمر بينما تنخفض قيمة الآلة.</p>
+<div id="ex-9-3" class="ee-item" data-id="c09-ex-esl" data-kind="example" data-label="9.3">
+<p><strong>مثال 9.3: العمر الاقتصادي لآلة جديدة</strong></p>
+<p>آلة تكلف 40,000 دينار. قيمتها السوقية بعد سنة 28,000 دينار، ثم تنخفض 3,200 دينار كل سنة. تشغيلها وصيانتها 6,000 دينار في السنة الأولى، وتزيد 2,000 دينار كل سنة مع تقدمها في العمر. الحد الأدنى 10%. كم سنة يجب أن تبقى الآلة قبل استبدالها؟</p>
+<p><strong>الحل:</strong></p>
+<p>كل سنة إضافية لها أثران متعاكسان:</p>
+<ul>
+<li>تكلفة رأس المال السنوية تنخفض، لأن الثمن يتوزع على سنوات أكثر.</li>
+<li>تكلفة التشغيل السنوية ترتفع، لأن الآلة تكبر.</li>
+</ul>
+<p>مجموعهما ينخفض ثم يرتفع. السنة التي يكون عندها المجموع أقل ما يمكن هي <strong>العمر الاقتصادي</strong>.</p>
+<p>لكل عمر n نحسب القيمة السنوية، كأن الآلة تباع في نهاية السنة n بقيمتها السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><mi>C</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>S</mi><mi>n</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>O</mi><mn>1</mn></msub><mo>+</mo><mi>G</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+AW_n = C\,(A/P,\ i,\ n) - S_n\,(A/F,\ i,\ n) + O_1 + G\,(A/G,\ i,\ n)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>القيمة السوقية</th>
+<th>رأس المال</th>
+<th>التشغيل</th>
+<th>المجموع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>28,000</td>
+<td>16,000</td>
+<td>6,000</td>
+<td>22,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>24,800</td>
+<td>11,238</td>
+<td>6,952</td>
+<td>18,190</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>21,600</td>
+<td>9,559</td>
+<td>7,873</td>
+<td>17,432</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>18,400</td>
+<td>8,654</td>
+<td>8,762</td>
+<td>17,417</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>15,200</td>
+<td>8,062</td>
+<td>9,620</td>
+<td>17,682</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>12,000</td>
+<td>7,629</td>
+<td>10,447</td>
+<td>18,076</td>
+</tr>
+</tbody>
+</table>
+<p>أقل قيمة سنوية 17,416.51 دينار عند العمر 4. هذا هو العمر الاقتصادي، والقيمة السنوية عنده هي التي نقارن بها هذه الآلة في قرارات الاستبدال.</p>
+</div>
+<p>عند مقارنة المتحدي بالمدافع، نستخدم القيمة السنوية للمتحدي عند عمره الاقتصادي، لأنها أفضل ما يمكن أن يقدمه.</p>
+</section>
+<section id="sec-9-marginal" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-9-marginal"><span class="header-section-number">9.4</span> التكلفة الحدية: متى نستبدل؟</h2>
+<p>المدافع آلة قديمة، وتكاليفه ترتفع كل سنة. لذلك لا نحسب له قيمة سنوية واحدة على كل عمره الباقي، بل نحسب تكلفة الاحتفاظ به سنة بسنة.</p>
+<div id="ex-9-4" class="ee-item" data-id="c09-ex-marginal" data-kind="example" data-label="9.4">
+<p><strong>مثال 9.4: متى نستبدل؟ التكلفة الحدية للمدافع</strong></p>
+<p>آلة قديمة تباع اليوم بمبلغ 12,000 دينار، وقيمتها تنخفض 25% كل سنة. تشغيلها 8,000 دينار في السنة القادمة، ويزيد 1,500 دينار كل سنة. أفضل آلة جديدة قيمتها السنوية عند عمرها الاقتصادي 13,000 دينار. الحد الأدنى 10%. متى تستبدل الشركة القديمة؟</p>
+<p><strong>الحل:</strong></p>
+<p>المدافع آلة قديمة تكاليفها ترتفع كل سنة. لذلك لا نسأل: هل نحتفظ بها كل عمرها؟ بل نسأل: هل نحتفظ بها <strong>سنة واحدة أخرى</strong>؟</p>
+<p>تكلفة الاحتفاظ سنة واحدة تسمى التكلفة الحدية، ولها ثلاثة أجزاء: النقص في القيمة السوقية خلال السنة، وفائدة المال المحبوس في الآلة، والتشغيل.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mi>k</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>M</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi><mspace width="0.167em"></mspace><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>O</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">
+MC_k = (M_{k-1} - M_k) + i\,M_{k-1} + O_k
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>القيمة في البداية</th>
+<th>القيمة في النهاية</th>
+<th>التكلفة الحدية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>12,000</td>
+<td>9,000</td>
+<td>12,200</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>9,000</td>
+<td>6,750</td>
+<td>12,650</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>6,750</td>
+<td>5,063</td>
+<td>13,363</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5,063</td>
+<td>3,797</td>
+<td>14,272</td>
+</tr>
+</tbody>
+</table>
+<p>القاعدة: احتفظ بالمدافع ما دامت تكلفته الحدية أقل من القيمة السنوية للمتحدي، 13,000 دينار.</p>
+<p>تحتفظ الشركة بالقديمة سنتين، ثم تستبدلها، لأن التكلفة الحدية بعدها تتجاوز الجديدة.</p>
+</div>
+<p>هذه القاعدة تعمل عندما تكون التكاليف الحدية متزايدة سنة بعد سنة، وهذا الشائع. إذا كانت السنة الأولى مكلفة ثم تنخفض التكاليف، مثل آلة تفقد جزءا كبيرا من قيمتها في سنتها الأولى معنا، نحسب القيمة السنوية للمدافع على سنواته الباقية، ونقارنها بالمتحدي.</p>
+</section>
+<section id="sec-9-study" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="sec-9-study"><span class="header-section-number">9.5</span> فترة دراسة محددة</h2>
+<p>القيمة السنوية تفترض أن الخدمة مطلوبة بلا نهاية، وأن الأصول تتكرر. إذا كانت الحاجة محددة، مثل عقد ينتهي بعد 5 سنوات، نقارن الخيارات بالقيمة الحالية خلال تلك الفترة فقط.</p>
+<div id="ex-9-5" class="ee-item" data-id="c09-ex-study" data-kind="example" data-label="9.5">
+<p><strong>مثال 9.5: فترة دراسة محددة</strong></p>
+<p>خدمة نقل داخلي في مصنع مطلوبة 5 سنوات فقط، ثم ينتقل المصنع. أمام الشركة خياران:</p>
+<ul>
+<li>(أ) تستبدل الرافعة القديمة الآن بجديدة، وتبيع الجديدة بعد 5 سنوات بمبلغ 8,000 دينار.</li>
+<li>(ب) تحتفظ بالقديمة سنتين ثم تبيعها بمبلغ 4,900 دينار، وتشتري جديدة للسنوات الثلاث الباقية، وتبيعها بمبلغ 14,000 دينار.</li>
+</ul>
+<p>القديمة تباع اليوم بمبلغ 9,000 دينار، وتشغيلها 9,000 دينار ثم 10,500 دينار. الجديدة تكلف 35,000 دينار، وتشغيلها 4,000 دينار سنويا. الحد الأدنى 10%. أي الخيارين أرخص؟</p>
+<p><strong>الحل:</strong></p>
+<p>عندما تكون الحاجة لمدة محددة، لا نفترض أن الأصول تتكرر. نقارن القيمة الحالية للتكاليف خلال الفترة نفسها، ونضع قيمة البيع في نهايتها.</p>
+<p><strong>الخيار أ:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>35</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>45</mn><mi>,</mi><mn>195.78</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 35\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 5) - 8\mathord{,}000\,(P/F,\ 10\%,\ 5) = 45\mathord{,}195.78
+</annotation></semantics></math></p>
+<p><strong>الخيار ب:</strong> قيمة القديمة اليوم استثمار، لأن الشركة تتنازل عن بيعها.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3 إلى 5</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القديمة</td>
+<td>9,000</td>
+<td>9,000</td>
+<td>5,600</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>الجديدة</td>
+<td></td>
+<td></td>
+<td>35,000</td>
+<td>4,000 سنويا</td>
+<td>‎-14,000</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>50</mn><mi>,</mi><mn>263.64</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 50\mathord{,}263.64
+</annotation></semantics></math></p>
+<p>الأرخص: الخيار أ، الاستبدال الآن.</p>
+</div>
+</section>
+<section id="sec-9-overhaul" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="sec-9-overhaul"><span class="header-section-number">9.6</span> الإصلاح الشامل والإيقاف</h2>
+<p>أحيانا يكون البديل إصلاحا شاملا يطيل عمر المدافع. كلفة الإصلاح استثمار جديد يضاف إلى قيمة المدافع السوقية.</p>
+<div id="ex-9-6" class="ee-item" data-id="c09-ex-overhaul" data-kind="example" data-label="9.6">
+<p><strong>مثال 9.6: إصلاح شامل أم آلة جديدة؟</strong></p>
+<p>آلة ضغط قديمة تباع اليوم بمبلغ 6,000 دينار. لتبقى تعمل، تحتاج إصلاحا شاملا يكلف 14,000 دينار، فتخدم بعده 4 سنوات بتشغيل 7,000 دينار سنويا، ثم تباع بمبلغ 2,000 دينار. آلة جديدة تكلف 42,000 دينار، وتشغيلها 3,500 دينار، وعمرها الاقتصادي 8 سنوات، وتباع بعده بمبلغ 6,000 دينار. الحد الأدنى 10%. ماذا تختار الشركة؟</p>
+<p><strong>الحل:</strong></p>
+<p>الإصلاح الشامل استثمار جديد في المدافع. يضاف إلى قيمته السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>14</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>878.47</mn></mrow><annotation encoding="application/x-tex">
+AW_d = (6\mathord{,}000 + 14\mathord{,}000)\,(A/P,\ 10\%,\ 4) - 2\mathord{,}000\,(A/F,\ 10\%,\ 4) + 7\mathord{,}000 = 12\mathord{,}878.47
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>42</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>847.98</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 42\mathord{,}000\,(A/P,\ 10\%,\ 8) - 6\mathord{,}000\,(A/F,\ 10\%,\ 8) + 3\mathord{,}500 = 10\mathord{,}847.98
+</annotation></semantics></math></p>
+<p>الأرخص: الآلة الجديدة.</p>
+</div>
+<p>وأحيانا لا يوجد بديل، والسؤال: هل نوقف الأصل ونبيعه الآن؟</p>
+<div id="ex-9-7" class="ee-item" data-id="c09-ex-retire" data-kind="example" data-label="9.7">
+<p><strong>مثال 9.7: إيقاف أصل بدون استبدال</strong></p>
+<p>شاحنة قديمة تؤجرها شركة لمقاول. قيمتها السوقية اليوم 18,000 دينار، وبعد سنة 14,000 دينار. إيجارها في السنة القادمة 9,000 دينار، وتكاليفها 3,500 دينار. الحد الأدنى 10%. هل تحتفظ الشركة بها سنة أخرى، أم تبيعها الآن؟ لا نية لشراء بديل.</p>
+<p><strong>الحل:</strong></p>
+<p>إذا بيعت الآن، تأخذ الشركة 18,000 دينار، ويكسب المال 10%، فيصبح بعد سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+18\mathord{,}000 \times (1 + 0.1) = 19\mathord{,}800.00
+</annotation></semantics></math></p>
+<p>إذا احتفظت بها، تأخذ بعد سنة صافي الإيجار والقيمة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>14</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>19</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}000 - 3\mathord{,}500 + 14\mathord{,}000 = 19\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>الفرق ‎-300.00 دينار. البيع الآن أفضل. نكرر نفس السؤال في نهاية كل سنة.</p>
+</div>
+</section>
+<section id="sec-9-tax" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="sec-9-tax"><span class="header-section-number">9.7</span> الاستبدال بعد الضريبة</h2>
+<p>الضريبة تضيف ثلاثة تعديلات، كلها من الفصلين الخامس والسابع:</p>
+<ul>
+<li>بيع المدافع اليوم يخضع للضريبة على الفرق عن قيمته الدفترية، فقيمته في التحليل هي صافي البيع.</li>
+<li>المدافع يستمر في الاستهلاك على قيمته الدفترية، والمتحدي على ثمنه.</li>
+<li>تكاليف التشغيل تؤخذ بعد الضريبة.</li>
+</ul>
+<div id="ex-9-8" class="ee-item" data-id="c09-ex-tax" data-kind="example" data-label="9.8">
+<p><strong>مثال 9.8: الاستبدال بعد الضريبة</strong></p>
+<p>آلة قديمة قيمتها الدفترية 15,000 دينار، وتباع اليوم بمبلغ 9,000 دينار. تشغيلها 12,000 دينار سنويا. آلة جديدة تكلف 40,000 دينار، وتشغيلها 5,000 دينار. كلتاهما تخدم 5 سنوات، وتستهلك بالقسط الثابت إلى الصفر على هذه المدة، بدون قيمة بيع في النهاية. نسبة الضريبة 20%، والحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>الخطوة 1: قيمة المدافع بعد الضريبة.</strong> إذا بيعت القديمة اليوم، تدفع الشركة ضريبة على الربح، أو توفر ضريبة على الخسارة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0.2</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>200.00</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}000 - 0.2\,(9\mathord{,}000 - 15\mathord{,}000) = 10\mathord{,}200.00
+</annotation></semantics></math></p>
+<p>الاحتفاظ بها يعني التنازل عن هذا المبلغ، فهو استثمار المدافع.</p>
+<p><strong>الخطوة 2: الاستهلاك.</strong> القديمة تستمر في الاستهلاك على قيمتها الدفترية، 3,000.00 دينار سنويا. الجديدة على ثمنها، 8,000.00 دينار.</p>
+<p><strong>الخطوة 3: القيمة السنوية بعد الضريبة.</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>200.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>690.73</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 10\mathord{,}200.00\,(A/P,\ 10\%,\ 5) + 12\mathord{,}000\,(1 - 0.2) - 0.2 \times 3\mathord{,}000.00 = 11\mathord{,}690.73
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>951.90</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 40\mathord{,}000\,(A/P,\ 10\%,\ 5) + 5\mathord{,}000\,(1 - 0.2) - 0.2 \times 8\mathord{,}000.00 = 12\mathord{,}951.90
+</annotation></semantics></math></p>
+<p>القديمة أرخص بعد الضريبة، فتحتفظ بها الشركة.</p>
+</div>
+</section>
+<section id="sec-9-python" class="level2" data-number="9.8">
+<h2 data-number="9.8" class="anchored" data-anchor-id="sec-9-python"><span class="header-section-number">9.8</span> Python: جدول العمر الاقتصادي</h2>
+<p>هذا البرنامج يحسب القيمة السنوية لكل عمر ممكن، ويطبع العمر الاقتصادي:</p>
+<div id="cd8fe047" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>C, O1, G, i <span class="op">=</span> <span class="dv">40000</span>, <span class="dv">6000</span>, <span class="dv">2000</span>, <span class="fl">0.10</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>market <span class="op">=</span> [C <span class="op">*</span> (<span class="fl">0.70</span> <span class="op">-</span> <span class="fl">0.08</span> <span class="op">*</span> (n <span class="op">-</span> <span class="dv">1</span>)) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    capital <span class="op">=</span> npf.pmt(i, n, <span class="op">-</span>C, market[n <span class="op">-</span> <span class="dv">1</span>])</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    oper <span class="op">=</span> <span class="op">-</span>npf.pmt(i, n, npf.npv(i, [<span class="dv">0</span>] <span class="op">+</span> [O1 <span class="op">+</span> G <span class="op">*</span> k <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n)]))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    aw <span class="op">=</span> capital <span class="op">+</span> oper</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"n = </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">   AW = </span><span class="sc">{</span>aw<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> best <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> aw <span class="op">&lt;</span> best[<span class="dv">1</span>]:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        best <span class="op">=</span> (n, aw)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"economic service life:"</span>, best[<span class="dv">0</span>], <span class="st">"years"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>n = 1   AW =  22,000.00
+n = 2   AW =  18,190.48
+n = 3   AW =  17,432.02
+n = 4   AW =  17,416.51
+n = 5   AW =  17,682.43
+n = 6   AW =  18,076.12
+economic service life: 4 years</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-9-problems" class="level2" data-number="9.9">
+<h2 data-number="9.9" class="anchored" data-anchor-id="sec-9-problems"><span class="header-section-number">9.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-9-1" class="ee-item" data-id="c09-a-01" data-kind="problem" data-label="9.1">
+<p><strong>9.1</strong> ما المقصود بالمدافع والمتحدي في قرار الاستبدال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-1">الحل</a></span></p>
+</div>
+<div id="prob-9-2" class="ee-item" data-id="c09-a-02" data-kind="problem" data-label="9.2">
+<p><strong>9.2</strong> لماذا نستخدم القيمة السوقية للمدافع، وليس ثمنه الأصلي أو قيمته الدفترية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-2">الحل</a></span></p>
+</div>
+<div id="prob-9-3" class="ee-item" data-id="c09-a-03" data-kind="problem" data-label="9.3">
+<p><strong>9.3</strong> مدير يرفض بيع آلة قيمتها الدفترية 20,000 دينار بمبلغ 8,000 دينار، لأن الشركة ستخسر 12,000 دينار. ما الخطأ في تفكيره؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-3">الحل</a></span></p>
+</div>
+<div id="prob-9-4" class="ee-item" data-id="c09-a-04" data-kind="problem" data-label="9.4">
+<p><strong>9.4</strong> ما الفرق بين العمر الفني والعمر الاقتصادي لآلة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-4">الحل</a></span></p>
+</div>
+<div id="prob-9-5" class="ee-item" data-id="c09-a-05" data-kind="problem" data-label="9.5">
+<p><strong>9.5</strong> لماذا تنخفض القيمة السنوية لتكلفة آلة في سنواتها الأولى، ثم ترتفع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-5">الحل</a></span></p>
+</div>
+<div id="prob-9-6" class="ee-item" data-id="c09-a-06" data-kind="problem" data-label="9.6">
+<p><strong>9.6</strong> عرض وكيل مبلغا كبيرا للآلة القديمة مقابل شراء آلة جديدة منه. لماذا قد يكون هذا العرض مضللا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-6">الحل</a></span></p>
+</div>
+<div id="prob-9-7" class="ee-item" data-id="c09-a-07" data-kind="problem" data-label="9.7">
+<p><strong>9.7</strong> ما التكلفة الحدية للمدافع في سنة معينة؟ ومم تتكون؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-7">الحل</a></span></p>
+</div>
+<div id="prob-9-8" class="ee-item" data-id="c09-a-08" data-kind="problem" data-label="9.8">
+<p><strong>9.8</strong> لماذا لا نقارن المتحدي بالقيمة السنوية للمدافع على كل عمره الباقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-8">الحل</a></span></p>
+</div>
+<div id="prob-9-9" class="ee-item" data-id="c09-a-09" data-kind="problem" data-label="9.9">
+<p><strong>9.9</strong> متى نقارن البدائل بالقيمة الحالية خلال فترة دراسة، بدل القيمة السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-9">الحل</a></span></p>
+</div>
+<div id="prob-9-10" class="ee-item" data-id="c09-a-10" data-kind="problem" data-label="9.10">
+<p><strong>9.10</strong> كيف نعامل تكلفة إصلاح شامل يطيل عمر الآلة القديمة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-10">الحل</a></span></p>
+</div>
+<div id="prob-9-11" class="ee-item" data-id="c09-a-11" data-kind="problem" data-label="9.11">
+<p><strong>9.11</strong> بعد الضريبة، لماذا قد تكون قيمة المدافع في التحليل أعلى من سعر بيعه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-11">الحل</a></span></p>
+</div>
+<div id="prob-9-12" class="ee-item" data-id="c09-a-12" data-kind="problem" data-label="9.12">
+<p><strong>9.12</strong> التكنولوجيا تتحسن بسرعة، والمتحدي القادم بعد سنتين سيكون أفضل من المتحدي اليوم. كيف يؤثر هذا على قرار الاستبدال الآن؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة">الجزء ب: قيمة الأصل القديم والتكلفة الغارقة</h3>
+<div id="prob-9-13" class="ee-item" data-id="c09-b-01" data-kind="problem" data-label="9.13">
+<p><strong>9.13</strong> آلة اشتريت بمبلغ 45,000 دينار، وقيمتها الدفترية 18,000 دينار، وتباع اليوم في السوق بمبلغ 11,000 دينار. ما القيمة التي نستخدمها للمدافع؟ ولماذا لا نستخدم الرقمين الآخرين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-13">الحل</a></span></p>
+</div>
+<div id="prob-9-14" class="ee-item" data-id="c09-b-02" data-kind="problem" data-label="9.14">
+<p><strong>9.14</strong> وكيل يبيع آلة جديدة بسعر معلن 70,000 دينار، ويقبل القديمة بدلا من 18,000 دينار. نفس الوكيل يبيعها نقدا بمبلغ 66,000 دينار. القديمة تباع في السوق بمبلغ 13,000 دينار. ما ثمن الجديدة وقيمة القديمة في التحليل؟ وهل المبادلة أفضل من البيع منفصلا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-14">الحل</a></span></p>
+</div>
+<div id="prob-9-15" class="ee-item" data-id="c09-b-03" data-kind="problem" data-label="9.15">
+<p><strong>9.15</strong> قيمة آلة الدفترية 22,000 دينار، وقيمتها السوقية 9,000 دينار. ما التكلفة الغارقة؟ وهل تدخل في قرار الاستبدال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-15">الحل</a></span></p>
+</div>
+<div id="prob-9-16" class="ee-item" data-id="c09-b-04" data-kind="problem" data-label="9.16">
+<p><strong>9.16</strong> آلة قديمة تباع بمبلغ 15,000 دينار، لكن فكها ونقلها يكلف 2,500 دينار يدفعها البائع. ما قيمة المدافع في التحليل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-16">الحل</a></span></p>
+</div>
+<div id="prob-9-17" class="ee-item" data-id="c09-b-05" data-kind="problem" data-label="9.17">
+<p><strong>9.17</strong> آلة اشتريت قبل 6 سنوات بمبلغ 60,000 دينار، وتستهلك بالقسط الثابت على 10 سنوات بدون قيمة بيع. قيمتها السوقية اليوم 18,000 دينار. ما قيمتها الدفترية؟ وما الفرق عن قيمتها السوقية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-17">الحل</a></span></p>
+</div>
+<div id="prob-9-18" class="ee-item" data-id="c09-b-06" data-kind="problem" data-label="9.18">
+<p><strong>9.18</strong> آلة قديمة قيمتها السوقية 9,000 دينار، وتشغيلها 8,500 دينار سنويا لمدة 3 سنوات، ثم تباع بمبلغ 2,000 دينار. الحد الأدنى 10%. ما القيمة الحالية لتكاليف الاحتفاظ بها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-18">الحل</a></span></p>
+</div>
+<div id="prob-9-19" class="ee-item" data-id="c09-b-07" data-kind="problem" data-label="9.19">
+<p><strong>9.19</strong> آلة قيمتها السوقية اليوم 12,000 دينار، وستصبح بعد سنة 9,600 دينار. الحد الأدنى 10%. ما تكلفة رأس المال للاحتفاظ بها سنة واحدة، بدون التشغيل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-19">الحل</a></span></p>
+</div>
+<div id="prob-9-20" class="ee-item" data-id="c09-b-08" data-kind="problem" data-label="9.20">
+<p><strong>9.20</strong> مشتريان للآلة القديمة: الأول يدفع 10,000 دينار اليوم، والثاني 11,200 دينار بعد سنة. الحد الأدنى 10%. أي العرضين أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-20">الحل</a></span></p>
+</div>
+<div id="prob-9-21" class="ee-item" data-id="c09-b-09" data-kind="problem" data-label="9.21">
+<p><strong>9.21</strong> وكيل يعرض آلة جديدة بسعر 85,000 دينار، ويقبل القديمة بمبلغ 22,000 دينار. القيمة السوقية للقديمة 15,000 دينار. ما الثمن المكافئ للجديدة الذي نستخدمه في التحليل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-21">الحل</a></span></p>
+</div>
+<div id="prob-9-22" class="ee-item" data-id="c09-b-10" data-kind="problem" data-label="9.22">
+<p><strong>9.22</strong> آلة قيمتها الدفترية 16,000 دينار، وقيمتها السوقية 21,000 دينار. نسبة الضريبة 20%. ما قيمة المدافع بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-22">الحل</a></span></p>
+</div>
+<div id="prob-9-23" class="ee-item" data-id="c09-b-11" data-kind="problem" data-label="9.23">
+<p><strong>9.23</strong> آلة قيمتها الدفترية 25,000 دينار، وقيمتها السوقية 10,000 دينار. الشركة رابحة، ونسبة الضريبة 20%. ما قيمة المدافع بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-23">الحل</a></span></p>
+</div>
+<div id="prob-9-24" class="ee-item" data-id="c09-b-12" data-kind="problem" data-label="9.24">
+<p><strong>9.24</strong> آلة قديمة تباع بمبلغ 14,000 دينار. إذا احتفظت بها الشركة، يجب أن تجري لها فورا تعديلات سلامة تكلف 3,000 دينار لتجتاز التفتيش. ما استثمار المدافع في السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-24">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-مقارنة-القديم-بالجديد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-مقارنة-القديم-بالجديد">الجزء ج: مقارنة القديم بالجديد</h3>
+<div id="prob-9-25" class="ee-item" data-id="c09-c-01" data-kind="problem" data-label="9.25">
+<p><strong>9.25</strong> آلة قديمة قيمتها السوقية 8,000 دينار، وتشغيلها 10,000 دينار سنويا. آلة جديدة تكلف 30,000 دينار، وتشغيلها 4,000 دينار. كلتاهما تخدم 4 سنوات بدون قيمة بيع. الحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-25">الحل</a></span></p>
+</div>
+<div id="prob-9-26" class="ee-item" data-id="c09-c-02" data-kind="problem" data-label="9.26">
+<p><strong>9.26</strong> المدافع: قيمته السوقية 8,000 دينار، وتشغيله 10,000 دينار، ويخدم 3 سنوات ثم يباع بمبلغ 1,500 دينار. المتحدي: ثمنه 32,000 دينار، وتشغيله 4,000 دينار، وعمره الاقتصادي 7 سنوات ثم يباع بمبلغ 6,000 دينار. الحد الأدنى 10%. قارن.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-26">الحل</a></span></p>
+</div>
+<div id="prob-9-27" class="ee-item" data-id="c09-c-03" data-kind="problem" data-label="9.27">
+<p><strong>9.27</strong> آلة قديمة قيمتها السوقية 6,000 دينار، وتشغيلها 12,000 دينار سنويا لمدة 5 سنوات. آلة جديدة تشغيلها 5,000 دينار لنفس المدة. لا قيمة بيع لأي منهما. الحد الأدنى 10%. ما أعلى ثمن للجديدة يجعل الاستبدال مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-27">الحل</a></span></p>
+</div>
+<div id="prob-9-28" class="ee-item" data-id="c09-c-04" data-kind="problem" data-label="9.28">
+<p><strong>9.28</strong> آلة جديدة تكلف 30,000 دينار، وتشغيلها 4,000 دينار. القديمة تشغيلها 11,000 دينار. كلتاهما تخدم 5 سنوات بدون قيمة بيع. الحد الأدنى 10%. ما القيمة السوقية للقديمة التي تجعل الشركة لا تفرق بين الخيارين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-28">الحل</a></span></p>
+</div>
+<div id="prob-9-29" class="ee-item" data-id="c09-c-05" data-kind="problem" data-label="9.29">
+<p><strong>9.29</strong> آلة قديمة قيمتها السوقية 7,000 دينار. تشغيلها 9,000 دينار في السنة القادمة، ويزيد 1,200 دينار كل سنة. آلة جديدة تكلف 30,000 دينار، وتشغيلها ثابت 4,500 دينار. كلتاهما تخدم 4 سنوات بدون قيمة بيع. الحد الأدنى 10%. قارن.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-29">الحل</a></span></p>
+</div>
+<div id="prob-9-30" class="ee-item" data-id="c09-c-06" data-kind="problem" data-label="9.30">
+<p><strong>9.30</strong> آلة قديمة تنتج 4,000 قطعة سنويا. قيمتها السوقية 9,000 دينار، وتشغيلها 8,000 دينار. آلة جديدة أسرع، تنتج 5,400 قطعة سنويا، وثمنها 40,000 دينار، وتشغيلها 6,000 دينار. كلتاهما تخدم 6 سنوات بدون قيمة بيع، والمصنع يبيع كل ما ينتجه. الحد الأدنى 10%. قارن تكلفة القطعة.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-30">الحل</a></span></p>
+</div>
+<div id="prob-9-31" class="ee-item" data-id="c09-c-07" data-kind="problem" data-label="9.31">
+<p><strong>9.31</strong> الطلب زاد، والآلة القديمة لا تكفي وحدها. الخيار الأول: الاحتفاظ بها وإضافة آلة صغيرة تكلف 12,000 دينار وتشغيلها 2,500 دينار. الخيار الثاني: بيع القديمة بمبلغ 6,000 دينار، وشراء آلة كبيرة تكفي وحدها بمبلغ 34,000 دينار وتشغيلها 6,000 دينار. تشغيل القديمة 7,000 دينار. كل الآلات تخدم 6 سنوات بدون قيمة بيع. الحد الأدنى 10%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-31">الحل</a></span></p>
+</div>
+<div id="prob-9-32" class="ee-item" data-id="c09-c-08" data-kind="problem" data-label="9.32">
+<p><strong>9.32</strong> آلة قديمة قيمتها السوقية 5,000 دينار، وتشغيلها 6,000 دينار، وتنتج تالفا يكلف 2,500 دينار سنويا. آلة جديدة تكلف 28,000 دينار، وتشغيلها 3,500 دينار، وتالفها مهمل. كلتاهما تخدم 6 سنوات بدون قيمة بيع. الحد الأدنى 10%. قارن.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-32">الحل</a></span></p>
+</div>
+<div id="prob-9-33" class="ee-item" data-id="c09-c-09" data-kind="problem" data-label="9.33">
+<p><strong>9.33</strong> المدافع: قيمته السوقية 8,000 دينار، وتشغيله 9,000 دينار، ويخدم 3 سنوات بدون قيمة بيع. المتحدي: ثمنه 30,000 دينار، وتشغيله 4,000 دينار، ويخدم 6 سنوات بدون قيمة بيع. الحاجة 6 سنوات بالضبط. إذا احتفظت الشركة بالمدافع، تشتري متحديا بنفس المواصفات بعده، ويعمل حتى نهاية السنوات الست، ويرمى بلا قيمة. الحد الأدنى 10%. قارن بالقيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-33">الحل</a></span></p>
+</div>
+<div id="prob-9-34" class="ee-item" data-id="c09-c-10" data-kind="problem" data-label="9.34">
+<p><strong>9.34</strong> المتحدي الأفضل قيمته السنوية عند عمره الاقتصادي 12,900 دينار. المدافع قيمته السوقية 10,000 دينار، وتشغيله 9,500 دينار، ويخدم 4 سنوات ثم يباع بمبلغ 2,000 دينار. الحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-34">الحل</a></span></p>
+</div>
+<div id="prob-9-35" class="ee-item" data-id="c09-c-11" data-kind="problem" data-label="9.35">
+<p><strong>9.35</strong> ضاغط قديم قيمته السوقية 7,000 دينار، وكهرباؤه 10,000 دينار سنويا. ضاغط جديد يوفر 25% من الكهرباء، وثمنه 36,000 دينار. كلاهما يخدم 6 سنوات بدون قيمة بيع. الحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-35">الحل</a></span></p>
+</div>
+<div id="prob-9-36" class="ee-item" data-id="c09-c-12" data-kind="problem" data-label="9.36">
+<p><strong>9.36</strong> المدافع قيمته السوقية 9,000 دينار، وتشغيله 9,000 دينار، ويخدم 4 سنوات بدون قيمة بيع. المتحدي تشغيله 4,000 دينار، وعمره الاقتصادي 8 سنوات بدون قيمة بيع. الحد الأدنى 10%. ما أعلى ثمن للمتحدي يجعل الاستبدال مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-36">الحل</a></span></p>
+</div>
+<div id="prob-9-37" class="ee-item" data-id="c09-c-13" data-kind="problem" data-label="9.37">
+<p><strong>9.37</strong> طالب قارن المدافع بالمتحدي بطريقة خاطئة: طرح قيمة القديمة من ثمن الجديدة، وحسب القيمة الحالية لفرق التشغيل على عمر القديمة فقط. البيانات: القديمة قيمتها 8,000 دينار، وتشغيلها 9,000 دينار، وتخدم 4 سنوات. الجديدة ثمنها 32,000 دينار، وتشغيلها 4,000 دينار، وعمرها 8 سنوات، وتباع بعده بمبلغ 6,000 دينار. الحد الأدنى 10%. ما الخطأ؟ وما الجواب الصحيح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-37">الحل</a></span></p>
+</div>
+<div id="prob-9-38" class="ee-item" data-id="c09-c-14" data-kind="problem" data-label="9.38">
+<p><strong>9.38</strong> عقد ينتهي بعد 3 سنوات، والخدمة لن تلزم بعده. القديمة قيمتها السوقية 9,000 دينار، وتشغيلها 9,000 دينار، وتباع في النهاية بمبلغ 2,000 دينار. الجديدة ثمنها 30,000 دينار، وتشغيلها 4,000 دينار، وتباع بعد 3 سنوات بمبلغ 3,000 دينار. الحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-38">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-العمر-الاقتصادي" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-العمر-الاقتصادي">الجزء د: العمر الاقتصادي</h3>
+<div id="prob-9-39" class="ee-item" data-id="c09-d-01" data-kind="problem" data-label="9.39">
+<p><strong>9.39</strong> آلة تكلف 30,000 دينار، وتباع بعد سنة بمبلغ 21,000 دينار. تشغيلها في السنة الأولى 5,000 دينار. الحد الأدنى 10%. ما القيمة السنوية إذا استخدمت سنة واحدة فقط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-39">الحل</a></span></p>
+</div>
+<div id="prob-9-40" class="ee-item" data-id="c09-d-02" data-kind="problem" data-label="9.40">
+<p><strong>9.40</strong> آلة تكلف 30,000 دينار، وتباع بعد 3 سنوات بمبلغ 12,000 دينار. تشغيلها 5,000 دينار في السنة الأولى، ويزيد 1,500 دينار سنويا. الحد الأدنى 10%. ما القيمة السنوية لعمر 3 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-40">الحل</a></span></p>
+</div>
+<div id="prob-9-41" class="ee-item" data-id="c09-d-03" data-kind="problem" data-label="9.41">
+<p><strong>9.41</strong> رافعة شوكية تكلف 50,000 دينار. قيمتها السوقية بعد سنة 35,000 دينار، ثم تنخفض 5,000 دينار كل سنة. تشغيلها 7,000 دينار في السنة الأولى، ويزيد 3,000 دينار سنويا. الحد الأدنى 10%. ما عمرها الاقتصادي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-41">الحل</a></span></p>
+</div>
+<div id="prob-9-42" class="ee-item" data-id="c09-d-04" data-kind="problem" data-label="9.42">
+<p><strong>9.42</strong> آلة تكلف 40,000 دينار. قيمتها السوقية بعد سنة 30,000 دينار، ثم تنخفض 4,000 دينار كل سنة. تشغيلها ثابت 6,000 دينار لا يزيد مع العمر. الحد الأدنى 10%. احسب القيمة السنوية لأعمار 1 إلى 4 سنوات. ماذا تلاحظ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-42">الحل</a></span></p>
+</div>
+<div id="prob-9-43" class="ee-item" data-id="c09-d-05" data-kind="problem" data-label="9.43">
+<p><strong>9.43</strong> معدات خاصة تكلف 20,000 دينار، ولا قيمة لها في السوق بعد تركيبها. تشغيلها 3,000 دينار في السنة الأولى، ويزيد 1,500 دينار سنويا. الحد الأدنى 10%. ما عمرها الاقتصادي حتى 8 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-43">الحل</a></span></p>
+</div>
+<div id="prob-9-44" class="ee-item" data-id="c09-d-06" data-kind="problem" data-label="9.44">
+<p><strong>9.44</strong> حسب مهندس القيمة السنوية لآلة لأعمار مختلفة: 18,400 ثم 16,900 ثم 16,350 ثم 16,420 ثم 16,800 دينار للأعمار 1 إلى 5. ما العمر الاقتصادي؟ ولماذا لا تختار الشركة الاحتفاظ بالآلة 5 سنوات ما دامت تعمل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-44">الحل</a></span></p>
+</div>
+<div id="prob-9-45" class="ee-item" data-id="c09-d-07" data-kind="problem" data-label="9.45">
+<p><strong>9.45</strong> للآلة في مثال العمر الاقتصادي، بأرقام هذه المسألة: الثمن 40,000 دينار، والقيمة السوقية بعد سنة 28,000 دينار ثم تنخفض 3,200 دينار سنويا، والتشغيل 6,000 دينار ويزيد 2,000 دينار سنويا، والحد الأدنى 10%. احسب التكلفة الحدية لكل سنة، ثم القيمة السنوية لكل عمر منها.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-45">الحل</a></span></p>
+</div>
+<div id="prob-9-46" class="ee-item" data-id="c09-d-08" data-kind="problem" data-label="9.46">
+<p><strong>9.46</strong> آلة تكلف 30,000 دينار. قيمتها السوقية 21,000 ثم 18,000 ثم 15,000 ثم 12,000 دينار بعد السنوات 1 إلى 4. تشغيلها 4,000 دينار في السنة الأولى، ويزيد 2,000 دينار سنويا. احسب العمر الاقتصادي بحد أدنى 5%، ثم 15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-46">الحل</a></span></p>
+</div>
+<div id="prob-9-47" class="ee-item" data-id="c09-d-09" data-kind="problem" data-label="9.47">
+<p><strong>9.47</strong> سيارة توزيع تكلف 24,000 دينار. البيانات المتوقعة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السوقية في النهاية</td>
+<td>16,800</td>
+<td>12,900</td>
+<td>10,000</td>
+<td>7,900</td>
+</tr>
+<tr class="even">
+<td>الوقود والصيانة</td>
+<td>3,000</td>
+<td>4,000</td>
+<td>6,000</td>
+<td>9,000</td>
+</tr>
+</tbody>
+</table>
+<p>الحد الأدنى 10%. ما العمر الاقتصادي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-47">الحل</a></span></p>
+</div>
+<div id="prob-9-48" class="ee-item" data-id="c09-d-10" data-kind="problem" data-label="9.48">
+<p><strong>9.48</strong> آلة تكلف 40,000 دينار. قيمتها السوقية بعد سنة 28,000 دينار، ثم تنخفض 3,200 دينار سنويا. تشغيلها 6,000 دينار ويزيد 2,000 دينار سنويا. عمرها الفني 8 سنوات. الحد الأدنى 10%. قارن القيمة السنوية إذا استبدلت كل 3 سنوات، وإذا استخدمت حتى نهاية عمرها الفني.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-48">الحل</a></span></p>
+</div>
+<div id="prob-9-49" class="ee-item" data-id="c09-d-11" data-kind="problem" data-label="9.49">
+<p><strong>9.49</strong> متحديان بدون قيمة بيع. أ: ثمنه 30,000 دينار، وتشغيله 4,000 دينار ويزيد 2,500 دينار سنويا. ب: ثمنه 45,000 دينار، وتشغيله 3,000 دينار ويزيد 1,000 دينار سنويا. الحد الأدنى 10%. احسب القيمة السنوية لكل منهما عند عمره الاقتصادي، وقرر أيهما أفضل. جرب لأ الأعمار 1 إلى 6، ولب الأعمار 4 و6 و8 و10 و12.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-49">الحل</a></span></p>
+</div>
+<div id="prob-9-50" class="ee-item" data-id="c09-d-12" data-kind="problem" data-label="9.50">
+<p><strong>9.50</strong> اكتب في Excel صيغة واحدة للقيمة السنوية لعمر n في مثال العمر الاقتصادي، بحيث تنسخ للأعمار كلها. الثمن في B1، والحد الأدنى في B2، والتشغيل الأول في B3، والزيادة في B4، والعمر في A7، والقيمة السوقية عند ذلك العمر في B7.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-50">الحل</a></span></p>
+</div>
+<div id="prob-9-51" class="ee-item" data-id="c09-d-13" data-kind="problem" data-label="9.51">
+<p><strong>9.51</strong> آلة تكلف 26,000 دينار بدون قيمة بيع، وتشغيلها ثابت 4,000 دينار. في السنة الثالثة تحتاج إصلاحا كبيرا يكلف 9,000 دينار. الحد الأدنى 10%. احسب القيمة السنوية للأعمار 1 إلى 5. هل يستحق إجراء الإصلاح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-51">الحل</a></span></p>
+</div>
+<div id="prob-9-52" class="ee-item" data-id="c09-d-14" data-kind="problem" data-label="9.52">
+<p><strong>9.52</strong> للآلة: الثمن 40,000 دينار، والقيمة السوقية بعد سنة 28,000 دينار ثم تنخفض 3,200 دينار سنويا، والتشغيل 6,000 دينار ويزيد 2,000 دينار سنويا، والحد الأدنى 10%. افصل القيمة السنوية لأعمار 1 و3 و5 إلى جزء رأس المال وجزء التشغيل. ماذا تلاحظ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-52">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال">الجزء هـ: التكلفة الحدية وتوقيت الاستبدال</h3>
+<div id="prob-9-53" class="ee-item" data-id="c09-e-01" data-kind="problem" data-label="9.53">
+<p><strong>9.53</strong> آلة قديمة قيمتها السوقية اليوم 10,000 دينار، وبعد سنة 7,500 دينار. تشغيلها في السنة القادمة 8,000 دينار. الحد الأدنى 10%. ما التكلفة الحدية للاحتفاظ بها سنة أخرى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-53">الحل</a></span></p>
+</div>
+<div id="prob-9-54" class="ee-item" data-id="c09-e-02" data-kind="problem" data-label="9.54">
+<p><strong>9.54</strong> مدافع قيمته السوقية 10,000 دينار، وتنخفض 25% سنويا. تشغيله 7,000 دينار في السنة القادمة، ويزيد 1,800 دينار سنويا. المتحدي قيمته السنوية عند عمره الاقتصادي 10,900 دينار. الحد الأدنى 10%. احسب التكلفة الحدية للسنوات الثلاث القادمة، وحدد متى تستبدل.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-54">الحل</a></span></p>
+</div>
+<div id="prob-9-55" class="ee-item" data-id="c09-e-03" data-kind="problem" data-label="9.55">
+<p><strong>9.55</strong> التكاليف الحدية لمدافع في السنوات القادمة: 9,800 ثم 11,200 ثم 12,900 ثم 14,700 دينار. أفضل متحد قيمته السنوية 12,400 دينار. متى تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-55">الحل</a></span></p>
+</div>
+<div id="prob-9-56" class="ee-item" data-id="c09-e-04" data-kind="problem" data-label="9.56">
+<p><strong>9.56</strong> مدافع قيمته السوقية 12,000 دينار، وبعد سنة 8,600 دينار، وتشغيله في السنة القادمة 8,000 دينار. الحد الأدنى 10%. ما أعلى قيمة سنوية لمتحد تجعل الاحتفاظ بالمدافع سنة أخرى أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-56">الحل</a></span></p>
+</div>
+<div id="prob-9-57" class="ee-item" data-id="c09-e-05" data-kind="problem" data-label="9.57">
+<p><strong>9.57</strong> آلة قديمة قيمتها السوقية 3,000 دينار كخردة، وستبقى نفس القيمة مهما طال الزمن. تشغيلها 6,000 دينار في السنة القادمة، ويزيد 1,500 دينار سنويا. المتحدي قيمته السنوية 10,000 دينار. الحد الأدنى 10%. كم سنة تحتفظ بها الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-57">الحل</a></span></p>
+</div>
+<div id="prob-9-58" class="ee-item" data-id="c09-e-06" data-kind="problem" data-label="9.58">
+<p><strong>9.58</strong> مدافع قيمته السوقية 10,000 دينار، وبعد سنة 6,000، ثم 5,500، ثم 5,000 دينار. تشغيله 7,000 ثم 7,500 ثم 8,000 دينار. المتحدي قيمته السنوية 10,000 دينار. الحد الأدنى 10%. احسب التكاليف الحدية. لماذا لا يكفي مقارنة السنة الأولى وحدها هنا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-58">الحل</a></span></p>
+</div>
+<div id="prob-9-59" class="ee-item" data-id="c09-e-07" data-kind="problem" data-label="9.59">
+<p><strong>9.59</strong> التكلفة الحدية للمدافع في السنة القادمة 11,000 دينار. المتحدي قيمته السنوية 12,000 دينار، ويتكرر بلا نهاية. الحد الأدنى 10%. قارن القيمة الحالية للاستبدال الآن، وللاستبدال بعد سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-59">الحل</a></span></p>
+</div>
+<div id="prob-9-60" class="ee-item" data-id="c09-e-08" data-kind="problem" data-label="9.60">
+<p><strong>9.60</strong> مدافع قيمته السوقية 9,000 دينار، وتنخفض 20% سنويا. تشغيله 7,000 دينار سنويا، وفي السنة الثانية يحتاج إصلاحا يكلف 6,000 دينار. الحد الأدنى 10%. احسب التكلفة الحدية للسنتين القادمتين.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-60">الحل</a></span></p>
+</div>
+<div id="prob-9-61" class="ee-item" data-id="c09-e-09" data-kind="problem" data-label="9.61">
+<p><strong>9.61</strong> التكلفة الحدية لمدافع في السنة القادمة 12,000 دينار. متحد اليوم قيمته السنوية 12,500 دينار. يتوقع أن ينزل بعد سنة طراز أحدث قيمته السنوية 11,200 دينار. كل متحد يتكرر بلا نهاية. الحد الأدنى 10%. هل تستبدل الشركة الآن، أم تنتظر الطراز الأحدث؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-61">الحل</a></span></p>
+</div>
+<div id="prob-9-62" class="ee-item" data-id="c09-e-10" data-kind="problem" data-label="9.62">
+<p><strong>9.62</strong> آلة قديمة لا قيمة لها في السوق. تشغيلها 8,000 دينار في السنة القادمة، ويزيد 2,000 دينار سنويا. المتحدي قيمته السنوية 13,200 دينار. كم سنة تحتفظ بها الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-62">الحل</a></span></p>
+</div>
+<div id="prob-9-63" class="ee-item" data-id="c09-e-11" data-kind="problem" data-label="9.63">
+<p><strong>9.63</strong> مدافع قيمته السوقية 15,000 دينار، وتنخفض 20% سنويا. تشغيله 6,000 دينار في السنة القادمة. الحد الأدنى 12%. ما نسبة كل جزء من التكلفة الحدية للسنة القادمة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-63">الحل</a></span></p>
+</div>
+<div id="prob-9-64" class="ee-item" data-id="c09-e-12" data-kind="problem" data-label="9.64">
+<p><strong>9.64</strong> مدافع قيمته اليوم 8,000 دينار، وبعد سنة 6,000 دينار، وتشغيله 9,000 دينار. المتحدي قيمته السنوية 12,000 دينار. الحد الأدنى 10%. هل تحتفظ الشركة بالمدافع هذه السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-64">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف">الجزء و: فترة الدراسة والإصلاح الشامل والإيقاف</h3>
+<div id="prob-9-65" class="ee-item" data-id="c09-f-01" data-kind="problem" data-label="9.65">
+<p><strong>9.65</strong> خط تعبئة سيستخدم 3 سنوات فقط قبل تغيير المنتج. الآلة القديمة قيمتها 7,000 دينار، وتشغيلها 9,000 دينار، وتباع في النهاية بمبلغ 2,800 دينار. الجديدة ثمنها 30,000 دينار، وتشغيلها 3,500 دينار، وتباع في النهاية بمبلغ 13,400 دينار. الحد الأدنى 10%. هل تستبدل الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-65">الحل</a></span></p>
+</div>
+<div id="prob-9-66" class="ee-item" data-id="c09-f-02" data-kind="problem" data-label="9.66">
+<p><strong>9.66</strong> الخدمة مطلوبة 5 سنوات. الخيار أ: الاستبدال الآن، وبيع الجديدة بعد 5 سنوات بمبلغ 8,000 دينار. الخيار ب: الاحتفاظ بالقديمة سنة، وبيعها بمبلغ 6,700 دينار، ثم شراء جديدة تعمل 4 سنوات وتباع بمبلغ 12,200 دينار. القديمة قيمتها اليوم 9,000 دينار، وتشغيلها في السنة القادمة 9,000 دينار. الجديدة ثمنها 35,000 دينار، وتشغيلها 4,000 دينار. الحد الأدنى 10%. قارن.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-66">الحل</a></span></p>
+</div>
+<div id="prob-9-67" class="ee-item" data-id="c09-f-03" data-kind="problem" data-label="9.67">
+<p><strong>9.67</strong> آلة قديمة قيمتها 5,000 دينار. إصلاحها الشامل يكلف 12,000 دينار، فتخدم بعده 4 سنوات بتشغيل 6,500 دينار. آلة جديدة تكلف 38,000 دينار، وتشغيلها 3,000 دينار، وعمرها الاقتصادي 8 سنوات. لا قيمة بيع في النهاية. الحد الأدنى 10%. أصلح أم استبدل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-67">الحل</a></span></p>
+</div>
+<div id="prob-9-68" class="ee-item" data-id="c09-f-04" data-kind="problem" data-label="9.68">
+<p><strong>9.68</strong> آلة قديمة قيمتها 5,000 دينار. بعد إصلاح شامل تخدم 4 سنوات بتشغيل 6,500 دينار، بدون قيمة بيع. أفضل متحد قيمته السنوية 10,000 دينار. الحد الأدنى 10%. ما أعلى تكلفة إصلاح تجعل الإصلاح مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-68">الحل</a></span></p>
+</div>
+<div id="prob-9-69" class="ee-item" data-id="c09-f-05" data-kind="problem" data-label="9.69">
+<p><strong>9.69</strong> معدات قيمتها السوقية 15,000 دينار، وبعد سنة 12,000 دينار. تعطي في السنة القادمة إيرادا 6,000 دينار، بتكاليف 2,500 دينار. الحد الأدنى 10%. هل تحتفظ الشركة بها سنة أخرى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-69">الحل</a></span></p>
+</div>
+<div id="prob-9-70" class="ee-item" data-id="c09-f-06" data-kind="problem" data-label="9.70">
+<p><strong>9.70</strong> آلة تؤجر بالساعة. قيمتها السوقية 20,000 دينار، وتنخفض 15% سنويا. إيرادها 9,000 دينار في السنة القادمة، وينخفض 12% سنويا لأن الطلب يتحول إلى آلات أحدث. تكاليفها 3,000 دينار، وتزيد 600 دينار سنويا. الحد الأدنى 10%. متى توقف الشركة الآلة وتبيعها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-70">الحل</a></span></p>
+</div>
+<div id="prob-9-71" class="ee-item" data-id="c09-f-07" data-kind="problem" data-label="9.71">
+<p><strong>9.71</strong> عقد صيانة ينتهي بعد سنتين. القديمة قيمتها 6,000 دينار، وتشغيلها 8,000 دينار، ولا تباع بشيء بعد العقد. الجديدة ثمنها 30,000 دينار، وتشغيلها 3,000 دينار، وتباع بعد سنتين بمبلغ 15,000 دينار. الحد الأدنى 10%. قارن، ثم احسب أعلى ثمن للجديدة يجعلها مقبولة.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-71">الحل</a></span></p>
+</div>
+<div id="prob-9-72" class="ee-item" data-id="c09-f-08" data-kind="problem" data-label="9.72">
+<p><strong>9.72</strong> آلة قديمة قيمتها 7,000 دينار، وتخدم 4 سنوات أخرى بدون قيمة بيع. خياران لها: إصلاح شامل يكلف 8,000 دينار، ويجعل تشغيلها 5,000 دينار سنويا. أو بدون إصلاح، وتشغيلها 9,000 دينار. الحد الأدنى 10%. هل يستحق الإصلاح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-72">الحل</a></span></p>
+</div>
+<div id="prob-9-73" class="ee-item" data-id="c09-f-09" data-kind="problem" data-label="9.73">
+<p><strong>9.73</strong> آلة جديدة ثمنها 40,000 دينار، وتشغيلها 4,000 دينار. تباع بمبلغ 22,000 دينار إذا بيعت بعد 3 سنوات، أو 12,000 دينار بعد 5 سنوات. الحد الأدنى 10%. احسب القيمة الحالية للتكاليف لفترة دراسة 3 سنوات و5 سنوات. لماذا لا نقارن الرقمين مباشرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-73">الحل</a></span></p>
+</div>
+<div id="prob-9-74" class="ee-item" data-id="c09-f-10" data-kind="problem" data-label="9.74">
+<p><strong>9.74</strong> فرع خدمات قديم يمكن بيع معداته اليوم بمبلغ 25,000 دينار. إذا استمر 3 سنوات، يعطي إيرادا 18,000 دينار وتكاليف 10,000 دينار سنويا، ثم تباع معداته بمبلغ 15,000 دينار. الحد الأدنى 12%. هل تغلق الشركة الفرع الآن؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-74">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-الاستبدال-بعد-الضريبة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-الاستبدال-بعد-الضريبة">الجزء ز: الاستبدال بعد الضريبة</h3>
+<div id="prob-9-75" class="ee-item" data-id="c09-g-01" data-kind="problem" data-label="9.75">
+<p><strong>9.75</strong> مدافع قيمته الدفترية 12,000 دينار، وسعره في السوق 8,000 دينار. نسبة الضريبة 20%. ما قيمته في تحليل الاستبدال بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-75">الحل</a></span></p>
+</div>
+<div id="prob-9-76" class="ee-item" data-id="c09-g-02" data-kind="problem" data-label="9.76">
+<p><strong>9.76</strong> تشغيل المدافع 10,000 دينار، والمتحدي 4,000 دينار. نسبة الضريبة 20%. ما الوفر السنوي في التشغيل بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-76">الحل</a></span></p>
+</div>
+<div id="prob-9-77" class="ee-item" data-id="c09-g-03" data-kind="problem" data-label="9.77">
+<p><strong>9.77</strong> المدافع قيمته الدفترية 12,000 دينار، والمتحدي ثمنه 40,000 دينار. كلاهما يستهلك بالقسط الثابت إلى الصفر على 4 سنوات. نسبة الضريبة 20%. ما الوفر الضريبي الإضافي سنويا إذا استبدلت الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-77">الحل</a></span></p>
+</div>
+<div id="prob-9-78" class="ee-item" data-id="c09-g-04" data-kind="problem" data-label="9.78">
+<p><strong>9.78</strong> مدافع قيمته الدفترية 15,000 دينار، وسعره السوقي 9,000 دينار، وتشغيله 12,000 دينار. متحد ثمنه 40,000 دينار، وتشغيله 5,000 دينار. كلاهما يخدم 5 سنوات ويستهلك بالقسط الثابت إلى الصفر، بدون قيمة بيع في النهاية. نسبة الضريبة 20%، والحد الأدنى 10%. قارن بعد الضريبة.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-78">الحل</a></span></p>
+</div>
+<div id="prob-9-79" class="ee-item" data-id="c09-g-05" data-kind="problem" data-label="9.79">
+<p><strong>9.79</strong> للبيانات السابقة، حلل القرار بالتدفقات التفاضلية: ما الذي يتغير في تدفقات الشركة إذا استبدلت؟ المدافع قيمته الدفترية 15,000 دينار، وسعره 9,000 دينار، وتشغيله 12,000 دينار. المتحدي ثمنه 40,000 دينار، وتشغيله 5,000 دينار. المدة 5 سنوات، والضريبة 20%، والحد الأدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-79">الحل</a></span></p>
+</div>
+<div id="prob-9-80" class="ee-item" data-id="c09-g-06" data-kind="problem" data-label="9.80">
+<p><strong>9.80</strong> شركة تتردد في بيع آلة قيمتها الدفترية 10,000 دينار بمبلغ 4,000 دينار، لأنها ستسجل خسارة. نسبة الضريبة 25%. ما أثر الخسارة على الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-80">الحل</a></span></p>
+</div>
+<div id="prob-9-81" class="ee-item" data-id="c09-g-07" data-kind="problem" data-label="9.81">
+<p><strong>9.81</strong> مدافع قيمته الدفترية 12,000 دينار، ويستهلك بالقسط الثابت إلى الصفر على 4 سنوات الباقية. سعره اليوم 7,000 دينار. نسبة الضريبة 20%، والحد الأدنى 10%. قارن ما تحصل عليه الشركة من البيع اليوم بالقيمة الحالية للوفر الضريبي من استهلاكه إذا احتفظت به.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-81">الحل</a></span></p>
+</div>
+<div id="prob-9-82" class="ee-item" data-id="c09-g-08" data-kind="problem" data-label="9.82">
+<p><strong>9.82</strong> متحد ثمنه 40,000 دينار، وتشغيله 5,000 دينار. مدافع قيمته الدفترية 15,000 دينار، وتشغيله 12,000 دينار. كلاهما يخدم 5 سنوات ويستهلك بالقسط الثابت إلى الصفر. نسبة الضريبة 20%، والحد الأدنى 10%. ما سعر المدافع في السوق الذي يجعل الشركة لا تفرق بين الخيارين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-82">الحل</a></span></p>
+</div>
+<div id="prob-9-83" class="ee-item" data-id="c09-g-09" data-kind="problem" data-label="9.83">
+<p><strong>9.83</strong> مدافع استهلك بالكامل، فقيمته الدفترية صفر. سعره اليوم 9,000 دينار، ويخدم 3 سنوات بتشغيل 11,000 دينار، ثم يباع بمبلغ 2,700 دينار. متحد ثمنه 36,000 دينار، وتشغيله 4,000 دينار، ويستهلك بالقسط الثابت إلى الصفر على عمره الاقتصادي 6 سنوات، بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. قارن.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-83">الحل</a></span></p>
+</div>
+<div id="prob-9-84" class="ee-item" data-id="c09-g-10" data-kind="problem" data-label="9.84">
+<p><strong>9.84</strong> مدافع قيمته الدفترية 15,000 دينار، وسعره 9,000 دينار، وتشغيله 12,000 دينار. متحد ثمنه 40,000 دينار، وتشغيله 5,000 دينار. كلاهما يخدم 5 سنوات ويستهلك بالقسط الثابت إلى الصفر. الحد الأدنى 10%. احسب ميزة الاستبدال السنوية بدون ضريبة، ثم بضريبة 25%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-84">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-9-85" class="ee-item" data-id="c09-h-01" data-kind="problem" data-label="9.85">
+<p><strong>9.85</strong> ابن في Excel جدول العمر الاقتصادي لمثال الفصل بأرقامه الأصلية: الثمن 40,000 دينار، والقيمة السوقية 28,000 بعد سنة ثم تنخفض 3,200 سنويا، والتشغيل 6,000 ويزيد 2,000 سنويا، والحد الأدنى 10%. استخدم صيغة تنسخ للأسفل، ودالة تجد العمر الاقتصادي.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-85">الحل</a></span></p>
+</div>
+<div id="prob-9-86" class="ee-item" data-id="c09-h-02" data-kind="problem" data-label="9.86">
+<p><strong>9.86</strong> اكتب في Python دالة تأخذ القيمة السوقية الحالية للمدافع، ونسبة انخفاضها، والتشغيل الأول وزيادته، والحد الأدنى، وتطبع التكلفة الحدية للسنوات الأربع القادمة. جربها على: 12,000 دينار، وانخفاض 25%، وتشغيل 8,000 يزيد 1,500، وحد أدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-86">الحل</a></span></p>
+</div>
+<div id="prob-9-87" class="ee-item" data-id="c09-h-03" data-kind="problem" data-label="9.87">
+<p><strong>9.87</strong> احسب في Excel القيمة السنوية للمدافع والمتحدي في مثال المقارنة بأرقامه الأصلية، بدالة PMT فقط: المدافع 9,000 دينار، وتشغيله 9,000، و3 سنوات، وقيمة بيع 3,000. المتحدي 35,000 دينار، وتشغيله 4,000، و8 سنوات، وقيمة بيع 5,000. الحد الأدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-87">الحل</a></span></p>
+</div>
+<div id="prob-9-88" class="ee-item" data-id="c09-h-04" data-kind="problem" data-label="9.88">
+<p><strong>9.88</strong> اكتب في Python برنامجا يجد العمر الاقتصادي لمعدات بدون قيمة بيع: الثمن 30,000 دينار، والتشغيل 3,000 دينار يزيد 1,500 سنويا، والحد الأدنى 10%، لأعمار حتى 8 سنوات.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-88">الحل</a></span></p>
+</div>
+<div id="prob-9-89" class="ee-item" data-id="c09-h-05" data-kind="problem" data-label="9.89">
+<p><strong>9.89</strong> احسب في Excel مثال الاستبدال بعد الضريبة بأرقامه الأصلية. ضع المدخلات في خلايا: القيمة الدفترية 15,000، والسعر 9,000، وتشغيل المدافع 12,000، وثمن المتحدي 40,000، وتشغيله 5,000، والمدة 5 سنوات، والضريبة 20%، والحد الأدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-89">الحل</a></span></p>
+</div>
+<div id="prob-9-90" class="ee-item" data-id="c09-h-06" data-kind="problem" data-label="9.90">
+<p><strong>9.90</strong> اكتب في Python حلقة تحسب الربح من الاحتفاظ بأصل سنة إضافية، وتتوقف عند أول سنة يصبح فيها سالبا. البيانات: القيمة 20,000 دينار وتنخفض 20% سنويا، والإيراد 9,000 دينار وينخفض 12% سنويا، والتكاليف 2,500 دينار وتزيد 600 سنويا، والحد الأدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-90">الحل</a></span></p>
+</div>
+<div id="prob-9-91" class="ee-item" data-id="c09-h-07" data-kind="problem" data-label="9.91">
+<p><strong>9.91</strong> احسب في Excel الخيار أ من مثال فترة الدراسة بأرقامه الأصلية، بدالة NPV: ثمن 35,000 دينار، وتشغيل 4,000 دينار لمدة 5 سنوات، وبيع 8,000 دينار في النهاية، وحد أدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-9-91">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-9-92" class="ee-item" data-id="c09-i-01" data-kind="problem" data-label="9.92">
+<p><strong>9.92</strong> آلة ثمنها الأصلي 50,000 دينار، وقيمتها الدفترية 20,000 دينار، وسعرها في السوق 12,000 دينار. وكيل يعرض 21,000 دينار لها مقابل شراء آلة جديدة منه. ما قيمة المدافع في التحليل؟</p>
+<p>أ) 50,000<br>
+ب) 20,000<br>
+ج) 12,000<br>
+د) 21,000</p>
+<p><span class="ee-sol-link"><a href="#sol-9-92">الحل</a></span></p>
+</div>
+<div id="prob-9-93" class="ee-item" data-id="c09-i-02" data-kind="problem" data-label="9.93">
+<p><strong>9.93</strong> أي العبارات تصف العمر الاقتصادي؟</p>
+<p>أ) أطول مدة تعمل فيها الآلة<br>
+ب) المدة التي تعطي أقل قيمة سنوية للتكاليف<br>
+ج) العمر الضريبي للاستهلاك<br>
+د) المدة حتى تصبح القيمة الدفترية صفرا</p>
+<p><span class="ee-sol-link"><a href="#sol-9-93">الحل</a></span></p>
+</div>
+<div id="prob-9-94" class="ee-item" data-id="c09-i-03" data-kind="problem" data-label="9.94">
+<p><strong>9.94</strong> مدافع قيمته اليوم 10,000 دينار، وبعد سنة 7,000 دينار، وتشغيله 6,000 دينار. الحد الأدنى 10%. ما التكلفة الحدية للسنة القادمة؟</p>
+<p>أ) 9,000<br>
+ب) 7,000<br>
+ج) 10,000<br>
+د) 16,000</p>
+<p><span class="ee-sol-link"><a href="#sol-9-94">الحل</a></span></p>
+</div>
+<div id="prob-9-95" class="ee-item" data-id="c09-i-04" data-kind="problem" data-label="9.95">
+<p><strong>9.95</strong> التكلفة الحدية للمدافع في السنة القادمة 11,000 دينار، والقيمة السنوية لأفضل متحد 12,500 دينار. التكاليف الحدية للمدافع تزيد كل سنة. ماذا تفعل الشركة؟</p>
+<p>أ) تستبدل الآن<br>
+ب) تحتفظ به سنة وتعيد الحساب<br>
+ج) تحتفظ به حتى نهاية عمره الفني<br>
+د) تحتاج عمر المتحدي</p>
+<p><span class="ee-sol-link"><a href="#sol-9-95">الحل</a></span></p>
+</div>
+<div id="prob-9-96" class="ee-item" data-id="c09-i-05" data-kind="problem" data-label="9.96">
+<p><strong>9.96</strong> مدافع وقيمته الدفترية أعلى من سعره في السوق. بعد الضريبة، قيمته في التحليل:</p>
+<p>أ) أقل من سعره<br>
+ب) تساوي سعره<br>
+ج) أعلى من سعره<br>
+د) تساوي قيمته الدفترية</p>
+<p><span class="ee-sol-link"><a href="#sol-9-96">الحل</a></span></p>
+</div>
+<div id="prob-9-97" class="ee-item" data-id="c09-i-06" data-kind="problem" data-label="9.97">
+<p><strong>9.97</strong> الخدمة مطلوبة 3 سنوات فقط. المتحدي عمره الاقتصادي 8 سنوات. كيف تقارن؟</p>
+<p>أ) القيمة السنوية للمتحدي على 8 سنوات<br>
+ب) القيمة الحالية خلال 3 سنوات، مع قيمة بيع المتحدي بعدها<br>
+ج) القيمة الحالية على 8 سنوات للخيارين<br>
+د) فترة الاسترداد</p>
+<p><span class="ee-sol-link"><a href="#sol-9-97">الحل</a></span></p>
+</div>
+<div id="prob-9-98" class="ee-item" data-id="c09-i-07" data-kind="problem" data-label="9.98">
+<p><strong>9.98</strong> مدافع سعره 6,000 دينار. بعد إصلاح يكلف 9,000 دينار يخدم 4 سنوات بتشغيل 5,000 دينار، بدون قيمة بيع. الحد الأدنى 10%. ما قيمته السنوية؟</p>
+<p>أ) 7,839.24<br>
+ب) 6,892.82<br>
+ج) 8,750.00<br>
+د) 9,732.06</p>
+<p><span class="ee-sol-link"><a href="#sol-9-98">الحل</a></span></p>
+</div>
+<div id="prob-9-99" class="ee-item" data-id="c09-i-08" data-kind="problem" data-label="9.99">
+<p><strong>9.99</strong> لماذا ترتفع القيمة السنوية لآلة إذا أبقيت بعد عمرها الاقتصادي؟</p>
+<p>أ) لأن الاستهلاك يزيد<br>
+ب) لأن التشغيل يرتفع أسرع من انخفاض تكلفة رأس المال<br>
+ج) لأن الفائدة ترتفع<br>
+د) لأن قيمة البيع ترتفع</p>
+<p><span class="ee-sol-link"><a href="#sol-9-99">الحل</a></span></p>
+</div>
+<div id="prob-9-100" class="ee-item" data-id="c09-i-09" data-kind="problem" data-label="9.100">
+<p><strong>9.100</strong> مدير قال: “دفعنا 80,000 دينار في هذه الآلة، ولا يمكن أن نبيعها بعشرين ألفا.” ما الخطأ؟</p>
+<p>أ) لا خطأ، فالبيع يحقق خسارة<br>
+ب) يتأثر بالتكلفة الغارقة<br>
+ج) ينسى الضريبة<br>
+د) يستخدم حدا أدنى خاطئا</p>
+<p><span class="ee-sol-link"><a href="#sol-9-100">الحل</a></span></p>
+</div>
+<div id="prob-9-101" class="ee-item" data-id="c09-i-10" data-kind="problem" data-label="9.101">
+<p><strong>9.101</strong> التكلفة الحدية للمدافع في السنة القادمة 11,000 دينار، والقيمة السنوية للمتحدي 12,000 دينار، ويتكرر بلا نهاية. الحد الأدنى 10%. ما القيمة الحالية للتكاليف إذا أجلت الشركة الاستبدال سنة؟</p>
+<p>أ) 120,000.00<br>
+ب) 119,090.91<br>
+ج) 110,000.00<br>
+د) 20,909.09</p>
+<p><span class="ee-sol-link"><a href="#sol-9-101">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار استبدال كامل من البداية إلى النهاية.</p>
+<div id="prob-9-102" class="ee-item" data-id="c09-j-01" data-kind="problem" data-label="9.102">
+<p><strong>9.102</strong> <strong>حالة 9.1: حافلات شركة نقل</strong></p>
+<p>شركة نقل بين المدن تملك حافلة عمرها 9 سنوات. البيانات المتوقعة لها:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السوقية</td>
+<td>30,000</td>
+<td>24,000</td>
+<td>19,000</td>
+<td>15,000</td>
+</tr>
+<tr class="even">
+<td>الوقود والصيانة والأعطال</td>
+<td></td>
+<td>33,000</td>
+<td>38,000</td>
+<td>45,000</td>
+</tr>
+</tbody>
+</table>
+<p>الحافلة الجديدة تكلف 120,000 دينار. قيمتها السوقية 90,000 ثم 78,000 ثم 66,000 ثم 54,000 ثم 42,000 دينار بعد السنوات 1 إلى 5. تشغيلها 15,000 دينار في السنة الأولى، ويزيد 7,000 دينار سنويا. الحد الأدنى 10%.</p>
+<p>(أ) ما العمر الاقتصادي للحافلة الجديدة، وما قيمتها السنوية عنده؟ (ب) احسب التكلفة الحدية للحافلة القديمة للسنوات الثلاث. (ج) متى تستبدل الشركة الحافلة القديمة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-102">الحل</a></span></p>
+</div>
+<div id="prob-9-103" class="ee-item" data-id="c09-j-02" data-kind="problem" data-label="9.103">
+<p><strong>9.103</strong> <strong>حالة 9.2: مطبعة في نابلس</strong></p>
+<p>مطبعة تملك آلة طباعة قيمتها الدفترية 16,000 دينار، وتباع اليوم بمبلغ 9,000 دينار. تكاليف تشغيلها وتالفها 21,000 دينار سنويا. أمام المطبعة ثلاثة خيارات لمدة 5 سنوات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الخيار</th>
+<th>الاستثمار اليوم</th>
+<th>التكاليف السنوية</th>
+<th>البيع بعد 5 سنوات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الاحتفاظ</td>
+<td></td>
+<td>21,000</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>إصلاح شامل</td>
+<td>18,000</td>
+<td>13,000</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>آلة جديدة</td>
+<td>65,000</td>
+<td>9,000</td>
+<td>15,000</td>
+</tr>
+</tbody>
+</table>
+<p>كل الاستثمارات تستهلك بالقسط الثابت إلى الصفر على 5 سنوات، ومنها القيمة الدفترية الحالية. نسبة الضريبة 20%، والحد الأدنى 10%.</p>
+<p>(أ) ما قيمة الآلة القديمة في التحليل بعد الضريبة؟ (ب) احسب القيمة السنوية لكل خيار بعد الضريبة. (ج) ماذا تختار المطبعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-103">الحل</a></span></p>
+</div>
+<div id="prob-9-104" class="ee-item" data-id="c09-j-03" data-kind="problem" data-label="9.104">
+<p><strong>9.104</strong> <strong>حالة 9.3: مولد مستشفى خاص</strong></p>
+<p>مستشفى خاص في مبنى مستأجر لمدة 4 سنوات، ثم ينتقل إلى مبناه الجديد المجهز بمولد. المولد الحالي يباع اليوم بمبلغ 14,000 دينار، وبعد سنتين بمبلغ 9,000، وبعد 4 سنوات بمبلغ 3,000 دينار. وقوده وصيانته 11,000 دينار سنويا. مولد جديد يكلف 60,000 دينار، وتشغيله 2,500 دينار، ويباع بعد سنتين من شرائه بمبلغ 42,000 دينار، أو بعد 4 سنوات بمبلغ 30,000 دينار. الحد الأدنى 10%. تجاهل الضريبة.</p>
+<p>الخيارات: (أ) الاحتفاظ بالحالي 4 سنوات. (ب) الاستبدال الآن. (ج) الاحتفاظ سنتين ثم الاستبدال. أيها أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-9-104">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch08.html" class="pagination-link" aria-label="التضخم وأسعار الصرف">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix P — حلول مسائل الفصل 9 – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/solutions-ch08.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch09.html"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" id="toc-الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" class="nav-link" data-scroll-target="#الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة">الجزء ب: قيمة الأصل القديم والتكلفة الغارقة</a></li>
+  <li><a href="#الجزء-ج-مقارنة-القديم-بالجديد" id="toc-الجزء-ج-مقارنة-القديم-بالجديد" class="nav-link" data-scroll-target="#الجزء-ج-مقارنة-القديم-بالجديد">الجزء ج: مقارنة القديم بالجديد</a></li>
+  <li><a href="#الجزء-د-العمر-الاقتصادي" id="toc-الجزء-د-العمر-الاقتصادي" class="nav-link" data-scroll-target="#الجزء-د-العمر-الاقتصادي">الجزء د: العمر الاقتصادي</a></li>
+  <li><a href="#الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" id="toc-الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" class="nav-link" data-scroll-target="#الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال">الجزء هـ: التكلفة الحدية وتوقيت الاستبدال</a></li>
+  <li><a href="#الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" id="toc-الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" class="nav-link" data-scroll-target="#الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف">الجزء و: فترة الدراسة والإصلاح الشامل والإيقاف</a></li>
+  <li><a href="#الجزء-ز-الاستبدال-بعد-الضريبة" id="toc-الجزء-ز-الاستبدال-بعد-الضريبة" class="nav-link" data-scroll-target="#الجزء-ز-الاستبدال-بعد-الضريبة">الجزء ز: الاستبدال بعد الضريبة</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch09.html"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sol-9" class="quarto-section-identifier">Appendix P — حلول مسائل الفصل 9</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الحلول التالية محسوبة ببرنامج من نفس بنك الأسئلة الذي ولد نصوص المسائل. إذا حللت بالجداول قد يختلف جوابك في الخانة العشرية الأخيرة.</p>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h2>
+<p><span id="sol-9-1"><strong>9.1</strong></span> المدافع هو الأصل الموجود الذي تملكه الشركة. المتحدي هو البديل الجديد المقترح لاستبداله.</p>
+<p><span id="sol-9-2"><strong>9.2</strong></span> لأن الثمن الأصلي صرف في الماضي، والقيمة الدفترية رقم محاسبي. القيمة السوقية هي ما تتنازل عنه الشركة فعلا إذا احتفظت بالأصل.</p>
+<p><span id="sol-9-3"><strong>9.3</strong></span> الخسارة حدثت فعلا، عندما انخفضت قيمة الآلة في السوق. البيع يظهرها في الدفاتر فقط. القرار يجب أن يعتمد على التكاليف القادمة، وليس على ما ضاع.</p>
+<p><span id="sol-9-4"><strong>9.4</strong></span> العمر الفني مدة قدرة الآلة على العمل. العمر الاقتصادي المدة التي تعطي أقل قيمة سنوية للتكاليف، وهو غالبا أقصر.</p>
+<p><span id="sol-9-5"><strong>9.5</strong></span> تكلفة رأس المال السنوية تنخفض مع توزيع الثمن على سنوات أكثر. تكلفة التشغيل ترتفع مع تقدم الآلة في العمر. المجموع ينخفض ثم يرتفع.</p>
+<p><span id="sol-9-6"><strong>9.6</strong></span> لأن الوكيل يرفع سعر الجديدة بنفس المقدار غالبا. المهم صافي ما تدفعه الشركة. نقارنه ببيع القديمة في السوق وشراء الجديدة نقدا.</p>
+<p><span id="sol-9-7"><strong>9.7</strong></span> هي تكلفة الاحتفاظ به سنة واحدة أخرى: النقص في قيمته السوقية خلال السنة، وفائدة المال المحبوس فيه، وتكاليف تشغيله في تلك السنة.</p>
+<p><span id="sol-9-8"><strong>9.8</strong></span> لأن تكاليف المدافع ترتفع كل سنة. متوسطها قد يخفي أن السنوات الأولى رخيصة والأخيرة غالية. التكلفة الحدية تحدد السنة المناسبة للاستبدال بدقة.</p>
+<p><span id="sol-9-9"><strong>9.9</strong></span> عندما تكون الحاجة للخدمة محددة بمدة، مثل عقد ينتهي أو مصنع سينقل، فلا يصح افتراض أن الأصول تتكرر بلا نهاية.</p>
+<p><span id="sol-9-10"><strong>9.10</strong></span> هي استثمار جديد في المدافع. تضاف إلى قيمته السوقية في السنة 0، وتوزع على العمر الذي يضيفه الإصلاح.</p>
+<p><span id="sol-9-11"><strong>9.11</strong></span> إذا بيع بأقل من قيمته الدفترية، تخسر الشركة دفتريا، فتوفر ضريبة. صافي البيع يساوي السعر زائد هذا الوفر.</p>
+<p><span id="sol-9-12"><strong>9.12</strong></span> قد يكون الأفضل الانتظار، حتى لو كان المتحدي الحالي أرخص قليلا من المدافع. نقارن الخيارين: استبدال الآن، أو الاحتفاظ بالمدافع ثم استبداله بالمتحدي الأفضل لاحقا.</p>
+</section>
+<section id="الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-قيمة-الأصل-القديم-والتكلفة-الغارقة">الجزء ب: قيمة الأصل القديم والتكلفة الغارقة</h2>
+<p><span id="sol-9-13"><strong>9.13</strong></span> القيمة السوقية، 11,000 دينار. الثمن الأصلي 45,000 دينار تكلفة غارقة. القيمة الدفترية 18,000 دينار رقم محاسبي يعتمد على طريقة الاستهلاك.</p>
+<p><span id="sol-9-14"><strong>9.14</strong></span> في التحليل: ثمن الجديدة 66,000 دينار، وقيمة القديمة 13,000 دينار.</p>
+<p>صافي ما تدفعه الشركة في المبادلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>18</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>52</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+70\mathord{,}000 - 18\mathord{,}000 = 52\mathord{,}000
+</annotation></semantics></math></p>
+<p>وفي البيع والشراء منفصلين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>66</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>13</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>53</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+66\mathord{,}000 - 13\mathord{,}000 = 53\mathord{,}000
+</annotation></semantics></math></p>
+<p>المبادلة أرخص بمقدار 1,000 دينار.</p>
+<p><span id="sol-9-15"><strong>9.15</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+22\mathord{,}000 - 9\mathord{,}000 = 13\mathord{,}000
+</annotation></semantics></math></p>
+<p>لا تدخل. هذه الخسارة حدثت في الماضي، ولا يغيرها قرار البيع أو الاحتفاظ. تدخل فقط في حساب الضريبة إذا بيعت الآلة.</p>
+<p><span id="sol-9-16"><strong>9.16</strong></span> إذا احتفظت الشركة بالآلة، تتنازل عن صافي ما كانت ستأخذه:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>500</mn></mrow><annotation encoding="application/x-tex">
+15\mathord{,}000 - 2\mathord{,}500 = 12\mathord{,}500
+</annotation></semantics></math></p>
+<p><span id="sol-9-17"><strong>9.17</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>V</mi><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>6</mn><mo>×</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>24</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+BV = 60\mathord{,}000 - 6 \times \frac{60\mathord{,}000}{10} = 24\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الفرق 6,000.00 دينار. السوق يقدر الآلة بأقل من الدفاتر. في قرار الاستبدال نستخدم 18,000 دينار.</p>
+<p><span id="sol-9-18"><strong>9.18</strong></span> القيمة السوقية تكلفة في السنة 0:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>28</mn><mi>,</mi><mn>635.61</mn></mrow><annotation encoding="application/x-tex">
+PW = 9\mathord{,}000 + 8\mathord{,}500\,(P/A,\ 10\%,\ 3) - 2\mathord{,}000\,(P/F,\ 10\%,\ 3) = 28\mathord{,}635.61
+</annotation></semantics></math></p>
+<p><span id="sol-9-19"><strong>9.19</strong></span> جزءان: ما تفقده الآلة من قيمتها، وفائدة المال المحبوس فيها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>600</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>600.00</mn></mrow><annotation encoding="application/x-tex">
+(12\mathord{,}000 - 9\mathord{,}600) + 0.1 \times 12\mathord{,}000 = 3\mathord{,}600.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-20"><strong>9.20</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>11</mn><mi>,</mi><mn>200</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>181.82</mn></mrow><annotation encoding="application/x-tex">
+11\mathord{,}200\,(P/F,\ 10\%,\ 1) = 10\mathord{,}181.82
+</annotation></semantics></math></p>
+<p>الأفضل: الثاني.</p>
+<p><span id="sol-9-21"><strong>9.21</strong></span> الوكيل يعطي 7,000 دينار فوق قيمة القديمة السوقية. هذا خصم حقيقي على الجديدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>85</mn><mi>,</mi><mn>000</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>22</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>78</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+85\mathord{,}000 - (22\mathord{,}000 - 15\mathord{,}000) = 78\mathord{,}000
+</annotation></semantics></math></p>
+<p>في التحليل: المدافع 15,000 دينار، والمتحدي 78,000 دينار.</p>
+<p><span id="sol-9-22"><strong>9.22</strong></span> البيع فوق القيمة الدفترية يخضع للضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0.2</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>21</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>16</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+21\mathord{,}000 - 0.2\,(21\mathord{,}000 - 16\mathord{,}000) = 20\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-23"><strong>9.23</strong></span> البيع تحت القيمة الدفترية يولد خسارة توفر ضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.2</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>25</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000 + 0.2\,(25\mathord{,}000 - 10\mathord{,}000) = 13\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>التكلفة الغارقة لا تدخل في القرار، لكنها تؤثر على الضريبة.</p>
+<p><span id="sol-9-24"><strong>9.24</strong></span> الاحتفاظ يكلف التنازل عن البيع، ودفع التعديلات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>14</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>17</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+14\mathord{,}000 + 3\mathord{,}000 = 17\mathord{,}000
+</annotation></semantics></math></p>
+</section>
+<section id="الجزء-ج-مقارنة-القديم-بالجديد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-مقارنة-القديم-بالجديد">الجزء ج: مقارنة القديم بالجديد</h2>
+<p><span id="sol-9-25"><strong>9.25</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>523.77</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 8\mathord{,}000\,(A/P,\ 10\%,\ 4) + 10\mathord{,}000 = 12\mathord{,}523.77
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>464.12</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 30\mathord{,}000\,(A/P,\ 10\%,\ 4) + 4\mathord{,}000 = 13\mathord{,}464.12
+</annotation></semantics></math></p>
+<p>تحتفظ بالقديمة.</p>
+<p><span id="sol-9-26"><strong>9.26</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>763.75</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>940.54</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 12\mathord{,}763.75, \qquad AW_c = 9\mathord{,}940.54
+</annotation></semantics></math></p>
+<p>حيث</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>S</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>O</mi></mrow><annotation encoding="application/x-tex">
+AW = P\,(A/P,\ i,\ n) - S\,(A/F,\ i,\ n) + O
+</annotation></semantics></math></p>
+<p>الأرخص: المتحدي، فتستبدل الشركة الآن.</p>
+<p><span id="sol-9-27"><strong>9.27</strong></span> نساوي القيمة الحالية للتكاليف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+C + 5\mathord{,}000\,(P/A) = 6\mathord{,}000 + 12\mathord{,}000\,(P/A)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>32</mn><mi>,</mi><mn>535.51</mn></mrow><annotation encoding="application/x-tex">
+C = 6\mathord{,}000 + (12\mathord{,}000 - 5\mathord{,}000)\,(P/A,\ 10\%,\ 5) = 32\mathord{,}535.51
+</annotation></semantics></math></p>
+<p><span id="sol-9-28"><strong>9.28</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>11</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>464.49</mn></mrow><annotation encoding="application/x-tex">
+M = 30\mathord{,}000 - (11\mathord{,}000 - 4\mathord{,}000)\,(P/A,\ 10\%,\ 5) = 3\mathord{,}464.49
+</annotation></semantics></math></p>
+<p>إذا كانت القيمة السوقية للقديمة أقل من هذا الرقم، فالاحتفاظ بها أرخص.</p>
+<p><span id="sol-9-29"><strong>9.29</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>200</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><mi>,</mi><mn>865.70</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 7\mathord{,}000\,(A/P,\ 10\%,\ 4) + 9\mathord{,}000 + 1\mathord{,}200\,(A/G,\ 10\%,\ 4) = 12\mathord{,}865.70
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>964.12</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 30\mathord{,}000\,(A/P,\ 10\%,\ 4) + 4\mathord{,}500 = 13\mathord{,}964.12
+</annotation></semantics></math></p>
+<p>الأرخص: القديمة.</p>
+<p><span id="sol-9-30"><strong>9.30</strong></span> الآلتان تنتجان كميات مختلفة، فنقارن التكلفة لكل قطعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub></mrow><msub><mi>Q</mi><mi>d</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mn>10</mn><mi>,</mi><mn>066.47</mn></mrow><mrow><mn>4</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>2.52</mn></mrow><annotation encoding="application/x-tex">
+\frac{AW_d}{Q_d} = \frac{10\mathord{,}066.47}{4\mathord{,}000} = 2.52
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub></mrow><msub><mi>Q</mi><mi>c</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mn>15</mn><mi>,</mi><mn>184.30</mn></mrow><mrow><mn>5</mn><mi>,</mi><mn>400</mn></mrow></mfrac><mo>=</mo><mn>2.81</mn></mrow><annotation encoding="application/x-tex">
+\frac{AW_c}{Q_c} = \frac{15\mathord{,}184.30}{5\mathord{,}400} = 2.81
+</annotation></semantics></math></p>
+<p>الأرخص للقطعة: القديمة.</p>
+<p><span id="sol-9-31"><strong>9.31</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>632.93</mn></mrow><annotation encoding="application/x-tex">
+AW_1 = (6\mathord{,}000 + 12\mathord{,}000)\,(A/P,\ 10\%,\ 6) + 7\mathord{,}000 + 2\mathord{,}500 = 13\mathord{,}632.93
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>2</mn></msub><mo>=</mo><mn>34</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>806.65</mn></mrow><annotation encoding="application/x-tex">
+AW_2 = 34\mathord{,}000\,(A/P,\ 10\%,\ 6) + 6\mathord{,}000 = 13\mathord{,}806.65
+</annotation></semantics></math></p>
+<p>الأرخص: الخيار الأول.</p>
+<p><span id="sol-9-32"><strong>9.32</strong></span> التالف تكلفة سنوية مثل التشغيل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>648.04</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 5\mathord{,}000\,(A/P,\ 10\%,\ 6) + 6\mathord{,}000 + 2\mathord{,}500 = 9\mathord{,}648.04
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>28</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>929.01</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 28\mathord{,}000\,(A/P,\ 10\%,\ 6) + 3\mathord{,}500 = 9\mathord{,}929.01
+</annotation></semantics></math></p>
+<p>الأرخص: القديمة. كثيرا ما تكون تكاليف الجودة والتوقف أكبر من فرق التشغيل نفسه.</p>
+<p><span id="sol-9-33"><strong>9.33</strong></span> <strong>الاستبدال الآن:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>47</mn><mi>,</mi><mn>421.04</mn></mrow><annotation encoding="application/x-tex">
+PW = 30\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 6) = 47\mathord{,}421.04
+</annotation></semantics></math></p>
+<p><strong>الاحتفاظ ثم الاستبدال:</strong> المتحدي يشترى في السنة 3 ويعمل 3 سنوات فقط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>60</mn><mi>,</mi><mn>394.75</mn></mrow><annotation encoding="application/x-tex">
+PW = 8\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 10\%,\ 3) + \left(30\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 3)\right)(P/F,\ 10\%,\ 3) = 60\mathord{,}394.75
+</annotation></semantics></math></p>
+<p>الأرخص: الاستبدال الآن. الخيار الثاني يرمي متحديا لم يستخدم كل عمره، وهذا يرفع تكلفته.</p>
+<p><span id="sol-9-34"><strong>9.34</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>223.77</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 10\mathord{,}000\,(A/P,\ 10\%,\ 4) - 2\mathord{,}000\,(A/F,\ 10\%,\ 4) + 9\mathord{,}500 = 12\mathord{,}223.77
+</annotation></semantics></math></p>
+<p>مقابل 12,900 دينار للمتحدي. تحتفظ بالمدافع.</p>
+<p><span id="sol-9-35"><strong>9.35</strong></span> كهرباء الجديد:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000 \times (1 - 0.25) = 7\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>11</mn><mi>,</mi><mn>607.25</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>15</mn><mi>,</mi><mn>765.87</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 11\mathord{,}607.25, \qquad AW_c = 15\mathord{,}765.87
+</annotation></semantics></math></p>
+<p>تحتفظ بالقديم.</p>
+<p><span id="sol-9-36"><strong>9.36</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>839.24</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 9\mathord{,}000\,(A/P,\ 10\%,\ 4) + 9\mathord{,}000 = 11\mathord{,}839.24
+</annotation></semantics></math></p>
+<p>نساوي القيمة السنوية للمتحدي بها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>839.24</mn></mrow><annotation encoding="application/x-tex">
+C\,(A/P,\ 10\%,\ 8) + 4\mathord{,}000 = 11\mathord{,}839.24
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mn>41</mn><mi>,</mi><mn>821.75</mn></mrow><annotation encoding="application/x-tex">
+C = 41\mathord{,}821.75
+</annotation></semantics></math></p>
+<p><span id="sol-9-37"><strong>9.37</strong></span> حساب الطالب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>150.67</mn></mrow><annotation encoding="application/x-tex">
+32\mathord{,}000 - 8\mathord{,}000 + (4\mathord{,}000 - 9\mathord{,}000)\,(P/A,\ 10\%,\ 4) = 8\mathord{,}150.67
+</annotation></semantics></math></p>
+<p>الخطأ: حمل الجديدة كل ثمنها، لكنه حسب خدمتها 4 سنوات فقط، مع أنها تخدم 8 سنوات. الأعمار مختلفة، فالصحيح القيمة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>11</mn><mi>,</mi><mn>523.77</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>473.54</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 11\mathord{,}523.77, \qquad AW_c = 9\mathord{,}473.54
+</annotation></semantics></math></p>
+<p>الأرخص: الجديدة.</p>
+<p><span id="sol-9-38"><strong>9.38</strong></span> الفترة محددة، فنقارن بالقيمة الحالية خلالها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>29</mn><mi>,</mi><mn>879.04</mn></mrow><annotation encoding="application/x-tex">
+PW_d = 9\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 10\%,\ 3) - 2\mathord{,}000\,(P/F,\ 10\%,\ 3) = 29\mathord{,}879.04
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>37</mn><mi>,</mi><mn>693.46</mn></mrow><annotation encoding="application/x-tex">
+PW_c = 30\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 3) - 3\mathord{,}000\,(P/F,\ 10\%,\ 3) = 37\mathord{,}693.46
+</annotation></semantics></math></p>
+<p>القديمة أرخص خلال العقد، فتحتفظ بها. المدة القصيرة تقلل فرصة الجديدة، لأن ثمنها يسترد في سنوات قليلة.</p>
+</section>
+<section id="الجزء-د-العمر-الاقتصادي" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-د-العمر-الاقتصادي">الجزء د: العمر الاقتصادي</h2>
+<p><span id="sol-9-39"><strong>9.39</strong></span> لسنة واحدة، معامل استرداد رأس المال يساوي واحدا زائد النسبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>21</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>17</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+AW_1 = 30\mathord{,}000\,(1 + 0.1) - 21\mathord{,}000 + 5\mathord{,}000 = 17\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-40"><strong>9.40</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>3</mn></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14</mn><mi>,</mi><mn>842.90</mn></mrow><annotation encoding="application/x-tex">
+AW_3 = 30\mathord{,}000\,(A/P,\ 10\%,\ 3) - 12\mathord{,}000\,(A/F,\ 10\%,\ 3) + 5\mathord{,}000 + 1\mathord{,}500\,(A/G,\ 10\%,\ 3) = 14\mathord{,}842.90
+</annotation></semantics></math></p>
+<p><span id="sol-9-41"><strong>9.41</strong></span> لكل عمر n:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><mi>C</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>S</mi><mi>n</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>O</mi><mn>1</mn></msub><mo>+</mo><mi>G</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+AW_n = C\,(A/P,\ i,\ n) - S_n\,(A/F,\ i,\ n) + O_1 + G\,(A/G,\ i,\ n)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السوقية</td>
+<td>35,000</td>
+<td>30,000</td>
+<td>25,000</td>
+<td>20,000</td>
+<td>15,000</td>
+</tr>
+<tr class="even">
+<td>القيمة السنوية</td>
+<td>27,000</td>
+<td>22,952</td>
+<td>22,363</td>
+<td>22,608</td>
+<td>23,163</td>
+</tr>
+</tbody>
+</table>
+<p>أقل قيمة سنوية 22,362.54 دينار عند 3 سنوات. هذا هو العمر الاقتصادي.</p>
+<p><span id="sol-9-42"><strong>9.42</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>20,000</td>
+<td>16,667</td>
+<td>15,438</td>
+<td>14,740</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة السنوية تنخفض كلما طال العمر. عندما لا يرتفع التشغيل مع العمر، لا يوجد سبب للاستبدال المبكر، فالعمر الاقتصادي هو أطول عمر ممكن.</p>
+<p><span id="sol-9-43"><strong>9.43</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+AW_n = 20\mathord{,}000\,(A/P,\ 10\%,\ n) + 3\mathord{,}000 + 1\mathord{,}500\,(A/G,\ 10\%,\ n)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>25,000</td>
+<td>15,238</td>
+<td>12,447</td>
+<td>11,381</td>
+<td>10,991</td>
+<td>10,927</td>
+<td>11,041</td>
+<td>11,256</td>
+</tr>
+</tbody>
+</table>
+<p>العمر الاقتصادي 6 سنوات، بقيمة سنوية 10,927.48 دينار.</p>
+<p><span id="sol-9-44"><strong>9.44</strong></span> العمر الاقتصادي 3 سنوات، بأقل قيمة سنوية 16,350 دينار. الاحتفاظ بها أكثر يرفع المتوسط السنوي، لأن تكاليف التشغيل في السنوات المتأخرة أعلى من الوفر في رأس المال. الفرق صغير بين 3 و4 سنوات، فالقرار هنا ليس حساسا.</p>
+<p><span id="sol-9-45"><strong>9.45</strong></span> التكلفة الحدية للسنة k: النقص في القيمة، وفائدة القيمة في بداية السنة، والتشغيل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mi>k</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>M</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>i</mi><mspace width="0.167em"></mspace><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>O</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">
+MC_k = (M_{k-1} - M_k) + i\,M_{k-1} + O_k
+</annotation></semantics></math></p>
+<p>القيمة السنوية لعمر n هي القيمة السنوية المكافئة لأول n تكلفة حدية.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>22,000</td>
+<td>14,000</td>
+<td>15,680</td>
+<td>17,360</td>
+<td>19,040</td>
+</tr>
+<tr class="even">
+<td>القيمة السنوية</td>
+<td>22,000</td>
+<td>18,190</td>
+<td>17,432</td>
+<td>17,417</td>
+<td>17,682</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة السنوية تنخفض ما دامت التكلفة الحدية أقل منها، وترتفع عندما تتجاوزها. العمر الاقتصادي هو آخر سنة تكون فيها التكلفة الحدية أقل من القيمة السنوية التي قبلها.</p>
+<p><span id="sol-9-46"><strong>9.46</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>عند 5%</td>
+<td>14,500</td>
+<td>12,329</td>
+<td>12,193</td>
+<td>12,554</td>
+</tr>
+<tr class="even">
+<td>عند 15%</td>
+<td>17,500</td>
+<td>15,012</td>
+<td>14,634</td>
+<td>14,757</td>
+</tr>
+</tbody>
+</table>
+<p>العمر الاقتصادي 3 سنوات عند النسبتين، لكن كل القيم أعلى عند 15%، لأن تكلفة المال المحبوس في الآلة أعلى. النسبة الأعلى تعاقب الثمن المدفوع اليوم، فتميل إلى إطالة العمر الاقتصادي في بعض الحالات.</p>
+<p><span id="sol-9-47"><strong>9.47</strong></span> التشغيل غير منتظم، فنحسب قيمته الحالية لكل عمر، ثم نحولها إلى قيمة سنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>C</mi><mo>+</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>O</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>M</mi><mi>n</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+AW_n = \left(C + \sum_{k=1}^{n} O_k\,(P/F,\ i,\ k)\right)(A/P,\ i,\ n) - M_n\,(A/F,\ i,\ n)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>12,600</td>
+<td>11,162</td>
+<td>10,868</td>
+<td>11,134</td>
+</tr>
+</tbody>
+</table>
+<p>العمر الاقتصادي 3 سنوات.</p>
+<p><span id="sol-9-48"><strong>9.48</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>3</mn></msub><mo>=</mo><mn>17</mn><mi>,</mi><mn>432.02</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mn>8</mn></msub><mo>=</mo><mn>19</mn><mi>,</mi><mn>017.03</mn></mrow><annotation encoding="application/x-tex">
+AW_3 = 17\mathord{,}432.02, \qquad AW_8 = 19\mathord{,}017.03
+</annotation></semantics></math></p>
+<p>الاستبدال كل 3 سنوات يوفر 1,585.01 دينار سنويا. العمر الفني ليس معيارا للاستبدال.</p>
+<p><span id="sol-9-49"><strong>9.49</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>أ: العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>37,000</td>
+<td>22,476</td>
+<td>18,405</td>
+<td>16,917</td>
+<td>16,439</td>
+<td>16,447</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>ب: العمر</th>
+<th>4</th>
+<th>6</th>
+<th>8</th>
+<th>10</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>18,577</td>
+<td>15,556</td>
+<td>14,439</td>
+<td>14,049</td>
+<td>13,993</td>
+</tr>
+</tbody>
+</table>
+<p>أقل قيمة سنوية لأ 16,439.24 دينار، ولب 13,992.75 دينار. الأفضل: ب. كل متحد يقارن عند عمره الاقتصادي، حتى لو اختلفت الأعمار.</p>
+<p><span id="sol-9-50"><strong>9.50</strong></span></p>
+<pre class="excel"><code>=PMT($B$2, A7, -$B$1, B7) + $B$3 + $B$4*(1/$B$2 - A7/((1+$B$2)^A7 - 1))</code></pre>
+<p>الجزء الأول تكلفة رأس المال، والثاني التشغيل الأول، والثالث معامل التدرج A/G مضروبا في الزيادة. لعمر 4 سنوات، حيث القيمة السوقية 18,400 دينار، النتيجة 17,416.51 دينار.</p>
+<p><span id="sol-9-51"><strong>9.51</strong></span> من عمر 3 فما فوق تدخل تكلفة الإصلاح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>26</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+AW_n = \left(26\mathord{,}000 + 9\mathord{,}000\,(P/F,\ 10\%,\ 3)\right)(A/P,\ 10\%,\ n) + 4\mathord{,}000
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>32,600</td>
+<td>18,981</td>
+<td>17,174</td>
+<td>14,335</td>
+<td>12,642</td>
+</tr>
+</tbody>
+</table>
+<p>الإصلاح يستحق، لأن القيمة السنوية بعده أقل من الاستبدال بعد سنتين.</p>
+<p><span id="sol-9-52"><strong>9.52</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>3</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>رأس المال</td>
+<td>16,000</td>
+<td>9,559</td>
+<td>8,062</td>
+</tr>
+<tr class="even">
+<td>التشغيل</td>
+<td>6,000</td>
+<td>7,873</td>
+<td>9,620</td>
+</tr>
+<tr class="odd">
+<td>المجموع</td>
+<td>22,000</td>
+<td>17,432</td>
+<td>17,682</td>
+</tr>
+</tbody>
+</table>
+<p>جزء رأس المال ينخفض مع العمر، وجزء التشغيل يرتفع. العمر الاقتصادي حيث يتوازن الاتجاهان.</p>
+</section>
+<section id="الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-التكلفة-الحدية-وتوقيت-الاستبدال">الجزء هـ: التكلفة الحدية وتوقيت الاستبدال</h2>
+<p><span id="sol-9-53"><strong>9.53</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>7</mn><mi>,</mi><mn>500</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+MC_1 = (10\mathord{,}000 - 7\mathord{,}500) + 0.1 \times 10\mathord{,}000 + 8\mathord{,}000 = 11\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-54"><strong>9.54</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة في البداية</td>
+<td>10,000</td>
+<td>7,500</td>
+<td>5,625</td>
+</tr>
+<tr class="even">
+<td>النقص في القيمة</td>
+<td>2,500</td>
+<td>1,875</td>
+<td>1,406</td>
+</tr>
+<tr class="odd">
+<td>الفائدة</td>
+<td>1,000</td>
+<td>750</td>
+<td>563</td>
+</tr>
+<tr class="even">
+<td>التشغيل</td>
+<td>7,000</td>
+<td>8,800</td>
+<td>10,600</td>
+</tr>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>10,500</td>
+<td>11,425</td>
+<td>12,569</td>
+</tr>
+</tbody>
+</table>
+<p>تحتفظ بالمدافع سنة واحدة، ثم تستبدله.</p>
+<p><span id="sol-9-55"><strong>9.55</strong></span> التكلفة الحدية أقل من 12,400 في السنتين الأولى والثانية، وأعلى منها في الثالثة. تحتفظ الشركة بالمدافع سنتين، ثم تستبدله.</p>
+<p><span id="sol-9-56"><strong>9.56</strong></span> نحتفظ إذا كانت التكلفة الحدية أقل من القيمة السنوية للمتحدي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>8</mn><mi>,</mi><mn>600</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>600.00</mn></mrow><annotation encoding="application/x-tex">
+MC_1 = (12\mathord{,}000 - 8\mathord{,}600) + 0.1 \times 12\mathord{,}000 + 8\mathord{,}000 = 12\mathord{,}600.00
+</annotation></semantics></math></p>
+<p>إذا كانت القيمة السنوية للمتحدي أعلى من 12,600.00 دينار، نحتفظ بالمدافع سنة أخرى.</p>
+<p><span id="sol-9-57"><strong>9.57</strong></span> القيمة لا تنخفض، فالتكلفة الحدية فائدة المال المحبوس والتشغيل فقط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mi>k</mi></msub><mo>=</mo><mn>0.1</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+MC_k = 0.1 \times 3\mathord{,}000 + 6\mathord{,}000 + 1\mathord{,}500\,(k - 1)
+</annotation></semantics></math></p>
+<p>السنة الأولى 6,300.00 دينار، وتزيد 1,500 دينار كل سنة. نحتفظ ما دامت أقل من 10,000 دينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mi>,</mi><mn>300.00</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mn>10</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+6\mathord{,}300.00 + 1\mathord{,}500\,(k - 1) \le 10\mathord{,}000
+</annotation></semantics></math></p>
+<p>تحتفظ الشركة بالآلة 3 سنوات، ثم تستبدلها.</p>
+<p><span id="sol-9-58"><strong>9.58</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>12,000</td>
+<td>8,600</td>
+<td>9,050</td>
+</tr>
+</tbody>
+</table>
+<p>التكلفة الحدية للسنة الأولى 12,000 دينار، أعلى من المتحدي، لأن الآلة تفقد جزءا كبيرا من قيمتها فيها. لكنها تنخفض في السنوات التالية. القاعدة البسيطة تعمل فقط عندما تكون التكاليف الحدية متزايدة.</p>
+<p>هنا نحسب القيمة السنوية للمدافع على السنوات الثلاث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>978.85</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 9\mathord{,}978.85
+</annotation></semantics></math></p>
+<p>أقل من المتحدي، فتحتفظ الشركة بالمدافع.</p>
+<p><span id="sol-9-59"><strong>9.59</strong></span> <strong>الآن:</strong> سلسلة دائمة من القيمة السنوية للمتحدي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>000</mn></mrow><mn>0.1</mn></mfrac><mo>=</mo><mn>120</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+PW = \frac{12\mathord{,}000}{0.1} = 120\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>بعد سنة:</strong> التكلفة الحدية في السنة 1، ثم السلسلة الدائمة تبدأ بعدها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mfrac><mrow><mn>11</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mi>/</mi><mn>0.1</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.1</mn></mrow></mfrac><mo>=</mo><mn>119</mn><mi>,</mi><mn>090.91</mn></mrow><annotation encoding="application/x-tex">
+PW = \frac{11\mathord{,}000 + 12\mathord{,}000 / 0.1}{1 + 0.1} = 119\mathord{,}090.91
+</annotation></semantics></math></p>
+<p>الأرخص: التأجيل سنة. النتيجة نفسها لو قارنا التكلفة الحدية بالقيمة السنوية مباشرة، وهذا سبب القاعدة.</p>
+<p><span id="sol-9-60"><strong>9.60</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>7</mn><mi>,</mi><mn>200.00</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>700.00</mn></mrow><annotation encoding="application/x-tex">
+MC_1 = (9\mathord{,}000 - 7\mathord{,}200.00) + 0.1 \times 9\mathord{,}000 + 7\mathord{,}000 = 9\mathord{,}700.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mi>,</mi><mn>200.00</mn><mo>−</mo><mn>5</mn><mi>,</mi><mn>760.00</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>7</mn><mi>,</mi><mn>200.00</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>15</mn><mi>,</mi><mn>160.00</mn></mrow><annotation encoding="application/x-tex">
+MC_2 = (7\mathord{,}200.00 - 5\mathord{,}760.00) + 0.1 \times 7\mathord{,}200.00 + 7\mathord{,}000 + 6\mathord{,}000 = 15\mathord{,}160.00
+</annotation></semantics></math></p>
+<p>الإصلاح يجعل السنة الثانية مكلفة. إذا كانت التكلفة الحدية للأولى أقل من المتحدي وللثانية أعلى، فالاستبدال بعد سنة واحدة يتجنب الإصلاح.</p>
+<p><span id="sol-9-61"><strong>9.61</strong></span> <strong>الآن:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>500</mn></mrow><mn>0.1</mn></mfrac><mo>=</mo><mn>125</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+PW = \frac{12\mathord{,}500}{0.1} = 125\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>الانتظار سنة ثم الطراز الأحدث:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>11</mn><mi>,</mi><mn>200</mn><mi>/</mi><mn>0.1</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.1</mn></mrow></mfrac><mo>=</mo><mn>112</mn><mi>,</mi><mn>727.27</mn></mrow><annotation encoding="application/x-tex">
+PW = \frac{12\mathord{,}000 + 11\mathord{,}200 / 0.1}{1 + 0.1} = 112\mathord{,}727.27
+</annotation></semantics></math></p>
+<p>الأرخص: الانتظار. المدافع أرخص من متحدي اليوم للسنة القادمة.</p>
+<p><span id="sol-9-62"><strong>9.62</strong></span> لا قيمة سوقية، فلا نقص في القيمة ولا فائدة محبوسة. التكلفة الحدية هي التشغيل فقط:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>8,000</td>
+<td>10,000</td>
+<td>12,000</td>
+<td>14,000</td>
+</tr>
+</tbody>
+</table>
+<p>تحتفظ بها ما دام التشغيل أقل من 13,200 دينار، أي 3 سنوات.</p>
+<p><span id="sol-9-63"><strong>9.63</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الجزء</th>
+<th>المبلغ</th>
+<th>النسبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>النقص في القيمة</td>
+<td>3,000.00</td>
+<td>27.78%</td>
+</tr>
+<tr class="even">
+<td>الفائدة المحبوسة</td>
+<td>1,800.00</td>
+<td>16.67%</td>
+</tr>
+<tr class="odd">
+<td>التشغيل</td>
+<td>6,000.00</td>
+<td>55.56%</td>
+</tr>
+<tr class="even">
+<td>المجموع</td>
+<td>10,800.00</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p>الفائدة المحبوسة تكلفة حقيقية لا تظهر في أي فاتورة، لكنها ما تخسره الشركة لعدم بيع الآلة واستثمار ثمنها.</p>
+<p><span id="sol-9-64"><strong>9.64</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+MC_1 = (8\mathord{,}000 - 6\mathord{,}000) + 0.1 \times 8\mathord{,}000 + 9\mathord{,}000 = 11\mathord{,}800.00
+</annotation></semantics></math></p>
+<p>أقل من المتحدي، فتحتفظ به سنة، وتعيد الحساب في نهايتها.</p>
+</section>
+<section id="الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-و-فترة-الدراسة-والإصلاح-الشامل-والإيقاف">الجزء و: فترة الدراسة والإصلاح الشامل والإيقاف</h2>
+<p><span id="sol-9-65"><strong>9.65</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>800</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>27</mn><mi>,</mi><mn>277.99</mn></mrow><annotation encoding="application/x-tex">
+PW_d = 7\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 10\%,\ 3) - 2\mathord{,}800\,(P/F,\ 10\%,\ 3) = 27\mathord{,}277.99
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>13</mn><mi>,</mi><mn>400</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>28</mn><mi>,</mi><mn>636.36</mn></mrow><annotation encoding="application/x-tex">
+PW_c = 30\mathord{,}000 + 3\mathord{,}500\,(P/A,\ 10\%,\ 3) - 13\mathord{,}400\,(P/F,\ 10\%,\ 3) = 28\mathord{,}636.36
+</annotation></semantics></math></p>
+<p>تحتفظ بالقديمة. قيمة بيع الجديدة بعد مدة قصيرة مهمة جدا في هذا القرار.</p>
+<p><span id="sol-9-66"><strong>9.66</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>35</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>45</mn><mi>,</mi><mn>195.78</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 35\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 5) - 8\mathord{,}000\,(P/F,\ 10\%,\ 5) = 45\mathord{,}195.78
+</annotation></semantics></math></p>
+<p>في الخيار ب، السنة الأولى فيها تشغيل القديمة وبيعها وشراء الجديدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>6</mn><mi>,</mi><mn>700</mn><mo>+</mo><mn>35</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mn>12</mn><mi>,</mi><mn>200</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>46</mn><mi>,</mi><mn>860.63</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 9\mathord{,}000 + (9\mathord{,}000 - 6\mathord{,}700 + 35\mathord{,}000)\,(P/F,\ 10\%,\ 1) + 4\mathord{,}000\,\left((P/A,\ 5) - (P/A,\ 1)\right) - 12\mathord{,}200\,(P/F,\ 5) = 46\mathord{,}860.63
+</annotation></semantics></math></p>
+<p>الأرخص: الاستبدال الآن.</p>
+<p><span id="sol-9-67"><strong>9.67</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>863.00</mn></mrow><annotation encoding="application/x-tex">
+AW_d = (5\mathord{,}000 + 12\mathord{,}000)\,(A/P,\ 10\%,\ 4) + 6\mathord{,}500 = 11\mathord{,}863.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>38</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>122.87</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 38\mathord{,}000\,(A/P,\ 10\%,\ 8) + 3\mathord{,}000 = 10\mathord{,}122.87
+</annotation></semantics></math></p>
+<p>القرار: الاستبدال.</p>
+<p><span id="sol-9-68"><strong>9.68</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>+</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+(5\mathord{,}000 + X)\,(A/P,\ 10\%,\ 4) + 6\mathord{,}500 = 10\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mfrac><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>6</mn><mi>,</mi><mn>500</mn></mrow><mn>0.3155</mn></mfrac><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>6</mn><mi>,</mi><mn>094.53</mn></mrow><annotation encoding="application/x-tex">
+X = \frac{10\mathord{,}000 - 6\mathord{,}500}{0.3155} - 5\mathord{,}000 = 6\mathord{,}094.53
+</annotation></semantics></math></p>
+<p><span id="sol-9-69"><strong>9.69</strong></span> نقارن ما يتوفر بعد سنة في الحالتين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+6\mathord{,}000 - 2\mathord{,}500 + 12\mathord{,}000 - 15\mathord{,}000\,(1 + 0.1) = -1\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>سالب، فتبيعها الآن.</p>
+<p><span id="sol-9-70"><strong>9.70</strong></span> كل سنة نقارن صافي ما تعطيه الآلة مع بيعها في بداية السنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>k</mi></msub><mo>=</mo><msub><mi>R</mi><mi>k</mi></msub><mo>−</mo><msub><mi>O</mi><mi>k</mi></msub><mo>+</mo><msub><mi>M</mi><mi>k</mi></msub><mo>−</mo><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+N_k = R_k - O_k + M_k - M_{k-1}\,(1 + i)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td>9,000</td>
+<td>7,920</td>
+<td>6,970</td>
+</tr>
+<tr class="even">
+<td>التكاليف</td>
+<td>3,000</td>
+<td>3,600</td>
+<td>4,200</td>
+</tr>
+<tr class="odd">
+<td>القيمة في النهاية</td>
+<td>17,000</td>
+<td>14,450</td>
+<td>12,283</td>
+</tr>
+<tr class="even">
+<td>الربح من الاحتفاظ</td>
+<td>1,000</td>
+<td>70</td>
+<td>‎-843</td>
+</tr>
+</tbody>
+</table>
+<p>تحتفظ بها سنتين، ثم تبيعها.</p>
+<p><span id="sol-9-71"><strong>9.71</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>884.30</mn></mrow><annotation encoding="application/x-tex">
+PW_d = 6\mathord{,}000 + 8\mathord{,}000\,(P/A,\ 10\%,\ 2) = 19\mathord{,}884.30
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>22</mn><mi>,</mi><mn>809.92</mn></mrow><annotation encoding="application/x-tex">
+PW_c = 30\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 2) - 15\mathord{,}000\,(P/F,\ 10\%,\ 2) = 22\mathord{,}809.92
+</annotation></semantics></math></p>
+<p>الأرخص: القديمة. أعلى ثمن للجديدة يساوي 27,074.38 دينار، بفرض أن قيمة بيعها تبقى 15,000 دينار.</p>
+<p><span id="sol-9-72"><strong>9.72</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mrow><mi>f</mi><mi>i</mi><mi>x</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>732.06</mn></mrow><annotation encoding="application/x-tex">
+AW_{fix} = (7\mathord{,}000 + 8\mathord{,}000)\,(A/P,\ 10\%,\ 4) + 5\mathord{,}000 = 9\mathord{,}732.06
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mrow><mi>n</mi><mi>o</mi></mrow></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>208.30</mn></mrow><annotation encoding="application/x-tex">
+AW_{no} = 7\mathord{,}000\,(A/P,\ 10\%,\ 4) + 9\mathord{,}000 = 11\mathord{,}208.30
+</annotation></semantics></math></p>
+<p>الإصلاح يستحق. القيمة السوقية 7,000 دينار نفسها في الخيارين، فلا تؤثر على الفرق.</p>
+<p><span id="sol-9-73"><strong>9.73</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>3</mn></msub><mo>=</mo><mn>33</mn><mi>,</mi><mn>418.48</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mn>5</mn></msub><mo>=</mo><mn>47</mn><mi>,</mi><mn>712.09</mn></mrow><annotation encoding="application/x-tex">
+PW_3 = 33\mathord{,}418.48, \qquad PW_5 = 47\mathord{,}712.09
+</annotation></semantics></math></p>
+<p>الرقمان لفترتين مختلفتين، فالثاني يشمل سنتين إضافيتين من الخدمة. نحولهما إلى قيمة سنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>3</mn></msub><mo>=</mo><mn>13</mn><mi>,</mi><mn>438.07</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mn>5</mn></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>586.33</mn></mrow><annotation encoding="application/x-tex">
+AW_3 = 13\mathord{,}438.07, \qquad AW_5 = 12\mathord{,}586.33
+</annotation></semantics></math></p>
+<p>هذا ما يفعله تحليل العمر الاقتصادي.</p>
+<p><span id="sol-9-74"><strong>9.74</strong></span> الاستمرار يعني التنازل عن 25,000 دينار اليوم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>25</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mi>,</mi><mn>891.35</mn></mrow><annotation encoding="application/x-tex">
+PW = -25\mathord{,}000 + 8\mathord{,}000\,(P/A,\ 12\%,\ 3) + 15\mathord{,}000\,(P/F,\ 12\%,\ 3) = 4\mathord{,}891.35
+</annotation></semantics></math></p>
+<p>موجب، فتستمر.</p>
+</section>
+<section id="الجزء-ز-الاستبدال-بعد-الضريبة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-الاستبدال-بعد-الضريبة">الجزء ز: الاستبدال بعد الضريبة</h2>
+<p><span id="sol-9-75"><strong>9.75</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0.2</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+8\mathord{,}000 - 0.2\,(8\mathord{,}000 - 12\mathord{,}000) = 8\mathord{,}800.00
+</annotation></semantics></math></p>
+<p>البيع تحت القيمة الدفترية، فقيمته بعد الضريبة أعلى من سعره.</p>
+<p><span id="sol-9-76"><strong>9.76</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+(10\mathord{,}000 - 4\mathord{,}000)(1 - 0.2) = 4\mathord{,}800.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-77"><strong>9.77</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>d</mi></msub><mo>=</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>D</mi><mi>c</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+D_d = 3\mathord{,}000.00, \qquad D_c = 10\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>,</mi><mn>000.00</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>400.00</mn></mrow><annotation encoding="application/x-tex">
+0.2 \times (10\mathord{,}000.00 - 3\mathord{,}000.00) = 1\mathord{,}400.00
+</annotation></semantics></math></p>
+<p><span id="sol-9-78"><strong>9.78</strong></span> قيمة المدافع بعد الضريبة 10,200.00 دينار.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>200.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>690.73</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 10\mathord{,}200.00\,(A/P,\ 10\%,\ 5) + 12\mathord{,}000\,(1 - 0.2) - 0.2 \times 3\mathord{,}000.00 = 11\mathord{,}690.73
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>951.90</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 40\mathord{,}000\,(A/P,\ 10\%,\ 5) + 5\mathord{,}000\,(1 - 0.2) - 0.2 \times 8\mathord{,}000.00 = 12\mathord{,}951.90
+</annotation></semantics></math></p>
+<p>تحتفظ بالمدافع.</p>
+<p><span id="sol-9-79"><strong>9.79</strong></span> في السنة 0 تدفع ثمن الجديدة، وتقبض صافي بيع القديمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>F</mi><mn>0</mn></msub><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>10</mn><mi>,</mi><mn>200.00</mn><mo>=</mo><mi>−</mi><mn>29</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+CF_0 = -40\mathord{,}000 + 10\mathord{,}200.00 = -29\mathord{,}800.00
+</annotation></semantics></math></p>
+<p>كل سنة: وفر التشغيل بعد الضريبة، وزيادة الوفر الضريبي من الاستهلاك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mfrac><mrow><mn>40</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>6</mn><mi>,</mi><mn>600.00</mn></mrow><annotation encoding="application/x-tex">
+CF = (12\mathord{,}000 - 5\mathord{,}000)(1 - 0.2) + 0.2 \times \frac{40\mathord{,}000 - 15\mathord{,}000}{5} = 6\mathord{,}600.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>4</mn><mi>,</mi><mn>780.81</mn></mrow><annotation encoding="application/x-tex">
+PW = -4\mathord{,}780.81
+</annotation></semantics></math></p>
+<p>سالب، فالاستبدال غير مجد. النتيجة نفس المقارنة بالقيمة السنوية، بطريقة أخرى.</p>
+<p><span id="sol-9-80"><strong>9.80</strong></span> الخسارة الدفترية 6,000 دينار تخفض الدخل الخاضع، فتوفر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.25</mn><mo>×</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>1</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+0.25 \times 6\mathord{,}000 = 1\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>الخسارة لا تعني خروج مال الآن، بل العكس: البيع يحقق وفرا ضريبيا اليوم بدل أن يتوزع الاستهلاك على السنوات القادمة.</p>
+<p><span id="sol-9-81"><strong>9.81</strong></span> البيع اليوم يعطي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+8\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الاحتفاظ يعطي وفرا ضريبيا من الاستهلاك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>901.92</mn></mrow><annotation encoding="application/x-tex">
+0.2 \times 3\mathord{,}000.00\,(P/A,\ 10\%,\ 4) = 1\mathord{,}901.92
+</annotation></semantics></math></p>
+<p>لكن الاحتفاظ يعني أيضا تكاليف التشغيل. هذه المقارنة تبين فقط لماذا يدخل الاستهلاك في تحليل المدافع بعد الضريبة.</p>
+<p><span id="sol-9-82"><strong>9.82</strong></span> القيمة السنوية للمتحدي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>951.90</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 12\mathord{,}951.90
+</annotation></semantics></math></p>
+<p>للمدافع، صافي البيع يساوي السعر ناقص الضريبة على الفرق عن القيمة الدفترية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>M</mi><mo>−</mo><mn>0.2</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>951.90</mn></mrow><annotation encoding="application/x-tex">
+\left(M - 0.2\,(M - 15\mathord{,}000)\right)(A/P) + 12\mathord{,}000\,(1 - 0.2) - 0.2 \times 3\mathord{,}000.00 = 12\mathord{,}951.90
+</annotation></semantics></math></p>
+<p>نحل لـ M:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mn>14</mn><mi>,</mi><mn>976.01</mn></mrow><annotation encoding="application/x-tex">
+M = 14\mathord{,}976.01
+</annotation></semantics></math></p>
+<p>إذا كان سعر المدافع أعلى من هذا، فبيعه واستبداله أفضل.</p>
+<p><span id="sol-9-83"><strong>9.83</strong></span> القيمة الدفترية صفر، فكل سعر البيع ربح خاضع. بيعه اليوم يعطي 7,200.00 دينار بعد الضريبة، وهذه قيمته في التحليل. ولا استهلاك له في المستقبل.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>d</mi></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>200.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>2</mn><mi>,</mi><mn>160.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>11</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11</mn><mi>,</mi><mn>042.66</mn></mrow><annotation encoding="application/x-tex">
+AW_d = 7\mathord{,}200.00\,(A/P,\ 10\%,\ 3) - 2\mathord{,}160.00\,(A/F,\ 10\%,\ 3) + 11\mathord{,}000\,(1 - 0.2) = 11\mathord{,}042.66
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>36</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>6</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>265.87</mn></mrow><annotation encoding="application/x-tex">
+AW_c = 36\mathord{,}000\,(A/P,\ 10\%,\ 6) + 4\mathord{,}000\,(1 - 0.2) - 0.2 \times 6\mathord{,}000.00 = 10\mathord{,}265.87
+</annotation></semantics></math></p>
+<p>تستبدل.</p>
+<p><span id="sol-9-84"><strong>9.84</strong></span> الميزة هي القيمة السنوية للمدافع ناقص القيمة السنوية للمتحدي:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>بدون ضريبة</th>
+<th>بضريبة 25%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ميزة الاستبدال</td>
+<td>‎-1,177.72</td>
+<td>‎-1,282.03</td>
+</tr>
+</tbody>
+</table>
+<p>القرار نفسه في الحالتين، لكن الضريبة غيرت حجم الميزة. الضريبة تأخذ ربع وفر التشغيل، وتعيد جزءا من الثمن عبر الاستهلاك، وتغير قيمة بيع المدافع.</p>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h2>
+<p><span id="sol-9-85"><strong>9.85</strong></span> الأعمار في A2:A7، والقيمة السوقية في B2:B7، والقيمة السنوية في C2:</p>
+<pre class="excel"><code>B2 =40000*(0.70 - 0.08*(A2-1))
+C2 =PMT(10%, A2, -40000, B2) + 6000 + 2000*(1/10% - A2/((1+10%)^A2 - 1))</code></pre>
+<p>العمر الاقتصادي:</p>
+<pre class="excel"><code>=INDEX(A2:A7, MATCH(MIN(C2:C7), C2:C7, 0))</code></pre>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>22,000.00</td>
+<td>18,190.48</td>
+<td>17,432.02</td>
+<td>17,416.51</td>
+<td>17,682.43</td>
+<td>18,076.12</td>
+</tr>
+</tbody>
+</table>
+<p><span id="sol-9-86"><strong>9.86</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> marginal_costs(M0, d, O1, G, i, years<span class="op">=</span><span class="dv">4</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    out, m <span class="op">=</span> [], M0</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(years):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        m_next <span class="op">=</span> m <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> d)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        out.append(m <span class="op">-</span> m_next <span class="op">+</span> i <span class="op">*</span> m <span class="op">+</span> O1 <span class="op">+</span> G <span class="op">*</span> k)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> m_next</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([<span class="bu">round</span>(c, <span class="dv">2</span>) <span class="cf">for</span> c <span class="kw">in</span> marginal_costs(<span class="dv">12000</span>, <span class="fl">0.25</span>, <span class="dv">8000</span>, <span class="dv">1500</span>, <span class="fl">0.10</span>)])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>12,200.00</td>
+<td>12,650.00</td>
+<td>13,362.50</td>
+<td>14,271.88</td>
+</tr>
+</tbody>
+</table>
+<p><span id="sol-9-87"><strong>9.87</strong></span></p>
+<pre class="excel"><code>=PMT(10%, 3, -9000, 3000) + 9000
+=PMT(10%, 8, -35000, 5000) + 4000</code></pre>
+<p>المدافع 11,712.69 دينار، والمتحدي 10,123.32 دينار. الإشارة السالبة للثمن تجعل النتيجة موجبة.</p>
+<p><span id="sol-9-88"><strong>9.88</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>C, O1, G, i <span class="op">=</span> <span class="dv">30000</span>, <span class="dv">3000</span>, <span class="dv">1500</span>, <span class="fl">0.10</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>aw <span class="op">=</span> {}</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">9</span>):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    oper <span class="op">=</span> [O1 <span class="op">+</span> G <span class="op">*</span> k <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    pw <span class="op">=</span> C <span class="op">+</span> npf.npv(i, [<span class="dv">0</span>] <span class="op">+</span> oper)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    aw[n] <span class="op">=</span> <span class="op">-</span>npf.pmt(i, n, pw)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> <span class="bu">min</span>(aw, key<span class="op">=</span>aw.get)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(best, <span class="bu">round</span>(aw[best], <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>36,000</td>
+<td>21,000</td>
+<td>16,468</td>
+<td>14,536</td>
+<td>13,629</td>
+<td>13,224</td>
+<td>13,095</td>
+<td>13,130</td>
+</tr>
+</tbody>
+</table>
+<p>أقل قيمة 13,094.59 دينار.</p>
+<p><span id="sol-9-89"><strong>9.89</strong></span> المدخلات في B1:B8 بنفس الترتيب. صافي بيع المدافع، ثم القيمتان السنويتان:</p>
+<pre class="excel"><code>B10 =B2 - B7*(B2 - B1)
+B11 =PMT(B8, B6, -B10) + B3*(1-B7) - B7*B1/B6
+B12 =PMT(B8, B6, -B4) + B5*(1-B7) - B7*B4/B6</code></pre>
+<p>المدافع 11,690.73 دينار، والمتحدي 12,951.90 دينار.</p>
+<p><span id="sol-9-90"><strong>9.90</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>M, R, O, i <span class="op">=</span> <span class="dv">20000</span>, <span class="dv">9000</span>, <span class="dv">2500</span>, <span class="fl">0.10</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    M_next <span class="op">=</span> M <span class="op">*</span> <span class="fl">0.80</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    gain <span class="op">=</span> R <span class="op">-</span> O <span class="op">+</span> M_next <span class="op">-</span> M <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> i)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="bu">round</span>(gain, <span class="dv">2</span>))</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> gain <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    M, R, O, year <span class="op">=</span> M_next, R <span class="op">*</span> <span class="fl">0.88</span>, O <span class="op">+</span> <span class="dv">600</span>, year <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الربح من الاحتفاظ</td>
+<td>500.00</td>
+<td>20.00</td>
+<td>‎-570.40</td>
+</tr>
+</tbody>
+</table>
+<p>الاحتفاظ سنتين ثم البيع.</p>
+<p><span id="sol-9-91"><strong>9.91</strong></span> التدفقات في B2:F2، والسنة 5 تجمع التشغيل والبيع:</p>
+<pre class="excel"><code>B2:E2  4000
+F2     =4000 - 8000
+=35000 + NPV(10%, B2:F2)</code></pre>
+<p>النتيجة 45,195.78 دينار.</p>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h2>
+<p><span id="sol-9-92"><strong>9.92</strong></span> الجواب (ج). القيمة السوقية. الثمن الأصلي غارق، والقيمة الدفترية محاسبية، وعرض الوكيل مرتبط بسعر الجديدة.</p>
+<p><span id="sol-9-93"><strong>9.93</strong></span> الجواب (ب). العمر الاقتصادي يوازن بين انخفاض تكلفة رأس المال السنوية وارتفاع التشغيل مع العمر.</p>
+<p><span id="sol-9-94"><strong>9.94</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>7</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+(10\mathord{,}000 - 7\mathord{,}000) + 0.1 \times 10\mathord{,}000 + 6\mathord{,}000 = 10\mathord{,}000
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي الفائدة المحبوسة. الخيار (ب) نسي النقص في القيمة. الخيار (د) حمل السنة كل قيمة الآلة.</p>
+<p><span id="sol-9-95"><strong>9.95</strong></span> الجواب (ب). التكلفة الحدية أقل من المتحدي، فالاحتفاظ سنة أرخص. في نهايتها نحسب التكلفة الحدية للسنة التالية.</p>
+<p><span id="sol-9-96"><strong>9.96</strong></span> الجواب (ج). البيع بخسارة يوفر ضريبة، فصافي البيع أعلى من السعر.</p>
+<p><span id="sol-9-97"><strong>9.97</strong></span> الجواب (ب). الحاجة محددة، فلا نفترض التكرار. نقيم الخيارين خلال 3 سنوات، ونضع قيمة بيع المتحدي في النهاية.</p>
+<p><span id="sol-9-98"><strong>9.98</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>9</mn><mi>,</mi><mn>732.06</mn></mrow><annotation encoding="application/x-tex">
+(6\mathord{,}000 + 9\mathord{,}000)\,(A/P,\ 10\%,\ 4) + 5\mathord{,}000 = 9\mathord{,}732.06
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي سعر المدافع. الخيار (ب) نسي الإصلاح. الخيار (ج) تجاهل الفائدة.</p>
+<p><span id="sol-9-99"><strong>9.99</strong></span> الجواب (ب). بعد العمر الاقتصادي، كل سنة إضافية تضيف تشغيلا أكثر مما توفره من توزيع الثمن.</p>
+<p><span id="sol-9-100"><strong>9.100</strong></span> الجواب (ب). الثمن المدفوع لا يعود بأي قرار. السؤال الوحيد: أي خيار أرخص من اليوم فصاعدا؟</p>
+<p><span id="sol-9-101"><strong>9.101</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>11</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mi>/</mi><mn>0.1</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.1</mn></mrow></mfrac><mo>=</mo><mn>119</mn><mi>,</mi><mn>090.91</mn></mrow><annotation encoding="application/x-tex">
+\frac{11\mathord{,}000 + 12\mathord{,}000 / 0.1}{1 + 0.1} = 119\mathord{,}090.91
+</annotation></semantics></math></p>
+<p>الخيار (أ) قيمة الاستبدال الآن. الخيار (د) نسي أن المتحدي يتكرر بلا نهاية.</p>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h2>
+<p><span id="sol-9-102"><strong>9.102</strong></span> (أ)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العمر</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة السنوية</td>
+<td>57,000</td>
+<td>50,333</td>
+<td>49,870</td>
+<td>50,889</td>
+<td>52,447</td>
+</tr>
+</tbody>
+</table>
+<p>أقل قيمة سنوية 49,870.09 دينار.</p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>C</mi><mi>k</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>M</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.10</mn><mspace width="0.167em"></mspace><msub><mi>M</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>O</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">
+MC_k = (M_{k-1} - M_k) + 0.10\,M_{k-1} + O_k
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة الحدية</td>
+<td>42,000</td>
+<td>45,400</td>
+<td>50,900</td>
+</tr>
+</tbody>
+</table>
+<p>(ج) تحتفظ بالقديمة سنتين، ثم تستبدلها.</p>
+<p><span id="sol-9-103"><strong>9.103</strong></span> (أ) البيع تحت القيمة الدفترية يوفر ضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>0.2</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>16</mn><mo>,</mo><mn>000</mn><mo>−</mo><mn>9</mn><mo>,</mo><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>400</mn></mrow><annotation encoding="application/x-tex">
+9{,}000 + 0.2 \times (16{,}000 - 9{,}000) = 10\mathord{,}400
+</annotation></semantics></math></p>
+<p>(ب) <strong>الاحتفاظ:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>10</mn><mi>,</mi><mn>400</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>21</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>0.8</mn><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>3</mn><mo>,</mo><mn>200</mn><mo>=</mo><mn>18</mn><mi>,</mi><mn>903.49</mn></mrow><annotation encoding="application/x-tex">
+AW = 10\mathord{,}400\,(A/P,\ 10\%,\ 5) + 21{,}000 \times 0.8 - 0.2 \times 3{,}200 = 18\mathord{,}903.49
+</annotation></semantics></math></p>
+<p><strong>الإصلاح:</strong> يضاف إلى قيمة القديمة، ويستهلك معها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>,</mi><mn>400</mn><mo>+</mo><mn>18</mn><mo>,</mo><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>13</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>0.8</mn><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>6</mn><mo>,</mo><mn>800</mn><mo>=</mo><mn>16</mn><mi>,</mi><mn>531.85</mn></mrow><annotation encoding="application/x-tex">
+AW = (10\mathord{,}400 + 18{,}000)\,(A/P,\ 10\%,\ 5) + 13{,}000 \times 0.8 - 0.2 \times 6{,}800 = 16\mathord{,}531.85
+</annotation></semantics></math></p>
+<p><strong>الجديدة:</strong> بيعها بعد 5 سنوات كله ربح خاضع، لأن قيمتها الدفترية صفر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>65</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>12</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>7</mn><mo>,</mo><mn>200</mn><mo>−</mo><mn>2</mn><mo>,</mo><mn>600</mn><mo>=</mo><mn>19</mn><mi>,</mi><mn>781.27</mn></mrow><annotation encoding="application/x-tex">
+AW = 65{,}000\,(A/P,\ 10\%,\ 5) - 12{,}000\,(A/F,\ 10\%,\ 5) + 7{,}200 - 2{,}600 = 19\mathord{,}781.27
+</annotation></semantics></math></p>
+<p>(ج) الأرخص: الإصلاح الشامل.</p>
+<p><span id="sol-9-104"><strong>9.104</strong></span> الحاجة 4 سنوات بالضبط، فنقارن بالقيمة الحالية خلالها.</p>
+<p>(أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>14</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>11</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>3</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>46</mn><mi>,</mi><mn>819.48</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 14{,}000 + 11{,}000\,(P/A,\ 10\%,\ 4) - 3{,}000\,(P/F,\ 10\%,\ 4) = 46\mathord{,}819.48
+</annotation></semantics></math></p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>60</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>2</mn><mo>,</mo><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>30</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>47</mn><mi>,</mi><mn>434.26</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 60{,}000 + 2{,}500\,(P/A,\ 10\%,\ 4) - 30{,}000\,(P/F,\ 10\%,\ 4) = 47\mathord{,}434.26
+</annotation></semantics></math></p>
+<p>(ج) في السنة 2 يباع الحالي بمبلغ 9,000، ويشترى الجديد، ويباع الجديد بعد سنتين بمبلغ 42,000:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>c</mi></msub><mo>=</mo><mn>50</mn><mi>,</mi><mn>138.92</mn></mrow><annotation encoding="application/x-tex">
+PW_c = 50\mathord{,}138.92
+</annotation></semantics></math></p>
+<p>الأرخص: الاحتفاظ 4 سنوات. الأرقام وحدها لا تكفي في مستشفى: احتمال تعطل المولد القديم أثناء عملية جراحية قد يجعل الاستبدال ضروريا حتى لو كان أغلى.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/solutions-ch08.html" class="pagination-link" aria-label="حلول مسائل الفصل 8">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
