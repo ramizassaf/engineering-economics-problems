@@ -247,6 +247,27 @@ CHECKS = {
     "c08-j-02": {"A1": lambda v: solve_linear(lambda a: sum(a * 1.05 ** (k - 1) * 1.08 ** (6 - k) for k in range(1, 7)) - 30000 * 1.05 ** 6)},
     "c08-j-03": {"Pi": lambda v: 90000 * 0.71 + npf.npv(0.12, [0] + [6000 * 1.08 ** k + 2000 * 0.71 * 1.02 ** k for k in range(1, 7)])},
 
+    # ch09: replacement, rebuilt from cash flows with numpy_financial
+    "c09-ex-outsider": {"Ad": lambda v: npf.pmt(v["i"], v["nd"], -v["M"], v["Sd"]) + v["Od"],
+                        "Ac": lambda v: npf.pmt(v["i"], v["nc"], -v["C"], v["Sc"]) + v["Oc"]},
+    "c09-ex-esl": {"m": lambda v: min(esl_aw(v["C"], [v["C"] * (v["a"] - v["b"] * k) for k in range(6)], v["O1"], v["G"], v["i"]))},
+    "c09-ex-marginal": {"c3": lambda v: v["M0"] * (1 - v["d"]) ** 2 * (1 + v["i"]) - v["M0"] * (1 - v["d"]) ** 3 + v["Od"] + 2 * v["G"]},
+    "c09-ex-study": {"Pb": lambda v: npf.npv(v["i"], [v["M"], v["Od"], v["Od"] + v["G"] - v["Sd2"] + v["C"], v["Oc"], v["Oc"], v["Oc"] - v["S3"]])},
+    "c09-ex-tax": {"Ad": lambda v: -npf.pmt(v["i"], v["n"], npf.npv(v["i"], [v["M"] - v["t"] * (v["M"] - v["B"])] + [v["Od"] * (1 - v["t"]) - v["t"] * v["B"] / v["n"]] * int(v["n"])))},
+    "c09-c-05": {"Ad": lambda v: npf.pmt(v["i"], v["n"], -v["M"]) - npf.pmt(v["i"], v["n"], npf.npv(v["i"], [0] + [v["Od"] + v["G"] * k for k in range(int(v["n"]))]))},
+    "c09-c-09": {"Pd": lambda v: npf.npv(v["i"], [v["M"]] + [v["Od"]] * int(v["nd"]) + [0] * int(6 - v["nd"])) + (v["C"] + npf.pv(v["i"], 6 - v["nd"], -v["Oc"])) / (1 + v["i"]) ** v["nd"]},
+    "c09-d-05": {"m": lambda v: min(esl_aw(v["C"], [0] * 8, v["O1"], v["G"], v["i"]))},
+    "c09-d-07": {"t5": lambda v: esl_aw(v["C"], [v["C"] * (v["a"] - v["b"] * k) for k in range(5)], v["O1"], v["G"], v["i"])[4]},
+    "c09-d-09": {"t4": lambda v: -npf.pmt(v["i"], 4, npf.npv(v["i"], [v["C"], v["O1"], v["O2"], v["O3"], v["O4"] - v["M4"]]))},
+    "c09-e-07": {"Pw": lambda v: v["mc"] / (1 + v["i"]) + perpetuity_growing(v["Ac"], 0, v["i"], 6000) / (1 + v["i"])},
+    "c09-f-02": {"Pb": lambda v: npf.npv(v["i"], [v["M"], v["Od"] - v["S1"] + v["C"], v["Oc"], v["Oc"], v["Oc"], v["Oc"] - v["S4"]])},
+    "c09-f-06": {"n2": lambda v: v["R1"] * (1 - v["h"]) - v["O1"] - v["G"] + v["M0"] * (1 - v["d"]) ** 2 - v["M0"] * (1 - v["d"]) * (1 + v["i"])},
+    "c09-g-05": {"P": lambda v: npf.npv(v["i"], [-(v["C"] - (v["M"] - v["t"] * (v["M"] - v["B"])))] + [inc_cf(v["Od"] - v["Oc"], 0, (v["C"] - v["B"]) / v["n"], v["t"])] * int(v["n"]))},
+    "c09-g-08": {"Mx": lambda v: brentq(lambda M: -npf.pmt(v["i"], v["n"], npf.npv(v["i"], [M - v["t"] * (M - v["B"])] + [v["Od"] * (1 - v["t"]) - v["t"] * v["B"] / v["n"]] * int(v["n"]))) - (-npf.pmt(v["i"], v["n"], npf.npv(v["i"], [v["C"]] + [v["Oc"] * (1 - v["t"]) - v["t"] * v["C"] / v["n"]] * int(v["n"])))), -1e7, 1e7)},
+    "c09-j-01": {"Ac": lambda v: min(esl_aw(120000, [90000, 78000, 66000, 54000, 42000], 15000, 7000, 0.10))},
+    "c09-j-02": {"Ao": lambda v: -npf.pmt(0.10, 5, npf.npv(0.10, [10400 + 18000] + [13000 * 0.8 - 0.2 * 34000 / 5] * 5))},
+    "c09-j-03": {"Pc": lambda v: npf.npv(0.10, [14000, 11000, 11000 - 9000 + 60000, 2500, 2500 - 42000])},
+
 }
 
 
@@ -298,6 +319,16 @@ def perpetuity_growing(A1, g, i, terms=5000):
         total += term
         term *= (1 + g) / (1 + i)
     return total
+
+
+def esl_aw(C, market, O1, G, i):
+    """Annual worth for each life n, from year-by-year flows."""
+    out = []
+    for n in range(1, len(market) + 1):
+        flows = [C] + [O1 + G * k for k in range(n)]
+        flows[n] -= market[n - 1]
+        out.append(-npf.pmt(i, n, npf.npv(i, flows)))
+    return out
 
 
 def ddb_sched(B, S, n):
