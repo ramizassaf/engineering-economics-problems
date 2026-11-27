@@ -213,6 +213,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -313,6 +319,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
   </div>
 </li>
       </ul>
@@ -453,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>الحل الأمثل: المشاريع A وD وE، بقيمة حالية 31,500 دينار.</p>
 <p>الحصر الكامل يضمن الحل الأمثل، لكنه لا يصلح للمشاريع الكثيرة: 20 مشروعا تعطي أكثر من مليون مجموعة. في Python يبقى الحصر سهلا حتى نحو 20 مشروعا:</p>
-<div id="258444fc" class="cell" data-execution_count="1">
+<div id="1bac4b69" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> combinations</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>projects <span class="op">=</span> {<span class="st">"A"</span>: (<span class="dv">30000</span>, <span class="dv">9000</span>), <span class="st">"B"</span>: (<span class="dv">40000</span>, <span class="dv">14000</span>), <span class="st">"C"</span>: (<span class="dv">25000</span>, <span class="dv">6500</span>),</span>
@@ -480,15 +492,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-cb-pi" class="level2" data-number="C.3">
 <h2 data-number="C.3" class="anchored" data-anchor-id="sec-cb-pi"><span class="header-section-number">C.3</span> الطريقة الثانية: مؤشر الربحية</h2>
-<p>مؤشر الربحية يقيس القيمة الحالية لكل دينار مستثمر:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>I</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mi>W</mi></mrow><mi>I</mi></mfrac></mrow><annotation encoding="application/x-tex">
-PI = \frac{PW}{I}
+<p>مؤشر الربحية يقيس القيمة الحالية للتدفقات الداخلة لكل دينار مستثمر. إذا كان PW صافي القيمة الحالية للمشروع، و I استثماره في السنة 0:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>I</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mi>W</mi><mo>+</mo><mi>I</mi></mrow><mi>I</mi></mfrac><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mi>P</mi><mi>W</mi></mrow><mi>I</mi></mfrac></mrow><annotation encoding="application/x-tex">
+PI = \frac{PW + I}{I} = 1 + \frac{PW}{I}
 </annotation></semantics></math></p>
+<p>المشروع مقبول إذا كان المؤشر أكبر من 1. بعض الكتب تستخدم النسبة PW على I مباشرة، وتسميها نسبة صافي القيمة الحالية إلى الاستثمار. الفرق بينهما 1 دائما، فالترتيب واحد، لكن الأفضل ألا نسمي الاثنين بنفس الاسم.</p>
 <p>الطريقة: نرتب المشاريع تنازليا حسب المؤشر، ثم نختار من الأعلى ما دامت الميزانية تكفي.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>المشروع</th>
+<th>صافي القيمة الحالية على الاستثمار</th>
 <th>المؤشر</th>
 <th>الترتيب</th>
 </tr>
@@ -497,26 +511,31 @@ PI = \frac{PW}{I}
 <tr class="odd">
 <td>B</td>
 <td>0.350</td>
+<td>1.350</td>
 <td>1</td>
 </tr>
 <tr class="even">
 <td>E</td>
 <td>0.350</td>
+<td>1.350</td>
 <td>2</td>
 </tr>
 <tr class="odd">
 <td>D</td>
 <td>0.310</td>
+<td>1.310</td>
 <td>3</td>
 </tr>
 <tr class="even">
 <td>A</td>
 <td>0.300</td>
+<td>1.300</td>
 <td>4</td>
 </tr>
 <tr class="odd">
 <td>C</td>
 <td>0.260</td>
+<td>1.260</td>
 <td>5</td>
 </tr>
 </tbody>
@@ -557,7 +576,7 @@ x_j \in \{0, 1\}
 </section>
 <section id="الحل-في-python-بمكتبة-pulp" class="level3">
 <h3 class="anchored" data-anchor-id="الحل-في-python-بمكتبة-pulp">الحل في Python بمكتبة PuLP</h3>
-<div id="fc25ee99" class="cell" data-execution_count="2">
+<div id="e06ed2ed" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pulp</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> pulp.LpProblem(<span class="st">"capital_budgeting"</span>, pulp.LpMaximize)</span>
@@ -573,7 +592,7 @@ x_j \in \{0, 1\}
 <pre><code>['A', 'D', 'E'] 31500.0</code></pre>
 </div>
 </div>
-<p>الطرق الثلاث تتفق على A وD وE.</p>
+<p>الحصر الكامل والبرمجة بالأعداد الصحيحة يتفقان على الحل الأمثل: A وD وE، بقيمة حالية 31,500 دينار. مؤشر الربحية طريقة ترتيب تقريبية، وأعطى في هذا المثال حلا مختلفا وأقل: A وB وE، بقيمة 30,000 دينار.</p>
 </section>
 </section>
 <section id="sec-cb-relations" class="level2" data-number="C.5">

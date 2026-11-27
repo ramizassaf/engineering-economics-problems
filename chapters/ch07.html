@@ -213,6 +213,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -313,6 +319,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
   </div>
 </li>
       </ul>
@@ -442,6 +454,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
 CF = (R - O)(1 - t) + t\,D
 </annotation></semantics></math></p>
+<p>تبقى افتراضات الفصل الخامس نفسها: الشركة رابحة من مجمل أعمالها وتستفيد من الوفر الضريبي في نفس السنة، والضريبة تدفع في سنة الدخل.</p>
 <div id="ex-7-2" class="ee-item" data-id="c07-ex-operating" data-kind="example" data-label="7.2">
 <p><strong>مثال 7.2: التدفق النقدي التشغيلي لسنة واحدة</strong></p>
 <p>مشروع إيراده السنوي 90,000 دينار، وتكاليف تشغيله 40,000 دينار. معداته تكلف 75,000 دينار وتستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%. ما التدفق النقدي التشغيلي في سنة واحدة؟</p>
@@ -836,6 +849,7 @@ PW = 47\mathord{,}248.15
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi></mrow></msub><mo>=</mo><mi>r</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 r_{after} = r\,(1 - t)
 </annotation></semantics></math></p>
+<p>هذه القاعدة تفترض أن كل الفائدة مقبولة ضريبيا، وأن الشركة رابحة فتستفيد من الوفر كاملا. بعض الدول تضع حدا لخصم الفائدة، نسبة من الربح أو من حقوق الملكية، والشركة الخاسرة لا توفر شيئا في نفس السنة. في هذه الحالات تكلفة القرض بعد الضريبة أعلى من هذه المعادلة.</p>
 <div id="ex-7-9" class="ee-item" data-id="c07-ex-loan" data-kind="example" data-label="7.9">
 <p><strong>مثال 7.9: تمويل المشروع بقرض</strong></p>
 <p>آلة تكلف 90,000 دينار، وتعطي إيرادا 70,000 بتكاليف 30,000 دينار سنويا، لمدة 3 سنوات، وتستهلك بالقسط الثابت. الشركة تقترض 60,000 دينار بفائدة 8% تسدد بأقساط سنوية متساوية، وتدفع الباقي من مالها. نسبة الضريبة 20%، والحد الأدنى للعائد على مال الشركة 12%. ما القيمة الحالية لتدفقات مال الشركة؟</p>
@@ -1040,7 +1054,7 @@ R = 30\mathord{,}000 + \frac{27\mathord{,}740.97 - 4\mathord{,}000.00}{1 - 0.2} 
 <p>المتغير الأخطر هو الذي يحتاج أصغر تغير ليلغي المشروع، وهنا الإيراد. هذا هو المتغير الذي يستحق دراسة أدق قبل القرار.</p>
 </div>
 <p>الرسم التالي يسمى مخطط العنكبوت. كل خط متغير، والمحور الأفقي نسبة التغير، والعمودي القيمة الحالية. كلما كان الخط أشد ميلا، كان المتغير أخطر. النقطة التي يقطع فيها الخط الصفر هي نقطة تعادله:</p>
-<div id="3e3e1d00" class="cell" data-execution_count="1">
+<div id="e73500a5" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1121,7 +1135,7 @@ R = 30\mathord{,}000 + \frac{27\mathord{,}740.97 - 4\mathord{,}000.00}{1 - 0.2} 
 <section id="sec-7-python" class="level2" data-number="7.9">
 <h2 data-number="7.9" class="anchored" data-anchor-id="sec-7-python"><span class="header-section-number">7.9</span> Python: جدول التدفقات</h2>
 <p>هذا البرنامج يبني جدول المشروع الكامل في المثال الأساسي، ويحسب القيمة الحالية والمعدل. غير المدخلات في الأعلى لتجرب مشاريع أخرى:</p>
-<div id="d6a6508b" class="cell" data-execution_count="2">
+<div id="479eae6b" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>C, W, R, O, M <span class="op">=</span> <span class="dv">150000</span>, <span class="dv">15000</span>, <span class="dv">120000</span>, <span class="dv">60000</span>, <span class="dv">20000</span></span>

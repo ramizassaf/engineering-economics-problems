@@ -62,9 +62,16 @@
     box.append(bar, body);
 
     bNew.addEventListener('click', () => {
-      let env, tries = 0;
-      do { env = EE.compute(it, EE.draw(it, Math.random)); tries++; }
-      while (!Object.values(env).every((v) => typeof v !== 'number' || Number.isFinite(v)) && tries < 20);
+      // A draw with no valid answer (a rate with no root, a value that is not
+      // finite) is thrown away and drawn again. After 20 failures, nothing changes.
+      let env = null;
+      for (let tries = 0; tries < 20 && !env; tries++) {
+        try {
+          const e = EE.compute(it, EE.draw(it, Math.random));
+          if (Object.values(e).every((v) => typeof v !== 'number' || Number.isFinite(v))) env = e;
+        } catch (err) { /* draw again */ }
+      }
+      if (!env) return;
       let html;
       if (kind === 'example') {
         const title = it.title ? ': ' + EE.render(it.title.trim(), env) : '';

@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; المخاطرة وعدم التأكد – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch09.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-10-expected" id="toc-sec-10-expected" class="nav-link active" data-scroll-target="#sec-10-expected"><span class="header-section-number">10.1</span> القيمة المتوقعة والانحراف المعياري</a></li>
+  <li><a href="#sec-10-epw" id="toc-sec-10-epw" class="nav-link" data-scroll-target="#sec-10-epw"><span class="header-section-number">10.2</span> القيمة الحالية المتوقعة</a></li>
+  <li><a href="#sec-10-compare" id="toc-sec-10-compare" class="nav-link" data-scroll-target="#sec-10-compare"><span class="header-section-number">10.3</span> المقارنة بين بدائل فيها مخاطرة</a></li>
+  <li><a href="#sec-10-tree" id="toc-sec-10-tree" class="nav-link" data-scroll-target="#sec-10-tree"><span class="header-section-number">10.4</span> شجرة القرار</a></li>
+  <li><a href="#sec-10-info" id="toc-sec-10-info" class="nav-link" data-scroll-target="#sec-10-info"><span class="header-section-number">10.5</span> قيمة المعلومات</a></li>
+  <li><a href="#sec-10-normal" id="toc-sec-10-normal" class="nav-link" data-scroll-target="#sec-10-normal"><span class="header-section-number">10.6</span> التوزيع الطبيعي</a></li>
+  <li><a href="#sec-10-simulation" id="toc-sec-10-simulation" class="nav-link" data-scroll-target="#sec-10-simulation"><span class="header-section-number">10.7</span> المحاكاة: مونت كارلو</a></li>
+  <li><a href="#sec-10-problems" id="toc-sec-10-problems" class="nav-link" data-scroll-target="#sec-10-problems"><span class="header-section-number">10.8</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" id="toc-الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" class="nav-link" data-scroll-target="#الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري">الجزء ب: القيمة المتوقعة والانحراف المعياري</a></li>
+  <li><a href="#الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" id="toc-الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" class="nav-link" data-scroll-target="#الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة">الجزء ج: القيمة الحالية المتوقعة واحتمال الخسارة</a></li>
+  <li><a href="#الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" id="toc-الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" class="nav-link" data-scroll-target="#الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة">الجزء د: المقارنة بين بدائل فيها مخاطرة</a></li>
+  <li><a href="#الجزء-هـ-شجرة-القرار" id="toc-الجزء-هـ-شجرة-القرار" class="nav-link" data-scroll-target="#الجزء-هـ-شجرة-القرار">الجزء هـ: شجرة القرار</a></li>
+  <li><a href="#الجزء-و-قيمة-المعلومات" id="toc-الجزء-و-قيمة-المعلومات" class="nav-link" data-scroll-target="#الجزء-و-قيمة-المعلومات">الجزء و: قيمة المعلومات</a></li>
+  <li><a href="#الجزء-ز-التوزيع-الطبيعي" id="toc-الجزء-ز-التوزيع-الطبيعي" class="nav-link" data-scroll-target="#الجزء-ز-التوزيع-الطبيعي">الجزء ز: التوزيع الطبيعي</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch10" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>كل رقم في الفصول السابقة كان رقما واحدا: الإيراد كذا، والعمر كذا. في الفصل السابع سألنا: ماذا لو أخطأنا؟ وغيرنا كل متغير لنرى أثره. لكن تحليل الحساسية لا يقول أي الحالات أرجح. هذا الفصل يضيف الاحتمالات: لكل نتيجة ممكنة وزن، فنحسب ما نتوقعه في المتوسط، وكم قد نبتعد عنه، وما احتمال الخسارة.</p>
+<p>ثلاث أدوات أساسية:</p>
+<ol type="1">
+<li><strong>القيمة المتوقعة والانحراف المعياري:</strong> متوسط النتائج، ومقياس تشتتها.</li>
+<li><strong>شجرة القرار:</strong> لقرارات على مراحل، كل مرحلة بعد أن تتضح معلومات جديدة.</li>
+<li><strong>المحاكاة:</strong> عندما تكثر المتغيرات غير المؤكدة، نجرب آلاف الحالات بالحاسوب.</li>
+</ol>
+<section id="sec-10-expected" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sec-10-expected"><span class="header-section-number">10.1</span> القيمة المتوقعة والانحراف المعياري</h2>
+<p>المتغير غير المؤكد له عدة قيم ممكنة، ولكل قيمة احتمال. مجموع الاحتمالات 1.</p>
+<div id="ex-10-1" class="ee-item" data-id="c10-ex-expected" data-kind="example" data-label="10.1">
+<p><strong>مثال 10.1: القيمة المتوقعة والانحراف المعياري</strong></p>
+<p>مدير مبيعات يقدر إيراد منتج جديد في السنة القادمة. الإيراد 40,000 دينار إذا كان الطلب ضعيفا، واحتمال ذلك 0.25. و60,000 دينار إذا كان متوسطا، واحتماله 0.50. و75,000 دينار إذا كان قويا. ما القيمة المتوقعة للإيراد؟ وما الانحراف المعياري؟</p>
+<p><strong>الحل:</strong></p>
+<p>احتمال الطلب القوي هو الباقي حتى يكتمل المجموع إلى 1:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>3</mn></msub><mo>=</mo><mn>1</mn><mo>−</mo><mn>0.25</mn><mo>−</mo><mn>0.50</mn><mo>=</mo><mn>0.25</mn></mrow><annotation encoding="application/x-tex">
+p_3 = 1 - 0.25 - 0.50 = 0.25
+</annotation></semantics></math></p>
+<p><strong>القيمة المتوقعة</strong> متوسط النتائج، كل نتيجة بوزن احتمالها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∑</mo><msub><mi>p</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(X) = \sum p_k\,x_k
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.25</mn><mo>×</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.25</mn><mo>×</mo><mn>75</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>58</mn><mi>,</mi><mn>750.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(X) = 0.25 \times 40\mathord{,}000 + 0.50 \times 60\mathord{,}000 + 0.25 \times 75\mathord{,}000 = 58\mathord{,}750.00
+</annotation></semantics></math></p>
+<p>هذا ليس الإيراد الذي سيحدث، بل متوسط ما يحدث لو تكرر القرار مرات كثيرة.</p>
+<p><strong>التباين</strong> متوسط مربع البعد عن القيمة المتوقعة، و<strong>الانحراف المعياري</strong> جذره:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mo>∑</mo><msub><mi>p</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>−</mo><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">
+\sigma^2 = \sum p_k\,(x_k - \mathrm{E}(X))^2
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الطلب</th>
+<th>الاحتمال</th>
+<th>الإيراد</th>
+<th>البعد عن المتوقع</th>
+<th>مربع البعد ضرب الاحتمال</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ضعيف</td>
+<td>0.25</td>
+<td>40,000</td>
+<td>‎-18,750</td>
+<td>87,890,625</td>
+</tr>
+<tr class="even">
+<td>متوسط</td>
+<td>0.50</td>
+<td>60,000</td>
+<td>1,250</td>
+<td>781,250</td>
+</tr>
+<tr class="odd">
+<td>قوي</td>
+<td>0.25</td>
+<td>75,000</td>
+<td>16,250</td>
+<td>66,015,625</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mn>154</mn><mi>,</mi><mn>687</mn><mi>,</mi><mn>500</mn></mrow></msqrt><mo>=</mo><mn>12</mn><mi>,</mi><mn>437.34</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{154\mathord{,}687\mathord{,}500} = 12\mathord{,}437.34
+</annotation></semantics></math></p>
+<p>الانحراف المعياري يقيس المخاطرة: كم يبتعد الإيراد عادة عن متوسطه.</p>
+</div>
+</section>
+<section id="sec-10-epw" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-10-epw"><span class="header-section-number">10.2</span> القيمة الحالية المتوقعة</h2>
+<p>نطبق نفس الفكرة على القيمة الحالية: نحسبها لكل حالة، ثم نأخذ متوسطها بالاحتمالات.</p>
+<div id="ex-10-2" class="ee-item" data-id="c10-ex-epw" data-kind="example" data-label="10.2">
+<p><strong>مثال 10.2: القيمة الحالية المتوقعة واحتمال الخسارة</strong></p>
+<p>مشروع يكلف 100,000 دينار، وعمره 5 سنوات. صافي تدفقه السنوي يعتمد على السوق: 16,500 دينار باحتمال 0.30، أو 30,500 دينار باحتمال 0.50، أو 41,500 دينار باحتمال 0.20. الحد الأدنى 12%. ما القيمة الحالية المتوقعة؟ وما انحرافها المعياري؟ وما احتمال أن يخسر المشروع؟</p>
+<p><strong>الحل:</strong></p>
+<p>نحسب القيمة الحالية في كل حالة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>k</mi></msub><mo>=</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><msub><mi>A</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW_k = -100\mathord{,}000 + A_k\,(P/A,\ 12\%,\ 5)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السوق</th>
+<th>الاحتمال</th>
+<th>التدفق السنوي</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ضعيف</td>
+<td>0.30</td>
+<td>16,500</td>
+<td>‎-40,521</td>
+</tr>
+<tr class="even">
+<td>متوسط</td>
+<td>0.50</td>
+<td>30,500</td>
+<td>9,946</td>
+</tr>
+<tr class="odd">
+<td>قوي</td>
+<td>0.20</td>
+<td>41,500</td>
+<td>49,598</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>736.12</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow></msub><mo>=</mo><mn>32</mn><mi>,</mi><mn>039.95</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 2\mathord{,}736.12, \qquad \sigma_{PW} = 32\mathord{,}039.95
+</annotation></semantics></math></p>
+<p>القيمة الحالية خطية في التدفق السنوي، فنفس النتيجة تأتي من التدفق المتوقع مباشرة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>28</mn><mi>,</mi><mn>500.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>736.12</mn></mrow><annotation encoding="application/x-tex">
+-100\mathord{,}000 + 28\mathord{,}500.00\,(P/A,\ 12\%,\ 5) = 2\mathord{,}736.12
+</annotation></semantics></math></p>
+<p>احتمال الخسارة هو مجموع احتمالات الحالات التي قيمتها الحالية سالبة: 0.30.</p>
+<p>القيمة المتوقعة موجبة، فالمشروع مقبول بمعيار القيمة المتوقعة، لكن الشركة تخسر في بعض الحالات. هل تتحمل الخسارة إن وقعت؟ هذا سؤال لا تجيب عنه القيمة المتوقعة وحدها.</p>
+</div>
+<p>القيمة المتوقعة وحدها قد تخفي خطرا كبيرا. مشروعان لهما نفس القيمة المتوقعة، أحدهما لا يخسر أبدا، والآخر يخسر نصف رأس المال في حالة من ثلاث. لذلك نذكر دائما الانحراف المعياري واحتمال الخسارة معها.</p>
+<p>عندما يدخل المتغير في القيمة الحالية بشكل خطي، مثل التدفق السنوي، تكفي القيمة المتوقعة للمتغير. عندما لا يكون خطيا، مثل العمر أو نسبة الفائدة، يجب الحساب لكل حالة.</p>
+<div id="ex-10-3" class="ee-item" data-id="c10-ex-nonlinear" data-kind="example" data-label="10.3">
+<p><strong>مثال 10.3: عمر غير مؤكد: القيمة المتوقعة ليست قيمة المتوسط</strong></p>
+<p>آلة تكلف 60,000 دينار، وتوفر 17,000 دينار سنويا. عمرها غير مؤكد: 3 سنوات باحتمال 0.50، أو 7 سنوات باحتمال 0.50. الحد الأدنى 12%. قارن القيمة الحالية المتوقعة بالقيمة الحالية عند العمر المتوقع.</p>
+<p><strong>الحل:</strong></p>
+<p><strong>القيمة الحالية المتوقعة:</strong> نحسب لكل عمر، ثم نأخذ المتوسط بالاحتمالات.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>3</mn></msub><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>17</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>19</mn><mi>,</mi><mn>168.87</mn></mrow><annotation encoding="application/x-tex">
+PW_{3} = -60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 3) = -19\mathord{,}168.87
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>7</mn></msub><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>17</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>17</mn><mi>,</mi><mn>583.86</mn></mrow><annotation encoding="application/x-tex">
+PW_{7} = -60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 7) = 17\mathord{,}583.86
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.50</mn><mo>×</mo><mi>−</mi><mn>19</mn><mi>,</mi><mn>168.87</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>17</mn><mi>,</mi><mn>583.86</mn><mo>=</mo><mi>−</mi><mn>792.50</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 0.50 \times -19\mathord{,}168.87 + 0.50 \times 17\mathord{,}583.86 = -792.50
+</annotation></semantics></math></p>
+<p><strong>القيمة الحالية عند العمر المتوقع:</strong> العمر المتوقع 5.00 سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>17</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5.00</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>281.20</mn></mrow><annotation encoding="application/x-tex">
+-60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 5.00) = 1\mathord{,}281.20
+</annotation></semantics></math></p>
+<p>الرقمان مختلفان. القيمة الحالية ليست خطية في العمر: السنوات البعيدة تضيف أقل من القريبة. القاعدة: احسب القيمة الحالية لكل حالة، ثم خذ المتوسط. لا تأخذ متوسط المدخلات ثم تحسب، إلا إذا كانت العلاقة خطية.</p>
+</div>
+<p>إذا كانت التدفقات في السنوات المختلفة مستقلة، وعرفنا متوسط وانحراف كل منها، نحسب متوسط القيمة الحالية وانحرافها مباشرة، ثم نقرب توزيعها بالتوزيع الطبيعي.</p>
+<div id="ex-10-4" class="ee-item" data-id="c10-ex-independent" data-kind="example" data-label="10.4">
+<p><strong>مثال 10.4: تدفقات مستقلة كل سنة</strong></p>
+<p>مشروع يكلف 50,000 دينار اليوم. تدفقه في كل سنة من السنوات الثلاث غير مؤكد، ومستقل عن السنوات الأخرى:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة المتوقعة</td>
+<td>22,000</td>
+<td>24,000</td>
+<td>26,000</td>
+</tr>
+<tr class="even">
+<td>الانحراف المعياري</td>
+<td>3,000</td>
+<td>5,000</td>
+<td>7,000</td>
+</tr>
+</tbody>
+</table>
+<p>الحد الأدنى 10%. ما القيمة الحالية المتوقعة وانحرافها المعياري؟ وما احتمال الخسارة إذا كان توزيع القيمة الحالية طبيعيا تقريبا؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>القيمة المتوقعة:</strong> نخصم القيم المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>C</mi><mo>+</mo><mo>∑</mo><mfrac><msub><mi>μ</mi><mi>t</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mn>9</mn><mi>,</mi><mn>368.90</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -C + \sum \frac{\mu_t}{(1 + i)^t} = 9\mathord{,}368.90
+</annotation></semantics></math></p>
+<p><strong>التباين:</strong> كل تدفق مضروب في معامل الخصم، فتباينه يضرب في مربع المعامل. والتدفقات مستقلة، فتجمع التباينات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mo>∑</mo><mfrac><msubsup><mi>σ</mi><mi>t</mi><mn>2</mn></msubsup><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>2</mn><mi>t</mi></mrow></msup></mrow></mfrac><mo>=</mo><mn>52</mn><mi>,</mi><mn>172</mn><mi>,</mi><mn>575</mn></mrow><annotation encoding="application/x-tex">
+\sigma^2_{PW} = \sum \frac{\sigma_t^2}{(1 + i)^{2t}} = 52\mathord{,}172\mathord{,}575
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>223.06</mn></mrow><annotation encoding="application/x-tex">
+\sigma_{PW} = 7\mathord{,}223.06
+</annotation></semantics></math></p>
+<p><strong>احتمال الخسارة:</strong> نحسب عدد الانحرافات المعيارية بين الصفر والقيمة المتوقعة، ثم نقرأ الاحتمال من التوزيع الطبيعي المعياري:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>0</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>368.90</mn></mrow><mrow><mn>7</mn><mi>,</mi><mn>223.06</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>1.30</mn></mrow><annotation encoding="application/x-tex">
+z = \frac{0 - 9\mathord{,}368.90}{7\mathord{,}223.06} = -1.30
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.S.DIST(-1.30, TRUE)</code></pre>
+<p>احتمال الخسارة 9.73%.</p>
+<p>إذا كانت التدفقات مرتبطة، فالسنة الجيدة تتبعها سنة جيدة، يكون الانحراف المعياري أكبر من هذا، والمخاطرة أعلى.</p>
+</div>
+</section>
+<section id="sec-10-compare" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="sec-10-compare"><span class="header-section-number">10.3</span> المقارنة بين بدائل فيها مخاطرة</h2>
+<p>عندما يكون للبديل الأعلى قيمة متوقعة مخاطرة أعلى أيضا، لا يوجد جواب واحد صحيح. الشركة الكبيرة التي تنفذ مشاريع كثيرة تقترب من القيمة المتوقعة في المتوسط، فتختار الأعلى. الشركة الصغيرة التي قد تفلس من خسارة واحدة تفضل المخاطرة الأقل.</p>
+<div id="ex-10-5" class="ee-item" data-id="c10-ex-compare" data-kind="example" data-label="10.5">
+<p><strong>مثال 10.5: مشروعان: عائد أعلى أم مخاطرة أقل؟</strong></p>
+<p>مشروعان متنافيان. القيمة الحالية لكل منهما في ثلاث حالات للسوق:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السوق</th>
+<th>الاحتمال</th>
+<th>المشروع أ</th>
+<th>المشروع ب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ضعيف</td>
+<td>0.30</td>
+<td>10,000</td>
+<td>‎-20,000</td>
+</tr>
+<tr class="even">
+<td>متوسط</td>
+<td>0.40</td>
+<td>20,000</td>
+<td>25,000</td>
+</tr>
+<tr class="odd">
+<td>قوي</td>
+<td>0.30</td>
+<td>30,000</td>
+<td>60,000</td>
+</tr>
+</tbody>
+</table>
+<p>قارن بالقيمة المتوقعة والانحراف المعياري.</p>
+<p><strong>الحل:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>أ</th>
+<th>ب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة المتوقعة</td>
+<td>20,000.00</td>
+<td>22,000.00</td>
+</tr>
+<tr class="even">
+<td>الانحراف المعياري</td>
+<td>7,745.97</td>
+<td>31,080.54</td>
+</tr>
+<tr class="odd">
+<td>معامل الاختلاف</td>
+<td>0.39</td>
+<td>1.41</td>
+</tr>
+</tbody>
+</table>
+<p>معامل الاختلاف هو الانحراف المعياري مقسوما على القيمة المتوقعة: مخاطرة كل دينار متوقع.</p>
+<p>المشروع ب أعلى قيمة متوقعة، وأعلى مخاطرة. لا يوجد مشروع أفضل في الاثنين معا، فالاختيار يعتمد على قدرة الشركة على تحمل الخسارة في السوق الضعيف.</p>
+</div>
+</section>
+<section id="sec-10-tree" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="sec-10-tree"><span class="header-section-number">10.4</span> شجرة القرار</h2>
+<p>بعض القرارات تتخذ على مراحل. نقرر اليوم، ثم تكشف الأيام شيئا، ثم نقرر مرة أخرى. شجرة القرار ترتب هذه المراحل، وتحل من النهاية إلى البداية: عند كل احتمال نحسب القيمة المتوقعة، وعند كل قرار نختار الأفضل.</p>
+<div id="ex-10-6" class="ee-item" data-id="c10-ex-tree" data-kind="example" data-label="10.6">
+<p><strong>مثال 10.6: شجرة القرار: مصنع كبير أم صغير؟</strong></p>
+<p>شركة تختار بين بناء مصنع كبير أو صغير. الطلب سيكون مرتفعا باحتمال 0.60، أو منخفضا. القيمة الحالية لكل حالة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>طلب مرتفع</th>
+<th>طلب منخفض</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>مصنع كبير</td>
+<td>900,000</td>
+<td>‎-250,000</td>
+</tr>
+<tr class="even">
+<td>مصنع صغير</td>
+<td>450,000</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table>
+<p>ارسم شجرة القرار، واختر.</p>
+<p><strong>الحل:</strong></p>
+<p>شجرة القرار ترسم من اليسار إلى اليمين:</p>
+<ul>
+<li><strong>عقدة القرار</strong>، مربع: الشركة تختار أحد الفروع.</li>
+<li><strong>عقدة الاحتمال</strong>، دائرة: الطبيعة تختار، باحتمالات معروفة.</li>
+<li><strong>النهايات</strong>: القيمة الحالية لكل مسار.</li>
+</ul>
+<p>الشجرة لهذا القرار:</p>
+<ul>
+<li>قرار: مصنع كبير
+<ul>
+<li>طلب مرتفع، باحتمال 0.60: 900,000</li>
+<li>طلب منخفض، باحتمال 0.40: ‎-250,000</li>
+</ul></li>
+<li>قرار: مصنع صغير
+<ul>
+<li>طلب مرتفع، باحتمال 0.60: 450,000</li>
+<li>طلب منخفض، باحتمال 0.40: 50,000</li>
+</ul></li>
+</ul>
+<p>نحل من اليمين إلى اليسار. عند كل دائرة نحسب القيمة المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>l</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi></mrow></msub><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>250</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>440</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{large} = 0.60 \times 900\mathord{,}000 + 0.40 \times (-250\mathord{,}000) = 440\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>450</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>290</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{small} = 0.60 \times 450\mathord{,}000 + 0.40 \times 50\mathord{,}000 = 290\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>عند المربع نختار الفرع الأعلى: المصنع الكبير.</p>
+<p>لكن المصنع الكبير يخسر إذا جاء الطلب منخفضا. شركة صغيرة قد لا تتحمل هذه الخسارة، حتى لو كانت القيمة المتوقعة أعلى.</p>
+</div>
+<div id="ex-10-7" class="ee-item" data-id="c10-ex-expand" data-kind="example" data-label="10.7">
+<p><strong>مثال 10.7: قرار على مرحلتين: ابدأ صغيرا ووسع لاحقا</strong></p>
+<p>للشركة في المثال السابق خيار ثالث: تبني المصنع الصغير الآن، وبعد سنتين، إذا ظهر أن الطلب مرتفع، توسعه. التوسعة تضيف 330,000 دينار إلى القيمة الحالية في حالة الطلب المرتفع، بعد طرح تكلفتها. الأرقام الباقية كما هي: الطلب مرتفع باحتمال 0.60، والمصنع الكبير 900,000 أو ‎-250,000 دينار، والصغير 450,000 أو 50,000 دينار. هل يغير هذا الخيار القرار؟</p>
+<p><strong>الحل:</strong></p>
+<p>في الشجرة الجديدة، فرع المصنع الصغير فيه قرار ثان بعد معرفة الطلب:</p>
+<ul>
+<li>قرار: مصنع صغير
+<ul>
+<li>طلب مرتفع، باحتمال 0.60: قرار ثان
+<ul>
+<li>وسع: 780,000</li>
+<li>لا توسع: 450,000</li>
+</ul></li>
+<li>طلب منخفض، باحتمال 0.40: 50,000</li>
+</ul></li>
+</ul>
+<p>نحل من اليمين. عند قرار التوسعة نختار الأعلى: 780,000 دينار. ثم القيمة المتوقعة للفرع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>+</mo></mrow></msub><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>780</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>488</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{small+} = 0.60 \times 780\mathord{,}000 + 0.40 \times 50\mathord{,}000 = 488\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>مقابل 440,000.00 دينار للمصنع الكبير. القرار: ابدأ صغيرا، ووسع إذا ارتفع الطلب.</p>
+<p>خيار التوسعة له قيمة، لأنه يسمح بالانتظار حتى تتضح المعلومات. المصنع الكبير يلزم الشركة اليوم، قبل أن تعرف الطلب.</p>
+</div>
+</section>
+<section id="sec-10-info" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="sec-10-info"><span class="header-section-number">10.5</span> قيمة المعلومات</h2>
+<p>إذا كانت المخاطرة سببها نقص المعلومات، فقد يستحق شراء المعلومات قبل القرار: دراسة سوق، أو تجربة إنتاج، أو فحص للتربة. المعلومات لها قيمة فقط إذا كانت قد تغير القرار.</p>
+<div id="ex-10-8" class="ee-item" data-id="c10-ex-evpi" data-kind="example" data-label="10.8">
+<p><strong>مثال 10.8: قيمة المعلومات الكاملة</strong></p>
+<p>للشركة في مثال المصنع الكبير والصغير: الطلب مرتفع باحتمال 0.60. الكبير 900,000 أو ‎-250,000 دينار، والصغير 450,000 أو 50,000 دينار. شركة أبحاث تعرض دراسة تكشف الطلب بدقة كاملة قبل القرار. كم تستحق هذه الدراسة على الأكثر؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>بدون معلومات:</strong> أفضل قيمة متوقعة 440,000.00 دينار.</p>
+<p><strong>مع معلومات كاملة:</strong> الشركة تعرف الطلب قبل أن تختار، فتختار الأفضل في كل حالة:</p>
+<ul>
+<li>إذا عرفت أن الطلب مرتفع، تختار الكبير، وتحصل على 900,000 دينار.</li>
+<li>إذا عرفت أنه منخفض، تختار الصغير، وتحصل على 50,000 دينار.</li>
+</ul>
+<p>لكن قبل الدراسة لا تعرف ماذا ستقول. القيمة المتوقعة مع المعلومات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.60</mn><mo>×</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>560</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+0.60 \times 900\mathord{,}000 + 0.40 \times 50\mathord{,}000 = 560\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>قيمة المعلومات الكاملة</strong> هي الفرق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">V</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">I</mi></mrow><mo>=</mo><mn>560</mn><mi>,</mi><mn>000.00</mn><mo>−</mo><mn>440</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>120</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{EVPI} = 560\mathord{,}000.00 - 440\mathord{,}000.00 = 120\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>لا تدفع الشركة أكثر من 120,000 دينار لأي دراسة. الدراسات الحقيقية غير كاملة، فتستحق أقل من هذا.</p>
+</div>
+<div id="ex-10-9" class="ee-item" data-id="c10-ex-survey" data-kind="example" data-label="10.9">
+<p><strong>مثال 10.9: دراسة سوق غير كاملة</strong></p>
+<p>في مثال المصنع: الطلب مرتفع باحتمال 0.60، والكبير 900,000 أو ‎-250,000 دينار، والصغير 450,000 أو 50,000 دينار. دراسة سوق تقول “مرتفع” أو “منخفض”، وتصيب باحتمال 0.80 في الحالتين. كم تستحق الدراسة؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>الخطوة 1: احتمال كل نتيجة للدراسة.</strong> تقول “مرتفع” إذا كان الطلب مرتفعا وأصابت، أو منخفضا وأخطأت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">h</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>0.80</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>0.20</mn><mo>=</mo><mn>0.5600</mn></mrow><annotation encoding="application/x-tex">
+P(\mathrm{high}) = 0.60 \times 0.80 + 0.40 \times 0.20 = 0.5600
+</annotation></semantics></math></p>
+<p><strong>الخطوة 2: تحديث الاحتمال بعد النتيجة</strong>، بقاعدة بايز:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">H</mi><mo>∣</mo><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">h</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>0.60</mn><mo>×</mo><mn>0.80</mn></mrow><mn>0.5600</mn></mfrac><mo>=</mo><mn>0.8571</mn></mrow><annotation encoding="application/x-tex">
+P(\mathrm{H} \mid \mathrm{high}) = \frac{0.60 \times 0.80}{0.5600} = 0.8571
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">H</mi><mo>∣</mo><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">w</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>0.60</mn><mo>×</mo><mn>0.20</mn></mrow><mn>0.4400</mn></mfrac><mo>=</mo><mn>0.2727</mn></mrow><annotation encoding="application/x-tex">
+P(\mathrm{H} \mid \mathrm{low}) = \frac{0.60 \times 0.20}{0.4400} = 0.2727
+</annotation></semantics></math></p>
+<p><strong>الخطوة 3: أفضل قرار بعد كل نتيجة</strong>، بالاحتمال المحدث:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نتيجة الدراسة</th>
+<th>القيمة المتوقعة للكبير</th>
+<th>للصغير</th>
+<th>الأفضل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>مرتفع</td>
+<td>735,714</td>
+<td>392,857</td>
+<td>735,714</td>
+</tr>
+<tr class="even">
+<td>منخفض</td>
+<td>63,636</td>
+<td>159,091</td>
+<td>159,091</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الخطوة 4: القيمة المتوقعة مع الدراسة:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5600</mn><mo>×</mo><mn>735</mn><mi>,</mi><mn>714</mn><mo>+</mo><mn>0.4400</mn><mo>×</mo><mn>159</mn><mi>,</mi><mn>091</mn><mo>=</mo><mn>482</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+0.5600 \times 735\mathord{,}714 + 0.4400 \times 159\mathord{,}091 = 482\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>بدون الدراسة 440,000.00 دينار. قيمة الدراسة 42,000.00 دينار. الشركة تدفع لها حتى هذا المبلغ.</p>
+</div>
+</section>
+<section id="sec-10-normal" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="sec-10-normal"><span class="header-section-number">10.6</span> التوزيع الطبيعي</h2>
+<p>كثير من المتغيرات، مثل الطلب السنوي، تتوزع تقريبا توزيعا طبيعيا حول متوسطها. إذا عرفنا المتوسط والانحراف المعياري، نحسب احتمال أي مجال. الدالة NORM.DIST في Excel تعطي الاحتمال مباشرة.</p>
+<div id="ex-10-10" class="ee-item" data-id="c10-ex-normal" data-kind="example" data-label="10.10">
+<p><strong>مثال 10.10: احتمال أن تتجاوز المبيعات نقطة التعادل</strong></p>
+<p>خط إنتاج تكاليفه الثابتة 120,000 دينار سنويا. سعر الوحدة 25 دينار، والتكلفة المتغيرة 15 دينار. المبيعات السنوية غير مؤكدة: توزيعها طبيعي تقريبا، بمتوسط 15,000 وحدة وانحراف معياري 3,000 وحدة. ما احتمال أن يخسر الخط؟</p>
+<p><strong>الحل:</strong></p>
+<p>نقطة التعادل من الفصل السادس:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Q</mi><mo>*</mo></msup><mo>=</mo><mfrac><mrow><mn>120</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>25</mn><mo>−</mo><mn>15</mn></mrow></mfrac><mo>=</mo><mn>12</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+Q^* = \frac{120\mathord{,}000}{25 - 15} = 12\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الخط يخسر إذا جاءت المبيعات أقل منها. نحول إلى التوزيع الطبيعي المعياري:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>000.00</mn><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>1.00</mn></mrow><annotation encoding="application/x-tex">
+z = \frac{12\mathord{,}000.00 - 15\mathord{,}000}{3\mathord{,}000} = -1.00
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.DIST(12000.00, 15000, 3000, TRUE)</code></pre>
+<p>احتمال الخسارة 15.87%. الاحتمال مقبول لأغلب الشركات، لكنه ليس صفرا.</p>
+</div>
+</section>
+<section id="sec-10-simulation" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="sec-10-simulation"><span class="header-section-number">10.7</span> المحاكاة: مونت كارلو</h2>
+<p>عندما تكون متغيرات كثيرة غير مؤكدة معا، يصبح حساب كل الحالات مستحيلا. المحاكاة تجرب آلاف الحالات: في كل مرة تسحب قيمة عشوائية لكل متغير من توزيعه، وتحسب القيمة الحالية. النتيجة توزيع كامل للقيمة الحالية، نقرأ منه المتوسط والانحراف واحتمال الخسارة.</p>
+<p>مثال: خط الإنتاج في الفصل السابع يكلف 150,000 دينار، ورأس المال العامل 15,000. نفترض الآن أن ثلاثة متغيرات غير مؤكدة:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>المتغير</th>
+<th>التوزيع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد السنوي</td>
+<td>مثلثي: أقل قيمة 90,000، والأرجح 120,000، وأعلى قيمة 140,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل السنوي</td>
+<td>منتظم بين 55,000 و70,000</td>
+</tr>
+<tr class="odd">
+<td>البيع في النهاية</td>
+<td>منتظم بين 5,000 و35,000</td>
+</tr>
+</tbody>
+</table>
+<p>الضريبة 20%، والحد الأدنى 12%، والعمر 5 سنوات، والاستهلاك بالقسط الثابت.</p>
+<div id="ba01723c" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">2026</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">20000</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>C, W, t, i, n <span class="op">=</span> <span class="dv">150000</span>, <span class="dv">15000</span>, <span class="fl">0.20</span>, <span class="fl">0.12</span>, <span class="dv">5</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> rng.triangular(<span class="dv">90000</span>, <span class="dv">120000</span>, <span class="dv">140000</span>, N)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>O <span class="op">=</span> rng.uniform(<span class="dv">55000</span>, <span class="dv">70000</span>, N)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> rng.uniform(<span class="dv">5000</span>, <span class="dv">35000</span>, N)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>cf <span class="op">=</span> (R <span class="op">-</span> O) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> t <span class="op">*</span> C <span class="op">/</span> n</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> <span class="op">-</span>C <span class="op">-</span> W <span class="op">+</span> cf <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> <span class="op">-</span>n) <span class="op">/</span> i <span class="op">+</span> (M <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> W) <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> n</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean PW      </span><span class="sc">{</span>pw<span class="sc">.</span>mean()<span class="sc">:12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"std of PW    </span><span class="sc">{</span>pw<span class="sc">.</span>std()<span class="sc">:12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P(PW &lt; 0)    </span><span class="sc">{</span>(pw <span class="op">&lt;</span> <span class="dv">0</span>)<span class="sc">.</span>mean()<span class="sc">:12.2%}</span><span class="ss">"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"5th pct      </span><span class="sc">{</span>np<span class="sc">.</span>percentile(pw, <span class="dv">5</span>)<span class="sc">:12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="fl">3.4</span>))</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.hist(pw, bins<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span><span class="st">"#4a7bb7"</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#c0392b"</span>, lw<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"PW (dinar)"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"count"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>mean PW            30,830
+std of PW          32,203
+P(PW &lt; 0)          18.09%
+5th pct           -24,312</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ch10_files/figure-html/cell-2-output-2.png" width="566" height="317" class="figure-img"></p>
+<figcaption>توزيع القيمة الحالية في 20,000 محاكاة</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>الخط الأحمر عند الصفر. المساحة على يساره احتمال الخسارة. الرقم المئوي الخامس يعني: في 95% من الحالات تكون القيمة الحالية أعلى منه، فهو مقياس لأسوأ حالة معقولة.</p>
+<p>كل تشغيل للمحاكاة بأرقام عشوائية مختلفة يعطي أرقاما قريبة لكن غير متطابقة. مع 20,000 محاولة، يتغير احتمال الخسارة في الخانة العشرية الثانية فقط. البذرة الثابتة في البرنامج تجعل النتيجة قابلة للتكرار.</p>
+<p><strong>لمن يريد أن يستزيد:</strong> المحاكاة في Excel ممكنة أيضا: الدالة RAND تعطي رقما عشوائيا، وجدول البيانات Data Table يكرر الحساب ألف مرة.</p>
+</section>
+<section id="sec-10-problems" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="sec-10-problems"><span class="header-section-number">10.8</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-10-1" class="ee-item" data-id="c10-a-01" data-kind="problem" data-label="10.1">
+<p><strong>10.1</strong> ما الفرق بين تحليل الحساسية وتحليل المخاطرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-1">الحل</a></span></p>
+</div>
+<div id="prob-10-2" class="ee-item" data-id="c10-a-02" data-kind="problem" data-label="10.2">
+<p><strong>10.2</strong> القيمة المتوقعة لمشروع 50,000 دينار. هل يعني هذا أن الشركة ستربح 50,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-2">الحل</a></span></p>
+</div>
+<div id="prob-10-3" class="ee-item" data-id="c10-a-03" data-kind="problem" data-label="10.3">
+<p><strong>10.3</strong> ماذا يقيس الانحراف المعياري للقيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-3">الحل</a></span></p>
+</div>
+<div id="prob-10-4" class="ee-item" data-id="c10-a-04" data-kind="problem" data-label="10.4">
+<p><strong>10.4</strong> متى تساوي القيمة الحالية المتوقعة القيمة الحالية المحسوبة بالقيم المتوقعة للمتغيرات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-4">الحل</a></span></p>
+</div>
+<div id="prob-10-5" class="ee-item" data-id="c10-a-05" data-kind="problem" data-label="10.5">
+<p><strong>10.5</strong> مشروعان لهما نفس القيمة المتوقعة، والثاني أعلى انحرافا معياريا. أيهما تختار شركة تكره المخاطرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-5">الحل</a></span></p>
+</div>
+<div id="prob-10-6" class="ee-item" data-id="c10-a-06" data-kind="problem" data-label="10.6">
+<p><strong>10.6</strong> ما معامل الاختلاف؟ ولماذا نستخدمه بدل الانحراف المعياري أحيانا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-6">الحل</a></span></p>
+</div>
+<div id="prob-10-7" class="ee-item" data-id="c10-a-07" data-kind="problem" data-label="10.7">
+<p><strong>10.7</strong> في شجرة القرار، ما الفرق بين المربع والدائرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-7">الحل</a></span></p>
+</div>
+<div id="prob-10-8" class="ee-item" data-id="c10-a-08" data-kind="problem" data-label="10.8">
+<p><strong>10.8</strong> لماذا نحل شجرة القرار من النهاية إلى البداية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-8">الحل</a></span></p>
+</div>
+<div id="prob-10-9" class="ee-item" data-id="c10-a-09" data-kind="problem" data-label="10.9">
+<p><strong>10.9</strong> لماذا يكون لخيار التوسع لاحقا قيمة، حتى لو كان المصنع الكبير أرخص لكل وحدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-9">الحل</a></span></p>
+</div>
+<div id="prob-10-10" class="ee-item" data-id="c10-a-10" data-kind="problem" data-label="10.10">
+<p><strong>10.10</strong> دراسة سوق لن تغير قرار الشركة مهما كانت نتيجتها. كم تستحق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-10">الحل</a></span></p>
+</div>
+<div id="prob-10-11" class="ee-item" data-id="c10-a-11" data-kind="problem" data-label="10.11">
+<p><strong>10.11</strong> لماذا قيمة المعلومات الكاملة حد أعلى لقيمة أي دراسة حقيقية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-11">الحل</a></span></p>
+</div>
+<div id="prob-10-12" class="ee-item" data-id="c10-a-12" data-kind="problem" data-label="10.12">
+<p><strong>10.12</strong> لماذا تعطي المحاكاة نتائج مختلفة قليلا كل مرة؟ وكيف نقلل الاختلاف؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري">الجزء ب: القيمة المتوقعة والانحراف المعياري</h3>
+<div id="prob-10-13" class="ee-item" data-id="c10-b-01" data-kind="problem" data-label="10.13">
+<p><strong>10.13</strong> إصلاح ضاغط يكلف 2,000 دينار إذا كان العطل بسيطا، واحتمال ذلك 0.70. وإلا يكلف 9,000 دينار. ما التكلفة المتوقعة للإصلاح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-13">الحل</a></span></p>
+</div>
+<div id="prob-10-14" class="ee-item" data-id="c10-b-02" data-kind="problem" data-label="10.14">
+<p><strong>10.14</strong> عمر آلة غير مؤكد: 4 سنوات باحتمال 0.20، أو 6 سنوات باحتمال 0.50، أو 8 سنوات باحتمال 0.30. ما العمر المتوقع وانحرافه المعياري؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-14">الحل</a></span></p>
+</div>
+<div id="prob-10-15" class="ee-item" data-id="c10-b-03" data-kind="problem" data-label="10.15">
+<p><strong>10.15</strong> ربح منتج 30,000 أو 50,000 أو 80,000 دينار. احتمال الأول 0.25، واحتمال الثالث 0.15. ما احتمال الثاني؟ وما الربح المتوقع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-15">الحل</a></span></p>
+</div>
+<div id="prob-10-16" class="ee-item" data-id="c10-b-04" data-kind="problem" data-label="10.16">
+<p><strong>10.16</strong> عدد الأعطال الكبيرة في خط إنتاج خلال سنة: صفر باحتمال 0.50، وعطل واحد باحتمال 0.30، وعطلان باحتمال 0.15، وثلاثة باحتمال 0.05. كل عطل يكلف 3,500 دينار. ما التكلفة السنوية المتوقعة للأعطال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-16">الحل</a></span></p>
+</div>
+<div id="prob-10-17" class="ee-item" data-id="c10-b-05" data-kind="problem" data-label="10.17">
+<p><strong>10.17</strong> شركة مقاولات تدرس التقدم لعطاء. إعداد العرض يكلف 6,000 دينار. إذا فازت، تربح 80,000 دينار. احتمال الفوز 0.30. ما الربح المتوقع من التقدم؟ وما أقل احتمال فوز يجعل التقدم مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-17">الحل</a></span></p>
+</div>
+<div id="prob-10-18" class="ee-item" data-id="c10-b-06" data-kind="problem" data-label="10.18">
+<p><strong>10.18</strong> مستودع قيمته 200,000 دينار. احتمال حريق يدمره في سنة 0.01. قسط التأمين السنوي 3,000 دينار. قارن القسط بالخسارة المتوقعة. لماذا تؤمن الشركات حتى لو كان القسط أعلى منها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-18">الحل</a></span></p>
+</div>
+<div id="prob-10-19" class="ee-item" data-id="c10-b-07" data-kind="problem" data-label="10.19">
+<p><strong>10.19</strong> الطلب الشهري على قطعة غيار:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الطلب</th>
+<th>800</th>
+<th>1,000</th>
+<th>1,200</th>
+<th>1,500</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الاحتمال</td>
+<td>0.10</td>
+<td>0.40</td>
+<td>0.30</td>
+<td>0.20</td>
+</tr>
+</tbody>
+</table>
+<p>احسب الطلب المتوقع وانحرافه المعياري.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-19">الحل</a></span></p>
+</div>
+<div id="prob-10-20" class="ee-item" data-id="c10-b-08" data-kind="problem" data-label="10.20">
+<p><strong>10.20</strong> المبيعات السنوية لها متوسط 12,000 وحدة، وانحراف معياري 2,500 وحدة. سعر الوحدة ثابت 8.00 دينار. ما متوسط الإيراد وانحرافه المعياري؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-20">الحل</a></span></p>
+</div>
+<div id="prob-10-21" class="ee-item" data-id="c10-b-09" data-kind="problem" data-label="10.21">
+<p><strong>10.21</strong> تكلفة مشروع من بندين مستقلين: المواد بمتوسط 20,000 وانحراف 3,000 دينار، والعمالة بمتوسط 15,000 وانحراف 4,000 دينار. ما متوسط التكلفة الكلية وانحرافها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-21">الحل</a></span></p>
+</div>
+<div id="prob-10-22" class="ee-item" data-id="c10-b-10" data-kind="problem" data-label="10.22">
+<p><strong>10.22</strong> آلة توفر عدد ساعات عمل في السنة: 1,500 ساعة باحتمال 0.40، أو 2,000 ساعة. قيمة الساعة 6 دينار باحتمال 0.50، أو 9 دينار. المتغيران مستقلان. ما الوفر السنوي المتوقع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-22">الحل</a></span></p>
+</div>
+<div id="prob-10-23" class="ee-item" data-id="c10-b-11" data-kind="problem" data-label="10.23">
+<p><strong>10.23</strong> مشروع يربح 60,000 دينار إذا نجح، ويخسر 40,000 دينار إذا فشل. ما أقل احتمال نجاح يجعل القيمة المتوقعة غير سالبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-23">الحل</a></span></p>
+</div>
+<div id="prob-10-24" class="ee-item" data-id="c10-b-12" data-kind="problem" data-label="10.24">
+<p><strong>10.24</strong> زمن توقف خط بالساعات بعد عطل: 10 أو 20 أو 40، باحتمالات 0.30 و0.50 و0.20. احسب التباين بالطريقة المختصرة: متوسط المربعات ناقص مربع المتوسط.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-24">الحل</a></span></p>
+</div>
+<div id="prob-10-25" class="ee-item" data-id="c10-b-13" data-kind="problem" data-label="10.25">
+<p><strong>10.25</strong> مشروع صغير قيمته الحالية المتوقعة 40,000 دينار وانحرافها 12,000 دينار. مشروع كبير قيمته المتوقعة 150,000 دينار وانحرافها 30,000 دينار. أيهما أخطر لكل دينار متوقع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-25">الحل</a></span></p>
+</div>
+<div id="prob-10-26" class="ee-item" data-id="c10-b-14" data-kind="problem" data-label="10.26">
+<p><strong>10.26</strong> محرك رئيسي قد يتعطل هذه السنة باحتمال 0.25. إذا تعطل ولم يكن عند المصنع محرك احتياطي، يتوقف الإنتاج ويخسر 22,000 دينار. المحرك الاحتياطي يكلف 4,000 دينار، ولا قيمة له إذا لم يستخدم. هل يشتري المصنع محركا احتياطيا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-26">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة">الجزء ج: القيمة الحالية المتوقعة واحتمال الخسارة</h3>
+<div id="prob-10-27" class="ee-item" data-id="c10-c-01" data-kind="problem" data-label="10.27">
+<p><strong>10.27</strong> مشروع يكلف 40,000 دينار لمدة 5 سنوات. تدفقه السنوي 7,000 دينار باحتمال 0.40، أو 14,500 دينار. الحد الأدنى 10%. احسب القيمة الحالية المتوقعة، وانحرافها المعياري، واحتمال الخسارة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-27">الحل</a></span></p>
+</div>
+<div id="prob-10-28" class="ee-item" data-id="c10-c-02" data-kind="problem" data-label="10.28">
+<p><strong>10.28</strong> فندق صغير يدرس إضافة جناح يكلف 250,000 دينار، لمدة 8 سنوات. صافي دخله السنوي يعتمد على السياحة: 32,000 دينار باحتمال 0.25، و52,000 باحتمال 0.50، و72,000 باحتمال 0.25. الحد الأدنى 12%. ما القيمة الحالية المتوقعة وانحرافها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-28">الحل</a></span></p>
+</div>
+<div id="prob-10-29" class="ee-item" data-id="c10-c-03" data-kind="problem" data-label="10.29">
+<p><strong>10.29</strong> مشروع يعطي 15,000 دينار سنويا لمدة 6 سنوات. تكلفة البناء 50,000 دينار إذا سارت الأمور كما خطط، باحتمال 0.60، أو 65,000 دينار إذا ظهرت مشاكل في التربة. الحد الأدنى 10%. ما القيمة الحالية المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-29">الحل</a></span></p>
+</div>
+<div id="prob-10-30" class="ee-item" data-id="c10-c-04" data-kind="problem" data-label="10.30">
+<p><strong>10.30</strong> مشروع يكلف 60,000 دينار ويعطي 14,000 دينار سنويا لمدة 7 سنوات. الشركة غير متأكدة من تكلفة تمويلها: 8% باحتمال 0.50، أو 14%. احسب القيمة الحالية المتوقعة، وقارنها بالقيمة الحالية عند النسبة المتوقعة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-30">الحل</a></span></p>
+</div>
+<div id="prob-10-31" class="ee-item" data-id="c10-c-05" data-kind="problem" data-label="10.31">
+<p><strong>10.31</strong> نظام أتمتة يكلف 30,000 دينار، ويوفر 6,500 دينار سنويا. قد يصبح قديما بعد 4 سنوات باحتمال 0.40 إذا ظهرت تكنولوجيا جديدة، وإلا يخدم 8 سنوات. الحد الأدنى 10%. ما القيمة الحالية المتوقعة؟ وما احتمال الخسارة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-31">الحل</a></span></p>
+</div>
+<div id="prob-10-32" class="ee-item" data-id="c10-c-06" data-kind="problem" data-label="10.32">
+<p><strong>10.32</strong> مشروع يكلف 50,000 دينار. متغيران مستقلان: التدفق السنوي 10,000 دينار باحتمال 0.50 أو 16,000 دينار، والعمر 5 سنوات باحتمال 0.60 أو 8 سنوات. الحد الأدنى 10%. ابن جدول الحالات الأربع، واحسب القيمة الحالية المتوقعة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-32">الحل</a></span></p>
+</div>
+<div id="prob-10-33" class="ee-item" data-id="c10-c-07" data-kind="problem" data-label="10.33">
+<p><strong>10.33</strong> آلة تكلف 40,000 دينار لمدة 6 سنوات. وفرها السنوي 7,000 دينار باحتمال 0.50، أو 11,500 دينار. الحد الأدنى 10%. ما القيمة السنوية المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-33">الحل</a></span></p>
+</div>
+<div id="prob-10-34" class="ee-item" data-id="c10-c-08" data-kind="problem" data-label="10.34">
+<p><strong>10.34</strong> مشروع لسنتين يكلف 30,000 دينار. تدفق السنة الأولى متوسطه 18,000 وانحرافه 2,000 دينار، والثانية متوسطه 20,000 وانحرافه 4,000 دينار، والسنتان مستقلتان. الحد الأدنى 10%. ما احتمال الخسارة بتقريب التوزيع الطبيعي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-34">الحل</a></span></p>
+</div>
+<div id="prob-10-35" class="ee-item" data-id="c10-c-09" data-kind="problem" data-label="10.35">
+<p><strong>10.35</strong> قيمة حالية متوسطها 25,000 دينار وانحرافها 15,000 دينار، وتوزيعها طبيعي تقريبا. ما احتمال الخسارة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-35">الحل</a></span></p>
+</div>
+<div id="prob-10-36" class="ee-item" data-id="c10-c-10" data-kind="problem" data-label="10.36">
+<p><strong>10.36</strong> شركة تقبل مشروعا فقط إذا كان احتمال خسارته 5% أو أقل. القيمة الحالية المتوقعة 40,000 دينار، وتوزيعها طبيعي. ما أكبر انحراف معياري مقبول؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-36">الحل</a></span></p>
+</div>
+<div id="prob-10-37" class="ee-item" data-id="c10-c-11" data-kind="problem" data-label="10.37">
+<p><strong>10.37</strong> قيمة حالية متوسطها 50,000 دينار وانحرافها 20,000 دينار، وتوزيعها طبيعي. ما احتمال أن تتجاوز 30,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-37">الحل</a></span></p>
+</div>
+<div id="prob-10-38" class="ee-item" data-id="c10-c-12" data-kind="problem" data-label="10.38">
+<p><strong>10.38</strong> القيمة الحالية لمشروع في أربع حالات: ‎-15,000 و10,000 و35,000 و60,000 دينار، باحتمالات 0.15 و0.35 و0.30 و0.20. ابن جدول الاحتمال التراكمي، وأجب: ما احتمال أن تقل القيمة الحالية عن 35,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-38">الحل</a></span></p>
+</div>
+<div id="prob-10-39" class="ee-item" data-id="c10-c-13" data-kind="problem" data-label="10.39">
+<p><strong>10.39</strong> آلة تكلف 70,000 دينار، وتعطي 18,000 دينار سنويا لمدة 5 سنوات. قيمة بيعها في النهاية صفر باحتمال 0.50 إذا تغيرت المواصفات، أو 15,000 دينار. الحد الأدنى 10%. ما القيمة الحالية المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-39">الحل</a></span></p>
+</div>
+<div id="prob-10-40" class="ee-item" data-id="c10-c-14" data-kind="problem" data-label="10.40">
+<p><strong>10.40</strong> تدفق سنوي لمدة 4 سنوات، انحرافه المعياري 5,000 دينار كل سنة. الحد الأدنى 10%. احسب انحراف القيمة الحالية إذا كانت السنوات مستقلة، ثم إذا كانت مرتبطة تماما: السنة الجيدة تتبعها سنوات جيدة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-40">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة">الجزء د: المقارنة بين بدائل فيها مخاطرة</h3>
+<div id="prob-10-41" class="ee-item" data-id="c10-d-01" data-kind="problem" data-label="10.41">
+<p><strong>10.41</strong> مشروعان متنافيان، قيمتهما الحالية في ثلاث حالات باحتمالات 0.30 و0.50 و0.20:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>ضعيف</th>
+<th>متوسط</th>
+<th>قوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>5,000</td>
+<td>15,000</td>
+<td>25,000</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>‎-10,000</td>
+<td>20,000</td>
+<td>45,000</td>
+</tr>
+</tbody>
+</table>
+<p>احسب القيمة المتوقعة والانحراف لكل منهما. هل يسيطر أحدهما على الآخر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-41">الحل</a></span></p>
+</div>
+<div id="prob-10-42" class="ee-item" data-id="c10-d-02" data-kind="problem" data-label="10.42">
+<p><strong>10.42</strong> شركة تقيم المشاريع بالقيمة المتوقعة ناقص 0.50 ضرب الانحراف المعياري، لتعاقب المخاطرة. المشروع أ متوسطه 30,000 وانحرافه 8,000 دينار. المشروع ب متوسطه 42,000 وانحرافه 30,000 دينار. أيهما تختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-42">الحل</a></span></p>
+</div>
+<div id="prob-10-43" class="ee-item" data-id="c10-d-03" data-kind="problem" data-label="10.43">
+<p><strong>10.43</strong> مشروع أ متوسطه 20,000 وانحرافه 6,000 دينار. مشروع ب متوسطه 80,000 وانحرافه 20,000 دينار. أيهما أقل مخاطرة لكل دينار متوقع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-43">الحل</a></span></p>
+</div>
+<div id="prob-10-44" class="ee-item" data-id="c10-d-04" data-kind="problem" data-label="10.44">
+<p><strong>10.44</strong> مشروعان، قيمتهما الحالية في ثلاث حالات باحتمالات 0.30 و0.40 و0.30: أ يعطي 8,000 أو 12,000 أو 15,000، وب يعطي ‎-6,000 أو 15,000 أو 35,000 دينار. ماذا يختار مدير يحكم بأسوأ حالة؟ وماذا يختار مدير يحكم بالقيمة المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-44">الحل</a></span></p>
+</div>
+<div id="prob-10-45" class="ee-item" data-id="c10-d-05" data-kind="problem" data-label="10.45">
+<p><strong>10.45</strong> مشروع أ متوسطه 30,000 وانحرافه 15,000 دينار. مشروع ب متوسطه 45,000 وانحرافه 35,000 دينار. التوزيعان طبيعيان. قارن احتمال الخسارة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-45">الحل</a></span></p>
+</div>
+<div id="prob-10-46" class="ee-item" data-id="c10-d-06" data-kind="problem" data-label="10.46">
+<p><strong>10.46</strong> شركة حدها الأدنى 10% للمشاريع العادية. تضيف 5% للمشاريع عالية المخاطرة. مشروع جديد يكلف 80,000 دينار، ويعطي 22,000 دينار سنويا لمدة 6 سنوات، وتصنفه الشركة عالي المخاطرة. احسب القيمة الحالية بالحدين. ما عيب هذه الطريقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-46">الحل</a></span></p>
+</div>
+<div id="prob-10-47" class="ee-item" data-id="c10-d-07" data-kind="problem" data-label="10.47">
+<p><strong>10.47</strong> شركة تختار بين مشروع واحد كبير، أو مشروعين صغيرين مستقلين. كل مشروع صغير متوسطه 20,000 وانحرافه 12,000 دينار. المشروع الكبير يساوي ضعف مشروع صغير في كل حالة. قارن المتوسط والانحراف واحتمال الخسارة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-47">الحل</a></span></p>
+</div>
+<div id="prob-10-48" class="ee-item" data-id="c10-d-08" data-kind="problem" data-label="10.48">
+<p><strong>10.48</strong> ثلاثة مشاريع: أ متوسطه 40,000 وانحرافه 10,000 دينار. ب متوسطه 35,000 وانحرافه 12,000 دينار. ج متوسطه 50,000 وانحرافه 25,000 دينار. أي مشروع لا يمكن أن تختاره شركة عاقلة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-48">الحل</a></span></p>
+</div>
+<div id="prob-10-49" class="ee-item" data-id="c10-d-09" data-kind="problem" data-label="10.49">
+<p><strong>10.49</strong> لا يعرف المدير احتمالات السوق. القيمة الحالية لمشروعين في ثلاث حالات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>ضعيف</th>
+<th>متوسط</th>
+<th>قوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>10,000</td>
+<td>20,000</td>
+<td>30,000</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>‎-5,000</td>
+<td>25,000</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table>
+<p>طبق معيار أقل ندم: الندم في كل حالة هو الفرق عن أفضل مشروع في تلك الحالة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-49">الحل</a></span></p>
+</div>
+<div id="prob-10-50" class="ee-item" data-id="c10-d-10" data-kind="problem" data-label="10.50">
+<p><strong>10.50</strong> مدير مكافأته مرتبطة بأن تتجاوز القيمة الحالية 30,000 دينار. المشروع أ متوسطه 40,000 وانحرافه 10,000، والمشروع ب متوسطه 50,000 وانحرافه 30,000 دينار، بتوزيع طبيعي. أي مشروع يعطيه احتمالا أعلى للمكافأة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-50">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-شجرة-القرار" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-شجرة-القرار">الجزء هـ: شجرة القرار</h3>
+<div id="prob-10-51" class="ee-item" data-id="c10-e-01" data-kind="problem" data-label="10.51">
+<p><strong>10.51</strong> شركة تدرس إطلاق منتج جديد. إذا نجح، باحتمال 0.55، تربح 120,000 دينار بالقيمة الحالية. إذا فشل، تخسر 70,000 دينار. البديل عدم الإطلاق، بقيمة صفر. ارسم الشجرة وقرر.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-51">الحل</a></span></p>
+</div>
+<div id="prob-10-52" class="ee-item" data-id="c10-e-02" data-kind="problem" data-label="10.52">
+<p><strong>10.52</strong> مصنع يختار بين ثلاث تقنيات. القيمة الحالية لكل منها حسب الطلب، والطلب مرتفع باحتمال 0.50:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التقنية</th>
+<th>طلب مرتفع</th>
+<th>طلب منخفض</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ: آلية بالكامل</td>
+<td>300,000</td>
+<td>‎-80,000</td>
+</tr>
+<tr class="even">
+<td>ب: نصف آلية</td>
+<td>180,000</td>
+<td>20,000</td>
+</tr>
+<tr class="odd">
+<td>ج: يدوية</td>
+<td>90,000</td>
+<td>60,000</td>
+</tr>
+</tbody>
+</table>
+<p>أي تقنية يختار بالقيمة المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-52">الحل</a></span></p>
+</div>
+<div id="prob-10-53" class="ee-item" data-id="c10-e-03" data-kind="problem" data-label="10.53">
+<p><strong>10.53</strong> بديلان، وثلاث حالات للسوق باحتمالات 0.30 و0.40 و0.30. أ يعطي ‎-40,000 أو 30,000 أو 110,000 دينار. ب يعطي 10,000 أو 35,000 أو 60,000 دينار. أيهما أفضل بالقيمة المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-53">الحل</a></span></p>
+</div>
+<div id="prob-10-54" class="ee-item" data-id="c10-e-04" data-kind="problem" data-label="10.54">
+<p><strong>10.54</strong> مقاول يتقدم لعطاء بسعر مرتفع أو منخفض. بالسعر المرتفع يربح 90,000 دينار إذا فاز، واحتمال الفوز 0.30. بالسعر المنخفض يربح 50,000 دينار، واحتمال الفوز 0.70. إعداد العرض يكلف 4,000 دينار في الحالتين. أي سعر يقدم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-54">الحل</a></span></p>
+</div>
+<div id="prob-10-55" class="ee-item" data-id="c10-e-05" data-kind="problem" data-label="10.55">
+<p><strong>10.55</strong> مصنع يصنع قطعة بتكلفة ثابتة سنوية 30,000 دينار ومتغيرة 8.00 دينار للقطعة، أو يشتريها بسعر 12.00 دينار. الطلب السنوي 5,000 قطعة باحتمال 0.60، أو 12,000 قطعة. أيهما أرخص بالقيمة المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-55">الحل</a></span></p>
+</div>
+<div id="prob-10-56" class="ee-item" data-id="c10-e-06" data-kind="problem" data-label="10.56">
+<p><strong>10.56</strong> شركة أدوية بيطرية تدرس تطوير منتج. البحث يكلف 50,000 دينار، وينجح باحتمال 0.40. إذا نجح، تقرر هل تطرحه: الطرح يعطي 600,000 دينار إذا كان السوق جيدا، باحتمال 0.50، أو ‎-100,000 دينار إذا كان ضعيفا. إذا فشل البحث، لا شيء. هل تبدأ البحث؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-56">الحل</a></span></p>
+</div>
+<div id="prob-10-57" class="ee-item" data-id="c10-e-07" data-kind="problem" data-label="10.57">
+<p><strong>10.57</strong> محطة تحلية تختار بين وحدة كبيرة الآن، أو وحدة صغيرة مع إمكانية إضافة وحدة ثانية بعد 3 سنوات إذا ارتفع الطلب. الطلب مرتفع باحتمال 0.50. الكبيرة تعطي 500,000 أو ‎-120,000 دينار. الصغيرة وحدها تعطي 260,000 أو 40,000 دينار. الإضافة في حالة الطلب المرتفع تزيد القيمة الحالية 180,000 دينار بعد طرح تكلفتها. ماذا تختار؟ وكم تساوي إمكانية الإضافة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-57">الحل</a></span></p>
+</div>
+<div id="prob-10-58" class="ee-item" data-id="c10-e-08" data-kind="problem" data-label="10.58">
+<p><strong>10.58</strong> مشروع يكلف 200,000 دينار. بعد السنة الأولى يتضح الطلب. إذا كان مرتفعا، باحتمال 0.60، القيمة الحالية للتدفقات الباقية 450,000 دينار. إذا كان منخفضا، 120,000 دينار إذا استمر المشروع، أو 150,000 دينار إذا أوقفته الشركة وباعت المعدات. ما القيمة المتوقعة مع إمكانية الإيقاف وبدونها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-58">الحل</a></span></p>
+</div>
+<div id="prob-10-59" class="ee-item" data-id="c10-e-09" data-kind="problem" data-label="10.59">
+<p><strong>10.59</strong> آلة معطلة. إصلاحها يكلف 9,000 دينار، لكن الإصلاح يفشل باحتمال 0.35، فتحتاج الشركة عندها آلة جديدة تكلف 30,000 دينار. البديل شراء الجديدة الآن. أيهما أرخص بالقيمة المتوقعة؟ تجاهل الفرق في الزمن.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-59">الحل</a></span></p>
+</div>
+<div id="prob-10-60" class="ee-item" data-id="c10-e-10" data-kind="problem" data-label="10.60">
+<p><strong>10.60</strong> بديل أ يعطي 300,000 دينار إذا ارتفع الطلب، و‎-100,000 إذا انخفض. بديل ب يعطي 150,000 و40,000 دينار. عند أي احتمال لارتفاع الطلب يتساوى البديلان؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-60">الحل</a></span></p>
+</div>
+<div id="prob-10-61" class="ee-item" data-id="c10-e-11" data-kind="problem" data-label="10.61">
+<p><strong>10.61</strong> استثمار 100,000 دينار اليوم. بعد 3 سنوات يباع المشروع بمبلغ 200,000 دينار إذا نجح، باحتمال 0.50، أو 60,000 دينار. الحد الأدنى 10%. ما القيمة الحالية المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-61">الحل</a></span></p>
+</div>
+<div id="prob-10-62" class="ee-item" data-id="c10-e-12" data-kind="problem" data-label="10.62">
+<p><strong>10.62</strong> للقرار بين أ وب: أ يعطي 250,000 أو ‎-90,000 دينار، وب يعطي 120,000 أو 30,000 دينار، والحالة الأولى باحتمال 0.60. احسب القيمة المتوقعة واحتمال الخسارة لكل منهما.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-62">الحل</a></span></p>
+</div>
+<div id="prob-10-63" class="ee-item" data-id="c10-e-13" data-kind="problem" data-label="10.63">
+<p><strong>10.63</strong> حل الشجرة التالية. القيم بالقيمة الحالية، بآلاف الدنانير.</p>
+<ul>
+<li>قرار: مشروع كبير، بتكلفة 300
+<ul>
+<li>طلب مرتفع، باحتمال 0.6: 800</li>
+<li>طلب منخفض، باحتمال 0.4: قرار ثان
+<ul>
+<li>استمر: 150</li>
+<li>بع المعدات: 220</li>
+</ul></li>
+</ul></li>
+<li>قرار: مشروع صغير، بتكلفة 120
+<ul>
+<li>طلب مرتفع، باحتمال 0.6: قرار ثان
+<ul>
+<li>وسع بتكلفة 150: 600</li>
+<li>لا توسع: 380</li>
+</ul></li>
+<li>طلب منخفض، باحتمال 0.4: 200</li>
+</ul></li>
+</ul>
+<p><span class="ee-sol-link"><a href="#sol-10-63">الحل</a></span></p>
+</div>
+<div id="prob-10-64" class="ee-item" data-id="c10-e-14" data-kind="problem" data-label="10.64">
+<p><strong>10.64</strong> معدات قيمتها 150,000 دينار، واحتمال تلفها الكامل في سنة 0.03. تأمين شامل بقسط 5,500 دينار، لكن الشركة تتحمل أول 20% من الخسارة. ما التكلفة المتوقعة مع التأمين وبدونه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-64">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-قيمة-المعلومات" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-قيمة-المعلومات">الجزء و: قيمة المعلومات</h3>
+<div id="prob-10-65" class="ee-item" data-id="c10-f-01" data-kind="problem" data-label="10.65">
+<p><strong>10.65</strong> منتج جديد يربح 120,000 دينار إذا نجح، باحتمال 0.55، ويخسر 70,000 دينار إذا فشل. البديل عدم الإطلاق، بقيمة صفر. ما قيمة المعلومات الكاملة عن نجاح المنتج؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-65">الحل</a></span></p>
+</div>
+<div id="prob-10-66" class="ee-item" data-id="c10-f-02" data-kind="problem" data-label="10.66">
+<p><strong>10.66</strong> بديل أ يعطي 300,000 أو ‎-80,000 دينار، وبديل ب يعطي 180,000 أو 20,000 دينار، والحالة الأولى باحتمال 0.50. احسب قيمة المعلومات الكاملة.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-66">الحل</a></span></p>
+</div>
+<div id="prob-10-67" class="ee-item" data-id="c10-f-03" data-kind="problem" data-label="10.67">
+<p><strong>10.67</strong> قيمة المعلومات الكاملة لقرار 40,000 دينار. شركة استشارات تعرض دراسة بمبلغ 25,000 دينار. ماذا تستنتج قبل أي حساب آخر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-67">الحل</a></span></p>
+</div>
+<div id="prob-10-68" class="ee-item" data-id="c10-f-04" data-kind="problem" data-label="10.68">
+<p><strong>10.68</strong> احتمال نجاح منتج 0.50 قبل أي دراسة. دراسة سوق تصيب باحتمال 0.80، سواء كان المنتج سينجح أو يفشل. إذا قالت الدراسة “ناجح”، ما احتمال النجاح؟ وإذا قالت “فاشل”؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-68">الحل</a></span></p>
+</div>
+<div id="prob-10-69" class="ee-item" data-id="c10-f-05" data-kind="problem" data-label="10.69">
+<p><strong>10.69</strong> منتج يربح 120,000 دينار إذا نجح، ويخسر 70,000 إذا فشل. احتمال النجاح 0.50. البديل عدم الإطلاق. دراسة سوق تصيب باحتمال 0.80 في الحالتين. كم تستحق الدراسة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-69">الحل</a></span></p>
+</div>
+<div id="prob-10-70" class="ee-item" data-id="c10-f-06" data-kind="problem" data-label="10.70">
+<p><strong>10.70</strong> للقرار: ربح 100,000 دينار أو خسارة 60,000 دينار، واحتمال النجاح 0.60. دراسة تصيب باحتمال 0.5 فقط. كم تستحق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-70">الحل</a></span></p>
+</div>
+<div id="prob-10-71" class="ee-item" data-id="c10-f-07" data-kind="problem" data-label="10.71">
+<p><strong>10.71</strong> قرار إطلاق منتج: ربح 150,000 دينار أو خسارة 100,000 دينار، واحتمال النجاح 0.50. لماذا تكون قيمة المعلومات أكبر عندما يكون القرار صعبا، أي الاحتمال قريبا من نقطة التعادل؟ احسب قيمة المعلومات الكاملة هنا.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-71">الحل</a></span></p>
+</div>
+<div id="prob-10-72" class="ee-item" data-id="c10-f-08" data-kind="problem" data-label="10.72">
+<p><strong>10.72</strong> مهندس يقترح إجراء تجربة إنتاج تكلف 15,000 دينار قبل شراء خط جديد. قيمة المعلومات الكاملة للقرار 40,000 دينار، وقيمة التجربة المحسوبة بدقتها 12,000 دينار. هل تجري الشركة التجربة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-72">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-التوزيع-الطبيعي" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-التوزيع-الطبيعي">الجزء ز: التوزيع الطبيعي</h3>
+<div id="prob-10-73" class="ee-item" data-id="c10-g-01" data-kind="problem" data-label="10.73">
+<p><strong>10.73</strong> الطلب الأسبوعي توزيعه طبيعي، بمتوسط 500 وحدة وانحراف 80 وحدة. ما احتمال أن يقل عن 400 وحدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-73">الحل</a></span></p>
+</div>
+<div id="prob-10-74" class="ee-item" data-id="c10-g-02" data-kind="problem" data-label="10.74">
+<p><strong>10.74</strong> الإيراد السنوي توزيعه طبيعي بمتوسط 60,000 وانحراف 12,000 دينار. ما احتمال أن يقع بين 50,000 و75,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-74">الحل</a></span></p>
+</div>
+<div id="prob-10-75" class="ee-item" data-id="c10-g-03" data-kind="problem" data-label="10.75">
+<p><strong>10.75</strong> مستودع يحتفظ بمخزون 1,450 وحدة لموسم. الطلب في الموسم طبيعي بمتوسط 1,200 وانحراف 200 وحدة. ما احتمال نفاد المخزون؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-75">الحل</a></span></p>
+</div>
+<div id="prob-10-76" class="ee-item" data-id="c10-g-04" data-kind="problem" data-label="10.76">
+<p><strong>10.76</strong> مدة مشروع إنشاء طبيعية بمتوسط 40 أسبوعا وانحراف 5 أسابيع. العقد يفرض غرامة إذا تجاوز 45 أسبوعا. ما احتمال الانتهاء في الموعد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-76">الحل</a></span></p>
+</div>
+<div id="prob-10-77" class="ee-item" data-id="c10-g-05" data-kind="problem" data-label="10.77">
+<p><strong>10.77</strong> منتج تكاليفه الثابتة 90,000 دينار، وسعره 30 دينار، وتكلفته المتغيرة 18 دينار. المبيعات طبيعية بمتوسط 9,000 وانحراف 1,500 وحدة. ما احتمال الربح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-77">الحل</a></span></p>
+</div>
+<div id="prob-10-78" class="ee-item" data-id="c10-g-06" data-kind="problem" data-label="10.78">
+<p><strong>10.78</strong> قيمة حالية طبيعية بمتوسط 80,000 وانحراف 30,000 دينار. ما القيمة التي تقع تحتها 5% فقط من النتائج؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-78">الحل</a></span></p>
+</div>
+<div id="prob-10-79" class="ee-item" data-id="c10-g-07" data-kind="problem" data-label="10.79">
+<p><strong>10.79</strong> انحراف القيمة الحالية لمشروع 25,000 دينار، وتوزيعها طبيعي. الشركة تريد احتمال خسارة 10% أو أقل. ما أقل قيمة متوقعة مقبولة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-79">الحل</a></span></p>
+</div>
+<div id="prob-10-80" class="ee-item" data-id="c10-g-08" data-kind="problem" data-label="10.80">
+<p><strong>10.80</strong> مشروع يكلف 60,000 دينار لمدة 5 سنوات. التدفق السنوي غير مؤكد، لكنه نفسه كل سنة: متوسطه 16,000 وانحرافه 4,000 دينار، وتوزيعه طبيعي. الحد الأدنى 10%. ما احتمال الخسارة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-80">الحل</a></span></p>
+</div>
+<div id="prob-10-81" class="ee-item" data-id="c10-g-09" data-kind="problem" data-label="10.81">
+<p><strong>10.81</strong> الطلب في كل ربع سنة مستقل، وطبيعي بمتوسط 2,500 وانحراف 400 وحدة. طاقة المصنع السنوية 10,500 وحدة. ما احتمال أن يتجاوز الطلب السنوي الطاقة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-81">الحل</a></span></p>
+</div>
+<div id="prob-10-82" class="ee-item" data-id="c10-g-10" data-kind="problem" data-label="10.82">
+<p><strong>10.82</strong> القيمة الحالية لمشروع بالحد الأدنى للشركة طبيعية بمتوسط 35,000 وانحراف 20,000 دينار. ما احتمال أن يكون المعدل الداخلي للمشروع أعلى من الحد الأدنى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-82">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-10-83" class="ee-item" data-id="c10-h-01" data-kind="problem" data-label="10.83">
+<p><strong>10.83</strong> القيم 40,000 و60,000 و75,000 دينار في A2:A4، واحتمالاتها 0.25 و0.50 و0.25 في B2:B4. احسب القيمة المتوقعة والانحراف المعياري في Excel بصيغتين فقط.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-83">الحل</a></span></p>
+</div>
+<div id="prob-10-84" class="ee-item" data-id="c10-h-02" data-kind="problem" data-label="10.84">
+<p><strong>10.84</strong> قيمة حالية طبيعية بمتوسط 25,000 وانحراف 15,000 دينار. احسب في Excel احتمال الخسارة، والرقم المئوي الخامس.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-84">الحل</a></span></p>
+</div>
+<div id="prob-10-85" class="ee-item" data-id="c10-h-03" data-kind="problem" data-label="10.85">
+<p><strong>10.85</strong> اكتب في Python برنامجا بمكتبة numpy يحسب القيمة الحالية المتوقعة لمشروع يكلف 100,000 دينار لمدة 5 سنوات، وتدفقه السنوي 15,000 أو 28,000 أو 40,000 دينار باحتمالات 0.3 و0.5 و0.2، بحد أدنى 12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-85">الحل</a></span></p>
+</div>
+<div id="prob-10-86" class="ee-item" data-id="c10-h-04" data-kind="problem" data-label="10.86">
+<p><strong>10.86</strong> مشروع يكلف 50,000 دينار لمدة 6 سنوات. تدفقه السنوي ثابت عبر السنوات، لكن قيمته غير معروفة، وتوزيعها منتظم بين 8,000 و16,000 دينار. الحد الأدنى 10%. اكتب برنامج محاكاة بمئة ألف محاولة يقدر القيمة الحالية المتوقعة واحتمال الخسارة. قارن بالحل الدقيق.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-86">الحل</a></span></p>
+</div>
+<div id="prob-10-87" class="ee-item" data-id="c10-h-05" data-kind="problem" data-label="10.87">
+<p><strong>10.87</strong> للمثال في هذا الفصل عن التدفقات المستقلة بأرقامه الأصلية: الثمن 50,000 دينار، والتدفقات بمتوسط 22,000 و24,000 و26,000 وانحراف 3,000 و5,000 و7,000 دينار، والحد الأدنى 10%. اكتب برنامج محاكاة يسحب كل تدفق من توزيع طبيعي، وقارن بالحساب المباشر.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-87">الحل</a></span></p>
+</div>
+<div id="prob-10-88" class="ee-item" data-id="c10-h-06" data-kind="problem" data-label="10.88">
+<p><strong>10.88</strong> ابن في Excel مثال المصنع الكبير والصغير بأرقامه الأصلية: الطلب مرتفع باحتمال 0.6، والكبير 900,000 أو ‎-250,000 دينار، والصغير 450,000 أو 50,000 دينار. اجعل القرار يتغير وحده إذا غيرت الاحتمال.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-88">الحل</a></span></p>
+</div>
+<div id="prob-10-89" class="ee-item" data-id="c10-h-07" data-kind="problem" data-label="10.89">
+<p><strong>10.89</strong> ابن في Excel محاكاة لمشروع يكلف 60,000 دينار لمدة 5 سنوات، تدفقه السنوي نفسه كل سنة، وتوزيعه طبيعي بمتوسط 16,000 وانحراف 4,000 دينار. الحد الأدنى 10%. استخدم ألف صف.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-89">الحل</a></span></p>
+</div>
+<div id="prob-10-90" class="ee-item" data-id="c10-h-08" data-kind="problem" data-label="10.90">
+<p><strong>10.90</strong> اكتب في Python دالة تأخذ جدول نتائج (صف لكل بديل، وعمود لكل حالة) واحتمالات الحالات، وتعيد أفضل بديل وقيمة المعلومات الكاملة. جربها على مثال المصنع بأرقامه الأصلية.</p>
+<p><span class="ee-sol-link"><a href="#sol-10-90">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-10-91" class="ee-item" data-id="c10-i-01" data-kind="problem" data-label="10.91">
+<p><strong>10.91</strong> ربح 20,000 دينار باحتمال 0.30، أو 50,000 دينار. ما الربح المتوقع؟</p>
+<p>أ) 35,000<br>
+ب) 29,000<br>
+ج) 41,000<br>
+د) 6,000</p>
+<p><span class="ee-sol-link"><a href="#sol-10-91">الحل</a></span></p>
+</div>
+<div id="prob-10-92" class="ee-item" data-id="c10-i-02" data-kind="problem" data-label="10.92">
+<p><strong>10.92</strong> عمر آلة 4 سنوات أو 8 سنوات باحتمالين متساويين. ما الصحيح عن القيمة الحالية المتوقعة لوفرها السنوي الثابت؟</p>
+<p>أ) تساوي القيمة الحالية لعمر 6 سنوات<br>
+ب) أقل من القيمة الحالية لعمر 6 سنوات<br>
+ج) أكبر من القيمة الحالية لعمر 6 سنوات<br>
+د) لا يمكن حسابها</p>
+<p><span class="ee-sol-link"><a href="#sol-10-92">الحل</a></span></p>
+</div>
+<div id="prob-10-93" class="ee-item" data-id="c10-i-03" data-kind="problem" data-label="10.93">
+<p><strong>10.93</strong> تكلفتان مستقلتان انحرافهما 3,000 و4,000 دينار. ما انحراف مجموعهما؟</p>
+<p>أ) 7,000<br>
+ب) 5,000.00<br>
+ج) 1,000<br>
+د) 25,000,000</p>
+<p><span class="ee-sol-link"><a href="#sol-10-93">الحل</a></span></p>
+</div>
+<div id="prob-10-94" class="ee-item" data-id="c10-i-04" data-kind="problem" data-label="10.94">
+<p><strong>10.94</strong> في شجرة القرار، ماذا نضع عند عقدة الاحتمال عند الحل؟</p>
+<p>أ) أكبر القيم<br>
+ب) أصغر القيم<br>
+ج) القيمة المتوقعة<br>
+د) متوسط القيم بدون احتمالات</p>
+<p><span class="ee-sol-link"><a href="#sol-10-94">الحل</a></span></p>
+</div>
+<div id="prob-10-95" class="ee-item" data-id="c10-i-05" data-kind="problem" data-label="10.95">
+<p><strong>10.95</strong> قيمة حالية طبيعية بمتوسط 30,000 وانحراف 20,000 دينار. ما احتمال الخسارة؟</p>
+<p>أ) 93.32%<br>
+ب) 6.68%<br>
+ج) 25.25%<br>
+د) 66.67%</p>
+<p><span class="ee-sol-link"><a href="#sol-10-95">الحل</a></span></p>
+</div>
+<div id="prob-10-96" class="ee-item" data-id="c10-i-06" data-kind="problem" data-label="10.96">
+<p><strong>10.96</strong> قيمة المعلومات الكاملة لقرار 30,000 دينار. دراسة سوق تكلف 35,000 دينار. ماذا تفعل الشركة؟</p>
+<p>أ) تشتريها إذا كانت دقيقة<br>
+ب) ترفضها مهما كانت دقتها<br>
+ج) تحسب قيمتها الفعلية أولا<br>
+د) تشتريها لأن المعلومات مهمة</p>
+<p><span class="ee-sol-link"><a href="#sol-10-96">الحل</a></span></p>
+</div>
+<div id="prob-10-97" class="ee-item" data-id="c10-i-07" data-kind="problem" data-label="10.97">
+<p><strong>10.97</strong> مشروع أ متوسطه 50,000 وانحرافه 10,000 دينار. مشروع ب متوسطه 45,000 وانحرافه 15,000 دينار. ماذا نقول؟</p>
+<p>أ) ب يسيطر على أ<br>
+ب) أ يسيطر على ب<br>
+ج) لا يسيطر أحدهما<br>
+د) نحتاج الاحتمالات</p>
+<p><span class="ee-sol-link"><a href="#sol-10-97">الحل</a></span></p>
+</div>
+<div id="prob-10-98" class="ee-item" data-id="c10-i-08" data-kind="problem" data-label="10.98">
+<p><strong>10.98</strong> لماذا يخفض التنويع على مشاريع مستقلة المخاطرة؟</p>
+<p>أ) لأنه يرفع القيمة المتوقعة<br>
+ب) لأن الخسارة في مشروع يعوضها غالبا ربح في آخر<br>
+ج) لأنه يخفض الحد الأدنى للعائد<br>
+د) لأنه يلغي المخاطرة تماما</p>
+<p><span class="ee-sol-link"><a href="#sol-10-98">الحل</a></span></p>
+</div>
+<div id="prob-10-99" class="ee-item" data-id="c10-i-09" data-kind="problem" data-label="10.99">
+<p><strong>10.99</strong> إطلاق منتج يربح 100,000 دينار باحتمال 0.60، أو يخسر 50,000 دينار. البديل عدم الإطلاق. ما قيمة المعلومات الكاملة؟</p>
+<p>أ) 60,000<br>
+ب) 20,000<br>
+ج) 40,000<br>
+د) 100,000</p>
+<p><span class="ee-sol-link"><a href="#sol-10-99">الحل</a></span></p>
+</div>
+<div id="prob-10-100" class="ee-item" data-id="c10-i-10" data-kind="problem" data-label="10.100">
+<p><strong>10.100</strong> محاكاة مونت كارلو لمشروع أعطت احتمال خسارة 12.3% بألف محاولة، و11.8% بمئة ألف. أي الرقمين أدق؟ ولماذا؟</p>
+<p>أ) الأول، لأنه أول تشغيل<br>
+ب) الثاني، لأن الخطأ العشوائي يصغر مع عدد المحاولات<br>
+ج) متساويان<br>
+د) لا يمكن معرفة ذلك</p>
+<p><span class="ee-sol-link"><a href="#sol-10-100">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار كامل فيه مخاطرة، من البداية إلى النهاية.</p>
+<div id="prob-10-101" class="ee-item" data-id="c10-j-01" data-kind="problem" data-label="10.101">
+<p><strong>10.101</strong> <strong>حالة 10.1: توسعة مصنع أعلاف في طولكرم</strong></p>
+<p>مصنع أعلاف يدرس زيادة طاقته، لأن مزارع الدواجن في المنطقة تتوسع. الطلب الإضافي قد يكون مرتفعا أو منخفضا، باحتمالين متساويين. القيمة الحالية بالدينار:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الخيار</th>
+<th>طلب مرتفع</th>
+<th>طلب منخفض</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ: خط جديد كامل</td>
+<td>700,000</td>
+<td>‎-200,000</td>
+</tr>
+<tr class="even">
+<td>ب: تحسين الخط الحالي</td>
+<td>350,000</td>
+<td>80,000</td>
+</tr>
+<tr class="odd">
+<td>ج: لا شيء</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>شركة استشارات زراعية تعرض دراسة للطلب بمبلغ 40,000 دينار. دقتها 85%: إذا كان الطلب مرتفعا تقول ذلك باحتمال 0.85، وإذا كان منخفضا تقول ذلك باحتمال 0.85.</p>
+<p>(أ) ما أفضل قرار بدون دراسة؟ (ب) ما قيمة المعلومات الكاملة؟ (ج) ما قيمة الدراسة؟ (د) هل يشتريها المصنع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-101">الحل</a></span></p>
+</div>
+<div id="prob-10-102" class="ee-item" data-id="c10-j-02" data-kind="problem" data-label="10.102">
+<p><strong>10.102</strong> <strong>حالة 10.2: محطة طاقة شمسية على سطح مصنع</strong></p>
+<p>مصنع يدرس محطة شمسية تكلف 140,000 دينار، وتعمل 15 سنة. صيانتها 4,000 دينار سنويا. يبيع الكهرباء للشبكة بعقد طويل، لكن متغيرين غير مؤكدين:</p>
+<ul>
+<li>سعر الكيلوواط ساعة في العقد: 0.08 دينار باحتمال 0.30، أو 0.11 باحتمال 0.50، أو 0.14 باحتمال 0.20.</li>
+<li>الإنتاج السنوي بالكيلوواط ساعة: 180,000 باحتمال 0.4، أو 220,000 باحتمال 0.6، حسب الغبار والطقس.</li>
+</ul>
+<p>المتغيران مستقلان. الحد الأدنى 10%.</p>
+<p>(أ) ابن جدول الحالات الست. (ب) احسب القيمة الحالية المتوقعة والانحراف المعياري. (ج) ما احتمال الخسارة؟ (د) ما الذي يستحق دراسة أدق قبل القرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-102">الحل</a></span></p>
+</div>
+<div id="prob-10-103" class="ee-item" data-id="c10-j-03" data-kind="problem" data-label="10.103">
+<p><strong>10.103</strong> <strong>حالة 10.3: قطع غيار لخط تعبئة</strong></p>
+<p>خط تعبئة يحتاج محركا خاصا يتعطل أحيانا. عدد المحركات التي يحتاجها في سنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العدد</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الاحتمال</td>
+<td>0.20</td>
+<td>0.35</td>
+<td>0.25</td>
+<td>0.15</td>
+<td>0.05</td>
+</tr>
+</tbody>
+</table>
+<p>كل محرك احتياطي في المخزن يكلف 600 دينار سنويا: فائدة ثمنه، والتخزين، واحتمال التقادم. كل محرك ناقص عند الحاجة يكلف 5,000 دينار: توقف الإنتاج حتى يصل محرك بالطائرة. كم محركا يحتفظ المصنع في المخزن في بداية السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-10-103">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch09.html" class="pagination-link" aria-label="قرار الاستبدال">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -213,6 +213,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -315,6 +321,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -383,7 +395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>العمر n: عدد السنوات التي يسمح القانون أو المحاسبة بتوزيع التكلفة عليها.</li>
 <li>القيمة الدفترية BV: الأساس ناقص الاستهلاك المتراكم حتى تاريخه.</li>
 </ul>
-<p>الأرض لا تستهلك، لأنها لا تفقد قيمتها بالاستخدام.</p>
+<p>الأرض لا تستهلك، لأنه ليس لها عمر إنتاجي محدد تنتهي بعده. هذا لا يعني أن قيمتها السوقية لا تنخفض أبدا: الاستهلاك توزيع محاسبي للتكلفة على العمر، وليس قياسا لسعر السوق. أما التحسينات على الأرض، مثل الأسوار والطرق الداخلية وشبكات التصريف، فلها عمر محدد وتستهلك.</p>
 <div id="ex-5-1" class="ee-item" data-id="c05-ex-basis" data-kind="example" data-label="5.1">
 <p><strong>مثال 5.1: أساس الاستهلاك</strong></p>
 <p>اشترى مصنع آلة سعرها 85,000 دينار. دفع 3,000 دينار للنقل، و4,500 دينار للتركيب، و1,500 دينار لتجربة التشغيل. ودفع أيضا 2,000 دينار لتدريب العمال على الآلة. ما أساس الاستهلاك؟</p>
@@ -724,6 +736,7 @@ T = t \times TI
 CF = R - O - T = (R - O)(1 - t) + t\,D
 </annotation></semantics></math></p>
 <p>الحد الأخير هو الوفر الضريبي من الاستهلاك.</p>
+<p><strong>افتراضات هذه المعادلة:</strong> الشركة رابحة من مجمل أعمالها، فتستفيد من كل وفر ضريبي في نفس السنة، حتى لو كان المشروع وحده خاسرا فيها. والاستهلاك مقبول ضريبيا بالمبلغ المحسوب. والضريبة تدفع في نفس سنة الدخل. إذا كانت الشركة خاسرة، يتأخر الوفر إلى السنوات التي تنقل إليها الخسارة، فتنخفض قيمته الحالية. قواعد نقل الخسائر في كل دولة في ملحق الضرائب، <a href="../appendices/tax-countries.html" class="quarto-xref"><span>Appendix G</span></a>.</p>
 <div id="ex-5-10" class="ee-item" data-id="c05-ex-tax-basic" data-kind="example" data-label="5.10">
 <p><strong>مثال 5.10: من الإيراد إلى التدفق النقدي بعد الضريبة</strong></p>
 <p>شركة إيرادها السنوي 120,000 دينار، وتكاليف تشغيلها 55,000 دينار. تملك معدات أساسها 100,000 دينار تستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%. احسب الدخل الخاضع للضريبة، والضريبة، وصافي الربح، والتدفق النقدي بعد الضريبة.</p>
@@ -931,7 +944,7 @@ t = t_2 + t_1(1 - t_2) = t_1 + t_2(1 - t_1) = 20.80\%
 <section id="sec-5-python" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="sec-5-python"><span class="header-section-number">5.8</span> Python: جداول الاستهلاك</h2>
 <p>هذا البرنامج يبني جداول الطرق الأربع لنفس الأصل، ويقارن القيمة الحالية للاستهلاك بنسبة 10%:</p>
-<div id="fdf0a6c2" class="cell" data-execution_count="1">
+<div id="2c0eb42a" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> straight_line(B, S, n):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(B <span class="op">-</span> S) <span class="op">/</span> n] <span class="op">*</span> n</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>

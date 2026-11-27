@@ -213,6 +213,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -313,6 +319,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
   </div>
 </li>
       </ul>
@@ -965,6 +977,7 @@ CC = 800\mathord{,}000 + \frac{25\mathord{,}000 + 9\mathord{,}104.15}{0.06} = 1\
 <section id="sec-3-payback" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="sec-3-payback"><span class="header-section-number">3.7</span> فترة الاسترداد ونقطة التعادل</h2>
 <p>فترة الاسترداد هي عدد السنوات اللازم لاسترجاع تكلفة المشروع. الفترة البسيطة تجمع التدفقات بدون فائدة. الفترة المخصومة تجمع قيمها الحالية.</p>
+<p>انتبه لمعنى الكسر في الجواب. إذا كانت التدفقات سنوية، فجواب مثل 3.4 سنة يعني أن الاسترداد يحدث خلال السنة الرابعة. الكسر 0.4 تقدير بافتراض أن تدفق تلك السنة يصل بالتساوي على أشهرها، وليس موعدا دقيقا. في الحلول نذكر النوع المحسوب، بسيطا أو مخصوما، في كل مرة.</p>
 <div id="ex-3-21" class="ee-item" data-id="c03-ex-payback" data-kind="example" data-label="3.21">
 <p><strong>مثال 3.21: فترة الاسترداد البسيطة والمخصومة</strong></p>
 <p>نظام تحكم يكلف 60,000 دينار ويوفر 15,000 دينار سنويا. احسب فترة الاسترداد البسيطة، ثم المخصومة بنسبة 10%.</p>
@@ -1093,7 +1106,7 @@ PW = -90\mathord{,}000 + 36\mathord{,}062.64 + 42\mathord{,}241.08 = -11\mathord
 <section id="sec-3-python" class="level2" data-number="3.9">
 <h2 data-number="3.9" class="anchored" data-anchor-id="sec-3-python"><span class="header-section-number">3.9</span> Python: مقارنة البدائل</h2>
 <p>هذا البرنامج يقارن آلتين بأعمار مختلفة بالقيمة السنوية. الدالة pmt تحسب تكلفة استرداد رأس المال، والإشارات فيها تتبع قاعدة Excel:</p>
-<div id="64bdc4a6" class="cell" data-execution_count="1">
+<div id="cb55a142" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="fl">0.12</span></span>
@@ -1111,7 +1124,7 @@ B: CR =   6803.87   AW =   9803.87</code></pre>
 </div>
 </div>
 <p>والبرنامج التالي يحول نسبة اسمية إلى فعلية لعدة نسب، ويبين أن الفرق يكبر مع ارتفاع النسبة:</p>
-<div id="a1cbc18a" class="cell" data-execution_count="2">
+<div id="46df2710" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> [<span class="fl">0.06</span>, <span class="fl">0.09</span>, <span class="fl">0.12</span>, <span class="fl">0.15</span>, <span class="fl">0.18</span>]:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ia <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> r <span class="op">/</span> <span class="dv">12</span>) <span class="op">**</span> <span class="dv">12</span> <span class="op">-</span> <span class="dv">1</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"nominal </span><span class="sc">{</span>r<span class="sc">:5.1%}</span><span class="ss">   effective </span><span class="sc">{</span>ia<span class="sc">:6.2%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

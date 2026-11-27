@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix Q — حلول مسائل الفصل 10 – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/solutions-ch09.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch10.html"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" id="toc-الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" class="nav-link" data-scroll-target="#الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري">الجزء ب: القيمة المتوقعة والانحراف المعياري</a></li>
+  <li><a href="#الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" id="toc-الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" class="nav-link" data-scroll-target="#الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة">الجزء ج: القيمة الحالية المتوقعة واحتمال الخسارة</a></li>
+  <li><a href="#الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" id="toc-الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" class="nav-link" data-scroll-target="#الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة">الجزء د: المقارنة بين بدائل فيها مخاطرة</a></li>
+  <li><a href="#الجزء-هـ-شجرة-القرار" id="toc-الجزء-هـ-شجرة-القرار" class="nav-link" data-scroll-target="#الجزء-هـ-شجرة-القرار">الجزء هـ: شجرة القرار</a></li>
+  <li><a href="#الجزء-و-قيمة-المعلومات" id="toc-الجزء-و-قيمة-المعلومات" class="nav-link" data-scroll-target="#الجزء-و-قيمة-المعلومات">الجزء و: قيمة المعلومات</a></li>
+  <li><a href="#الجزء-ز-التوزيع-الطبيعي" id="toc-الجزء-ز-التوزيع-الطبيعي" class="nav-link" data-scroll-target="#الجزء-ز-التوزيع-الطبيعي">الجزء ز: التوزيع الطبيعي</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch10.html"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 10</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sol-10" class="quarto-section-identifier">Appendix Q — حلول مسائل الفصل 10</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الحلول التالية محسوبة ببرنامج من نفس بنك الأسئلة الذي ولد نصوص المسائل. إذا حللت بالجداول قد يختلف جوابك في الخانة العشرية الأخيرة.</p>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h2>
+<p><span id="sol-10-1"><strong>10.1</strong></span> تحليل الحساسية يغير المتغير ويرى أثره، بدون أن يقول أي قيمة أرجح. تحليل المخاطرة يعطي كل قيمة احتمالا، فيحسب ما نتوقعه في المتوسط، واحتمال الخسارة.</p>
+<p><span id="sol-10-2"><strong>10.2</strong></span> لا. القيمة المتوقعة متوسط النتائج لو تكرر القرار مرات كثيرة. في مرة واحدة قد تربح أكثر بكثير، أو تخسر.</p>
+<p><span id="sol-10-3"><strong>10.3</strong></span> يقيس تشتت النتائج حول القيمة المتوقعة: كم تبتعد القيمة الحالية الفعلية عادة عن متوسطها. كلما كبر، زادت المخاطرة.</p>
+<p><span id="sol-10-4"><strong>10.4</strong></span> عندما تكون القيمة الحالية خطية في المتغيرات غير المؤكدة، مثل التدفق السنوي أو الإيراد. أما العمر ونسبة الفائدة فلا يدخلان خطيا، فيجب الحساب لكل حالة.</p>
+<p><span id="sol-10-5"><strong>10.5</strong></span> الأول، لأنه يعطي نفس المتوسط بمخاطرة أقل.</p>
+<p><span id="sol-10-6"><strong>10.6</strong></span> الانحراف المعياري مقسوما على القيمة المتوقعة. يقارن مخاطرة مشاريع بأحجام مختلفة، لأنه يقيس المخاطرة لكل دينار متوقع.</p>
+<p><span id="sol-10-7"><strong>10.7</strong></span> المربع عقدة قرار: صاحب القرار يختار الفرع. الدائرة عقدة احتمال: النتيجة تحددها الظروف، ولكل فرع احتمال.</p>
+<p><span id="sol-10-8"><strong>10.8</strong></span> لأن قيمة كل قرار مبكر تعتمد على ما سيحدث بعده، وعلى القرارات اللاحقة. نحسب القيم في الأطراف أولا، ثم نرجع خطوة خطوة.</p>
+<p><span id="sol-10-9"><strong>10.9</strong></span> لأنه يؤجل جزءا من الاستثمار حتى تتضح المعلومات. إذا جاء الطلب منخفضا، تتجنب الشركة خسارة الطاقة الزائدة.</p>
+<p><span id="sol-10-10"><strong>10.10</strong></span> لا شيء. المعلومات لها قيمة فقط إذا كانت قد تغير القرار.</p>
+<p><span id="sol-10-11"><strong>10.11</strong></span> لأن الدراسة الحقيقية قد تخطئ، فلا تعطي أكثر من المعرفة الكاملة. لا تدفع الشركة لأي دراسة أكثر من هذا الحد.</p>
+<p><span id="sol-10-12"><strong>10.12</strong></span> لأنها تعتمد على أرقام عشوائية. نقلل الاختلاف بزيادة عدد المحاولات، ونثبت البذرة العشوائية لنكرر نفس النتيجة.</p>
+</section>
+<section id="الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-القيمة-المتوقعة-والانحراف-المعياري">الجزء ب: القيمة المتوقعة والانحراف المعياري</h2>
+<p><span id="sol-10-13"><strong>10.13</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo>=</mo><mn>0.70</mn><mo>×</mo><mn>2</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.30</mn><mo>×</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>4</mn><mi>,</mi><mn>100.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E} = 0.70 \times 2\mathord{,}000 + 0.30 \times 9\mathord{,}000 = 4\mathord{,}100.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-14"><strong>10.14</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.20</mn><mo>×</mo><mn>4</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>6</mn><mo>+</mo><mn>0.30</mn><mo>×</mo><mn>8</mn><mo>=</mo><mn>6.20</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(n) = 0.20 \times 4 + 0.50 \times 6 + 0.30 \times 8 = 6.20
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><msub><mi>p</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mi>k</mi></msub><mo>−</mo><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>1.40</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{\sum p_k\,(n_k - \mathrm{E}(n))^2} = 1.40
+</annotation></semantics></math></p>
+<p><span id="sol-10-15"><strong>10.15</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn><mo>−</mo><mn>0.25</mn><mo>−</mo><mn>0.15</mn><mo>=</mo><mn>0.60</mn></mrow><annotation encoding="application/x-tex">
+p_2 = 1 - 0.25 - 0.15 = 0.60
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo>=</mo><mn>0.25</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.60</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.15</mn><mo>×</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>49</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E} = 0.25 \times 30\mathord{,}000 + 0.60 \times 50\mathord{,}000 + 0.15 \times 80\mathord{,}000 = 49\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-16"><strong>10.16</strong></span> العدد المتوقع للأعطال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>×</mo><mn>0.50</mn><mo>+</mo><mn>1</mn><mo>×</mo><mn>0.30</mn><mo>+</mo><mn>2</mn><mo>×</mo><mn>0.15</mn><mo>+</mo><mn>3</mn><mo>×</mo><mn>0.05</mn><mo>=</mo><mn>0.75</mn></mrow><annotation encoding="application/x-tex">
+0 \times 0.50 + 1 \times 0.30 + 2 \times 0.15 + 3 \times 0.05 = 0.75
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.75</mn><mo>×</mo><mn>3</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>2</mn><mi>,</mi><mn>625.00</mn></mrow><annotation encoding="application/x-tex">
+0.75 \times 3\mathord{,}500 = 2\mathord{,}625.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-17"><strong>10.17</strong></span> تكلفة الإعداد تدفع في الحالتين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo>=</mo><mn>0.30</mn><mo>×</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>18</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E} = 0.30 \times 80\mathord{,}000 - 6\mathord{,}000 = 18\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>التقدم مجد إذا كان الربح المتوقع موجبا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&gt;</mo><mfrac><mrow><mn>6</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>80</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.0750</mn></mrow><annotation encoding="application/x-tex">
+p &gt; \frac{6\mathord{,}000}{80\mathord{,}000} = 0.0750
+</annotation></semantics></math></p>
+<p><span id="sol-10-18"><strong>10.18</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">s</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.01</mn><mo>×</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>2</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{loss}) = 0.01 \times 200\mathord{,}000 = 2\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>القسط أعلى من الخسارة المتوقعة. شركة التأمين تحتاج ربحا، فالقسط غالبا أعلى. لكن الشركة تؤمن لأن خسارة 200,000 دينار دفعة واحدة قد تفلسها. التأمين يحول خسارة كبيرة غير مؤكدة إلى تكلفة صغيرة مؤكدة.</p>
+<p><span id="sol-10-19"><strong>10.19</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>140.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(D) = 1\mathord{,}140.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mn>46</mn><mi>,</mi><mn>400.00</mn></mrow></msqrt><mo>=</mo><mn>215.41</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{46\mathord{,}400.00} = 215.41
+</annotation></semantics></math></p>
+<p><span id="sol-10-20"><strong>10.20</strong></span> الإيراد يساوي السعر ضرب الكمية. ضرب متغير في رقم ثابت يضرب متوسطه وانحرافه بنفس الرقم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8.00</mn><mo>×</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>96</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(R) = 8.00 \times 12\mathord{,}000 = 96\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>R</mi></msub><mo>=</mo><mn>8.00</mn><mo>×</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>20</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\sigma_R = 8.00 \times 2\mathord{,}500 = 20\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>التباين يضرب في مربع الرقم.</p>
+<p><span id="sol-10-21"><strong>10.21</strong></span> المتوسطات تجمع دائما:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>35</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E} = 20\mathord{,}000 + 15\mathord{,}000 = 35\mathord{,}000
+</annotation></semantics></math></p>
+<p>البندان مستقلان، فتجمع التباينات، وليس الانحرافات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mn>3</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>5</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{3\mathord{,}000^2 + 4\mathord{,}000^2} = 5\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الانحراف الكلي أقل من مجموع الانحرافين، 7,000 دينار، لأن البندين نادرا ما يبتعدان في نفس الاتجاه معا.</p>
+<p><span id="sol-10-22"><strong>10.22</strong></span> عندما يكون المتغيران مستقلين، متوسط حاصل ضربهما يساوي حاصل ضرب متوسطيهما:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>800.00</mn><mo>,</mo><mspace width="2.0em"></mspace><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.50</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(h) = 1\mathord{,}800.00, \qquad \mathrm{E}(r) = 7.50
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mspace width="0.167em"></mspace><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>800.00</mn><mo>×</mo><mn>7.50</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(h\,r) = 1\mathord{,}800.00 \times 7.50 = 13\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-23"><strong>10.23</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>×</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+p \times 60\mathord{,}000 + (1 - p) \times (-40\mathord{,}000) = 0
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mn>40</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>40</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.4000</mn></mrow><annotation encoding="application/x-tex">
+p = \frac{40\mathord{,}000}{60\mathord{,}000 + 40\mathord{,}000} = 0.4000
+</annotation></semantics></math></p>
+<p><span id="sol-10-24"><strong>10.24</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>21.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(X) = 21.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.30</mn><mo>×</mo><mn>100</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>400</mn><mo>+</mo><mn>0.20</mn><mo>×</mo><mn>1</mn><mi>,</mi><mn>600</mn><mo>=</mo><mn>550.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(X^2) = 0.30 \times 100 + 0.50 \times 400 + 0.20 \times 1\mathord{,}600 = 550.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>550.00</mn><mo>−</mo><msup><mn>21.00</mn><mn>2</mn></msup><mo>=</mo><mn>109.00</mn></mrow><annotation encoding="application/x-tex">
+\sigma^2 = 550.00 - 21.00^2 = 109.00
+</annotation></semantics></math></p>
+<p>الانحراف المعياري 10.44 ساعة.</p>
+<p><span id="sol-10-25"><strong>10.25</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>V</mi><mi>a</mi></msub><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>40</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.3000</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>C</mi><msub><mi>V</mi><mi>b</mi></msub><mo>=</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>150</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.2000</mn></mrow><annotation encoding="application/x-tex">
+CV_a = \frac{12\mathord{,}000}{40\mathord{,}000} = 0.3000, \qquad CV_b = \frac{30\mathord{,}000}{150\mathord{,}000} = 0.2000
+</annotation></semantics></math></p>
+<p>الأخطر لكل دينار: الصغير، مع أن الانحراف المعياري للكبير أكبر.</p>
+<p><span id="sol-10-26"><strong>10.26</strong></span> بدون احتياطي، الخسارة المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.25</mn><mo>×</mo><mn>22</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>5</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+0.25 \times 22\mathord{,}000 = 5\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>مع الاحتياطي، التكلفة 4,000 دينار مؤكدة. الاحتياطي أرخص بالقيمة المتوقعة، فيشتريه المصنع.</p>
+</section>
+<section id="الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-القيمة-الحالية-المتوقعة-واحتمال-الخسارة">الجزء ج: القيمة الحالية المتوقعة واحتمال الخسارة</h2>
+<p><span id="sol-10-27"><strong>10.27</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>13</mn><mi>,</mi><mn>464.49</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mn>2</mn></msub><mo>=</mo><mn>14</mn><mi>,</mi><mn>966.41</mn></mrow><annotation encoding="application/x-tex">
+PW_1 = -13\mathord{,}464.49, \qquad PW_2 = 14\mathord{,}966.41
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>594.05</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>σ</mi><mo>=</mo><mn>13</mn><mi>,</mi><mn>928.24</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 3\mathord{,}594.05, \qquad \sigma = 13\mathord{,}928.24
+</annotation></semantics></math></p>
+<p>احتمال الخسارة 0.40.</p>
+<p><span id="sol-10-28"><strong>10.28</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السياحة</th>
+<th>الاحتمال</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ضعيفة</td>
+<td>0.25</td>
+<td>‎-91,036</td>
+</tr>
+<tr class="even">
+<td>متوسطة</td>
+<td>0.50</td>
+<td>8,317</td>
+</tr>
+<tr class="odd">
+<td>قوية</td>
+<td>0.25</td>
+<td>107,670</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>317.27</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>σ</mi><mo>=</mo><mn>70</mn><mi>,</mi><mn>253.04</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 8\mathord{,}317.27, \qquad \sigma = 70\mathord{,}253.04
+</annotation></semantics></math></p>
+<p><span id="sol-10-29"><strong>10.29</strong></span> التكلفة تدخل خطيا، فتكفي التكلفة المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.60</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>65</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>56</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(C) = 0.60 \times 50\mathord{,}000 + 0.40 \times 65\mathord{,}000 = 56\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>56</mn><mi>,</mi><mn>000.00</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>328.91</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -56\mathord{,}000.00 + 15\mathord{,}000\,(P/A,\ 10\%,\ 6) = 9\mathord{,}328.91
+</annotation></semantics></math></p>
+<p><span id="sol-10-30"><strong>10.30</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mn>8</mn><mi>%</mi></mrow></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>889.18</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mrow><mn>14</mn><mi>%</mi></mrow></msub><mo>=</mo><mn>36.27</mn></mrow><annotation encoding="application/x-tex">
+PW_{8\%} = 12\mathord{,}889.18, \qquad PW_{14\%} = 36.27
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><mi>,</mi><mn>462.72</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 6\mathord{,}462.72
+</annotation></semantics></math></p>
+<p>النسبة المتوقعة 11.00%، والقيمة الحالية عندها 5,970.75 دينار. الرقمان مختلفان، لأن القيمة الحالية ليست خطية في النسبة.</p>
+<p><span id="sol-10-31"><strong>10.31</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>4</mn></msub><mo>=</mo><mi>−</mi><mn>9</mn><mi>,</mi><mn>395.87</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mn>8</mn></msub><mo>=</mo><mn>4</mn><mi>,</mi><mn>677.02</mn></mrow><annotation encoding="application/x-tex">
+PW_{4} = -9\mathord{,}395.87, \qquad PW_{8} = 4\mathord{,}677.02
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>952.14</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -952.14
+</annotation></semantics></math></p>
+<p>احتمال الخسارة 0.40.</p>
+<p><span id="sol-10-32"><strong>10.32</strong></span> المتغيران مستقلان، فاحتمال كل حالة حاصل ضرب احتماليها:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التدفق</th>
+<th>العمر</th>
+<th>الاحتمال</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10,000</td>
+<td>5</td>
+<td>0.30</td>
+<td>‎-12,092</td>
+</tr>
+<tr class="even">
+<td>10,000</td>
+<td>8</td>
+<td>0.20</td>
+<td>3,349</td>
+</tr>
+<tr class="odd">
+<td>16,000</td>
+<td>5</td>
+<td>0.30</td>
+<td>10,653</td>
+</tr>
+<tr class="even">
+<td>16,000</td>
+<td>8</td>
+<td>0.20</td>
+<td>35,359</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>309.75</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = 7\mathord{,}309.75
+</annotation></semantics></math></p>
+<p><span id="sol-10-33"><strong>10.33</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>9</mn><mi>,</mi><mn>250.00</mn><mo>=</mo><mn>65.70</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(AW) = -40\mathord{,}000\,(A/P,\ 10\%,\ 6) + 9\mathord{,}250.00 = 65.70
+</annotation></semantics></math></p>
+<p><span id="sol-10-34"><strong>10.34</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>18</mn><mi>,</mi><mn>000</mn></mrow><mn>1.10</mn></mfrac><mo>+</mo><mfrac><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow><msup><mn>1.10</mn><mn>2</mn></msup></mfrac><mo>=</mo><mn>2</mn><mi>,</mi><mn>892.56</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -30\mathord{,}000 + \frac{18\mathord{,}000}{1.10} + \frac{20\mathord{,}000}{1.10^2} = 2\mathord{,}892.56
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mfrac><mrow><mn>2</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup></mrow><msup><mn>1.10</mn><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mrow><mn>4</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup></mrow><msup><mn>1.10</mn><mn>4</mn></msup></mfrac></mrow></msqrt><mo>=</mo><mn>3</mn><mi>,</mi><mn>772.80</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{\frac{2\mathord{,}000^2}{1.10^2} + \frac{4\mathord{,}000^2}{1.10^4}} = 3\mathord{,}772.80
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>−</mi><mn>2</mn><mi>,</mi><mn>892.56</mn></mrow><mrow><mn>3</mn><mi>,</mi><mn>772.80</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>22.16</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(PW &lt; 0) = \Phi\left(\frac{-2\mathord{,}892.56}{3\mathord{,}772.80}\right) = 22.16\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-35"><strong>10.35</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>0</mn><mo>−</mo><mn>25</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>1.67</mn></mrow><annotation encoding="application/x-tex">
+z = \frac{0 - 25\mathord{,}000}{15\mathord{,}000} = -1.67
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.DIST(0, 25000, 15000, TRUE)</code></pre>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4.78</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(PW &lt; 0) = 4.78\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-36"><strong>10.36</strong></span> احتمال 5% في الطرف الأيسر يقابل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>−</mi><mn>1.644854</mn></mrow><annotation encoding="application/x-tex">
+z = -1.644854
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.S.INV(0.05)</code></pre>
+<p>نريد الصفر عند هذه النقطة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>0</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn></mrow><mi>σ</mi></mfrac><mo>=</mo><mi>−</mi><mn>1.644854</mn></mrow><annotation encoding="application/x-tex">
+\frac{0 - 40\mathord{,}000}{\sigma} = -1.644854
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mrow><mn>40</mn><mi>,</mi><mn>000</mn></mrow><mn>1.644854</mn></mfrac><mo>=</mo><mn>24</mn><mi>,</mi><mn>318.27</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \frac{40\mathord{,}000}{1.644854} = 24\mathord{,}318.27
+</annotation></semantics></math></p>
+<p><span id="sol-10-37"><strong>10.37</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>50</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>1.00</mn></mrow><annotation encoding="application/x-tex">
+z = \frac{30\mathord{,}000 - 50\mathord{,}000}{20\mathord{,}000} = -1.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&gt;</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1.00</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>84.13</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(PW &gt; 30\mathord{,}000) = 1 - \Phi(-1.00) = 84.13\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-38"><strong>10.38</strong></span> جدول الاحتمال التراكمي يرتب النتائج تصاعديا، ويجمع الاحتمالات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>القيمة الحالية أقل من أو تساوي</th>
+<th>‎-15,000</th>
+<th>10,000</th>
+<th>35,000</th>
+<th>60,000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الاحتمال التراكمي</td>
+<td>0.15</td>
+<td>0.50</td>
+<td>0.80</td>
+<td>1.00</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الحالية أقل من 35,000 في الحالتين الأوليين، فالاحتمال 0.50. القيمة المتوقعة 23,750.00 دينار.</p>
+<p><span id="sol-10-39"><strong>10.39</strong></span> قيمة البيع المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.50</mn><mo>×</mo><mn>0</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>7</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+0.50 \times 0 + 0.50 \times 15\mathord{,}000 = 7\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>70</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>18</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>7</mn><mi>,</mi><mn>500.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>891.07</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -70\mathord{,}000 + 18\mathord{,}000\,(P/A,\ 10\%,\ 5) + 7\mathord{,}500.00\,(P/F,\ 10\%,\ 5) = 2\mathord{,}891.07
+</annotation></semantics></math></p>
+<p><span id="sol-10-40"><strong>10.40</strong></span> <strong>مستقلة:</strong> تجمع التباينات المخصومة بمربع المعامل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>5</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></munderover><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>2</mn><mi>t</mi></mrow></msup></mrow></mfrac><mo>=</mo><mn>63</mn><mi>,</mi><mn>511</mn><mi>,</mi><mn>026</mn></mrow><annotation encoding="application/x-tex">
+\sigma^2 = 5\mathord{,}000^2 \sum_{t=1}^{4} \frac{1}{(1 + 0.1)^{2t}} = 63\mathord{,}511\mathord{,}026
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>7</mn><mi>,</mi><mn>969.38</mn></mrow><annotation encoding="application/x-tex">
+\sigma = 7\mathord{,}969.38
+</annotation></semantics></math></p>
+<p><strong>مرتبطة تماما:</strong> كل السنوات تبتعد معا في نفس الاتجاه، فتجمع الانحرافات نفسها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15</mn><mi>,</mi><mn>849.33</mn></mrow><annotation encoding="application/x-tex">
+\sigma = 5\mathord{,}000\,(P/A,\ 10\%,\ 4) = 15\mathord{,}849.33
+</annotation></semantics></math></p>
+<p>الارتباط يضاعف المخاطرة تقريبا. في الواقع، الطلب في سنة يرتبط غالبا بالسنة التي قبلها، فافتراض الاستقلال يقلل المخاطرة.</p>
+</section>
+<section id="الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-د-المقارنة-بين-بدائل-فيها-مخاطرة">الجزء د: المقارنة بين بدائل فيها مخاطرة</h2>
+<p><span id="sol-10-41"><strong>10.41</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>أ</th>
+<th>ب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة المتوقعة</td>
+<td>14,000.00</td>
+<td>16,000.00</td>
+</tr>
+<tr class="even">
+<td>الانحراف المعياري</td>
+<td>7,000.00</td>
+<td>19,467.92</td>
+</tr>
+</tbody>
+</table>
+<p>ب أعلى قيمة متوقعة وأعلى مخاطرة، فلا يسيطر أحدهما على الآخر.</p>
+<p><span id="sol-10-42"><strong>10.42</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>a</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0.50</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>26</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+V_a = 30\mathord{,}000 - 0.50 \times 8\mathord{,}000 = 26\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>b</mi></msub><mo>=</mo><mn>42</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0.50</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>27</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+V_b = 42\mathord{,}000 - 0.50 \times 30\mathord{,}000 = 27\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>تختار ب. كلما ارتفع المعامل، زاد كره الشركة للمخاطرة، ومال القرار إلى المشروع الأكثر استقرارا.</p>
+<p><span id="sol-10-43"><strong>10.43</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>V</mi><mi>a</mi></msub><mo>=</mo><mn>0.3000</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>C</mi><msub><mi>V</mi><mi>b</mi></msub><mo>=</mo><mn>0.2500</mn></mrow><annotation encoding="application/x-tex">
+CV_a = 0.3000, \qquad CV_b = 0.2500
+</annotation></semantics></math></p>
+<p>الأقل مخاطرة نسبيا: ب.</p>
+<p><span id="sol-10-44"><strong>10.44</strong></span> <strong>بأسوأ حالة:</strong> أسوأ نتيجة لأ 8,000 دينار، ولب ‎-6,000 دينار. يختار أ، لأن أسوأ ما يحدث له أفضل.</p>
+<p><strong>بالقيمة المتوقعة:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mi>a</mi></msub><mo>=</mo><mn>11</mn><mi>,</mi><mn>700.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>b</mi></msub><mo>=</mo><mn>14</mn><mi>,</mi><mn>700.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_a = 11\mathord{,}700.00, \qquad \mathrm{E}_b = 14\mathord{,}700.00
+</annotation></semantics></math></p>
+<p>يختار ب.</p>
+<p>معيار أسوأ حالة حذر جدا، ويناسب قرارا قد يهدد بقاء الشركة. القيمة المتوقعة تناسب قرارات متكررة صغيرة.</p>
+<p><span id="sol-10-45"><strong>10.45</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>a</mi></msub><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>2.28</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P_a = \Phi\left(\frac{-30\mathord{,}000}{15\mathord{,}000}\right) = 2.28\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>b</mi></msub><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>−</mi><mn>45</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>35</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>9.93</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P_b = \Phi\left(\frac{-45\mathord{,}000}{35\mathord{,}000}\right) = 9.93\%
+</annotation></semantics></math></p>
+<p>ب أعلى قيمة متوقعة، لكن احتمال خسارته أعلى.</p>
+<p><span id="sol-10-46"><strong>10.46</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mn>10</mn><mi>%</mi></mrow></msub><mo>=</mo><mn>15</mn><mi>,</mi><mn>815.74</mn></mrow><annotation encoding="application/x-tex">
+PW_{10\%} = 15\mathord{,}815.74
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mn>15</mn><mi>%</mi></mrow></msub><mo>=</mo><mn>3</mn><mi>,</mi><mn>258.62</mn></mrow><annotation encoding="application/x-tex">
+PW_{15\%} = 3\mathord{,}258.62
+</annotation></semantics></math></p>
+<p>الشركة تحكم بالرقم الثاني: مقبول.</p>
+<p>العيب: النسبة الأعلى تخصم التدفقات البعيدة أكثر من القريبة، فتفترض أن المخاطرة تكبر مع الزمن بشكل معين. ولا تقول شيئا عن احتمال الخسارة. هي طريقة عملية وسريعة، لكنها لا تحل محل تحليل المخاطرة.</p>
+<p><span id="sol-10-47"><strong>10.47</strong></span> المتوسط نفسه في الخيارين: 40,000 دينار.</p>
+<p><strong>المشروع الكبير:</strong> كل شيء يتضاعف، والانحراف أيضا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>2</mn><mo>×</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>24</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\sigma = 2 \times 12\mathord{,}000 = 24\mathord{,}000
+</annotation></semantics></math></p>
+<p><strong>مشروعان مستقلان:</strong> تجمع التباينات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>×</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>16</mn><mi>,</mi><mn>970.56</mn></mrow><annotation encoding="application/x-tex">
+\sigma = \sqrt{2} \times 12\mathord{,}000 = 16\mathord{,}970.56
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>كبير</th>
+<th>صغيران</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الانحراف</td>
+<td>24,000</td>
+<td>16,971</td>
+</tr>
+<tr class="even">
+<td>احتمال الخسارة</td>
+<td>4.78%</td>
+<td>0.92%</td>
+</tr>
+</tbody>
+</table>
+<p>توزيع الاستثمار على مشاريع مستقلة يخفض المخاطرة بدون أن يخفض العائد المتوقع. هذا هو التنويع.</p>
+<p><span id="sol-10-48"><strong>10.48</strong></span> ب، لأن أ أعلى منه قيمة متوقعة وأقل مخاطرة. أ يسيطر على ب. أما أ وج فلا يسيطر أحدهما على الآخر: ج أعلى عائدا وأعلى مخاطرة، والاختيار بينهما يعتمد على موقف الشركة من المخاطرة.</p>
+<p><span id="sol-10-49"><strong>10.49</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الندم</th>
+<th>ضعيف</th>
+<th>متوسط</th>
+<th>قوي</th>
+<th>أكبر ندم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>0</td>
+<td>5,000</td>
+<td>20,000</td>
+<td>20,000</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>15,000</td>
+<td>0</td>
+<td>0</td>
+<td>15,000</td>
+</tr>
+</tbody>
+</table>
+<p>نختار المشروع الذي أكبر ندم له أصغر: ب.</p>
+<p><span id="sol-10-50"><strong>10.50</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>a</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>10</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>84.13</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P_a = 1 - \Phi\left(\frac{30\mathord{,}000 - 40\mathord{,}000}{10\mathord{,}000}\right) = 84.13\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>b</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>50</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>74.75</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P_b = 1 - \Phi\left(\frac{30\mathord{,}000 - 50\mathord{,}000}{30\mathord{,}000}\right) = 74.75\%
+</annotation></semantics></math></p>
+<p>يفضل أ. لاحظ أن هذا قد يختلف عما تفضله الشركة بالقيمة المتوقعة. ربط المكافأة بهدف واحد قد يدفع المدير إلى قرارات لا تخدم الشركة.</p>
+</section>
+<section id="الجزء-هـ-شجرة-القرار" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-شجرة-القرار">الجزء هـ: شجرة القرار</h2>
+<p><span id="sol-10-51"><strong>10.51</strong></span></p>
+<ul>
+<li>قرار: إطلاق
+<ul>
+<li>نجاح، باحتمال 0.55: 120,000</li>
+<li>فشل، باحتمال 0.45: ‎-70,000</li>
+</ul></li>
+<li>قرار: عدم الإطلاق: 0</li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">h</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.55</mn><mo>×</mo><mn>120</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.45</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>70</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>34</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{launch}) = 0.55 \times 120\mathord{,}000 + 0.45 \times (-70\mathord{,}000) = 34\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>القرار: الإطلاق.</p>
+<p><span id="sol-10-52"><strong>10.52</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mi>a</mi></msub><mo>=</mo><mn>110</mn><mi>,</mi><mn>000.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>b</mi></msub><mo>=</mo><mn>100</mn><mi>,</mi><mn>000.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>c</mi></msub><mo>=</mo><mn>75</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_a = 110\mathord{,}000.00, \qquad \mathrm{E}_b = 100\mathord{,}000.00, \qquad \mathrm{E}_c = 75\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الأعلى: أ.</p>
+<p><span id="sol-10-53"><strong>10.53</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mi>a</mi></msub><mo>=</mo><mn>33</mn><mi>,</mi><mn>000.00</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>b</mi></msub><mo>=</mo><mn>35</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_a = 33\mathord{,}000.00, \qquad \mathrm{E}_b = 35\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الأفضل: ب.</p>
+<p><span id="sol-10-54"><strong>10.54</strong></span></p>
+<ul>
+<li>قرار: سعر مرتفع
+<ul>
+<li>فوز، باحتمال 0.30: 86,000</li>
+<li>خسارة، باحتمال 0.70: ‎-4,000</li>
+</ul></li>
+<li>قرار: سعر منخفض
+<ul>
+<li>فوز، باحتمال 0.70: 46,000</li>
+<li>خسارة، باحتمال 0.30: ‎-4,000</li>
+</ul></li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>h</mi><mi>i</mi><mi>g</mi><mi>h</mi></mrow></msub><mo>=</mo><mn>0.30</mn><mo>×</mo><mn>90</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>23</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{high} = 0.30 \times 90\mathord{,}000 - 4\mathord{,}000 = 23\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>l</mi><mi>o</mi><mi>w</mi></mrow></msub><mo>=</mo><mn>0.70</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>31</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{low} = 0.70 \times 50\mathord{,}000 - 4\mathord{,}000 = 31\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>يقدم السعر المنخفض.</p>
+<p><span id="sol-10-55"><strong>10.55</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>طلب 5,000</th>
+<th>طلب 12,000</th>
+<th>المتوقع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التصنيع</td>
+<td>70,000</td>
+<td>126,000</td>
+<td>92,400</td>
+</tr>
+<tr class="even">
+<td>الشراء</td>
+<td>60,000</td>
+<td>144,000</td>
+<td>93,600</td>
+</tr>
+</tbody>
+</table>
+<p>الأرخص: التصنيع. التصنيع يحمل تكلفة ثابتة تدفع حتى لو جاء الطلب ضعيفا، فهو أخطر عندما يكون الطلب غير مؤكد.</p>
+<p><span id="sol-10-56"><strong>10.56</strong></span></p>
+<ul>
+<li>قرار: ابدأ البحث، بتكلفة 50,000
+<ul>
+<li>نجاح، باحتمال 0.40: قرار ثان
+<ul>
+<li>اطرح المنتج
+<ul>
+<li>سوق جيد، باحتمال 0.50: 600,000</li>
+<li>سوق ضعيف، باحتمال 0.50: ‎-100,000</li>
+</ul></li>
+<li>لا تطرح: 0</li>
+</ul></li>
+<li>فشل، باحتمال 0.60: 0</li>
+</ul></li>
+<li>قرار: لا تبدأ: 0</li>
+</ul>
+<p>من اليمين: قيمة الطرح المتوقعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.50</mn><mo>×</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>250</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+0.50 \times 600\mathord{,}000 + 0.50 \times (-100\mathord{,}000) = 250\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>عند قرار الطرح نختار الأعلى من هذا ومن الصفر: 250,000.00.</p>
+<p>قيمة البحث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>250</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>50</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+-50\mathord{,}000 + 0.40 \times 250\mathord{,}000.00 = 50\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>القرار: ابدأ البحث.</p>
+<p><span id="sol-10-57"><strong>10.57</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>l</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi></mrow></msub><mo>=</mo><mn>190</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{large} = 190\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>+</mo></mrow></msub><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>440</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>240</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{small+} = 0.50 \times 440\mathord{,}000 + 0.50 \times 40\mathord{,}000 = 240\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الاختيار: الصغيرة مع الإضافة.</p>
+<p>بدون إمكانية الإضافة، قيمة الصغيرة 150,000.00 دينار. قيمة الإمكانية نفسها هي الفرق: 90,000.00 دينار.</p>
+<p><span id="sol-10-58"><strong>10.58</strong></span> بدون إمكانية الإيقاف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.60</mn><mo>×</mo><mn>450</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>120</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>118</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+-200\mathord{,}000 + 0.60 \times 450\mathord{,}000 + 0.40 \times 120\mathord{,}000 = 118\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>مع الإيقاف، الشركة تختار الأعلى عند الطلب المنخفض: 150,000 دينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.60</mn><mo>×</mo><mn>450</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.40</mn><mo>×</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>130</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+-200\mathord{,}000 + 0.60 \times 450\mathord{,}000 + 0.40 \times 150\mathord{,}000 = 130\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>إمكانية الإيقاف تساوي 12,000.00 دينار. لذلك تفضل الشركات المعدات القابلة للبيع أو لاستخدام آخر.</p>
+<p><span id="sol-10-59"><strong>10.59</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">r</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.35</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>19</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{repair}) = 9\mathord{,}000 + 0.35 \times 30\mathord{,}000 = 19\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>مقابل 30,000 دينار للشراء الآن. الأرخص: الإصلاح.</p>
+<p>الإصلاح أرخص ما دام احتمال الفشل أقل من:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.7000</mn></mrow><annotation encoding="application/x-tex">
+\frac{30\mathord{,}000 - 9\mathord{,}000}{30\mathord{,}000} = 0.7000
+</annotation></semantics></math></p>
+<p><span id="sol-10-60"><strong>10.60</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mspace width="0.167em"></mspace><mn>300</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>p</mi><mspace width="0.167em"></mspace><mn>150</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mn>40</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+p\,300\mathord{,}000 + (1 - p)(-100\mathord{,}000) = p\,150\mathord{,}000 + (1 - p)\,40\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mn>40</mn><mi>,</mi><mn>000</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>0.4828</mn></mrow><annotation encoding="application/x-tex">
+p = \frac{40\mathord{,}000 - (-100\mathord{,}000)}{(300\mathord{,}000 - (-100\mathord{,}000)) - (150\mathord{,}000 - 40\mathord{,}000)} = 0.4828
+</annotation></semantics></math></p>
+<p>إذا كان احتمال الطلب المرتفع أكبر من هذا، يفضل أ. وإلا يفضل ب.</p>
+<p><span id="sol-10-61"><strong>10.61</strong></span> في شجرة القرار، كل نهاية تكتب بقيمتها الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0.50</mn><mo>×</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>2</mn><mi>,</mi><mn>329.08</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -100\mathord{,}000 + \left(0.50 \times 200\mathord{,}000 + 0.50 \times 60\mathord{,}000\right)(P/F,\ 10\%,\ 3) = -2\mathord{,}329.08
+</annotation></semantics></math></p>
+<p><span id="sol-10-62"><strong>10.62</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>القيمة المتوقعة</th>
+<th>احتمال الخسارة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>114,000</td>
+<td>0.40</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>84,000</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<p>أ أعلى قيمة متوقعة، لكنه يخسر في الحالة الثانية. ب لا يخسر أبدا. شجرة القرار تعطي القيمة المتوقعة، لكن القرار النهائي يحتاج أيضا النظر في الخسارة الممكنة.</p>
+<p><span id="sol-10-63"><strong>10.63</strong></span> <strong>المشروع الكبير:</strong> عند الطلب المنخفض نختار البيع، 220.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6</mn><mo>×</mo><mn>800</mn><mo>+</mo><mn>0.4</mn><mo>×</mo><mn>220</mn><mo>−</mo><mn>300</mn><mo>=</mo><mn>268</mn></mrow><annotation encoding="application/x-tex">
+0.6 \times 800 + 0.4 \times 220 - 300 = 268
+</annotation></semantics></math></p>
+<p><strong>المشروع الصغير:</strong> عند الطلب المرتفع، التوسع يعطي 600 ناقص 150، أي 450، وهو أكبر من 380، فنوسع.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6</mn><mo>×</mo><mn>450</mn><mo>+</mo><mn>0.4</mn><mo>×</mo><mn>200</mn><mo>−</mo><mn>120</mn><mo>=</mo><mn>230</mn></mrow><annotation encoding="application/x-tex">
+0.6 \times 450 + 0.4 \times 200 - 120 = 230
+</annotation></semantics></math></p>
+<p>الأفضل المشروع الكبير، بقيمة متوقعة 268 ألف دينار.</p>
+<p><span id="sol-10-64"><strong>10.64</strong></span></p>
+<ul>
+<li>قرار: تأمين
+<ul>
+<li>تلف، باحتمال 0.03: 5,500 + 30,000</li>
+<li>سلامة: 5,500</li>
+</ul></li>
+<li>قرار: بدون تأمين
+<ul>
+<li>تلف: 150,000</li>
+<li>سلامة: 0</li>
+</ul></li>
+</ul>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>i</mi><mi>n</mi><mi>s</mi></mrow></msub><mo>=</mo><mn>5</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>0.03</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>6</mn><mi>,</mi><mn>400.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{ins} = 5\mathord{,}500 + 0.03 \times 30\mathord{,}000 = 6\mathord{,}400.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mrow><mi>n</mi><mi>o</mi><mi>n</mi><mi>e</mi></mrow></msub><mo>=</mo><mn>0.03</mn><mo>×</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>4</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_{none} = 0.03 \times 150\mathord{,}000 = 4\mathord{,}500.00
+</annotation></semantics></math></p>
+<p>بالقيمة المتوقعة الأرخص عدم التأمين. لكن بدون تأمين، الشركة معرضة لخسارة 150,000 دينار دفعة واحدة.</p>
+</section>
+<section id="الجزء-و-قيمة-المعلومات" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-و-قيمة-المعلومات">الجزء و: قيمة المعلومات</h2>
+<p><span id="sol-10-65"><strong>10.65</strong></span> بدون معلومات، أفضل قيمة متوقعة 34,500.00 دينار.</p>
+<p>مع معلومات كاملة: إذا عرفت الشركة أنه سينجح تطلقه وتربح 120,000. إذا عرفت أنه سيفشل لا تطلقه، فلا تخسر شيئا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.55</mn><mo>×</mo><mn>120</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.45</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>66</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+0.55 \times 120\mathord{,}000 + 0.45 \times 0 = 66\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">V</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">I</mi></mrow><mo>=</mo><mn>66</mn><mi>,</mi><mn>000.00</mn><mo>−</mo><mn>34</mn><mi>,</mi><mn>500.00</mn><mo>=</mo><mn>31</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{EVPI} = 66\mathord{,}000.00 - 34\mathord{,}500.00 = 31\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-66"><strong>10.66</strong></span> بدون معلومات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">max</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>110</mn><mi>,</mi><mn>000</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>110</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\max(110\mathord{,}000,\ 100\mathord{,}000) = 110\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>مع معلومات، أفضل بديل في كل حالة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.50</mn><mo>×</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>160</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+0.50 \times 300\mathord{,}000 + 0.50 \times 20\mathord{,}000 = 160\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">V</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">I</mi></mrow><mo>=</mo><mn>50</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{EVPI} = 50\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><span id="sol-10-67"><strong>10.67</strong></span> الدراسة أرخص من قيمة المعلومات الكاملة، فقد تستحق. لكن الدراسة غير كاملة، فيجب حساب قيمتها الفعلية بدقتها قبل الشراء.</p>
+<p><span id="sol-10-68"><strong>10.68</strong></span> احتمال أن تقول “ناجح”:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.50</mn><mo>×</mo><mn>0.80</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>0.20</mn><mo>=</mo><mn>0.5000</mn></mrow><annotation encoding="application/x-tex">
+0.50 \times 0.80 + 0.50 \times 0.20 = 0.5000
+</annotation></semantics></math></p>
+<p>بقاعدة بايز:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">s</mi></mrow><mo>∣</mo><mrow><mi mathvariant="normal">y</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>0.50</mn><mo>×</mo><mn>0.80</mn></mrow><mn>0.5000</mn></mfrac><mo>=</mo><mn>0.8000</mn></mrow><annotation encoding="application/x-tex">
+P(\mathrm{success} \mid \mathrm{yes}) = \frac{0.50 \times 0.80}{0.5000} = 0.8000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">s</mi></mrow><mo>∣</mo><mrow><mi mathvariant="normal">n</mi><mi mathvariant="normal">o</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mn>0.50</mn><mo>×</mo><mn>0.20</mn></mrow><mn>0.5000</mn></mfrac><mo>=</mo><mn>0.2000</mn></mrow><annotation encoding="application/x-tex">
+P(\mathrm{success} \mid \mathrm{no}) = \frac{0.50 \times 0.20}{0.5000} = 0.2000
+</annotation></semantics></math></p>
+<p>الدراسة لا تكشف الحقيقة، لكنها تحرك الاحتمال في الاتجاه الصحيح.</p>
+<p><span id="sol-10-69"><strong>10.69</strong></span> احتمال “ناجح” 0.5000. بعد “ناجح” احتمال النجاح 0.8000، وبعد “فاشل” 0.2000.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نتيجة الدراسة</th>
+<th>القيمة المتوقعة للإطلاق</th>
+<th>أفضل قرار</th>
+<th>قيمته</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ناجح</td>
+<td>82,000</td>
+<td>إطلاق</td>
+<td>82,000</td>
+</tr>
+<tr class="even">
+<td>فاشل</td>
+<td>‎-32,000</td>
+<td>لا إطلاق</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">w</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi><mspace width="0.222em"></mspace><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.5000</mn><mo>×</mo><mn>82</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.5000</mn><mo>×</mo><mn>0</mn><mo>=</mo><mn>41</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{with\ study}) = 0.5000 \times 82\mathord{,}000 + 0.5000 \times 0 = 41\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>بدون دراسة 25,000.00 دينار. قيمة الدراسة 16,000.00 دينار.</p>
+<p><span id="sol-10-70"><strong>10.70</strong></span> دراسة تصيب نصف المرات مثل رمي قطعة نقد. احتمال النجاح بعد أي نتيجة يبقى 0.60، فلا يتغير القرار. قيمتها صفر.</p>
+<p><span id="sol-10-71"><strong>10.71</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">V</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">I</mi></mrow><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>150</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>25</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>50</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{EVPI} = 0.50 \times 150\mathord{,}000 - 25\mathord{,}000.00 = 50\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>عندما يكون القرار واضحا، المعلومات نادرا ما تغيره. عندما يكون الاحتمال قريبا من نقطة التعادل، أي معلومة قد تقلب القرار، فترتفع قيمتها.</p>
+<p><span id="sol-10-72"><strong>10.72</strong></span> لا. قيمة التجربة 12,000 دينار أقل من تكلفتها 15,000. كونها أرخص من قيمة المعلومات الكاملة لا يكفي، لأن التجربة غير كاملة.</p>
+</section>
+<section id="الجزء-ز-التوزيع-الطبيعي" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-التوزيع-الطبيعي">الجزء ز: التوزيع الطبيعي</h2>
+<p><span id="sol-10-73"><strong>10.73</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>400</mn><mo>−</mo><mn>500</mn></mrow><mn>80</mn></mfrac><mo>=</mo><mi>−</mi><mn>1.25</mn></mrow><annotation encoding="application/x-tex">
+z = \frac{400 - 500}{80} = -1.25
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1.25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P = \Phi(-1.25) = 10.56\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.DIST(400, 500, 80, TRUE)</code></pre>
+<p><span id="sol-10-74"><strong>10.74</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>75</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>60</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>12</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>50</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>60</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>12</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>69.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P = \Phi\left(\frac{75\mathord{,}000 - 60\mathord{,}000}{12\mathord{,}000}\right) - \Phi\left(\frac{50\mathord{,}000 - 60\mathord{,}000}{12\mathord{,}000}\right) = 69.20\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-75"><strong>10.75</strong></span> ينفد المخزون إذا تجاوز الطلب 1,450:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mi>,</mi><mn>450</mn><mo>−</mo><mn>1</mn><mi>,</mi><mn>200</mn></mrow><mn>200</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>10.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P = 1 - \Phi\left(\frac{1\mathord{,}450 - 1\mathord{,}200}{200}\right) = 10.56\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-76"><strong>10.76</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>45</mn><mo>−</mo><mn>40</mn></mrow><mn>5</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>84.13</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P = \Phi\left(\frac{45 - 40}{5}\right) = 84.13\%
+</annotation></semantics></math></p>
+<p>احتمال الغرامة 15.87%.</p>
+<p><span id="sol-10-77"><strong>10.77</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Q</mi><mo>*</mo></msup><mo>=</mo><mfrac><mrow><mn>90</mn><mi>,</mi><mn>000</mn></mrow><mn>12</mn></mfrac><mo>=</mo><mn>7</mn><mi>,</mi><mn>500.00</mn></mrow><annotation encoding="application/x-tex">
+Q^* = \frac{90\mathord{,}000}{12} = 7\mathord{,}500.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>Q</mi><mo>&gt;</mo><msup><mi>Q</mi><mo>*</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>7</mn><mi>,</mi><mn>500.00</mn><mo>−</mo><mn>9</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mi>,</mi><mn>500</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>84.13</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(Q &gt; Q^*) = 1 - \Phi\left(\frac{7\mathord{,}500.00 - 9\mathord{,}000}{1\mathord{,}500}\right) = 84.13\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-78"><strong>10.78</strong></span> الرقم المئوي الخامس يبعد 1.644854 انحرافا تحت المتوسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>1.644854</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>30</mn><mi>,</mi><mn>654.39</mn></mrow><annotation encoding="application/x-tex">
+80\mathord{,}000 - 1.644854 \times 30\mathord{,}000 = 30\mathord{,}654.39
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NORM.INV(0.05, 80000, 30000)</code></pre>
+<p>حتى في أسوأ 5% من الحالات تبقى القيمة الحالية فوق 30,654.39 دينار.</p>
+<p><span id="sol-10-79"><strong>10.79</strong></span> احتمال 10% في الطرف الأيسر يقابل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>−</mi><mn>1.281552</mn></mrow><annotation encoding="application/x-tex">
+z = -1.281552
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>0</mn><mo>−</mo><mi>μ</mi></mrow><mrow><mn>25</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mi>−</mi><mn>1.281552</mn></mrow><annotation encoding="application/x-tex">
+\frac{0 - \mu}{25\mathord{,}000} = -1.281552
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>1.281552</mn><mo>×</mo><mn>25</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>32</mn><mi>,</mi><mn>038.79</mn></mrow><annotation encoding="application/x-tex">
+\mu = 1.281552 \times 25\mathord{,}000 = 32\mathord{,}038.79
+</annotation></semantics></math></p>
+<p><span id="sol-10-80"><strong>10.80</strong></span> التدفق نفسه كل سنة، فالقيمة الحالية دالة خطية فيه:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>16</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>652.59</mn></mrow><annotation encoding="application/x-tex">
+\mu = -60\mathord{,}000 + 16\mathord{,}000\,(P/A,\ 10\%,\ 5) = 652.59
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15</mn><mi>,</mi><mn>163.15</mn></mrow><annotation encoding="application/x-tex">
+\sigma = 4\mathord{,}000\,(P/A,\ 10\%,\ 5) = 15\mathord{,}163.15
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>−</mi><mn>652.59</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>163.15</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>48.28</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(PW &lt; 0) = \Phi\left(\frac{-652.59}{15\mathord{,}163.15}\right) = 48.28\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-81"><strong>10.81</strong></span> مجموع أربعة أرباع مستقلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>4</mn><mo>×</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>σ</mi><mo>=</mo><msqrt><mn>4</mn></msqrt><mo>×</mo><mn>400</mn><mo>=</mo><mn>800</mn></mrow><annotation encoding="application/x-tex">
+\mu = 4 \times 2\mathord{,}500 = 10\mathord{,}000, \qquad \sigma = \sqrt{4} \times 400 = 800
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>10</mn><mi>,</mi><mn>500</mn><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn></mrow><mn>800</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>26.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P = 1 - \Phi\left(\frac{10\mathord{,}500 - 10\mathord{,}000}{800}\right) = 26.60\%
+</annotation></semantics></math></p>
+<p><span id="sol-10-82"><strong>10.82</strong></span> للمشروع التقليدي، المعدل أعلى من الحد الأدنى عندما تكون القيمة الحالية بالحد الأدنى موجبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&gt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>−</mo><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>−</mi><mn>35</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>95.99</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+P(PW &gt; 0) = 1 - \Phi\left(\frac{-35\mathord{,}000}{20\mathord{,}000}\right) = 95.99\%
+</annotation></semantics></math></p>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h2>
+<p><span id="sol-10-83"><strong>10.83</strong></span></p>
+<pre class="excel"><code>=SUMPRODUCT(A2:A4, B2:B4)
+=SQRT(SUMPRODUCT(B2:B4, (A2:A4 - D1)^2))</code></pre>
+<p>حيث D1 الخلية التي فيها القيمة المتوقعة. النتيجة: القيمة المتوقعة 58,750.00 دينار، والانحراف 12,437.34 دينار.</p>
+<p><span id="sol-10-84"><strong>10.84</strong></span></p>
+<pre class="excel"><code>=NORM.DIST(0, 25000, 15000, TRUE)
+=NORM.INV(0.05, 25000, 15000)</code></pre>
+<p>احتمال الخسارة 4.78%، والرقم المئوي الخامس 327.20 دينار.</p>
+<p><span id="sol-10-85"><strong>10.85</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>C, n, i <span class="op">=</span> <span class="dv">100000</span>, <span class="dv">5</span>, <span class="fl">0.12</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([<span class="dv">15000</span>, <span class="dv">28000</span>, <span class="dv">40000</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.array([<span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.2</span>])</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>pa <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> <span class="op">-</span>n) <span class="op">/</span> i</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> <span class="op">-</span>C <span class="op">+</span> A <span class="op">*</span> pa</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> p <span class="op">@</span> pw</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> np.sqrt(p <span class="op">@</span> (pw <span class="op">-</span> mean) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pw.<span class="bu">round</span>(<span class="dv">2</span>), <span class="bu">round</span>(mean, <span class="dv">2</span>), <span class="bu">round</span>(std, <span class="dv">2</span>), p[pw <span class="op">&lt;</span> <span class="dv">0</span>].<span class="bu">sum</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>القيمة الحالية المتوقعة ‎-4,473.43 دينار.</p>
+<p><span id="sol-10-86"><strong>10.86</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">1</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> rng.uniform(<span class="dv">8000</span>, <span class="dv">16000</span>, <span class="dv">100_000</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>pa <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> <span class="fl">1.10</span> <span class="op">**</span> <span class="op">-</span><span class="dv">6</span>) <span class="op">/</span> <span class="fl">0.10</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> <span class="op">-</span><span class="dv">50000</span> <span class="op">+</span> A <span class="op">*</span> pa</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(pw.mean(), <span class="dv">0</span>), <span class="bu">round</span>((pw <span class="op">&lt;</span> <span class="dv">0</span>).mean(), <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>الحل الدقيق:</strong> القيمة الحالية خطية في التدفق، فمتوسطها عند متوسط التدفق 12,000:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>50</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>12</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>263.13</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -50{,}000 + 12{,}000\,(P/A,\ 10\%,\ 6) = 2\mathord{,}263.13
+</annotation></semantics></math></p>
+<p>المشروع يخسر إذا كان التدفق أقل من:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>50</mn><mo>,</mo><mn>000</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>11</mn><mi>,</mi><mn>480.37</mn></mrow><annotation encoding="application/x-tex">
+\frac{50{,}000}{(P/A,\ 10\%,\ 6)} = 11\mathord{,}480.37
+</annotation></semantics></math></p>
+<p>والتوزيع منتظم، فالاحتمال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>11</mn><mi>,</mi><mn>480.37</mn><mo>−</mo><mn>8</mn><mo>,</mo><mn>000</mn></mrow><mrow><mn>16</mn><mo>,</mo><mn>000</mn><mo>−</mo><mn>8</mn><mo>,</mo><mn>000</mn></mrow></mfrac><mo>=</mo><mn>43.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{11\mathord{,}480.37 - 8{,}000}{16{,}000 - 8{,}000} = 43.50\%
+</annotation></semantics></math></p>
+<p>المحاكاة تعطي أرقاما قريبة جدا من هذه، وتختلف قليلا في كل تشغيل ببذرة مختلفة.</p>
+<p><span id="sol-10-87"><strong>10.87</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">7</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">200_000</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> np.array([<span class="dv">22000</span>, <span class="dv">24000</span>, <span class="dv">26000</span>])</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>sd <span class="op">=</span> np.array([<span class="dv">3000</span>, <span class="dv">5000</span>, <span class="dv">7000</span>])</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> rng.normal(mu, sd, size<span class="op">=</span>(N, <span class="dv">3</span>))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>disc <span class="op">=</span> <span class="fl">1.10</span> <span class="op">**</span> <span class="op">-</span>np.arange(<span class="dv">1</span>, <span class="dv">4</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> <span class="op">-</span><span class="dv">50000</span> <span class="op">+</span> flows <span class="op">@</span> disc</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(pw.mean()), <span class="bu">round</span>(pw.std()), <span class="bu">round</span>((pw <span class="op">&lt;</span> <span class="dv">0</span>).mean(), <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>مجموع متغيرات طبيعية مستقلة طبيعي أيضا، فالحساب المباشر دقيق هنا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>9</mn><mi>,</mi><mn>368.90</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>σ</mi><mo>=</mo><mn>7</mn><mi>,</mi><mn>223.06</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo>&lt;</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9.73</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mu = 9\mathord{,}368.90, \qquad \sigma = 7\mathord{,}223.06, \qquad P(PW &lt; 0) = 9.73\%
+</annotation></semantics></math></p>
+<p>المحاكاة تعطي نفس الأرقام تقريبا. فائدتها تظهر عندما لا يوجد حساب مباشر، مثل توزيعات غير طبيعية أو عمر غير مؤكد.</p>
+<p><span id="sol-10-88"><strong>10.88</strong></span> الاحتمال في B1، والقيم في B3:C4 (صف لكل مصنع، وعمود لكل حالة):</p>
+<pre class="excel"><code>D3 =$B$1*B3 + (1-$B$1)*C3
+D4 =$B$1*B4 + (1-$B$1)*C4
+D6 =IF(D3 &gt;= D4, "large", "small")</code></pre>
+<p>القيمة المتوقعة للكبير 440,000.00 دينار، وللصغير 290,000.00 دينار. جرب احتمالات مختلفة في B1 لترى أين يتغير القرار.</p>
+<p><span id="sol-10-89"><strong>10.89</strong></span> في A2، ثم انسخ إلى A1001:</p>
+<pre class="excel"><code>=NORM.INV(RAND(), 16000, 4000)</code></pre>
+<p>وفي B2:</p>
+<pre class="excel"><code>=-60000 + A2*(1 - 1.1^-5)/0.1</code></pre>
+<p>النتائج:</p>
+<pre class="excel"><code>=AVERAGE(B2:B1001)
+=STDEV.S(B2:B1001)
+=COUNTIF(B2:B1001, "&lt;0")/1000</code></pre>
+<p>الحساب المباشر للمقارنة: المتوسط 652.59 دينار، والانحراف 15,163.15 دينار، واحتمال الخسارة 48.28%. كل ضغطة على F9 تعيد السحب، فتتغير النتائج قليلا.</p>
+<p><span id="sol-10-90"><strong>10.90</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decide(payoff, p):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    payoff, p <span class="op">=</span> np.array(payoff, <span class="bu">float</span>), np.array(p, <span class="bu">float</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    ev <span class="op">=</span> payoff <span class="op">@</span> p</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    best <span class="op">=</span> ev.argmax()</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    evpi <span class="op">=</span> payoff.<span class="bu">max</span>(axis<span class="op">=</span><span class="dv">0</span>) <span class="op">@</span> p <span class="op">-</span> ev[best]</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> best, ev, evpi</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [ [<span class="dv">900000</span>, <span class="op">-</span><span class="dv">250000</span>], [<span class="dv">450000</span>, <span class="dv">50000</span>] ]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>best, ev, evpi <span class="op">=</span> decide(table, [<span class="fl">0.6</span>, <span class="fl">0.4</span>])</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(best, ev, evpi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>أفضل قيمة متوقعة 440,000.00 دينار، وقيمة المعلومات الكاملة 120,000.00 دينار.</p>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h2>
+<p><span id="sol-10-91"><strong>10.91</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.30</mn><mo>×</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.70</mn><mo>×</mo><mn>50</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>41</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+0.30 \times 20\mathord{,}000 + 0.70 \times 50\mathord{,}000 = 41\mathord{,}000
+</annotation></semantics></math></p>
+<p>الخيار (أ) تجاهل الاحتمالات. الخيار (ب) عكسها.</p>
+<p><span id="sol-10-92"><strong>10.92</strong></span> الجواب (ب). القيمة الحالية تزيد مع العمر بمعدل متناقص، لأن السنوات البعيدة تخصم أكثر. متوسط القيمتين أقل من القيمة عند متوسط العمر.</p>
+<p><span id="sol-10-93"><strong>10.93</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mn>3</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>,</mi><msup><mn>000</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>5</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\sqrt{3\mathord{,}000^2 + 4\mathord{,}000^2} = 5\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الخيار (أ) جمع الانحرافات، وهذا صحيح فقط إذا كانا مرتبطين تماما. الخيار (د) هو التباين، وليس الانحراف.</p>
+<p><span id="sol-10-94"><strong>10.94</strong></span> الجواب (ج). عند عقدة الاحتمال نحسب القيمة المتوقعة. أكبر القيم نأخذها عند عقدة القرار فقط.</p>
+<p><span id="sol-10-95"><strong>10.95</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>0</mn><mo>−</mo><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>6.68</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\Phi\left(\frac{0 - 30\mathord{,}000}{20\mathord{,}000}\right) = 6.68\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) احتمال الربح. الخيار (ج) قلب الكسر. الخيار (د) معامل الاختلاف، وليس احتمالا.</p>
+<p><span id="sol-10-96"><strong>10.96</strong></span> الجواب (ب). لا توجد دراسة تساوي أكثر من المعلومات الكاملة. ترفضها بدون حساب.</p>
+<p><span id="sol-10-97"><strong>10.97</strong></span> الجواب (ب). أ أعلى قيمة متوقعة وأقل مخاطرة، فهو أفضل في الاثنين.</p>
+<p><span id="sol-10-98"><strong>10.98</strong></span> الجواب (ب). المشاريع المستقلة نادرا ما تسوء كلها معا. الانحراف الكلي ينمو مع الجذر التربيعي لعددها، لا مع العدد نفسه.</p>
+<p><span id="sol-10-99"><strong>10.99</strong></span> الجواب (ب). مع المعلومات، تطلق الشركة فقط عند النجاح، فتتوقع 60,000 دينار. بدونها أفضل قيمة 40,000 دينار. الفرق 20,000 دينار.</p>
+<p>الخيار (أ) هو القيمة مع المعلومات، وليس قيمة المعلومات. الخيار (ج) هو القيمة بدون معلومات. الخيار (د) أفضل ربح ممكن.</p>
+<p><span id="sol-10-100"><strong>10.100</strong></span> الجواب (ب). الخطأ العشوائي في المحاكاة يصغر مع الجذر التربيعي لعدد المحاولات. مئة ألف محاولة تعطي دقة أعلى بعشر مرات تقريبا من ألف.</p>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h2>
+<p><span id="sol-10-101"><strong>10.101</strong></span> (أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">E</mi><mi>a</mi></msub><mo>=</mo><mn>250</mn><mi>,</mi><mn>000</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>b</mi></msub><mo>=</mo><mn>215</mn><mi>,</mi><mn>000</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi mathvariant="normal">E</mi><mi>c</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}_a = 250\mathord{,}000, \qquad \mathrm{E}_b = 215\mathord{,}000, \qquad \mathrm{E}_c = 0
+</annotation></semantics></math></p>
+<p>الأفضل الخط الجديد، بقيمة 250,000 دينار.</p>
+<p>(ب) مع معلومات كاملة: عند الطلب المرتفع الخط الجديد، 700,000. عند المنخفض التحسين، 80,000.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">V</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">I</mi></mrow><mo>=</mo><mn>390</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>250</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>140</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{EVPI} = 390\mathord{,}000 - 250\mathord{,}000 = 140\mathord{,}000
+</annotation></semantics></math></p>
+<p>(ج) احتمال أن تقول الدراسة “مرتفع” 0.50. بعدها احتمال الطلب المرتفع 0.8500، وبعد “منخفض” 0.1500.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نتيجة الدراسة</th>
+<th>أ</th>
+<th>ب</th>
+<th>الأفضل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>مرتفع</td>
+<td>565,000</td>
+<td>309,500</td>
+<td>565,000</td>
+</tr>
+<tr class="even">
+<td>منخفض</td>
+<td>‎-65,000</td>
+<td>120,500</td>
+<td>120,500</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">y</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.50</mn><mo>×</mo><mn>565</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>0.50</mn><mo>×</mo><mn>120</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>342</mn><mi>,</mi><mn>750.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{study}) = 0.50 \times 565\mathord{,}000 + 0.50 \times 120\mathord{,}500 = 342\mathord{,}750.00
+</annotation></semantics></math></p>
+<p>قيمة الدراسة 92,750.00 دينار.</p>
+<p>(د) قيمتها أعلى من سعرها 40,000، فيشتريها المصنع، ثم يقرر حسب نتيجتها.</p>
+<p><span id="sol-10-102"><strong>10.102</strong></span> (أ) القيمة الحالية في كل حالة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>140</mn><mo>,</mo><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">e</mi></mrow><mo>×</mo><mrow><mi mathvariant="normal">o</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mo>−</mo><mn>4</mn><mo>,</mo><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+PW = -140{,}000 + (\mathrm{price} \times \mathrm{output} - 4{,}000)\,(P/A,\ 10\%,\ 15)
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السعر</th>
+<th>الإنتاج</th>
+<th>الاحتمال</th>
+<th>القيمة الحالية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.08</td>
+<td>180,000</td>
+<td>0.12</td>
+<td>‎-60,897</td>
+</tr>
+<tr class="even">
+<td>0.08</td>
+<td>220,000</td>
+<td>0.18</td>
+<td>‎-36,557</td>
+</tr>
+<tr class="odd">
+<td>0.11</td>
+<td>180,000</td>
+<td>0.20</td>
+<td>‎-19,824</td>
+</tr>
+<tr class="even">
+<td>0.11</td>
+<td>220,000</td>
+<td>0.30</td>
+<td>13,643</td>
+</tr>
+<tr class="odd">
+<td>0.14</td>
+<td>180,000</td>
+<td>0.08</td>
+<td>21,249</td>
+</tr>
+<tr class="even">
+<td>0.14</td>
+<td>220,000</td>
+<td>0.12</td>
+<td>63,843</td>
+</tr>
+</tbody>
+</table>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>4</mn><mi>,</mi><mn>398.81</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>σ</mi><mo>=</mo><mn>36</mn><mi>,</mi><mn>412.72</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -4\mathord{,}398.81, \qquad \sigma = 36\mathord{,}412.72
+</annotation></semantics></math></p>
+<p>(ج) احتمال الخسارة 0.50. القيمة المتوقعة سالبة، والمشروع يخسر في حالات كثيرة. بهذه الأرقام لا يستحق التنفيذ.</p>
+<p>(د) أثر السعر أكبر من أثر الإنتاج: الفرق بين أعلى سعر وأدناه يغير القيمة الحالية أكثر من الفرق بين الإنتاجين. الأولوية للتفاوض على سعر العقد، أو البحث عن عقد بسعر مضمون.</p>
+<p><span id="sol-10-103"><strong>10.103</strong></span> لكل مستوى مخزون k، نحسب التكلفة المتوقعة: المحركات الزائدة ضرب 600، والمحركات الناقصة ضرب 5,000.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><msub><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>600</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">max</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>−</mo><mi>D</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">max</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo>−</mo><mi>k</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(\mathrm{cost}_k) = 600\,\mathrm{E}(\max(k - D, 0)) + 5{,}000\,\mathrm{E}(\max(D - k, 0))
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المخزون</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التكلفة المتوقعة</td>
+<td>7,500</td>
+<td>3,620</td>
+<td>1,700</td>
+<td>1,180</td>
+<td>1,500</td>
+</tr>
+</tbody>
+</table>
+<p>أقل تكلفة متوقعة 1,180 دينار، عند ثلاثة محركات.</p>
+<p>تكلفة النقص أعلى بكثير من تكلفة التخزين، فيحتفظ المصنع بمخزون أعلى من المتوسط المتوقع للطلب، 1.50 محرك.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/solutions-ch09.html" class="pagination-link" aria-label="حلول مسائل الفصل 9">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 9</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
