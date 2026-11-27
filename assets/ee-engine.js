@@ -1,51 +1,85 @@
 /* JavaScript twin of ee/engine.py. Keep the two in step:
    tools/check_js.mjs renders every bank item with both and compares. */
 (function (root) {
-  const FP = (i, n) => Math.pow(1 + i, n);
-  const PF = (i, n) => Math.pow(1 + i, -n);
-  const PA = (i, n) => (i === 0 ? n : (Math.pow(1 + i, n) - 1) / (i * Math.pow(1 + i, n)));
+  // Closed forms divide by i (or i - g). Below SMALL, with a whole n, the
+  // factors are summed year by year instead, exactly as in ee/engine.py.
+  const SMALL = 1e-6;
+  const check = (i, n, signedN) => {
+    if (!Number.isFinite(i) || !Number.isFinite(n)) throw new Error('factor needs finite inputs');
+    if (i <= -1) throw new Error('interest rate must be above -100%');
+    if (n < 0 && !signedN) throw new Error('number of periods cannot be negative');
+  };
+  const whole = (n) => Math.abs(n - Math.round(n)) < 1e-9;
+  const FP = (i, n) => { check(i, n, true); return Math.pow(1 + i, n); };
+  const PF = (i, n) => { check(i, n, true); return Math.pow(1 + i, -n); };
+  const PA = (i, n) => {
+    check(i, n);
+    if (Math.abs(i) < SMALL) {
+      if (!whole(n)) return n;
+      let s = 0;
+      for (let k = 1; k <= Math.round(n); k++) s += Math.pow(1 + i, -k);
+      return s;
+    }
+    return (Math.pow(1 + i, n) - 1) / (i * Math.pow(1 + i, n));
+  };
   const AP = (i, n) => 1 / PA(i, n);
-  const FA = (i, n) => (i === 0 ? n : (Math.pow(1 + i, n) - 1) / i);
+  const FA = (i, n) => {
+    check(i, n);
+    if (Math.abs(i) < SMALL) {
+      if (!whole(n)) return n;
+      let s = 0;
+      for (let k = 0; k < Math.round(n); k++) s += Math.pow(1 + i, k);
+      return s;
+    }
+    return (Math.pow(1 + i, n) - 1) / i;
+  };
   const AF = (i, n) => 1 / FA(i, n);
-  const PG = (i, n) => (Math.pow(1 + i, n) - i * n - 1) / (i * i * Math.pow(1 + i, n));
-  const AG = (i, n) => 1 / i - n / (Math.pow(1 + i, n) - 1);
-  const PGEO = (g, i, n) => (Math.abs(i - g) < 1e-12 ? n / (1 + i) : (1 - Math.pow((1 + g) / (1 + i), n)) / (i - g));
-  const RATE = (n, A, P) => {
-    let lo = 1e-9, hi = 1.0;
+  const PG = (i, n) => {
+    check(i, n);
+    if (whole(n)) {
+      let s = 0;
+      for (let k = 1; k <= Math.round(n); k++) s += (k - 1) * Math.pow(1 + i, -k);
+      return s;
+    }
+    if (Math.abs(i) < SMALL) return n * (n - 1) / 2;
+    return (Math.pow(1 + i, n) - i * n - 1) / (i * i * Math.pow(1 + i, n));
+  };
+  const AG = (i, n) => PG(i, n) / PA(i, n);
+  const PGEO = (g, i, n) => {
+    check(i, n);
+    if (g <= -1) throw new Error('growth rate must be above -100%');
+    if (Math.abs(i - g) < SMALL) {
+      if (!whole(n)) return n / (1 + i);
+      let s = 0;
+      for (let k = 1; k <= Math.round(n); k++) s += Math.pow(1 + g, k - 1) * Math.pow(1 + i, -k);
+      return s;
+    }
+    return (1 - Math.pow((1 + g) / (1 + i), n)) / (i - g);
+  };
+  // Bisection that refuses to answer when the ends do not bracket a root.
+  const bisect = (f, lo, hi, wide, what) => {
+    let flo = f(lo), fhi = f(hi);
+    if (!(flo * fhi <= 0) && wide) { [lo, hi] = wide; flo = f(lo); fhi = f(hi); }
+    if (!(flo * fhi <= 0)) throw new Error('no ' + (what || 'rate') + ' in range: the function does not change sign');
+    if (flo === 0) return lo;
+    const pos = flo > 0;
     for (let k = 0; k < 100; k++) {
       const mid = (lo + hi) / 2;
-      if (A * PA(mid, n) > P) lo = mid; else hi = mid;
+      const fm = f(mid);
+      if (pos ? fm > 0 : fm < 0) lo = mid; else hi = mid;
     }
     return (lo + hi) / 2;
   };
+  const RATE = (n, A, P) => bisect((r) => A * PA(r, n) - P, 1e-9, 1.0, [-0.95, 10.0]);
   const NPV = (i, flows) => {
     let s = 0;
     for (let t = 0; t < flows.length; t++) s += flows[t] / (1 + i) ** t;
     return s;
   };
-  const IRR = (flows, lo = -0.9, hi = 1.0) => {
-    for (let k = 0; k < 100; k++) {
-      const mid = (lo + hi) / 2;
-      if (NPV(mid, flows) > 0) lo = mid; else hi = mid;
-    }
-    return (lo + hi) / 2;
-  };
-  const RATEF = (n, A, F) => {
-    let lo = 1e-9, hi = 1.0;
-    for (let k = 0; k < 100; k++) {
-      const mid = (lo + hi) / 2;
-      if (A * FA(mid, n) < F) lo = mid; else hi = mid;
-    }
-    return (lo + hi) / 2;
-  };
-  const GROWTH = (A1, P, i, n) => {
-    let lo = -0.5, hi = 1.0;
-    for (let k = 0; k < 100; k++) {
-      const mid = (lo + hi) / 2;
-      if (A1 * PGEO(mid, i, n) < P) lo = mid; else hi = mid;
-    }
-    return (lo + hi) / 2;
-  };
+  const IRR = (flows, lo = -0.9, hi = 1.0) => bisect((r) => NPV(r, flows), lo, hi, [-0.95, 10.0], 'IRR');
+  const RATEF = (n, A, F) => bisect((r) => A * FA(r, n) - F, 1e-9, 1.0, [-0.95, 10.0]);
+  const GROWTH = (A1, P, i, n) => bisect((g) => A1 * PGEO(g, i, n) - P, -0.5, 1.0, [-0.95, 5.0], 'growth rate');
+  const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const r4 = (x) => Number(x.toFixed(4));
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
@@ -128,16 +162,16 @@
     for (let k = 0; k <= n; k++) {
       const x = L + k * step;
       p.push(`<line x1="${c1(x)}" y1="${ax - 5}" x2="${c1(x)}" y2="${ax + 5}" stroke="#444"/>`);
-      p.push(`<text x="${c1(x + 4)}" y="${ax + 18}" fill="#555" font-size="12">${k}</text>`);
+      p.push(`<text x="${c1(x + 4)}" y="${ax + 18}" fill="#555" font-size="12">${esc(k)}</text>`);
     }
-    if (rateLabel) p.push(`<text x="${R + 15}" y="16" text-anchor="end" fill="#222">${rateLabel}</text>`);
+    if (rateLabel) p.push(`<text x="${R + 15}" y="16" text-anchor="end" fill="#222">${esc(rateLabel)}</text>`);
     for (const [t, a, lab] of flows) {
       const x = L + t * step, h = 30 + 50 * Math.abs(a) / big, up = a > 0;
       const y2 = up ? ax - h : ax + h, col = up ? '#1b6e3a' : '#1f4e8c', tip = up ? 8 : -8;
       p.push(`<line x1="${c1(x)}" y1="${ax}" x2="${c1(x)}" y2="${c1(y2 + tip)}" stroke="${col}" stroke-width="2.2"/>`);
       p.push(`<path d="M${c1(x - 5)} ${c1(y2 + tip)} L${c1(x + 5)} ${c1(y2 + tip)} L${c1(x)} ${c1(y2)} Z" fill="${col}"/>`);
       const ty = up ? y2 - 6 : y2 + 16;
-      p.push(`<text x="${c1(x)}" y="${c1(ty)}" text-anchor="middle" fill="#111" font-weight="bold">${lab}</text>`);
+      p.push(`<text x="${c1(x)}" y="${c1(ty)}" text-anchor="middle" fill="#111" font-weight="bold">${esc(lab)}</text>`);
     }
     p.push('</svg>');
     return p.join('');

@@ -392,7 +392,33 @@ def main():
                     bad += 1
                     print(f"{iid} {var}: bank {got} vs independent {exp}  values={vals}")
     print(f"{len(CHECKS)} items, {n} answers checked independently, {bad} differ")
+    coverage(items)
     sys.exit(1 if bad else 0)
+
+
+def coverage(items):
+    """Report which items with a calculation have an independent check.
+
+    The cross-engine test proves only that Python and JavaScript agree.
+    This report shows how much of the bank is also checked against a
+    separate calculation, chapter by chapter, and writes the list of
+    unchecked items to tools/coverage.txt."""
+    by_ch = {}
+    for iid, it in items.items():
+        if not it.get("calc"):
+            continue
+        ch = iid[:3]
+        tot, cov = by_ch.get(ch, (0, 0))
+        by_ch[ch] = (tot + 1, cov + (iid in CHECKS))
+    lines = [f"{ch}: {cov} of {tot} items with a calculation have an independent check"
+             for ch, (tot, cov) in sorted(by_ch.items())]
+    missing = sorted(i for i, it in items.items() if it.get("calc") and i not in CHECKS)
+    T = sum(t for t, _ in by_ch.values())
+    C = sum(c for _, c in by_ch.values())
+    (ROOT / "tools" / "coverage.txt").write_text(
+        "\n".join(lines) + "\n\nItems without an independent check:\n" + "\n".join(missing) + "\n",
+        encoding="utf-8")
+    print(f"coverage: {C} of {T} items with a calculation ({C / T:.0%}); details in tools/coverage.txt")
 
 
 if __name__ == "__main__":

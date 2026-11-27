@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# Run every check: layout rule, Python vs JavaScript engines, independent answers.
+# Run every check: bank structure, factor reference tests, layout rule,
+# Python vs JavaScript engines (consistency only), independent answers and their coverage.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+python3 tools/validate_bank.py
+python3 tools/test_factors.py
+node tools/test_factors.mjs /tmp/ee-factor-cases.json
 python3 tools/lint_rtl.py
 python3 tools/dump_py.py > /tmp/ee-py.json
 node tools/check_js.mjs /tmp/ee-py.json
