@@ -7,6 +7,7 @@ import random
 import sys
 from pathlib import Path
 
+import numpy as np
 import numpy_financial as npf
 from datetime import date
 from scipy.optimize import brentq
@@ -148,6 +149,16 @@ CHECKS = {
     "c05-c-09": {"dd": lambda v: npf.npv(v["i"], [0] + ddb_sched(v["B"], 0, 5))},
     "c05-e-02": {"half": lambda v: npf.npv(v["i"], [0, v["B"] / v["n"] / 2] + [v["B"] / v["n"]] * (v["n"] - 1) + [v["B"] / v["n"] / 2])},
     "c05-j-01": {"Pdd": lambda v: 0.15 * npf.npv(0.10, [0] + ddb_sched(165000, 0, 6))},
+    # ---------------------------------------------------------------- chapter 6
+    "c06-ex-breakeven": {"Q": lambda v: solve_linear(lambda q: v["p"] * q - v["F"] - v["v"] * q)},
+    "c06-ex-target-profit": {"Q": lambda v: solve_linear(lambda q: (v["p"] - v["v"]) * q - v["F"] - v["T"])},
+    "c06-ex-high-low": {"F": lambda v: np.polyfit([v["h1"], v["h2"]], [v["c1"], v["c2"]], 1)[1]},
+    "c06-ex-two-processes": {"x": lambda v: solve_linear(lambda q: v["F1"] + v["v1"] * q - v["F2"] - v["v2"] * q)},
+    "c06-ex-lcc": {"Pb": lambda v: v["Cb"] - npf.pv(v["i"], 10, v["Eb"] + v["M"])},
+    "c06-ex-unit-lcc": {"u": lambda v: (npf.pmt(v["i"], v["n"], -v["C"]) + v["O"]) / v["U"]},
+    "c06-c-12": {"Q": lambda v: v["F"] / (v["s"] * (v["pa"] - v["va"]) + (1 - v["s"]) * (v["pb"] - v["vb"]))},
+    "c06-h-06": {"x": lambda v: solve_linear(lambda k: v["Cd"] - npf.pv(v["i"], 10, v["Fd"] * k) - v["Ce"] + npf.pv(v["i"], 10, v["Fe"] * k + v["M"]))},
+    "c06-k-03": {"Pb": lambda v: 32000 - npf.pv(0.10, 8, 450 + 600) - 4000 / 1.1 ** 8},
 }
 
 
