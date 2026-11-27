@@ -169,6 +169,12 @@ def RATEF(n, A, F):
     return _bisect(lambda r: A * FA(r, n) - F, 1e-9, 1.0, wide=(-0.95, 10.0))
 
 
+def YTM(n, C, F, P):
+    """Yield of a bond: the rate where n coupons C and the face value F at year n
+    are worth the price P today."""
+    return _bisect(lambda r: C * PA(r, n) + F * PF(r, n) - P, 1e-9, 1.0, wide=(-0.95, 10.0), what="yield")
+
+
 def GROWTH(A1, P, i, n):
     """Growth rate g where a geometric series starting at A1 has present worth P."""
     return _bisect(lambda g: A1 * PGEO(g, i, n) - P, -0.5, 1.0, wide=(-0.95, 5.0), what="growth rate")
@@ -221,7 +227,7 @@ def r2(x):
 
 HELPERS = {
     "FP": FP, "PF": PF, "PA": PA, "AP": AP, "FA": FA, "AF": AF,
-    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "exp": math.exp, "abs": abs, "max": max, "min": min,
+    "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "YTM": YTM, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "exp": math.exp, "abs": abs, "max": max, "min": min,
     "pick": pick, "yrs": yrs, "r4": r4, "r2": r2, "floor": math.floor, "ceil": math.ceil,
     "lcm": lambda a, b: math.lcm(int(round(a)), int(round(b))),
     "NORMS": NORMS, "sqrt": math.sqrt,

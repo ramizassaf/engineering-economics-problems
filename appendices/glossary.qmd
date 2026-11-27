@@ -1,0 +1,499 @@
+# مسرد المصطلحات {#sec-glossary}
+
+كل مصطلح في الكتاب مع مقابله الإنجليزي كما يرد في كتب Park وBlank & Tarquin وSullivan. العمود الأخير يدلك على الفصل الذي يظهر فيه المصطلح أول مرة. إذا قرأت أحد هذه الكتب، استعمل المسرد لتعرف المصطلح العربي المقابل.
+
+الترتيب أبجدي، بدون أل التعريف في أول كلمة.
+
+## من العربية إلى الإنجليزية {.unnumbered}
+
+### ا {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| إجمالي الربح | [gross margin (gross profit)]{.en dir="ltr"} | الإيراد ناقص تكلفة البضاعة المباعة. | [ملحق المحاسبة](#sec-accounting) |
+| الاحتمال | [probability]{.en dir="ltr"} | رقم بين 0 و1 يقيس إمكانية حدوث نتيجة. | [10](#sec-ch10) |
+| احتمال الخسارة | [probability of loss]{.en dir="ltr"} | احتمال أن تكون القيمة الحالية أقل من صفر. | [10](#sec-ch10) |
+| الأرباح المحتجزة | [retained earnings]{.en dir="ltr"} | أرباح لم توزع على المساهمين وبقيت في الشركة للاستثمار. | [11](#sec-ch11) |
+| أساس الاستهلاك | [cost basis]{.en dir="ltr"} | ثمن الأصل مع تكاليف تجهيزه للعمل، وهو ما يستهلك. | [5](#sec-ch5) |
+| الاستبدال | [replacement]{.en dir="ltr"} | قرار إبقاء أصل قديم أو بيعه وشراء أصل جديد مكانه. | [9](#sec-ch9) |
+| الاستثمار الإضافي | [incremental investment]{.en dir="ltr"} | الفرق في الاستثمار بين البديل الأغلى والأرخص. | [4](#sec-ch4) |
+| الاستهلاك | [depreciation]{.en dir="ltr"} | توزيع تكلفة الأصل على سنوات عمره كمصروف محاسبي. | [5](#sec-ch5) |
+| الاستهلاك المتراكم | [accumulated depreciation]{.en dir="ltr"} | مجموع الاستهلاك من بداية عمر الأصل حتى تاريخه. | [5](#sec-ch5) |
+| الأسهم العادية | [common stock]{.en dir="ltr"} | حصص ملكية لها حق في الأرباح بعد الدائنين وأصحاب الأسهم الممتازة. | [11](#sec-ch11) |
+| الأسهم الممتازة | [preferred stock]{.en dir="ltr"} | أسهم لها توزيع ثابت يدفع قبل أصحاب الأسهم العادية. | [11](#sec-ch11) |
+| الأصل | [asset]{.en dir="ltr"} | شيء تملكه الشركة وله قيمة، مثل آلة أو مبنى. | [5](#sec-ch5) |
+| الإصلاح الشامل | [overhaul]{.en dir="ltr"} | إصلاح كبير يمد عمر الأصل أو يخفض تكلفة تشغيله. | [9](#sec-ch9) |
+| الأصول المتداولة | [current assets]{.en dir="ltr"} | أصول تتحول إلى نقد خلال سنة، مثل المخزون والذمم المدينة. | [ملحق المحاسبة](#sec-accounting) |
+| الاقتصاد الهندسي | [engineering economy]{.en dir="ltr"} | تقييم البدائل الهندسية بالمال مع مراعاة قيمته الزمنية. | [1](#sec-ch1) |
+| الانحراف المعياري | [standard deviation]{.en dir="ltr"} | الجذر التربيعي للتباين، مقياس للتشتت بنفس وحدة المتغير. | [10](#sec-ch10) |
+| الإيراد | [revenue]{.en dir="ltr"} | المال الداخل من بيع المنتجات أو الخدمات. | [3](#sec-ch3) |
+| الإيقاف | [retirement (abandonment)]{.en dir="ltr"} | التوقف عن استخدام الأصل وبيعه بدون شراء بديل. | [9](#sec-ch9) |
+
+### ب {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| البدائل المتنافية | [mutually exclusive alternatives]{.en dir="ltr"} | بدائل لا يمكن اختيار أكثر من واحد منها. | [3](#sec-ch3) |
+| بديل عدم الاستثمار | [do-nothing alternative]{.en dir="ltr"} | إبقاء الوضع كما هو، وقيمته الحالية صفر. | [3](#sec-ch3) |
+| البرمجة الخطية بالأعداد الصحيحة | [integer linear programming]{.en dir="ltr"} | نموذج رياضي يختار المشاريع بمتغيرات 0 أو 1. | [ملحق الميزانية المحدودة](#sec-capital-budgeting) |
+
+### ت {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| التباين | [variance]{.en dir="ltr"} | متوسط مربع البعد عن القيمة المتوقعة. | [10](#sec-ch10) |
+| التحليل التزايدي | [incremental analysis]{.en dir="ltr"} | تقييم الفرق في التدفقات بين بديلين، بدل كل بديل وحده. | [4](#sec-ch4) |
+| تحليل الحساسية | [sensitivity analysis]{.en dir="ltr"} | تغيير متغير واحد ورؤية أثره على القيمة الحالية. | [7](#sec-ch7) |
+| التدفق النقدي | [cash flow]{.en dir="ltr"} | مال يدخل أو يخرج في نقطة زمنية محددة. | [1](#sec-ch1) |
+| التدفق النقدي التشغيلي | [operating cash flow]{.en dir="ltr"} | صافي الربح زائد الاستهلاك، أو الإيراد ناقص التكاليف والضريبة. | [7](#sec-ch7) |
+| التدفق النقدي بعد الضريبة | [after-tax cash flow (ATCF)]{.en dir="ltr"} | التدفق النقدي بعد طرح ضريبة الدخل. | [7](#sec-ch7) |
+| التدفق النقدي قبل الضريبة | [before-tax cash flow (BTCF)]{.en dir="ltr"} | التدفق النقدي قبل طرح ضريبة الدخل. | [7](#sec-ch7) |
+| تدفقات غير منتظمة | [irregular (uneven) cash flows]{.en dir="ltr"} | تدفقات لا يجمعها نمط واحد، فتنقل كل دفعة وحدها. | [2](#sec-ch2) |
+| ترحيل الخسائر | [loss carryforward]{.en dir="ltr"} | خصم خسارة سنة من أرباح السنوات التالية. | [5](#sec-ch5) |
+| التضخم | [inflation]{.en dir="ltr"} | ارتفاع عام في الأسعار يخفض القوة الشرائية للنقود. | [8](#sec-ch8) |
+| التضخم العام | [general inflation]{.en dir="ltr"} | متوسط ارتفاع الأسعار في الاقتصاد كله. | [8](#sec-ch8) |
+| تعدد المعدلات | [multiple rates of return]{.en dir="ltr"} | أكثر من معدل يجعل القيمة الحالية صفرا، عندما تتغير إشارة التدفقات أكثر من مرة. | [4](#sec-ch4) |
+| التقادم | [obsolescence]{.en dir="ltr"} | فقدان الأصل قيمته لظهور تقنية أفضل، حتى لو بقي يعمل. | [9](#sec-ch9) |
+| تقدير التكاليف | [cost estimation]{.en dir="ltr"} | توقع تكلفة مشروع أو منتج قبل تنفيذه. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| التكافؤ | [economic equivalence]{.en dir="ltr"} | تدفقان مختلفان في الشكل متساويان في القيمة عند نسبة فائدة معينة. | [1](#sec-ch1) |
+| تكاليف الإصدار | [flotation costs]{.en dir="ltr"} | تكاليف بيع الأسهم أو السندات الجديدة، مثل العمولات والرسوم. | [11](#sec-ch11) |
+| التكاليف التفاضلية | [differential (incremental) costs]{.en dir="ltr"} | التكاليف التي تختلف بين بديلين، وهي وحدها التي تهم القرار. | [6](#sec-ch6) |
+| التكاليف شبه المتغيرة | [mixed (semivariable) costs]{.en dir="ltr"} | تكاليف فيها جزء ثابت وجزء يتغير مع الإنتاج. | [6](#sec-ch6) |
+| تكلفة استرداد رأس المال | [capital recovery cost (CR)]{.en dir="ltr"} | التكلفة السنوية المكافئة للاستثمار ناقص قيمة البيع في النهاية. | [3](#sec-ch3) |
+| تكلفة البضاعة المباعة | [cost of goods sold (COGS)]{.en dir="ltr"} | التكلفة المباشرة للمنتجات التي بيعت في الفترة. | [ملحق المحاسبة](#sec-accounting) |
+| تكلفة التشغيل والصيانة | [operating and maintenance cost (O&M)]{.en dir="ltr"} | التكلفة السنوية لتشغيل الأصل وصيانته. | [6](#sec-ch6) |
+| التكلفة الثابتة | [fixed cost]{.en dir="ltr"} | تكلفة لا تتغير مع حجم الإنتاج خلال مجال معين. | [6](#sec-ch6) |
+| التكلفة الحدية | [marginal cost]{.en dir="ltr"} | الزيادة في التكلفة الكلية عند إنتاج وحدة إضافية. | [6](#sec-ch6) |
+| تكلفة الدين | [cost of debt]{.en dir="ltr"} | نسبة الفائدة الفعلية على القروض والسندات، وتحسب عادة بعد الضريبة. | [11](#sec-ch11) |
+| التكلفة الغارقة | [sunk cost]{.en dir="ltr"} | تكلفة دفعت في الماضي ولا يغيرها أي قرار اليوم. | [6](#sec-ch6) |
+| تكلفة الفرصة البديلة | [opportunity cost]{.en dir="ltr"} | قيمة أفضل بديل نتركه عندما نختار بديلا آخر. | [6](#sec-ch6) |
+| التكلفة الكلية | [total cost]{.en dir="ltr"} | التكلفة الثابتة زائد التكلفة المتغيرة. | [6](#sec-ch6) |
+| التكلفة المتغيرة | [variable cost]{.en dir="ltr"} | تكلفة تتناسب مع حجم الإنتاج. | [6](#sec-ch6) |
+| التكلفة المرسملة | [capitalized cost]{.en dir="ltr"} | القيمة الحالية لتدفقات تستمر بلا نهاية. | [3](#sec-ch3) |
+| تكلفة حقوق الملكية | [cost of equity]{.en dir="ltr"} | العائد الذي يطلبه المساهمون على أموالهم في الشركة. | [11](#sec-ch11) |
+| تكلفة دورة الحياة | [life-cycle cost]{.en dir="ltr"} | كل تكاليف الأصل من التصميم والشراء إلى التشغيل والتخلص منه. | [6](#sec-ch6) |
+| تكلفة رأس المال | [cost of capital]{.en dir="ltr"} | العائد الذي يطلبه مقدمو المال للشركة، من مقرضين ومساهمين. | [11](#sec-ch11) |
+| التمويل بقرض | [debt financing]{.en dir="ltr"} | تمويل جزء من الاستثمار بمال مقترض تدفع عليه فائدة. | [7](#sec-ch7) |
+| التنصيف | [bisection method]{.en dir="ltr"} | طريقة لإيجاد الجذر بتنصيف المجال الذي تتغير فيه الإشارة مرة بعد مرة. | [4](#sec-ch4) |
+| التوزيع الطبيعي | [normal distribution]{.en dir="ltr"} | توزيع متماثل على شكل جرس، يحدده المتوسط والانحراف المعياري. | [10](#sec-ch10) |
+| التوزيع المثلثي | [triangular distribution]{.en dir="ltr"} | توزيع تحدده أقل قيمة والقيمة الأرجح وأعلى قيمة. | [10](#sec-ch10) |
+| التوزيع المنتظم | [uniform distribution]{.en dir="ltr"} | كل القيم بين حدين لها نفس الاحتمال. | [10](#sec-ch10) |
+| التوزيعات | [dividends]{.en dir="ltr"} | الجزء من الربح الذي يدفع للمساهمين. | [11](#sec-ch11) |
+
+### ج {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| جدول إطفاء القرض | [loan amortization schedule]{.en dir="ltr"} | جدول يقسم كل قسط إلى فائدة وأصل، ويعطي الرصيد بعده. | [2](#sec-ch2) |
+
+### ح {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الحالة الأساسية | [base case]{.en dir="ltr"} | القيمة الحالية محسوبة بأفضل التقديرات لكل المتغيرات. | [7](#sec-ch7) |
+| الحد الأدنى للعائد | [minimum attractive rate of return (MARR)]{.en dir="ltr"} | أقل نسبة عائد تقبلها الشركة لمشروع جديد. | [3](#sec-ch3) |
+| الحصر الكامل | [exhaustive enumeration of bundles]{.en dir="ltr"} | تجربة كل مجموعة ممكنة من المشاريع داخل الميزانية. | [ملحق الميزانية المحدودة](#sec-capital-budgeting) |
+| حقوق الملكية | [equity]{.en dir="ltr"} | أموال المالكين في الشركة، من أسهم وأرباح محتجزة. | [11](#sec-ch11) |
+
+### خ {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الخصم | [discounting]{.en dir="ltr"} | نقل مبلغ مستقبلي إلى قيمته الحالية بنسبة الفائدة. | [1](#sec-ch1) |
+| الخصوم | [liabilities]{.en dir="ltr"} | ما على الشركة من التزامات للغير. | [ملحق المحاسبة](#sec-accounting) |
+| الخصوم المتداولة | [current liabilities]{.en dir="ltr"} | التزامات تستحق خلال سنة. | [ملحق المحاسبة](#sec-accounting) |
+
+### د {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الدخل الخاضع للضريبة | [taxable income]{.en dir="ltr"} | الإيراد ناقص المصاريف المقبولة، ومنها الاستهلاك والفائدة. | [5](#sec-ch5) |
+| الدفعات المتدرجة خطيا | [arithmetic gradient]{.en dir="ltr"} | دفعات تزيد أو تنقص بمقدار ثابت G كل سنة. | [2](#sec-ch2) |
+| الدفعات المتدرجة نسبيا | [geometric gradient]{.en dir="ltr"} | دفعات تزيد أو تنقص بنسبة ثابتة g كل سنة. | [2](#sec-ch2) |
+| دوران المخزون | [inventory turnover]{.en dir="ltr"} | تكلفة البضاعة المباعة على متوسط المخزون. | [ملحق المحاسبة](#sec-accounting) |
+| الدينار الثابت | [constant (real) dollars]{.en dir="ltr"} | المبلغ بقوة شرائية سنة الأساس، بعد إزالة أثر التضخم. | [8](#sec-ch8) |
+| الدينار الفعلي | [actual dollars (then-current)]{.en dir="ltr"} | المبلغ كما يدفع فعلا في سنته، بأسعار تلك السنة. | [8](#sec-ch8) |
+
+### ذ {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الذمم الدائنة | [accounts payable]{.en dir="ltr"} | مبالغ على الشركة للموردين لم تدفع بعد. | [ملحق المحاسبة](#sec-accounting) |
+| الذمم المدينة | [accounts receivable]{.en dir="ltr"} | مبالغ للشركة عند الزبائن لم تحصل بعد. | [ملحق المحاسبة](#sec-accounting) |
+
+### ر {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| رأس المال العامل | [working capital]{.en dir="ltr"} | المخزون والذمم والنقد اللازم للتشغيل، يخرج في البداية ويعود في النهاية. | [7](#sec-ch7) |
+| الرافعة المالية | [financial leverage]{.en dir="ltr"} | استخدام الدين لرفع العائد على حقوق الملكية، مع رفع مخاطرتها. | [11](#sec-ch11) |
+| الربح التشغيلي | [operating income]{.en dir="ltr"} | إجمالي الربح ناقص مصاريف التشغيل، قبل الفائدة والضريبة. | [ملحق المحاسبة](#sec-accounting) |
+| الرصيد المتبقي | [remaining balance]{.en dir="ltr"} | ما بقي من أصل القرض بعد دفعة معينة. | [2](#sec-ch2) |
+| الرقم القياسي | [cost index]{.en dir="ltr"} | نسبة تكلفة شيء في سنة إلى تكلفته في سنة الأساس. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| الرقم القياسي لأسعار المستهلك | [consumer price index (CPI)]{.en dir="ltr"} | مؤشر لثمن سلة ثابتة من السلع مقارنة بسنة الأساس. | [8](#sec-ch8) |
+| الرقم المئوي | [percentile]{.en dir="ltr"} | القيمة التي تقع تحتها نسبة معينة من النتائج. | [10](#sec-ch10) |
+
+### س {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| سعر الصرف | [exchange rate]{.en dir="ltr"} | عدد وحدات عملة محلية مقابل وحدة واحدة من عملة أجنبية. | [8](#sec-ch8) |
+| السلسلة المتساوية | [uniform series (equal-payment series)]{.en dir="ltr"} | دفعات متساوية في نهاية كل سنة من السنة 1 إلى السنة n. | [2](#sec-ch2) |
+| السلسلة المؤجلة | [deferred annuity]{.en dir="ltr"} | سلسلة متساوية تبدأ بعد السنة 1. | [2](#sec-ch2) |
+| السند | [bond]{.en dir="ltr"} | قرض تقسمه الشركة على مستثمرين، بفائدة دورية ورد القيمة الاسمية في النهاية. | [11](#sec-ch11) |
+| سنة الأساس | [base year]{.en dir="ltr"} | السنة التي تقاس بأسعارها الأرقام الثابتة. | [8](#sec-ch8) |
+| السيناريوهات | [scenario analysis]{.en dir="ltr"} | تقييم المشروع بمجموعات متسقة من التقديرات، مثل متشائمة ومتوقعة ومتفائلة. | [7](#sec-ch7) |
+
+### ش {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| شجرة القرار | [decision tree]{.en dir="ltr"} | رسم لقرار على مراحل، بعقد قرار وعقد احتمال. | [10](#sec-ch10) |
+
+### ص {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| صافي البيع | [net (after-tax) salvage value]{.en dir="ltr"} | ثمن بيع الأصل ناقص الضريبة على الفرق بينه وبين القيمة الدفترية. | [7](#sec-ch7) |
+| صافي التدفق النقدي | [net cash flow]{.en dir="ltr"} | الداخل ناقص الخارج في نفس الفترة. | [1](#sec-ch1) |
+| صافي الربح | [net income]{.en dir="ltr"} | الربح بعد كل المصاريف والضريبة. | [7](#sec-ch7) |
+
+### ض {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| ضريبة الدخل | [income tax]{.en dir="ltr"} | ضريبة على الربح السنوي للشركة. | [5](#sec-ch5) |
+
+### ط {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الطاقة الإنتاجية | [capacity]{.en dir="ltr"} | أكبر كمية يستطيع النظام إنتاجها في الفترة. | [6](#sec-ch6) |
+| طريقة المعاملات | [factor technique]{.en dir="ltr"} | تكلفة المشروع من تكلفة المعدات مضروبة في معاملات للبنود الأخرى. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| طريقة الوحدة | [unit technique]{.en dir="ltr"} | التكلفة تساوي تكلفة الوحدة ضرب عدد الوحدات. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+
+### ع {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| العائد حتى الاستحقاق | [yield to maturity (YTM)]{.en dir="ltr"} | النسبة التي تجعل القيمة الحالية لتدفقات السند تساوي سعره. | [11](#sec-ch11) |
+| العائد على الأصول | [return on assets (ROA)]{.en dir="ltr"} | صافي الربح على مجموع الأصول. | [ملحق المحاسبة](#sec-accounting) |
+| العائد على حقوق الملكية | [return on equity (ROE)]{.en dir="ltr"} | صافي الربح على حقوق الملكية. | [ملحق المحاسبة](#sec-accounting) |
+| عدم التأكد | [uncertainty]{.en dir="ltr"} | نتائج ممكنة لا نعرف احتمالاتها. | [10](#sec-ch10) |
+| عقدة احتمال | [chance node]{.en dir="ltr"} | نقطة في الشجرة تحدد الظروف فيها الفرع، وترسم دائرة. | [10](#sec-ch10) |
+| عقدة قرار | [decision node]{.en dir="ltr"} | نقطة في الشجرة يختار فيها صاحب القرار الفرع، وترسم مربعا. | [10](#sec-ch10) |
+| علاقة تقدير التكلفة | [cost-estimating relationship (CER)]{.en dir="ltr"} | معادلة انحدار تربط التكلفة بخصائص المنتج. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| علاوة المخاطرة | [risk premium]{.en dir="ltr"} | نسبة تضاف إلى تكلفة رأس المال لمشروع أخطر من المعتاد. | [11](#sec-ch11) |
+| علاوة مخاطرة السوق | [market risk premium]{.en dir="ltr"} | عائد السوق المتوقع ناقص النسبة الخالية من المخاطرة. | [11](#sec-ch11) |
+| العمر الاقتصادي | [economic service life (ESL)]{.en dir="ltr"} | عدد السنوات الذي يعطي أقل تكلفة سنوية مكافئة. | [9](#sec-ch9) |
+
+### ف {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| الفائدة | [interest]{.en dir="ltr"} | ثمن استخدام المال لفترة، يدفعه المقترض للمقرض. | [1](#sec-ch1) |
+| الفائدة الاسمية | [nominal interest rate]{.en dir="ltr"} | نسبة الفترة مضروبة في عدد الفترات في السنة، بدون تركيب. | [3](#sec-ch3) |
+| الفائدة البسيطة | [simple interest]{.en dir="ltr"} | فائدة تحسب على المبلغ الأصلي فقط في كل سنة. | [1](#sec-ch1) |
+| الفائدة الفعلية | [effective interest rate]{.en dir="ltr"} | النسبة السنوية بعد احتساب التركيب خلال السنة. | [3](#sec-ch3) |
+| الفائدة المركبة | [compound interest]{.en dir="ltr"} | فائدة تحسب على المبلغ الأصلي وعلى الفوائد المتراكمة. | [1](#sec-ch1) |
+| الفائدة المستمرة | [continuous compounding]{.en dir="ltr"} | تركيب في فترات قصيرة جدا تقترب من الصفر. | [3](#sec-ch3) |
+| فترة الاسترداد | [payback period]{.en dir="ltr"} | عدد السنوات حتى يسترد المشروع استثماره بدون خصم. | [3](#sec-ch3) |
+| فترة الاسترداد المخصومة | [discounted payback period]{.en dir="ltr"} | عدد السنوات حتى يسترد المشروع استثماره مع خصم التدفقات. | [3](#sec-ch3) |
+| فترة التركيب | [compounding period]{.en dir="ltr"} | الفترة التي تضاف في نهايتها الفائدة إلى الرصيد. | [3](#sec-ch3) |
+| فترة الدراسة | [study period (planning horizon)]{.en dir="ltr"} | المدة التي تقارن عليها البدائل. | [3](#sec-ch3) |
+| فترة الفائدة | [interest period]{.en dir="ltr"} | الفترة التي تحسب في نهايتها الفائدة، مثل سنة أو شهر. | [1](#sec-ch1) |
+
+### ق {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| قاعدة 72 | [rule of 72]{.en dir="ltr"} | عدد السنوات اللازم لمضاعفة المال يساوي تقريبا 72 مقسومة على النسبة المئوية. | [1](#sec-ch1) |
+| قاعدة الإشارات | [Descartes' rule of signs]{.en dir="ltr"} | عدد المعدلات الموجبة لا يزيد على عدد مرات تغير إشارة التدفقات. | [4](#sec-ch4) |
+| قاعدة الحجم والقوة | [power-sizing technique]{.en dir="ltr"} | التكلفة تتغير مع الحجم مرفوعا لأس أقل من 1. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| قائمة التدفقات النقدية | [cash flow statement]{.en dir="ltr"} | النقد الداخل والخارج في فترة من التشغيل والاستثمار والتمويل. | [ملحق المحاسبة](#sec-accounting) |
+| قائمة الدخل | [income statement]{.en dir="ltr"} | الإيرادات والمصاريف والضريبة وصافي الربح لفترة. | [7](#sec-ch7) |
+| قائمة المركز المالي | [balance sheet]{.en dir="ltr"} | الأصول والخصوم وحقوق الملكية في تاريخ معين. | [ملحق المحاسبة](#sec-accounting) |
+| القسط | [installment (loan payment)]{.en dir="ltr"} | الدفعة الدورية التي تسدد القرض مع فائدته. | [2](#sec-ch2) |
+| القسط الثابت | [straight-line depreciation (SL)]{.en dir="ltr"} | استهلاك متساو في كل سنة. | [5](#sec-ch5) |
+| القسط المتناقص | [declining-balance depreciation (DB)]{.en dir="ltr"} | نسبة ثابتة من القيمة الدفترية في بداية كل سنة. | [5](#sec-ch5) |
+| القسط المتناقص المضاعف | [double-declining-balance depreciation (DDB)]{.en dir="ltr"} | قسط متناقص نسبته ضعف نسبة القسط الثابت. | [5](#sec-ch5) |
+| القوة الشرائية | [purchasing power]{.en dir="ltr"} | ما يشتريه المبلغ من سلع وخدمات. | [8](#sec-ch8) |
+| القيمة الاسمية للسند | [face (par) value]{.en dir="ltr"} | المبلغ الذي يرد لحامل السند في تاريخ الاستحقاق. | [11](#sec-ch11) |
+| قيمة البيع | [salvage value (market value at end of life)]{.en dir="ltr"} | المبلغ الذي يباع به الأصل في نهاية عمره. | [3](#sec-ch3) |
+| القيمة الحالية | [present worth (PW)]{.en dir="ltr"} | قيمة مبلغ أو سلسلة تدفقات منقولة إلى السنة 0. | [1](#sec-ch1) |
+| القيمة الدفترية | [book value]{.en dir="ltr"} | أساس الاستهلاك ناقص الاستهلاك المتراكم حتى تاريخه. | [5](#sec-ch5) |
+| القيمة الزمنية للنقود | [time value of money]{.en dir="ltr"} | الدينار اليوم أكثر قيمة من الدينار بعد سنة، لأنه يمكن استثماره. | [1](#sec-ch1) |
+| القيمة السنوية | [annual worth (AW)]{.en dir="ltr"} | القيمة الحالية لمشروع موزعة على دفعات سنوية متساوية. | [3](#sec-ch3) |
+| القيمة السوقية | [market value]{.en dir="ltr"} | الثمن الذي يباع به الأصل اليوم. | [9](#sec-ch9) |
+| القيمة المتوقعة | [expected value]{.en dir="ltr"} | متوسط النتائج، كل نتيجة بوزن احتمالها. | [10](#sec-ch10) |
+| القيمة المستقبلية | [future worth (FW)]{.en dir="ltr"} | قيمة مبلغ أو سلسلة تدفقات منقولة إلى نهاية السنة n. | [1](#sec-ch1) |
+| قيمة المعلومات | [value of information]{.en dir="ltr"} | الزيادة في القيمة المتوقعة بسبب معلومات تعرف قبل القرار. | [10](#sec-ch10) |
+| قيمة المعلومات الكاملة | [expected value of perfect information (EVPI)]{.en dir="ltr"} | أعلى مبلغ يستحق دفعه لمعرفة النتيجة قبل القرار. | [10](#sec-ch10) |
+
+### م {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| المبلغ الأصلي | [principal]{.en dir="ltr"} | المبلغ المقترض أو المستثمر في البداية، قبل أي فائدة. | [1](#sec-ch1) |
+| المتحدي | [challenger]{.en dir="ltr"} | الأصل الجديد المقترح ليحل محل المدافع. | [9](#sec-ch9) |
+| متوسط التكلفة | [average unit cost]{.en dir="ltr"} | التكلفة الكلية مقسومة على عدد الوحدات. | [6](#sec-ch6) |
+| المتوسط المرجح لتكلفة رأس المال | [weighted average cost of capital (WACC)]{.en dir="ltr"} | متوسط تكلفة الدين وتكلفة حقوق الملكية، كل منهما بوزن حصته في التمويل. | [11](#sec-ch11) |
+| مجموع أرقام السنوات | [sum-of-years'-digits depreciation (SOYD)]{.en dir="ltr"} | استهلاك يتناقص بنسبة رقم السنة المتبقية إلى مجموع أرقام السنوات. | [5](#sec-ch5) |
+| محاكاة مونت كارلو | [Monte Carlo simulation]{.en dir="ltr"} | تكرار الحساب آلاف المرات بقيم عشوائية مسحوبة من توزيعاتها. | [10](#sec-ch10) |
+| المخاطرة | [risk]{.en dir="ltr"} | عدة نتائج ممكنة نعرف أو نقدر احتمال كل منها. | [10](#sec-ch10) |
+| المخزون | [inventory]{.en dir="ltr"} | مواد ومنتجات تحت التصنيع وجاهزة عند الشركة. | [ملحق المحاسبة](#sec-accounting) |
+| مخطط التدفق النقدي | [cash flow diagram]{.en dir="ltr"} | خط زمني تظهر عليه التدفقات أسهما للأعلى للداخل وللأسفل للخارج. | [1](#sec-ch1) |
+| مخطط العنكبوت | [spider plot]{.en dir="ltr"} | رسم لأثر تغير كل متغير بنسبة مئوية على القيمة الحالية. | [7](#sec-ch7) |
+| المدافع | [defender]{.en dir="ltr"} | الأصل الموجود حاليا. | [9](#sec-ch9) |
+| المشاريع المستقلة | [independent projects]{.en dir="ltr"} | مشاريع يمكن قبول أي عدد منها، وقبول أحدها لا يمنع غيره. | [3](#sec-ch3) |
+| المضاعف المشترك | [least common multiple of lives]{.en dir="ltr"} | تكرار كل بديل حتى تتساوى أعمار البدائل. | [3](#sec-ch3) |
+| المعامل | [interest factor]{.en dir="ltr"} | رقم يضرب في مبلغ لينقله عبر الزمن بنسبة فائدة معينة. | [1](#sec-ch1) |
+| معامل استرداد رأس المال | [capital-recovery factor (A/P)]{.en dir="ltr"} | يحول مبلغا حاليا إلى دفعات سنوية متساوية. | [2](#sec-ch2) |
+| معامل الاختلاف | [coefficient of variation]{.en dir="ltr"} | الانحراف المعياري مقسوما على القيمة المتوقعة. | [10](#sec-ch10) |
+| معامل السلسلة المتساوية للدفعات المتدرجة خطيا | [gradient uniform-series factor (A/G)]{.en dir="ltr"} | يحول جزء التدرج إلى دفعات سنوية متساوية. | [2](#sec-ch2) |
+| معامل القيمة الحالية لدفعات متساوية | [uniform-series present-worth factor (P/A)]{.en dir="ltr"} | يحول دفعات سنوية متساوية إلى قيمة حالية. | [2](#sec-ch2) |
+| معامل القيمة الحالية للدفعات المتدرجة خطيا | [gradient present-worth factor (P/G)]{.en dir="ltr"} | يعطي القيمة الحالية لجزء التدرج في سلسلة متدرجة خطيا. | [2](#sec-ch2) |
+| معامل القيمة الحالية لمبلغ واحد | [single-payment present-worth factor (P/F)]{.en dir="ltr"} | ينقل مبلغا واحدا من السنة n إلى السنة 0. | [1](#sec-ch1) |
+| معامل القيمة المستقبلية لدفعات متساوية | [uniform-series compound-amount factor (F/A)]{.en dir="ltr"} | يحول دفعات سنوية متساوية إلى قيمة مستقبلية. | [2](#sec-ch2) |
+| معامل القيمة المستقبلية لمبلغ واحد | [single-payment compound-amount factor (F/P)]{.en dir="ltr"} | ينقل مبلغا واحدا من السنة 0 إلى السنة n. | [1](#sec-ch1) |
+| معامل بيتا | [beta]{.en dir="ltr"} | مقياس لحركة سهم الشركة مقارنة بحركة السوق كله. | [11](#sec-ch11) |
+| معامل صندوق الادخار | [sinking-fund factor (A/F)]{.en dir="ltr"} | يعطي الإيداع السنوي اللازم للوصول إلى مبلغ مستقبلي. | [2](#sec-ch2) |
+| معدل العائد | [rate of return (ROR)]{.en dir="ltr"} | العائد على الرصيد غير المسترد من الاستثمار في كل سنة. | [4](#sec-ch4) |
+| معدل العائد الداخلي | [internal rate of return (IRR)]{.en dir="ltr"} | نسبة الخصم التي تجعل القيمة الحالية للمشروع صفرا. | [4](#sec-ch4) |
+| المعدل المعدل | [modified internal rate of return (MIRR)]{.en dir="ltr"} | معدل واحد يفترض نسبة محددة لإعادة استثمار الداخل ولتمويل الخارج. | [4](#sec-ch4) |
+| منحنى التعلم | [learning curve]{.en dir="ltr"} | ينخفض زمن الوحدة بنسبة ثابتة كلما تضاعف عدد الوحدات المنتجة. | [ملحق تقدير التكاليف](#sec-cost-estimation) |
+| مؤشر الربحية | [profitability index (PI)]{.en dir="ltr"} | القيمة الحالية للتدفقات الداخلة على الاستثمار. | [ملحق الميزانية المحدودة](#sec-capital-budgeting) |
+| الميزانية المحدودة | [capital rationing (budget limitation)]{.en dir="ltr"} | ميزانية لا تكفي لكل المشاريع المقبولة. | [ملحق الميزانية المحدودة](#sec-capital-budgeting) |
+
+### ن {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| نسبة إعادة الاستثمار | [reinvestment rate]{.en dir="ltr"} | النسبة التي يفترض أن يستثمر بها المال الداخل من المشروع. | [4](#sec-ch4) |
+| نسبة التداول | [current ratio]{.en dir="ltr"} | الأصول المتداولة على الخصوم المتداولة. | [ملحق المحاسبة](#sec-accounting) |
+| نسبة التضخم | [inflation rate]{.en dir="ltr"} | نسبة ارتفاع الأسعار في سنة. | [8](#sec-ch8) |
+| نسبة التمويل | [finance rate]{.en dir="ltr"} | النسبة التي يفترض أن يقترض بها المال الخارج على المشروع. | [4](#sec-ch4) |
+| النسبة الحقيقية | [real (inflation-free) interest rate]{.en dir="ltr"} | نسبة العائد بعد إزالة أثر التضخم. | [8](#sec-ch8) |
+| النسبة الخالية من المخاطرة | [risk-free rate]{.en dir="ltr"} | العائد على استثمار شبه مضمون، مثل سندات الحكومة القصيرة. | [11](#sec-ch11) |
+| نسبة الدين | [debt ratio]{.en dir="ltr"} | الدين مقسوما على مجموع التمويل. | [11](#sec-ch11) |
+| النسبة السريعة | [quick (acid-test) ratio]{.en dir="ltr"} | الأصول المتداولة بدون المخزون على الخصوم المتداولة. | [ملحق المحاسبة](#sec-accounting) |
+| النسبة السوقية | [market (inflation-adjusted) interest rate]{.en dir="ltr"} | النسبة المعلنة التي تشمل التضخم والعائد الحقيقي. | [8](#sec-ch8) |
+| نسبة الضريبة | [tax rate]{.en dir="ltr"} | الضريبة مقسومة على الدخل الخاضع للضريبة. | [5](#sec-ch5) |
+| نسبة الفائدة | [interest rate]{.en dir="ltr"} | الفائدة في فترة واحدة مقسومة على المبلغ في بدايتها. | [1](#sec-ch1) |
+| نسبة الكوبون | [coupon rate]{.en dir="ltr"} | الفائدة السنوية على السند مقسومة على قيمته الاسمية. | [11](#sec-ch11) |
+| نسبة المنفعة إلى التكلفة | [benefit-cost ratio (B/C)]{.en dir="ltr"} | القيمة الحالية للمنافع مقسومة على القيمة الحالية للتكاليف. | [4](#sec-ch4) |
+| نظرية بايز | [Bayes' theorem]{.en dir="ltr"} | تحديث الاحتمالات بعد نتيجة دراسة أو فحص. | [10](#sec-ch10) |
+| نقطة التعادل | [breakeven point]{.en dir="ltr"} | الكمية أو القيمة التي يتساوى عندها البديلان أو الإيراد والتكلفة. | [6](#sec-ch6) |
+| نموذج تسعير الأصول الرأسمالية | [capital asset pricing model (CAPM)]{.en dir="ltr"} | تكلفة حقوق الملكية تساوي النسبة الخالية من المخاطرة زائد بيتا ضرب علاوة مخاطرة السوق. | [11](#sec-ch11) |
+| نموذج نمو التوزيعات | [dividend growth model (Gordon model)]{.en dir="ltr"} | تكلفة حقوق الملكية تساوي التوزيع القادم على السعر زائد نسبة النمو. | [11](#sec-ch11) |
+
+### ه {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| هامش المساهمة | [contribution margin]{.en dir="ltr"} | سعر الوحدة ناقص تكلفتها المتغيرة. | [6](#sec-ch6) |
+| هيكل رأس المال | [capital structure]{.en dir="ltr"} | نسب الدين وحقوق الملكية في تمويل الشركة. | [11](#sec-ch11) |
+
+### و {.unnumbered}
+
+| المصطلح | English | التعريف | الفصل |
+| ---------------- | ---------------- | ---------------------------------- | ------ |
+| وجهة نظر شخص من الخارج | [outsider viewpoint]{.en dir="ltr"} | معاملة المدافع كأننا نشتريه اليوم بقيمته السوقية. | [9](#sec-ch9) |
+| وحدات الإنتاج | [units-of-production depreciation]{.en dir="ltr"} | استهلاك يتناسب مع ما ينتجه الأصل في السنة. | [5](#sec-ch5) |
+| الوفر الضريبي | [tax savings (tax shield)]{.en dir="ltr"} | الضريبة التي لا تدفع بسبب مصروف مقبول، مثل الاستهلاك. | [5](#sec-ch5) |
+
+## من الإنجليزية إلى العربية {.unnumbered}
+
+| English | المصطلح |
+| --- | --- |
+| [accounts payable]{.en dir="ltr"} | الذمم الدائنة |
+| [accounts receivable]{.en dir="ltr"} | الذمم المدينة |
+| [accumulated depreciation]{.en dir="ltr"} | الاستهلاك المتراكم |
+| [actual dollars (then-current)]{.en dir="ltr"} | الدينار الفعلي |
+| [after-tax cash flow (ATCF)]{.en dir="ltr"} | التدفق النقدي بعد الضريبة |
+| [annual worth (AW)]{.en dir="ltr"} | القيمة السنوية |
+| [arithmetic gradient]{.en dir="ltr"} | الدفعات المتدرجة خطيا |
+| [asset]{.en dir="ltr"} | الأصل |
+| [average unit cost]{.en dir="ltr"} | متوسط التكلفة |
+| [balance sheet]{.en dir="ltr"} | قائمة المركز المالي |
+| [base case]{.en dir="ltr"} | الحالة الأساسية |
+| [base year]{.en dir="ltr"} | سنة الأساس |
+| [Bayes' theorem]{.en dir="ltr"} | نظرية بايز |
+| [before-tax cash flow (BTCF)]{.en dir="ltr"} | التدفق النقدي قبل الضريبة |
+| [benefit-cost ratio (B/C)]{.en dir="ltr"} | نسبة المنفعة إلى التكلفة |
+| [beta]{.en dir="ltr"} | معامل بيتا |
+| [bisection method]{.en dir="ltr"} | التنصيف |
+| [bond]{.en dir="ltr"} | السند |
+| [book value]{.en dir="ltr"} | القيمة الدفترية |
+| [breakeven point]{.en dir="ltr"} | نقطة التعادل |
+| [capacity]{.en dir="ltr"} | الطاقة الإنتاجية |
+| [capital asset pricing model (CAPM)]{.en dir="ltr"} | نموذج تسعير الأصول الرأسمالية |
+| [capital rationing (budget limitation)]{.en dir="ltr"} | الميزانية المحدودة |
+| [capital recovery cost (CR)]{.en dir="ltr"} | تكلفة استرداد رأس المال |
+| [capital structure]{.en dir="ltr"} | هيكل رأس المال |
+| [capital-recovery factor (A/P)]{.en dir="ltr"} | معامل استرداد رأس المال |
+| [capitalized cost]{.en dir="ltr"} | التكلفة المرسملة |
+| [cash flow]{.en dir="ltr"} | التدفق النقدي |
+| [cash flow diagram]{.en dir="ltr"} | مخطط التدفق النقدي |
+| [cash flow statement]{.en dir="ltr"} | قائمة التدفقات النقدية |
+| [challenger]{.en dir="ltr"} | المتحدي |
+| [chance node]{.en dir="ltr"} | عقدة احتمال |
+| [coefficient of variation]{.en dir="ltr"} | معامل الاختلاف |
+| [common stock]{.en dir="ltr"} | الأسهم العادية |
+| [compound interest]{.en dir="ltr"} | الفائدة المركبة |
+| [compounding period]{.en dir="ltr"} | فترة التركيب |
+| [constant (real) dollars]{.en dir="ltr"} | الدينار الثابت |
+| [consumer price index (CPI)]{.en dir="ltr"} | الرقم القياسي لأسعار المستهلك |
+| [continuous compounding]{.en dir="ltr"} | الفائدة المستمرة |
+| [contribution margin]{.en dir="ltr"} | هامش المساهمة |
+| [cost basis]{.en dir="ltr"} | أساس الاستهلاك |
+| [cost estimation]{.en dir="ltr"} | تقدير التكاليف |
+| [cost index]{.en dir="ltr"} | الرقم القياسي |
+| [cost of capital]{.en dir="ltr"} | تكلفة رأس المال |
+| [cost of debt]{.en dir="ltr"} | تكلفة الدين |
+| [cost of equity]{.en dir="ltr"} | تكلفة حقوق الملكية |
+| [cost of goods sold (COGS)]{.en dir="ltr"} | تكلفة البضاعة المباعة |
+| [cost-estimating relationship (CER)]{.en dir="ltr"} | علاقة تقدير التكلفة |
+| [coupon rate]{.en dir="ltr"} | نسبة الكوبون |
+| [current assets]{.en dir="ltr"} | الأصول المتداولة |
+| [current liabilities]{.en dir="ltr"} | الخصوم المتداولة |
+| [current ratio]{.en dir="ltr"} | نسبة التداول |
+| [debt financing]{.en dir="ltr"} | التمويل بقرض |
+| [debt ratio]{.en dir="ltr"} | نسبة الدين |
+| [decision node]{.en dir="ltr"} | عقدة قرار |
+| [decision tree]{.en dir="ltr"} | شجرة القرار |
+| [declining-balance depreciation (DB)]{.en dir="ltr"} | القسط المتناقص |
+| [defender]{.en dir="ltr"} | المدافع |
+| [deferred annuity]{.en dir="ltr"} | السلسلة المؤجلة |
+| [depreciation]{.en dir="ltr"} | الاستهلاك |
+| [Descartes' rule of signs]{.en dir="ltr"} | قاعدة الإشارات |
+| [differential (incremental) costs]{.en dir="ltr"} | التكاليف التفاضلية |
+| [discounted payback period]{.en dir="ltr"} | فترة الاسترداد المخصومة |
+| [discounting]{.en dir="ltr"} | الخصم |
+| [dividend growth model (Gordon model)]{.en dir="ltr"} | نموذج نمو التوزيعات |
+| [dividends]{.en dir="ltr"} | التوزيعات |
+| [do-nothing alternative]{.en dir="ltr"} | بديل عدم الاستثمار |
+| [double-declining-balance depreciation (DDB)]{.en dir="ltr"} | القسط المتناقص المضاعف |
+| [economic equivalence]{.en dir="ltr"} | التكافؤ |
+| [economic service life (ESL)]{.en dir="ltr"} | العمر الاقتصادي |
+| [effective interest rate]{.en dir="ltr"} | الفائدة الفعلية |
+| [engineering economy]{.en dir="ltr"} | الاقتصاد الهندسي |
+| [equity]{.en dir="ltr"} | حقوق الملكية |
+| [exchange rate]{.en dir="ltr"} | سعر الصرف |
+| [exhaustive enumeration of bundles]{.en dir="ltr"} | الحصر الكامل |
+| [expected value]{.en dir="ltr"} | القيمة المتوقعة |
+| [expected value of perfect information (EVPI)]{.en dir="ltr"} | قيمة المعلومات الكاملة |
+| [face (par) value]{.en dir="ltr"} | القيمة الاسمية للسند |
+| [factor technique]{.en dir="ltr"} | طريقة المعاملات |
+| [finance rate]{.en dir="ltr"} | نسبة التمويل |
+| [financial leverage]{.en dir="ltr"} | الرافعة المالية |
+| [fixed cost]{.en dir="ltr"} | التكلفة الثابتة |
+| [flotation costs]{.en dir="ltr"} | تكاليف الإصدار |
+| [future worth (FW)]{.en dir="ltr"} | القيمة المستقبلية |
+| [general inflation]{.en dir="ltr"} | التضخم العام |
+| [geometric gradient]{.en dir="ltr"} | الدفعات المتدرجة نسبيا |
+| [gradient present-worth factor (P/G)]{.en dir="ltr"} | معامل القيمة الحالية للدفعات المتدرجة خطيا |
+| [gradient uniform-series factor (A/G)]{.en dir="ltr"} | معامل السلسلة المتساوية للدفعات المتدرجة خطيا |
+| [gross margin (gross profit)]{.en dir="ltr"} | إجمالي الربح |
+| [income statement]{.en dir="ltr"} | قائمة الدخل |
+| [income tax]{.en dir="ltr"} | ضريبة الدخل |
+| [incremental analysis]{.en dir="ltr"} | التحليل التزايدي |
+| [incremental investment]{.en dir="ltr"} | الاستثمار الإضافي |
+| [independent projects]{.en dir="ltr"} | المشاريع المستقلة |
+| [inflation]{.en dir="ltr"} | التضخم |
+| [inflation rate]{.en dir="ltr"} | نسبة التضخم |
+| [installment (loan payment)]{.en dir="ltr"} | القسط |
+| [integer linear programming]{.en dir="ltr"} | البرمجة الخطية بالأعداد الصحيحة |
+| [interest]{.en dir="ltr"} | الفائدة |
+| [interest factor]{.en dir="ltr"} | المعامل |
+| [interest period]{.en dir="ltr"} | فترة الفائدة |
+| [interest rate]{.en dir="ltr"} | نسبة الفائدة |
+| [internal rate of return (IRR)]{.en dir="ltr"} | معدل العائد الداخلي |
+| [inventory]{.en dir="ltr"} | المخزون |
+| [inventory turnover]{.en dir="ltr"} | دوران المخزون |
+| [irregular (uneven) cash flows]{.en dir="ltr"} | تدفقات غير منتظمة |
+| [learning curve]{.en dir="ltr"} | منحنى التعلم |
+| [least common multiple of lives]{.en dir="ltr"} | المضاعف المشترك |
+| [liabilities]{.en dir="ltr"} | الخصوم |
+| [life-cycle cost]{.en dir="ltr"} | تكلفة دورة الحياة |
+| [loan amortization schedule]{.en dir="ltr"} | جدول إطفاء القرض |
+| [loss carryforward]{.en dir="ltr"} | ترحيل الخسائر |
+| [marginal cost]{.en dir="ltr"} | التكلفة الحدية |
+| [market (inflation-adjusted) interest rate]{.en dir="ltr"} | النسبة السوقية |
+| [market risk premium]{.en dir="ltr"} | علاوة مخاطرة السوق |
+| [market value]{.en dir="ltr"} | القيمة السوقية |
+| [minimum attractive rate of return (MARR)]{.en dir="ltr"} | الحد الأدنى للعائد |
+| [mixed (semivariable) costs]{.en dir="ltr"} | التكاليف شبه المتغيرة |
+| [modified internal rate of return (MIRR)]{.en dir="ltr"} | المعدل المعدل |
+| [Monte Carlo simulation]{.en dir="ltr"} | محاكاة مونت كارلو |
+| [multiple rates of return]{.en dir="ltr"} | تعدد المعدلات |
+| [mutually exclusive alternatives]{.en dir="ltr"} | البدائل المتنافية |
+| [net (after-tax) salvage value]{.en dir="ltr"} | صافي البيع |
+| [net cash flow]{.en dir="ltr"} | صافي التدفق النقدي |
+| [net income]{.en dir="ltr"} | صافي الربح |
+| [nominal interest rate]{.en dir="ltr"} | الفائدة الاسمية |
+| [normal distribution]{.en dir="ltr"} | التوزيع الطبيعي |
+| [obsolescence]{.en dir="ltr"} | التقادم |
+| [operating and maintenance cost (O&M)]{.en dir="ltr"} | تكلفة التشغيل والصيانة |
+| [operating cash flow]{.en dir="ltr"} | التدفق النقدي التشغيلي |
+| [operating income]{.en dir="ltr"} | الربح التشغيلي |
+| [opportunity cost]{.en dir="ltr"} | تكلفة الفرصة البديلة |
+| [outsider viewpoint]{.en dir="ltr"} | وجهة نظر شخص من الخارج |
+| [overhaul]{.en dir="ltr"} | الإصلاح الشامل |
+| [payback period]{.en dir="ltr"} | فترة الاسترداد |
+| [percentile]{.en dir="ltr"} | الرقم المئوي |
+| [power-sizing technique]{.en dir="ltr"} | قاعدة الحجم والقوة |
+| [preferred stock]{.en dir="ltr"} | الأسهم الممتازة |
+| [present worth (PW)]{.en dir="ltr"} | القيمة الحالية |
+| [principal]{.en dir="ltr"} | المبلغ الأصلي |
+| [probability]{.en dir="ltr"} | الاحتمال |
+| [probability of loss]{.en dir="ltr"} | احتمال الخسارة |
+| [profitability index (PI)]{.en dir="ltr"} | مؤشر الربحية |
+| [purchasing power]{.en dir="ltr"} | القوة الشرائية |
+| [quick (acid-test) ratio]{.en dir="ltr"} | النسبة السريعة |
+| [rate of return (ROR)]{.en dir="ltr"} | معدل العائد |
+| [real (inflation-free) interest rate]{.en dir="ltr"} | النسبة الحقيقية |
+| [reinvestment rate]{.en dir="ltr"} | نسبة إعادة الاستثمار |
+| [remaining balance]{.en dir="ltr"} | الرصيد المتبقي |
+| [replacement]{.en dir="ltr"} | الاستبدال |
+| [retained earnings]{.en dir="ltr"} | الأرباح المحتجزة |
+| [retirement (abandonment)]{.en dir="ltr"} | الإيقاف |
+| [return on assets (ROA)]{.en dir="ltr"} | العائد على الأصول |
+| [return on equity (ROE)]{.en dir="ltr"} | العائد على حقوق الملكية |
+| [revenue]{.en dir="ltr"} | الإيراد |
+| [risk]{.en dir="ltr"} | المخاطرة |
+| [risk premium]{.en dir="ltr"} | علاوة المخاطرة |
+| [risk-free rate]{.en dir="ltr"} | النسبة الخالية من المخاطرة |
+| [rule of 72]{.en dir="ltr"} | قاعدة 72 |
+| [salvage value (market value at end of life)]{.en dir="ltr"} | قيمة البيع |
+| [scenario analysis]{.en dir="ltr"} | السيناريوهات |
+| [sensitivity analysis]{.en dir="ltr"} | تحليل الحساسية |
+| [simple interest]{.en dir="ltr"} | الفائدة البسيطة |
+| [single-payment compound-amount factor (F/P)]{.en dir="ltr"} | معامل القيمة المستقبلية لمبلغ واحد |
+| [single-payment present-worth factor (P/F)]{.en dir="ltr"} | معامل القيمة الحالية لمبلغ واحد |
+| [sinking-fund factor (A/F)]{.en dir="ltr"} | معامل صندوق الادخار |
+| [spider plot]{.en dir="ltr"} | مخطط العنكبوت |
+| [standard deviation]{.en dir="ltr"} | الانحراف المعياري |
+| [straight-line depreciation (SL)]{.en dir="ltr"} | القسط الثابت |
+| [study period (planning horizon)]{.en dir="ltr"} | فترة الدراسة |
+| [sum-of-years'-digits depreciation (SOYD)]{.en dir="ltr"} | مجموع أرقام السنوات |
+| [sunk cost]{.en dir="ltr"} | التكلفة الغارقة |
+| [tax rate]{.en dir="ltr"} | نسبة الضريبة |
+| [tax savings (tax shield)]{.en dir="ltr"} | الوفر الضريبي |
+| [taxable income]{.en dir="ltr"} | الدخل الخاضع للضريبة |
+| [time value of money]{.en dir="ltr"} | القيمة الزمنية للنقود |
+| [total cost]{.en dir="ltr"} | التكلفة الكلية |
+| [triangular distribution]{.en dir="ltr"} | التوزيع المثلثي |
+| [uncertainty]{.en dir="ltr"} | عدم التأكد |
+| [uniform distribution]{.en dir="ltr"} | التوزيع المنتظم |
+| [uniform series (equal-payment series)]{.en dir="ltr"} | السلسلة المتساوية |
+| [uniform-series compound-amount factor (F/A)]{.en dir="ltr"} | معامل القيمة المستقبلية لدفعات متساوية |
+| [uniform-series present-worth factor (P/A)]{.en dir="ltr"} | معامل القيمة الحالية لدفعات متساوية |
+| [unit technique]{.en dir="ltr"} | طريقة الوحدة |
+| [units-of-production depreciation]{.en dir="ltr"} | وحدات الإنتاج |
+| [value of information]{.en dir="ltr"} | قيمة المعلومات |
+| [variable cost]{.en dir="ltr"} | التكلفة المتغيرة |
+| [variance]{.en dir="ltr"} | التباين |
+| [weighted average cost of capital (WACC)]{.en dir="ltr"} | المتوسط المرجح لتكلفة رأس المال |
+| [working capital]{.en dir="ltr"} | رأس المال العامل |
+| [yield to maturity (YTM)]{.en dir="ltr"} | العائد حتى الاستحقاق |

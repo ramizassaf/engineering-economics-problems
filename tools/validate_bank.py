@@ -14,6 +14,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 KINDS = {"example", "concept", "problem", "mcq", "case"}
+TOKEN = re.compile(r"\[\[.+?\]\]")
+ARABIC = re.compile(r"[\u0600-\u06FF]")
 errors = []
 
 
@@ -75,6 +77,25 @@ for chdir in sorted((ROOT / "bank").glob("ch*")):
             err(where, "no text")
         if not it.get("solution"):
             err(where, "no solution")
+        # English text: same placeholders as the Arabic, so the same numbers show
+        if meta.get("bilingual") and not it.get("text_en"):
+            err(where, "the chapter is bilingual but the item has no text_en")
+        if it.get("text_en"):
+            ar_t = it.get("text") or ""
+            if sorted(TOKEN.findall(ar_t)) != sorted(TOKEN.findall(it["text_en"])):
+                err(where, "text_en placeholders differ from text: "
+                    f"{sorted(set(TOKEN.findall(ar_t)) ^ set(TOKEN.findall(it['text_en'])))}")
+            if ARABIC.search(it["text_en"]):
+                err(where, "Arabic letters in text_en")
+            if kind == "example" and it.get("title") and not it.get("title_en"):
+                err(where, "example has text_en but no title_en")
+            if kind == "mcq":
+                oe = it.get("options_en") or []
+                if len(oe) != len(it.get("options") or []):
+                    err(where, "options_en must have one entry per option")
+                for a, b in zip(it.get("options") or [], oe):
+                    if sorted(TOKEN.findall(str(a))) != sorted(TOKEN.findall(str(b))):
+                        err(where, f"options_en placeholders differ: {a!r} / {b!r}")
 
     src = ROOT / "chapters" / "src" / f"{ch}.qmd"
     if not src.exists():

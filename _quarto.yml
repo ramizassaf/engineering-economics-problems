@@ -3,6 +3,7 @@ project:
   output-dir: _book
   pre-render:
     - python3 tools/lint_rtl.py
+    - python3 tools/glossary.py
     - python3 tools/build.py
     - python3 tools/tables.py
   resources:
@@ -26,6 +27,7 @@ book:
     - chapters/ch08.qmd
     - chapters/ch09.qmd
     - chapters/ch10.qmd
+    - chapters/ch11.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
@@ -34,6 +36,8 @@ book:
     - appendices/accounting.qmd
     - appendices/excel-functions.qmd
     - appendices/tax-countries.qmd
+    - appendices/glossary.qmd
+    - appendices/references.qmd
     - appendices/solutions-ch01.qmd
     - appendices/solutions-ch02.qmd
     - appendices/solutions-ch03.qmd
@@ -44,6 +48,7 @@ book:
     - appendices/solutions-ch08.qmd
     - appendices/solutions-ch09.qmd
     - appendices/solutions-ch10.qmd
+    - appendices/solutions-ch11.qmd
 
 lang: ar
 dir: rtl
@@ -52,6 +57,9 @@ language:
   toc-title-document: "المحتويات"
   section-title-appendices: "الملاحق"
   search-text-placeholder: "بحث"
+  crossref-ch-prefix: "الفصل"
+  crossref-apx-prefix: "الملحق"
+  crossref-sec-prefix: "القسم"
 
 execute:
   echo: true
@@ -81,4 +89,4 @@ format:
     default-image-extension: pdf
     number-depth: 2
     include-in-header: tex/preamble.tex
-    filters: [tex/percent-ltr.lua]
+    filters: [tex/percent-ltr.lua, tex/en-ltr.lua]

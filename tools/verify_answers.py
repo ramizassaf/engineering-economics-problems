@@ -436,6 +436,94 @@ def solve_linear(f):
     return -a / (b - a)
 
 
+# ---------------------------------------------------------------- chapter 11
+def ytm(n, C, F, P):
+    return float(npf.rate(n, C, -P, F))
+
+
+def loan_cost(L, r, n, f):
+    A = float(npf.pmt(r, n, -L))
+    return float(npf.rate(n, -A, L * (1 - f), 0))
+
+
+def equity_amort(C, CF, L, r, t, n):
+    """Owners' flows: they pay C - L, then CF minus the installment plus the tax saved on interest."""
+    A = float(npf.pmt(r, n, -L))
+    bal, flows = L, [-(C - L)]
+    for _ in range(n):
+        I = r * bal
+        flows.append(CF - A + t * I)
+        bal -= A - I
+    return flows
+
+
+def gordon(D1, P, g, f=0.0):
+    return D1 / (P * (1 - f)) + g
+
+
+def capm(rf, b, rm):
+    return rf + b * (rm - rf)
+
+
+def wacc(wd, kd, t, ke, wp=0.0, kp=0.0):
+    return wd * kd * (1 - t) + wp * kp + (1 - wd - wp) * ke
+
+
+CHECKS.update({
+    "c11-ex-loan-fee": {"kb": lambda v: loan_cost(v["L"], v["r"], v["n"], v["f"])},
+    "c11-ex-bond": {"kd": lambda v: ytm(v["n"], 1000 * v["c"], 1000, v["P"] - v["fee"])},
+    "c11-ex-gordon": {"kn": lambda v: gordon(v["D0"] * (1 + v["g"]), v["P0"], v["g"], v["f"])},
+    "c11-ex-capm": {"ke": lambda v: capm(v["rf"], v["b"], v["rm"])},
+    "c11-ex-wacc": {"W": lambda v: wacc(v["nb"] * v["pb"] / (v["nb"] * v["pb"] + v["ns"] * v["ps"]), v["kd"], v["t"], v["ke"])},
+    "c11-ex-structure": {"W4": lambda v: wacc(0.4, 0.08, v["t"], 0.15)},
+    "c11-ex-leverage": {"ip": lambda v: float(npf.irr([-v["C"]] + [v["CF"]] * 5)),
+                        "ie": lambda v: float(npf.irr(equity_amort(v["C"], v["CF"], v["wd"] * v["C"], v["r"], v["t"], 5)))},
+    "c11-b-02": {"kb": lambda v: loan_cost(v["L"], v["r"], v["n"], v["f"])},
+    "c11-b-03": {"kd": lambda v: ytm(v["n"], 1000 * v["c"], 1000, v["P"])},
+    "c11-b-04": {"kd": lambda v: ytm(v["n"], 1000 * v["c"], 1000, v["P"])},
+    "c11-b-05": {"kd": lambda v: ytm(v["n"], 1000 * v["c"], 1000, 1000 - v["fee"])},
+    "c11-b-06": {"k2": lambda v: loan_cost(v["L"], v["r2"], v["n"], v["f"])},
+    "c11-b-07": {"ie": lambda v: float(npf.fv(v["r"] / 12, 12, 0, -1)) - 1},
+    "c11-b-08": {"P": lambda v: float(npf.pv(v["y"], v["n"], -1000 * v["c"], -1000))},
+    "c11-b-10": {"ke": lambda v: (1 + ytm(2 * v["n"], 500 * v["c"], 1000, v["P"])) ** 2 - 1},
+    "c11-b-11": {"kd": lambda v: float(npf.rate(v["n"], 0, -v["P"], 1000))},
+    "c11-b-13": {"kd": lambda v: float(npf.rate(v["n"], -v["r"] * v["L"], v["L"] * (1 - v["f"]), -v["L"]))},
+    "c11-c-02": {"kn": lambda v: gordon(v["D0"] * (1 + v["g"]), v["P0"], v["g"], v["f"])},
+    "c11-c-05": {"g": lambda v: capm(v["rf"], v["b"], v["rm"]) - v["D1"] / v["P0"]},
+    "c11-c-06": {"kp": lambda v: v["Dp"] / (v["Pp"] * (1 - v["f"]))},
+    "c11-c-08": {"ka": lambda v: (gordon(v["D1"], v["P0"], v["g"]) + capm(v["rf"], v["b"], v["rm"])) / 2},
+    "c11-c-09": {"P0": lambda v: brentq(lambda P: gordon(v["D1"], P, v["g"]) - v["ke"], 1e-6, 1e9)},
+    "c11-c-11": {"ke": lambda v: gordon(v["E"] * (1 - v["b"]) * (1 + v["b"] * v["roe"]), v["P0"], v["b"] * v["roe"])},
+    "c11-d-02": {"W": lambda v: wacc(v["wd"], v["kd"], v["t"], v["ke"], v["wp"], v["kp"])},
+    "c11-d-03": {"W": lambda v: wacc(v["nb"] * v["pb"] / (v["nb"] * v["pb"] + v["ns"] * v["ps"]), v["kd"], v["t"], v["ke"])},
+    "c11-d-05": {"ke": lambda v: brentq(lambda k: wacc(v["wd"], v["kd"], v["t"], k) - v["W"], -1, 5)},
+    "c11-d-06": {"W": lambda v: wacc(v["de"] / (1 + v["de"]), v["kd"], v["t"], v["ke"])},
+    "c11-d-09": {"kd": lambda v: loan_cost(v["L"], v["r"], v["n"], v["f"])},
+    "c11-d-10": {"PW": lambda v: float(npf.npv(v["W"], [-v["C"]] + [v["A"]] * int(v["n"])))},
+    "c11-d-13": {"Wr": lambda v: (1 + v["W"]) / (1 + v["f"]) - 1},
+    "c11-e-02": {"W": lambda v: wacc(v["de"] / (1 + v["de"]), v["kd"], v["t"], v["ku"] + (v["ku"] - v["kd"]) * v["de"] * (1 - v["t"]))},
+    "c11-e-05": {"PS": lambda v: v["t"] * v["D"]},
+    "c11-e-07": {"Dmax": lambda v: v["EBIT"] / (v["m"] * v["r"])},
+    "c11-f-04": {"P2": lambda v: float(npf.npv(v["W"] + v["rp"], [-v["C"]] + [v["A"]] * int(v["n"])))},
+    "c11-f-06": {"ip": lambda v: float(npf.irr([-v["C"]] + [v["A"]] * int(v["n"])))},
+    "c11-f-10": {"W2": lambda v: wacc(v["wd"], v["kd"], v["t"], capm(v["rf"], v["b2"], v["rm"]))},
+    "c11-f-11": {"ip": lambda v: float(npf.irr([-v["C"]] + [v["A"]] * int(v["n"])))},
+    "c11-g-02": {"PE": lambda v: float(npf.npv(v["ke"], equity_amort(v["C"], v["CF"], v["wd"] * v["C"], v["r"], v["t"], 4)))},
+    "c11-g-03": {"PE": lambda v: float(npf.npv(v["ke"], [-(v["C"] - v["L"]), v["CF"] - v["r"] * v["L"] * (1 - v["t"]),
+                                                       v["CF"] - v["r"] * v["L"] * (1 - v["t"]),
+                                                       v["CF"] - v["r"] * v["L"] * (1 - v["t"]) - v["L"]]))},
+    "c11-g-06": {"ie": lambda v: float(npf.irr(equity_amort(v["C"], v["CF"], v["wd"] * v["C"], v["r"], v["t"], 3)))},
+    "c11-g-08": {"Lmax": lambda v: float(npf.pv(v["r"], v["n"], -v["CF"] / v["m"]))},
+    "c11-g-09": {"ie": lambda v: float(npf.irr(equity_amort(v["C"], v["CF"], v["wd"] * v["C"], v["r"], v["t"], 4)))},
+    "c11-h-08": {"W": lambda v: wacc(15000 * 970 / (15000 * 970 + 24000000), ytm(8, 70, 1000, 970), 0.20, capm(0.04, 1.2, 0.10))},
+    "c11-j-01": {"PW": lambda v: float(npf.npv(v["W"], [-1200000] + [300000] * 6)),
+                 "kd": lambda v: ytm(10, 80, 1000, 1020)},
+    "c11-j-02": {"ie": lambda v: float(npf.irr(equity_amort(800000, 230000, 400000, 0.09, 0.20, 5))),
+                 "ieb": lambda v: float(npf.irr(equity_amort(800000, 161000, 400000, 0.09, 0.20, 5)))},
+    "c11-j-04": {"V5": lambda v: 1500000 / wacc(0.5, 0.085, 0.2, 0.12 + 0.035 * 0.8)},
+})
+
+
 def main():
     items = {}
     for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):

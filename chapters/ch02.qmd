@@ -1517,3 +1517,13 @@ print(round(npf.npv(i, [0] + costs), 2))
 [[الحل](#sol-2-113)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch02}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [3]{.en dir="ltr"} | [Interest Rate and Economic Equivalence]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [2]{.en dir="ltr"} | [Factors: How Time and Interest Affect Money]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [3]{.en dir="ltr"} | [Combining Factors and Spreadsheet Functions]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [4]{.en dir="ltr"} | [The Time Value of Money]{.en dir="ltr"} |

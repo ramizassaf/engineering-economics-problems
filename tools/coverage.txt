@@ -8,6 +8,7 @@ c07: 84 of 101 items with a calculation are checked independently (a recomputed 
 c08: 85 of 101 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c09: 67 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c10: 62 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c11: 81 of 90 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 
 Items without an independent check:
 c01-b-14
@@ -266,3 +267,12 @@ c10-h-08
 c10-i-05
 c10-i-09
 c10-j-02
+c11-ex-risk-class
+c11-f-02
+c11-f-09
+c11-h-01
+c11-h-02
+c11-h-03
+c11-h-05
+c11-h-06
+c11-h-07

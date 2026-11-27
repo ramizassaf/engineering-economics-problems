@@ -9,6 +9,7 @@ JSON so tools/test_factors.mjs can run them on the JavaScript engine.
 import json
 import math
 import sys
+import numpy_financial as npf
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -83,6 +84,11 @@ for n, A, F in [(5, 1000, 6000), (10, 500, 8000)]:
     r = E.RATEF(n, A, F)
     check(f"RATEF({n},{A},{F}) solves", A * E.FA(r, n), F, 1e-9)
     cases.append({"f": "RATEF", "args": [n, A, F], "want": r, "tol": 1e-9})
+for n, C, F, P in [(10, 60, 1000, 950), (5, 80, 1000, 1040), (20, 50, 1000, 1000)]:
+    r = E.YTM(n, C, F, P)
+    check(f"YTM({n},{C},{F},{P}) solves", C * E.PA(r, n) + F * E.PF(r, n), P, 1e-9)
+    check(f"YTM({n},{C},{F},{P}) = numpy_financial.rate", r, float(npf.rate(n, C, -P, F)), 1e-8)
+    cases.append({"f": "YTM", "args": [n, C, F, P], "want": r, "tol": 1e-9})
 r = E.GROWTH(1000, 9000, 0.08, 10)
 check("GROWTH solves", 1000 * E.PGEO(r, 0.08, 10), 9000, 1e-9)
 cases.append({"f": "GROWTH", "args": [1000, 9000, 0.08, 10], "want": r, "tol": 1e-9})

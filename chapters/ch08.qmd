@@ -1168,3 +1168,12 @@ print(f"wrong: mixed     {npf.npv(im, constant):10,.2f}")
 [[الحل](#sol-8-105)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch08}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [11]{.en dir="ltr"} | [Inflation and Its Impact on Project Cash Flows]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [14]{.en dir="ltr"} | [Effects of Inflation]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [8]{.en dir="ltr"} | [Price Changes and Exchange Rates]{.en dir="ltr"} |

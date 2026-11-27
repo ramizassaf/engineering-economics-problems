@@ -1,0 +1,87 @@
+# The three textbooks this book follows, and which of their chapters each
+# chapter or appendix matches. Chapter numbers follow these editions.
+# tools/glossary.py builds the references appendix and one short section per
+# chapter from this file; tools/build.py places that section in the chapter.
+books:
+  park:
+    short: Park
+    cite: "Park, C. S. (2023). Contemporary Engineering Economics (7th ed.). Pearson."
+  blank:
+    short: Blank & Tarquin
+    cite: "Blank, L. T., & Tarquin, A. J. (2024). Engineering Economy (9th ed.). McGraw Hill."
+  sullivan:
+    short: Sullivan et al.
+    cite: "Sullivan, W. G., Wicks, E. M., & Wilck, J. H. (2025). Engineering Economy (18th ed.). Pearson."
+
+# chapter titles as printed in each book's table of contents
+titles:
+  park:
+    1: Engineering Economic Decisions
+    2: Accounting Information for Engineering Economic Decisions
+    3: Interest Rate and Economic Equivalence
+    4: Understanding Money and Its Management
+    5: Present-Worth Analysis
+    6: Annual Equivalent-Worth Analysis
+    7: Rate-of-Return Analysis
+    8: Cost Concepts Relevant to Decision Making
+    9: Depreciation and Corporate Taxes
+    10: Developing Project Cash Flows
+    11: Inflation and Its Impact on Project Cash Flows
+    12: Project Risk and Uncertainty
+    13: Real-Options Analysis
+    14: Replacement Decisions
+    15: Capital-Budgeting Decisions
+    16: Economic Analysis in the Service Sector
+  blank:
+    1: Foundations of Engineering Economy
+    2: "Factors: How Time and Interest Affect Money"
+    3: Combining Factors and Spreadsheet Functions
+    4: Nominal and Effective Interest Rates
+    5: Analysis Using Present Worth and Future Worth Values
+    6: Annual Worth Analysis
+    7: "Rate of Return Analysis: One Project"
+    8: "Rate of Return Analysis: Multiple Alternatives"
+    9: Benefit/Cost Analysis and Public Sector Economics
+    10: Project Financing and Noneconomic Attributes
+    11: Replacement and Retention Decisions
+    12: Independent Projects with Budget Limitation
+    13: Breakeven and Payback Analysis
+    14: Effects of Inflation
+    15: Cost Estimation and Indirect Cost Allocation
+    16: Depreciation and Depletion Methods
+    17: After-Tax Economic Analysis
+    18: Sensitivity Analysis and Staged Decisions
+    19: Decision Making under Risk
+  sullivan:
+    1: Introduction to Engineering Economy
+    2: Cost Concepts and Design Economics
+    3: Cost-Estimation Techniques
+    4: The Time Value of Money
+    5: Evaluating a Single Project
+    6: Comparison and Selection among Alternatives
+    7: Depreciation and Income Taxes
+    8: Price Changes and Exchange Rates
+    9: Replacement Analysis
+    10: Evaluating Projects with the Benefit-Cost Ratio Method
+    11: Breakeven and Sensitivity Analysis
+    12: Probabilistic Risk Analysis
+    13: The Capital Budgeting Process
+    14: Decision Making Considering Multiattributes
+    A: Accounting Fundamentals
+
+# which chapters of each book match each part of this book
+map:
+  ch01: {park: [1, 3], blank: [1, 2], sullivan: [1, 4]}
+  ch02: {park: [3], blank: [2, 3], sullivan: [4]}
+  ch03: {park: [4, 5, 6], blank: [4, 5, 6, 13], sullivan: [4, 5, 6]}
+  ch04: {park: [7], blank: [7, 8, 9], sullivan: [5, 6, 10]}
+  ch05: {park: [9], blank: [16, 17], sullivan: [7]}
+  ch06: {park: [8], blank: [13], sullivan: [2]}
+  ch07: {park: [10, 12], blank: [17, 18], sullivan: [7, 11]}
+  ch08: {park: [11], blank: [14], sullivan: [8]}
+  ch09: {park: [14], blank: [11], sullivan: [9]}
+  ch10: {park: [12], blank: [18, 19], sullivan: [12]}
+  ch11: {park: [15], blank: [10], sullivan: [13]}
+  capital-budgeting: {park: [15], blank: [12], sullivan: [13]}
+  cost-estimation: {blank: [15], sullivan: [3]}
+  accounting: {park: [2], sullivan: [A]}

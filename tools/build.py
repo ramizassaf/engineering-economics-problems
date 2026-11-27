@@ -66,6 +66,24 @@ def statement(item, env):
     return s
 
 
+def statement_en(item, env):
+    """English text of a statement, for the website's English button. Empty if none."""
+    if not item.get("text_en"):
+        return ""
+    s = render(item["text_en"].strip(), env)
+    if item.get("kind") == "mcq":
+        s += "\n\n" + "\\\n".join(f"{'ABCDE'[k]}) {render(o, env)}" for k, o in enumerate(item["options_en"]))
+    return s
+
+
+def en_block(head, body):
+    """A hidden left-to-right block, shown on the website by the English button."""
+    if not body:
+        return ""
+    return (f'\n\n::: {{.ee-en .content-visible when-format="html" lang="en" dir="ltr"}}\n'
+            f"{head} {body}\n:::\n")
+
+
 def solution(item, env):
     if item.get("kind") == "mcq":
         letters = ["أ", "ب", "ج", "د", "هـ"]
@@ -96,8 +114,10 @@ def build_chapter(ch: str):
         body = statement(it, env)
         fig = figure(it, env, f"{ch}-ex{k:02d}")
         sol = solution(it, env)
+        t_en = render(it.get("title_en", "").strip(), env)
+        en = en_block(f"**Example {num}.{k}" + (f": {t_en}**\n\n" if t_en else "**\n\n"), statement_en(it, env))
         return (f'::: {{.ee-item #ex-{num}-{k} data-id="{iid}" data-kind="example" data-label="{num}.{k}"}}\n'
-                f"{head}\n\n{body}{fig}\n\n**الحل:**\n\n{sol}\n:::\n")
+                f"{head}\n\n{body}{fig}{en}\n\n**الحل:**\n\n{sol}\n:::\n")
 
     out = re.sub(r"^@example\(([\w-]+)\)\s*$", ex_sub, src, flags=re.M)
 
@@ -127,6 +147,7 @@ def build_chapter(ch: str):
             p_lines.append(
                 f'::: {{.ee-item #prob-{num}-{k} data-id="{it["id"]}" data-kind="problem" data-label="{tag}"}}\n'
                 f"**{tag}** {first}" + (f"\n\n{rest}" if rest else "") + fig +
+                en_block(f"**{tag}**", statement_en(it, env)) +
                 f"\n\n[[الحل](#sol-{num}-{k})]{{.ee-sol-link .content-visible when-format=\"html\"}}\n:::\n")
             body = solution(it, env)
             # A solution that opens with a block (code, display math, table, list)
@@ -135,12 +156,20 @@ def build_chapter(ch: str):
             s_lines.append(f"[**{tag}**]{{#sol-{num}-{k}}}" + sep + body + "\n")
     out = out.replace("@problems", "\n".join(p_lines))
 
+    # ---- references to the three textbooks, at the end of the chapter.
+    # At the end, its unnumbered heading does not become the running head
+    # of the problem pages in the PDF.
+    refs = ROOT / "_generated" / "refs" / f"{ch}.md"
+    if refs.exists():
+        out = out.rstrip() + "\n\n" + refs.read_text(encoding="utf-8")
+
     (ROOT / "chapters" / f"{ch}.qmd").write_text(out, encoding="utf-8")
     (ROOT / "appendices").mkdir(exist_ok=True)
     (ROOT / "appendices" / f"solutions-{ch}.qmd").write_text("\n".join(s_lines), encoding="utf-8")
 
     # ---- website bank: everything needed to redraw an item with new numbers
-    keep = ("id", "kind", "title", "vars", "random", "calc", "text", "solution", "options", "correct", "diagram", "diagram_caption")
+    keep = ("id", "kind", "title", "vars", "random", "calc", "text", "solution", "options", "correct", "diagram", "diagram_caption",
+            "title_en", "text_en", "options_en")
     web = [{k2: it[k2] for k2 in keep if k2 in it} for it in items if it.get("random")]
     (ROOT / "assets" / "bank").mkdir(parents=True, exist_ok=True)
     (ROOT / "assets" / "bank" / f"{ch}.json").write_text(json.dumps(web, ensure_ascii=False), encoding="utf-8")
@@ -152,7 +181,8 @@ def build_chapter(ch: str):
         print("  examples in bank but not placed in the chapter:", unused)
 
 
-WORDS = {1: "الأول", 2: "الثاني", 3: "الثالث", 4: "الرابع", 5: "الخامس", 6: "السادس", 7: "السابع"}
+WORDS = {1: "الأول", 2: "الثاني", 3: "الثالث", 4: "الرابع", 5: "الخامس", 6: "السادس", 7: "السابع",
+         8: "الثامن", 9: "التاسع", 10: "العاشر", 11: "الحادي عشر", 12: "الثاني عشر", 13: "الثالث عشر"}
 
 
 def num_word(n):

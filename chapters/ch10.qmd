@@ -1198,3 +1198,13 @@ plt.show()
 [[الحل](#sol-10-103)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch10}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [12]{.en dir="ltr"} | [Project Risk and Uncertainty]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [18]{.en dir="ltr"} | [Sensitivity Analysis and Staged Decisions]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [19]{.en dir="ltr"} | [Decision Making under Risk]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [12]{.en dir="ltr"} | [Probabilistic Risk Analysis]{.en dir="ltr"} |

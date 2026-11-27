@@ -1028,3 +1028,12 @@ print("economic service life:", best[0], "years")
 [[الحل](#sol-9-104)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch09}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [14]{.en dir="ltr"} | [Replacement Decisions]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [11]{.en dir="ltr"} | [Replacement and Retention Decisions]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [9]{.en dir="ltr"} | [Replacement Analysis]{.en dir="ltr"} |

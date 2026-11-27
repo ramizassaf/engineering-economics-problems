@@ -9,7 +9,7 @@ const py = JSON.parse(readFileSync(process.argv[2], 'utf8'));
 let bad = 0;
 for (const rec of py) {
   const env = EE.compute(rec.item, rec.values);
-  for (const field of ['text', 'solution', 'answer']) {
+  for (const field of ['text', 'text_en', 'solution', 'answer']) {
     if (!rec.item[field]) continue;
     const js = EE.render(rec.item[field], env);
     if (js !== rec.out[field]) {

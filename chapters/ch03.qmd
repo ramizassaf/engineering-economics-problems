@@ -1655,3 +1655,19 @@ for r in [0.06, 0.09, 0.12, 0.15, 0.18]:
 [[الحل](#sol-3-124)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch03}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [4]{.en dir="ltr"} | [Understanding Money and Its Management]{.en dir="ltr"} |
+| [Park]{.en dir="ltr"} | [5]{.en dir="ltr"} | [Present-Worth Analysis]{.en dir="ltr"} |
+| [Park]{.en dir="ltr"} | [6]{.en dir="ltr"} | [Annual Equivalent-Worth Analysis]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [4]{.en dir="ltr"} | [Nominal and Effective Interest Rates]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [5]{.en dir="ltr"} | [Analysis Using Present Worth and Future Worth Values]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [6]{.en dir="ltr"} | [Annual Worth Analysis]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [13]{.en dir="ltr"} | [Breakeven and Payback Analysis]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [4]{.en dir="ltr"} | [The Time Value of Money]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [5]{.en dir="ltr"} | [Evaluating a Single Project]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [6]{.en dir="ltr"} | [Comparison and Selection among Alternatives]{.en dir="ltr"} |

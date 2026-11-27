@@ -1193,3 +1193,13 @@ for name, f in [("SL", straight_line), ("SYD", syd), ("DDB", ddb_switch)]:
 [[الحل](#sol-5-103)]{.ee-sol-link .content-visible when-format="html"}
 :::
 
+## المراجع {.unnumbered #refs-ch05}
+
+هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في @sec-references.
+
+| الكتاب | الفصل | عنوان الفصل |
+| --- | --- | --- |
+| [Park]{.en dir="ltr"} | [9]{.en dir="ltr"} | [Depreciation and Corporate Taxes]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [16]{.en dir="ltr"} | [Depreciation and Depletion Methods]{.en dir="ltr"} |
+| [Blank & Tarquin]{.en dir="ltr"} | [17]{.en dir="ltr"} | [After-Tax Economic Analysis]{.en dir="ltr"} |
+| [Sullivan et al.]{.en dir="ltr"} | [7]{.en dir="ltr"} | [Depreciation and Income Taxes]{.en dir="ltr"} |

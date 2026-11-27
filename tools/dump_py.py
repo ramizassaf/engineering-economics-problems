@@ -24,7 +24,7 @@ for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):
             for k, v in env.items():
                 if isinstance(v, float) and not math.isfinite(v):
                     raise SystemExit(f"{it['id']} [{tag}]: {k} is not finite")
-            out = {fld: render(it[fld], env) for fld in ("text", "solution", "answer") if it.get(fld)}
+            out = {fld: render(it[fld], env) for fld in ("text", "text_en", "solution", "answer") if it.get(fld)}
             if it.get("diagram"):
                 out["diagram"] = diagram_svg(it["diagram"], env)
             recs.append({"tag": tag, "item": it, "values": vals, "out": out})
