@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>الملحق T — حلول مسائل الفصل الحادي عشر – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/solutions-ch10.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch11.html"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">مسرد المصطلحات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">المراجع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثامن</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل التاسع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch11.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-تكلفة-الدين" id="toc-الجزء-ب-تكلفة-الدين" class="nav-link" data-scroll-target="#الجزء-ب-تكلفة-الدين">الجزء ب: تكلفة الدين</a></li>
+  <li><a href="#الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" id="toc-الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" class="nav-link" data-scroll-target="#الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة">الجزء ج: تكلفة حقوق الملكية والأسهم الممتازة</a></li>
+  <li><a href="#الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" id="toc-الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" class="nav-link" data-scroll-target="#الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال">الجزء د: المتوسط المرجح لتكلفة رأس المال</a></li>
+  <li><a href="#الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" id="toc-الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" class="nav-link" data-scroll-target="#الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال">الجزء هـ: نسبة الدين وتكلفة رأس المال</a></li>
+  <li><a href="#الجزء-و-اختيار-الحد-الأدنى-للعائد" id="toc-الجزء-و-اختيار-الحد-الأدنى-للعائد" class="nav-link" data-scroll-target="#الجزء-و-اختيار-الحد-الأدنى-للعائد">الجزء و: اختيار الحد الأدنى للعائد</a></li>
+  <li><a href="#الجزء-ز-التمويل-بالدين-وعائد-المالكين" id="toc-الجزء-ز-التمويل-بالدين-وعائد-المالكين" class="nav-link" data-scroll-target="#الجزء-ز-التمويل-بالدين-وعائد-المالكين">الجزء ز: التمويل بالدين وعائد المالكين</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch11.html"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sol-11" class="quarto-section-identifier">الملحق T — حلول مسائل الفصل الحادي عشر</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الحلول التالية محسوبة ببرنامج من نفس بنك الأسئلة الذي ولد نصوص المسائل. إذا حللت بالجداول قد يختلف جوابك في الخانة العشرية الأخيرة.</p>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h2>
+<p><span id="sol-11-1"><strong>11.1</strong></span> العائد الذي يطلبه مقدمو المال للشركة، من مقرضين ومساهمين. هي تكلفة للشركة لأنها ما يجب أن تدفعه مقابل استخدام المال، تماما مثل الفائدة على قرض.</p>
+<p><span id="sol-11-2"><strong>11.2</strong></span> المقرض يأخذ فائدته أولا، بعقد ملزم، ويأخذ ماله قبل المالكين إذا أفلست الشركة. المالك يأخذ ما يبقى، وقد لا يبقى شيء. مخاطرته أكبر، فيطلب عائدا أعلى.</p>
+<p><span id="sol-11-3"><strong>11.3</strong></span> الفائدة تطرح من الدخل الخاضع للضريبة، فكل دينار فائدة يوفر ضريبة. التوزيعات على المساهمين تدفع من الربح بعد الضريبة، فلا توفر شيئا.</p>
+<p><span id="sol-11-4"><strong>11.4</strong></span> لا. هي مال المساهمين. لو وزعتها الشركة، لاستثمرها المساهم بنفسه وحصل على عائد. تكلفتها هي العائد الذي يتركه، أي تكلفة حقوق الملكية بدون تكاليف الإصدار.</p>
+<p><span id="sol-11-5"><strong>11.5</strong></span> القيم الدفترية تسجل ما دفع في الماضي. القيم السوقية هي ما يدفعه المستثمرون اليوم مقابل حصصهم، وعليها يطلبون العائد الآن.</p>
+<p><span id="sol-11-6"><strong>11.6</strong></span> يقيس حركة سهم الشركة مقارنة بحركة السوق كله. بيتا أقل من 1 تعني أن السهم يتحرك أقل من السوق، فمخاطرته على المساهم أقل، والعائد المطلوب عليه أقل من عائد السوق.</p>
+<p><span id="sol-11-7"><strong>11.7</strong></span> كلما زاد الدين زادت مخاطرة الإفلاس، لأن الفائدة تدفع حتى في السنة السيئة. يرفع البنك نسبة الفائدة، ويطلب المساهمون عائدا أعلى. بعد حد معين يرتفع المتوسط المرجح بدل أن ينخفض.</p>
+<p><span id="sol-11-8"><strong>11.8</strong></span> عندما تكون الميزانية محدودة، فيصبح الحد الأدنى عائد أفضل مشروع مرفوض. وعندما يكون المشروع أخطر من مشاريع الشركة المعتادة، فنضيف علاوة مخاطرة.</p>
+<p><span id="sol-11-9"><strong>11.9</strong></span> لا. القرض الميسر يخفض تكلفة التمويل، لكنه لا يغير مخاطرة المشروع، والشركة تستطيع استخدام نفس القرض بديلا عن مال آخر. يقيم المشروع بالمتوسط المرجح أو بالحد الأدنى المعتاد، وأثر القرض الرخيص يظهر في تدفقات المالكين أو في المتوسط.</p>
+<p><span id="sol-11-10"><strong>11.10</strong></span> استخدام الدين في التمويل. ترفع عائد المالكين عندما يكون عائد المشروع أعلى من تكلفة الدين بعد الضريبة، لأن الفرق يذهب إليهم. إذا كان أقل، تخفض عائدهم.</p>
+<p><span id="sol-11-11"><strong>11.11</strong></span> المتوسط يشمل أثر الدين الرخيص. تدفقات المالكين تشمله أيضا، لأن القرض والفائدة طرحا منها. فيحسب أثر الدين مرتين، ويبدو المشروع أفضل مما هو. تدفقات المالكين تخصم بتكلفة حقوق الملكية.</p>
+<p><span id="sol-11-12"><strong>11.12</strong></span> الأسهم الجديدة لها تكاليف إصدار، من عمولات ورسوم، فتستلم الشركة أقل من سعر السهم. لذلك تكلفتها أعلى من تكلفة الأرباح المحتجزة.</p>
+</section>
+<section id="الجزء-ب-تكلفة-الدين" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-تكلفة-الدين">الجزء ب: تكلفة الدين</h2>
+<p><span id="sol-11-13"><strong>11.13</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_d\,(1 - t) = 9\% \times (1 - 20\%) = 7.20\%
+</annotation></semantics></math></p>
+<p>كل دينار فائدة يوفر 20% منه ضريبة، فالشركة تتحمل 80% منه فقط.</p>
+<p><span id="sol-11-14"><strong>11.14</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>400</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>86</mn><mi>,</mi><mn>526.15</mn></mrow><annotation encoding="application/x-tex">
+A = 400\mathord{,}000\,(A/P,\ 8\%,\ 6) = 86\mathord{,}526.15
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2.5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>390</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+400\mathord{,}000 \times (1 - 2.5\%) = 390\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>التكلفة هي النسبة التي تجعل الأقساط تساوي ما استلمه المصنع:</p>
+<pre class="excel"><code>=RATE(6, -86526.15, 390000.00)</code></pre>
+<p>قبل الضريبة 8.84%. بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.84</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.07</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+8.84\% \times (1 - 20\%) = 7.07\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-15"><strong>11.15</strong></span> الكوبون 60 دينار سنويا. نبحث عن النسبة التي تحقق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>930</mn></mrow><annotation encoding="application/x-tex">
+60\,(P/A,\ k_d,\ 8) + 1000\,(P/F,\ k_d,\ 8) = 930
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(8, 60, -930, 1000)</code></pre>
+<p>العائد حتى الاستحقاق 7.18%، أعلى من الكوبون لأن السعر أقل من القيمة الاسمية. بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.18</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5.74</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+7.18\% \times (1 - 20\%) = 5.74\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-16"><strong>11.16</strong></span> المشتري يدفع 1,115 ويسترد 1,000 فقط في النهاية، فيخسر جزءا من الكوبونات في السعر. العائد أقل من الكوبون.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>115</mn></mrow><annotation encoding="application/x-tex">
+90\,(P/A,\ k_d,\ 12) + 1000\,(P/F,\ k_d,\ 12) = 1\mathord{,}115
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(12, 90, -1115, 1000)</code></pre>
+<p>العائد 7.51%، أقل من الكوبون 9%.</p>
+<p><span id="sol-11-17"><strong>11.17</strong></span> (أ) السند يباع بقيمته الاسمية، فالعائد يساوي الكوبون: 8%.</p>
+<p>(ب) الشركة تستلم 985 دينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>985</mn></mrow><annotation encoding="application/x-tex">
+80\,(P/A,\ k_d,\ 10) + 1000\,(P/F,\ k_d,\ 10) = 985
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(10, 80, -985, 1000)</code></pre>
+<p>التكلفة 8.23%. تكاليف الإصدار رفعت التكلفة لأن الشركة تستلم أقل وتدفع نفس الدفعات.</p>
+<p><span id="sol-11-18"><strong>11.18</strong></span> تكلفة العرض الأول 9.5%، لأنه بدون رسوم.</p>
+<p>العرض الثاني:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>300</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8.5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>76</mn><mi>,</mi><mn>129.73</mn></mrow><annotation encoding="application/x-tex">
+A = 300\mathord{,}000\,(A/P,\ 8.5\%,\ 5) = 76\mathord{,}129.73
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>300</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>3</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>291</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+300\mathord{,}000 \times (1 - 3\%) = 291\mathord{,}000.00
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(5, -76129.73, 291000.00)</code></pre>
+<p>تكلفة العرض الثاني 9.68%. الأرخص هو العرض الأول. الضريبة لا تغير الترتيب، لأنها تضرب التكلفتين في نفس الرقم.</p>
+<p><span id="sol-11-19"><strong>11.19</strong></span> من الفصل الثالث، النسبة الفعلية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>9.6</mn><mi>%</mi></mrow><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>12</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.03</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i = \left(1 + \frac{9.6\%}{12}\right)^{12} - 1 = 10.03\%
+</annotation></semantics></math></p>
+<p>بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10.03</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8.03</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10.03\% \times (1 - 20\%) = 8.03\%
+</annotation></semantics></math></p>
+<p>تكلفة الدين في المتوسط المرجح تؤخذ دائما نسبة فعلية سنوية، لأن تكاليف المصادر الأخرى سنوية.</p>
+<p><span id="sol-11-20"><strong>11.20</strong></span> السعر هو القيمة الحالية لدفعات السند بالعائد المطلوب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>70</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>871.65</mn></mrow><annotation encoding="application/x-tex">
+P = 70\,(P/A,\ 9\%,\ 10) + 1000\,(P/F,\ 9\%,\ 10) = 871.65
+</annotation></semantics></math></p>
+<pre class="excel"><code>=PV(9%, 10, -70, -1000)</code></pre>
+<p>إذا كان العائد المطلوب أعلى من الكوبون، يباع السند بأقل من 1,000، والعكس صحيح.</p>
+<p><span id="sol-11-21"><strong>11.21</strong></span> الشركة تستلم من كل سند:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>985</mn><mo>−</mo><mn>18</mn><mo>=</mo><mn>967</mn></mrow><annotation encoding="application/x-tex">
+985 - 18 = 967
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mn>967</mn></mfrac><mo>=</mo><mn>5</mn><mi>,</mi><mn>170.63</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000\mathord{,}000}{967} = 5\mathord{,}170.63
+</annotation></semantics></math></p>
+<p>تصدر 5,171 سندا. القيمة الاسمية التي ستردها في النهاية 5,171,000 دينار، أكثر مما استلمته.</p>
+<p><span id="sol-11-22"><strong>11.22</strong></span> كل ستة أشهر يدفع السند نصف الكوبون، وعدد الفترات ضعف عدد السنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>8</mn><mi>%</mi><mo>×</mo><mn>1000</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>40</mn><mspace width="2.0em"></mspace><mn>2</mn><mo>×</mo><mn>6</mn><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">
+\frac{8\% \times 1000}{2} = 40 \qquad 2 \times 6 = 12
+</annotation></semantics></math></p>
+<p>نسبة نصف السنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>965</mn></mrow><annotation encoding="application/x-tex">
+40\,(P/A,\ k,\ 12) + 1000\,(P/F,\ k,\ 12) = 965
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(12, 40, -965, 1000)</code></pre>
+<p>النتيجة 4.38% لكل نصف سنة. النسبة الاسمية 8.76%، والفعلية السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>4.38</mn><mi>%</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>8.95</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + 4.38\%)^2 - 1 = 8.95\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-23"><strong>11.23</strong></span> مبلغ واحد اليوم ومبلغ واحد في النهاية، كما في الفصل الأول:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>620</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>k</mi><mi>d</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>7</mn></msup><mo>=</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">
+620\,(1 + k_d)^{7} = 1000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>d</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1000</mn><mn>620</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>7</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.07</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_d = \left(\frac{1000}{620}\right)^{1/7} - 1 = 7.07\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(7, 0, -620, 1000)</code></pre>
+<p><span id="sol-11-24"><strong>11.24</strong></span> الأولى تستفيد من الوفر الضريبي كاملا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10\% \times (1 - 25\%) = 7.50\%
+</annotation></semantics></math></p>
+<p>الثانية لا تدفع ضريبة أصلا، فلا توفر شيئا من الفائدة. تكلفة دينها بعد الضريبة 10%، مثل ما قبل الضريبة. معادلة الفصل تفترض شركة رابحة.</p>
+<p><span id="sol-11-25"><strong>11.25</strong></span> الفائدة السنوية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.5</mn><mi>%</mi><mo>×</mo><mn>250</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>21</mn><mi>,</mi><mn>250</mn></mrow><annotation encoding="application/x-tex">
+8.5\% \times 250\mathord{,}000 = 21\mathord{,}250
+</annotation></semantics></math></p>
+<p>الشركة تستلم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>250</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>245</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+250\mathord{,}000 \times (1 - 2\%) = 245\mathord{,}000
+</annotation></semantics></math></p>
+<p>هذا يشبه السند تماما: دفعات ثابتة، ثم المبلغ كاملا في النهاية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mi>,</mi><mn>250</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>250</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>245</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+21\mathord{,}250\,(P/A,\ k_d,\ 4) + 250\mathord{,}000\,(P/F,\ k_d,\ 4) = 245\mathord{,}000
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(4, -21250, 245000, -250000)</code></pre>
+<p>التكلفة 9.12%.</p>
+</section>
+<section id="الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة">الجزء ج: تكلفة حقوق الملكية والأسهم الممتازة</h2>
+<p><span id="sol-11-26"><strong>11.26</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>2.20</mn><mn>40</mn></mfrac><mo>+</mo><mn>4</mn><mi>%</mi><mo>=</mo><mn>9.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{2.20}{40} + 4\% = 9.50\%
+</annotation></semantics></math></p>
+<p>الجزء الأول عائد التوزيع، والثاني نمو السعر مع التوزيعات.</p>
+<p><span id="sol-11-27"><strong>11.27</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>0.90</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>6</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.9540</mn></mrow><annotation encoding="application/x-tex">
+D_1 = 0.90 \times (1 + 6\%) = 0.9540
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>0.9540</mn><mn>18</mn></mfrac><mo>+</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>11.30</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{0.9540}{18} + 6\% = 11.30\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>0.9540</mn><mrow><mn>18</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>8</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>11.76</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{0.9540}{18 \times (1 - 8\%)} + 6\% = 11.76\%
+</annotation></semantics></math></p>
+<p>الخطأ الشائع أن نستخدم D0 بدل D1: النموذج يحتاج التوزيع القادم، لا الماضي.</p>
+<p><span id="sol-11-28"><strong>11.28</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>3.5</mn><mi>%</mi><mo>+</mo><mn>0.90</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>3.5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9.35</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 3.5\% + 0.90 \times (10\% - 3.5\%) = 9.35\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-29"><strong>11.29</strong></span> من نموذج تسعير الأصول الرأسمالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mfrac><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>−</mo><msub><mi>r</mi><mi>f</mi></msub></mrow><mrow><msub><mi>r</mi><mi>m</mi></msub><mo>−</mo><msub><mi>r</mi><mi>f</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\beta = \frac{k_e - r_f}{r_m - r_f}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mfrac><mrow><mn>14.5</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi></mrow><mrow><mn>11</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>1.50</mn></mrow><annotation encoding="application/x-tex">
+\beta = \frac{14.5\% - 4\%}{11\% - 4\%} = 1.50
+</annotation></semantics></math></p>
+<p><span id="sol-11-30"><strong>11.30</strong></span> تكلفة حقوق الملكية من النموذج الأول:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.20</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.20 \times (10\% - 4\%) = 11.20\%
+</annotation></semantics></math></p>
+<p>نفس التكلفة في نموذج نمو التوزيعات، فالنمو هو الباقي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><msub><mi>k</mi><mi>e</mi></msub><mo>−</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><msub><mi>P</mi><mn>0</mn></msub></mfrac><mo>=</mo><mn>11.20</mn><mi>%</mi><mo>−</mo><mfrac><mn>1.50</mn><mn>30</mn></mfrac><mo>=</mo><mn>6.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+g = k_e - \frac{D_1}{P_0} = 11.20\% - \frac{1.50}{30} = 6.20\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-31"><strong>11.31</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>p</mi></msub><mo>=</mo><mfrac><mn>9</mn><mrow><mn>95</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>3</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>9.77</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_p = \frac{9}{95 \times (1 - 3\%)} = 9.77\%
+</annotation></semantics></math></p>
+<p>لا نضرب في واحد ناقص الضريبة: التوزيعات لا تخفض الضريبة.</p>
+<p><span id="sol-11-32"><strong>11.32</strong></span> التوزيع السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>%</mi><mo>×</mo><mn>100</mn><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">
+8\% \times 100 = 8
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>p</mi></msub><mo>=</mo><mfrac><mn>8</mn><mrow><mn>92</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>8.87</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_p = \frac{8}{92 \times (1 - 2\%)} = 8.87\%
+</annotation></semantics></math></p>
+<p>الدين بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+7.5\% \times (1 - 20\%) = 6.00\%
+</annotation></semantics></math></p>
+<p>الأرخص الدين. الدين يستفيد من الوفر الضريبي، والأسهم الممتازة لا تستفيد.</p>
+<p><span id="sol-11-33"><strong>11.33</strong></span> نموذج نمو التوزيعات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.10</mn><mn>22</mn></mfrac><mo>+</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>11.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{1.10}{22} + 6\% = 11.00\%
+</annotation></semantics></math></p>
+<p>نموذج تسعير الأصول الرأسمالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.10</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10.5</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.15</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.10 \times (10.5\% - 4\%) = 11.15\%
+</annotation></semantics></math></p>
+<p>المتوسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>11.00</mn><mi>%</mi><mo>+</mo><mn>11.15</mn><mi>%</mi></mrow><mn>2</mn></mfrac><mo>=</mo><mn>11.08</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{11.00\% + 11.15\%}{2} = 11.08\%
+</annotation></semantics></math></p>
+<p>إذا كان الفرق بين الطريقتين كبيرا، فراجع الافتراضات: نسبة النمو، أو قيمة بيتا.</p>
+<p><span id="sol-11-34"><strong>11.34</strong></span> السعر هو القيمة الحالية لسلسلة متدرجة نسبيا بلا نهاية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>=</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>−</mo><mi>g</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1.80</mn><mrow><mn>12</mn><mi>%</mi><mo>−</mo><mn>5</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>25.71</mn></mrow><annotation encoding="application/x-tex">
+P_0 = \frac{D_1}{k_e - g} = \frac{1.80}{12\% - 5\%} = 25.71
+</annotation></semantics></math></p>
+<p>نفس المعادلة التي أعطت تكلفة حقوق الملكية، محلولة للسعر.</p>
+<p><span id="sol-11-35"><strong>11.35</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>2.10</mn><mn>35</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{2.10}{35} + 5\% = 11.00\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>2.10</mn><mrow><mn>35</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>7</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.45</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{2.10}{35 \times (1 - 7\%)} + 5\% = 11.45\%
+</annotation></semantics></math></p>
+<p>الفرق 0.45%. تكاليف الإصدار ترفع عائد التوزيع فقط، ولا تغير النمو.</p>
+<p><span id="sol-11-36"><strong>11.36</strong></span> الأرباح المحتجزة تستثمر بعائد 15%، فتنمو الأرباح والتوزيعات بنسبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mi>b</mi><mo>×</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">O</mi><mi mathvariant="normal">E</mi></mrow><mo>=</mo><mn>40</mn><mi>%</mi><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>6.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+g = b \times \mathrm{ROE} = 40\% \times 15\% = 6.00\%
+</annotation></semantics></math></p>
+<p>التوزيع القادم: الجزء الموزع من ربح السنة القادمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>40</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>6.00</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.9080</mn></mrow><annotation encoding="application/x-tex">
+D_1 = 3 \times (1 - 40\%) \times (1 + 6.00\%) = 1.9080
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.9080</mn><mn>30</mn></mfrac><mo>+</mo><mn>6.00</mn><mi>%</mi><mo>=</mo><mn>12.36</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{1.9080}{30} + 6.00\% = 12.36\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-37"><strong>11.37</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>0.80</mn><mo>×</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>8.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 0.80 \times 6\% = 8.80\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.50</mn><mo>×</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>13.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.50 \times 6\% = 13.00\%
+</annotation></semantics></math></p>
+<p>الناس يشترون الطعام الأساسي في الأزمات أيضا، فأرباح الأولى لا تتأثر كثيرا بحالة الاقتصاد. أرباح الثانية تنخفض بقوة في الركود، فمساهموها يطلبون عائدا أعلى.</p>
+<p><span id="sol-11-38"><strong>11.38</strong></span> قبل الأزمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.30</mn><mo>×</mo><mn>6</mn><mi>%</mi><mo>=</mo><mn>11.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.30 \times 6\% = 11.80\%
+</annotation></semantics></math></p>
+<p>بعدها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.30</mn><mo>×</mo><mn>7.5</mn><mi>%</mi><mo>=</mo><mn>13.75</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.30 \times 7.5\% = 13.75\%
+</annotation></semantics></math></p>
+<p>الزيادة 1.95%، أي بيتا ضرب الزيادة في العلاوة. السهم الأخطر يتأثر أكثر.</p>
+</section>
+<section id="الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال">الجزء د: المتوسط المرجح لتكلفة رأس المال</h2>
+<p><span id="sol-11-39"><strong>11.39</strong></span> وزن حقوق الملكية 60%.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.4000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.4000 \times 8\% \times (1 - 20\%) + 0.6000 \times 15\% = 11.56\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-40"><strong>11.40</strong></span> وزن الأسهم العادية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>0.3500</mn><mo>−</mo><mn>0.1000</mn><mo>=</mo><mn>0.5500</mn></mrow><annotation encoding="application/x-tex">
+1 - 0.3500 - 0.1000 = 0.5500
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.3500</mn><mo>×</mo><mn>7.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.1000</mn><mo>×</mo><mn>9</mn><mi>%</mi><mo>+</mo><mn>0.5500</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>10.70</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.3500 \times 7.5\% \times (1 - 20\%) + 0.1000 \times 9\% + 0.5500 \times 14\% = 10.70\%
+</annotation></semantics></math></p>
+<p>فقط الدين يضرب في واحد ناقص الضريبة.</p>
+<p><span id="sol-11-41"><strong>11.41</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>1</mn><mi>,</mi><mn>040</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>320</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mi>E</mi><mo>=</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>22</mn><mo>=</mo><mn>13</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 8\mathord{,}000 \times 1\mathord{,}040 = 8\mathord{,}320\mathord{,}000 \qquad E = 600\mathord{,}000 \times 22 = 13\mathord{,}200\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>8</mn><mi>,</mi><mn>320</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>21</mn><mi>,</mi><mn>520</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.3866</mn><mspace width="2.0em"></mspace><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mn>0.6134</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{8\mathord{,}320\mathord{,}000}{21\mathord{,}520\mathord{,}000} = 0.3866 \qquad w_e = 0.6134
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.3866</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6134</mn><mo>×</mo><mn>13</mn><mi>%</mi><mo>=</mo><mn>10.14</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.3866 \times 7\% \times (1 - 20\%) + 0.6134 \times 13\% = 10.14\%
+</annotation></semantics></math></p>
+<p>العائد حتى الاستحقاق هو تكلفة الدين الحالية، وليس نسبة الكوبون.</p>
+<p><span id="sol-11-42"><strong>11.42</strong></span> قبل التخفيض:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4500</mn><mo>×</mo><mn>9</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.5500</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.49</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4500 \times 9\% \times (1 - 20\%) + 0.5500 \times 15\% = 11.49\%
+</annotation></semantics></math></p>
+<p>بعده:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4500</mn><mo>×</mo><mn>9</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>15</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.5500</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4500 \times 9\% \times (1 - 15\%) + 0.5500 \times 15\% = 11.69\%
+</annotation></semantics></math></p>
+<p>يرتفع المتوسط 0.20%. الضريبة الأقل تعني وفرا أقل من الفائدة، فيصبح الدين أغلى بعد الضريبة. لكن الأرباح بعد الضريبة ترتفع، فالشركة تربح من التخفيض إجمالا.</p>
+<p><span id="sol-11-43"><strong>11.43</strong></span> من معادلة المتوسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>−</mo><msub><mi>w</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><msub><mi>w</mi><mi>e</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">
+k_e = \frac{\mathrm{WACC} - w_d\,k_d\,(1 - t)}{w_e}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mn>11</mn><mi>%</mi><mo>−</mo><mn>0.3000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mn>0.7000</mn></mfrac><mo>=</mo><mn>12.97</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{11\% - 0.3000 \times 8\% \times (1 - 20\%)}{0.7000} = 12.97\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-44"><strong>11.44</strong></span> نسبة الدين إلى حقوق الملكية ليست وزن الدين. من كل 1.50 دينار تمويل، 0.50 دين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mn>0.50</mn><mrow><mn>1</mn><mo>+</mo><mn>0.50</mn></mrow></mfrac><mo>=</mo><mn>0.3333</mn><mspace width="2.0em"></mspace><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>0.50</mn></mrow></mfrac><mo>=</mo><mn>0.6667</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{0.50}{1 + 0.50} = 0.3333 \qquad w_e = \frac{1}{1 + 0.50} = 0.6667
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.3333</mn><mo>×</mo><mn>8.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6667</mn><mo>×</mo><mn>16</mn><mi>%</mi><mo>=</mo><mn>12.93</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.3333 \times 8.5\% \times (1 - 20\%) + 0.6667 \times 16\% = 12.93\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-45"><strong>11.45</strong></span> <strong>القيم الدفترية:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>7</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.5714</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{4\mathord{,}000\mathord{,}000}{7\mathord{,}000\mathord{,}000} = 0.5714
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5714</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.4286</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>9.66</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.5714 \times 8\% \times (1 - 20\%) + 0.4286 \times 14\% = 9.66\%
+</annotation></semantics></math></p>
+<p><strong>القيم السوقية:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>3</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>12</mn><mi>,</mi><mn>800</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.2969</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{3\mathord{,}800\mathord{,}000}{12\mathord{,}800\mathord{,}000} = 0.2969
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2969</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.7031</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>11.74</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.2969 \times 8\% \times (1 - 20\%) + 0.7031 \times 14\% = 11.74\%
+</annotation></semantics></math></p>
+<p>نستخدم القيم السوقية: 11.74%. الأسهم في السوق تساوي 3.00 ضعف قيمتها الدفترية، والمساهمون يطلبون العائد على قيمتها اليوم.</p>
+<p><span id="sol-11-46"><strong>11.46</strong></span> (أ) قبل النفاد:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>13</mn><mi>%</mi><mo>=</mo><mn>10.36</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4000 \times 8\% \times (1 - 20\%) + 0.6000 \times 13\% = 10.36\%
+</annotation></semantics></math></p>
+<p>بعده:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>14.5</mn><mi>%</mi><mo>=</mo><mn>11.26</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4000 \times 8\% \times (1 - 20\%) + 0.6000 \times 14.5\% = 11.26\%
+</annotation></semantics></math></p>
+<p>(ب) كل دينار استثمار يحتاج 0.6000 دينار من حقوق الملكية. الأرباح المحتجزة تكفي حتى:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>200</mn><mi>,</mi><mn>000</mn></mrow><mn>0.6000</mn></mfrac><mo>=</mo><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}200\mathord{,}000}{0.6000} = 2\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p>أول 2,000,000 دينار من الاستثمار بتكلفة 10.36%، وما بعدها بتكلفة 11.26%.</p>
+<p><span id="sol-11-47"><strong>11.47</strong></span> <strong>تكلفة الدين:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>500</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>125</mn><mi>,</mi><mn>228.23</mn></mrow><annotation encoding="application/x-tex">
+A = 500\mathord{,}000\,(A/P,\ 8\%,\ 5) = 125\mathord{,}228.23
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(5, -125228.23, 490000.00)</code></pre>
+<p>قبل الضريبة 8.77%.</p>
+<p><strong>تكلفة حقوق الملكية:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.20</mn><mn>20</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{1.20}{20} + 5\% = 11.00\%
+</annotation></semantics></math></p>
+<p><strong>المتوسط:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4000</mn><mo>×</mo><mn>8.77</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>11.00</mn><mi>%</mi><mo>=</mo><mn>9.41</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4000 \times 8.77\% \times (1 - 20\%) + 0.6000 \times 11.00\% = 9.41\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-48"><strong>11.48</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.4000</mn><mo>×</mo><mn>9</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.88</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.4000 \times 9\% \times (1 - 20\%) + 0.6000 \times 15\% = 11.88\%
+</annotation></semantics></math></p>
+<p>القيمة الحالية بالمتوسط المرجح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>800</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>205</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>11.88</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>45</mn><mi>,</mi><mn>710.79</mn></mrow><annotation encoding="application/x-tex">
+PW = -800\mathord{,}000 + 205\mathord{,}000\,(P/A,\ 11.88\%,\ 6) = 45\mathord{,}710.79
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(6, 205000, -800000)</code></pre>
+<p>معدل المشروع 13.87%. القرار: يقبل، لأن معدله أعلى من تكلفة رأس المال.</p>
+<p><span id="sol-11-49"><strong>11.49</strong></span> بدون دين، المتوسط هو تكلفة حقوق الملكية: 12%.</p>
+<p>مع الدين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.7000</mn><mo>×</mo><mn>13.5</mn><mi>%</mi><mo>=</mo><mn>11.37</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.3000 \times 8\% \times (1 - 20\%) + 0.7000 \times 13.5\% = 11.37\%
+</annotation></semantics></math></p>
+<p>التغير ‎-0.63%. المتوسط ينخفض: وفر الدين الرخيص أكبر من ارتفاع تكلفة حقوق الملكية.</p>
+<p><span id="sol-11-50"><strong>11.50</strong></span> وزن حقوق الملكية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>0.2500</mn><mo>−</mo><mn>0.2000</mn><mo>=</mo><mn>0.5500</mn></mrow><annotation encoding="application/x-tex">
+1 - 0.2500 - 0.2000 = 0.5500
+</annotation></semantics></math></p>
+<p>كل نوع دين يضرب في واحد ناقص الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2500</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2000</mn><mo>×</mo><mn>8.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.5500</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>10.46</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.2500 \times 7\% \times (1 - 20\%) + 0.2000 \times 8.5\% \times (1 - 20\%) + 0.5500 \times 14\% = 10.46\%
+</annotation></semantics></math></p>
+<p><span id="sol-11-51"><strong>11.51</strong></span> نسب السوق، مثل العائد حتى الاستحقاق وعائد المساهمين، تشمل التضخم. تدفقات بالدينار الثابت تخصم بنسبة حقيقية، كما في الفصل الثامن:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>10.5</mn><mi>%</mi></mrow><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mi>%</mi></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.28</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i' = \frac{1 + 10.5\%}{1 + 3\%} - 1 = 7.28\%
+</annotation></semantics></math></p>
+<p>خصم تدفقات ثابتة بنسبة سوقية يرفض مشاريع جيدة.</p>
+</section>
+<section id="الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال">الجزء هـ: نسبة الدين وتكلفة رأس المال</h2>
+<p><span id="sol-11-52"><strong>11.52</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn><mo>×</mo><mn>6</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.9</mn><mo>×</mo><mn>11.5</mn><mi>%</mi><mo>=</mo><mn>10.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.1 \times 6\% \times (1 - 25\%) + 0.9 \times 11.5\% = 10.80\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.7</mn><mo>×</mo><mn>12.5</mn><mi>%</mi><mo>=</mo><mn>10.33</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.3 \times 7\% \times (1 - 25\%) + 0.7 \times 12.5\% = 10.33\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn><mo>×</mo><mn>9</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.5</mn><mo>×</mo><mn>14.5</mn><mi>%</mi><mo>=</mo><mn>10.63</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.5 \times 9\% \times (1 - 25\%) + 0.5 \times 14.5\% = 10.63\%
+</annotation></semantics></math></p>
+<p>أقل متوسط 10.33%، عند نسبة دين 30%. كلما ارتفعت الضريبة، صار الدين أرخص بعد الضريبة، فتنتقل أفضل نسبة نحو دين أكثر.</p>
+<p><span id="sol-11-53"><strong>11.53</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>12</mn><mi>%</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>%</mi><mo>−</mo><mn>7</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>0.60</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14.40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 12\% + (12\% - 7\%) \times 0.60 \times (1 - 20\%) = 14.40\%
+</annotation></semantics></math></p>
+<p>الأوزان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mn>0.60</mn><mrow><mn>1</mn><mo>+</mo><mn>0.60</mn></mrow></mfrac><mo>=</mo><mn>0.3750</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{0.60}{1 + 0.60} = 0.3750
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.3750</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6250</mn><mo>×</mo><mn>14.40</mn><mi>%</mi><mo>=</mo><mn>11.10</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.3750 \times 7\% \times (1 - 20\%) + 0.6250 \times 14.40\% = 11.10\%
+</annotation></semantics></math></p>
+<p>المتوسط أقل من 12% بسبب الوفر الضريبي على الفائدة فقط. بدون ضريبة كان سيبقى 12%: ارتفاع تكلفة حقوق الملكية يلغي رخص الدين تماما.</p>
+<p><span id="sol-11-54"><strong>11.54</strong></span> عند 0.25:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>11</mn><mi>%</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>11</mn><mi>%</mi><mo>−</mo><mn>6.5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>0.25</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11.90</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 11\% + (11\% - 6.5\%) \times 0.25 \times (1 - 20\%) = 11.90\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2000</mn><mo>×</mo><mn>6.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.8000</mn><mo>×</mo><mn>11.90</mn><mi>%</mi><mo>=</mo><mn>10.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.2000 \times 6.5\% \times (1 - 20\%) + 0.8000 \times 11.90\% = 10.56\%
+</annotation></semantics></math></p>
+<p>عند 1:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>11</mn><mi>%</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>11</mn><mi>%</mi><mo>−</mo><mn>6.5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>1</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 11\% + (11\% - 6.5\%) \times 1 \times (1 - 20\%) = 14.60\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5000</mn><mo>×</mo><mn>6.5</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.5000</mn><mo>×</mo><mn>14.60</mn><mi>%</mi><mo>=</mo><mn>9.90</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.5000 \times 6.5\% \times (1 - 20\%) + 0.5000 \times 14.60\% = 9.90\%
+</annotation></semantics></math></p>
+<p>في هذه المعادلة يستمر المتوسط في الانخفاض مع الدين، لأنها تفترض أن تكلفة الدين ثابتة. في الواقع يرفع البنك الفائدة عندما يكثر الدين، فيتوقف الانخفاض.</p>
+<p><span id="sol-11-55"><strong>11.55</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>المتوسط المرجح</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>13.00%</td>
+</tr>
+<tr class="even">
+<td>15%</td>
+<td>12.17%</td>
+</tr>
+<tr class="odd">
+<td>30%</td>
+<td>11.62%</td>
+</tr>
+<tr class="even">
+<td>45%</td>
+<td>11.75%</td>
+</tr>
+<tr class="odd">
+<td>60%</td>
+<td>12.88%</td>
+</tr>
+</tbody>
+</table>
+<p>مثال على السطر الثالث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.30</mn><mo>×</mo><mn>7.0</mn><mi>%</mi><mo>×</mo><mn>0.8</mn><mo>+</mo><mn>0.70</mn><mo>×</mo><mn>14.2</mn><mi>%</mi><mo>=</mo><mn>11.62</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.30 \times 7.0\% \times 0.8 + 0.70 \times 14.2\% = 11.62\%
+</annotation></semantics></math></p>
+<p>أقل متوسط 11.62%. المنحنى مسطح قرب القاع: الفرق بين النسب المجاورة صغير. لذلك تختار الشركات مجالا للدين، وليس رقما واحدا.</p>
+<p><span id="sol-11-56"><strong>11.56</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>8</mn><mi>%</mi><mo>×</mo><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>160</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+I = 8\% \times 2\mathord{,}000\mathord{,}000 = 160\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mspace width="0.167em"></mspace><mi>I</mi><mo>=</mo><mn>20</mn><mi>%</mi><mo>×</mo><mn>160</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>32</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+t\,I = 20\% \times 160\mathord{,}000 = 32\mathord{,}000
+</annotation></semantics></math></p>
+<p>الوفر يستمر بلا نهاية، فقيمته الحالية كالتكلفة المرسملة في الفصل الثالث:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>32</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>8</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>400</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+\frac{32\mathord{,}000}{8\%} = 400\mathord{,}000
+</annotation></semantics></math></p>
+<p>وهي تساوي نسبة الضريبة ضرب الدين. هذا ما تكسبه الشركة من الدين، وما يقابله من مخاطرة الإفلاس يحدد إلى أين تقترض.</p>
+<p><span id="sol-11-57"><strong>11.57</strong></span> (أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mi>D</mi><mi>/</mi><mi>E</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>D</mi><mi>/</mi><mi>E</mi></mrow></mfrac><mo>=</mo><mfrac><mn>0.75</mn><mrow><mn>1</mn><mo>+</mo><mn>0.75</mn></mrow></mfrac><mo>=</mo><mn>42.86</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+w_d = \frac{D/E}{1 + D/E} = \frac{0.75}{1 + 0.75} = 42.86\%
+</annotation></semantics></math></p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>D</mi><mi>E</mi></mfrac><mo>=</mo><mfrac><msub><mi>w</mi><mi>d</mi></msub><mrow><mn>1</mn><mo>−</mo><msub><mi>w</mi><mi>d</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mn>0.2500</mn><mn>0.7500</mn></mfrac><mo>=</mo><mn>0.33</mn></mrow><annotation encoding="application/x-tex">
+\frac{D}{E} = \frac{w_d}{1 - w_d} = \frac{0.2500}{0.7500} = 0.33
+</annotation></semantics></math></p>
+<p><span id="sol-11-58"><strong>11.58</strong></span> أكبر فائدة سنوية مسموحة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>900</mn><mi>,</mi><mn>000</mn></mrow><mn>3</mn></mfrac><mo>=</mo><mn>300</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\frac{900\mathord{,}000}{3} = 300\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>أكبر دين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>300</mn><mi>,</mi><mn>000.00</mn></mrow><mrow><mn>9</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mi>,</mi><mn>333</mn><mi>,</mi><mn>333.33</mn></mrow><annotation encoding="application/x-tex">
+\frac{300\mathord{,}000.00}{9\%} = 3\mathord{,}333\mathord{,}333.33
+</annotation></semantics></math></p>
+<p>البنك يضع هذا الشرط ليبقى للشركة هامش إذا انخفض ربحها: الربح يمكن أن ينخفض إلى 33.33% من قيمته قبل أن تعجز عن دفع الفائدة.</p>
+<p><span id="sol-11-59"><strong>11.59</strong></span> حساب المدير:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6000</mn><mo>×</mo><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.4000</mn><mo>×</mo><mn>12</mn><mi>%</mi><mo>=</mo><mn>9.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.6000 \times 10\% \times (1 - 20\%) + 0.4000 \times 12\% = 9.60\%
+</annotation></semantics></math></p>
+<p>الحساب الصحيح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6000</mn><mo>×</mo><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.4000</mn><mo>×</mo><mn>20</mn><mi>%</mi><mo>=</mo><mn>12.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.6000 \times 10\% \times (1 - 20\%) + 0.4000 \times 20\% = 12.80\%
+</annotation></semantics></math></p>
+<p>الدين يرفع مخاطرة المساهمين، فيرفع العائد الذي يطلبونه. تجاهل ذلك يجعل الدين يبدو أرخص مما هو، ويدفع الشركة إلى قبول مشاريع لا تغطي تكلفة رأس المال الفعلية.</p>
+<p><span id="sol-11-60"><strong>11.60</strong></span> <strong>بدون دين:</strong> حقوق الملكية 1,000,000 دينار.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>200</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>16.00</mn><mi>%</mi><mspace width="2.0em"></mspace><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>4.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{200\mathord{,}000 \times (1 - 20\%)}{1\mathord{,}000\mathord{,}000} = 16.00\% \qquad \frac{60\mathord{,}000 \times (1 - 20\%)}{1\mathord{,}000\mathord{,}000} = 4.80\%
+</annotation></semantics></math></p>
+<p><strong>مع الدين:</strong> القرض 500,000، وحقوق الملكية 500,000، والفائدة 40,000 دينار.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>200</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>25.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{(200\mathord{,}000 - 40\mathord{,}000) \times (1 - 20\%)}{500\mathord{,}000} = 25.60\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>500</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>3.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{(60\mathord{,}000 - 40\mathord{,}000) \times (1 - 20\%)}{500\mathord{,}000} = 3.20\%
+</annotation></semantics></math></p>
+<p>الدين يوسع المسافة بين السنتين: العائد الجيد يصبح أعلى، والسيئ يصبح أسوأ. لهذا يطلب المساهمون عائدا أعلى من شركة عليها ديون أكثر.</p>
+</section>
+<section id="الجزء-و-اختيار-الحد-الأدنى-للعائد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-و-اختيار-الحد-الأدنى-للعائد">الجزء و: اختيار الحد الأدنى للعائد</h2>
+<p><span id="sol-11-61"><strong>11.61</strong></span> نرتب حسب المعدل:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>المعدل</th>
+<th>الاستثمار المتراكم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ب</td>
+<td>24%</td>
+<td>200,000</td>
+</tr>
+<tr class="even">
+<td>ج</td>
+<td>19%</td>
+<td>600,000</td>
+</tr>
+<tr class="odd">
+<td>أ</td>
+<td>16%</td>
+<td>1,000,000</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>14%</td>
+<td>لا يتسع</td>
+</tr>
+</tbody>
+</table>
+<p>تقبل ب وج وأ، وتملأ الميزانية بالضبط. أفضل مشروع مرفوض د بمعدل 14%، فالحد الأدنى الفعلي 14%. المشروع هـ مرفوض في كل الأحوال، لأن معدله أقل من تكلفة رأس المال 11%.</p>
+<p><span id="sol-11-62"><strong>11.62</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الحد الأدنى</th>
+<th>المعدل</th>
+<th>القرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>استبدال معدات</td>
+<td>11%</td>
+<td>12.5%</td>
+<td>يقبل</td>
+</tr>
+<tr class="even">
+<td>توسعة</td>
+<td>13.5%</td>
+<td>13.5%</td>
+<td>يرفض</td>
+</tr>
+<tr class="odd">
+<td>منتج جديد</td>
+<td>17%</td>
+<td>16%</td>
+<td>يرفض</td>
+</tr>
+</tbody>
+</table>
+<p>كل مشروع يقارن بالحد الأدنى لصنفه، وليس بالمتوسط المرجح وحده.</p>
+<p><span id="sol-11-63"><strong>11.63</strong></span> تكلفة رأس المال للشركة كلها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>%</mi><mo>+</mo><mn>1</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+4\% + 1 \times (10\% - 4\%) = 10.00\%
+</annotation></semantics></math></p>
+<p>لكن المشروع بمخاطرة المجال الجديد، فنستخدم بيتا ذلك المجال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.60</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+4\% + 1.60 \times (10\% - 4\%) = 13.60\%
+</annotation></semantics></math></p>
+<p>الحد الأدنى للمشروع 13.60%. القرار: يرفض. لو استخدمت الشركة تكلفة رأس مالها لقبلته خطأ.</p>
+<p><span id="sol-11-64"><strong>11.64</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>148</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>44</mn><mi>,</mi><mn>578.58</mn></mrow><annotation encoding="application/x-tex">
+PW = -600\mathord{,}000 + 148\mathord{,}000\,(P/A,\ 10\%,\ 6) = 44\mathord{,}578.58
+</annotation></semantics></math></p>
+<p>الحد الأدنى بعد العلاوة 15%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>600</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>148</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>39</mn><mi>,</mi><mn>896.56</mn></mrow><annotation encoding="application/x-tex">
+PW = -600\mathord{,}000 + 148\mathord{,}000\,(P/A,\ 15\%,\ 6) = -39\mathord{,}896.56
+</annotation></semantics></math></p>
+<p>القرار بالحد الأدنى بعد العلاوة، لأن المشروع أخطر من مشاريع الشركة المعتادة. القيمة سالبة، فيرفض، مع أنه يبدو مقبولا بالمتوسط المرجح وحده.</p>
+<p><span id="sol-11-65"><strong>11.65</strong></span> نرتب المشاريع من المعدل الأعلى، ونقارن كل مشروع بتكلفة المال الذي سيموله:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الاستثمار المتراكم</th>
+<th>تكلفة المال</th>
+<th>المعدل</th>
+<th>القرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>300,000</td>
+<td>10%</td>
+<td>17%</td>
+<td>يقبل</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>800,000</td>
+<td>10%</td>
+<td>13%</td>
+<td>يقبل</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>1,100,000</td>
+<td>12%</td>
+<td>11.5%</td>
+<td>يرفض</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>1,300,000</td>
+<td>12%</td>
+<td>9%</td>
+<td>يرفض</td>
+</tr>
+</tbody>
+</table>
+<p>المشروع ج يعطي أكثر من 10%، لكنه يأتي بعد نفاد الأرباح المحتجزة، فيموله مال تكلفته 12%. الحد الأدنى للمشروع الأخير المقبول هو تكلفة المال الإضافي، لا متوسط الشركة القديم.</p>
+<p><span id="sol-11-66"><strong>11.66</strong></span></p>
+<pre class="excel"><code>=RATE(6, 123000, -500000)</code></pre>
+<p>معدل المشروع 12.40%، أقل من 15%، فيرفضه المدير. القيمة الحالية بحده:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>123</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>34</mn><mi>,</mi><mn>508.63</mn></mrow><annotation encoding="application/x-tex">
+-500\mathord{,}000 + 123\mathord{,}000\,(P/A,\ 15\%,\ 6) = -34\mathord{,}508.63
+</annotation></semantics></math></p>
+<p>لكن مقدمي المال يطلبون 10% فقط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>123</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>35</mn><mi>,</mi><mn>697.07</mn></mrow><annotation encoding="application/x-tex">
+-500\mathord{,}000 + 123\mathord{,}000\,(P/A,\ 10\%,\ 6) = 35\mathord{,}697.07
+</annotation></semantics></math></p>
+<p>برفض المشروع تخسر الشركة 35,697.07 دينار من قيمتها. الحد الأدنى المرتفع بلا سبب ليس احتياطا: له تكلفة.</p>
+<p><span id="sol-11-67"><strong>11.67</strong></span> قاعدة تقريبية: العائد بعد الضريبة يساوي تقريبا العائد قبلها ضرب واحد ناقص الضريبة. فالحد الأدنى قبل الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>10</mn><mi>%</mi></mrow><mrow><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>12.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{10\%}{1 - 20\%} = 12.50\%
+</annotation></semantics></math></p>
+<p>التقريب يتجاهل توقيت الاستهلاك. للقرارات الكبيرة نبني التدفقات بعد الضريبة، كما في الفصل السابع.</p>
+<p><span id="sol-11-68"><strong>11.68</strong></span> حساب المهندس:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+4\% \times (1 - 20\%) = 3.20\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>88</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3.20</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>73</mn><mi>,</mi><mn>568.90</mn></mrow><annotation encoding="application/x-tex">
+-400\mathord{,}000 + 88\mathord{,}000\,(P/A,\ 3.20\%,\ 6) = 73\mathord{,}568.90
+</annotation></semantics></math></p>
+<p>بالمتوسط المرجح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>400</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>88</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>11</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>27</mn><mi>,</mi><mn>712.67</mn></mrow><annotation encoding="application/x-tex">
+-400\mathord{,}000 + 88\mathord{,}000\,(P/A,\ 11\%,\ 6) = -27\mathord{,}712.67
+</annotation></semantics></math></p>
+<p>مخاطرة المشروع لا تتغير بمصدر المال. الصحيح أن نقيم المشروع بالمتوسط المرجح، ثم نضيف قيمة القرض الميسر وحدها: الفرق بين قيمته الحالية بفائدة السوق وبفائدته الميسرة. بدون القرض الميسر المشروع لا يغطي تكلفة رأس المال، وقيمة القرض قد تكفي أو لا تكفي لتغطية الفرق.</p>
+<p><span id="sol-11-69"><strong>11.69</strong></span> الحد الأدنى الفعلي هو تكلفة الفرصة البديلة، 14.5%. المشروع الجديد يعطي أقل منه، فلا يدخل، حتى لو كان معدله أعلى من المتوسط المرجح.</p>
+<p><span id="sol-11-70"><strong>11.70</strong></span> قسم المياه:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>0.80</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 0.80 \times (10\% - 4\%) = 8.80\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3000</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.7000</mn><mo>×</mo><mn>8.80</mn><mi>%</mi><mo>=</mo><mn>7.84</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.3000 \times 7\% \times (1 - 20\%) + 0.7000 \times 8.80\% = 7.84\%
+</annotation></semantics></math></p>
+<p>قسم الأجهزة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.50</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.50 \times (10\% - 4\%) = 13.00\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3000</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.7000</mn><mo>×</mo><mn>13.00</mn><mi>%</mi><mo>=</mo><mn>10.78</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.3000 \times 7\% \times (1 - 20\%) + 0.7000 \times 13.00\% = 10.78\%
+</annotation></semantics></math></p>
+<p>حد واحد للشركة كلها يجعل قسم الأجهزة يقبل مشاريع لا تغطي مخاطرتها، ويجعل قسم المياه يرفض مشاريع جيدة.</p>
+<p><span id="sol-11-71"><strong>11.71</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>700</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>170</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>62</mn><mi>,</mi><mn>606.16</mn></mrow><annotation encoding="application/x-tex">
+-700\mathord{,}000 + 170\mathord{,}000\,(P/A,\ 9\%,\ 6) = 62\mathord{,}606.16
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>700</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>170</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>56</mn><mi>,</mi><mn>637.94</mn></mrow><annotation encoding="application/x-tex">
+-700\mathord{,}000 + 170\mathord{,}000\,(P/A,\ 15\%,\ 6) = -56\mathord{,}637.94
+</annotation></semantics></math></p>
+<p>القرار يتغير عند الحد الأدنى الذي يجعل القيمة الحالية صفرا، وهو معدل عائد المشروع:</p>
+<pre class="excel"><code>=RATE(6, 170000, -700000)</code></pre>
+<p>11.95%. إذا اتفقت الإدارة على أي حد أقل منه، يقبل المشروع. لا داعي للاتفاق على رقم دقيق، بل فقط على أنه أقل من 11.95% أو أعلى.</p>
+</section>
+<section id="الجزء-ز-التمويل-بالدين-وعائد-المالكين" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-التمويل-بالدين-وعائد-المالكين">الجزء ز: التمويل بالدين وعائد المالكين</h2>
+<p><span id="sol-11-72"><strong>11.72</strong></span> <strong>بدون دين:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>300</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>12.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{300\mathord{,}000 \times (1 - 20\%)}{2\mathord{,}000\mathord{,}000} = 12.00\%
+</annotation></semantics></math></p>
+<p><strong>مع الدين:</strong> الفائدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>%</mi><mo>×</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>80</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+8\% \times 1\mathord{,}000\mathord{,}000 = 80\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>80</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>17.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{(300\mathord{,}000 - 80\mathord{,}000) \times (1 - 20\%)}{1\mathord{,}000\mathord{,}000} = 17.60\%
+</annotation></semantics></math></p>
+<p>الدين رفع العائد، لأن الأصول تعطي أكثر من تكلفة الدين بعد الضريبة.</p>
+<p><span id="sol-11-73"><strong>11.73</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>50</mn><mi>%</mi><mo>×</mo><mn>300</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>150</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mi>A</mi><mo>=</mo><mn>150</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>46</mn><mi>,</mi><mn>300.30</mn></mrow><annotation encoding="application/x-tex">
+L = 50\% \times 300\mathord{,}000 = 150\mathord{,}000 \qquad A = 150\mathord{,}000\,(A/P,\ 9\%,\ 4) = 46\mathord{,}300.30
+</annotation></semantics></math></p>
+<p>تدفق المالكين كل سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>−</mo><mi>A</mi><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>I</mi></mrow><annotation encoding="application/x-tex">
+CF - A + t\,I
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الفائدة</th>
+<th>تدفق المالكين</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td>‎-150,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>13,500</td>
+<td>57,400</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>10,548</td>
+<td>56,809</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>7,330</td>
+<td>56,166</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>3,823</td>
+<td>55,464</td>
+</tr>
+</tbody>
+</table>
+<p>نخصم بتكلفة حقوق الملكية، لأن هذه تدفقات المالكين وحدهم:</p>
+<pre class="excel"><code>=NPV(16%, C2:C5) + C1</code></pre>
+<p>القيمة الحالية 8,316.52 دينار.</p>
+<p><span id="sol-11-74"><strong>11.74</strong></span> الفائدة 9,600 دينار، وتكلفتها بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>600</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>680</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}600 \times (1 - 20\%) = 7\mathord{,}680
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>تدفق المالكين</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>‎-120,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>95,320</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>95,320</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>‎-24,680</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>120</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>95</mn><mi>,</mi><mn>320</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>95</mn><mi>,</mi><mn>320</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>−</mi><mn>24</mn><mi>,</mi><mn>680</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>18</mn><mi>,</mi><mn>735.07</mn></mrow><annotation encoding="application/x-tex">
+PW = -120\mathord{,}000 + 95\mathord{,}320\,(P/F,\ 15\%,\ 1) + 95\mathord{,}320\,(P/F,\ 15\%,\ 2) + -24\mathord{,}680\,(P/F,\ 15\%,\ 3) = 18\mathord{,}735.07
+</annotation></semantics></math></p>
+<p>تدفق السنة الأخيرة سالب، فالإشارة تتغير أكثر من مرة، وقد يكون لتدفقات المالكين أكثر من معدل عائد. القيمة الحالية تبقى صحيحة.</p>
+<p><span id="sol-11-75"><strong>11.75</strong></span> حساب المحلل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>150</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>52</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14</mn><mi>,</mi><mn>833.00</mn></mrow><annotation encoding="application/x-tex">
+-150\mathord{,}000 + 52\mathord{,}000\,(P/A,\ 10\%,\ 4) = 14\mathord{,}833.00
+</annotation></semantics></math></p>
+<p>المتوسط المرجح يشمل الدين الرخيص، وتدفقات المالكين طرح منها القرض وفائدته. أثر الدين حسب مرتين. الصحيح أن نخصم بتكلفة حقوق الملكية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>150</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>52</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>16</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>4</mn><mi>,</mi><mn>494.61</mn></mrow><annotation encoding="application/x-tex">
+-150\mathord{,}000 + 52\mathord{,}000\,(P/A,\ 16\%,\ 4) = -4\mathord{,}494.61
+</annotation></semantics></math></p>
+<p>المشروع الذي بدا رابحا يخسر مال المالكين.</p>
+<p><span id="sol-11-76"><strong>11.76</strong></span> الدين يرفع عائد المالكين إذا كانت الأصول تعطي أكثر من تكلفة الدين بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10\% \times (1 - 25\%) = 7.50\%
+</annotation></semantics></math></p>
+<p>الأصول تعطي 7%. الدين يخفض عائد المالكين: كل دينار مقترض يكلف أكثر مما يعطي. هذه رافعة سالبة.</p>
+<p><span id="sol-11-77"><strong>11.77</strong></span></p>
+<pre class="excel"><code>=RATE(3, 194000, -450000)</code></pre>
+<p>معدل المشروع 14.05%.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>225</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mi>A</mi><mo>=</mo><mn>225</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>87</mn><mi>,</mi><mn>307.54</mn></mrow><annotation encoding="application/x-tex">
+L = 225\mathord{,}000 \qquad A = 225\mathord{,}000\,(A/P,\ 8\%,\ 3) = 87\mathord{,}307.54
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الفائدة</th>
+<th>تدفق المالكين</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td>‎-225,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>18,000</td>
+<td>110,292</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>12,455</td>
+<td>109,184</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>6,467</td>
+<td>107,986</td>
+</tr>
+</tbody>
+</table>
+<pre class="excel"><code>=IRR(C1:C4)</code></pre>
+<p>معدل المالكين 21.48%. الفرق سببه أن المشروع يعطي أكثر من تكلفة القرض بعد الضريبة، 6.40%.</p>
+<p><span id="sol-11-78"><strong>11.78</strong></span> صافي الربح يتناسب مع الربح التشغيلي ناقص الفائدة، لأن الضريبة نسبة ثابتة منه. الفائدة ثابتة، فكل التغير يقع على الباقي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">B</mi><mi mathvariant="normal">I</mi><mi mathvariant="normal">T</mi></mrow><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">B</mi><mi mathvariant="normal">I</mi><mi mathvariant="normal">T</mi></mrow><mo>−</mo><mi>I</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>500</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>500</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>200</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>1.6667</mn></mrow><annotation encoding="application/x-tex">
+\frac{\mathrm{EBIT}}{\mathrm{EBIT} - I} = \frac{500\mathord{,}000}{500\mathord{,}000 - 200\mathord{,}000} = 1.6667
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.6667</mn><mo>×</mo><mn>20</mn><mi>%</mi><mo>=</mo><mn>33.33</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+1.6667 \times 20\% = 33.33\%
+</annotation></semantics></math></p>
+<p>ينخفض صافي الربح 33.33%. بدون دين ينخفض 20% فقط. هذا معنى أن الدين يرفع مخاطرة المالكين.</p>
+<p><span id="sol-11-79"><strong>11.79</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>600</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>133</mn><mi>,</mi><mn>751.87</mn></mrow><annotation encoding="application/x-tex">
+A = 600\mathord{,}000\,(A/P,\ 9\%,\ 6) = 133\mathord{,}751.87
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>180</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>133</mn><mi>,</mi><mn>751.87</mn></mrow></mfrac><mo>=</mo><mn>1.35</mn></mrow><annotation encoding="application/x-tex">
+\frac{180\mathord{,}000}{133\mathord{,}751.87} = 1.35
+</annotation></semantics></math></p>
+<p>النسبة تحقق الشرط، فيوافق البنك. أكبر قسط مسموح:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>180</mn><mi>,</mi><mn>000</mn></mrow><mn>1.30</mn></mfrac><mo>=</mo><mn>138</mn><mi>,</mi><mn>461.54</mn></mrow><annotation encoding="application/x-tex">
+\frac{180\mathord{,}000}{1.30} = 138\mathord{,}461.54
+</annotation></semantics></math></p>
+<p>أكبر قرض:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>138</mn><mi>,</mi><mn>461.54</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>621</mn><mi>,</mi><mn>127.19</mn></mrow><annotation encoding="application/x-tex">
+138\mathord{,}461.54\,(P/A,\ 9\%,\ 6) = 621\mathord{,}127.19
+</annotation></semantics></math></p>
+<p><span id="sol-11-80"><strong>11.80</strong></span></p>
+<pre class="excel"><code>=RATE(4, 113000, -400000)</code></pre>
+<p>معدل المشروع 5.07%. تكلفة القرض بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10\% \times (1 - 20\%) = 8.00\%
+</annotation></semantics></math></p>
+<p>القسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>160</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>50</mn><mi>,</mi><mn>475.33</mn></mrow><annotation encoding="application/x-tex">
+160\mathord{,}000\,(A/P,\ 10\%,\ 4) = 50\mathord{,}475.33
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>تدفق المالكين</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>‎-240,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>65,725</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>65,035</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>64,277</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>63,442</td>
+</tr>
+</tbody>
+</table>
+<p>معدل المالكين 3.05%، أقل من معدل المشروع. القرض يكلف أكثر مما يعطي المشروع، فيأخذ من حصة المالكين. الرافعة تعمل في الاتجاهين.</p>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h2>
+<p><span id="sol-11-81"><strong>11.81</strong></span> في العمود A الأسعار، وفي B:</p>
+<pre class="excel"><code>=RATE(10, 70, -A2, 1000)</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السعر</th>
+<th>العائد حتى الاستحقاق</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>900</td>
+<td>8.53%</td>
+</tr>
+<tr class="even">
+<td>950</td>
+<td>7.74%</td>
+</tr>
+<tr class="odd">
+<td>1,000</td>
+<td>7.00%</td>
+</tr>
+<tr class="even">
+<td>1,050</td>
+<td>6.31%</td>
+</tr>
+<tr class="odd">
+<td>1,100</td>
+<td>5.66%</td>
+</tr>
+</tbody>
+</table>
+<p>كلما ارتفع السعر، انخفض العائد. عند السعر 1,000 يساوي العائد الكوبون. الشركة التي تبيع سنداتها بسعر منخفض تقترض بتكلفة أعلى.</p>
+<p><span id="sol-11-82"><strong>11.82</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ku, t <span class="op">=</span> <span class="fl">0.12</span>, <span class="fl">0.20</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">8</span>):</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    wd <span class="op">=</span> k <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    kd <span class="op">=</span> <span class="fl">0.06</span> <span class="op">+</span> <span class="fl">0.1</span> <span class="op">*</span> wd <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    ke <span class="op">=</span> ku <span class="op">+</span> (ku <span class="op">-</span> kd) <span class="op">*</span> wd <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> wd) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    wacc <span class="op">=</span> wd <span class="op">*</span> kd <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> wd) <span class="op">*</span> ke</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>wd<span class="sc">:.0%}</span><span class="ss">  kd </span><span class="sc">{</span>kd<span class="sc">:.2%}</span><span class="ss">  ke </span><span class="sc">{</span>ke<span class="sc">:.2%}</span><span class="ss">  WACC </span><span class="sc">{</span>wacc<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> best <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> wacc <span class="op">&lt;</span> best[<span class="dv">1</span>]:</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        best <span class="op">=</span> (wd, wacc)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"best"</span>, best)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>بعض النتائج:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>تكلفة الدين</th>
+<th>تكلفة حقوق الملكية</th>
+<th>المتوسط</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>30%</td>
+<td>6.90%</td>
+<td>13.75%</td>
+<td>11.28%</td>
+</tr>
+<tr class="even">
+<td>40%</td>
+<td>7.60%</td>
+<td>14.35%</td>
+<td>11.04%</td>
+</tr>
+<tr class="odd">
+<td>50%</td>
+<td>8.50%</td>
+<td>14.80%</td>
+<td>10.80%</td>
+</tr>
+</tbody>
+</table>
+<p>عند 0% المتوسط 12.00%. المتوسط ينخفض ثم يرتفع، لأن تكلفة الدين ترتفع مع مربع النسبة. شغل البرنامج لترى كل الأسطر وأفضل نسبة.</p>
+<p><span id="sol-11-83"><strong>11.83</strong></span></p>
+<pre class="excel"><code>B9:  =B2*(1+B3)/B1 + B3
+B10: =B2*(1+B3)/(B1*(1-B4)) + B3
+B11: =B5 + B7*(B6-B5)
+B12: =AVERAGE(B9, B11)</code></pre>
+<p>النتائج: الأرباح المحتجزة 10.25%، والأسهم الجديدة 10.59%، ونموذج تسعير الأصول 11.48%، والمتوسط 10.86%.</p>
+<p><span id="sol-11-84"><strong>11.84</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>projects <span class="op">=</span> [(<span class="st">"A"</span>, <span class="dv">300000</span>, <span class="fl">0.17</span>), (<span class="st">"B"</span>, <span class="dv">500000</span>, <span class="fl">0.13</span>), (<span class="st">"C"</span>, <span class="dv">300000</span>, <span class="fl">0.115</span>), (<span class="st">"D"</span>, <span class="dv">200000</span>, <span class="fl">0.09</span>)]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>projects.sort(key<span class="op">=</span><span class="kw">lambda</span> p: <span class="op">-</span>p[<span class="dv">2</span>])</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cost_of_money(total):</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.10</span> <span class="cf">if</span> total <span class="op">&lt;=</span> <span class="dv">800000</span> <span class="cf">else</span> <span class="fl">0.12</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, cost, irr <span class="kw">in</span> projects:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> cost_of_money(total <span class="op">+</span> cost)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> irr <span class="op">&gt;</span> k:</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> cost</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(name, <span class="st">"accept"</span>, <span class="ss">f"</span><span class="sc">{</span>irr<span class="sc">:.1%}</span><span class="ss"> &gt; </span><span class="sc">{</span>k<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(name, <span class="st">"reject"</span>, <span class="ss">f"</span><span class="sc">{</span>irr<span class="sc">:.1%}</span><span class="ss"> &lt; </span><span class="sc">{</span>k<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"invested"</span>, total)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>النتيجة: أ وب يقبلان باستثمار 800,000 دينار، وج ود يرفضان. هذا يطابق حل المسألة في الجزء و. الدالة تأخذ المجموع بعد المشروع، لأن المشروع كله يموله مال الشريحة التي يصل إليها.</p>
+<p><span id="sol-11-85"><strong>11.85</strong></span> الصف 2 للسنة 1، والرصيد الأول في B2 يساوي 300,000:</p>
+<pre class="excel"><code>C2: =0.08*B2
+D2: =PMT(0.08, 5, -300000)
+E2: =D2-C2
+F2: =0.2*C2
+G2: =148800-D2+F2
+B3: =B2-E2</code></pre>
+<p>انسخ الصيغ حتى السنة 5. القسط 75,136.94، وتدفق المالكين في السنة 1 78,463.06. في G1 ضع ‎-200000 لدفعة المالكين في السنة 0، ثم:</p>
+<pre class="excel"><code>=IRR(G1:G6)</code></pre>
+<p>النتيجة تطابق المثال في الفصل، لأن الأرقام نفسها.</p>
+<p><span id="sol-11-86"><strong>11.86</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>rf, rm, wd, kd, t <span class="op">=</span> <span class="fl">0.04</span>, <span class="fl">0.10</span>, <span class="fl">0.30</span>, <span class="fl">0.07</span>, <span class="fl">0.20</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> b <span class="op">&lt;=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">1e-9</span>:</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    ke <span class="op">=</span> rf <span class="op">+</span> b <span class="op">*</span> (rm <span class="op">-</span> rf)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    wacc <span class="op">=</span> wd <span class="op">*</span> kd <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> wd) <span class="op">*</span> ke</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"beta </span><span class="sc">{</span>b<span class="sc">:.2f}</span><span class="ss">  ke </span><span class="sc">{</span>ke<span class="sc">:.2%}</span><span class="ss">  WACC </span><span class="sc">{</span>wacc<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    b <span class="op">+=</span> <span class="fl">0.25</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>عند بيتا 1: تكلفة حقوق الملكية 10.00%، والمتوسط 8.68%. عند بيتا 2: 16.00% و12.88%. كل زيادة 0.25 في بيتا ترفع تكلفة حقوق الملكية 1.5%، والمتوسط 1.05%.</p>
+<p><span id="sol-11-87"><strong>11.87</strong></span></p>
+<pre class="excel"><code>=PV(A2, 15, -80, -1000)
+=PV(A2, 3, -80, -1000)</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>العائد</th>
+<th>سند 15 سنة</th>
+<th>سند 3 سنوات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6%</td>
+<td>1,194.24</td>
+<td>1,053.46</td>
+</tr>
+<tr class="even">
+<td>12%</td>
+<td>727.57</td>
+<td>903.93</td>
+</tr>
+</tbody>
+</table>
+<p>سعر السند الطويل يتغير أكثر بكثير، لأن دفعاته بعيدة، وأثر الخصم يتراكم عليها. لذلك السند الطويل أخطر على المستثمر إذا ارتفعت الفوائد.</p>
+<p><span id="sol-11-88"><strong>11.88</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>kd <span class="op">=</span> npf.rate(<span class="dv">8</span>, <span class="dv">70</span>, <span class="op">-</span><span class="dv">970</span>, <span class="dv">1000</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>ke <span class="op">=</span> <span class="fl">0.04</span> <span class="op">+</span> <span class="fl">1.2</span> <span class="op">*</span> (<span class="fl">0.10</span> <span class="op">-</span> <span class="fl">0.04</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>D, E, t <span class="op">=</span> <span class="dv">15000</span> <span class="op">*</span> <span class="dv">970</span>, <span class="dv">2000000</span> <span class="op">*</span> <span class="dv">12</span>, <span class="fl">0.20</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>wacc <span class="op">=</span> D <span class="op">/</span> (D <span class="op">+</span> E) <span class="op">*</span> kd <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> E <span class="op">/</span> (D <span class="op">+</span> E) <span class="op">*</span> ke</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"kd </span><span class="sc">{</span>kd<span class="sc">:.4f}</span><span class="ss">  ke </span><span class="sc">{</span>ke<span class="sc">:.4f}</span><span class="ss">  WACC </span><span class="sc">{</span>wacc<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>تكلفة الدين 7.51%، وتكلفة حقوق الملكية 11.20%، والمتوسط 9.24%.</p>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h2>
+<p><span id="sol-11-89"><strong>11.89</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>25</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10\% \times (1 - 25\%) = 7.50\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) هو الوفر الضريبي وحده. الخيار (د) يتجاهل الضريبة.</p>
+<p><span id="sol-11-90"><strong>11.90</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1.00</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow><mn>20</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>10.25</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1.00 \times (1 + 5\%)}{20} + 5\% = 10.25\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) استخدم آخر توزيع بدل التوزيع القادم. الخياران (ب) و(د) نسيا النمو.</p>
+<p><span id="sol-11-91"><strong>11.91</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.50</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+4\% + 1.50 \times (10\% - 4\%) = 13.00\%
+</annotation></semantics></math></p>
+<p>بيتا تضرب في علاوة المخاطرة فقط، أي عائد السوق ناقص النسبة الخالية من المخاطرة. الخياران (أ) و(ب) ضربا بيتا في عائد السوق كله. الخيار (ج) تجاهل بيتا، وهو صحيح فقط لسهم بيتا يساوي 1.</p>
+<p><span id="sol-11-92"><strong>11.92</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4000</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6000</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4000 \times 8\% \times (1 - 20\%) + 0.6000 \times 15\% = 11.56\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي الضريبة. الخيار (ج) نسي وزن حقوق الملكية. الخيار (د) طبق الضريبة على حقوق الملكية أيضا.</p>
+<p><span id="sol-11-93"><strong>11.93</strong></span> الجواب (ج). المشتري يدفع أكثر من 1,000 ويسترد 1,000 فقط، فعائده أقل من الكوبون. عدد السنوات يحدد كم أقل، لا اتجاه الفرق.</p>
+<p><span id="sol-11-94"><strong>11.94</strong></span> الجواب (ب). القيم الدفترية تسجل ما دفع في الماضي. المستثمرون يطلبون العائد على قيمة حصصهم في السوق اليوم.</p>
+<p><span id="sol-11-95"><strong>11.95</strong></span> الجواب (ج). كل دينار في المشروع الجديد يأخذ مكان المشروع الذي معدله 14%. الحد الأدنى هو تكلفة الفرصة البديلة. الخيار (ب) متوسط الرقمين، ولا معنى له.</p>
+<p><span id="sol-11-96"><strong>11.96</strong></span> الجواب (ج). هذه تدفقات المالكين وحدهم، فتخصم بالعائد الذي يطلبونه. خصمها بالمتوسط المرجح يحسب أثر الدين مرتين.</p>
+<p><span id="sol-11-97"><strong>11.97</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2.00</mn><mrow><mn>40</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mn>4</mn><mi>%</mi><mo>=</mo><mn>9.26</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{2.00}{40 \times (1 - 5\%)} + 4\% = 9.26\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) هو تكلفة الأرباح المحتجزة. الخيار (ب) ضرب في واحد ناقص التكاليف بدل القسمة. الخيار (د) قسم النمو أيضا، وتكاليف الإصدار لا تغير النمو.</p>
+<p><span id="sol-11-98"><strong>11.98</strong></span> الجواب (ب). تكلفة القرض بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+10\% \times (1 - 20\%) = 8\%
+</annotation></semantics></math></p>
+<p>المشروع يعطي 7%، أقل من 8%. كل دينار مقترض يكلف أكثر مما يعطي، فينخفض عائد المالكين.</p>
+<p><span id="sol-11-99"><strong>11.99</strong></span> الجواب (ب). الحد الواحد أعلى مما يستحقه القسم الآمن، فيرفض مشاريعه الجيدة. وأقل مما يستحقه القسم الخطر، فيقبل مشاريع لا تغطي مخاطرتها. ينمو القسم الخطر، وترتفع مخاطرة الشركة كلها، ثم يرتفع متوسطها.</p>
+<p><span id="sol-11-100"><strong>11.100</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mn>0.50</mn><mrow><mn>1</mn><mo>+</mo><mn>0.50</mn></mrow></mfrac><mo>=</mo><mn>33.33</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+w_d = \frac{0.50}{1 + 0.50} = 33.33\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) خلط النسبة بالوزن. الخيار (ب) هو وزن حقوق الملكية.</p>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h2>
+<p><span id="sol-11-101"><strong>11.101</strong></span> (أ) العائد حتى الاستحقاق للسندات:</p>
+<pre class="excel"><code>=RATE(10, 80, -1020, 1000)</code></pre>
+<p>تكلفة الدين 7.71% قبل الضريبة، و6.16% بعدها.</p>
+<p>(ب) نموذج نمو التوزيعات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1.20</mn><mo>×</mo><mn>1.05</mn></mrow><mn>25</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>10.04</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1.20 \times 1.05}{25} + 5\% = 10.04\%
+</annotation></semantics></math></p>
+<p>نموذج تسعير الأصول الرأسمالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.1</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+4\% + 1.1 \times (10\% - 4\%) = 10.60\%
+</annotation></semantics></math></p>
+<p>المتوسط 10.32%.</p>
+<p>(ج) القيم السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>5000</mn><mo>×</mo><mn>1020</mn><mo>=</mo><mn>5</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mi>E</mi><mo>=</mo><mn>400000</mn><mo>×</mo><mn>25</mn><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 5000 \times 1020 = 5\mathord{,}100\mathord{,}000 \qquad E = 400000 \times 25 = 10\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>5</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>15</mn><mi>,</mi><mn>100</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.3377</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{5\mathord{,}100\mathord{,}000}{15\mathord{,}100\mathord{,}000} = 0.3377
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.3377</mn><mo>×</mo><mn>7.71</mn><mi>%</mi><mo>×</mo><mn>0.8</mn><mo>+</mo><mn>0.6623</mn><mo>×</mo><mn>10.32</mn><mi>%</mi><mo>=</mo><mn>8.92</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.3377 \times 7.71\% \times 0.8 + 0.6623 \times 10.32\% = 8.92\%
+</annotation></semantics></math></p>
+<p>(د)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>1200000</mn><mo>+</mo><mn>300000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8.92</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>149</mn><mi>,</mi><mn>130.24</mn></mrow><annotation encoding="application/x-tex">
+PW = -1200000 + 300000\,(P/A,\ 8.92\%,\ 6) = 149\mathord{,}130.24
+</annotation></semantics></math></p>
+<p>معدل الخط 12.98%، أعلى من تكلفة رأس المال. يقبل الخط، ويزيد قيمة المصنع 149,130 دينار.</p>
+<p><span id="sol-11-102"><strong>11.102</strong></span> (أ) <strong>بدون قرض:</strong> تدفقات الشريكين هي تدفقات المشروع:</p>
+<pre class="excel"><code>=RATE(5, 230000, -800000)</code></pre>
+<p>المعدل 13.46%.</p>
+<p><strong>مع القرض:</strong> القسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>102</mn><mi>,</mi><mn>836.98</mn></mrow><annotation encoding="application/x-tex">
+400000\,(A/P,\ 9\%,\ 5) = 102\mathord{,}836.98
+</annotation></semantics></math></p>
+<p>الشريكان يدفعان 400,000 دينار، ويأخذان كل سنة التدفق ناقص القسط زائد الوفر الضريبي على الفائدة. الفائدة في السنة الأولى 36,000، وفي الأخيرة 8,491. معدلهما 19.48%.</p>
+<p>(ب) التدفق في الموسم الضعيف:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn><mo>×</mo><mn>230000</mn><mo>=</mo><mn>161</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+0.7 \times 230000 = 161\mathord{,}000
+</annotation></semantics></math></p>
+<p>بدون قرض: المعدل 0.21%. مع القرض: القسط نفسه، فالمعدل ‎-7.70%.</p>
+<p>(ج) القرض يرفع العائد في السنوات العادية من 13.46% إلى 19.48%، لأن المشروع يعطي أكثر من تكلفة القرض بعد الضريبة، 7.2%. في المواسم الضعيفة ينخفض عائدهما من 0.21% إلى ‎-7.70%: القرض يكبر الربح والخسارة معا. إذا كان للشريكين دخل آخر يغطي القسط في سنة ضعيفة، فالقرض مفيد. إذا كانت المعصرة مصدر دخلهما الوحيد، فالمخاطرة كبيرة عليهما.</p>
+<p><span id="sol-11-103"><strong>11.103</strong></span> (أ) الحد لكل صنف، والفرق بين المعدل والحد:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الحد</th>
+<th>المعدل</th>
+<th>الفرق</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>10%</td>
+<td>13%</td>
+<td>3%</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>12%</td>
+<td>15%</td>
+<td>3%</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>15%</td>
+<td>16%</td>
+<td>1%</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>15%</td>
+<td>14%</td>
+<td>سالب</td>
+</tr>
+<tr class="odd">
+<td>هـ</td>
+<td>12%</td>
+<td>11.5%</td>
+<td>سالب</td>
+</tr>
+</tbody>
+</table>
+<p>د وهـ لا يغطيان مخاطرتهما. يبقى أ وب وج باستثمار 2,000,000 دينار.</p>
+<p>(ب) أ وب وج تملأ الميزانية بالضبط، فتختارها كلها.</p>
+<p>(ج) بالمعدل فقط: ج 16%، ثم ب 15%، ثم د 14%، ثم أ 13%. ج وب يأخذان 1,600,000، ثم د لا يتسع، فتأخذ أ بـ 400,000. نفس المجموعة هنا بالصدفة. لكن لو كانت تكلفة د 400,000، لاختارتها بدل أ: مشروع خدمة جديدة لا يغطي مخاطرته، بدل مشروع خفض تكاليف شبه مضمون. الحد حسب الصنف يحمي الشركة من هذا الخطأ.</p>
+<p><span id="sol-11-104"><strong>11.104</strong></span> (أ) عند 20% دين، نسبة الدين إلى حقوق الملكية 0.25:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>12</mn><mi>%</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>%</mi><mo>−</mo><mn>6</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>0.25</mn><mo>×</mo><mn>0.8</mn><mo>=</mo><mn>13.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 12\% + (12\% - 6\%) \times 0.25 \times 0.8 = 13.20\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.2</mn><mo>×</mo><mn>6</mn><mi>%</mi><mo>×</mo><mn>0.8</mn><mo>+</mo><mn>0.8</mn><mo>×</mo><mn>13.20</mn><mi>%</mi><mo>=</mo><mn>11.52</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.2 \times 6\% \times 0.8 + 0.8 \times 13.20\% = 11.52\%
+</annotation></semantics></math></p>
+<p>عند 50% دين، النسبة 1:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>12</mn><mi>%</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mi>%</mi><mo>−</mo><mn>8.5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>1</mn><mo>×</mo><mn>0.8</mn><mo>=</mo><mn>14.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 12\% + (12\% - 8.5\%) \times 1 \times 0.8 = 14.80\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.5</mn><mo>×</mo><mn>8.5</mn><mi>%</mi><mo>×</mo><mn>0.8</mn><mo>+</mo><mn>0.5</mn><mo>×</mo><mn>14.80</mn><mi>%</mi><mo>=</mo><mn>10.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.5 \times 8.5\% \times 0.8 + 0.5 \times 14.80\% = 10.80\%
+</annotation></semantics></math></p>
+<p>(ب) تدفق دائم بلا نمو، كالتكلفة المرسملة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1500000</mn><mrow><mn>11.52</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>13</mn><mi>,</mi><mn>020</mn><mi>,</mi><mn>833</mn></mrow><annotation encoding="application/x-tex">
+V = \frac{1500000}{11.52\%} = 13\mathord{,}020\mathord{,}833
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1500000</mn><mrow><mn>10.80</mn><mi>%</mi></mrow></mfrac><mo>=</mo><mn>13</mn><mi>,</mi><mn>888</mn><mi>,</mi><mn>889</mn></mrow><annotation encoding="application/x-tex">
+V = \frac{1500000}{10.80\%} = 13\mathord{,}888\mathord{,}889
+</annotation></semantics></math></p>
+<p>(ج) المتوسط ينخفض من 11.52% إلى 10.80%، وقيمة الشركة ترتفع 868,056 دينار، أي 6.67% من قيمتها. هذا مكسب على الورق. لكن الحساب لا يشمل كل تكاليف الدين: شركة أدوية تحتاج استثمارا مستمرا في البحث، والدين العالي يقيد قدرتها على الاستمرار فيه في سنة صعبة. والمعادلة نفسها تقدير. الأفضل رفع الدين تدريجيا، ومراقبة شروط البنوك وسعر السهم بعد كل خطوة.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/solutions-ch10.html" class="pagination-link" aria-label="حلول مسائل الفصل العاشر">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

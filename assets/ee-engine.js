@@ -78,6 +78,7 @@
   };
   const IRR = (flows, lo = -0.9, hi = 1.0) => bisect((r) => NPV(r, flows), lo, hi, [-0.95, 10.0], 'IRR');
   const RATEF = (n, A, F) => bisect((r) => A * FA(r, n) - F, 1e-9, 1.0, [-0.95, 10.0]);
+  const YTM = (n, C, F, P) => bisect((r) => C * PA(r, n) + F * PF(r, n) - P, 1e-9, 1.0, [-0.95, 10.0], 'yield');
   const GROWTH = (A1, P, i, n) => bisect((g) => A1 * PGEO(g, i, n) - P, -0.5, 1.0, [-0.95, 5.0], 'growth rate');
   const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   // Standard normal cumulative probability; same series as ee/engine.py.
@@ -96,7 +97,7 @@
   const r4 = (x) => Number(x.toFixed(4));
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
-    FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, NPV, IRR, r4, r2,
+    FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, YTM, GROWTH, NPV, IRR, r4, r2,
     ln: Math.log, exp: Math.exp, abs: Math.abs, max: Math.max, min: Math.min,
     floor: Math.floor, ceil: Math.ceil, NORMS, sqrt: Math.sqrt,
     lcm: (a, b) => { a = Math.round(a); b = Math.round(b); const g = (x, y) => (y ? g(y, x % y) : x); return a / g(a, b) * b; },

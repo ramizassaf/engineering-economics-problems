@@ -37,3 +37,15 @@ details.ee-sol[open] summary { background: #1f4e8c; color: #fff; margin-bottom: 
 /* Equations drawn by the new-numbers widget */
 .ee-math { text-align: center; direction: ltr; margin: 0.8em 0; font-size: 1.08em; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .ee-math math { display: inline-block; }
+
+/* English text of a question, shown by the English button (website only) */
+.ee-en { display: none; direction: ltr; text-align: left; unicode-bidi: isolate;
+  margin: 0.7em 0; padding: 0.45em 0.9em; background: #fffbea; border-left: 3px solid #d4a72c; border-radius: 3px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size: 0.95em; }
+.ee-en p { margin: 0.3em 0; }
+.ee-show-en .ee-en { display: block; }
+.ee-btn[aria-pressed="true"] { background: #d4a72c; border-color: #d4a72c; color: #fff; }
+.ee-btn.ee-en-btn { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+
+/* English inside Arabic text (glossary, references) */
+.en { unicode-bidi: isolate; }

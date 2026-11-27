@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; تكلفة رأس المال والحد الأدنى للعائد – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch10.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch11.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">قرار الاستبدال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/accounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">أساسيات المحاسبة للمهندس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">مسرد المصطلحات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">المراجع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">O</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">P</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">Q</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثامن</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">R</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل التاسع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">S</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل العاشر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">T</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الحادي عشر</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-11-sources" id="toc-sec-11-sources" class="nav-link active" data-scroll-target="#sec-11-sources"><span class="header-section-number">11.1</span> مصادر المال</a></li>
+  <li><a href="#sec-11-debt" id="toc-sec-11-debt" class="nav-link" data-scroll-target="#sec-11-debt"><span class="header-section-number">11.2</span> تكلفة الدين</a></li>
+  <li><a href="#sec-11-equity" id="toc-sec-11-equity" class="nav-link" data-scroll-target="#sec-11-equity"><span class="header-section-number">11.3</span> تكلفة حقوق الملكية</a></li>
+  <li><a href="#sec-11-wacc" id="toc-sec-11-wacc" class="nav-link" data-scroll-target="#sec-11-wacc"><span class="header-section-number">11.4</span> المتوسط المرجح لتكلفة رأس المال</a></li>
+  <li><a href="#sec-11-structure" id="toc-sec-11-structure" class="nav-link" data-scroll-target="#sec-11-structure"><span class="header-section-number">11.5</span> نسبة الدين وتكلفة رأس المال</a></li>
+  <li><a href="#sec-11-marr" id="toc-sec-11-marr" class="nav-link" data-scroll-target="#sec-11-marr"><span class="header-section-number">11.6</span> من تكلفة رأس المال إلى الحد الأدنى للعائد</a></li>
+  <li><a href="#sec-11-leverage" id="toc-sec-11-leverage" class="nav-link" data-scroll-target="#sec-11-leverage"><span class="header-section-number">11.7</span> التمويل بالدين وعائد المالكين</a></li>
+  <li><a href="#sec-11-python" id="toc-sec-11-python" class="nav-link" data-scroll-target="#sec-11-python"><span class="header-section-number">11.8</span> Python: تكلفة رأس المال</a></li>
+  <li><a href="#sec-11-problems" id="toc-sec-11-problems" class="nav-link" data-scroll-target="#sec-11-problems"><span class="header-section-number">11.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-تكلفة-الدين" id="toc-الجزء-ب-تكلفة-الدين" class="nav-link" data-scroll-target="#الجزء-ب-تكلفة-الدين">الجزء ب: تكلفة الدين</a></li>
+  <li><a href="#الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" id="toc-الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" class="nav-link" data-scroll-target="#الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة">الجزء ج: تكلفة حقوق الملكية والأسهم الممتازة</a></li>
+  <li><a href="#الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" id="toc-الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" class="nav-link" data-scroll-target="#الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال">الجزء د: المتوسط المرجح لتكلفة رأس المال</a></li>
+  <li><a href="#الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" id="toc-الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" class="nav-link" data-scroll-target="#الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال">الجزء هـ: نسبة الدين وتكلفة رأس المال</a></li>
+  <li><a href="#الجزء-و-اختيار-الحد-الأدنى-للعائد" id="toc-الجزء-و-اختيار-الحد-الأدنى-للعائد" class="nav-link" data-scroll-target="#الجزء-و-اختيار-الحد-الأدنى-للعائد">الجزء و: اختيار الحد الأدنى للعائد</a></li>
+  <li><a href="#الجزء-ز-التمويل-بالدين-وعائد-المالكين" id="toc-الجزء-ز-التمويل-بالدين-وعائد-المالكين" class="nav-link" data-scroll-target="#الجزء-ز-التمويل-بالدين-وعائد-المالكين">الجزء ز: التمويل بالدين وعائد المالكين</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  <li><a href="#refs-ch11" id="toc-refs-ch11" class="nav-link" data-scroll-target="#refs-ch11">المراجع</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch11" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">تكلفة رأس المال والحد الأدنى للعائد</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>في كل الفصول السابقة كان الحد الأدنى للعائد رقما معطى: 10% أو 12%. من أين يأتي هذا الرقم؟ مال الشركة يأتي من مصدرين: من يقرضها، ومن يملكها. كل منهما يطلب عائدا على ماله. متوسط ما يطلبانه يسمى تكلفة رأس المال. المشروع الذي يعطي أقل منه يخسر مال المالكين، حتى لو كانت قيمته الحالية موجبة بنسبة أقل.</p>
+<p>هذا الفصل يحسب تكلفة كل مصدر، ثم يجمعها في متوسط واحد، ثم يبني منه الحد الأدنى للعائد. في آخر الفصل نرى أثر القرض على عائد المالكين.</p>
+<section id="sec-11-sources" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="sec-11-sources"><span class="header-section-number">11.1</span> مصادر المال</h2>
+<ul>
+<li><strong>الدين:</strong> قروض البنوك والسندات. الفائدة ثابتة بعقد، وتدفع قبل أي شيء للمالكين، وتطرح من الدخل الخاضع للضريبة.</li>
+<li><strong>حقوق الملكية:</strong> أسهم جديدة تبيعها الشركة، وأرباح محتجزة لم توزع. لا عائد مضمون للمالك، فهو آخر من يأخذ.</li>
+<li><strong>الأسهم الممتازة:</strong> بين الاثنين. توزيعها ثابت مثل الفائدة، لكنه لا يطرح من الدخل الخاضع للضريبة.</li>
+</ul>
+<p>المقرض يأخذ أولا، والمالك يأخذ ما يبقى. لذلك المالك يتحمل مخاطرة أكبر، ويطلب عائدا أعلى. في أي شركة، تكلفة حقوق الملكية أعلى من تكلفة الدين.</p>
+</section>
+<section id="sec-11-debt" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="sec-11-debt"><span class="header-section-number">11.2</span> تكلفة الدين</h2>
+<p>تكلفة القرض هي نسبة الفائدة إذا استلمت الشركة المبلغ كاملا. إذا دفعت رسوما في البداية، فهي تستلم أقل وتسدد نفس الأقساط، فتكلفتها أعلى. نحسبها بنفس طريقة معدل العائد في الفصل الرابع: النسبة التي تجعل الأقساط تساوي ما استلمته الشركة فعلا.</p>
+<p>الفائدة تخفض الضريبة. بنفس افتراضات قسم التمويل بقرض في <a href="ch07.html" class="quarto-xref"><span>الفصل 7</span></a>، تكلفة الدين بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_d\,(1 - t)
+</annotation></semantics></math></p>
+<div id="ex-11-1" class="ee-item" data-id="c11-ex-loan-fee" data-kind="example" data-label="11.1">
+<p><strong>مثال 11.1: تكلفة قرض عليه رسوم</strong></p>
+<p>شركة تقترض 200,000 دينار بفائدة 9% سنويا، تسدد بأقساط سنوية متساوية على 5 سنوات. البنك يأخذ رسوم إصدار 2% من القرض عند الاستلام. نسبة الضريبة 20%. ما تكلفة القرض قبل الضريبة وبعدها؟</p>
+<p><strong>الحل:</strong></p>
+<p>القسط محسوب على القرض كاملا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>200</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>51</mn><mi>,</mi><mn>418.49</mn></mrow><annotation encoding="application/x-tex">
+A = 200\mathord{,}000\,(A/P,\ 9\%,\ 5) = 51\mathord{,}418.49
+</annotation></semantics></math></p>
+<p>لكن الشركة تستلم القرض ناقص الرسوم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>200</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>196</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+200\mathord{,}000 \times (1 - 2\%) = 196\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>تكلفة القرض هي النسبة التي تجعل القيمة الحالية للأقساط تساوي ما استلمته الشركة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>51</mn><mi>,</mi><mn>418.49</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>196</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+51\mathord{,}418.49\,(P/A,\ k_d,\ 5) = 196\mathord{,}000.00
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(5, -51418.49, 196000.00)</code></pre>
+<p>النتيجة 9.78%، أعلى من نسبة الفائدة المعلنة 9% بسبب الرسوم. بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9.78</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.83</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_d\,(1 - t) = 9.78\% \times (1 - 20\%) = 7.83\%
+</annotation></semantics></math></p>
+<p>هذه تكلفة الدين التي تدخل في المتوسط المرجح لاحقا.</p>
+</div>
+<p>السند قرض تقسمه الشركة على مستثمرين كثيرين. كل سند له قيمة اسمية، مثل 1,000 دينار، ترد في تاريخ الاستحقاق، ونسبة كوبون تعطي الفائدة السنوية. سعر السند في السوق قد يكون أعلى من قيمته الاسمية أو أقل. تكلفة الدين بالسندات هي العائد حتى الاستحقاق: النسبة التي تجعل القيمة الحالية للكوبونات والقيمة الاسمية تساوي ما تستلمه الشركة من بيع السند.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>C</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>F</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+P = C\,(P/A,\ k_d,\ n) + F\,(P/F,\ k_d,\ n)
+</annotation></semantics></math></p>
+<div id="ex-11-2" class="ee-item" data-id="c11-ex-bond" data-kind="example" data-label="11.2">
+<p><strong>مثال 11.2: تكلفة الدين بالسندات</strong></p>
+<p>شركة تصدر سندات جديدة. القيمة الاسمية للسند 1,000 دينار، تستحق بعد 10 سنوات، ونسبة الكوبون 7% تدفع في نهاية كل سنة. سعر السند في السوق 945 دينار، وتكاليف الإصدار 20 دينار لكل سند. نسبة الضريبة 20%. ما تكلفة الدين بالسندات قبل الضريبة وبعدها؟</p>
+<p><strong>الحل:</strong></p>
+<p>الكوبون السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mn>7</mn><mi>%</mi><mo>×</mo><mn>1000</mn><mo>=</mo><mn>70</mn></mrow><annotation encoding="application/x-tex">
+C = 7\% \times 1000 = 70
+</annotation></semantics></math></p>
+<p>الشركة تستلم من كل سند سعره ناقص تكاليف الإصدار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>945</mn><mo>−</mo><mn>20</mn><mo>=</mo><mn>925</mn></mrow><annotation encoding="application/x-tex">
+945 - 20 = 925
+</annotation></semantics></math></p>
+<p>مقابل ذلك تدفع 70 دينار كل سنة، و1,000 دينار في السنة 10. تكلفة الدين هي النسبة التي تجعل القيمة الحالية لهذه الدفعات تساوي 925:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>925</mn></mrow><annotation encoding="application/x-tex">
+70\,(P/A,\ k_d,\ 10) + 1000\,(P/F,\ k_d,\ 10) = 925
+</annotation></semantics></math></p>
+<p>لا يوجد حل مباشر لهذه المعادلة. نحلها بالتجربة، أو بالدالة RATE:</p>
+<pre class="excel"><code>=RATE(10, 70, -925, 1000)</code></pre>
+<p>النتيجة 8.12%. نتحقق:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8.12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8.12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>925.00</mn></mrow><annotation encoding="application/x-tex">
+70\,(P/A,\ 8.12\%,\ 10) + 1000\,(P/F,\ 8.12\%,\ 10) = 925.00
+</annotation></semantics></math></p>
+<p>بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.12</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+8.12\% \times (1 - 20\%) = 6.50\%
+</annotation></semantics></math></p>
+<p>إذا كان السعر الصافي أقل من 1,000، تكون التكلفة أعلى من نسبة الكوبون، لأن الشركة تستلم أقل وترد 1,000 كاملة.</p>
+</div>
+</section>
+<section id="sec-11-equity" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="sec-11-equity"><span class="header-section-number">11.3</span> تكلفة حقوق الملكية</h2>
+<p>لا يوجد عقد يحدد ما يطلبه المساهم. نقدره بطريقتين.</p>
+<p><strong>نموذج نمو التوزيعات:</strong> المساهم يشتري السهم بسعره اليوم، ويتوقع توزيعات تنمو بنسبة ثابتة. العائد الذي يطلبه هو النسبة التي تجعل القيمة الحالية لهذه التوزيعات تساوي السعر. من معادلة السلسلة المتدرجة نسبيا بلا نهاية، في الفصل الثاني:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><msub><mi>P</mi><mn>0</mn></msub></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{D_1}{P_0} + g
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><msub><mi>D</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+D_1 = D_0\,(1 + g)
+</annotation></semantics></math></p>
+<p>الرمز D0 هو آخر توزيع دفع، وD1 التوزيع المتوقع بعد سنة.</p>
+<div id="ex-11-3" class="ee-item" data-id="c11-ex-gordon" data-kind="example" data-label="11.3">
+<p><strong>مثال 11.3: تكلفة حقوق الملكية بنموذج نمو التوزيعات</strong></p>
+<p>سعر سهم شركة اليوم 25 دينار. آخر توزيع دفعته 1.43 دينار للسهم، وتتوقع أن تنمو التوزيعات 5% سنويا. ما تكلفة الأرباح المحتجزة؟ وما تكلفة أسهم جديدة إذا كانت تكاليف إصدارها 6% من سعرها؟</p>
+<p><strong>الحل:</strong></p>
+<p>التوزيع المتوقع بعد سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>1.43</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.5015</mn></mrow><annotation encoding="application/x-tex">
+D_1 = 1.43 \times (1 + 5\%) = 1.5015
+</annotation></semantics></math></p>
+<p><strong>الأرباح المحتجزة:</strong> بدون تكاليف إصدار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.5015</mn><mn>25</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.01</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{1.5015}{25} + 5\% = 11.01\%
+</annotation></semantics></math></p>
+<p><strong>أسهم جديدة:</strong> الشركة تستلم من كل سهم سعره ناقص تكاليف الإصدار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.5015</mn><mrow><mn>25</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>6</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.39</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{1.5015}{25 \times (1 - 6\%)} + 5\% = 11.39\%
+</annotation></semantics></math></p>
+<p>الأسهم الجديدة أغلى من الأرباح المحتجزة. لذلك تمول الشركات مشاريعها من الأرباح المحتجزة أولا، ثم تصدر أسهما جديدة إذا لم تكف.</p>
+</div>
+<p>إذا باعت الشركة أسهما جديدة، تدفع تكاليف إصدار، فتستلم أقل من سعر السهم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><mrow><msub><mi>P</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{D_1}{P_0\,(1 - f)} + g
+</annotation></semantics></math></p>
+<p>الأرباح المحتجزة ليس لها تكاليف إصدار، لكن لها تكلفة: لو وزعتها الشركة لاستثمرها المساهم بنفسه. تكلفتها هي تكلفة حقوق الملكية بدون تكاليف الإصدار.</p>
+<p><strong>نموذج تسعير الأصول الرأسمالية:</strong> المساهم يطلب العائد الخالي من المخاطرة، زائد علاوة بقدر مخاطرة السهم. معامل بيتا يقيس هذه المخاطرة: بيتا 1 تعني أن السهم يتحرك مثل السوق، وبيتا 1.5 تعني أنه يتحرك أكثر منه بنصف المرة.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>r</mi><mi>f</mi></msub><mo>+</mo><mi>β</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mi>m</mi></msub><mo>−</mo><msub><mi>r</mi><mi>f</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = r_f + \beta\,(r_m - r_f)
+</annotation></semantics></math></p>
+<div id="ex-11-4" class="ee-item" data-id="c11-ex-capm" data-kind="example" data-label="11.4">
+<p><strong>مثال 11.4: تكلفة حقوق الملكية بنموذج تسعير الأصول الرأسمالية</strong></p>
+<p>العائد على سندات الحكومة القصيرة 4%، والعائد المتوقع للسوق 11%. معامل بيتا لسهم شركة 1.30. ما تكلفة حقوق الملكية؟ وما تكلفتها لشركة أخرى بيتا سهمها 0.8؟</p>
+<p><strong>الحل:</strong></p>
+<p>علاوة مخاطرة السوق هي ما يزيد به عائد السوق على العائد الخالي من المخاطرة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>m</mi></msub><mo>−</mo><msub><mi>r</mi><mi>f</mi></msub><mo>=</mo><mn>11</mn><mi>%</mi><mo>−</mo><mn>4</mn><mi>%</mi><mo>=</mo><mn>7</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+r_m - r_f = 11\% - 4\% = 7\%
+</annotation></semantics></math></p>
+<p>الشركة الأولى:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>1.30</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>=</mo><mn>13.10</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 1.30 \times 7\% = 13.10\%
+</annotation></semantics></math></p>
+<p>الشركة الثانية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mn>4</mn><mi>%</mi><mo>+</mo><mn>0.8</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>=</mo><mn>9.60</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+k_e = 4\% + 0.8 \times 7\% = 9.60\%
+</annotation></semantics></math></p>
+<p>السهم الذي يتحرك أكثر من السوق أخطر على المساهم، فيطلب عليه عائدا أعلى.</p>
+</div>
+<p>الطريقتان تقديران، وقد يختلفان. كثير من الشركات تحسب الاثنين وتأخذ متوسطهما.</p>
+<p><strong>الأسهم الممتازة:</strong> توزيعها ثابت بلا نمو، فتكلفتها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mi>p</mi></msub><mrow><msub><mi>P</mi><mi>p</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+k_p = \frac{D_p}{P_p\,(1 - f)}
+</annotation></semantics></math></p>
+<p>لا نضرب في واحد ناقص الضريبة، لأن التوزيعات لا تطرح من الدخل الخاضع للضريبة.</p>
+</section>
+<section id="sec-11-wacc" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="sec-11-wacc"><span class="header-section-number">11.4</span> المتوسط المرجح لتكلفة رأس المال</h2>
+<p>نجمع تكاليف المصادر، كل منها بوزن حصته من التمويل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><msub><mi>w</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>w</mi><mi>p</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>p</mi></msub><mo>+</mo><msub><mi>w</mi><mi>e</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = w_d\,k_d\,(1 - t) + w_p\,k_p + w_e\,k_e
+</annotation></semantics></math></p>
+<p>مجموع الأوزان 1. الأفضل أن نأخذ الأوزان من القيم السوقية: سعر السند ضرب عددها، وسعر السهم ضرب عددها. القيم الدفترية في قائمة المركز المالي تعكس ما دفع في الماضي، وليس ما يطلبه المستثمرون اليوم. إذا كان للشركة هيكل تمويل مستهدف، نأخذ أوزانه.</p>
+<div id="ex-11-5" class="ee-item" data-id="c11-ex-wacc" data-kind="example" data-label="11.5">
+<p><strong>مثال 11.5: المتوسط المرجح بالقيم السوقية والدفترية</strong></p>
+<p>شركة عندها 20,000 سندا، قيمة كل منها الاسمية 1,000 دينار وسعرها في السوق 980 دينار، وتكلفة دينها قبل الضريبة 8%. وعندها 1,000,000 سهم، سعر السهم 15 دينار، وتكلفة حقوق الملكية 14%. قيمة حقوق الملكية الدفترية 6 دينار للسهم. نسبة الضريبة 20%. احسب المتوسط المرجح لتكلفة رأس المال بأوزان القيم السوقية، ثم بأوزان القيم الدفترية.</p>
+<p><strong>الحل:</strong></p>
+<p><strong>القيم السوقية:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>980</mn><mo>=</mo><mn>19</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 20\mathord{,}000 \times 980 = 19\mathord{,}600\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>15</mn><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+E = 1\mathord{,}000\mathord{,}000 \times 15 = 15\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mn>19</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>34</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.5665</mn><mspace width="2.0em"></mspace><msub><mi>w</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>34</mn><mi>,</mi><mn>600</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.4335</mn></mrow><annotation encoding="application/x-tex">
+w_d = \frac{19\mathord{,}600\mathord{,}000}{34\mathord{,}600\mathord{,}000} = 0.5665 \qquad w_e = \frac{15\mathord{,}000\mathord{,}000}{34\mathord{,}600\mathord{,}000} = 0.4335
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.5665</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.4335</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>9.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.5665 \times 8\% \times (1 - 20\%) + 0.4335 \times 14\% = 9.69\%
+</annotation></semantics></math></p>
+<p><strong>القيم الدفترية:</strong> الدين بقيمته الاسمية، وحقوق الملكية بقيمتها في الدفاتر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>1000</mn><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mspace width="2.0em"></mspace><mi>E</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>6</mn><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+D = 20\mathord{,}000 \times 1000 = 20\mathord{,}000\mathord{,}000 \qquad E = 1\mathord{,}000\mathord{,}000 \times 6 = 6\mathord{,}000\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mn>0.7692</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2308</mn><mo>×</mo><mn>14</mn><mi>%</mi><mo>=</mo><mn>8.15</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = 0.7692 \times 8\% \times (1 - 20\%) + 0.2308 \times 14\% = 8.15\%
+</annotation></semantics></math></p>
+<p>الفرق بين النتيجتين سببه الأوزان فقط. نستخدم القيم السوقية، لأنها ما يدفعه المستثمرون اليوم مقابل حصصهم، وعليها يطلبون العائد.</p>
+</div>
+</section>
+<section id="sec-11-structure" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="sec-11-structure"><span class="header-section-number">11.5</span> نسبة الدين وتكلفة رأس المال</h2>
+<p>نسب الدين وحقوق الملكية في تمويل الشركة تسمى هيكل رأس المال. الدين أرخص من حقوق الملكية. هل الأفضل أن تمول الشركة كل شيء بالدين؟ لا. كلما زاد الدين، زادت مخاطرة المقرض والمالك معا: الفائدة التزام يجب دفعه حتى في سنة سيئة. فيرفع البنك نسبة الفائدة، ويطلب المساهم عائدا أعلى. المتوسط المرجح ينخفض أولا ثم يرتفع، وأفضل نسبة دين هي التي تعطي أقل متوسط.</p>
+<div id="ex-11-6" class="ee-item" data-id="c11-ex-structure" data-kind="example" data-label="11.6">
+<p><strong>مثال 11.6: أفضل نسبة دين</strong></p>
+<p>شركة تدرس أربع نسب للدين في تمويلها. قدر مستشارها المالي تكلفة الدين قبل الضريبة وتكلفة حقوق الملكية لكل نسبة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>تكلفة الدين</th>
+<th>تكلفة حقوق الملكية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>لا يوجد</td>
+<td>12%</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>7%</td>
+<td>13%</td>
+</tr>
+<tr class="odd">
+<td>40%</td>
+<td>8%</td>
+<td>15%</td>
+</tr>
+<tr class="even">
+<td>60%</td>
+<td>11%</td>
+<td>19%</td>
+</tr>
+</tbody>
+</table>
+<p>نسبة الضريبة 20%. أي نسبة دين تعطي أقل متوسط مرجح لتكلفة رأس المال؟</p>
+<p><strong>الحل:</strong></p>
+<p>نحسب المتوسط لكل نسبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><msub><mi>w</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>w</mi><mi>e</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">
+\mathrm{WACC} = w_d\,k_d\,(1 - t) + w_e\,k_e
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>×</mo><mn>7</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.8</mn><mo>×</mo><mn>13</mn><mi>%</mi><mo>=</mo><mn>11.52</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.2 \times 7\% \times (1 - 20\%) + 0.8 \times 13\% = 11.52\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4</mn><mo>×</mo><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.6</mn><mo>×</mo><mn>15</mn><mi>%</mi><mo>=</mo><mn>11.56</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.4 \times 8\% \times (1 - 20\%) + 0.6 \times 15\% = 11.56\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.6</mn><mo>×</mo><mn>11</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.4</mn><mo>×</mo><mn>19</mn><mi>%</mi><mo>=</mo><mn>12.88</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.6 \times 11\% \times (1 - 20\%) + 0.4 \times 19\% = 12.88\%
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>المتوسط المرجح</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>12.00%</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>11.52%</td>
+</tr>
+<tr class="odd">
+<td>40%</td>
+<td>11.56%</td>
+</tr>
+<tr class="even">
+<td>60%</td>
+<td>12.88%</td>
+</tr>
+</tbody>
+</table>
+<p>الأقل 11.52%. القليل من الدين يخفض المتوسط، لأن الدين أرخص ويوفر ضريبة. بعد حد معين ترتفع تكلفة الدين وحقوق الملكية معا بسبب المخاطرة، فيرتفع المتوسط.</p>
+</div>
+</section>
+<section id="sec-11-marr" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="sec-11-marr"><span class="header-section-number">11.6</span> من تكلفة رأس المال إلى الحد الأدنى للعائد</h2>
+<p>المتوسط المرجح هو أقل عائد يقبله مقدمو المال على مشروع بمخاطرة الشركة المعتادة. الحد الأدنى للعائد يبدأ منه، ثم نعدله لسببين:</p>
+<ol type="1">
+<li><strong>الميزانية المحدودة:</strong> إذا كانت المشاريع الجيدة أكثر من المال المتاح، فكل دينار في مشروع يأخذ مكانه من مشروع آخر. الحد الأدنى يصبح عائد أفضل مشروع لم نقبله، وهو تكلفة الفرصة البديلة.</li>
+<li><strong>المخاطرة:</strong> مشروع منتج جديد أخطر من مشروع يخفض تكاليف خط قائم. نضيف علاوة مخاطرة حسب صنف المشروع.</li>
+</ol>
+<p>القاعدة: الحد الأدنى للعائد لا يقل عن المتوسط المرجح أبدا.</p>
+<div id="ex-11-7" class="ee-item" data-id="c11-ex-marr-budget" data-kind="example" data-label="11.7">
+<p><strong>مثال 11.7: الحد الأدنى للعائد مع ميزانية محدودة</strong></p>
+<p>المتوسط المرجح لتكلفة رأس المال لشركة 10%. أمامها ستة مشاريع مستقلة، كلها بمخاطرة الشركة المعتادة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الاستثمار</th>
+<th>معدل العائد</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>300,000</td>
+<td>22%</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>250,000</td>
+<td>18%</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>200,000</td>
+<td>15%</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>350,000</td>
+<td>13%</td>
+</tr>
+<tr class="odd">
+<td>هـ</td>
+<td>150,000</td>
+<td>11%</td>
+</tr>
+<tr class="even">
+<td>و</td>
+<td>200,000</td>
+<td>9%</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) أي المشاريع تقبل إذا لم تكن هناك حدود على التمويل؟ (ب) أي المشاريع تقبل إذا كانت الميزانية 750,000 دينار؟ وما الحد الأدنى للعائد في هذه الحالة؟</p>
+<p><strong>الحل:</strong></p>
+<p>(أ) بدون حد للتمويل، الحد الأدنى هو المتوسط المرجح 10%. نقبل كل مشروع معدله أعلى من 10%: أ وب وج ود وهـ، باستثمار 1,250,000 دينار. المشروع و يرفض، لأنه يعطي أقل مما يطلبه مقدمو المال.</p>
+<p>(ب) نرتب المشاريع حسب المعدل، ونقبل من الأعلى حتى تنتهي الميزانية:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>المعدل</th>
+<th>الاستثمار المتراكم</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>22%</td>
+<td>300,000</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>18%</td>
+<td>550,000</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>15%</td>
+<td>750,000</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>13%</td>
+<td>لا يتسع</td>
+</tr>
+</tbody>
+</table>
+<p>نقبل أ وب وج. أفضل مشروع رفضناه هو د بمعدل 13%. أي مشروع جديد يجب أن يعطي أكثر من 13% حتى يستحق أن يأخذ مكان أحد المشاريع المقبولة. الحد الأدنى للعائد هنا 13%، وهو تكلفة الفرصة البديلة، وأعلى من المتوسط المرجح.</p>
+<p>الترتيب بالمعدل يعمل هنا لأن المشاريع ملأت الميزانية بالضبط. إذا بقي جزء منها بلا استخدام، نختار المجموعة بأعلى قيمة حالية، كما في <a href="../appendices/capital-budgeting.html" class="quarto-xref"><span>الملحق C</span></a>.</p>
+</div>
+<div id="ex-11-8" class="ee-item" data-id="c11-ex-risk-class" data-kind="example" data-label="11.8">
+<p><strong>مثال 11.8: حد أدنى لكل صنف مخاطرة</strong></p>
+<p>المتوسط المرجح لتكلفة رأس المال لشركة 10%. الشركة تضيف علاوة مخاطرة حسب صنف المشروع: لا شيء لمشاريع خفض التكاليف، و3% لتوسعة منتج قائم، و6% لمنتج جديد. أمامها ثلاثة مشاريع: خفض تكاليف بمعدل 12%، وتوسعة بمعدل 12.5%، ومنتج جديد بمعدل 17%. أيها تقبل؟ وماذا يحدث لو استخدمت حدا أدنى واحدا لكل المشاريع؟</p>
+<p><strong>الحل:</strong></p>
+<p>الحد الأدنى لكل صنف:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الصنف</th>
+<th>الحد الأدنى</th>
+<th>المعدل</th>
+<th>القرار</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>خفض التكاليف</td>
+<td>منخفض المخاطرة</td>
+<td>10%</td>
+<td>12%</td>
+<td>يقبل</td>
+</tr>
+<tr class="even">
+<td>التوسعة</td>
+<td>متوسط</td>
+<td>13%</td>
+<td>12.5%</td>
+<td>يرفض</td>
+</tr>
+<tr class="odd">
+<td>المنتج الجديد</td>
+<td>مرتفع</td>
+<td>16%</td>
+<td>17%</td>
+<td>يقبل</td>
+</tr>
+</tbody>
+</table>
+<p>لو استخدمت الشركة 10% لكل المشاريع، تقبل التوسعة، مع أن عائدها لا يكفي لمخاطرتها. ولو استخدمت 16% لكل المشاريع، ترفض خفض التكاليف، مع أنه شبه مضمون ويعطي أكثر من تكلفة رأس المال. حد أدنى واحد يدفع الشركة مع الوقت نحو المشاريع الأخطر.</p>
+</div>
+<p><strong>لمن يريد أن يستزيد:</strong> اختيار المشاريع بالقيمة الحالية داخل ميزانية محدودة، بالحصر الكامل والبرمجة الخطية، في <a href="../appendices/capital-budgeting.html" class="quarto-xref"><span>الملحق C</span></a>.</p>
+</section>
+<section id="sec-11-leverage" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="sec-11-leverage"><span class="header-section-number">11.7</span> التمويل بالدين وعائد المالكين</h2>
+<p>في الفصل السابع قيمنا المشروع كأن الشركة تدفع كل شيء من مالها. الآن ننظر من جهة المالكين: يدفعون جزءا من الاستثمار، والبنك يدفع الباقي. يأخذون التدفق التشغيلي ناقص القسط، زائد الوفر الضريبي على الفائدة.</p>
+<p>إذا كان عائد المشروع أعلى من تكلفة الدين بعد الضريبة، يرفع القرض عائد المالكين. هذا أثر الرافعة المالية. لكنه يرفع مخاطرتهم أيضا، فالقسط يدفع مهما كانت المبيعات.</p>
+<div id="ex-11-9" class="ee-item" data-id="c11-ex-leverage" data-kind="example" data-label="11.9">
+<p><strong>مثال 11.9: عائد المشروع وعائد المالكين</strong></p>
+<p>مشروع يكلف 500,000 دينار، وعمره 5 سنوات بلا قيمة بيع. صافي تدفقه السنوي قبل الضريبة والاستهلاك 161,000 دينار. الاستهلاك بالقسط الثابت، والضريبة 20%. الشركة تقترض 60% من الاستثمار بفائدة 8%، تسدد بخمسة أقساط سنوية متساوية. (أ) ما معدل عائد المشروع بدون القرض؟ (ب) ما معدل عائد المالكين مع القرض؟</p>
+<p><strong>الحل:</strong></p>
+<p>(أ) الاستهلاك 100,000 دينار سنويا. التدفق التشغيلي بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mn>161</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>20</mn><mi>%</mi><mo>×</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>148</mn><mi>,</mi><mn>800</mn></mrow><annotation encoding="application/x-tex">
+CF = 161\mathord{,}000 \times (1 - 20\%) + 20\% \times 100\mathord{,}000 = 148\mathord{,}800
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RATE(5, 148800, -500000)</code></pre>
+<p>معدل المشروع 14.90%.</p>
+<p>(ب) القرض والقسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>60</mn><mi>%</mi><mo>×</mo><mn>500</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>300</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+L = 60\% \times 500\mathord{,}000 = 300\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>300</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>75</mn><mi>,</mi><mn>136.94</mn></mrow><annotation encoding="application/x-tex">
+A = 300\mathord{,}000\,(A/P,\ 8\%,\ 5) = 75\mathord{,}136.94
+</annotation></semantics></math></p>
+<p>المالكون يدفعون الباقي في السنة 0، 200,000 دينار. كل سنة يأخذون التدفق التشغيلي، ويدفعون القسط، ويوفرون ضريبة على الفائدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">q</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">y</mi><mspace width="0.222em"></mspace><mi mathvariant="normal">C</mi><mi mathvariant="normal">F</mi></mrow><mo>=</mo><mi>C</mi><mi>F</mi><mo>−</mo><mi>A</mi><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>I</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{equity\ CF} = CF - A + t\,I
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>الفائدة</th>
+<th>الوفر الضريبي</th>
+<th>تدفق المالكين</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td></td>
+<td>‎-200,000</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>24,000</td>
+<td>4,800</td>
+<td>78,463</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>19,909</td>
+<td>3,982</td>
+<td>77,645</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>15,491</td>
+<td>3,098</td>
+<td>76,761</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>10,719</td>
+<td>2,144</td>
+<td>75,807</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>5,566</td>
+<td>1,113</td>
+<td>74,776</td>
+</tr>
+</tbody>
+</table>
+<pre class="excel"><code>=IRR(B2:B7)</code></pre>
+<p>معدل المالكين 26.79%.</p>
+<p>تكلفة القرض بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>%</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>20</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6.40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+8\% \times (1 - 20\%) = 6.40\%
+</annotation></semantics></math></p>
+<p>المشروع يعطي 14.90%، أكثر من تكلفة القرض. الفرق يذهب إلى المالكين، فيرتفع عائدهم إلى 26.79%. لكن تدفقهم السنوي صار 78,463 دينار بدل 148,800: إذا انخفضت المبيعات، يبقى القسط كما هو، فتنخفض حصتهم أكثر.</p>
+</div>
+<p>يوجد طريقتان صحيحتان لتقييم مشروع ممول بقرض، ولا يجوز خلطهما:</p>
+<ul>
+<li>تدفقات المشروع كاملة، بدون القرض، تخصم بالمتوسط المرجح. أثر القرض موجود في المتوسط.</li>
+<li>تدفقات المالكين، بعد القرض، تخصم بتكلفة حقوق الملكية.</li>
+</ul>
+<p>خصم تدفقات المالكين بالمتوسط المرجح يحسب فائدة القرض مرتين، فيجعل المشروع يبدو أفضل مما هو.</p>
+</section>
+<section id="sec-11-python" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="sec-11-python"><span class="header-section-number">11.8</span> Python: تكلفة رأس المال</h2>
+<p>البرنامج التالي يحسب تكلفة الدين من سعر السند، وتكلفة حقوق الملكية بالطريقتين، ثم المتوسط المرجح لعدة نسب دين:</p>
+<div id="ad2b01ba" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># bond: 10 years, coupon 70 a year, face 1000, net price 940</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>kd <span class="op">=</span> npf.rate(<span class="dv">10</span>, <span class="dv">70</span>, <span class="op">-</span><span class="dv">940</span>, <span class="dv">1000</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="fl">0.20</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># equity: dividend growth and CAPM</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>D0, g, P0 <span class="op">=</span> <span class="fl">1.50</span>, <span class="fl">0.05</span>, <span class="dv">25</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>ke_growth <span class="op">=</span> D0 <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> g) <span class="op">/</span> P0 <span class="op">+</span> g</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ke_capm <span class="op">=</span> <span class="fl">0.04</span> <span class="op">+</span> <span class="fl">1.3</span> <span class="op">*</span> (<span class="fl">0.11</span> <span class="op">-</span> <span class="fl">0.04</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>ke <span class="op">=</span> (ke_growth <span class="op">+</span> ke_capm) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"kd before tax </span><span class="sc">{</span>kd<span class="sc">:.4f}</span><span class="ss">, after tax </span><span class="sc">{</span>kd <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t)<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"ke growth </span><span class="sc">{</span>ke_growth<span class="sc">:.4f}</span><span class="ss">, CAPM </span><span class="sc">{</span>ke_capm<span class="sc">:.4f}</span><span class="ss">, average </span><span class="sc">{</span>ke<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># WACC for several debt ratios, when kd and ke rise with debt</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [(<span class="fl">0.0</span>, <span class="fl">0.00</span>, <span class="fl">0.12</span>), (<span class="fl">0.2</span>, <span class="fl">0.07</span>, <span class="fl">0.13</span>), (<span class="fl">0.4</span>, <span class="fl">0.08</span>, <span class="fl">0.15</span>), (<span class="fl">0.6</span>, <span class="fl">0.11</span>, <span class="fl">0.19</span>)]</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> wd, k_d, k_e <span class="kw">in</span> table:</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    wacc <span class="op">=</span> wd <span class="op">*</span> k_d <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> wd) <span class="op">*</span> k_e</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"debt </span><span class="sc">{</span>wd<span class="sc">:.0%}</span><span class="ss">: WACC </span><span class="sc">{</span>wacc<span class="sc">:.2%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>kd before tax 0.0789, after tax 0.0631
+ke growth 0.1130, CAPM 0.1310, average 0.1220
+debt 0%: WACC 12.00%
+debt 20%: WACC 11.52%
+debt 40%: WACC 11.56%
+debt 60%: WACC 12.88%</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-11-problems" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="sec-11-problems"><span class="header-section-number">11.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-11-1" class="ee-item" data-id="c11-a-01" data-kind="problem" data-label="11.1">
+<p><strong>11.1</strong> ما تكلفة رأس المال؟ ولماذا تعتبر تكلفة وليست عائدا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-1">الحل</a></span></p>
+</div>
+<div id="prob-11-2" class="ee-item" data-id="c11-a-02" data-kind="problem" data-label="11.2">
+<p><strong>11.2</strong> لماذا تكون تكلفة حقوق الملكية أعلى من تكلفة الدين في نفس الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-2">الحل</a></span></p>
+</div>
+<div id="prob-11-3" class="ee-item" data-id="c11-a-03" data-kind="problem" data-label="11.3">
+<p><strong>11.3</strong> لماذا نضرب تكلفة الدين في واحد ناقص نسبة الضريبة، ولا نفعل ذلك مع تكلفة حقوق الملكية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-3">الحل</a></span></p>
+</div>
+<div id="prob-11-4" class="ee-item" data-id="c11-a-04" data-kind="problem" data-label="11.4">
+<p><strong>11.4</strong> الأرباح المحتجزة لا تدفع الشركة عليها فائدة ولا توزيعات. هل تكلفتها صفر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-4">الحل</a></span></p>
+</div>
+<div id="prob-11-5" class="ee-item" data-id="c11-a-05" data-kind="problem" data-label="11.5">
+<p><strong>11.5</strong> لماذا نفضل أوزان القيم السوقية على أوزان القيم الدفترية في المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-5">الحل</a></span></p>
+</div>
+<div id="prob-11-6" class="ee-item" data-id="c11-a-06" data-kind="problem" data-label="11.6">
+<p><strong>11.6</strong> ماذا يقيس معامل بيتا؟ وماذا تعني بيتا أقل من 1؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-6">الحل</a></span></p>
+</div>
+<div id="prob-11-7" class="ee-item" data-id="c11-a-07" data-kind="problem" data-label="11.7">
+<p><strong>11.7</strong> إذا كان الدين أرخص من حقوق الملكية، لماذا لا تمول الشركة كل مشاريعها بالدين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-7">الحل</a></span></p>
+</div>
+<div id="prob-11-8" class="ee-item" data-id="c11-a-08" data-kind="problem" data-label="11.8">
+<p><strong>11.8</strong> متى يكون الحد الأدنى للعائد أعلى من المتوسط المرجح لتكلفة رأس المال؟ اذكر سببين.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-8">الحل</a></span></p>
+</div>
+<div id="prob-11-9" class="ee-item" data-id="c11-a-09" data-kind="problem" data-label="11.9">
+<p><strong>11.9</strong> حصلت شركة على قرض ميسر بفائدة 3% لتمويل مشروع محدد. هل تقيم المشروع بحد أدنى 3%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-9">الحل</a></span></p>
+</div>
+<div id="prob-11-10" class="ee-item" data-id="c11-a-10" data-kind="problem" data-label="11.10">
+<p><strong>11.10</strong> ما الرافعة المالية؟ ومتى ترفع عائد المالكين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-10">الحل</a></span></p>
+</div>
+<div id="prob-11-11" class="ee-item" data-id="c11-a-11" data-kind="problem" data-label="11.11">
+<p><strong>11.11</strong> ما الخطأ في خصم تدفقات المالكين بعد القرض بالمتوسط المرجح لتكلفة رأس المال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-11">الحل</a></span></p>
+</div>
+<div id="prob-11-12" class="ee-item" data-id="c11-a-12" data-kind="problem" data-label="11.12">
+<p><strong>11.12</strong> لماذا تمول الشركات مشاريعها من الأرباح المحتجزة قبل إصدار أسهم جديدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-تكلفة-الدين" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-تكلفة-الدين">الجزء ب: تكلفة الدين</h3>
+<div id="prob-11-13" class="ee-item" data-id="c11-b-01" data-kind="problem" data-label="11.13">
+<p><strong>11.13</strong> شركة تقترض من البنك بفائدة 9% بدون رسوم. نسبة الضريبة 20%. ما تكلفة القرض بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-13">الحل</a></span></p>
+</div>
+<div id="prob-11-14" class="ee-item" data-id="c11-b-02" data-kind="problem" data-label="11.14">
+<p><strong>11.14</strong> مصنع أدوية يقترض 400,000 دينار لخط تعبئة، بفائدة 8% وأقساط سنوية متساوية على 6 سنوات. رسوم القرض 2.5% تخصم عند الاستلام. الضريبة 20%. ما تكلفة القرض قبل الضريبة وبعدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-14">الحل</a></span></p>
+</div>
+<div id="prob-11-15" class="ee-item" data-id="c11-b-03" data-kind="problem" data-label="11.15">
+<p><strong>11.15</strong> سند قيمته الاسمية 1,000 دينار، ونسبة كوبونه 6% تدفع سنويا، ويستحق بعد 8 سنوات. سعره في السوق 930 دينار. ما العائد حتى الاستحقاق؟ وما تكلفة الدين بعد ضريبة 20%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-15">الحل</a></span></p>
+</div>
+<div id="prob-11-16" class="ee-item" data-id="c11-b-04" data-kind="problem" data-label="11.16">
+<p><strong>11.16</strong> سند قيمته الاسمية 1,000 دينار، كوبونه 9% سنويا، ويستحق بعد 12 سنة. يباع بسعر 1,115 دينار، أعلى من قيمته الاسمية. هل العائد حتى الاستحقاق أعلى من الكوبون أم أقل؟ احسبه.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-16">الحل</a></span></p>
+</div>
+<div id="prob-11-17" class="ee-item" data-id="c11-b-05" data-kind="problem" data-label="11.17">
+<p><strong>11.17</strong> شركة تصدر سندات بقيمتها الاسمية تماما، 1,000 دينار، بكوبون 8% لمدة 10 سنوات. (أ) ما تكلفة الدين قبل الضريبة إذا لم تكن هناك تكاليف إصدار؟ (ب) وما تكلفته إذا كانت تكاليف الإصدار 15 دينار لكل سند؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-17">الحل</a></span></p>
+</div>
+<div id="prob-11-18" class="ee-item" data-id="c11-b-06" data-kind="problem" data-label="11.18">
+<p><strong>11.18</strong> شركة تحتاج 300,000 دينار لمدة 5 سنوات، بأقساط سنوية متساوية. البنك الأول يعرض فائدة 9.5% بدون رسوم. البنك الثاني يعرض 8.5% مع رسوم 3% عند الاستلام. أي العرضين أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-18">الحل</a></span></p>
+</div>
+<div id="prob-11-19" class="ee-item" data-id="c11-b-07" data-kind="problem" data-label="11.19">
+<p><strong>11.19</strong> قرض بنسبة اسمية 9.6% سنويا، تركب شهريا. ما تكلفته الفعلية السنوية قبل الضريبة وبعدها، إذا كانت الضريبة 20%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-19">الحل</a></span></p>
+</div>
+<div id="prob-11-20" class="ee-item" data-id="c11-b-08" data-kind="problem" data-label="11.20">
+<p><strong>11.20</strong> سند قيمته الاسمية 1,000 دينار، كوبونه 7% سنويا، ويستحق بعد 10 سنوات. إذا كان العائد الذي يطلبه المستثمرون على سندات مثله 9%، فما سعره في السوق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-20">الحل</a></span></p>
+</div>
+<div id="prob-11-21" class="ee-item" data-id="c11-b-09" data-kind="problem" data-label="11.21">
+<p><strong>11.21</strong> شركة تحتاج 5,000,000 دينار صافية من إصدار سندات. سعر السند 985 دينار، وتكاليف الإصدار 18 دينار للسند. كم سندا يجب أن تصدر؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-21">الحل</a></span></p>
+</div>
+<div id="prob-11-22" class="ee-item" data-id="c11-b-10" data-kind="problem" data-label="11.22">
+<p><strong>11.22</strong> سند قيمته الاسمية 1,000 دينار، كوبونه 8% سنويا يدفع على دفعتين كل ستة أشهر، ويستحق بعد 6 سنوات. سعره 965 دينار. ما تكلفة الدين الفعلية السنوية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-22">الحل</a></span></p>
+</div>
+<div id="prob-11-23" class="ee-item" data-id="c11-b-11" data-kind="problem" data-label="11.23">
+<p><strong>11.23</strong> سند بدون كوبون: لا يدفع أي فائدة، ويرد 1,000 دينار بعد 7 سنوات. سعره اليوم 620 دينار. ما العائد حتى الاستحقاق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-23">الحل</a></span></p>
+</div>
+<div id="prob-11-24" class="ee-item" data-id="c11-b-12" data-kind="problem" data-label="11.24">
+<p><strong>11.24</strong> شركتان تقترضان بنفس الفائدة 10%، والضريبة 25%. الأولى رابحة. الثانية خاسرة منذ سنوات، ولا تتوقع ربحا خاضعا للضريبة قريبا. ما تكلفة الدين بعد الضريبة لكل منهما؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-24">الحل</a></span></p>
+</div>
+<div id="prob-11-25" class="ee-item" data-id="c11-b-13" data-kind="problem" data-label="11.25">
+<p><strong>11.25</strong> قرض 250,000 دينار لمدة 4 سنوات. الشركة تدفع الفائدة فقط كل سنة، بنسبة 8.5%، وترد أصل القرض كاملا في النهاية. رسوم القرض 2% عند الاستلام. ما تكلفة القرض قبل الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-25">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-تكلفة-حقوق-الملكية-والأسهم-الممتازة">الجزء ج: تكلفة حقوق الملكية والأسهم الممتازة</h3>
+<div id="prob-11-26" class="ee-item" data-id="c11-c-01" data-kind="problem" data-label="11.26">
+<p><strong>11.26</strong> سعر سهم 40 دينار. التوزيع المتوقع في نهاية السنة 2.20 دينار، ونمو التوزيعات 4% سنويا. ما تكلفة حقوق الملكية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-26">الحل</a></span></p>
+</div>
+<div id="prob-11-27" class="ee-item" data-id="c11-c-02" data-kind="problem" data-label="11.27">
+<p><strong>11.27</strong> شركة كهرباء دفعت توزيعا 0.90 دينار للسهم هذه السنة، وسعر سهمها 18 دينار. نمو التوزيعات المتوقع 6%. ما تكلفة الأرباح المحتجزة؟ وما تكلفة أسهم جديدة بتكاليف إصدار 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-27">الحل</a></span></p>
+</div>
+<div id="prob-11-28" class="ee-item" data-id="c11-c-03" data-kind="problem" data-label="11.28">
+<p><strong>11.28</strong> النسبة الخالية من المخاطرة 3.5%، وعائد السوق المتوقع 10%، وبيتا سهم شركة 0.90. ما تكلفة حقوق الملكية بنموذج تسعير الأصول الرأسمالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-28">الحل</a></span></p>
+</div>
+<div id="prob-11-29" class="ee-item" data-id="c11-c-04" data-kind="problem" data-label="11.29">
+<p><strong>11.29</strong> محلل قدر أن المساهمين يطلبون 14.5% على سهم شركة. النسبة الخالية من المخاطرة 4%، وعائد السوق 11%. ما قيمة بيتا التي يفترضها هذا التقدير؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-29">الحل</a></span></p>
+</div>
+<div id="prob-11-30" class="ee-item" data-id="c11-c-05" data-kind="problem" data-label="11.30">
+<p><strong>11.30</strong> بيتا سهم 1.20، والنسبة الخالية من المخاطرة 4%، وعائد السوق 10%. سعر السهم 30 دينار، والتوزيع المتوقع بعد سنة 1.50 دينار. ما نسبة نمو التوزيعات التي يتوقعها السوق؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-30">الحل</a></span></p>
+</div>
+<div id="prob-11-31" class="ee-item" data-id="c11-c-06" data-kind="problem" data-label="11.31">
+<p><strong>11.31</strong> سهم ممتاز يدفع توزيعا ثابتا 9 دينار سنويا. سعره 95 دينار، وتكاليف إصدار أسهم جديدة منه 3%. ما تكلفة الأسهم الممتازة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-31">الحل</a></span></p>
+</div>
+<div id="prob-11-32" class="ee-item" data-id="c11-c-07" data-kind="problem" data-label="11.32">
+<p><strong>11.32</strong> سهم ممتاز قيمته الاسمية 100 دينار، وتوزيعه 8% من قيمته الاسمية سنويا. سعره في السوق 92 دينار، وتكاليف الإصدار 2%. نفس الشركة تقترض بتكلفة 7.5% قبل الضريبة، والضريبة 20%. أيهما أرخص للشركة بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-32">الحل</a></span></p>
+</div>
+<div id="prob-11-33" class="ee-item" data-id="c11-c-08" data-kind="problem" data-label="11.33">
+<p><strong>11.33</strong> قدر تكلفة حقوق الملكية لشركة بالطريقتين، ثم خذ متوسطهما. سعر السهم 22 دينار، والتوزيع القادم 1.10 دينار، والنمو 6%. بيتا 1.10، والنسبة الخالية من المخاطرة 4%، وعائد السوق 10.5%.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-33">الحل</a></span></p>
+</div>
+<div id="prob-11-34" class="ee-item" data-id="c11-c-09" data-kind="problem" data-label="11.34">
+<p><strong>11.34</strong> مستثمر يطلب 12% على سهم توزيعه القادم 1.80 دينار، وينمو 5% سنويا بلا نهاية. ما أعلى سعر يدفعه للسهم اليوم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-34">الحل</a></span></p>
+</div>
+<div id="prob-11-35" class="ee-item" data-id="c11-c-10" data-kind="problem" data-label="11.35">
+<p><strong>11.35</strong> سعر سهم 35 دينار، والتوزيع القادم 2.10 دينار، والنمو 5%. كم تزيد تكلفة الأسهم الجديدة على تكلفة الأرباح المحتجزة، إذا كانت تكاليف الإصدار 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-35">الحل</a></span></p>
+</div>
+<div id="prob-11-36" class="ee-item" data-id="c11-c-11" data-kind="problem" data-label="11.36">
+<p><strong>11.36</strong> شركة تحقق عائدا على حقوق الملكية 15%، وتحتجز 40% من أرباحها وتوزع الباقي. ربح السهم هذه السنة 3 دينار، وسعر السهم 30 دينار. إذا استمرت النسب كما هي، فما نسبة نمو التوزيعات؟ وما تكلفة حقوق الملكية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-36">الحل</a></span></p>
+</div>
+<div id="prob-11-37" class="ee-item" data-id="c11-c-12" data-kind="problem" data-label="11.37">
+<p><strong>11.37</strong> شركتان: الأولى تبيع مواد غذائية أساسية، وبيتا سهمها 0.80. الثانية تصنع سلعا كمالية، وبيتا سهمها 1.50. النسبة الخالية من المخاطرة 4%، وعائد السوق 10%. احسب تكلفة حقوق الملكية لكل منهما، وفسر الفرق.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-37">الحل</a></span></p>
+</div>
+<div id="prob-11-38" class="ee-item" data-id="c11-c-13" data-kind="problem" data-label="11.38">
+<p><strong>11.38</strong> النسبة الخالية من المخاطرة 4%، وعلاوة مخاطرة السوق 6%، وبيتا سهم 1.30. بعد أزمة اقتصادية، ارتفعت علاوة مخاطرة السوق 1.5%. كم ارتفعت تكلفة حقوق الملكية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-38">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-المتوسط-المرجح-لتكلفة-رأس-المال">الجزء د: المتوسط المرجح لتكلفة رأس المال</h3>
+<div id="prob-11-39" class="ee-item" data-id="c11-d-01" data-kind="problem" data-label="11.39">
+<p><strong>11.39</strong> شركة تمول 40% من رأس مالها بالدين بتكلفة 8% قبل الضريبة، والباقي بحقوق ملكية تكلفتها 15%. الضريبة 20%. ما المتوسط المرجح لتكلفة رأس المال؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-39">الحل</a></span></p>
+</div>
+<div id="prob-11-40" class="ee-item" data-id="c11-d-02" data-kind="problem" data-label="11.40">
+<p><strong>11.40</strong> هيكل تمويل شركة: دين 35% بتكلفة 7.5% قبل الضريبة، وأسهم ممتازة 10% بتكلفة 9%، والباقي أسهم عادية بتكلفة 14%. الضريبة 20%. ما المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-40">الحل</a></span></p>
+</div>
+<div id="prob-11-41" class="ee-item" data-id="c11-d-03" data-kind="problem" data-label="11.41">
+<p><strong>11.41</strong> شركة إسمنت لها 8,000 سندا في السوق، سعر السند 1,040 دينار، والعائد حتى الاستحقاق 7%. ولها 600,000 سهم بسعر 22 دينار، وتكلفة حقوق الملكية 13%. الضريبة 20%. احسب المتوسط المرجح بأوزان القيم السوقية.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-41">الحل</a></span></p>
+</div>
+<div id="prob-11-42" class="ee-item" data-id="c11-d-04" data-kind="problem" data-label="11.42">
+<p><strong>11.42</strong> شركة تمول 45% بالدين بتكلفة 9%، والباقي بحقوق ملكية تكلفتها 15%. الحكومة تخفض ضريبة الشركات من 20% إلى 15%. كيف يتغير المتوسط المرجح، إذا بقيت التكاليف الأخرى كما هي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-42">الحل</a></span></p>
+</div>
+<div id="prob-11-43" class="ee-item" data-id="c11-d-05" data-kind="problem" data-label="11.43">
+<p><strong>11.43</strong> المتوسط المرجح لشركة 11%. تمول 30% بالدين بتكلفة 8% قبل الضريبة، والضريبة 20%. ما تكلفة حقوق الملكية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-43">الحل</a></span></p>
+</div>
+<div id="prob-11-44" class="ee-item" data-id="c11-d-06" data-kind="problem" data-label="11.44">
+<p><strong>11.44</strong> شركة تستهدف نسبة دين إلى حقوق ملكية 0.50، أي 0.50 دينار دين لكل دينار من المالكين. تكلفة الدين 8.5%، وحقوق الملكية 16%، والضريبة 20%. ما المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-44">الحل</a></span></p>
+</div>
+<div id="prob-11-45" class="ee-item" data-id="c11-d-07" data-kind="problem" data-label="11.45">
+<p><strong>11.45</strong> في قائمة المركز المالي لشركة: ديون 4,000,000 دينار، وحقوق ملكية 3,000,000 دينار. القيمة السوقية للديون 3,800,000 دينار، وللأسهم 9,000,000 دينار. تكلفة الدين 8%، وحقوق الملكية 14%، والضريبة 20%. احسب المتوسط المرجح بالطريقتين. أيهما تستخدم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-45">الحل</a></span></p>
+</div>
+<div id="prob-11-46" class="ee-item" data-id="c11-d-08" data-kind="problem" data-label="11.46">
+<p><strong>11.46</strong> شركة تحافظ على هيكل تمويل: 40% دين و60% حقوق ملكية. عندها أرباح محتجزة 1,200,000 دينار هذه السنة، تكلفتها 13%. إذا احتاجت أكثر، تصدر أسهما جديدة بتكلفة 14.5%. تكلفة الدين 8%، والضريبة 20%. (أ) ما المتوسط المرجح قبل نفاد الأرباح المحتجزة وبعده؟ (ب) عند أي حجم استثمار تنفد الأرباح المحتجزة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-46">الحل</a></span></p>
+</div>
+<div id="prob-11-47" class="ee-item" data-id="c11-d-09" data-kind="problem" data-label="11.47">
+<p><strong>11.47</strong> شركة تمول 40% بقرض و60% بأرباح محتجزة. القرض 500,000 دينار بفائدة 8% وأقساط سنوية متساوية على 5 سنوات، ورسومه 2% عند الاستلام. سعر سهمها 20 دينار، والتوزيع القادم 1.20 دينار، والنمو 5%. الضريبة 20%. ما المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-47">الحل</a></span></p>
+</div>
+<div id="prob-11-48" class="ee-item" data-id="c11-d-10" data-kind="problem" data-label="11.48">
+<p><strong>11.48</strong> شركة تمول 40% بالدين بتكلفة 9%، والباقي بحقوق ملكية تكلفتها 15%، والضريبة 20%. أمامها مشروع يكلف 800,000 دينار، ويعطي 205,000 دينار سنويا بعد الضريبة لمدة 6 سنوات. هل تقبله؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-48">الحل</a></span></p>
+</div>
+<div id="prob-11-49" class="ee-item" data-id="c11-d-11" data-kind="problem" data-label="11.49">
+<p><strong>11.49</strong> شركة بلا ديون، تكلفة حقوق ملكيتها 12%. تدرس أن تمول 30% بالدين بتكلفة 8%. مستشارها يقدر أن تكلفة حقوق الملكية ترتفع إلى 13.5% بسبب المخاطرة. الضريبة 20%. هل ينخفض المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-49">الحل</a></span></p>
+</div>
+<div id="prob-11-50" class="ee-item" data-id="c11-d-12" data-kind="problem" data-label="11.50">
+<p><strong>11.50</strong> شركة تمول 25% بقرض بنكي بتكلفة 7%، و20% بسندات عائدها حتى الاستحقاق 8.5%، والباقي بحقوق ملكية تكلفتها 14%. الضريبة 20%. ما المتوسط المرجح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-50">الحل</a></span></p>
+</div>
+<div id="prob-11-51" class="ee-item" data-id="c11-d-13" data-kind="problem" data-label="11.51">
+<p><strong>11.51</strong> المتوسط المرجح لتكلفة رأس المال لشركة 10.5%، محسوب من نسب السوق التي تشمل التضخم. التضخم المتوقع 3%. الشركة تقدر تدفقات مشروع بالدينار الثابت. بأي نسبة تخصمها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-51">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-نسبة-الدين-وتكلفة-رأس-المال">الجزء هـ: نسبة الدين وتكلفة رأس المال</h3>
+<div id="prob-11-52" class="ee-item" data-id="c11-e-01" data-kind="problem" data-label="11.52">
+<p><strong>11.52</strong> مصنع ألبان يقارن ثلاث نسب دين. التقديرات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>تكلفة الدين</th>
+<th>تكلفة حقوق الملكية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10%</td>
+<td>6%</td>
+<td>11.5%</td>
+</tr>
+<tr class="even">
+<td>30%</td>
+<td>7%</td>
+<td>12.5%</td>
+</tr>
+<tr class="odd">
+<td>50%</td>
+<td>9%</td>
+<td>14.5%</td>
+</tr>
+</tbody>
+</table>
+<p>الضريبة 25%. أي نسبة يختار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-52">الحل</a></span></p>
+</div>
+<div id="prob-11-53" class="ee-item" data-id="c11-e-02" data-kind="problem" data-label="11.53">
+<p><strong>11.53</strong> تكلفة حقوق الملكية لشركة بلا ديون 12%. إذا اقترضت حتى تصبح نسبة الدين إلى حقوق الملكية 0.60، بتكلفة دين 7%، فإن تكلفة حقوق الملكية ترتفع حسب المعادلة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+</annotation></semantics></math></p>
+<p>الضريبة 20%. احسب تكلفة حقوق الملكية والمتوسط المرجح بعد القرض.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-53">الحل</a></span></p>
+</div>
+<div id="prob-11-54" class="ee-item" data-id="c11-e-03" data-kind="problem" data-label="11.54">
+<p><strong>11.54</strong> بنفس معادلة المسألة السابقة، شركة تكلفة حقوق ملكيتها بلا دين 11%، وتكلفة دينها 6.5%، والضريبة 20%. قارن المتوسط المرجح عند نسبة دين إلى حقوق ملكية 0.25 و1.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-54">الحل</a></span></p>
+</div>
+<div id="prob-11-55" class="ee-item" data-id="c11-e-04" data-kind="problem" data-label="11.55">
+<p><strong>11.55</strong> تقديرات شركة نقل لتكلفة التمويل، والضريبة 20%:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>نسبة الدين</th>
+<th>تكلفة الدين</th>
+<th>تكلفة حقوق الملكية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>لا يوجد</td>
+<td>13.0%</td>
+</tr>
+<tr class="even">
+<td>15%</td>
+<td>6.5%</td>
+<td>13.4%</td>
+</tr>
+<tr class="odd">
+<td>30%</td>
+<td>7.0%</td>
+<td>14.2%</td>
+</tr>
+<tr class="even">
+<td>45%</td>
+<td>8.5%</td>
+<td>15.8%</td>
+</tr>
+<tr class="odd">
+<td>60%</td>
+<td>11.0%</td>
+<td>19.0%</td>
+</tr>
+</tbody>
+</table>
+<p>احسب المتوسط المرجح لكل نسبة، وحدد أفضل نسبة.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-55">الحل</a></span></p>
+</div>
+<div id="prob-11-56" class="ee-item" data-id="c11-e-05" data-kind="problem" data-label="11.56">
+<p><strong>11.56</strong> شركة عليها دين دائم 2,000,000 دينار بفائدة 8%، تجدده كلما استحق. الضريبة 20%. ما الوفر الضريبي السنوي؟ وما قيمته الحالية إذا خصم بنسبة الفائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-56">الحل</a></span></p>
+</div>
+<div id="prob-11-57" class="ee-item" data-id="c11-e-06" data-kind="problem" data-label="11.57">
+<p><strong>11.57</strong> (أ) نسبة الدين إلى حقوق الملكية لشركة 0.75. ما وزن الدين في تمويلها؟ (ب) وزن الدين في شركة أخرى 25%. ما نسبة الدين إلى حقوق الملكية فيها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-57">الحل</a></span></p>
+</div>
+<div id="prob-11-58" class="ee-item" data-id="c11-e-07" data-kind="problem" data-label="11.58">
+<p><strong>11.58</strong> الربح التشغيلي لشركة قبل الفائدة والضريبة 900,000 دينار سنويا. البنك يشترط ألا تقل نسبة الربح التشغيلي إلى الفائدة عن 3. فائدة القروض 9%. ما أكبر دين تستطيع الشركة أخذه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-58">الحل</a></span></p>
+</div>
+<div id="prob-11-59" class="ee-item" data-id="c11-e-08" data-kind="problem" data-label="11.59">
+<p><strong>11.59</strong> شركة بلا ديون، تكلفة حقوق ملكيتها 12%. مدير مالي يقترح تمويل 60% بالدين بتكلفة 10%، ويحسب المتوسط المرجح بافتراض أن تكلفة حقوق الملكية تبقى 12%. المساهمون في الواقع سيطلبون 20% بعد هذا الدين. الضريبة 20%. ما المتوسط الذي حسبه المدير؟ وما المتوسط الصحيح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-59">الحل</a></span></p>
+</div>
+<div id="prob-11-60" class="ee-item" data-id="c11-e-09" data-kind="problem" data-label="11.60">
+<p><strong>11.60</strong> شركة استثمارها 1,000,000 دينار. ربحها التشغيلي 200,000 دينار في سنة جيدة، و60,000 دينار في سنة سيئة. الضريبة 20%. قارن العائد على حقوق الملكية في السنتين بين تمويل كامل من المالكين، وتمويل 50% بقرض فائدته 8%. افترض أن الشركة تحصل على الوفر الضريبي حتى لو كان ربحها سالبا، من أعمالها الأخرى.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-60">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-اختيار-الحد-الأدنى-للعائد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-اختيار-الحد-الأدنى-للعائد">الجزء و: اختيار الحد الأدنى للعائد</h3>
+<div id="prob-11-61" class="ee-item" data-id="c11-f-01" data-kind="problem" data-label="11.61">
+<p><strong>11.61</strong> المتوسط المرجح لتكلفة رأس المال لشركة 11%. ميزانيتها هذه السنة 1,000,000 دينار. المشاريع المستقلة المقترحة، كلها بمخاطرة عادية:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الاستثمار</th>
+<th>معدل العائد</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>400,000</td>
+<td>16%</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>200,000</td>
+<td>24%</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>400,000</td>
+<td>19%</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>300,000</td>
+<td>14%</td>
+</tr>
+<tr class="odd">
+<td>هـ</td>
+<td>250,000</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<p>أي المشاريع تقبل؟ وما الحد الأدنى للعائد الفعلي هذه السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-61">الحل</a></span></p>
+</div>
+<div id="prob-11-62" class="ee-item" data-id="c11-f-02" data-kind="problem" data-label="11.62">
+<p><strong>11.62</strong> شركة متوسطها المرجح 11%. علاوات المخاطرة عندها: صفر لاستبدال معدات، و2.5% لتوسعة خط قائم، و6% لمنتج جديد. ثلاثة مشاريع: استبدال معدات بمعدل 12.5%، وتوسعة بمعدل 13.5%، ومنتج جديد بمعدل 16%. ما قرارك في كل منها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-62">الحل</a></span></p>
+</div>
+<div id="prob-11-63" class="ee-item" data-id="c11-f-03" data-kind="problem" data-label="11.63">
+<p><strong>11.63</strong> شركة بلا ديون، بيتا سهمها 1. تدرس مشروعا في مجال جديد، بيتا الشركات العاملة فيه 1.60. النسبة الخالية من المخاطرة 4%، وعائد السوق 10%. معدل عائد المشروع 12.5%. هل تقبله؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-63">الحل</a></span></p>
+</div>
+<div id="prob-11-64" class="ee-item" data-id="c11-f-04" data-kind="problem" data-label="11.64">
+<p><strong>11.64</strong> مشروع منتج جديد يكلف 600,000 دينار، ويعطي 148,000 دينار سنويا لمدة 6 سنوات. المتوسط المرجح للشركة 10%، وعلاوة المخاطرة للمنتجات الجديدة 5%. احسب القيمة الحالية بالمتوسط المرجح، ثم بالحد الأدنى بعد العلاوة. أيهما يستخدم للقرار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-64">الحل</a></span></p>
+</div>
+<div id="prob-11-65" class="ee-item" data-id="c11-f-05" data-kind="problem" data-label="11.65">
+<p><strong>11.65</strong> شركة متوسطها المرجح 10% لأول 800,000 دينار من الاستثمار، ما دامت أرباحها المحتجزة تكفي. بعدها تصدر أسهما جديدة، فيرتفع المتوسط إلى 12%. المشاريع المستقلة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الاستثمار</th>
+<th>معدل العائد</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ</td>
+<td>300,000</td>
+<td>17%</td>
+</tr>
+<tr class="even">
+<td>ب</td>
+<td>500,000</td>
+<td>13%</td>
+</tr>
+<tr class="odd">
+<td>ج</td>
+<td>300,000</td>
+<td>11.5%</td>
+</tr>
+<tr class="even">
+<td>د</td>
+<td>200,000</td>
+<td>9%</td>
+</tr>
+</tbody>
+</table>
+<p>أي المشاريع تقبل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-65">الحل</a></span></p>
+</div>
+<div id="prob-11-66" class="ee-item" data-id="c11-f-06" data-kind="problem" data-label="11.66">
+<p><strong>11.66</strong> شركة تكلفة رأس مالها 10%، ولا تعاني من نقص التمويل. مديرها يستخدم حدا أدنى 15% لكل المشاريع، احتياطا. مشروع عادي المخاطرة يكلف 500,000 دينار، ويعطي 123,000 دينار سنويا لمدة 6 سنوات. ماذا يقرر المدير؟ وكم تخسر الشركة بقراره؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-66">الحل</a></span></p>
+</div>
+<div id="prob-11-67" class="ee-item" data-id="c11-f-07" data-kind="problem" data-label="11.67">
+<p><strong>11.67</strong> الحد الأدنى للعائد بعد الضريبة لشركة 10%، والضريبة 20%. مهندس يقيم مشروعا صغيرا بتدفقات قبل الضريبة. ما الحد الأدنى التقريبي الذي يستخدمه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-67">الحل</a></span></p>
+</div>
+<div id="prob-11-68" class="ee-item" data-id="c11-f-08" data-kind="problem" data-label="11.68">
+<p><strong>11.68</strong> الحكومة تعرض على مصنع قرضا ميسرا بفائدة 4% لمشروع يكلف 400,000 دينار، ويعطي 88,000 دينار سنويا بعد الضريبة لمدة 6 سنوات. المتوسط المرجح للمصنع 11%، والضريبة 20%. مهندس يقيم المشروع بتكلفة القرض بعد الضريبة. ما الخطأ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-68">الحل</a></span></p>
+</div>
+<div id="prob-11-69" class="ee-item" data-id="c11-f-09" data-kind="problem" data-label="11.69">
+<p><strong>11.69</strong> شركة متوسطها المرجح 10%، وميزانيتها محدودة. بعد ترتيب المشاريع، أفضل مشروع لم يتسع في الميزانية معدله 14.5%. يصل مشروع جديد معدله 13%. هل يدخل الميزانية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-69">الحل</a></span></p>
+</div>
+<div id="prob-11-70" class="ee-item" data-id="c11-f-10" data-kind="problem" data-label="11.70">
+<p><strong>11.70</strong> شركة لها قسمان: قسم مياه معبأة بيتا 0.80، وقسم أجهزة إلكترونية بيتا 1.50. القسمان يمولان 30% بالدين بتكلفة 7%. النسبة الخالية من المخاطرة 4%، وعائد السوق 10%، والضريبة 20%. احسب الحد الأدنى لكل قسم.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-70">الحل</a></span></p>
+</div>
+<div id="prob-11-71" class="ee-item" data-id="c11-f-11" data-kind="problem" data-label="11.71">
+<p><strong>11.71</strong> مشروع يكلف 700,000 دينار، ويعطي 170,000 دينار سنويا لمدة 6 سنوات. الإدارة غير متفقة على الحد الأدنى: بين 9% و15%. احسب القيمة الحالية عند الحدين، ثم حدد الحد الأدنى الذي يتغير عنده القرار.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-71">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-التمويل-بالدين-وعائد-المالكين" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-التمويل-بالدين-وعائد-المالكين">الجزء ز: التمويل بالدين وعائد المالكين</h3>
+<div id="prob-11-72" class="ee-item" data-id="c11-g-01" data-kind="problem" data-label="11.72">
+<p><strong>11.72</strong> أصول شركة 2,000,000 دينار، وربحها التشغيلي قبل الفائدة والضريبة 300,000 دينار. الضريبة 20%. احسب العائد على حقوق الملكية إذا مولت كل الأصول من مال المالكين، ثم إذا مولت 50% منها بقرض فائدته 8%.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-72">الحل</a></span></p>
+</div>
+<div id="prob-11-73" class="ee-item" data-id="c11-g-02" data-kind="problem" data-label="11.73">
+<p><strong>11.73</strong> مشروع يكلف 300,000 دينار، وتدفقه التشغيلي بعد الضريبة 101,000 دينار سنويا لمدة 4 سنوات. الشركة تقترض 50% من الاستثمار بفائدة 9% وأربعة أقساط سنوية متساوية. الضريبة 20%، وتكلفة حقوق الملكية 16%. ما القيمة الحالية لتدفقات المالكين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-73">الحل</a></span></p>
+</div>
+<div id="prob-11-74" class="ee-item" data-id="c11-g-03" data-kind="problem" data-label="11.74">
+<p><strong>11.74</strong> مشروع لثلاث سنوات يكلف 240,000 دينار، وتدفقه التشغيلي بعد الضريبة 103,000 دينار سنويا. الشركة تقترض 120,000 دينار تدفع فائدتها 8% سنويا، وترد أصلها في السنة 3. الضريبة 20%. اكتب تدفقات المالكين، واحسب قيمتها الحالية بتكلفة حقوق ملكية 15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-74">الحل</a></span></p>
+</div>
+<div id="prob-11-75" class="ee-item" data-id="c11-g-04" data-kind="problem" data-label="11.75">
+<p><strong>11.75</strong> محلل حسب تدفقات المالكين لمشروع ممول جزئيا بقرض: يدفعون 150,000 دينار اليوم، ويأخذون 52,000 دينار سنويا لمدة 4 سنوات. خصمها بالمتوسط المرجح للشركة 10%. تكلفة حقوق الملكية 16%. ما الخطأ؟ وما القيمة الصحيحة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-75">الحل</a></span></p>
+</div>
+<div id="prob-11-76" class="ee-item" data-id="c11-g-05" data-kind="problem" data-label="11.76">
+<p><strong>11.76</strong> أصول شركة تعطي عائدا بعد الضريبة 7% قبل أي فائدة. تستطيع الاقتراض بفائدة 10%، والضريبة 25%. هل يرفع الدين عائد المالكين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-76">الحل</a></span></p>
+</div>
+<div id="prob-11-77" class="ee-item" data-id="c11-g-06" data-kind="problem" data-label="11.77">
+<p><strong>11.77</strong> مشروع يكلف 450,000 دينار، وتدفقه التشغيلي بعد الضريبة 194,000 دينار سنويا لمدة 3 سنوات. الشركة تقترض 50% من الاستثمار بفائدة 8%، وثلاثة أقساط سنوية متساوية. الضريبة 20%. ما معدل عائد المشروع؟ وما معدل عائد المالكين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-77">الحل</a></span></p>
+</div>
+<div id="prob-11-78" class="ee-item" data-id="c11-g-07" data-kind="problem" data-label="11.78">
+<p><strong>11.78</strong> الربح التشغيلي لشركة 500,000 دينار، والفائدة على ديونها 200,000 دينار. إذا انخفض الربح التشغيلي 20%، فبكم ينخفض صافي الربح؟ وماذا لو لم يكن عليها دين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-78">الحل</a></span></p>
+</div>
+<div id="prob-11-79" class="ee-item" data-id="c11-g-08" data-kind="problem" data-label="11.79">
+<p><strong>11.79</strong> مصنع يطلب قرضا 600,000 دينار بفائدة 9% وأقساط سنوية متساوية على 6 سنوات. تدفقه التشغيلي السنوي 180,000 دينار. البنك يشترط أن يكون التدفق 1.30 ضعف القسط على الأقل. هل يوافق البنك؟ وما أكبر قرض يقبله؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-79">الحل</a></span></p>
+</div>
+<div id="prob-11-80" class="ee-item" data-id="c11-g-09" data-kind="problem" data-label="11.80">
+<p><strong>11.80</strong> مشروع ضعيف يكلف 400,000 دينار، ويعطي 113,000 دينار سنويا بعد الضريبة لمدة 4 سنوات. المدير يقترح تمويل 40% منه بقرض فائدته 10% بأقساط متساوية، ليرفع عائد المالكين. الضريبة 20%. هل ينجح اقتراحه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-80">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-11-81" class="ee-item" data-id="c11-h-01" data-kind="problem" data-label="11.81">
+<p><strong>11.81</strong> ابن جدولا في Excel يحسب العائد حتى الاستحقاق لسند قيمته الاسمية 1,000 دينار وكوبونه 7% لمدة 10 سنوات، لأسعار من 900 إلى 1,100 دينار بخطوة 50. ماذا تلاحظ؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-81">الحل</a></span></p>
+</div>
+<div id="prob-11-82" class="ee-item" data-id="c11-h-02" data-kind="problem" data-label="11.82">
+<p><strong>11.82</strong> اكتب برنامج Python يحسب المتوسط المرجح لنسب دين من 0% إلى 70% بخطوة 10%، إذا كانت تكلفة الدين قبل الضريبة 6% زائد 0.1 ضرب مربع نسبة الدين، وتكلفة حقوق الملكية تتبع المعادلة التالية، بتكلفة بلا دين 12% وضريبة 20%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+</annotation></semantics></math></p>
+<p>ما أفضل نسبة دين؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-82">الحل</a></span></p>
+</div>
+<div id="prob-11-83" class="ee-item" data-id="c11-h-03" data-kind="problem" data-label="11.83">
+<p><strong>11.83</strong> في Excel، ضع في الخلايا: B1 سعر السهم 28، وB2 آخر توزيع 1.40، وB3 النمو 5%، وB4 تكاليف الإصدار 6%، وB5 النسبة الخالية من المخاطرة 4%، وB6 عائد السوق 10.5%، وB7 بيتا 1.15. اكتب صيغ تكلفة الأرباح المحتجزة، والأسهم الجديدة، ونموذج تسعير الأصول الرأسمالية، ومتوسط الطريقتين للأرباح المحتجزة.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-83">الحل</a></span></p>
+</div>
+<div id="prob-11-84" class="ee-item" data-id="c11-h-04" data-kind="problem" data-label="11.84">
+<p><strong>11.84</strong> اكتب برنامج Python يرسم جدول تكلفة المال الإضافي لشركة: المتوسط المرجح 10% لأول 800,000 دينار، و12% بعدها. المشاريع: أ 300,000 بمعدل 17%، وب 500,000 بمعدل 13%، وج 300,000 بمعدل 11.5%، ود 200,000 بمعدل 9%. البرنامج يقرر لكل مشروع.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-84">الحل</a></span></p>
+</div>
+<div id="prob-11-85" class="ee-item" data-id="c11-h-05" data-kind="problem" data-label="11.85">
+<p><strong>11.85</strong> ابن في Excel جدول تدفقات المالكين لمشروع يكلف 500,000 دينار، وتدفقه التشغيلي بعد الضريبة 148,800 دينار لمدة 5 سنوات، ممول 60% بقرض بفائدة 8% وأقساط متساوية، والضريبة 20%. الأعمدة: الرصيد في البداية، والفائدة، والقسط، والأصل، والوفر الضريبي، وتدفق المالكين. ثم احسب معدل المالكين.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-85">الحل</a></span></p>
+</div>
+<div id="prob-11-86" class="ee-item" data-id="c11-h-06" data-kind="problem" data-label="11.86">
+<p><strong>11.86</strong> اكتب برنامج Python يحسب تكلفة حقوق الملكية بنموذج تسعير الأصول الرأسمالية لقيم بيتا من 0.5 إلى 2.0 بخطوة 0.25، بنسبة خالية من المخاطرة 4% وعائد سوق 10%. ثم المتوسط المرجح لكل قيمة، بنسبة دين 30% وتكلفة دين 7% وضريبة 20%.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-86">الحل</a></span></p>
+</div>
+<div id="prob-11-87" class="ee-item" data-id="c11-h-07" data-kind="problem" data-label="11.87">
+<p><strong>11.87</strong> ابن جدولا في Excel لسعر سند قيمته الاسمية 1,000 دينار وكوبونه 8% لمدة 15 سنة، عند عوائد مطلوبة 6% و8% و10% و12%. ثم كرر لسند مدته 3 سنوات. أي السندين يتأثر سعره أكثر بتغير العائد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-87">الحل</a></span></p>
+</div>
+<div id="prob-11-88" class="ee-item" data-id="c11-h-08" data-kind="problem" data-label="11.88">
+<p><strong>11.88</strong> اكتب برنامج Python يحسب المتوسط المرجح لشركة من بيانات السوق: 15,000 سند بسعر 970 دينار وكوبون 7% لمدة 8 سنوات، و2,000,000 سهم بسعر 12 دينار وبيتا 1.2، والنسبة الخالية من المخاطرة 4%، وعائد السوق 10%، والضريبة 20%.</p>
+<p><span class="ee-sol-link"><a href="#sol-11-88">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-11-89" class="ee-item" data-id="c11-i-01" data-kind="problem" data-label="11.89">
+<p><strong>11.89</strong> تكلفة قرض 10%، والضريبة 25%. ما تكلفته بعد الضريبة؟</p>
+<p>أ) 2.50%<br>
+ب) 7.50%<br>
+ج) 12.50%<br>
+د) 10.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-89">الحل</a></span></p>
+</div>
+<div id="prob-11-90" class="ee-item" data-id="c11-i-02" data-kind="problem" data-label="11.90">
+<p><strong>11.90</strong> سعر سهم 20 دينار، وآخر توزيع دفع 1.00 دينار، والنمو 5%. ما تكلفة حقوق الملكية؟</p>
+<p>أ) 10.00%<br>
+ب) 5.25%<br>
+ج) 10.25%<br>
+د) 5.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-90">الحل</a></span></p>
+</div>
+<div id="prob-11-91" class="ee-item" data-id="c11-i-03" data-kind="problem" data-label="11.91">
+<p><strong>11.91</strong> النسبة الخالية من المخاطرة 4%، وعائد السوق 10%، وبيتا 1.50. ما تكلفة حقوق الملكية؟</p>
+<p>أ) 15.00%<br>
+ب) 19.00%<br>
+ج) 10.00%<br>
+د) 13.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-91">الحل</a></span></p>
+</div>
+<div id="prob-11-92" class="ee-item" data-id="c11-i-04" data-kind="problem" data-label="11.92">
+<p><strong>11.92</strong> دين 40% بتكلفة 8%، وحقوق ملكية بتكلفة 15%، والضريبة 20%. ما المتوسط المرجح؟</p>
+<p>أ) 12.20%<br>
+ب) 11.56%<br>
+ج) 17.56%<br>
+د) 9.76%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-92">الحل</a></span></p>
+</div>
+<div id="prob-11-93" class="ee-item" data-id="c11-i-05" data-kind="problem" data-label="11.93">
+<p><strong>11.93</strong> سند كوبونه 6% يباع بسعر 1,080 دينار، وقيمته الاسمية 1,000. العائد حتى الاستحقاق:</p>
+<p>أ) أعلى من 6%<br>
+ب) يساوي 6%<br>
+ج) أقل من 6%<br>
+د) لا يمكن معرفته بدون عدد السنوات</p>
+<p><span class="ee-sol-link"><a href="#sol-11-93">الحل</a></span></p>
+</div>
+<div id="prob-11-94" class="ee-item" data-id="c11-i-06" data-kind="problem" data-label="11.94">
+<p><strong>11.94</strong> لماذا نستخدم أوزان القيم السوقية في المتوسط المرجح؟</p>
+<p>أ) لأنها أسهل في الحساب<br>
+ب) لأنها تعكس ما يطلب عليه المستثمرون العائد اليوم<br>
+ج) لأنها دائما أقل من القيم الدفترية<br>
+د) لأن قانون الضريبة يشترطها</p>
+<p><span class="ee-sol-link"><a href="#sol-11-94">الحل</a></span></p>
+</div>
+<div id="prob-11-95" class="ee-item" data-id="c11-i-07" data-kind="problem" data-label="11.95">
+<p><strong>11.95</strong> شركة ميزانيتها محدودة. متوسطها المرجح 10%، وأفضل مشروع مرفوض معدله 14%. ما الحد الأدنى للعائد لمشروع جديد بنفس المخاطرة؟</p>
+<p>أ) 10%<br>
+ب) 12%<br>
+ج) 14%<br>
+د) 24%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-95">الحل</a></span></p>
+</div>
+<div id="prob-11-96" class="ee-item" data-id="c11-i-08" data-kind="problem" data-label="11.96">
+<p><strong>11.96</strong> تدفقات المالكين لمشروع ممول جزئيا بقرض، بعد طرح الأقساط وإضافة الوفر الضريبي، تخصم بـ:</p>
+<p>أ) المتوسط المرجح لتكلفة رأس المال<br>
+ب) تكلفة الدين بعد الضريبة<br>
+ج) تكلفة حقوق الملكية<br>
+د) نسبة الفائدة على القرض</p>
+<p><span class="ee-sol-link"><a href="#sol-11-96">الحل</a></span></p>
+</div>
+<div id="prob-11-97" class="ee-item" data-id="c11-i-09" data-kind="problem" data-label="11.97">
+<p><strong>11.97</strong> سعر سهم 40 دينار، والتوزيع القادم 2.00 دينار، والنمو 4%، وتكاليف إصدار أسهم جديدة 5%. ما تكلفة الأسهم الجديدة؟</p>
+<p>أ) 9.00%<br>
+ب) 8.75%<br>
+ج) 9.26%<br>
+د) 9.47%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-97">الحل</a></span></p>
+</div>
+<div id="prob-11-98" class="ee-item" data-id="c11-i-10" data-kind="problem" data-label="11.98">
+<p><strong>11.98</strong> مشروع يعطي 7% بعد الضريبة. الشركة تقترض بفائدة 10%، والضريبة 20%. ماذا يفعل القرض بعائد المالكين؟</p>
+<p>أ) يرفعه<br>
+ب) يخفضه<br>
+ج) لا يغيره<br>
+د) يرفعه في السنة الأولى فقط</p>
+<p><span class="ee-sol-link"><a href="#sol-11-98">الحل</a></span></p>
+</div>
+<div id="prob-11-99" class="ee-item" data-id="c11-i-11" data-kind="problem" data-label="11.99">
+<p><strong>11.99</strong> شركة لها قسم مخاطرته منخفضة وقسم مخاطرته مرتفعة، وتستخدم متوسطها المرجح حدا أدنى واحدا للقسمين. مع الوقت:</p>
+<p>أ) يكبر القسم منخفض المخاطرة<br>
+ب) يكبر القسم مرتفع المخاطرة وتزيد مخاطرة الشركة<br>
+ج) لا يتغير شيء<br>
+د) ينخفض المتوسط المرجح</p>
+<p><span class="ee-sol-link"><a href="#sol-11-99">الحل</a></span></p>
+</div>
+<div id="prob-11-100" class="ee-item" data-id="c11-i-12" data-kind="problem" data-label="11.100">
+<p><strong>11.100</strong> نسبة الدين إلى حقوق الملكية لشركة 0.50. ما وزن الدين في المتوسط المرجح؟</p>
+<p>أ) 50.00%<br>
+ب) 66.67%<br>
+ج) 33.33%<br>
+د) 20.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-11-100">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار تمويل واستثمار كامل، من البداية إلى النهاية.</p>
+<div id="prob-11-101" class="ee-item" data-id="c11-j-01" data-kind="problem" data-label="11.101">
+<p><strong>11.101</strong> <strong>حالة 11.1: توسعة مصنع بلاستيك في الخليل</strong></p>
+<p>مصنع عبوات بلاستيكية يدرس خطا جديدا يكلف 1,200,000 دينار، ويعطي 300,000 دينار سنويا بعد الضريبة لمدة 6 سنوات. مخاطرة الخط مثل مخاطرة المصنع المعتادة. بيانات التمويل اليوم:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>السندات</td>
+<td>5,000 سند، سعر السند 1,020 دينار، كوبون 8%، تستحق بعد 10 سنوات</td>
+</tr>
+<tr class="even">
+<td>الأسهم</td>
+<td>400,000 سهم، سعر السهم 25 دينار</td>
+</tr>
+<tr class="odd">
+<td>آخر توزيع</td>
+<td>1.20 دينار للسهم، ونمو 5% سنويا</td>
+</tr>
+<tr class="even">
+<td>بيتا</td>
+<td>1.1</td>
+</tr>
+<tr class="odd">
+<td>النسبة الخالية من المخاطرة</td>
+<td>4%</td>
+</tr>
+<tr class="even">
+<td>عائد السوق</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>الضريبة</td>
+<td>20%</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) احسب تكلفة الدين. (ب) احسب تكلفة حقوق الملكية بالطريقتين، وخذ متوسطهما. (ج) احسب المتوسط المرجح بأوزان السوق. (د) هل يقبل الخط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-101">الحل</a></span></p>
+</div>
+<div id="prob-11-102" class="ee-item" data-id="c11-j-02" data-kind="problem" data-label="11.102">
+<p><strong>11.102</strong> <strong>حالة 11.2: شريكان وقرض لمعصرة زيتون حديثة</strong></p>
+<p>شريكان يخططان لمعصرة حديثة تكلف 800,000 دينار، وتعطي في السنة العادية 230,000 دينار بعد الضريبة لمدة 5 سنوات. في موسم ضعيف، كل السنوات، يكون التدفق 70% من ذلك. الأول يريد أن يدفعا كل المبلغ من مالهما. الثاني يريد قرضا بنصف المبلغ، بفائدة 9% وخمسة أقساط سنوية متساوية. الضريبة 20%.</p>
+<p>(أ) احسب معدل عائد الشريكين في الحالتين، في السنوات العادية. (ب) أعد الحساب لمواسم ضعيفة. (ج) بماذا تنصحهما؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-102">الحل</a></span></p>
+</div>
+<div id="prob-11-103" class="ee-item" data-id="c11-j-03" data-kind="problem" data-label="11.103">
+<p><strong>11.103</strong> <strong>حالة 11.3: ميزانية شركة اتصالات</strong></p>
+<p>شركة اتصالات متوسطها المرجح 10%. تضيف علاوة 2% لمشاريع التوسعة، و5% للخدمات الجديدة، ولا شيء لمشاريع خفض التكاليف. ميزانيتها 2,000,000 دينار. المشاريع المستقلة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>المشروع</th>
+<th>الصنف</th>
+<th>الاستثمار</th>
+<th>معدل العائد</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>أ: تحديث أنظمة الفوترة</td>
+<td>خفض تكاليف</td>
+<td>400,000</td>
+<td>13%</td>
+</tr>
+<tr class="even">
+<td>ب: أبراج في منطقة جديدة</td>
+<td>توسعة</td>
+<td>900,000</td>
+<td>15%</td>
+</tr>
+<tr class="odd">
+<td>ج: خدمة بث تلفزيوني</td>
+<td>خدمة جديدة</td>
+<td>700,000</td>
+<td>16%</td>
+</tr>
+<tr class="even">
+<td>د: ألياف ضوئية للمنازل</td>
+<td>خدمة جديدة</td>
+<td>600,000</td>
+<td>14%</td>
+</tr>
+<tr class="odd">
+<td>هـ: تقوية الشبكة الحالية</td>
+<td>توسعة</td>
+<td>500,000</td>
+<td>11.5%</td>
+</tr>
+</tbody>
+</table>
+<p>(أ) أي المشاريع تتجاوز حد صنفها؟ (ب) أي المشاريع تختار داخل الميزانية؟ (ج) ماذا كانت ستختار لو رتبت المشاريع بالمعدل فقط وقارنتها بـ 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-103">الحل</a></span></p>
+</div>
+<div id="prob-11-104" class="ee-item" data-id="c11-j-04" data-kind="problem" data-label="11.104">
+<p><strong>11.104</strong> <strong>حالة 11.4: هل ترفع شركة الأدوية ديونها؟</strong></p>
+<p>شركة أدوية تمول 20% من رأس مالها بالدين، بتكلفة 6%. مديرها المالي يقترح رفع الدين إلى 50%، لكن البنوك ستطلب عندها 8.5%. تكلفة حقوق الملكية بلا دين 12%، وتتغير مع الدين حسب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+</annotation></semantics></math></p>
+<p>الضريبة 20%. تدفق الشركة الحر بعد الضريبة 1,500,000 دينار سنويا، ويتوقع أن يستمر بلا نمو.</p>
+<p>(أ) احسب تكلفة حقوق الملكية والمتوسط المرجح في الحالتين. (ب) قيمة الشركة هي القيمة الحالية لتدفقها الحر بالمتوسط المرجح. احسبها في الحالتين. (ج) هل تنصح بالاقتراح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-11-104">الحل</a></span></p>
+</div>
+</section>
+</section>
+<section id="refs-ch11" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="refs-ch11">المراجع</h2>
+<p>هذا الفصل يقابل الفصول التالية في الكتب الثلاثة. تفاصيل الطبعات في <a href="../appendices/references.html" class="quarto-xref"><span>الملحق I</span></a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الكتاب</th>
+<th>الفصل</th>
+<th>عنوان الفصل</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="en" dir="ltr">Park</span></td>
+<td><span class="en" dir="ltr">15</span></td>
+<td><span class="en" dir="ltr">Capital-Budgeting Decisions</span></td>
+</tr>
+<tr class="even">
+<td><span class="en" dir="ltr">Blank &amp; Tarquin</span></td>
+<td><span class="en" dir="ltr">10</span></td>
+<td><span class="en" dir="ltr">Project Financing and Noneconomic Attributes</span></td>
+</tr>
+<tr class="odd">
+<td><span class="en" dir="ltr">Sullivan et al.</span></td>
+<td><span class="en" dir="ltr">13</span></td>
+<td><span class="en" dir="ltr">The Capital Budgeting Process</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch10.html" class="pagination-link" aria-label="المخاطرة وعدم التأكد">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">المخاطرة وعدم التأكد</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
