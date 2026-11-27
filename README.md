@@ -55,7 +55,8 @@ tools/check_all.sh              # every check below
 | `test_factors.py`, `test_factors.mjs` | every factor equals its year-by-year sum, at 0%, near 0 and with i close to g; root finders refuse to answer when the range holds no root |
 | `lint_rtl.py` | no equation or code inside an Arabic sentence |
 | `dump_py.py` + `check_js.mjs` | Python and JavaScript render every item identically (consistency, not correctness) |
-| `verify_answers.py` | answers recomputed independently with `numpy_financial`; prints coverage and writes the unchecked list to `tools/coverage.txt` |
+| `check_equations.py` | every printed step `... = number` in every solution is recomputed from the numbers shown, with factors from `numpy_financial`, not from the engine |
+| `verify_answers.py` | answers recomputed independently with `numpy_financial` and `scipy`; prints coverage of both checks and writes the unchecked list to `tools/coverage.txt` |
 | `scan_ranges.py` | solved rates and year counts stay realistic over many random draws |
 
 Rate solvers (`RATE`, `RATEF`, `GROWTH`, `IRR`) use bisection only when the ends bracket a root. Otherwise they try one wider range, then raise an error instead of returning an end point. Negative rates are allowed. Flows that change sign more than once can have several rates; give `IRR` a range that holds only the one you want.

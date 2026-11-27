@@ -466,16 +466,20 @@ def coverage(items):
     This report shows how much of the bank is also checked against a
     separate calculation, chapter by chapter, and writes the list of
     unchecked items to tools/coverage.txt."""
+    eq_file = ROOT / "tools" / "equation_items.txt"
+    eq = set(eq_file.read_text(encoding="utf-8").split()) if eq_file.exists() else set()
+    covered = set(CHECKS) | eq
     by_ch = {}
     for iid, it in items.items():
         if not it.get("calc"):
             continue
         ch = iid[:3]
         tot, cov = by_ch.get(ch, (0, 0))
-        by_ch[ch] = (tot + 1, cov + (iid in CHECKS))
-    lines = [f"{ch}: {cov} of {tot} items with a calculation have an independent check"
+        by_ch[ch] = (tot + 1, cov + (iid in covered))
+    lines = [f"{ch}: {cov} of {tot} items with a calculation are checked independently "
+             "(a recomputed answer, or printed steps that recompute)"
              for ch, (tot, cov) in sorted(by_ch.items())]
-    missing = sorted(i for i, it in items.items() if it.get("calc") and i not in CHECKS)
+    missing = sorted(i for i, it in items.items() if it.get("calc") and i not in covered)
     T = sum(t for t, _ in by_ch.values())
     C = sum(c for _, c in by_ch.values())
     (ROOT / "tools" / "coverage.txt").write_text(

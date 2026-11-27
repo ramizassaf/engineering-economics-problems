@@ -9,6 +9,7 @@ node tools/test_factors.mjs /tmp/ee-factor-cases.json
 python3 tools/lint_rtl.py
 python3 tools/dump_py.py > /tmp/ee-py.json
 node tools/check_js.mjs /tmp/ee-py.json
+python3 tools/check_equations.py
 python3 tools/verify_answers.py
 python3 tools/scan_ranges.py
 # Text inside display math follows the Arabic direction in the PDF and prints reversed.
