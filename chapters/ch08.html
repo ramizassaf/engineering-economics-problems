@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; التضخم وأسعار الصرف – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch07.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-8-index" id="toc-sec-8-index" class="nav-link active" data-scroll-target="#sec-8-index"><span class="header-section-number">8.1</span> قياس التضخم</a></li>
+  <li><a href="#sec-8-dinar" id="toc-sec-8-dinar" class="nav-link" data-scroll-target="#sec-8-dinar"><span class="header-section-number">8.2</span> الدينار الفعلي والدينار الثابت</a></li>
+  <li><a href="#sec-8-rates" id="toc-sec-8-rates" class="nav-link" data-scroll-target="#sec-8-rates"><span class="header-section-number">8.3</span> النسبة الحقيقية والنسبة السوقية</a></li>
+  <li><a href="#sec-8-rule" id="toc-sec-8-rule" class="nav-link" data-scroll-target="#sec-8-rule"><span class="header-section-number">8.4</span> تقييم المشاريع: القاعدة الذهبية</a></li>
+  <li><a href="#sec-8-differential" id="toc-sec-8-differential" class="nav-link" data-scroll-target="#sec-8-differential"><span class="header-section-number">8.5</span> بنود ترتفع بنسب مختلفة</a></li>
+  <li><a href="#sec-8-tax" id="toc-sec-8-tax" class="nav-link" data-scroll-target="#sec-8-tax"><span class="header-section-number">8.6</span> التضخم والضريبة</a></li>
+  <li><a href="#sec-8-loans" id="toc-sec-8-loans" class="nav-link" data-scroll-target="#sec-8-loans"><span class="header-section-number">8.7</span> التضخم والقروض والادخار</a></li>
+  <li><a href="#sec-8-exchange" id="toc-sec-8-exchange" class="nav-link" data-scroll-target="#sec-8-exchange"><span class="header-section-number">8.8</span> أسعار الصرف</a></li>
+  <li><a href="#sec-8-python" id="toc-sec-8-python" class="nav-link" data-scroll-target="#sec-8-python"><span class="header-section-number">8.9</span> Python: الطريقتان معا</a></li>
+  <li><a href="#sec-8-problems" id="toc-sec-8-problems" class="nav-link" data-scroll-target="#sec-8-problems"><span class="header-section-number">8.10</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" id="toc-الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" class="nav-link" data-scroll-target="#الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت">الجزء ب: مؤشر الأسعار والدينار الفعلي والثابت</a></li>
+  <li><a href="#الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" id="toc-الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" class="nav-link" data-scroll-target="#الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية">الجزء ج: النسبة الحقيقية والنسبة السوقية</a></li>
+  <li><a href="#الجزء-د-تقييم-المشاريع-مع-التضخم" id="toc-الجزء-د-تقييم-المشاريع-مع-التضخم" class="nav-link" data-scroll-target="#الجزء-د-تقييم-المشاريع-مع-التضخم">الجزء د: تقييم المشاريع مع التضخم</a></li>
+  <li><a href="#الجزء-هـ-بنود-تتغير-بنسب-مختلفة" id="toc-الجزء-هـ-بنود-تتغير-بنسب-مختلفة" class="nav-link" data-scroll-target="#الجزء-هـ-بنود-تتغير-بنسب-مختلفة">الجزء هـ: بنود تتغير بنسب مختلفة</a></li>
+  <li><a href="#الجزء-و-التضخم-والضريبة-والقروض" id="toc-الجزء-و-التضخم-والضريبة-والقروض" class="nav-link" data-scroll-target="#الجزء-و-التضخم-والضريبة-والقروض">الجزء و: التضخم والضريبة والقروض</a></li>
+  <li><a href="#الجزء-ز-أسعار-الصرف" id="toc-الجزء-ز-أسعار-الصرف" class="nav-link" data-scroll-target="#الجزء-ز-أسعار-الصرف">الجزء ز: أسعار الصرف</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch8" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>في كل الفصول السابقة افترضنا أن الأسعار ثابتة: الدينار اليوم يشتري ما يشتريه الدينار بعد عشر سنوات. في الواقع ترتفع الأسعار كل سنة تقريبا. الراتب الذي كان يكفي قبل عشر سنوات لا يكفي اليوم. هذا الفصل يعلمك كيف تقيس التضخم، وكيف تدخله في تقييم المشاريع بدون أن تحسبه مرتين أو تنساه. في آخر الفصل نطبق نفس الفكرة على مشاريع بعملتين.</p>
+<p>الفكرة كلها في قاعدة واحدة ستتكرر في كل مثال: <strong>الدينار الثابت مع النسبة الحقيقية، والدينار الفعلي مع النسبة السوقية.</strong></p>
+<section id="sec-8-index" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sec-8-index"><span class="header-section-number">8.1</span> قياس التضخم</h2>
+<p>التضخم هو الارتفاع العام في الأسعار. تقيسه دوائر الإحصاء بمؤشر أسعار المستهلك: سعر سلة ثابتة من السلع والخدمات في كل سنة، منسوبا إلى سنة أساس قيمتها 100.</p>
+<div id="ex-8-1" class="ee-item" data-id="c08-ex-index" data-kind="example" data-label="8.1">
+<p><strong>مثال 8.1: قياس التضخم من مؤشر الأسعار</strong></p>
+<p>مؤشر أسعار المستهلك في بلد كان كما يلي:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>المؤشر</td>
+<td>100.0</td>
+<td>104.0</td>
+<td>110.2</td>
+<td>113.5</td>
+</tr>
+</tbody>
+</table>
+<p>ما نسبة التضخم في كل سنة؟ وما متوسط نسبة التضخم السنوية خلال السنوات الثلاث؟</p>
+<p><strong>الحل:</strong></p>
+<p>المؤشر يقيس سعر سلة ثابتة من السلع. التضخم في سنة هو الزيادة النسبية في المؤشر خلالها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>k</mi></msub><mo>=</mo><mfrac><msub><mi>I</mi><mi>k</mi></msub><msub><mi>I</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mfrac><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+f_k = \frac{I_k}{I_{k-1}} - 1
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التضخم</td>
+<td>4.00%</td>
+<td>5.96%</td>
+<td>2.99%</td>
+</tr>
+</tbody>
+</table>
+<p>المتوسط ليس المتوسط الحسابي، لأن الأسعار تتضاعف ولا تجمع. نبحث عن نسبة ثابتة تعطي نفس الزيادة الكلية، كما في إيجاد نسبة الفائدة في الفصل الأول:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>f</mi><mo accent="true">‾</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>113.5</mn><mn>100</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>4.31</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\bar{f} = \left(\frac{113.5}{100}\right)^{1/3} - 1 = 4.31\%
+</annotation></semantics></math></p>
+<p>المتوسط الحسابي 4.32% قريب منه، لكنه أكبر قليلا دائما.</p>
+</div>
+</section>
+<section id="sec-8-dinar" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-8-dinar"><span class="header-section-number">8.2</span> الدينار الفعلي والدينار الثابت</h2>
+<p>نفس المبلغ له قيمتان: المبلغ المكتوب، وما يشتريه. نحول بينهما بنسبة التضخم، بنفس معاملات الفصل الأول:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>k</mi></msub><mo>=</mo><msub><mi>A</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>f</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+R_k = A_k\,(P/F,\ f,\ k)
+</annotation></semantics></math></p>
+<p>حيث A مبلغ بالدينار الفعلي في السنة k، و R نفس المبلغ بالدينار الثابت بأسعار السنة 0.</p>
+<div id="ex-8-2" class="ee-item" data-id="c08-ex-purchasing" data-kind="example" data-label="8.2">
+<p><strong>مثال 8.2: الدينار الفعلي والدينار الثابت</strong></p>
+<p>موظف سيحصل على مكافأة 10,000 دينار بعد 10 سنوات. نسبة التضخم المتوقعة 5% سنويا. (أ) كم تساوي المكافأة بأسعار اليوم؟ (ب) سلة سلع تكلف اليوم 10,000 دينار. كم ستكلف بعد 10 سنوات؟</p>
+<p><strong>الحل:</strong></p>
+<p>نميز بين نوعين من الدينار:</p>
+<ul>
+<li><strong>الدينار الفعلي:</strong> المبلغ الذي يدفع أو يقبض فعلا في سنته، مكتوبا على الشيك.</li>
+<li><strong>الدينار الثابت:</strong> نفس المبلغ مقاسا بقوة شراء سنة الأساس، وهي هنا السنة 0.</li>
+</ul>
+<p>التحويل يشبه نقل المال عبر الزمن، لكن بنسبة التضخم بدل نسبة الفائدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>k</mi></msub><mo>=</mo><mfrac><msub><mi>A</mi><mi>k</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+R_k = \frac{A_k}{(1 + f)^k}
+</annotation></semantics></math></p>
+<p>(أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn><mi>,</mi><mn>139.13</mn></mrow><annotation encoding="application/x-tex">
+R = 10\mathord{,}000\,(P/F,\ 5\%,\ 10) = 6\mathord{,}139.13
+</annotation></semantics></math></p>
+<p>المكافأة تشتري بعد 10 سنوات ما يشتريه اليوم 6,139.13 دينار فقط.</p>
+<p>(ب) نفس السلة بأسعار تلك السنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn><mi>,</mi><mn>288.95</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000\,(F/P,\ 5\%,\ 10) = 16\mathord{,}288.95
+</annotation></semantics></math></p>
+</div>
+<div id="ex-8-3" class="ee-item" data-id="c08-ex-real-raise" data-kind="example" data-label="8.3">
+<p><strong>مثال 8.3: الزيادة الحقيقية في الراتب</strong></p>
+<p>راتب مهندسة 1,200 دينار شهريا. حصلت على زيادة 6%، وكانت نسبة التضخم في نفس السنة 4%. ما الزيادة الحقيقية في قوة شرائها؟</p>
+<p><strong>الحل:</strong></p>
+<p>الراتب الجديد 1,272.00 دينار. بأسعار السنة الماضية يساوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mi>,</mi><mn>272.00</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>=</mo><mn>1</mn><mi>,</mi><mn>223.08</mn></mrow><annotation encoding="application/x-tex">
+\frac{1\mathord{,}272.00}{1 + 0.04} = 1\mathord{,}223.08
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>1.92</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.06}{1 + 0.04} - 1 = 1.92\%
+</annotation></semantics></math></p>
+<p>قوة الشراء ارتفعت، لكن أقل من نسبة الزيادة نفسها. طرح النسبتين يعطي تقريبا 2.00%، وهو قريب عندما تكون النسب صغيرة.</p>
+</div>
+</section>
+<section id="sec-8-rates" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-8-rates"><span class="header-section-number">8.3</span> النسبة الحقيقية والنسبة السوقية</h2>
+<p>البنوك تعلن نسبة واحدة، لكنها تتكون من جزأين: عائد حقيقي يزيد قوة الشراء، وتعويض عن التضخم.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+1 + i_m = (1 + i_r)(1 + f)
+</annotation></semantics></math></p>
+<div id="ex-8-4" class="ee-item" data-id="c08-ex-market-rate" data-kind="example" data-label="8.4">
+<p><strong>مثال 8.4: النسبة الحقيقية والنسبة السوقية</strong></p>
+<p>(أ) مستثمر يريد عائدا حقيقيا 6% فوق التضخم. التضخم المتوقع 4%. ما النسبة التي يطلبها من البنك؟ (ب) بنك يعطي 12% على الودائع، والتضخم 4%. ما العائد الحقيقي؟</p>
+<p><strong>الحل:</strong></p>
+<p>توجد ثلاث نسب:</p>
+<ul>
+<li><strong>النسبة الحقيقية:</strong> نمو قوة الشراء، بدون تضخم.</li>
+<li><strong>نسبة التضخم:</strong> نمو الأسعار.</li>
+<li><strong>النسبة السوقية:</strong> ما يعلنه البنك فعلا. تجمع الاثنتين.</li>
+</ul>
+<p>كل دينار يجب أن ينمو بالنسبة الحقيقية، ثم ينمو مرة أخرى ليعوض التضخم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+1 + i_m = (1 + i_r)(1 + f)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><msub><mi>i</mi><mi>r</mi></msub><mo>+</mo><mi>f</mi><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mspace width="0.167em"></mspace><mi>f</mi></mrow><annotation encoding="application/x-tex">
+i_m = i_r + f + i_r\,f
+</annotation></semantics></math></p>
+<p>(أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = (1 + 0.06)(1 + 0.04) - 1 = 10.24\%
+</annotation></semantics></math></p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.12</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = \frac{1 + 0.12}{1 + 0.04} - 1 = 7.69\%
+</annotation></semantics></math></p>
+<p>التقريب الشائع يطرح التضخم من النسبة السوقية، فيعطي 8.00%.</p>
+</div>
+<p>الحد الأدنى للعائد الذي تعلنه الشركات عادة نسبة سوقية، لأنه مبني على فوائد القروض وعوائد الأسهم في السوق، وهذه كلها تتضمن التضخم المتوقع.</p>
+</section>
+<section id="sec-8-rule" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="sec-8-rule"><span class="header-section-number">8.4</span> تقييم المشاريع: القاعدة الذهبية</h2>
+<p>أمامك طريقتان صحيحتان لتقييم أي مشروع، تعطيان نفس النتيجة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التدفقات</th>
+<th>النسبة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>بالدينار الثابت، بأسعار اليوم</td>
+<td>النسبة الحقيقية</td>
+</tr>
+<tr class="even">
+<td>بالدينار الفعلي، المتوقع دفعه</td>
+<td>النسبة السوقية</td>
+</tr>
+</tbody>
+</table>
+<div id="ex-8-5" class="ee-item" data-id="c08-ex-two-ways" data-kind="example" data-label="8.5">
+<p><strong>مثال 8.5: طريقتان تعطيان نفس القيمة الحالية</strong></p>
+<p>مشروع يكلف 50,000 دينار، ويوفر 16,000 دينار سنويا بأسعار اليوم لمدة 4 سنوات. الوفر يرتفع مع التضخم 5%. الحد الأدنى للعائد الحقيقي 8%. احسب القيمة الحالية بطريقتين.</p>
+<p><strong>الحل:</strong></p>
+<p><strong>الطريقة الأولى: دينار ثابت ونسبة حقيقية.</strong> الوفر بأسعار اليوم ثابت كل سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>16</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>994.03</mn></mrow><annotation encoding="application/x-tex">
+PW = -50\mathord{,}000 + 16\mathord{,}000\,(P/A,\ 8\%,\ 4) = 2\mathord{,}994.03
+</annotation></semantics></math></p>
+<p><strong>الطريقة الثانية: دينار فعلي ونسبة سوقية.</strong> النسبة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.08</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>13.40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = (1 + 0.08)(1 + 0.05) - 1 = 13.40\%
+</annotation></semantics></math></p>
+<p>الوفر الفعلي يرتفع كل سنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الوفر الفعلي</td>
+<td>16,800.00</td>
+<td>17,640.00</td>
+<td>18,522.00</td>
+<td>19,448.10</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>994.03</mn></mrow><annotation encoding="application/x-tex">
+PW = 2\mathord{,}994.03
+</annotation></semantics></math></p>
+<p>النتيجة نفسها. القاعدة الذهبية في هذا الفصل:</p>
+<ul>
+<li>دينار ثابت مع نسبة حقيقية.</li>
+<li>دينار فعلي مع نسبة سوقية.</li>
+</ul>
+<p>الخطأ الشائع خلط الاثنين: وفر بأسعار اليوم مع نسبة سوقية يقلل قيمة المشروع ظلما.</p>
+</div>
+<p>اختر الطريقة حسب شكل التدفقات. ما يتحدد بمبلغ ثابت مكتوب، مثل العقود والأقساط والاستهلاك، ثابت بالدينار الفعلي. ما يرتفع مع الأسعار، مثل الأجور والمواد، ثابت بالدينار الثابت.</p>
+<div id="ex-8-6" class="ee-item" data-id="c08-ex-fixed-contract" data-kind="example" data-label="8.6">
+<p><strong>مثال 8.6: عقد بمبلغ ثابت لا يتغير مع التضخم</strong></p>
+<p>شركة توقع عقد إيجار لمستودع بمبلغ 12,000 دينار سنويا لمدة 5 سنوات، يدفع في نهاية كل سنة، ولا يتغير مع الأسعار. التضخم المتوقع 7%، والحد الأدنى للعائد الحقيقي 6%. ما القيمة الحالية لدفعات العقد؟</p>
+<p><strong>الحل:</strong></p>
+<p>المبلغ ثابت بالدينار الفعلي، فنخصمه بالنسبة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>13.42</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = 13.42\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>13.42</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>41</mn><mi>,</mi><mn>777.82</mn></mrow><annotation encoding="application/x-tex">
+PW = 12\mathord{,}000\,(P/A,\ 13.42\%,\ 5) = 41\mathord{,}777.82
+</annotation></semantics></math></p>
+<p>بالدينار الثابت، الدفعة الأخيرة تساوي 8,555.83 دينار فقط بأسعار اليوم. التضخم يخفض العبء الحقيقي للعقد كل سنة.</p>
+<p>لو خصمنا بالنسبة الحقيقية لحصلنا على 50,548.37 دينار، أي أعلى من الصحيح بمقدار 8,770.55 دينار. هذا يبالغ في تكلفة العقد.</p>
+</div>
+<div id="ex-8-7" class="ee-item" data-id="c08-ex-growing-cost" data-kind="example" data-label="8.7">
+<p><strong>مثال 8.7: تكلفة ترتفع مع التضخم</strong></p>
+<p>صيانة خط إنتاج تكلف 5,000 دينار في نهاية السنة الأولى، وترتفع مع التضخم 5% كل سنة، لمدة 8 سنوات. الحد الأدنى للعائد الحقيقي 6%. ما القيمة الحالية للصيانة؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>بالدينار الفعلي:</strong> سلسلة متدرجة نسبيا، كما في الفصل الثاني، بالنسبة السوقية 11.30%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>11.30</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>29</mn><mi>,</mi><mn>570.45</mn></mrow><annotation encoding="application/x-tex">
+PW = 5\mathord{,}000\,(P/A_1,\ 5\%,\ 11.30\%,\ 8) = 29\mathord{,}570.45
+</annotation></semantics></math></p>
+<p><strong>بالدينار الثابت:</strong> كل دفعة تساوي بأسعار اليوم نفس المبلغ:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow></mfrac><mo>=</mo><mn>4</mn><mi>,</mi><mn>761.90</mn></mrow><annotation encoding="application/x-tex">
+\frac{5\mathord{,}000}{1 + 0.05} = 4\mathord{,}761.90
+</annotation></semantics></math></p>
+<p>فهي سلسلة متساوية بالنسبة الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>4</mn><mi>,</mi><mn>761.90</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>29</mn><mi>,</mi><mn>570.45</mn></mrow><annotation encoding="application/x-tex">
+PW = 4\mathord{,}761.90\,(P/A,\ 6\%,\ 8) = 29\mathord{,}570.45
+</annotation></semantics></math></p>
+<p>الطريقة الثانية أسهل: كل ما يرتفع مع التضخم يصبح ثابتا بالدينار الثابت.</p>
+</div>
+</section>
+<section id="sec-8-differential" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="sec-8-differential"><span class="header-section-number">8.5</span> بنود ترتفع بنسب مختلفة</h2>
+<p>التضخم العام متوسط. بعض البنود ترتفع أسرع منه، مثل الطاقة والأجور الماهرة، وبعضها أبطأ، مثل الإلكترونيات. عندها نحسب كل بند بنسبته بالدينار الفعلي، ثم نخصم بالنسبة السوقية.</p>
+<div id="ex-8-8" class="ee-item" data-id="c08-ex-differential" data-kind="example" data-label="8.8">
+<p><strong>مثال 8.8: بنود ترتفع بنسب مختلفة</strong></p>
+<p>مصنع يدرس خطا يكلف 80,000 دينار. الإيراد 45,000 دينار سنويا بأسعار اليوم، ويرتفع مع التضخم العام 4%. تكلفة الطاقة 20,000 دينار بأسعار اليوم، وترتفع 9% سنويا. المدة 5 سنوات، والحد الأدنى للعائد السوقي 12%. احسب القيمة الحالية، وقارن بفرض أن الطاقة ترتفع مع التضخم العام.</p>
+<p><strong>الحل:</strong></p>
+<p>كل بند ينمو بنسبته، فنحسب التدفق الفعلي لكل سنة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>=</mo><mn>45</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo>−</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.09</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">
+A_k = 45\mathord{,}000\,(1 + 0.04)^k - 20\mathord{,}000\,(1 + 0.09)^k
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td>46,800</td>
+<td>48,672</td>
+<td>50,619</td>
+<td>52,644</td>
+<td>54,749</td>
+</tr>
+<tr class="even">
+<td>الطاقة</td>
+<td>‎-21,800</td>
+<td>‎-23,762</td>
+<td>‎-25,901</td>
+<td>‎-28,232</td>
+<td>‎-30,772</td>
+</tr>
+<tr class="odd">
+<td>التدفق</td>
+<td>25,000</td>
+<td>24,910</td>
+<td>24,718</td>
+<td>24,412</td>
+<td>23,977</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>892.93</mn></mrow><annotation encoding="application/x-tex">
+PW = 8\mathord{,}892.93
+</annotation></semantics></math></p>
+<p>لو افترضنا أن الطاقة ترتفع مع التضخم العام، لكانت القيمة الحالية 20,632.50 دينار. الفرق 11,739.57 دينار. تقدير نسبة كل بند وحده يغير القرار أحيانا.</p>
+</div>
+</section>
+<section id="sec-8-tax" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="sec-8-tax"><span class="header-section-number">8.6</span> التضخم والضريبة</h2>
+<p>قانون الضريبة يحسب الاستهلاك على الثمن الأصلي للأصل، ولا يرفعه مع الأسعار. لذلك يضر التضخم المشاريع بعد الضريبة، حتى لو ارتفع الإيراد والتكاليف معه بالضبط.</p>
+<div id="ex-8-9" class="ee-item" data-id="c08-ex-tax" data-kind="example" data-label="8.9">
+<p><strong>مثال 8.9: التضخم يخفض قيمة الوفر الضريبي من الاستهلاك</strong></p>
+<p>آلة تكلف 100,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بدون قيمة بيع. ربح التشغيل قبل الضريبة والاستهلاك 35,000 دينار سنويا بأسعار اليوم، ويرتفع مع التضخم. نسبة الضريبة 20%، والحد الأدنى للعائد الحقيقي 8%. احسب القيمة الحالية بدون تضخم، ثم بتضخم 6%.</p>
+<p><strong>الحل:</strong></p>
+<p><strong>بدون تضخم:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>0</mn></msub><mo>=</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>35</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mn>20</mn><mi>,</mi><mn>000.00</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>27</mn><mi>,</mi><mn>766.72</mn></mrow><annotation encoding="application/x-tex">
+PW_0 = -100\mathord{,}000 + (35\mathord{,}000\,(1 - 0.2) + 0.2 \times 20\mathord{,}000.00)\,(P/A,\ 8\%,\ 5) = 27\mathord{,}766.72
+</annotation></semantics></math></p>
+<p><strong>مع التضخم:</strong> ربح التشغيل يرتفع مع الأسعار، فيبقى ثابتا بالدينار الثابت. نخصم الجزء الأول بالنسبة الحقيقية.</p>
+<p>أما الاستهلاك فمحسوب على الثمن الأصلي، 20,000.00 دينار بالدينار الفعلي كل سنة، ولا يرتفع مع الأسعار. لذلك نخصم وفره الضريبي بالنسبة السوقية 14.48%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>28</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>4</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>14.48</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>25</mn><mi>,</mi><mn>371.26</mn></mrow><annotation encoding="application/x-tex">
+PW_1 = -100\mathord{,}000 + 28\mathord{,}000.00\,(P/A,\ 8\%,\ 5) + 4\mathord{,}000.00\,(P/A,\ 14.48\%,\ 5) = 25\mathord{,}371.26
+</annotation></semantics></math></p>
+<p>التضخم خفض القيمة الحالية 2,395.46 دينار، مع أن الإيراد والتكاليف ارتفعت معه بالضبط. الوفر الضريبي من الاستهلاك يفقد قوة شرائه، فتدفع الشركة ضريبة حقيقية أكبر.</p>
+</div>
+</section>
+<section id="sec-8-loans" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="sec-8-loans"><span class="header-section-number">8.7</span> التضخم والقروض والادخار</h2>
+<p>القرض بفائدة ثابتة يرد بدنانير فعلية، قيمتها الحقيقية أقل من الدنانير التي أخذت. والوديعة تنمو بالأرقام، لكن قد تخسر قوة شرائها.</p>
+<div id="ex-8-10" class="ee-item" data-id="c08-ex-loan" data-kind="example" data-label="8.10">
+<p><strong>مثال 8.10: القرض بفائدة ثابتة في زمن التضخم</strong></p>
+<p>شخص يقترض 30,000 دينار بفائدة ثابتة 8%، يسددها بثلاثة أقساط سنوية متساوية. التضخم المتوقع 6%. ما قيمة الأقساط بأسعار اليوم؟ وما التكلفة الحقيقية للقرض؟</p>
+<p><strong>الحل:</strong></p>
+<p>القسط الفعلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11</mn><mi>,</mi><mn>641.01</mn></mrow><annotation encoding="application/x-tex">
+A = 30\mathord{,}000\,(A/P,\ 8\%,\ 3) = 11\mathord{,}641.01
+</annotation></semantics></math></p>
+<p>بالدينار الثابت:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القسط الفعلي</td>
+<td>11,641</td>
+<td>11,641</td>
+<td>11,641</td>
+</tr>
+<tr class="even">
+<td>بأسعار اليوم</td>
+<td>10,982</td>
+<td>10,360</td>
+<td>9,774</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.08</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>1.89</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+r_{real} = \frac{1 + 0.08}{1 + 0.06} - 1 = 1.89\%
+</annotation></semantics></math></p>
+<p>المقترض يدفع فعلا أقل مما تظهره الفائدة المعلنة. التضخم ينقل قيمة من المقرض إلى المقترض.</p>
+</div>
+<div id="ex-8-11" class="ee-item" data-id="c08-ex-savings" data-kind="example" data-label="8.11">
+<p><strong>مثال 8.11: الادخار في زمن التضخم</strong></p>
+<p>عائلة تودع 10,000 دينار في حساب يعطي 5% سنويا لمدة 5 سنوات. التضخم 7%. كم يصبح الرصيد؟ وكم يساوي بأسعار اليوم؟</p>
+<p><strong>الحل:</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><mi>,</mi><mn>762.82</mn></mrow><annotation encoding="application/x-tex">
+F = 10\mathord{,}000\,(F/P,\ 5\%,\ 5) = 12\mathord{,}762.82
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mi>,</mi><mn>762.82</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.07</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>5</mn></msup></mrow></mfrac><mo>=</mo><mn>9</mn><mi>,</mi><mn>099.71</mn></mrow><annotation encoding="application/x-tex">
+R = \frac{12\mathord{,}762.82}{(1 + 0.07)^{5}} = 9\mathord{,}099.71
+</annotation></semantics></math></p>
+<p>العائد الحقيقي ‎-1.87% سنويا. الرصيد أكبر بالأرقام، لكنه يشتري أقل مما كان المبلغ يشتريه يوم الإيداع.</p>
+</div>
+</section>
+<section id="sec-8-exchange" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="sec-8-exchange"><span class="header-section-number">8.8</span> أسعار الصرف</h2>
+<p>كثير من المشاريع تشتري معداتها بالدولار، أو تبيع إنتاجها للخارج. تغير سعر الصرف يشبه التضخم: يغير قيمة نفس المبلغ عبر الزمن. القاعدة نفسها: حول كل التدفقات إلى عملة واحدة، ثم اخصم بنسبة تلك العملة.</p>
+<div id="ex-8-12" class="ee-item" data-id="c08-ex-exchange" data-kind="example" data-label="8.12">
+<p><strong>مثال 8.12: مشروع بإيراد بالدولار وتكاليف بالدينار</strong></p>
+<p>شركة تشتري آلة بمبلغ 60,000 دينار لتصنيع قطع تصدرها. الإيراد 30,000 دولار سنويا لمدة 3 سنوات، وتكاليف التشغيل 6,000 دينار. سعر الصرف اليوم 0.71 دينار للدولار، ويتوقع أن يرتفع سعر الدولار مقابل الدينار 3% سنويا. الحد الأدنى للعائد 12% بالدينار. احسب القيمة الحالية.</p>
+<p><strong>الحل:</strong></p>
+<p>كل التدفقات يجب أن تكون بعملة واحدة قبل الخصم. نحول الإيراد إلى دينار بسعر الصرف المتوقع في سنته:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mi>k</mi></msub><mo>=</mo><msub><mi>e</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>d</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">
+e_k = e_0\,(1 + d)^k
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>سعر الصرف</td>
+<td>0.7313</td>
+<td>0.7532</td>
+<td>0.7758</td>
+</tr>
+<tr class="even">
+<td>الإيراد بالدينار</td>
+<td>21,939</td>
+<td>22,597</td>
+<td>23,275</td>
+</tr>
+<tr class="odd">
+<td>التشغيل</td>
+<td>‎-6,000</td>
+<td>‎-6,000</td>
+<td>‎-6,000</td>
+</tr>
+<tr class="even">
+<td>التدفق</td>
+<td>15,939</td>
+<td>16,597</td>
+<td>17,275</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>20</mn><mi>,</mi><mn>241.52</mn></mrow><annotation encoding="application/x-tex">
+PW = -20\mathord{,}241.52
+</annotation></semantics></math></p>
+<p>ارتفاع الدولار يفيد المصدر: نفس الدولارات تصبح دنانير أكثر. سعر الصرف خطر حقيقي على المشروع، ويستحق تحليل حساسية.</p>
+</div>
+<div id="ex-8-13" class="ee-item" data-id="c08-ex-currency-rate" data-kind="example" data-label="8.13">
+<p><strong>مثال 8.13: الحد الأدنى للعائد بعملتين</strong></p>
+<p>شركة حدها الأدنى للعائد 12% على أموالها بالدينار. يتوقع أن يرتفع سعر الدولار مقابل الدينار 4% سنويا. ما الحد الأدنى للعائد الذي تطلبه من مشروع كل تدفقاته بالدولار؟</p>
+<p><strong>الحل:</strong></p>
+<p>الدولار يكسب للشركة مرتين: عائد المشروع بالدولار، ثم تغير سعر الدولار نفسه. بنفس فكرة النسبة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msub><mi>i</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+1 + i_{\mathrm{dinar}} = (1 + i_{\mathrm{dollar}})(1 + d)
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>=</mo><mfrac><mn>1.1200</mn><mn>1.0400</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_{\mathrm{dollar}} = \frac{1.1200}{1.0400} - 1 = 7.69\%
+</annotation></semantics></math></p>
+<p>إذا كان الدولار سيرتفع، تقبل الشركة عائدا أقل بالدولار، لأن ارتفاعه يكمل الباقي.</p>
+<p>الطريقتان متكافئتان: خصم التدفقات بالدولار بنسبة 7.69% ثم التحويل بسعر اليوم، يساوي تحويل كل تدفق بسعر سنته ثم الخصم بنسبة 12%.</p>
+</div>
+</section>
+<section id="sec-8-python" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="sec-8-python"><span class="header-section-number">8.9</span> Python: الطريقتان معا</h2>
+<p>هذا البرنامج يقيم مشروعا بالطريقتين، ويبين أن النتيجة واحدة. ثم يعيد الحساب بخطأ شائع: وفر بأسعار اليوم مع نسبة سوقية.</p>
+<div id="83cfdcfa" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>C, R, n <span class="op">=</span> <span class="dv">50000</span>, <span class="dv">16000</span>, <span class="dv">4</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>ir, f <span class="op">=</span> <span class="fl">0.08</span>, <span class="fl">0.05</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> ir) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>constant <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [R] <span class="op">*</span> n</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>actual <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [R <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">**</span> k <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>)]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"market rate      </span><span class="sc">{</span>im<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"constant, real   </span><span class="sc">{</span>npf<span class="sc">.</span>npv(ir, constant)<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"actual, market   </span><span class="sc">{</span>npf<span class="sc">.</span>npv(im, actual)<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"wrong: mixed     </span><span class="sc">{</span>npf<span class="sc">.</span>npv(im, constant)<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>market rate      13.40%
+constant, real     2,994.03
+actual, market     2,994.03
+wrong: mixed      -2,801.30</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-8-problems" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="sec-8-problems"><span class="header-section-number">8.10</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-8-1" class="ee-item" data-id="c08-a-01" data-kind="problem" data-label="8.1">
+<p><strong>8.1</strong> لماذا يقاس التضخم بسلة من السلع، وليس بسعر سلعة واحدة مثل الخبز؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-1">الحل</a></span></p>
+</div>
+<div id="prob-8-2" class="ee-item" data-id="c08-a-02" data-kind="problem" data-label="8.2">
+<p><strong>8.2</strong> ما الفرق بين الدينار الفعلي والدينار الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-2">الحل</a></span></p>
+</div>
+<div id="prob-8-3" class="ee-item" data-id="c08-a-03" data-kind="problem" data-label="8.3">
+<p><strong>8.3</strong> بنك يعلن فائدة 9% على الودائع. هل هذه نسبة حقيقية أم سوقية؟ ولماذا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-3">الحل</a></span></p>
+</div>
+<div id="prob-8-4" class="ee-item" data-id="c08-a-04" data-kind="problem" data-label="8.4">
+<p><strong>8.4</strong> محلل قدر وفر مشروع بأسعار اليوم، ثم خصمه بالنسبة السوقية. هل تكون القيمة الحالية أعلى أم أقل من الصحيح؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-4">الحل</a></span></p>
+</div>
+<div id="prob-8-5" class="ee-item" data-id="c08-a-05" data-kind="problem" data-label="8.5">
+<p><strong>8.5</strong> عقد إيجار بمبلغ سنوي ثابت لمدة 10 سنوات. بأي نسبة نخصمه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-5">الحل</a></span></p>
+</div>
+<div id="prob-8-6" class="ee-item" data-id="c08-a-06" data-kind="problem" data-label="8.6">
+<p><strong>8.6</strong> مشروع يرتفع إيراده وتكاليفه مع التضخم بالضبط. لماذا تنخفض قيمته الحالية بعد الضريبة مع التضخم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-6">الحل</a></span></p>
+</div>
+<div id="prob-8-7" class="ee-item" data-id="c08-a-07" data-kind="problem" data-label="8.7">
+<p><strong>8.7</strong> من يستفيد من تضخم غير متوقع: المقترض بفائدة ثابتة أم المقرض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-7">الحل</a></span></p>
+</div>
+<div id="prob-8-8" class="ee-item" data-id="c08-a-08" data-kind="problem" data-label="8.8">
+<p><strong>8.8</strong> معدل العائد الداخلي لمشروع بالدينار الفعلي 18%. هل معدله الحقيقي أعلى أم أقل؟ وكيف تحسبه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-8">الحل</a></span></p>
+</div>
+<div id="prob-8-9" class="ee-item" data-id="c08-a-09" data-kind="problem" data-label="8.9">
+<p><strong>8.9</strong> كان التضخم 2% ثم 10% ثم 6%. لماذا لا يكون متوسطه 6% بالضبط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-9">الحل</a></span></p>
+</div>
+<div id="prob-8-10" class="ee-item" data-id="c08-a-10" data-kind="problem" data-label="8.10">
+<p><strong>8.10</strong> قدر مهندس أن الآلة تباع بعد 5 سنوات بمبلغ 8,000 دينار، بالاعتماد على أسعار الآلات المستعملة اليوم. هل هذا مبلغ فعلي أم ثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-10">الحل</a></span></p>
+</div>
+<div id="prob-8-11" class="ee-item" data-id="c08-a-11" data-kind="problem" data-label="8.11">
+<p><strong>8.11</strong> ماذا يحدث للنسبة الحقيقية إذا انخفضت الأسعار، أي كان التضخم سالبا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-11">الحل</a></span></p>
+</div>
+<div id="prob-8-12" class="ee-item" data-id="c08-a-12" data-kind="problem" data-label="8.12">
+<p><strong>8.12</strong> مشروع إيراده بالدولار. لماذا نحول إيراد كل سنة بسعر الصرف المتوقع في تلك السنة، وليس بسعر اليوم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت">الجزء ب: مؤشر الأسعار والدينار الفعلي والثابت</h3>
+<div id="prob-8-13" class="ee-item" data-id="c08-b-01" data-kind="problem" data-label="8.13">
+<p><strong>8.13</strong> كان مؤشر أسعار المستهلك 118.4 في بداية السنة، وأصبح 123.7 في نهايتها. ما نسبة التضخم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-13">الحل</a></span></p>
+</div>
+<div id="prob-8-14" class="ee-item" data-id="c08-b-02" data-kind="problem" data-label="8.14">
+<p><strong>8.14</strong> ارتفع مؤشر الأسعار من 100 إلى 134.0 خلال 6 سنوات. ما متوسط التضخم السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-14">الحل</a></span></p>
+</div>
+<div id="prob-8-15" class="ee-item" data-id="c08-b-03" data-kind="problem" data-label="8.15">
+<p><strong>8.15</strong> مؤشر الأسعار اليوم 125. إذا استمر التضخم 6% سنويا، كم يصبح المؤشر بعد 5 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-15">الحل</a></span></p>
+</div>
+<div id="prob-8-16" class="ee-item" data-id="c08-b-04" data-kind="problem" data-label="8.16">
+<p><strong>8.16</strong> عقد يدفع 25,000 دينار في السنة 7. التضخم المتوقع 5%. كم يساوي المبلغ بدينار السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-16">الحل</a></span></p>
+</div>
+<div id="prob-8-17" class="ee-item" data-id="c08-b-05" data-kind="problem" data-label="8.17">
+<p><strong>8.17</strong> صيانة سنوية تكلف 4,000 دينار بأسعار اليوم، وترتفع مع التضخم 6%. كم ستدفع الشركة فعلا للصيانة في السنة 4؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-17">الحل</a></span></p>
+</div>
+<div id="prob-8-18" class="ee-item" data-id="c08-b-06" data-kind="problem" data-label="8.18">
+<p><strong>8.18</strong> مبلغ 30,000 دينار فعلي في السنة 8. التضخم 4%. كم يساوي بدينار السنة 3؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-18">الحل</a></span></p>
+</div>
+<div id="prob-8-19" class="ee-item" data-id="c08-b-07" data-kind="problem" data-label="8.19">
+<p><strong>8.19</strong> اشترى مصنع ضاغط هواء قبل سنوات بمبلغ 42,000 دينار، عندما كان مؤشر أسعار المعدات 112.5. المؤشر اليوم 141.8. ما التكلفة المتوقعة لنفس الضاغط اليوم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-19">الحل</a></span></p>
+</div>
+<div id="prob-8-20" class="ee-item" data-id="c08-b-08" data-kind="problem" data-label="8.20">
+<p><strong>8.20</strong> زاد راتب عامل 5%، والتضخم 7%. ما التغير الحقيقي في راتبه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-20">الحل</a></span></p>
+</div>
+<div id="prob-8-21" class="ee-item" data-id="c08-b-09" data-kind="problem" data-label="8.21">
+<p><strong>8.21</strong> لم يرتفع راتب موظف منذ 4 سنوات، والتضخم كان 6% سنويا. كم يجب أن يرتفع راتبه ليعود إلى قوة شرائه الأصلية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-21">الحل</a></span></p>
+</div>
+<div id="prob-8-22" class="ee-item" data-id="c08-b-10" data-kind="problem" data-label="8.22">
+<p><strong>8.22</strong> إذا كان التضخم 7% سنويا، بعد كم سنة تتضاعف الأسعار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-22">الحل</a></span></p>
+</div>
+<div id="prob-8-23" class="ee-item" data-id="c08-b-11" data-kind="problem" data-label="8.23">
+<p><strong>8.23</strong> مبلغ 50,000 دينار فعلي في السنة 3. التضخم المتوقع 3% في السنة الأولى، و8% في الثانية، و5% في الثالثة. كم يساوي بأسعار السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-23">الحل</a></span></p>
+</div>
+<div id="prob-8-24" class="ee-item" data-id="c08-b-12" data-kind="problem" data-label="8.24">
+<p><strong>8.24</strong> راتب موظف 1,000 دينار في السنة 0. حصل على زيادات 5% ثم 3% ثم 6% في السنوات الثلاث التالية. التضخم 5% كل سنة. ابن جدولا للراتب الفعلي والراتب بأسعار السنة 0.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-24">الحل</a></span></p>
+</div>
+<div id="prob-8-25" class="ee-item" data-id="c08-b-13" data-kind="problem" data-label="8.25">
+<p><strong>8.25</strong> شخص يحتفظ في البيت بمبلغ 5,000 دينار نقدا لمدة 5 سنوات. التضخم 8%. كم تخسر هذه الدنانير من قوة شرائها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-25">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية">الجزء ج: النسبة الحقيقية والنسبة السوقية</h3>
+<div id="prob-8-26" class="ee-item" data-id="c08-c-01" data-kind="problem" data-label="8.26">
+<p><strong>8.26</strong> العائد الحقيقي المطلوب 5%، والتضخم المتوقع 6%. ما النسبة السوقية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-26">الحل</a></span></p>
+</div>
+<div id="prob-8-27" class="ee-item" data-id="c08-c-02" data-kind="problem" data-label="8.27">
+<p><strong>8.27</strong> الحد الأدنى للعائد في شركة 14%، وهو نسبة سوقية. التضخم المتوقع 6%. ما الحد الأدنى الحقيقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-27">الحل</a></span></p>
+</div>
+<div id="prob-8-28" class="ee-item" data-id="c08-c-03" data-kind="problem" data-label="8.28">
+<p><strong>8.28</strong> سندات حكومية تعطي 10%، وسندات أخرى مربوطة بالتضخم تعطي 4% فوق التضخم. ما التضخم الذي يتوقعه السوق ضمنيا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-28">الحل</a></span></p>
+</div>
+<div id="prob-8-29" class="ee-item" data-id="c08-c-04" data-kind="problem" data-label="8.29">
+<p><strong>8.29</strong> في بلد تضخمه مرتفع، تعطي البنوك 25% والتضخم 18%. قارن العائد الحقيقي الدقيق بالتقريب الذي يطرح النسبتين.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-29">الحل</a></span></p>
+</div>
+<div id="prob-8-30" class="ee-item" data-id="c08-c-05" data-kind="problem" data-label="8.30">
+<p><strong>8.30</strong> وديعة 20,000 دينار بفائدة 8% لمدة 6 سنوات. التضخم 5%. احسب قيمتها في النهاية بالدينار الثابت بطريقتين.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-30">الحل</a></span></p>
+</div>
+<div id="prob-8-31" class="ee-item" data-id="c08-c-06" data-kind="problem" data-label="8.31">
+<p><strong>8.31</strong> أسرة تودع 20,000 دينار اليوم لتشتري بعد 8 سنوات سيارة سعرها اليوم 26,000 دينار. سعر السيارة يرتفع مع التضخم 5%. ما الفائدة التي تحتاجها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-31">الحل</a></span></p>
+</div>
+<div id="prob-8-32" class="ee-item" data-id="c08-c-07" data-kind="problem" data-label="8.32">
+<p><strong>8.32</strong> في فترة ركود انخفضت الأسعار 2% سنويا، والبنوك تعطي 4%. ما العائد الحقيقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-32">الحل</a></span></p>
+</div>
+<div id="prob-8-33" class="ee-item" data-id="c08-c-08" data-kind="problem" data-label="8.33">
+<p><strong>8.33</strong> معدل العائد الداخلي لمشروع محسوب من تدفقات بالدينار الفعلي 18%. التضخم 6%. ما المعدل الحقيقي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-33">الحل</a></span></p>
+</div>
+<div id="prob-8-34" class="ee-item" data-id="c08-c-09" data-kind="problem" data-label="8.34">
+<p><strong>8.34</strong> شركة تريد عائدا حقيقيا 7% على استثماراتها. ما حدها الأدنى السوقي إذا كان التضخم 3%؟ وإذا ارتفع إلى 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-34">الحل</a></span></p>
+</div>
+<div id="prob-8-35" class="ee-item" data-id="c08-c-10" data-kind="problem" data-label="8.35">
+<p><strong>8.35</strong> بنك أ يعطي 9% ثابتة. بنك ب يعطي حسابا مربوطا بالتضخم: يرفع الرصيد مع التضخم، ثم يضيف 2.5%. التضخم المتوقع 6%. أيهما أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-35">الحل</a></span></p>
+</div>
+<div id="prob-8-36" class="ee-item" data-id="c08-c-11" data-kind="problem" data-label="8.36">
+<p><strong>8.36</strong> طالب يريد أن يجمع بعد 5 سنوات ثمن جهاز سعره اليوم 15,000 دينار، ويرتفع مع التضخم 5%. يودع مبلغا ثابتا في نهاية كل سنة بفائدة 8%. كم يودع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-36">الحل</a></span></p>
+</div>
+<div id="prob-8-37" class="ee-item" data-id="c08-c-12" data-kind="problem" data-label="8.37">
+<p><strong>8.37</strong> في المسألة السابقة، يريد الطالب أن يرفع إيداعه كل سنة مع التضخم، لأن دخله يرتفع معه. كم يودع في السنة الأولى؟ وكم في السنة الأخيرة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-37">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-تقييم-المشاريع-مع-التضخم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-تقييم-المشاريع-مع-التضخم">الجزء د: تقييم المشاريع مع التضخم</h3>
+<div id="prob-8-38" class="ee-item" data-id="c08-d-01" data-kind="problem" data-label="8.38">
+<p><strong>8.38</strong> مشروع يكلف 40,000 دينار، ويعطي 11,000 دينار سنويا بأسعار اليوم لمدة 5 سنوات. الحد الأدنى الحقيقي 7%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-38">الحل</a></span></p>
+</div>
+<div id="prob-8-39" class="ee-item" data-id="c08-d-02" data-kind="problem" data-label="8.39">
+<p><strong>8.39</strong> مشروع يكلف 30,000 دينار، ويعطي 12,000 دينار سنويا بأسعار اليوم لمدة 3 سنوات، ويرتفع مع التضخم 8%. الحد الأدنى الحقيقي 6%. احسب القيمة الحالية بالدينار الفعلي، وتأكد بالدينار الثابت.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-39">الحل</a></span></p>
+</div>
+<div id="prob-8-40" class="ee-item" data-id="c08-d-03" data-kind="problem" data-label="8.40">
+<p><strong>8.40</strong> عقد صيانة بمبلغ ثابت 8,000 دينار سنويا لمدة 6 سنوات. الحد الأدنى السوقي 12%، والتضخم 5%. ما القيمة الحالية للعقد؟ وما الخطأ إذا خصمته بالنسبة الحقيقية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-40">الحل</a></span></p>
+</div>
+<div id="prob-8-41" class="ee-item" data-id="c08-d-04" data-kind="problem" data-label="8.41">
+<p><strong>8.41</strong> تكلفة تشغيل 6,300 دينار فعلي في السنة الأولى، وترتفع مع التضخم 5%، لمدة 7 سنوات. الحد الأدنى الحقيقي 6%. ما القيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-41">الحل</a></span></p>
+</div>
+<div id="prob-8-42" class="ee-item" data-id="c08-d-05" data-kind="problem" data-label="8.42">
+<p><strong>8.42</strong> شركة توقع عقدا لتوريد قطع لمدة 4 سنوات بسعر ثابت يعطي إيرادا 22,000 دينار سنويا. المعدات تكلف 50,000 دينار. تكاليف التشغيل 8,000 دينار بأسعار اليوم، وترتفع مع التضخم 7%. الحد الأدنى السوقي 12%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-42">الحل</a></span></p>
+</div>
+<div id="prob-8-43" class="ee-item" data-id="c08-d-06" data-kind="problem" data-label="8.43">
+<p><strong>8.43</strong> آلة مستعملة عمرها 6 سنوات تباع اليوم بمبلغ 9,000 دينار. يتوقع أن تباع الآلة الجديدة بعد 6 سنوات بنفس هذا المبلغ بأسعار اليوم. التضخم 6%، والحد الأدنى الحقيقي 7%. ما سعر البيع الفعلي المتوقع؟ وما قيمته الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-43">الحل</a></span></p>
+</div>
+<div id="prob-8-44" class="ee-item" data-id="c08-d-07" data-kind="problem" data-label="8.44">
+<p><strong>8.44</strong> مشروع يكلف 60,000 دينار، ويعطي 15,000 دينار سنويا بأسعار اليوم، وقيمة بيعه 6,000 دينار بأسعار اليوم بعد 6 سنوات. الحد الأدنى الحقيقي 6%. ما القيمة السنوية بالدينار الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-44">الحل</a></span></p>
+</div>
+<div id="prob-8-45" class="ee-item" data-id="c08-d-08" data-kind="problem" data-label="8.45">
+<p><strong>8.45</strong> آلة أ تكلف 20,000 دينار، وتشغيلها 7,000 دينار سنويا بأسعار اليوم. آلة ب تكلف 34,000 دينار، وتشغيلها 4,000 دينار بأسعار اليوم. التشغيل يرتفع مع التضخم. العمر 8 سنوات لكل منهما. الحد الأدنى الحقيقي 6%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-45">الحل</a></span></p>
+</div>
+<div id="prob-8-46" class="ee-item" data-id="c08-d-09" data-kind="problem" data-label="8.46">
+<p><strong>8.46</strong> مشروع يكلف 50,000 دينار، ويعطي 13,000 دينار سنويا بأسعار اليوم لمدة 6 سنوات، ويرتفع مع التضخم 6%. ما المعدل الحقيقي؟ وما المعدل بالدينار الفعلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-46">الحل</a></span></p>
+</div>
+<div id="prob-8-47" class="ee-item" data-id="c08-d-10" data-kind="problem" data-label="8.47">
+<p><strong>8.47</strong> محلل قدر أن مشروعا يكلف 40,000 دينار، ويوفر 10,000 دينار سنويا بأسعار اليوم لمدة 6 سنوات. ثم خصم الوفر بالحد الأدنى السوقي للشركة 13.42%. التضخم 7%. ما الخطأ في قيمته الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-47">الحل</a></span></p>
+</div>
+<div id="prob-8-48" class="ee-item" data-id="c08-d-11" data-kind="problem" data-label="8.48">
+<p><strong>8.48</strong> بلدية تشغل محطة مياه بلا نهاية. تكلفة التشغيل 21,000 دينار في السنة الأولى، وترتفع مع التضخم 4%. الحد الأدنى الحقيقي 5%. ما القيمة الحالية لكل تكاليف التشغيل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-48">الحل</a></span></p>
+</div>
+<div id="prob-8-49" class="ee-item" data-id="c08-d-12" data-kind="problem" data-label="8.49">
+<p><strong>8.49</strong> روبوت لحام يوفر أجور عامل 9,000 دينار سنويا بأسعار اليوم، لمدة 8 سنوات. الأجور ترتفع مع التضخم. الحد الأدنى الحقيقي 6%. ما أعلى ثمن يستحق دفعه في الروبوت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-49">الحل</a></span></p>
+</div>
+<div id="prob-8-50" class="ee-item" data-id="c08-d-13" data-kind="problem" data-label="8.50">
+<p><strong>8.50</strong> شركة تؤجر معدات اشترتها بمبلغ 45,000 دينار بعقد ثابت 13,000 دينار سنويا لمدة 5 سنوات. التضخم 6%. ما المعدل السوقي والمعدل الحقيقي للاستثمار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-50">الحل</a></span></p>
+</div>
+<div id="prob-8-51" class="ee-item" data-id="c08-d-14" data-kind="problem" data-label="8.51">
+<p><strong>8.51</strong> معرض سيارات يبيع سيارة نقدا بمبلغ 24,000 دينار، أو بالتقسيط على 4 دفعات سنوية متساوية مجموعها أعلى من السعر النقدي بنسبة 3%. الدفعات ثابتة لا تتغير. المشتري يكسب 12% على أمواله. أيهما أفضل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-51">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-بنود-تتغير-بنسب-مختلفة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-بنود-تتغير-بنسب-مختلفة">الجزء هـ: بنود تتغير بنسب مختلفة</h3>
+<div id="prob-8-52" class="ee-item" data-id="c08-e-01" data-kind="problem" data-label="8.52">
+<p><strong>8.52</strong> فاتورة الكهرباء لمصنع 8,000 دينار في السنة الأولى، وترتفع 9% سنويا. الحد الأدنى السوقي 12%. ما القيمة الحالية للكهرباء على 6 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-52">الحل</a></span></p>
+</div>
+<div id="prob-8-53" class="ee-item" data-id="c08-e-02" data-kind="problem" data-label="8.53">
+<p><strong>8.53</strong> فاتورة كهرباء 8,000 دينار فعلي في السنة الأولى، وترتفع 9% سنويا. التضخم العام 5%، والحد الأدنى الحقيقي 6%. ما النمو الحقيقي للفاتورة؟ واحسب قيمتها الحالية على 6 سنوات بالدينار الثابت.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-53">الحل</a></span></p>
+</div>
+<div id="prob-8-54" class="ee-item" data-id="c08-e-03" data-kind="problem" data-label="8.54">
+<p><strong>8.54</strong> تكلفة الوقود لأسطول شاحنات 12,000 دينار سنويا بأسعار اليوم، وتتوقع الشركة أن يرتفع سعر الوقود 10% سنويا. ما التكلفة الفعلية في السنوات الأربع القادمة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-54">الحل</a></span></p>
+</div>
+<div id="prob-8-55" class="ee-item" data-id="c08-e-04" data-kind="problem" data-label="8.55">
+<p><strong>8.55</strong> منتج إلكتروني يدر 15,000 دينار سنويا بأسعار اليوم. بسبب المنافسة، يرتفع سعره 2% فقط سنويا، والتضخم العام 6%. الاستثمار 40,000 دينار، والمدة 5 سنوات، والحد الأدنى الحقيقي 6%. احسب القيمة الحالية، وقارن بفرض أن السعر يرتفع مع التضخم.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-55">الحل</a></span></p>
+</div>
+<div id="prob-8-56" class="ee-item" data-id="c08-e-05" data-kind="problem" data-label="8.56">
+<p><strong>8.56</strong> إيراد خط 40,000 دينار بأسعار اليوم، ويرتفع مع التضخم 4%. تكلفة الطاقة 15,000 دينار، وترتفع 12% سنويا. بعد كم سنة تصبح الطاقة أكبر من الإيراد؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-56">الحل</a></span></p>
+</div>
+<div id="prob-8-57" class="ee-item" data-id="c08-e-06" data-kind="problem" data-label="8.57">
+<p><strong>8.57</strong> أجور فريق صيانة 30,000 دينار سنويا بأسعار اليوم. عقد العمل يرفعها 8% سنويا، والتضخم 5%. الحد الأدنى الحقيقي 6%. ما القيمة الحالية للأجور على 5 سنوات؟ وكم كانت لو ارتفعت مع التضخم فقط؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-57">الحل</a></span></p>
+</div>
+<div id="prob-8-58" class="ee-item" data-id="c08-e-07" data-kind="problem" data-label="8.58">
+<p><strong>8.58</strong> مقاول قدر تكلفة مواد مبنى بمبلغ 200,000 دينار بأسعار اليوم. سيشتري 30% منها في السنة الأولى، و50% في الثانية، و20% في الثالثة. مؤشر أسعار مواد البناء يرتفع 7% سنويا. ما التكلفة الفعلية المتوقعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-58">الحل</a></span></p>
+</div>
+<div id="prob-8-59" class="ee-item" data-id="c08-e-08" data-kind="problem" data-label="8.59">
+<p><strong>8.59</strong> خياران لنفس العمل لمدة 8 سنوات. أ: آلة كهربائية تكلف 30,000 دينار، وكهرباؤها 9,000 دينار في السنة الأولى، وترتفع 10% سنويا. ب: آلة يدوية تكلف 38,000 دينار، وأجور تشغيلها 7,000 دينار في السنة الأولى، وترتفع 4% سنويا. الحد الأدنى السوقي 12%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-59">الحل</a></span></p>
+</div>
+<div id="prob-8-60" class="ee-item" data-id="c08-e-09" data-kind="problem" data-label="8.60">
+<p><strong>8.60</strong> تكلفة الطاقة 10,000 دينار في السنة الأولى. محلل افترض أنها ترتفع مع التضخم العام 4%، والصحيح أنها ترتفع 10%. الحد الأدنى السوقي 12%، والمدة 8 سنوات. كم أخطأ في القيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-60">الحل</a></span></p>
+</div>
+<div id="prob-8-61" class="ee-item" data-id="c08-e-10" data-kind="problem" data-label="8.61">
+<p><strong>8.61</strong> عقد إيجار يبدأ بمبلغ 10,000 دينار في السنة الأولى، ويرتفع 3% سنويا حسب العقد. التضخم 7%. ما قيمة الإيجار في السنة 6 بأسعار السنة 0؟ هل يرتفع الإيجار حقيقيا أم ينخفض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-61">الحل</a></span></p>
+</div>
+<div id="prob-8-62" class="ee-item" data-id="c08-e-11" data-kind="problem" data-label="8.62">
+<p><strong>8.62</strong> نظام عزل حراري يكلف 50,000 دينار، ويوفر من التدفئة 9,000 دينار في السنة الأولى، لمدة 8 سنوات. الحد الأدنى السوقي 12%. ما أقل نسبة ارتفاع سنوي في أسعار الوقود تجعل النظام مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-62">الحل</a></span></p>
+</div>
+<div id="prob-8-63" class="ee-item" data-id="c08-e-12" data-kind="problem" data-label="8.63">
+<p><strong>8.63</strong> تقدير تكلفة خط إنتاج اليوم 120,000 دينار. سيشترى الخط بعد سنتين. مؤشر أسعار المعدات يرتفع 6% سنويا. ما الميزانية التي يجب رصدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-63">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-التضخم-والضريبة-والقروض" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-التضخم-والضريبة-والقروض">الجزء و: التضخم والضريبة والقروض</h3>
+<div id="prob-8-64" class="ee-item" data-id="c08-f-01" data-kind="problem" data-label="8.64">
+<p><strong>8.64</strong> آلة تكلف 80,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%، والحد الأدنى الحقيقي 6%. ما القيمة الحالية للوفر الضريبي بدون تضخم؟ وبتضخم 7%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-64">الحل</a></span></p>
+</div>
+<div id="prob-8-65" class="ee-item" data-id="c08-f-02" data-kind="problem" data-label="8.65">
+<p><strong>8.65</strong> مشروع لمدة 3 سنوات. الآلة تكلف 60,000 دينار، وتستهلك بالقسط الثابت بدون قيمة بيع. ربح التشغيل قبل الاستهلاك والضريبة 28,000 دينار بأسعار اليوم، ويرتفع مع التضخم 8%. نسبة الضريبة 20%، والحد الأدنى السوقي 14%. ابن الجدول بالدينار الفعلي، واحسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-65">الحل</a></span></p>
+</div>
+<div id="prob-8-66" class="ee-item" data-id="c08-f-03" data-kind="problem" data-label="8.66">
+<p><strong>8.66</strong> آلة تكلف 60,000 دينار، وتستهلك بالقسط الثابت على 3 سنوات. ربح التشغيل قبل الاستهلاك والضريبة 27,000 دينار بأسعار اليوم. نسبة الضريبة 20%. ما المعدل الحقيقي بعد الضريبة بدون تضخم؟ وبتضخم 8%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-66">الحل</a></span></p>
+</div>
+<div id="prob-8-67" class="ee-item" data-id="c08-f-04" data-kind="problem" data-label="8.67">
+<p><strong>8.67</strong> شركة رابحة تقترض بفائدة ثابتة 9%. نسبة الضريبة 20%، والتضخم 6%. ما التكلفة الحقيقية للقرض بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-67">الحل</a></span></p>
+</div>
+<div id="prob-8-68" class="ee-item" data-id="c08-f-05" data-kind="problem" data-label="8.68">
+<p><strong>8.68</strong> قرض 40,000 دينار بفائدة ثابتة 8% على 4 أقساط سنوية متساوية. التضخم 7%. ما قيمة كل قسط بأسعار يوم القرض؟ وما مجموعها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-68">الحل</a></span></p>
+</div>
+<div id="prob-8-69" class="ee-item" data-id="c08-f-06" data-kind="problem" data-label="8.69">
+<p><strong>8.69</strong> حكومة تعطي قرضا مدعوما لمشاريع الطاقة: 50,000 دينار بفائدة 6% على 5 سنوات، بأقساط ثابتة. الحد الأدنى السوقي للشركة 12%. كم يساوي الدعم بالقيمة الحالية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-69">الحل</a></span></p>
+</div>
+<div id="prob-8-70" class="ee-item" data-id="c08-f-07" data-kind="problem" data-label="8.70">
+<p><strong>8.70</strong> وديعة بفائدة 7%، وتخضع الفائدة لضريبة 10%. التضخم 5%. ما العائد الحقيقي بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-70">الحل</a></span></p>
+</div>
+<div id="prob-8-71" class="ee-item" data-id="c08-f-08" data-kind="problem" data-label="8.71">
+<p><strong>8.71</strong> شركة اشترت أرضا بمبلغ 100,000 دينار، وباعتها بعد 8 سنوات. سعرها ارتفع مع التضخم 6% فقط. الضريبة على ربح البيع 15%. ما صافي البيع بأسعار يوم الشراء؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-71">الحل</a></span></p>
+</div>
+<div id="prob-8-72" class="ee-item" data-id="c08-f-09" data-kind="problem" data-label="8.72">
+<p><strong>8.72</strong> مشروع لمدة 3 سنوات يحتاج مخزونا قيمته 20,000 دينار بأسعار اليوم. قيمة المخزون ترتفع مع التضخم 8%، ويجب أن يكون الرصيد جاهزا في بداية كل سنة. ما تدفقات رأس المال العامل بالدينار الفعلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-72">الحل</a></span></p>
+</div>
+<div id="prob-8-73" class="ee-item" data-id="c08-f-10" data-kind="problem" data-label="8.73">
+<p><strong>8.73</strong> موظف متقاعد يحصل على راتب تقاعدي ثابت 900 دينار شهريا، لا يرتفع مع الأسعار. التضخم 5% سنويا. كم يساوي راتبه بعد 20 سنة بأسعار اليوم؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-73">الحل</a></span></p>
+</div>
+<div id="prob-8-74" class="ee-item" data-id="c08-f-11" data-kind="problem" data-label="8.74">
+<p><strong>8.74</strong> بنك أقرض 30,000 دينار بفائدة ثابتة 10% على 3 أقساط متساوية. البنك يريد عائدا حقيقيا 4%. التضخم جاء 6%. هل حقق البنك هدفه؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-74">الحل</a></span></p>
+</div>
+<div id="prob-8-75" class="ee-item" data-id="c08-f-12" data-kind="problem" data-label="8.75">
+<p><strong>8.75</strong> آلة تكلف 100,000 دينار، وعمرها الضريبي 4 سنوات. نسبة الضريبة 20%، والحد الأدنى الحقيقي 6%، والتضخم 8%. قارن خسارة الوفر الضريبي بسبب التضخم بالقسط الثابت والمتناقص المضاعف مع التحول.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-75">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-أسعار-الصرف" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-أسعار-الصرف">الجزء ز: أسعار الصرف</h3>
+<div id="prob-8-76" class="ee-item" data-id="c08-g-01" data-kind="problem" data-label="8.76">
+<p><strong>8.76</strong> آلة سعرها 45,000 دولار. سعر الصرف 0.71 دينار للدولار. كم تكلف بالدينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-76">الحل</a></span></p>
+</div>
+<div id="prob-8-77" class="ee-item" data-id="c08-g-02" data-kind="problem" data-label="8.77">
+<p><strong>8.77</strong> سعر الصرف اليوم 0.71 دينار للدولار. يتوقع أن يرتفع الدولار مقابل الدينار 3% سنويا. ما سعر الصرف المتوقع بعد 4 سنوات؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-77">الحل</a></span></p>
+</div>
+<div id="prob-8-78" class="ee-item" data-id="c08-g-03" data-kind="problem" data-label="8.78">
+<p><strong>8.78</strong> مورد يبيع آلة بمبلغ 60,000 دولار: 30% عند التوقيع، والباقي بعد سنة. سعر الصرف اليوم 0.71 دينار للدولار، ويتوقع أن يرتفع الدولار 4% خلال السنة. ما التكلفة المتوقعة بالدينار في كل دفعة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-78">الحل</a></span></p>
+</div>
+<div id="prob-8-79" class="ee-item" data-id="c08-g-04" data-kind="problem" data-label="8.79">
+<p><strong>8.79</strong> حد أدنى للعائد 14% بالدينار. يتوقع أن يرتفع الدولار مقابل الدينار 3% سنويا. ما الحد الأدنى المكافئ بالدولار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-79">الحل</a></span></p>
+</div>
+<div id="prob-8-80" class="ee-item" data-id="c08-g-05" data-kind="problem" data-label="8.80">
+<p><strong>8.80</strong> مشروع كل تدفقاته بالدولار: يكلف 80,000 دولار، ويعطي 32,000 دولار سنويا لمدة 3 سنوات. سعر الصرف اليوم 0.71 دينار للدولار، ويرتفع الدولار 3% سنويا. الحد الأدنى بالدينار 12%. احسب القيمة الحالية بالدينار بطريقتين.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-80">الحل</a></span></p>
+</div>
+<div id="prob-8-81" class="ee-item" data-id="c08-g-06" data-kind="problem" data-label="8.81">
+<p><strong>8.81</strong> عرضان لنفس الآلة، كلاهما نصف الثمن اليوم ونصفه بعد سنة. مورد محلي يبيعها بمبلغ 40,000 دينار. مورد أجنبي يبيعها بمبلغ 57,400 دولار. سعر الصرف 0.71 دينار للدولار، ويتوقع أن يرتفع الدولار 4% خلال السنة. الحد الأدنى 12%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-81">الحل</a></span></p>
+</div>
+<div id="prob-8-82" class="ee-item" data-id="c08-g-07" data-kind="problem" data-label="8.82">
+<p><strong>8.82</strong> التضخم المتوقع 6% في بلد الدينار، و3% في بلد الدولار. سعر الصرف 0.71 دينار للدولار. حسب مبدأ تعادل القوة الشرائية، ما سعر الصرف المتوقع بعد سنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-82">الحل</a></span></p>
+</div>
+<div id="prob-8-83" class="ee-item" data-id="c08-g-08" data-kind="problem" data-label="8.83">
+<p><strong>8.83</strong> مصدر يبيع بمبلغ 50,000 دولار سنويا، وتكاليفه 20,000 دينار. يحتاج تدفقا لا يقل عن 15,000 دينار سنويا ليسدد قرضه. ما أقل سعر صرف يحقق ذلك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-83">الحل</a></span></p>
+</div>
+<div id="prob-8-84" class="ee-item" data-id="c08-g-09" data-kind="problem" data-label="8.84">
+<p><strong>8.84</strong> شركة دخلها بالدينار تقترض. بنك يقرضها بالدولار بفائدة 6%، وآخر بالدينار بفائدة 9%. يتوقع أن يرتفع الدولار 2% سنويا. أي القرضين أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-84">الحل</a></span></p>
+</div>
+<div id="prob-8-85" class="ee-item" data-id="c08-g-10" data-kind="problem" data-label="8.85">
+<p><strong>8.85</strong> مشروع تصدير يكلف 70,000 دينار، وإيراده 40,000 دولار سنويا، وتكاليفه 9,000 دينار، لمدة 3 سنوات. سعر الصرف اليوم 0.71 دينار للدولار. الحد الأدنى 12%. احسب القيمة الحالية إذا تغير الدولار سنويا بنسبة 2% نزولا، أو بقي ثابتا، أو ارتفع 2%.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-85">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-8-86" class="ee-item" data-id="c08-h-01" data-kind="problem" data-label="8.86">
+<p><strong>8.86</strong> مشروع يكلف 50,000 دينار، وتدفقاته الفعلية في السنوات 1 إلى 5: 12,000 و13,000 و14,500 و15,000 و16,500 دينار. التضخم 5%، والحد الأدنى الحقيقي 6%. ابن في Excel صفا بالتدفقات بالدينار الثابت، واحسب القيمة الحالية بالطريقتين.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-86">الحل</a></span></p>
+</div>
+<div id="prob-8-87" class="ee-item" data-id="c08-h-02" data-kind="problem" data-label="8.87">
+<p><strong>8.87</strong> اكتب في Python برنامجا يحسب القيمة الحالية لمشروع مثال التضخم والضريبة في هذا الفصل، بأرقامه الأصلية، عند تضخم 0% و3% و6% و9% و12%.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-87">الحل</a></span></p>
+</div>
+<div id="prob-8-88" class="ee-item" data-id="c08-h-03" data-kind="problem" data-label="8.88">
+<p><strong>8.88</strong> مؤشر الأسعار في 6 سنوات متتالية: 100 و103.2 و108.9 و112.0 و118.5 و121.3. اكتب في Python برنامجا يحسب التضخم في كل سنة، ومتوسطه الهندسي.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-88">الحل</a></span></p>
+</div>
+<div id="prob-8-89" class="ee-item" data-id="c08-h-04" data-kind="problem" data-label="8.89">
+<p><strong>8.89</strong> احسب متوسط التضخم في المسألة السابقة بدالة واحدة في Excel.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-89">الحل</a></span></p>
+</div>
+<div id="prob-8-90" class="ee-item" data-id="c08-h-05" data-kind="problem" data-label="8.90">
+<p><strong>8.90</strong> اكتب في Python دالتين: الأولى تحول قائمة تدفقات من دينار ثابت إلى فعلي، والثانية تعكسها. جربهما على تدفقات ثابتة 10,000 دينار لثلاث سنوات بتضخم 6%.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-90">الحل</a></span></p>
+</div>
+<div id="prob-8-91" class="ee-item" data-id="c08-h-06" data-kind="problem" data-label="8.91">
+<p><strong>8.91</strong> ابن في Excel جدولا لمشروع لمدة 4 سنوات يكلف 70,000 دينار. بأسعار اليوم: الإيراد 60,000 دينار ويرتفع 5% سنويا، والطاقة 18,000 دينار وترتفع 10%، والأجور 12,000 دينار وترتفع 4%. الحد الأدنى السوقي 13%. ضع كل نسبة في خلية مستقلة.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-91">الحل</a></span></p>
+</div>
+<div id="prob-8-92" class="ee-item" data-id="c08-h-07" data-kind="problem" data-label="8.92">
+<p><strong>8.92</strong> مشروع يكلف 70,000 دولار، ويعطي 40,000 دولار سنويا لمدة 3 سنوات، وتكاليفه 9,000 دينار سنويا. سعر الصرف اليوم 0.71 دينار للدولار. الحد الأدنى 12% بالدينار. اكتب في Python برنامجا يحسب القيمة الحالية بالدينار لتغير سنوي في الدولار من ‎-4% إلى +4% بخطوة 2%.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-92">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-8-93" class="ee-item" data-id="c08-i-01" data-kind="problem" data-label="8.93">
+<p><strong>8.93</strong> النسبة الحقيقية 6% والتضخم 5%. ما النسبة السوقية؟</p>
+<p>أ) 11.00%<br>
+ب) 11.30%<br>
+ج) 1.00%<br>
+د) 0.30%</p>
+<p><span class="ee-sol-link"><a href="#sol-8-93">الحل</a></span></p>
+</div>
+<div id="prob-8-94" class="ee-item" data-id="c08-i-02" data-kind="problem" data-label="8.94">
+<p><strong>8.94</strong> وفر مشروع مقدر بأسعار اليوم، ويرتفع مع التضخم. بأي نسبة نخصمه؟</p>
+<p>أ) النسبة السوقية<br>
+ب) النسبة الحقيقية<br>
+ج) نسبة التضخم<br>
+د) مجموع النسبتين</p>
+<p><span class="ee-sol-link"><a href="#sol-8-94">الحل</a></span></p>
+</div>
+<div id="prob-8-95" class="ee-item" data-id="c08-i-03" data-kind="problem" data-label="8.95">
+<p><strong>8.95</strong> قسط قرض ثابت 500 دينار شهريا. ماذا يحدث لعبئه الحقيقي مع التضخم؟</p>
+<p>أ) يرتفع<br>
+ب) ينخفض<br>
+ج) لا يتغير<br>
+د) يرتفع ثم ينخفض</p>
+<p><span class="ee-sol-link"><a href="#sol-8-95">الحل</a></span></p>
+</div>
+<div id="prob-8-96" class="ee-item" data-id="c08-i-04" data-kind="problem" data-label="8.96">
+<p><strong>8.96</strong> مبلغ 20,000 دينار فعلي في السنة 5. التضخم 6%. كم يساوي بأسعار السنة 0؟</p>
+<p>أ) 26,764.51<br>
+ب) 14,000.00<br>
+ج) 15,384.62<br>
+د) 14,945.16</p>
+<p><span class="ee-sol-link"><a href="#sol-8-96">الحل</a></span></p>
+</div>
+<div id="prob-8-97" class="ee-item" data-id="c08-i-05" data-kind="problem" data-label="8.97">
+<p><strong>8.97</strong> مشروع يرتفع إيراده وتكاليفه مع التضخم بالضبط. ماذا يحدث لقيمته الحالية بعد الضريبة إذا ارتفع التضخم؟</p>
+<p>أ) ترتفع<br>
+ب) لا تتغير<br>
+ج) تنخفض<br>
+د) تعتمد على الحد الأدنى فقط</p>
+<p><span class="ee-sol-link"><a href="#sol-8-97">الحل</a></span></p>
+</div>
+<div id="prob-8-98" class="ee-item" data-id="c08-i-06" data-kind="problem" data-label="8.98">
+<p><strong>8.98</strong> وديعة بفائدة 12% والتضخم 7%. ما العائد الحقيقي بالضبط؟</p>
+<p>أ) 5.00%<br>
+ب) 19.84%<br>
+ج) 11.21%<br>
+د) 4.67%</p>
+<p><span class="ee-sol-link"><a href="#sol-8-98">الحل</a></span></p>
+</div>
+<div id="prob-8-99" class="ee-item" data-id="c08-i-07" data-kind="problem" data-label="8.99">
+<p><strong>8.99</strong> مؤشر الأسعار ارتفع من 120 إلى 129 خلال سنة. ما التضخم؟</p>
+<p>أ) 9.00%<br>
+ب) 6.98%<br>
+ج) 7.50%<br>
+د) 107.50%</p>
+<p><span class="ee-sol-link"><a href="#sol-8-99">الحل</a></span></p>
+</div>
+<div id="prob-8-100" class="ee-item" data-id="c08-i-08" data-kind="problem" data-label="8.100">
+<p><strong>8.100</strong> شركة دخلها بالدينار، وتقترض بالدولار لأن فائدته أقل. ما الخطر الأساسي؟</p>
+<p>أ) ارتفاع الدولار مقابل الدينار<br>
+ب) انخفاض الدولار مقابل الدينار<br>
+ج) انخفاض التضخم<br>
+د) ارتفاع الضريبة</p>
+<p><span class="ee-sol-link"><a href="#sol-8-100">الحل</a></span></p>
+</div>
+<div id="prob-8-101" class="ee-item" data-id="c08-i-09" data-kind="problem" data-label="8.101">
+<p><strong>8.101</strong> عقد صيانة بمبلغ ثابت 6,000 دينار سنويا لمدة 5 سنوات. محلل خصمه بالنسبة الحقيقية. ما أثر خطئه؟</p>
+<p>أ) قلل تكلفة العقد<br>
+ب) بالغ في تكلفة العقد<br>
+ج) لا أثر<br>
+د) الخطأ في التدفقات وليس في النسبة</p>
+<p><span class="ee-sol-link"><a href="#sol-8-101">الحل</a></span></p>
+</div>
+<div id="prob-8-102" class="ee-item" data-id="c08-i-10" data-kind="problem" data-label="8.102">
+<p><strong>8.102</strong> زاد راتب 4%، والتضخم 7%. ما التغير الحقيقي في الراتب؟</p>
+<p>أ) 11.00%<br>
+ب) 4.00%<br>
+ج) ‎-3.00%<br>
+د) ‎-2.80%</p>
+<p><span class="ee-sol-link"><a href="#sol-8-102">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h3>
+<p>كل حالة قرار كامل من البداية إلى النهاية.</p>
+<div id="prob-8-103" class="ee-item" data-id="c08-j-01" data-kind="problem" data-label="8.103">
+<p><strong>8.103</strong> <strong>حالة 8.1: مخزن تبريد لمصنع ألبان</strong></p>
+<p>مصنع ألبان يدرس بناء مخزن تبريد يكلف 120,000 دينار، لمدة 5 سنوات. البيانات بأسعار اليوم:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المبلغ</th>
+<th>الارتفاع السنوي</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد الإضافي</td>
+<td>70,000</td>
+<td>6% مع التضخم</td>
+</tr>
+<tr class="even">
+<td>الكهرباء</td>
+<td>15,000</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>الأجور</td>
+<td>18,000</td>
+<td>5%</td>
+</tr>
+<tr class="even">
+<td>البيع في النهاية</td>
+<td>20,000</td>
+<td>6% مع التضخم</td>
+</tr>
+</tbody>
+</table>
+<p>الاستهلاك بالقسط الثابت على 5 سنوات بدون قيمة بيع ضريبية. نسبة الضريبة 15%، والحد الأدنى الحقيقي 7%.</p>
+<p>(أ) ما الحد الأدنى السوقي؟ (ب) ابن جدول التدفقات بالدينار الفعلي. (ج) احسب القيمة الحالية. (د) احسبها بدون تضخم، وفسر الفرق.</p>
+<p><span class="ee-sol-link"><a href="#sol-8-103">الحل</a></span></p>
+</div>
+<div id="prob-8-104" class="ee-item" data-id="c08-j-02" data-kind="problem" data-label="8.104">
+<p><strong>8.104</strong> <strong>حالة 8.2: مهندس يدخر لدفعة أولى لشقة</strong></p>
+<p>مهندس حديث التخرج يريد شراء شقة بعد 6 سنوات. الدفعة الأولى اليوم 30,000 دينار، وأسعار الشقق ترتفع مع التضخم 5% سنويا. البنك يعطي 8% على الادخار. راتبه يرتفع مع التضخم تقريبا.</p>
+<p>(أ) كم تكون الدفعة الأولى بعد 6 سنوات؟ (ب) كم يودع سنويا بمبلغ ثابت؟ (ج) إذا رفع إيداعه مع التضخم كل سنة، كم يودع في السنة الأولى والأخيرة؟ (د) أي الخطتين أنسب له؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-104">الحل</a></span></p>
+</div>
+<div id="prob-8-105" class="ee-item" data-id="c08-j-03" data-kind="problem" data-label="8.105">
+<p><strong>8.105</strong> <strong>حالة 8.3: آلة تغليف محلية أم مستوردة</strong></p>
+<p>مصنع حلويات يختار بين آلتي تغليف لمدة 6 سنوات، بدون قيمة بيع:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المحلية</th>
+<th>المستوردة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الثمن</td>
+<td>68,000 دينار</td>
+<td>90,000 دولار</td>
+</tr>
+<tr class="even">
+<td>الطاقة بأسعار اليوم</td>
+<td>9,000 دينار</td>
+<td>6,000 دينار</td>
+</tr>
+<tr class="odd">
+<td>عقد الصيانة السنوي</td>
+<td>ضمن الثمن</td>
+<td>2,000 دولار ثابتة</td>
+</tr>
+</tbody>
+</table>
+<p>أسعار الطاقة ترتفع 8% سنويا. سعر الصرف 0.71 دينار للدولار، ويتوقع أن يرتفع الدولار 2% سنويا. الحد الأدنى السوقي 12% بالدينار. تجاهل الضريبة.</p>
+<p>(أ) احسب القيمة الحالية لتكاليف المحلية. (ب) احسبها للمستوردة. (ج) أيهما أرخص؟ وما الخطر الذي لا تظهره الأرقام؟</p>
+<p><span class="ee-sol-link"><a href="#sol-8-105">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch07.html" class="pagination-link" aria-label="التدفقات النقدية للمشروع">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

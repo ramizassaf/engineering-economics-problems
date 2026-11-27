@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix N — حلول مسائل الفصل 8 – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/solutions-ch07.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch08.html"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">التضخم وأسعار الصرف</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/cost-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">تقدير التكاليف</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" id="toc-الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" class="nav-link" data-scroll-target="#الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت">الجزء ب: مؤشر الأسعار والدينار الفعلي والثابت</a></li>
+  <li><a href="#الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" id="toc-الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" class="nav-link" data-scroll-target="#الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية">الجزء ج: النسبة الحقيقية والنسبة السوقية</a></li>
+  <li><a href="#الجزء-د-تقييم-المشاريع-مع-التضخم" id="toc-الجزء-د-تقييم-المشاريع-مع-التضخم" class="nav-link" data-scroll-target="#الجزء-د-تقييم-المشاريع-مع-التضخم">الجزء د: تقييم المشاريع مع التضخم</a></li>
+  <li><a href="#الجزء-هـ-بنود-تتغير-بنسب-مختلفة" id="toc-الجزء-هـ-بنود-تتغير-بنسب-مختلفة" class="nav-link" data-scroll-target="#الجزء-هـ-بنود-تتغير-بنسب-مختلفة">الجزء هـ: بنود تتغير بنسب مختلفة</a></li>
+  <li><a href="#الجزء-و-التضخم-والضريبة-والقروض" id="toc-الجزء-و-التضخم-والضريبة-والقروض" class="nav-link" data-scroll-target="#الجزء-و-التضخم-والضريبة-والقروض">الجزء و: التضخم والضريبة والقروض</a></li>
+  <li><a href="#الجزء-ز-أسعار-الصرف" id="toc-الجزء-ز-أسعار-الصرف" class="nav-link" data-scroll-target="#الجزء-ز-أسعار-الصرف">الجزء ز: أسعار الصرف</a></li>
+  <li><a href="#الجزء-ح-مسائل-excel-وpython" id="toc-الجزء-ح-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ط-اختيار-من-متعدد" id="toc-الجزء-ط-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ي-حالات-مصغرة" id="toc-الجزء-ي-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/solutions-ch08.html"><span class="chapter-number">N</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل 8</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-sol-8" class="quarto-section-identifier">Appendix N — حلول مسائل الفصل 8</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>الحلول التالية محسوبة ببرنامج من نفس بنك الأسئلة الذي ولد نصوص المسائل. إذا حللت بالجداول قد يختلف جوابك في الخانة العشرية الأخيرة.</p>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h2>
+<p><span id="sol-8-1"><strong>8.1</strong></span> لأن أسعار السلع تتغير بنسب مختلفة، وبعضها ينخفض. السلة تمثل ما تشتريه الأسرة العادية، فتقيس التغير العام في تكلفة المعيشة.</p>
+<p><span id="sol-8-2"><strong>8.2</strong></span> الفعلي هو المبلغ الذي يدفع فعلا في سنته. الثابت هو نفس المبلغ مقاسا بقوة شراء سنة الأساس، أي بعد إزالة أثر التضخم.</p>
+<p><span id="sol-8-3"><strong>8.3</strong></span> سوقية. البنك يدفع دنانير فعلية، والنسبة تتضمن تعويضا عن التضخم المتوقع.</p>
+<p><span id="sol-8-4"><strong>8.4</strong></span> أقل. الوفر بأسعار اليوم لا يتضمن التضخم، والنسبة السوقية تخصم التضخم. فيطرح التضخم مرة دون أن يضاف، ويرفض مشاريع جيدة.</p>
+<p><span id="sol-8-5"><strong>8.5</strong></span> بالنسبة السوقية، لأن المبلغ ثابت بالدينار الفعلي. أو نحوله إلى دينار ثابت سنة بسنة ثم نخصمه بالنسبة الحقيقية.</p>
+<p><span id="sol-8-6"><strong>8.6</strong></span> لأن الاستهلاك محسوب على الثمن الأصلي ولا يرتفع مع الأسعار. وفره الضريبي يفقد قوة شرائه، فترتفع الضريبة الحقيقية.</p>
+<p><span id="sol-8-7"><strong>8.7</strong></span> المقترض. يرد دنانير قيمتها الحقيقية أقل من التي اقترضها. أما المقرض فيخسر جزءا من قوة شراء ماله.</p>
+<p><span id="sol-8-8"><strong>8.8</strong></span> أقل. نزيل التضخم من المعدل بنفس علاقة النسب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>I</mi><mi>R</mi><msub><mi>R</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>I</mi><mi>R</mi><msub><mi>R</mi><mi>m</mi></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>f</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+1 + IRR_r = \frac{1 + IRR_m}{1 + f}
+</annotation></semantics></math></p>
+<p><span id="sol-8-9"><strong>8.9</strong></span> لأن الأسعار تتضاعف ولا تجمع. المتوسط الصحيح هو النسبة الثابتة التي تعطي نفس الزيادة الكلية، وهي أقل قليلا من المتوسط الحسابي.</p>
+<p><span id="sol-8-10"><strong>8.10</strong></span> ثابت، لأنه مبني على أسعار اليوم. إذا أردت الدينار الفعلي، ارفعه بالتضخم خمس سنوات.</p>
+<p><span id="sol-8-11"><strong>8.11</strong></span> تصبح أعلى من النسبة السوقية. الدينار المدخر ينمو بالفائدة، ويشتري أكثر أيضا لأن الأسعار انخفضت.</p>
+<p><span id="sol-8-12"><strong>8.12</strong></span> لأن الشركة تقبض الدولارات في تلك السنة وتحولها بسعرها. استخدام سعر اليوم يتجاهل خطر تغير الصرف، أو يتطلب نسبة خصم بالدولار وليس بالدينار.</p>
+</section>
+<section id="الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-مؤشر-الأسعار-والدينار-الفعلي-والثابت">الجزء ب: مؤشر الأسعار والدينار الفعلي والثابت</h2>
+<p><span id="sol-8-13"><strong>8.13</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mn>123.7</mn><mn>118.4</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>4.48</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+f = \frac{123.7}{118.4} - 1 = 4.48\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-14"><strong>8.14</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>f</mi><mo accent="true">‾</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>134.0</mn><mn>100</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>6</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>5.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\bar{f} = \left(\frac{134.0}{100}\right)^{1/6} - 1 = 5.00\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=RRI(6, 100, 134)</code></pre>
+<p><span id="sol-8-15"><strong>8.15</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>5</mn></msub><mo>=</mo><mn>125</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>5</mn></msup><mo>=</mo><mn>167.28</mn></mrow><annotation encoding="application/x-tex">
+I_{5} = 125\,(1 + 0.06)^{5} = 167.28
+</annotation></semantics></math></p>
+<p><span id="sol-8-16"><strong>8.16</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>25</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>17</mn><mi>,</mi><mn>767.03</mn></mrow><annotation encoding="application/x-tex">
+R = 25\mathord{,}000\,(P/F,\ 5\%,\ 7) = 17\mathord{,}767.03
+</annotation></semantics></math></p>
+<p><span id="sol-8-17"><strong>8.17</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>4</mn></msub><mo>=</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>049.91</mn></mrow><annotation encoding="application/x-tex">
+A_{4} = 4\mathord{,}000\,(F/P,\ 6\%,\ 4) = 5\mathord{,}049.91
+</annotation></semantics></math></p>
+<p><span id="sol-8-18"><strong>8.18</strong></span> نخصم بالتضخم عدد السنوات بين سنة المبلغ وسنة الأساس:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>5</mn></msup></mrow></mfrac><mo>=</mo><mn>24</mn><mi>,</mi><mn>657.81</mn></mrow><annotation encoding="application/x-tex">
+R = \frac{30\mathord{,}000}{(1 + 0.04)^{5}} = 24\mathord{,}657.81
+</annotation></semantics></math></p>
+<p><span id="sol-8-19"><strong>8.19</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mrow><mi>n</mi><mi>o</mi><mi>w</mi></mrow></msub><mo>=</mo><mn>42</mn><mi>,</mi><mn>000</mn><mo>×</mo><mfrac><mn>141.8</mn><mn>112.5</mn></mfrac><mo>=</mo><mn>52</mn><mi>,</mi><mn>938.67</mn></mrow><annotation encoding="application/x-tex">
+P_{now} = 42\mathord{,}000 \times \frac{141.8}{112.5} = 52\mathord{,}938.67
+</annotation></semantics></math></p>
+<p>يستخدم المهندسون مؤشرات خاصة بكل نوع من المعدات، لأن أسعارها لا ترتفع بنفس نسبة التضخم العام.</p>
+<p><span id="sol-8-20"><strong>8.20</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.07</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mi>−</mi><mn>1.87</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.05}{1 + 0.07} - 1 = -1.87\%
+</annotation></semantics></math></p>
+<p>قوة شرائه انخفضت.</p>
+<p><span id="sol-8-21"><strong>8.21</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>4</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>26.25</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + 0.06)^{4} - 1 = 26.25\%
+</annotation></semantics></math></p>
+<p>الزيادة المطلوبة أكبر من 4 ضرب 6%، لأن التضخم يتراكم.</p>
+<p><span id="sol-8-22"><strong>8.22</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.07</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">
+(1 + 0.07)^k = 2
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mn>2</mn></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.07</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>10.24</mn></mrow><annotation encoding="application/x-tex">
+k = \frac{\ln 2}{\ln(1 + 0.07)} = 10.24
+</annotation></semantics></math></p>
+<p>قاعدة 72 تعطي تقريبا سريعا: 72 مقسومة على نسبة التضخم بالمئة تساوي 10.29 سنة.</p>
+<p><span id="sol-8-23"><strong>8.23</strong></span> نخصم كل سنة بنسبتها:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mn>50</mn><mi>,</mi><mn>000</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.03</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.08</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>42</mn><mi>,</mi><mn>807.49</mn></mrow><annotation encoding="application/x-tex">
+R = \frac{50\mathord{,}000}{(1 + 0.03)(1 + 0.08)(1 + 0.05)} = 42\mathord{,}807.49
+</annotation></semantics></math></p>
+<p><span id="sol-8-24"><strong>8.24</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الراتب الفعلي</td>
+<td>1,050.00</td>
+<td>1,081.50</td>
+<td>1,146.39</td>
+</tr>
+<tr class="even">
+<td>بأسعار السنة 0</td>
+<td>1,000.00</td>
+<td>980.95</td>
+<td>990.29</td>
+</tr>
+</tbody>
+</table>
+<p>بعد ثلاث سنوات، قوة شرائه أقل مما كانت بمقدار 0.97%.</p>
+<p><span id="sol-8-25"><strong>8.25</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>402.92</mn></mrow><annotation encoding="application/x-tex">
+R = 5\mathord{,}000\,(P/F,\ 8\%,\ 5) = 3\mathord{,}402.92
+</annotation></semantics></math></p>
+<p>الخسارة 1,597.08 دينار بأسعار اليوم، أي 31.94% من قوة الشراء. النقد في البيت ليس آمنا من التضخم.</p>
+</section>
+<section id="الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-النسبة-الحقيقية-والنسبة-السوقية">الجزء ج: النسبة الحقيقية والنسبة السوقية</h2>
+<p><span id="sol-8-26"><strong>8.26</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>0.05</mn><mo>+</mo><mn>0.06</mn><mo>+</mo><mn>0.05</mn><mo>×</mo><mn>0.06</mn><mo>=</mo><mn>11.30</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = 0.05 + 0.06 + 0.05 \times 0.06 = 11.30\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-27"><strong>8.27</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.14</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.55</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = \frac{1 + 0.14}{1 + 0.06} - 1 = 7.55\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-28"><strong>8.28</strong></span> المستثمر يقبل السندين معا عندما يتساوى عائدهما:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.1</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>5.77</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+f = \frac{1 + 0.1}{1 + 0.04} - 1 = 5.77\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-29"><strong>8.29</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.25</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.18</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>5.93</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = \frac{1 + 0.25}{1 + 0.18} - 1 = 5.93\%
+</annotation></semantics></math></p>
+<p>التقريب 7.00%. الخطأ 1.07% نقطة مئوية. عندما تكون النسب كبيرة، استخدم العلاقة الدقيقة.</p>
+<p><span id="sol-8-30"><strong>8.30</strong></span> <strong>الطريقة الأولى:</strong> الرصيد الفعلي، ثم نزيل التضخم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>31</mn><mi>,</mi><mn>737.49</mn></mrow><annotation encoding="application/x-tex">
+F = 20\mathord{,}000\,(F/P,\ 8\%,\ 6) = 31\mathord{,}737.49
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>31</mn><mi>,</mi><mn>737.49</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mi>,</mi><mn>683.00</mn></mrow><annotation encoding="application/x-tex">
+R = 31\mathord{,}737.49\,(P/F,\ 5\%,\ 6) = 23\mathord{,}683.00
+</annotation></semantics></math></p>
+<p><strong>الطريقة الثانية:</strong> نمو مباشر بالنسبة الحقيقية 2.86%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2.86</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mi>,</mi><mn>683.00</mn></mrow><annotation encoding="application/x-tex">
+R = 20\mathord{,}000\,(F/P,\ 2.86\%,\ 6) = 23\mathord{,}683.00
+</annotation></semantics></math></p>
+<p><span id="sol-8-31"><strong>8.31</strong></span> سعر السيارة الفعلي بعد 8 سنوات:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>26</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>38</mn><mi>,</mi><mn>413.84</mn></mrow><annotation encoding="application/x-tex">
+26\mathord{,}000\,(F/P,\ 5\%,\ 8) = 38\mathord{,}413.84
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>38</mn><mi>,</mi><mn>413.84</mn></mrow><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>8</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>8.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i = \left(\frac{38\mathord{,}413.84}{20\mathord{,}000}\right)^{1/8} - 1 = 8.50\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-32"><strong>8.32</strong></span> التضخم سالب:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow><mrow><mn>1</mn><mo>−</mo><mn>0.02</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>6.12</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = \frac{1 + 0.04}{1 - 0.02} - 1 = 6.12\%
+</annotation></semantics></math></p>
+<p>العائد الحقيقي أعلى من المعلن، لأن الدينار يشتري أكثر مع الزمن.</p>
+<p><span id="sol-8-33"><strong>8.33</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>R</mi><msub><mi>R</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.18</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>11.32</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+IRR_r = \frac{1 + 0.18}{1 + 0.06} - 1 = 11.32\%
+</annotation></semantics></math></p>
+<p>قارنه بحد أدنى حقيقي، أو قارن 18% بحد أدنى سوقي.</p>
+<p><span id="sol-8-34"><strong>8.34</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub><mo>=</mo><mn>10.21</mn><mi>%</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>i</mi><mrow><mi>m</mi><mn>2</mn></mrow></msub><mo>=</mo><mn>17.70</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_{m1} = 10.21\%, \qquad i_{m2} = 17.70\%
+</annotation></semantics></math></p>
+<p>كلما ارتفع التضخم ارتفع الحد الأدنى السوقي، مع أن الشركة لا تطلب عائدا حقيقيا أكبر.</p>
+<p><span id="sol-8-35"><strong>8.35</strong></span> حساب البنك ب يعطي عائدا حقيقيا 2.5% مهما كان التضخم. البنك أ يعطي عائدا حقيقيا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.09</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>2.83</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.09}{1 + 0.06} - 1 = 2.83\%
+</annotation></semantics></math></p>
+<p>الأفضل بالتضخم المتوقع: البنك أ. لكن إذا جاء التضخم أعلى من المتوقع، يخسر البنك أ ميزته، ويبقى البنك ب محميا.</p>
+<p><span id="sol-8-36"><strong>8.36</strong></span> سعر الجهاز الفعلي يوم الشراء:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>144.22</mn></mrow><annotation encoding="application/x-tex">
+F = 15\mathord{,}000\,(F/P,\ 5\%,\ 5) = 19\mathord{,}144.22
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>19</mn><mi>,</mi><mn>144.22</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>263.26</mn></mrow><annotation encoding="application/x-tex">
+A = 19\mathord{,}144.22\,(A/F,\ 8\%,\ 5) = 3\mathord{,}263.26
+</annotation></semantics></math></p>
+<p><span id="sol-8-37"><strong>8.37</strong></span> الإيداع ثابت بالدينار الثابت، فنعمل بالنسبة الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mn>2.86</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = 2.86\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>r</mi></msub><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2.86</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>833.40</mn></mrow><annotation encoding="application/x-tex">
+A_r = 15\mathord{,}000\,(A/F,\ 2.86\%,\ 5) = 2\mathord{,}833.40
+</annotation></semantics></math></p>
+<p>بأسعار اليوم يودع 2,833.40 دينار كل سنة. فعليا يودع 2,975.07 دينار في السنة الأولى، و3,616.21 دينار في السنة 5.</p>
+</section>
+<section id="الجزء-د-تقييم-المشاريع-مع-التضخم" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-د-تقييم-المشاريع-مع-التضخم">الجزء د: تقييم المشاريع مع التضخم</h2>
+<p><span id="sol-8-38"><strong>8.38</strong></span> التدفقات بالدينار الثابت، فنخصم بالنسبة الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>11</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>102.17</mn></mrow><annotation encoding="application/x-tex">
+PW = -40\mathord{,}000 + 11\mathord{,}000\,(P/A,\ 7\%,\ 5) = 5\mathord{,}102.17
+</annotation></semantics></math></p>
+<p>لا نحتاج نسبة التضخم أصلا.</p>
+<p><span id="sol-8-39"><strong>8.39</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>14.48</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = 14.48\%
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الدينار الفعلي</td>
+<td>12,960.00</td>
+<td>13,996.80</td>
+<td>15,116.54</td>
+</tr>
+<tr class="even">
+<td>معامل الخصم</td>
+<td>0.8735</td>
+<td>0.7630</td>
+<td>0.6665</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>076.14</mn></mrow><annotation encoding="application/x-tex">
+PW = 2\mathord{,}076.14
+</annotation></semantics></math></p>
+<p>بالدينار الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>076.14</mn></mrow><annotation encoding="application/x-tex">
+-30\mathord{,}000 + 12\mathord{,}000\,(P/A,\ 6\%,\ 3) = 2\mathord{,}076.14
+</annotation></semantics></math></p>
+<p><span id="sol-8-40"><strong>8.40</strong></span> المبلغ ثابت بالدينار الفعلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>32</mn><mi>,</mi><mn>891.26</mn></mrow><annotation encoding="application/x-tex">
+PW = 8\mathord{,}000\,(P/A,\ 12\%,\ 6) = 32\mathord{,}891.26
+</annotation></semantics></math></p>
+<p>بالنسبة الحقيقية 6.67% نحصل على 38,527.90 دينار، أي أعلى بمقدار 5,636.64 دينار. هذا يعامل المبلغ الثابت كأنه يرتفع مع الأسعار.</p>
+<p><span id="sol-8-41"><strong>8.41</strong></span> بالدينار الثابت كل دفعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>6</mn><mi>,</mi><mn>300</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow></mfrac><mo>=</mo><mn>6</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\frac{6\mathord{,}300}{1 + 0.05} = 6\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>6</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>33</mn><mi>,</mi><mn>494.29</mn></mrow><annotation encoding="application/x-tex">
+PW = 6\mathord{,}000.00\,(P/A,\ 6\%,\ 7) = 33\mathord{,}494.29
+</annotation></semantics></math></p>
+<p>للتأكد، بالدينار الفعلي والسلسلة المتدرجة نسبيا بالنسبة السوقية 11.30%: 33,494.29 دينار.</p>
+<p><span id="sol-8-42"><strong>8.42</strong></span> الإيراد ثابت بالدينار الفعلي، والتكاليف ترتفع. نعمل بالدينار الفعلي:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td>22,000</td>
+<td>22,000</td>
+<td>22,000</td>
+<td>22,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل</td>
+<td>‎-8,560</td>
+<td>‎-9,159</td>
+<td>‎-9,800</td>
+<td>‎-10,486</td>
+</tr>
+<tr class="odd">
+<td>التدفق</td>
+<td>13,440</td>
+<td>12,841</td>
+<td>12,200</td>
+<td>11,514</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>11</mn><mi>,</mi><mn>762.80</mn></mrow><annotation encoding="application/x-tex">
+PW = -11\mathord{,}762.80
+</annotation></semantics></math></p>
+<p>العقد بسعر ثابت ينقل خطر التضخم إلى المورد.</p>
+<p><span id="sol-8-43"><strong>8.43</strong></span> المبلغ المقدر بأسعار اليوم دينار ثابت. سعره الفعلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><mi>,</mi><mn>766.67</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}000\,(F/P,\ 6\%,\ 6) = 12\mathord{,}766.67
+</annotation></semantics></math></p>
+<p>القيمة الحالية بالنسبة الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>997.08</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}000\,(P/F,\ 7\%,\ 6) = 5\mathord{,}997.08
+</annotation></semantics></math></p>
+<p>أو بالفعلي والسوقية: 12,766.67 مخصوما بنسبة 13.42% يعطي 5,997.08 دينار.</p>
+<p><span id="sol-8-44"><strong>8.44</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>658.42</mn></mrow><annotation encoding="application/x-tex">
+AW = -60\mathord{,}000\,(A/P,\ 6\%,\ 6) + 15\mathord{,}000 + 6\mathord{,}000\,(A/F,\ 6\%,\ 6) = 3\mathord{,}658.42
+</annotation></semantics></math></p>
+<p>هذا مبلغ بأسعار اليوم كل سنة. المشروع مقبول.</p>
+<p><span id="sol-8-45"><strong>8.45</strong></span> التشغيل يرتفع مع التضخم، فهو ثابت بالدينار الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>63</mn><mi>,</mi><mn>468.56</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 20\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 6\%,\ 8) = 63\mathord{,}468.56
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>34</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>58</mn><mi>,</mi><mn>839.18</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 34\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 6\%,\ 8) = 58\mathord{,}839.18
+</annotation></semantics></math></p>
+<p>الأرخص: الآلة ب. التضخم يزيد ثقل التكاليف الجارية، فمن الخطأ خصمها بالنسبة السوقية إذا كانت بأسعار اليوم.</p>
+<p><span id="sol-8-46"><strong>8.46</strong></span> بالدينار الثابت التدفقات متساوية:</p>
+<pre class="excel"><code>=RATE(6, 13000, -50000)</code></pre>
+<p>المعدل الحقيقي 14.40%. المعدل بالدينار الفعلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1440</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>21.27</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + 0.1440)(1 + 0.06) - 1 = 21.27\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-47"><strong>8.47</strong></span> حساب المحلل:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>13.42</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>487.70</mn></mrow><annotation encoding="application/x-tex">
+-40\mathord{,}000 + 10\mathord{,}000\,(P/A,\ 13.42\%,\ 6) = -487.70
+</annotation></semantics></math></p>
+<p>الصحيح بالنسبة الحقيقية 6%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>173.24</mn></mrow><annotation encoding="application/x-tex">
+-40\mathord{,}000 + 10\mathord{,}000\,(P/A,\ 6\%,\ 6) = 9\mathord{,}173.24
+</annotation></semantics></math></p>
+<p>الخطأ 9,660.95 دينار. المحلل رفض مشروعا مقبولا.</p>
+<p><span id="sol-8-48"><strong>8.48</strong></span> بالدينار الثابت كل دفعة 20,192.31 دينار، فهي سلسلة دائمة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mn>20</mn><mi>,</mi><mn>192.31</mn></mrow><mn>0.05</mn></mfrac><mo>=</mo><mn>403</mn><mi>,</mi><mn>846.15</mn></mrow><annotation encoding="application/x-tex">
+P = \frac{20\mathord{,}192.31}{0.05} = 403\mathord{,}846.15
+</annotation></semantics></math></p>
+<p>بالدينار الفعلي، السلسلة الدائمة المتدرجة نسبيا قيمتها الدفعة الأولى مقسومة على الفرق بين النسبة السوقية ونسبة النمو:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mn>21</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>0.0920</mn><mo>−</mo><mn>0.04</mn></mrow></mfrac><mo>=</mo><mn>403</mn><mi>,</mi><mn>846.15</mn></mrow><annotation encoding="application/x-tex">
+P = \frac{21\mathord{,}000}{0.0920 - 0.04} = 403\mathord{,}846.15
+</annotation></semantics></math></p>
+<p><span id="sol-8-49"><strong>8.49</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>55</mn><mi>,</mi><mn>888.14</mn></mrow><annotation encoding="application/x-tex">
+C = 9\mathord{,}000\,(P/A,\ 6\%,\ 8) = 55\mathord{,}888.14
+</annotation></semantics></math></p>
+<p>لا نحتاج نسبة التضخم، ما دامت الأجور ترتفع معه.</p>
+<p><span id="sol-8-50"><strong>8.50</strong></span> الإيجار ثابت بالدينار الفعلي، فالمعدل المحسوب منه سوقي:</p>
+<pre class="excel"><code>=RATE(5, 13000, -45000)</code></pre>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>R</mi><msub><mi>R</mi><mi>m</mi></msub><mo>=</mo><mn>13.66</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+IRR_m = 13.66\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>R</mi><msub><mi>R</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.1366</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.22</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+IRR_r = \frac{1 + 0.1366}{1 + 0.06} - 1 = 7.22\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-51"><strong>8.51</strong></span> الدفعة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>24</mn><mi>,</mi><mn>000</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.03</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>4</mn></mfrac><mo>=</mo><mn>6</mn><mi>,</mi><mn>180.00</mn></mrow><annotation encoding="application/x-tex">
+A = \frac{24\mathord{,}000 \times (1 + 0.03)}{4} = 6\mathord{,}180.00
+</annotation></semantics></math></p>
+<p>الدفعات ثابتة بالدينار الفعلي، فنخصمها بالنسبة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>6</mn><mi>,</mi><mn>180.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>18</mn><mi>,</mi><mn>770.82</mn></mrow><annotation encoding="application/x-tex">
+PW = 6\mathord{,}180.00\,(P/A,\ 12\%,\ 4) = 18\mathord{,}770.82
+</annotation></semantics></math></p>
+<p>الأفضل: التقسيط.</p>
+</section>
+<section id="الجزء-هـ-بنود-تتغير-بنسب-مختلفة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-بنود-تتغير-بنسب-مختلفة">الجزء هـ: بنود تتغير بنسب مختلفة</h2>
+<p><span id="sol-8-52"><strong>8.52</strong></span> سلسلة متدرجة نسبيا بالدينار الفعلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>40</mn><mi>,</mi><mn>087.70</mn></mrow><annotation encoding="application/x-tex">
+PW = 8\mathord{,}000\,(P/A_1,\ 9\%,\ 12\%,\ 6) = 40\mathord{,}087.70
+</annotation></semantics></math></p>
+<p><span id="sol-8-53"><strong>8.53</strong></span> النمو الحقيقي هو ما يزيد عن التضخم العام:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.09</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>3.81</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+g_r = \frac{1 + 0.09}{1 + 0.05} - 1 = 3.81\%
+</annotation></semantics></math></p>
+<p>الدفعة الأولى بالدينار الثابت 7,619.05 دينار، وتنمو 3.81% بالحقيقي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>7</mn><mi>,</mi><mn>619.05</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>3.81</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>40</mn><mi>,</mi><mn>959.11</mn></mrow><annotation encoding="application/x-tex">
+PW = 7\mathord{,}619.05\,(P/A_1,\ 3.81\%,\ 6\%,\ 6) = 40\mathord{,}959.11
+</annotation></semantics></math></p>
+<p>بالدينار الفعلي والنسبة السوقية 11.30% نحصل على نفس الرقم، 40,959.11 دينار.</p>
+<p><span id="sol-8-54"><strong>8.54</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الوقود</td>
+<td>13,200.00</td>
+<td>14,520.00</td>
+<td>15,972.00</td>
+<td>17,569.20</td>
+</tr>
+</tbody>
+</table>
+<p>في السنة الرابعة تكلفة الوقود أعلى من اليوم بنسبة 46.41%.</p>
+<p><span id="sol-8-55"><strong>8.55</strong></span> الإيراد الفعلي يبدأ 15,300.00 دينار في السنة الأولى، ويرتفع 2%. النسبة السوقية 12.36%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>300.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12.36</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn><mi>,</mi><mn>634.67</mn></mrow><annotation encoding="application/x-tex">
+PW = -40\mathord{,}000 + 15\mathord{,}300.00\,(P/A_1,\ 2\%,\ 12.36\%,\ 5) = 16\mathord{,}634.67
+</annotation></semantics></math></p>
+<p>لو ارتفع السعر مع التضخم، لكان الإيراد ثابتا بالدينار الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mi>,</mi><mn>185.46</mn></mrow><annotation encoding="application/x-tex">
+-40\mathord{,}000 + 15\mathord{,}000\,(P/A,\ 6\%,\ 5) = 23\mathord{,}185.46
+</annotation></semantics></math></p>
+<p>الإيراد ينخفض حقيقيا كل سنة، فالقيمة أقل بمقدار 6,550.79 دينار.</p>
+<p><span id="sol-8-56"><strong>8.56</strong></span> نبحث عن السنة التي يتساوى فيها البندان:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.12</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">
+40\mathord{,}000\,(1 + 0.04)^k = 15\mathord{,}000\,(1 + 0.12)^k
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>40</mn><mi>,</mi><mn>000</mn><mi>/</mi><mn>15</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1.1200</mn><mi>/</mi><mn>1.0400</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>13.24</mn></mrow><annotation encoding="application/x-tex">
+k = \frac{\ln(40\mathord{,}000 / 15\mathord{,}000)}{\ln(1.1200 / 1.0400)} = 13.24
+</annotation></semantics></math></p>
+<p>هذا يشرح لماذا تبحث المصانع عن بدائل للطاقة، حتى لو كان المشروع رابحا اليوم.</p>
+<p><span id="sol-8-57"><strong>8.57</strong></span> الأجر الفعلي في السنة الأولى 32,400.00 دينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>32</mn><mi>,</mi><mn>400.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>11.30</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>137</mn><mi>,</mi><mn>173.55</mn></mrow><annotation encoding="application/x-tex">
+PW = 32\mathord{,}400.00\,(P/A_1,\ 8\%,\ 11.30\%,\ 5) = 137\mathord{,}173.55
+</annotation></semantics></math></p>
+<p>لو ارتفعت مع التضخم فقط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>126</mn><mi>,</mi><mn>370.91</mn></mrow><annotation encoding="application/x-tex">
+30\mathord{,}000\,(P/A,\ 6\%,\ 5) = 126\mathord{,}370.91
+</annotation></semantics></math></p>
+<p>الفرق 10,802.64 دينار.</p>
+<p><span id="sol-8-58"><strong>8.58</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>بأسعار اليوم</td>
+<td>60,000</td>
+<td>100,000</td>
+<td>40,000</td>
+</tr>
+<tr class="even">
+<td>فعلي</td>
+<td>64,200</td>
+<td>114,490</td>
+<td>49,002</td>
+</tr>
+</tbody>
+</table>
+<p>المجموع 227,691.72 دينار، أعلى من التقدير بمقدار 27,691.72 دينار. لذلك تضع العقود الطويلة بندا لتعديل الأسعار.</p>
+<p><span id="sol-8-59"><strong>8.59</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>90</mn><mi>,</mi><mn>408.19</mn></mrow><annotation encoding="application/x-tex">
+PW_a = 30\mathord{,}000 + 9\mathord{,}000\,(P/A_1,\ 10\%,\ 12\%,\ 8) = 90\mathord{,}408.19
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>38</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>77</mn><mi>,</mi><mn>135.07</mn></mrow><annotation encoding="application/x-tex">
+PW_b = 38\mathord{,}000 + 7\mathord{,}000\,(P/A_1,\ 4\%,\ 12\%,\ 8) = 77\mathord{,}135.07
+</annotation></semantics></math></p>
+<p>الأرخص: ب.</p>
+<p><span id="sol-8-60"><strong>8.60</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>f</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>55</mn><mi>,</mi><mn>907.24</mn></mrow><annotation encoding="application/x-tex">
+PW_{f} = 10\mathord{,}000\,(P/A_1,\ 4\%,\ 12\%,\ 8) = 55\mathord{,}907.24
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>g</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>67</mn><mi>,</mi><mn>120.22</mn></mrow><annotation encoding="application/x-tex">
+PW_{g} = 10\mathord{,}000\,(P/A_1,\ 10\%,\ 12\%,\ 8) = 67\mathord{,}120.22
+</annotation></semantics></math></p>
+<p>قلل التكلفة بمقدار 11,212.98 دينار، أي 20.06%.</p>
+<p><span id="sol-8-61"><strong>8.61</strong></span> الإيجار الفعلي في السنة 6:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.03</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>5</mn></msup><mo>=</mo><mn>11</mn><mi>,</mi><mn>592.74</mn></mrow><annotation encoding="application/x-tex">
+10\mathord{,}000\,(1 + 0.03)^{5} = 11\mathord{,}592.74
+</annotation></semantics></math></p>
+<p>بأسعار السنة 0:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>11</mn><mi>,</mi><mn>592.74</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.07</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>6</mn></msup></mrow></mfrac><mo>=</mo><mn>7</mn><mi>,</mi><mn>724.73</mn></mrow><annotation encoding="application/x-tex">
+\frac{11\mathord{,}592.74}{(1 + 0.07)^{6}} = 7\mathord{,}724.73
+</annotation></semantics></math></p>
+<p>في السنة الأولى كان 9,345.79 دينار بأسعار السنة 0. الإيجار ينخفض حقيقيا، لأن زيادته أقل من التضخم. هذا لصالح المستأجر.</p>
+<p><span id="sol-8-62"><strong>8.62</strong></span> نبحث عن نسبة النمو التي تجعل القيمة الحالية للوفر تساوي الثمن:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>g</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>50</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+9\mathord{,}000\,(P/A_1,\ g,\ 12\%,\ 8) = 50\mathord{,}000
+</annotation></semantics></math></p>
+<p>بالتجربة أو Goal Seek:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>3.79</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+g = 3.79\%
+</annotation></semantics></math></p>
+<p>إذا ارتفعت أسعار الوقود أكثر من هذه النسبة، فالنظام مجد.</p>
+<p><span id="sol-8-63"><strong>8.63</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>134</mn><mi>,</mi><mn>832.00</mn></mrow><annotation encoding="application/x-tex">
+120\mathord{,}000\,(F/P,\ 6\%,\ 2) = 134\mathord{,}832.00
+</annotation></semantics></math></p>
+</section>
+<section id="الجزء-و-التضخم-والضريبة-والقروض" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-و-التضخم-والضريبة-والقروض">الجزء و: التضخم والضريبة والقروض</h2>
+<p><span id="sol-8-64"><strong>8.64</strong></span> الوفر السنوي 3,200.00 دينار فعلي، لا يتغير مع الأسعار.</p>
+<p>بدون تضخم النسبة السوقية تساوي الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>,</mi><mn>200.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13</mn><mi>,</mi><mn>479.56</mn></mrow><annotation encoding="application/x-tex">
+3\mathord{,}200.00\,(P/A,\ 6\%,\ 5) = 13\mathord{,}479.56
+</annotation></semantics></math></p>
+<p>مع التضخم نخصم بالنسبة السوقية 13.42%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>,</mi><mn>200.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>13.42</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11</mn><mi>,</mi><mn>140.75</mn></mrow><annotation encoding="application/x-tex">
+3\mathord{,}200.00\,(P/A,\ 13.42\%,\ 5) = 11\mathord{,}140.75
+</annotation></semantics></math></p>
+<p>التضخم أخذ 2,338.81 دينار من قيمة الوفر، أي 17.35%.</p>
+<p><span id="sol-8-65"><strong>8.65</strong></span> الاستهلاك 20,000.00 دينار فعلي كل سنة.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ربح التشغيل</td>
+<td>30,240</td>
+<td>32,659</td>
+<td>35,272</td>
+</tr>
+<tr class="even">
+<td>الاستهلاك</td>
+<td>‎-20,000</td>
+<td>‎-20,000</td>
+<td>‎-20,000</td>
+</tr>
+<tr class="odd">
+<td>الدخل الخاضع</td>
+<td>10,240</td>
+<td>12,659</td>
+<td>15,272</td>
+</tr>
+<tr class="even">
+<td>الضريبة</td>
+<td>‎-2,048</td>
+<td>‎-2,532</td>
+<td>‎-3,054</td>
+</tr>
+<tr class="odd">
+<td>التدفق</td>
+<td>28,192</td>
+<td>30,127</td>
+<td>32,218</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>9</mn><mi>,</mi><mn>657.78</mn></mrow><annotation encoding="application/x-tex">
+PW = 9\mathord{,}657.78
+</annotation></semantics></math></p>
+<p>الدخل الخاضع يرتفع أسرع من التضخم، لأن الاستهلاك ثابت. لذلك ترتفع الضريبة الحقيقية مع الزمن.</p>
+<p><span id="sol-8-66"><strong>8.66</strong></span> بدون تضخم، التدفق ثابت 25,600.00 دينار، والمعدل 13.44%.</p>
+<p>مع التضخم، التدفقات الفعلية 27,328 ثم 29,194 ثم 31,210 دينار. معدلها:</p>
+<pre class="excel"><code>=IRR(A1:D1)</code></pre>
+<p>المعدل السوقي 21.15%. الحقيقي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.2115</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.08</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>12.18</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.2115}{1 + 0.08} - 1 = 12.18\%
+</annotation></semantics></math></p>
+<p>المعدل الحقيقي انخفض 1.26% نقطة مئوية بسبب التضخم وحده.</p>
+<p><span id="sol-8-67"><strong>8.67</strong></span> بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.09</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7.20</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.09 \times (1 - 0.2) = 7.20\%
+</annotation></semantics></math></p>
+<p>حقيقيا:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.0720</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>1.13</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.0720}{1 + 0.06} - 1 = 1.13\%
+</annotation></semantics></math></p>
+<p>الضريبة والتضخم معا يخفضان تكلفة القرض كثيرا.</p>
+<p><span id="sol-8-68"><strong>8.68</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>12</mn><mi>,</mi><mn>076.83</mn></mrow><annotation encoding="application/x-tex">
+A = 40\mathord{,}000\,(A/P,\ 8\%,\ 4) = 12\mathord{,}076.83
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>بأسعار يوم القرض</td>
+<td>11,287</td>
+<td>10,548</td>
+<td>9,858</td>
+<td>9,213</td>
+</tr>
+</tbody>
+</table>
+<p>المجموع 40,906.78 دينار بأسعار يوم القرض، مقابل 48,307.33 دينار فعلي.</p>
+<p><span id="sol-8-69"><strong>8.69</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>11</mn><mi>,</mi><mn>869.82</mn></mrow><annotation encoding="application/x-tex">
+A = 50\mathord{,}000\,(A/P,\ 6\%,\ 5) = 11\mathord{,}869.82
+</annotation></semantics></math></p>
+<p>الأقساط ثابتة بالدينار الفعلي، فنخصمها بالنسبة السوقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>11</mn><mi>,</mi><mn>869.82</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>211.96</mn></mrow><annotation encoding="application/x-tex">
+50\mathord{,}000 - 11\mathord{,}869.82\,(P/A,\ 12\%,\ 5) = 7\mathord{,}211.96
+</annotation></semantics></math></p>
+<p>الشركة تكسب 7,211.96 دينار اليوم من القرض المدعوم.</p>
+<p><span id="sol-8-70"><strong>8.70</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6.30</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+0.07 \times (1 - 0.1) = 6.30\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.0630</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.05</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>1.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.0630}{1 + 0.05} - 1 = 1.24\%
+</annotation></semantics></math></p>
+<p>الضريبة تؤخذ على كل الفائدة، ومنها الجزء الذي يعوض التضخم فقط. لذلك يدفع المدخر ضريبة على ربح ليس حقيقيا.</p>
+<p><span id="sol-8-71"><strong>8.71</strong></span> سعر البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>159</mn><mi>,</mi><mn>384.81</mn></mrow><annotation encoding="application/x-tex">
+100\mathord{,}000\,(F/P,\ 6\%,\ 8) = 159\mathord{,}384.81
+</annotation></semantics></math></p>
+<p>الضريبة على الربح الاسمي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.15</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>159</mn><mi>,</mi><mn>384.81</mn><mo>−</mo><mn>100</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>907.72</mn></mrow><annotation encoding="application/x-tex">
+0.15 \times (159\mathord{,}384.81 - 100\mathord{,}000) = 8\mathord{,}907.72
+</annotation></semantics></math></p>
+<p>صافي البيع 150,477.09 دينار فعلي، وبأسعار يوم الشراء:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>150</mn><mi>,</mi><mn>477.09</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>94</mn><mi>,</mi><mn>411.19</mn></mrow><annotation encoding="application/x-tex">
+150\mathord{,}477.09\,(P/F,\ 6\%,\ 8) = 94\mathord{,}411.19
+</annotation></semantics></math></p>
+<p>الشركة خسرت 5,588.81 دينار من قوة شرائها، مع أنها دفعت ضريبة على ربح.</p>
+<p><span id="sol-8-72"><strong>8.72</strong></span> الرصيد المطلوب في بداية السنوات 1 و2 و3: 20,000 ثم 21,600 ثم 23,328 دينار. في النهاية يسترد المخزون بأسعار السنة 3، 25,194 دينار.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التدفق</td>
+<td>‎-20,000</td>
+<td>‎-1,600</td>
+<td>‎-1,728</td>
+<td>23,328</td>
+</tr>
+</tbody>
+</table>
+<p>في السنة 3 يعود الرصيد كما هو، 23,328 دينار. التضخم يجبر المشروع على استثمار إضافي كل سنة لمجرد الحفاظ على نفس كمية المخزون.</p>
+<p><span id="sol-8-73"><strong>8.73</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>900</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>20</mn></msup></mrow></mfrac><mo>=</mo><mn>339.20</mn></mrow><annotation encoding="application/x-tex">
+\frac{900}{(1 + 0.05)^{20}} = 339.20
+</annotation></semantics></math></p>
+<p>يفقد 62.31% من قوة شرائه. لذلك تربط أنظمة التقاعد الجيدة الرواتب بمؤشر الأسعار.</p>
+<p><span id="sol-8-74"><strong>8.74</strong></span> النسبة السوقية التي يحتاجها البنك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = (1 + 0.04)(1 + 0.06) - 1 = 10.24\%
+</annotation></semantics></math></p>
+<p>القسط 12,063.44 دينار. قيمة القرض للبنك:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>063.44</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10.24</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>126.30</mn></mrow><annotation encoding="application/x-tex">
+-30\mathord{,}000 + 12\mathord{,}063.44\,(P/A,\ 10.24\%,\ 3) = -126.30
+</annotation></semantics></math></p>
+<p>القيمة سالبة: البنك لم يحقق هدفه، لأن التضخم أعلى مما بنى عليه الفائدة.</p>
+<p><span id="sol-8-75"><strong>8.75</strong></span> نخصم الوفر بالنسبة الحقيقية لو لم يكن تضخم، وبالنسبة السوقية 14.48% مع التضخم:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>الطريقة</th>
+<th>بدون تضخم</th>
+<th>مع التضخم</th>
+<th>الخسارة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القسط الثابت</td>
+<td>17,325.53</td>
+<td>14,426.36</td>
+<td>2,899.16</td>
+</tr>
+<tr class="even">
+<td>المتناقص المضاعف</td>
+<td>17,963.23</td>
+<td>15,672.12</td>
+<td>2,291.11</td>
+</tr>
+</tbody>
+</table>
+<p>الطريقة الأسرع تخسر أقل، لأن وفرها يأتي قبل أن يأكل التضخم قيمته.</p>
+</section>
+<section id="الجزء-ز-أسعار-الصرف" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-أسعار-الصرف">الجزء ز: أسعار الصرف</h2>
+<p><span id="sol-8-76"><strong>8.76</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>45</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.71</mn><mo>=</mo><mn>31</mn><mi>,</mi><mn>950.00</mn></mrow><annotation encoding="application/x-tex">
+45\mathord{,}000 \times 0.71 = 31\mathord{,}950.00
+</annotation></semantics></math></p>
+<p><span id="sol-8-77"><strong>8.77</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>4</mn></msub><mo>=</mo><mn>0.71</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.03</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>4</mn></msup><mo>=</mo><mn>0.7991</mn></mrow><annotation encoding="application/x-tex">
+e_{4} = 0.71\,(1 + 0.03)^{4} = 0.7991
+</annotation></semantics></math></p>
+<p><span id="sol-8-78"><strong>8.78</strong></span> الدفعة الأولى بسعر اليوم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.71</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>780.00</mn></mrow><annotation encoding="application/x-tex">
+18\mathord{,}000 \times 0.71 = 12\mathord{,}780.00
+</annotation></semantics></math></p>
+<p>الدفعة الثانية بسعر بعد سنة، 0.7384:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>42</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.7384</mn><mo>=</mo><mn>31</mn><mi>,</mi><mn>012.80</mn></mrow><annotation encoding="application/x-tex">
+42\mathord{,}000 \times 0.7384 = 31\mathord{,}012.80
+</annotation></semantics></math></p>
+<p>المجموع 43,792.80 دينار، مقابل 42,600.00 دينار لو دفع كل شيء اليوم. تأجيل الدفع بالدولار يكلف أكثر عندما يرتفع الدولار.</p>
+<p><span id="sol-8-79"><strong>8.79</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>=</mo><mfrac><mn>1.1400</mn><mn>1.0300</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.68</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_{\mathrm{dollar}} = \frac{1.1400}{1.0300} - 1 = 10.68\%
+</annotation></semantics></math></p>
+<p><span id="sol-8-80"><strong>8.80</strong></span> <strong>الطريقة الأولى:</strong> نخصم بالدولار، ثم نحول بسعر اليوم. الحد الأدنى بالدولار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>=</mo><mfrac><mn>1.1200</mn><mn>1.0300</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>8.74</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_{\mathrm{dollar}} = \frac{1.1200}{1.0300} - 1 = 8.74\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow></msub><mo>=</mo><mi>−</mi><mn>80</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>32</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8.74</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>381.35</mn></mrow><annotation encoding="application/x-tex">
+PW_{\mathrm{dollar}} = -80\mathord{,}000 + 32\mathord{,}000\,(P/A,\ 8.74\%,\ 3) = 1\mathord{,}381.35
+</annotation></semantics></math></p>
+<p>بالدينار: 1,381.35 ضرب 0.71 يساوي 980.76 دينار.</p>
+<p><strong>الطريقة الثانية:</strong> نحول كل تدفق بسعر سنته، ثم نخصم بالدينار:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>بالدينار</td>
+<td>‎-56,800</td>
+<td>23,402</td>
+<td>24,104</td>
+<td>24,827</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>980.76</mn></mrow><annotation encoding="application/x-tex">
+PW = 980.76
+</annotation></semantics></math></p>
+<p>الطريقتان متطابقتان.</p>
+<p><span id="sol-8-81"><strong>8.81</strong></span> المحلي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>37</mn><mi>,</mi><mn>857.14</mn></mrow><annotation encoding="application/x-tex">
+20\mathord{,}000 + 20\mathord{,}000\,(P/F,\ 12\%,\ 1) = 37\mathord{,}857.14
+</annotation></semantics></math></p>
+<p>الأجنبي بالدينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>,</mi><mn>377.00</mn><mo>+</mo><mn>21</mn><mi>,</mi><mn>192.08</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>39</mn><mi>,</mi><mn>298.50</mn></mrow><annotation encoding="application/x-tex">
+20\mathord{,}377.00 + 21\mathord{,}192.08\,(P/F,\ 12\%,\ 1) = 39\mathord{,}298.50
+</annotation></semantics></math></p>
+<p>الأرخص: المحلي. الفرق صغير، وخطر الصرف قد يرجح المحلي حتى لو كان أغلى قليلا.</p>
+<p><span id="sol-8-82"><strong>8.82</strong></span> نفس السلعة يجب أن تكلف نفس الشيء في البلدين بعد التحويل. فيتغير سعر الصرف بفرق التضخم:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>d</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.06</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.03</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+1 + d = \frac{1 + 0.06}{1 + 0.03}
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>2.91</mn><mi>%</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>e</mi><mn>1</mn></msub><mo>=</mo><mn>0.71</mn><mo>×</mo><mn>1.0291</mn><mo>=</mo><mn>0.7307</mn></mrow><annotation encoding="application/x-tex">
+d = 2.91\%, \qquad e_1 = 0.71 \times 1.0291 = 0.7307
+</annotation></semantics></math></p>
+<p>هذا مبدأ للمدى الطويل. الأسعار الفعلية تتأثر بالسياسة النقدية وحركة الأموال أيضا.</p>
+<p><span id="sol-8-83"><strong>8.83</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mi>e</mi><mo>−</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>15</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+50\mathord{,}000\,e - 20\mathord{,}000 = 15\mathord{,}000
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mfrac><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>20</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>50</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>0.7000</mn></mrow><annotation encoding="application/x-tex">
+e = \frac{15\mathord{,}000 + 20\mathord{,}000}{50\mathord{,}000} = 0.7000
+</annotation></semantics></math></p>
+<p>إذا انخفض الدولار تحت 0.7000 دينار، لا يكفي التدفق للقسط.</p>
+<p><span id="sol-8-84"><strong>8.84</strong></span> الشركة تسدد الدولارات بدنانير أكثر أو أقل كل سنة. التكلفة الفعلية للقرض بالدولار مقاسة بالدينار:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mn>1.0200</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>8.12</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + 0.06) \times 1.0200 - 1 = 8.12\%
+</annotation></semantics></math></p>
+<p>الأرخص: القرض بالدولار. القرض بعملة غير عملة الدخل فيه خطر: إذا ارتفع الدولار أكثر من المتوقع، ترتفع التكلفة.</p>
+<p><span id="sol-8-85"><strong>8.85</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>تغير الدولار</th>
+<th>‎-2%</th>
+<th>0%</th>
+<th>+2%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة الحالية</td>
+<td>‎-25,996.95</td>
+<td>‎-23,404.47</td>
+<td>‎-20,745.37</td>
+</tr>
+</tbody>
+</table>
+<p>تغير 2% فقط في سعر الصرف يحرك القيمة الحالية بحوالي 2,625.79 دينار في كل اتجاه. المشروع مرفوض في الحالات الثلاث.</p>
+</section>
+<section id="الجزء-ح-مسائل-excel-وpython" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-مسائل-excel-وpython">الجزء ح: مسائل Excel وPython</h2>
+<p><span id="sol-8-86"><strong>8.86</strong></span> التضخم في B1، والحد الأدنى الحقيقي في B2. السنوات في الصف 3 من C3 إلى G3، والتدفقات الفعلية في الصف 4. في الصف 5 بالدينار الثابت:</p>
+<pre class="excel"><code>C5 =C4/(1+$B$1)^C3</code></pre>
+<p>القيمة الحالية بالطريقتين:</p>
+<pre class="excel"><code>=-50000 + NPV($B$2, C5:G5)
+=-50000 + NPV((1+$B$2)*(1+$B$1)-1, C4:G4)</code></pre>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>بالدينار الثابت</td>
+<td>11,428.57</td>
+<td>11,791.38</td>
+<td>12,525.65</td>
+<td>12,340.54</td>
+<td>12,928.18</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الحالية 1,228.28 دينار بالطريقتين.</p>
+<p><span id="sol-8-87"><strong>8.87</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>C, X, n, t, ir <span class="op">=</span> <span class="dv">100000</span>, <span class="dv">35000</span>, <span class="dv">5</span>, <span class="fl">0.20</span>, <span class="fl">0.08</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> C <span class="op">/</span> n</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> [<span class="dv">0</span>, <span class="fl">0.03</span>, <span class="fl">0.06</span>, <span class="fl">0.09</span>, <span class="fl">0.12</span>]:</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> ir) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    flows <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [(X <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">**</span> k <span class="op">-</span> D) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> t) <span class="op">+</span> D <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>)]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>f<span class="sc">:4.0%}</span><span class="ss">  </span><span class="sc">{</span>npf<span class="sc">.</span>npv(im, flows)<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>التضخم</th>
+<th>0%</th>
+<th>3%</th>
+<th>6%</th>
+<th>9%</th>
+<th>12%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة الحالية</td>
+<td>27,766.72</td>
+<td>26,490.65</td>
+<td>25,371.26</td>
+<td>24,384.31</td>
+<td>23,509.98</td>
+</tr>
+</tbody>
+</table>
+<p>البرنامج يبني التدفقات بالدينار الفعلي ويخصمها بالنسبة السوقية. النتيجة تساوي حساب المثال بالطريقة المختصرة.</p>
+<p><span id="sol-8-88"><strong>8.88</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> [<span class="dv">100</span>, <span class="fl">103.2</span>, <span class="fl">108.9</span>, <span class="fl">112.0</span>, <span class="fl">118.5</span>, <span class="fl">121.3</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> [b <span class="op">/</span> a <span class="op">-</span> <span class="dv">1</span> <span class="cf">for</span> a, b <span class="kw">in</span> <span class="bu">zip</span>(index, index[<span class="dv">1</span>:])]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>avg <span class="op">=</span> (index[<span class="op">-</span><span class="dv">1</span>] <span class="op">/</span> index[<span class="dv">0</span>]) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> (<span class="bu">len</span>(index) <span class="op">-</span> <span class="dv">1</span>)) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([<span class="ss">f"</span><span class="sc">{</span>r<span class="sc">:.2%}</span><span class="ss">"</span> <span class="cf">for</span> r <span class="kw">in</span> rates], <span class="ss">f"</span><span class="sc">{</span>avg<span class="sc">:.2%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>التضخم</td>
+<td>3.20%</td>
+<td>5.52%</td>
+<td>2.85%</td>
+<td>5.80%</td>
+<td>2.36%</td>
+</tr>
+</tbody>
+</table>
+<p>المتوسط 3.94%.</p>
+<p><span id="sol-8-89"><strong>8.89</strong></span> الدالة RRI تعطي النسبة الثابتة التي تنقل قيمة إلى أخرى خلال عدد من الفترات:</p>
+<pre class="excel"><code>=RRI(5, 100, 121.3)</code></pre>
+<p>النتيجة 3.94%. الدالة موجودة في Google Sheets بنفس الاسم.</p>
+<p><span id="sol-8-90"><strong>8.90</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> to_actual(real, f):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [r <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">**</span> k <span class="cf">for</span> k, r <span class="kw">in</span> <span class="bu">enumerate</span>(real, start<span class="op">=</span><span class="dv">1</span>)]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> to_real(actual, f):</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [a <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> f) <span class="op">**</span> k <span class="cf">for</span> k, a <span class="kw">in</span> <span class="bu">enumerate</span>(actual, start<span class="op">=</span><span class="dv">1</span>)]</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>act <span class="op">=</span> to_actual([<span class="dv">10000</span>, <span class="dv">10000</span>, <span class="dv">10000</span>], <span class="fl">0.06</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([<span class="bu">round</span>(a, <span class="dv">2</span>) <span class="cf">for</span> a <span class="kw">in</span> act])</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([<span class="bu">round</span>(r, <span class="dv">2</span>) <span class="cf">for</span> r <span class="kw">in</span> to_real(act, <span class="fl">0.06</span>)])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>الفعلي: 10,600.00 و11,236.00 و11,910.16 دينار. والدالة الثانية تعيد 10,000 دينار لكل سنة.</p>
+<p><span id="sol-8-91"><strong>8.91</strong></span> المبالغ بأسعار اليوم في B2:B4، ونسب الارتفاع في C2:C4، والسنوات في الصف 1 من D1 إلى G1. صيغة الإيراد في السنة الأولى، وتنسخ يمينا ولأسفل:</p>
+<pre class="excel"><code>D2 =$B2*(1+$C2)^D$1
+D5 =D2 - D3 - D4
+=-70000 + NPV(13%, D5:G5)</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>صافي التدفق</td>
+<td>30,720.00</td>
+<td>31,390.80</td>
+<td>32,001.13</td>
+<td>32,538.27</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الحالية 23,904.16 دينار.</p>
+<p><span id="sol-8-92"><strong>8.92</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>e0, i <span class="op">=</span> <span class="fl">0.71</span>, <span class="fl">0.12</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> [<span class="op">-</span><span class="fl">0.04</span>, <span class="op">-</span><span class="fl">0.02</span>, <span class="dv">0</span>, <span class="fl">0.02</span>, <span class="fl">0.04</span>]:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    flows <span class="op">=</span> [<span class="op">-</span><span class="dv">70000</span> <span class="op">*</span> e0] <span class="op">+</span> [<span class="dv">40000</span> <span class="op">*</span> e0 <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> d) <span class="op">**</span> k <span class="op">-</span> <span class="dv">9000</span> <span class="cf">for</span> k <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>d<span class="sc">:+.0%}</span><span class="ss">  </span><span class="sc">{</span>npf<span class="sc">.</span>npv(i, flows)<span class="sc">:10,.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>تغير الدولار</th>
+<th>‎-4%</th>
+<th>‎-2%</th>
+<th>0%</th>
+<th>+2%</th>
+<th>+4%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القيمة الحالية</td>
+<td>‎-8,223.77</td>
+<td>‎-5,696.95</td>
+<td>‎-3,104.47</td>
+<td>‎-445.37</td>
+<td>2,281.33</td>
+</tr>
+</tbody>
+</table>
+<p>الثمن بالدولار يدفع اليوم، فيتحول بسعر اليوم.</p>
+</section>
+<section id="الجزء-ط-اختيار-من-متعدد" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-اختيار-من-متعدد">الجزء ط: اختيار من متعدد</h2>
+<p><span id="sol-8-93"><strong>8.93</strong></span> الجواب (ب).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>11.30</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+(1 + 0.06)(1 + 0.05) - 1 = 11.30\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) نسي حاصل الضرب. الخيار (ج) طرح التضخم بدل أن يضيفه.</p>
+<p><span id="sol-8-94"><strong>8.94</strong></span> الجواب (ب). الوفر بأسعار اليوم دينار ثابت، فيخصم بالنسبة الحقيقية.</p>
+<p><span id="sol-8-95"><strong>8.95</strong></span> الجواب (ب). القسط ثابت بالدينار الفعلي، والأسعار ترتفع، فقوة شرائه تنخفض كل شهر.</p>
+<p><span id="sol-8-96"><strong>8.96</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>5</mn></msup></mrow></mfrac><mo>=</mo><mn>14</mn><mi>,</mi><mn>945.16</mn></mrow><annotation encoding="application/x-tex">
+\frac{20\mathord{,}000}{(1 + 0.06)^{5}} = 14\mathord{,}945.16
+</annotation></semantics></math></p>
+<p>الخيار (أ) رفع المبلغ بدل أن يخفضه. الخياران (ب) و(ج) عاملا التضخم كأنه بسيط لا يتراكم.</p>
+<p><span id="sol-8-97"><strong>8.97</strong></span> الجواب (ج). الاستهلاك لا يرتفع مع الأسعار، فيفقد وفره الضريبي قيمته الحقيقية.</p>
+<p><span id="sol-8-98"><strong>8.98</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.12</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.07</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>4.67</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.12}{1 + 0.07} - 1 = 4.67\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) تقريب. الخيار (ب) ضرب بدل أن يقسم. الخيار (ج) نسي الواحد في البسط.</p>
+<p><span id="sol-8-99"><strong>8.99</strong></span> الجواب (ج).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>129</mn><mn>120</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{129}{120} - 1 = 7.50\%
+</annotation></semantics></math></p>
+<p>الخيار (أ) قسم على 100 كأن المؤشر بدأ من الأساس. الخيار (ب) قسم على القيمة الجديدة.</p>
+<p><span id="sol-8-100"><strong>8.100</strong></span> الجواب (أ). إذا ارتفع الدولار، تحتاج الشركة دنانير أكثر لتسدد نفس الأقساط، فتختفي ميزة الفائدة الأقل.</p>
+<p><span id="sol-8-101"><strong>8.101</strong></span> الجواب (ب). المبلغ الثابت دينار فعلي، ونسبته الصحيحة السوقية، وهي أعلى. الخصم بنسبة أقل يعطي قيمة حالية أكبر من الحقيقة.</p>
+<p><span id="sol-8-102"><strong>8.102</strong></span> الجواب (د).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.07</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mi>−</mi><mn>2.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+\frac{1 + 0.04}{1 + 0.07} - 1 = -2.80\%
+</annotation></semantics></math></p>
+<p>الراتب انخفض حقيقيا. الخيار (ج) تقريب يطرح النسبتين، قريب لكنه ليس دقيقا.</p>
+</section>
+<section id="الجزء-ي-حالات-مصغرة" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-حالات-مصغرة">الجزء ي: حالات مصغرة</h2>
+<p><span id="sol-8-103"><strong>8.103</strong></span> (أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>1.07</mn><mo>×</mo><mn>1.06</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>13.42</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = 1.07 \times 1.06 - 1 = 13.42\%
+</annotation></semantics></math></p>
+<p>(ب) الاستهلاك 24,000 دينار فعلي كل سنة. ربح التشغيل قبل الاستهلاك والضريبة هو الإيراد ناقص الكهرباء والأجور، كل منها بنسبته:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ربح التشغيل</td>
+<td>38,800</td>
+<td>40,657</td>
+<td>42,569</td>
+<td>44,533</td>
+<td>46,545</td>
+</tr>
+<tr class="even">
+<td>الدخل الخاضع</td>
+<td>14,800</td>
+<td>16,657</td>
+<td>18,569</td>
+<td>20,533</td>
+<td>22,545</td>
+</tr>
+<tr class="odd">
+<td>التدفق</td>
+<td>36,580</td>
+<td>38,158</td>
+<td>39,784</td>
+<td>41,453</td>
+<td>65,913</td>
+</tr>
+</tbody>
+</table>
+<p>في السنة 5 يباع المخزن بمبلغ 26,765 دينار فعلي، وكله ربح خاضع، فصافيه 22,750 دينار، وهو داخل في تدفق السنة 5.</p>
+<p>(ج)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>29</mn><mi>,</mi><mn>348.22</mn></mrow><annotation encoding="application/x-tex">
+PW = 29\mathord{,}348.22
+</annotation></semantics></math></p>
+<p>(د) بدون تضخم كل البنود ثابتة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>0</mn></msub><mo>=</mo><mn>35</mn><mi>,</mi><mn>832.69</mn></mrow><annotation encoding="application/x-tex">
+PW_0 = 35\mathord{,}832.69
+</annotation></semantics></math></p>
+<p>الفرق 6,484.47 دينار. سببه أمران: الكهرباء ترتفع أسرع من الإيراد، والاستهلاك لا يرتفع مع الأسعار.</p>
+<p><span id="sol-8-104"><strong>8.104</strong></span> (أ)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>40</mn><mi>,</mi><mn>202.87</mn></mrow><annotation encoding="application/x-tex">
+30{,}000\,(F/P,\ 5\%,\ 6) = 40\mathord{,}202.87
+</annotation></semantics></math></p>
+<p>(ب)</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mi>,</mi><mn>202.87</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>480.27</mn></mrow><annotation encoding="application/x-tex">
+40\mathord{,}202.87\,(A/F,\ 8\%,\ 6) = 5\mathord{,}480.27
+</annotation></semantics></math></p>
+<p>(ج) النسبة الحقيقية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mn>1.08</mn><mn>1.05</mn></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>2.86</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_r = \frac{1.08}{1.05} - 1 = 2.86\%
+</annotation></semantics></math></p>
+<p>بالدينار الثابت:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2.86</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4</mn><mi>,</mi><mn>654.59</mn></mrow><annotation encoding="application/x-tex">
+30{,}000\,(A/F,\ 2.86\%,\ 6) = 4\mathord{,}654.59
+</annotation></semantics></math></p>
+<p>فعليا يودع 4,887.32 دينار في السنة الأولى، و6,237.59 دينار في السنة السادسة.</p>
+<p>(د) الخطة الثانية تبدأ أقل وتنتهي أعلى. راتبه يرتفع مع التضخم، فالإيداع المتزايد يأخذ نفس النسبة من راتبه كل سنة تقريبا. الخطة الأولى أثقل في البداية، حين يكون راتبه أقل.</p>
+<p><span id="sol-8-105"><strong>8.105</strong></span> (أ) الطاقة في السنة الأولى 9,000 ضرب 1.08، أي 9,720 دينار، وترتفع 8%:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>68</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>720</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>115</mn><mi>,</mi><mn>637.74</mn></mrow><annotation encoding="application/x-tex">
+PW_{local} = 68{,}000 + 9\mathord{,}720\,(P/A_1,\ 8\%,\ 12\%,\ 6) = 115\mathord{,}637.74
+</annotation></semantics></math></p>
+<p>(ب) الثمن بسعر اليوم 63,900 دينار. الطاقة 6,480 دينار في السنة الأولى وترتفع 8%. الصيانة 2,000 دولار، تتحول بسعر صرف كل سنة، فقيمتها الحالية 6,220.17 دينار.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>i</mi><mi>m</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi></mrow></msub><mo>=</mo><mn>63</mn><mi>,</mi><mn>900</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>480</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>220.17</mn><mo>=</mo><mn>101</mn><mi>,</mi><mn>878.66</mn></mrow><annotation encoding="application/x-tex">
+PW_{import} = 63\mathord{,}900 + 6\mathord{,}480\,(P/A_1,\ 8\%,\ 12\%,\ 6) + 6\mathord{,}220.17 = 101\mathord{,}878.66
+</annotation></semantics></math></p>
+<p>(ج) الأرخص: المستوردة، بفرق 13,759.08 دينار. الأرقام لا تظهر خطر الصرف في عقد الصيانة، ولا صعوبة قطع الغيار المستوردة وزمن انتظارها. يستحق القرار تحليل حساسية على سعر الصرف ونسبة ارتفاع الطاقة.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/solutions-ch07.html" class="pagination-link" aria-label="حلول مسائل الفصل السابع">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">M</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
