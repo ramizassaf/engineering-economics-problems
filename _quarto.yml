@@ -22,6 +22,7 @@ book:
     - chapters/ch04.qmd
     - chapters/ch05.qmd
     - chapters/ch06.qmd
+    - chapters/ch07.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
@@ -34,6 +35,7 @@ book:
     - appendices/solutions-ch04.qmd
     - appendices/solutions-ch05.qmd
     - appendices/solutions-ch06.qmd
+    - appendices/solutions-ch07.qmd
 
 lang: ar
 dir: rtl
@@ -55,6 +57,7 @@ format:
     default-image-extension: svg
     number-depth: 2
     include-after-body: tex/load-scripts.html
+    filters: [tex/minus-ltr.lua]
   pdf:
     documentclass: scrbook
     classoption: [oneside]

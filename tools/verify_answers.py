@@ -159,8 +159,96 @@ CHECKS = {
     "c06-c-12": {"Q": lambda v: v["F"] / (v["s"] * (v["pa"] - v["va"]) + (1 - v["s"]) * (v["pb"] - v["vb"]))},
     "c06-h-06": {"x": lambda v: solve_linear(lambda k: v["Cd"] - npf.pv(v["i"], 10, v["Fd"] * k) - v["Ce"] + npf.pv(v["i"], 10, v["Fe"] * k + v["M"]))},
     "c06-k-03": {"Pb": lambda v: 32000 - npf.pv(0.10, 8, 450 + 600) - 4000 / 1.1 ** 8},
+    # ch07: project cash flows, rebuilt year by year from an income statement
+    "c07-ex-operating": {"CF": lambda v: inc_cf(v["R"], v["O"], v["C"] / 5, v["t"])},
+    "c07-ex-simple": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], 0, v["t"], [v["C"] / 3] * 3))},
+    "c07-ex-salvage": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], v["M"], v["t"], [v["C"] / 3] * 3))},
+    "c07-ex-working-capital": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] / 3] * 3))},
+    "c07-ex-full": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] / 5] * 5)),
+                    "r": lambda v: npf.irr(proj(v["C"], v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] / 5] * 5))},
+    "c07-ex-ddb": {"P_dd": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], 0, v["t"], ddb_sched(v["C"], 0, 5)))},
+    "c07-ex-loan": {"PWe": lambda v: npf.npv(v["i"], equity(v["C"], v["L"], v["r"], v["R"], v["O"], v["t"], 3))},
+    "c07-ex-cost-saving": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["Sv"], 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
+    "c07-ex-two-machines": {"Aa": lambda v: npf.pmt(v["i"], 4, npf.npv(v["i"], proj(v["Ca"], 0, 0, v["Oa"], 0, v["t"], [v["Ca"] / 4] * 4))),
+                            "Ab": lambda v: npf.pmt(v["i"], 6, npf.npv(v["i"], proj(v["Cb"], 0, 0, v["Ob"], 0, v["t"], [v["Cb"] / 6] * 6)))},
+    "c07-ex-irr-tax": {"ra": lambda v: npf.irr(proj(v["C"], 0, v["R"], 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
+    "c07-ex-breakeven": {"R": lambda v: solve_linear(lambda R: npf.npv(v["i"], proj(v["C"], 0, R, v["O"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
+    "c07-b-05": {"Dx": lambda v: v["D"]},
+    "c07-b-12": {"CF": lambda v: inc_cf(v["R"], v["O"], v["D"], v["t"])},
+    "c07-c-03": {"NS": lambda v: v["M"] - v["t"] * (v["M"] - (v["C"] - v["k"] * v["C"] / v["N"]))},
+    "c07-c-04": {"NS": lambda v: v["M"] - v["t"] * (v["M"] - (v["C"] - sum(ddb_plain(v["C"], v["n"])[:int(v["k"])])))},
+    "c07-c-13": {"M": lambda v: solve_linear(lambda M: M - v["t"] * (M - v["B"]) - v["X"])},
+    "c07-d-04": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] / 5] * 5)),
+                 "r": lambda v: npf.irr(proj(v["C"], v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] / 5] * 5))},
+    "c07-d-06": {"PW": lambda v: npf.npv(v["i"], [-v["C"]] + [inc_cf(v["R"] * (1 + v["g"]) ** k, v["O"] * (1 + v["h"]) ** k, v["C"] / 4, v["t"]) for k in range(4)])},
+    "c07-d-07": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], 0, v["t"], ddb_sched(v["C"], 0, 4)))},
+    "c07-d-09": {"P": lambda v: npf.npv(v["i"], [0] + [v["t"] * d for d in syd_sched(v["C"], 0, 5)])},
+    "c07-d-10": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], v["M"], v["t"], [(v["C"] - v["S"]) / 5] * 5))},
+    "c07-d-11": {"PW": lambda v: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"], v["M"], v["t"], [v["C"] / v["N"]] * 4))},
+    "c07-d-13": {"p": lambda v: solve_linear(lambda p: npf.npv(v["i"], proj(v["C"], 0, v["Q"] * p, v["Q"] * v["v"] + v["F"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
+    "c07-d-14": {"C": lambda v: solve_linear(lambda C: npf.npv(v["i"], proj(C, 0, v["R"], v["O"], 0, v["t"], [C / v["n"]] * int(v["n"]))))},
+    "c07-e-02": {"I2": lambda v: -npf.ipmt(v["r"], 2, 3, v["L"]), "I3": lambda v: -npf.ipmt(v["r"], 3, 3, v["L"])},
+    "c07-e-05": {"P": lambda v: npf.npv(v["i"], [v["L"]] + [npf.pmt(v["r"], 3, v["L"]) - v["t"] * npf.ipmt(v["r"], k, 3, v["L"]) for k in (1, 2, 3)])},
+    "c07-e-06": {"PWe": lambda v: npf.npv(v["i"], equity_bullet(v["C"], v["L"], v["r"], v["R"], v["O"], v["t"], 3))},
+    "c07-e-07": {"k": lambda v: npf.irr([-v["L"] * (1 - v["fee"])] + [v["L"] * v["r"] * (1 - v["t"])] * 4 + [v["L"] * v["r"] * (1 - v["t"]) + v["L"]])},
+    "c07-e-08": {"I": lambda v: sum(v["L"] * (1 - k / v["n"]) * v["r"] for k in range(int(v["n"])))},
+    "c07-e-09": {"re": lambda v: npf.irr([-(v["C"] - v["L"])] + [v["CF"] - v["L"] * v["r"] * (1 - v["t"])] * 4 + [v["CF"] - v["L"] * v["r"] * (1 - v["t"]) - v["L"]])},
+    "c07-f-03": {"Sv": lambda v: solve_linear(lambda s: npf.npv(v["i"], proj(v["C"], 0, s, 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
+    "c07-f-08": {"Ao": lambda v: npf.pmt(v["i"], v["n"], npf.npv(v["i"], [-(v["M"] - v["t"] * (v["M"] - v["B"]))] + [-v["Oo"] * (1 - v["t"]) + v["t"] * v["B"] / v["n"]] * int(v["n"]))),
+                 "An": lambda v: npf.pmt(v["i"], v["n"], npf.npv(v["i"], proj(v["C"], 0, 0, v["Onw"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
+    "c07-f-10": {"r": lambda v: npf.irr(proj(v["C"], 0, v["Sv"], 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
+    "c07-f-12": {"C": lambda v: solve_linear(lambda C: npf.npv(v["i"], proj(C, 0, v["Sv"], 0, 0, v["t"], [C / v["n"]] * int(v["n"]))))},
+    "c07-g-04": {"R": lambda v: solve_linear(lambda R: npf.npv(v["i"], proj(v["C"], v["W"], R, v["O"], v["M"], v["t"], [v["C"] / 5] * 5)))},
+    "c07-i-01": {"PW": lambda v: npf.npv(0.11, proj(96000, 8000, 75000, 32000, 10000, 0.15, [19200] * 5)),
+                 "r": lambda v: npf.irr(proj(96000, 8000, 75000, 32000, 10000, 0.15, [19200] * 5)),
+                 "Rb": lambda v: solve_linear(lambda R: npf.npv(0.11, proj(96000, 8000, R, 32000, 10000, 0.15, [19200] * 5)))},
+    "c07-i-02": {"Cmax": lambda v: solve_linear(lambda C: npf.pmt(0.10, 5, npf.npv(0.10, proj(C, 0, 0, 14000, 0, 0.2, [C / 5] * 5)))
+                 - npf.pmt(0.10, 5, npf.npv(0.10, [-(9000 + 0.2 * 3000)] + [-28000 * 0.8 + 0.2 * 2400] * 5)))},
+    "c07-i-03": {"PWe": lambda v: npf.npv(0.10, [-15000] + [11000 * 1.04 ** k * 0.8 + 0.2 * 45000 / 8 - (npf.pmt(0.06, 4, -30000) + 0.2 * npf.ipmt(0.06, k + 1, 4, 30000) if k < 4 else 0) for k in range(8)])},
+
 }
 
+
+
+def inc_cf(R, O, D, t):
+    """Operating cash flow from an income statement: net income plus depreciation."""
+    taxable = R - O - D
+    return taxable - t * taxable + D
+
+
+def proj(C, W, R, O, M, t, dep):
+    """Project flows from year 0, with net salvage on the book value left after `dep`."""
+    n = len(dep)
+    flows = [-C - W] + [inc_cf(R, O, d, t) for d in dep]
+    bv = C - sum(dep)
+    flows[n] += M - t * (M - bv) + W
+    return flows
+
+
+def ddb_plain(B, n):
+    """Double declining balance without a switch."""
+    out, bv = [], B
+    for _ in range(n):
+        out.append(bv * 2 / n)
+        bv -= out[-1]
+    return out
+
+
+def equity(C, L, r, R, O, t, n):
+    """Equity flows with an equal-payment loan; interest is deductible."""
+    A = -npf.pmt(r, n, L)
+    out = [-(C - L)]
+    for k in range(1, n + 1):
+        I = -npf.ipmt(r, k, n, L)
+        out.append(R - O - t * (R - O - C / n - I) - A)
+    return out
+
+
+def equity_bullet(C, L, r, R, O, t, n):
+    """Equity flows with an interest-only loan repaid at the end."""
+    out = [-(C - L)] + [R - O - t * (R - O - C / n - L * r) - L * r for _ in range(n)]
+    out[n] -= L
+    return out
 
 def ddb_sched(B, S, n):
     """Double declining balance with the switch to straight line, written independently."""

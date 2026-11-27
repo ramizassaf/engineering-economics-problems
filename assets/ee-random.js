@@ -75,6 +75,7 @@
                '<details class="ee-sol"><summary>إظهار الحل</summary>' + md(solution(it, env)) + '</details>';
       }
       body.innerHTML = html;
+      fixMinus(body);
       body.classList.add('ee-random');
       bOrig.hidden = false;
     });
@@ -82,6 +83,20 @@
       body.innerHTML = original;
       body.classList.remove('ee-random');
       bOrig.hidden = true;
+    });
+  }
+
+  // In right-to-left text a leading minus sign shows on the wrong side of its
+  // number. A left-to-right mark before the sign keeps it in place.
+  // The static pages get the same fix from tex/minus-ltr.lua.
+  function fixMinus(root) {
+    const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (/-\d/.test(n.data) && !n.parentElement.closest('math, pre, code, .ee-math, svg')) nodes.push(n);
+    }
+    nodes.forEach((n) => {
+      n.data = n.data.replace(/(^|[^\w\u200E])-(?=\d)/g, '$1\u200E-');
     });
   }
 
