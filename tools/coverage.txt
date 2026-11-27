@@ -3,12 +3,14 @@ c02: 102 of 118 items with a calculation are checked independently (a recomputed
 c03: 104 of 133 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c04: 46 of 102 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c05: 66 of 103 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c06: 79 of 90 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c06: 101 of 112 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c07: 84 of 101 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c08: 85 of 101 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c09: 67 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c10: 62 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c11: 81 of 90 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c11: 87 of 96 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c12: 59 of 70 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c13: 42 of 44 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 
 Items without an independent check:
 c01-b-14
@@ -276,3 +278,16 @@ c11-h-03
 c11-h-05
 c11-h-06
 c11-h-07
+c12-d-04
+c12-e-05
+c12-f-02
+c12-f-11
+c12-f-12
+c12-h-01
+c12-h-02
+c12-h-04
+c12-h-05
+c12-h-08
+c12-j-02
+c13-g-02
+c13-g-07

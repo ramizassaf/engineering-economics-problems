@@ -30,11 +30,11 @@ book:
     - chapters/ch09.qmd
     - chapters/ch10.qmd
     - chapters/ch11.qmd
+    - chapters/ch12.qmd
+    - chapters/ch13.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
-    - appendices/capital-budgeting.qmd
-    - appendices/cost-estimation.qmd
     - appendices/accounting.qmd
     - appendices/excel-functions.qmd
     - appendices/tax-countries.qmd
@@ -51,6 +51,8 @@ book:
     - appendices/solutions-ch09.qmd
     - appendices/solutions-ch10.qmd
     - appendices/solutions-ch11.qmd
+    - appendices/solutions-ch12.qmd
+    - appendices/solutions-ch13.qmd
 
 lang: ar
 dir: rtl

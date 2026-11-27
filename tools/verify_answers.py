@@ -524,6 +524,85 @@ CHECKS.update({
 })
 
 
+# ---------------------------------------------------------------- chapters 6 (estimation), 11 (budget), 12, 13
+from itertools import combinations as _comb
+
+
+def best_bundle(costs, values, budget, allowed=lambda names: True):
+    names = "ABCD"
+    best = 0.0
+    for k in range(1, 5):
+        for c in _comb(range(4), k):
+            nm = "".join(names[i] for i in c)
+            if sum(costs[i] for i in c) <= budget and allowed(nm):
+                best = max(best, sum(values[i] for i in c))
+    return best
+
+
+def k_vals(v):
+    cs = [v["c1"], v["c2"], v["c3"], v["c4"]]
+    vs = [round(c * r / 100) * 100 for c, r in zip(cs, [v["r1"], v["r2"], v["r3"], v["r4"]])]
+    vs = [math.floor(c * r / 100 + 0.5) * 100 for c, r in zip(cs, [v["r1"], v["r2"], v["r3"], v["r4"]])]
+    return cs, vs, v["B"]
+
+
+def bc(PB, PC):
+    return PB / PC
+
+
+def pw_annuity(i, n):
+    return float(-npf.pv(i, n, 1))
+
+
+def scaled(xs, better):
+    lo, hi = min(xs), max(xs)
+    return [(x - lo) / (hi - lo) if better == "+" else (hi - x) / (hi - lo) for x in xs]
+
+
+def mcda_best(v, dirs):
+    cols = [[v[f"x{k}{j}"] for k in (1, 2, 3)] for j in (1, 2, 3)]
+    s = [scaled(c, d) for c, d in zip(cols, dirs)]
+    w = [v["w1"], v["w2"], 1 - v["w1"] - v["w2"]]
+    return max(sum(w[j] * s[j][k] for j in range(3)) for k in range(3))
+
+
+CHECKS.update({
+    "c06-ex-power": {"C2": lambda v: v["C"] * (v["S2"] / v["S1"]) ** v["X"] * v["In"] / v["Ik"]},
+    "c06-ex-learning": {"Z10": lambda v: v["K"] * 10 ** (math.log10(v["s"]) / math.log10(2))},
+    "c06-l-03": {"Cn": lambda v: v["C"] * (v["wm"] * v["m1"] / v["m0"] + (1 - v["wm"]) * v["l1"] / v["l0"])},
+    "c06-l-10": {"X": lambda v: math.log(v["C2"] / v["C1"]) / math.log(v["S2"] / v["S1"])},
+    "c06-l-12": {"T": lambda v: sum(v["K"] * u ** (math.log2(v["s"])) for u in range(1, 5))},
+    "c06-l-14": {"T": lambda v: sum(v["K"] * u ** (math.log2(v["s"])) for u in range(1, int(v["n"]) + 1))},
+    "c06-l-16": {"C": lambda v: float(np.polyval(np.polyfit([v["x1"], v["x2"], v["x3"], v["x4"]], [v["y1"], v["y2"], v["y3"], v["y4"]], 1), 250))},
+    "c11-k-02": {"PI": lambda v: float(-npf.pv(v["i"], v["n"], v["A"])) / v["I"]},
+    "c11-k-04": {"best": lambda v: best_bundle(*k_vals(v))},
+    "c11-k-05": {"best": lambda v: best_bundle(*k_vals(v), allowed=lambda nm: not ("A" in nm and "B" in nm))},
+    "c11-k-06": {"best": lambda v: best_bundle(*k_vals(v), allowed=lambda nm: not ("C" in nm and "B" not in nm))},
+    "c12-ex-rate": {"R2": lambda v: bc(v["B"] * pw_annuity(v["i2"], v["n"]), v["I"] + v["M"] * pw_annuity(v["i2"], v["n"]))},
+    "c12-ex-ratios": {"Rc": lambda v: (v["B"] - v["D"]) * pw_annuity(v["i"], v["n"]) / (v["I"] + v["M"] * pw_annuity(v["i"], v["n"]) - v["S"] / (1 + v["i"]) ** v["n"]),
+                      "Rm": lambda v: ((v["B"] - v["D"] - v["M"]) * pw_annuity(v["i"], v["n"])) / (v["I"] - v["S"] / (1 + v["i"]) ** v["n"])},
+    "c12-ex-perpetual": {"R": lambda v: (v["B"] - v["D"]) / v["i"] / (v["I"] + v["M"] / v["i"])},
+    "c12-ex-incremental": {"dBA": lambda v: (630000 - 480000) / ((5500000 - 4000000) / pw_annuity(v["i"], 30) + 30000)},
+    "c12-c-03": {"R": lambda v: float(npf.npv(v["i"], [0] + [v["B1"] + v["G"] * (t - 1) for t in range(1, int(v["n"]) + 1)])) / (v["I"] + v["M"] * pw_annuity(v["i"], v["n"]))},
+    "c12-c-04": {"R": lambda v: float(npf.npv(v["i"], [0] + [v["B1"] * (1 + v["g"]) ** (t - 1) for t in range(1, int(v["n"]) + 1)])) / (v["I"] + v["M"] * pw_annuity(v["i"], v["n"]))},
+    "c12-c-06": {"n": lambda v: float(npf.nper(v["i"], v["B"] - v["M"], -v["I"]))},
+    "c12-c-07": {"r": lambda v: float(npf.rate(v["n"], v["B"] - v["M"], -v["I"], 0))},
+    "c12-c-09": {"R": lambda v: float(npf.npv(v["i"], [0, 0] + [v["B"]] * int(v["n"]))) / (v["I1"] + v["I2"] / (1 + v["i"]) + float(npf.npv(v["i"], [0, 0] + [v["M"]] * int(v["n"]))))},
+    "c12-e-02": {"R1": lambda v: v["B"] / (v["I"] * v["i"] + v["M"] + v["R"] * v["i"] / ((1 + v["i"]) ** v["k"] - 1))},
+    "c12-e-08": {"R": lambda v: v["B"] / (v["I"] / pw_annuity(v["i"], v["n"]) + float(npf.npv(v["i"], [0] + [v["M0"] + v["G"] * (t - 1) for t in range(1, int(v["n"]) + 1)])) / pw_annuity(v["i"], v["n"]))},
+    "c12-j-01": {"R": lambda v: (12000 * 300 * 8 / 60 * 2.5 + 25 * 40000 + 400000 - 390000) * pw_annuity(0.05, 30) / (30000000 + 230000 * pw_annuity(0.05, 30))},
+    "c13-ex-pairwise": {"w1": lambda v: (v["a"] * v["b"]) ** (1 / 3) / ((v["a"] * v["b"]) ** (1 / 3) + (v["c"] / v["a"]) ** (1 / 3) + (1 / (v["b"] * v["c"])) ** (1 / 3))},
+    "c13-ex-flip": {"ws": lambda v: brentq(lambda w: w * v["a1"] + (1 - w) * v["a2"] - w * v["b1"] - (1 - w) * v["b2"], 0, 1)},
+    "c13-g-01": {"ws": lambda v: brentq(lambda w: w * v["a1"] + (1 - w) * v["a2"] - w * v["b1"] - (1 - w) * v["b2"], 0, 1)},
+    "c13-j-01": {"S3": lambda v: 0.5 * scaled([350000 + 42000 * pw_annuity(0.1, 10), 300000 + 55000 * pw_annuity(0.1, 10), 420000 + 30000 * pw_annuity(0.1, 10)], "-")[2] + 0.5},
+})
+for _iid, _dirs in {
+    "c13-ex-additive": "-+-", "c13-e-01": "-+-", "c13-e-02": "--+", "c13-e-03": "-+-", "c13-e-04": "-+-", "c13-e-05": "-+-",
+    "c13-e-06": "--+", "c13-e-07": "-++", "c13-e-08": "-+-", "c13-e-09": "-++", "c13-e-10": "-++", "c13-e-11": "-+-", "c13-e-12": "-++",
+}.items():
+    CHECKS[_iid] = {"Sb": (lambda d: (lambda v: mcda_best(v, d)))(_dirs)}
+
+
 def main():
     items = {}
     for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):
