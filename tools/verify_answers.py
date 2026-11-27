@@ -173,6 +173,11 @@ CHECKS = {
                             "Ab": lambda v: npf.pmt(v["i"], 6, npf.npv(v["i"], proj(v["Cb"], 0, 0, v["Ob"], 0, v["t"], [v["Cb"] / 6] * 6)))},
     "c07-ex-irr-tax": {"ra": lambda v: npf.irr(proj(v["C"], 0, v["R"], 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
     "c07-ex-breakeven": {"R": lambda v: solve_linear(lambda R: npf.npv(v["i"], proj(v["C"], 0, R, v["O"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
+    "c07-ex-sensitivity": {"xR": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"], v["W"], v["R"] * (1 + x), v["O"], v["M"], v["t"], [v["C"] / 5] * 5)), -5, 5),
+                           "xC": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"] * (1 + x), v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] * (1 + x) / 5] * 5)), -5, 5)},
+    "c07-ex-scenarios": {"Pp": lambda v: npf.npv(v["i"], proj(v["C"], v["W"], 0.85 * v["R"], 1.1 * v["O"], 0.5 * v["M"], v["t"], [v["C"] / 5] * 5))},
+    "c07-d-17": {"xO": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"] * (1 + x), 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))), -50, 50)},
+    "c07-d-19": {"r": lambda v: npf.irr(proj(v["C"], 0, v["R"], v["O"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
     "c07-b-05": {"Dx": lambda v: v["D"]},
     "c07-b-12": {"CF": lambda v: inc_cf(v["R"], v["O"], v["D"], v["t"])},
     "c07-c-03": {"NS": lambda v: v["M"] - v["t"] * (v["M"] - (v["C"] - v["k"] * v["C"] / v["N"]))},
@@ -205,6 +210,42 @@ CHECKS = {
     "c07-i-02": {"Cmax": lambda v: solve_linear(lambda C: npf.pmt(0.10, 5, npf.npv(0.10, proj(C, 0, 0, 14000, 0, 0.2, [C / 5] * 5)))
                  - npf.pmt(0.10, 5, npf.npv(0.10, [-(9000 + 0.2 * 3000)] + [-28000 * 0.8 + 0.2 * 2400] * 5)))},
     "c07-i-03": {"PWe": lambda v: npf.npv(0.10, [-15000] + [11000 * 1.04 ** k * 0.8 + 0.2 * 45000 / 8 - (npf.pmt(0.06, 4, -30000) + 0.2 * npf.ipmt(0.06, k + 1, 4, 30000) if k < 4 else 0) for k in range(8)])},
+
+    # ch08: inflation and exchange rates, rebuilt from actual-dinar flows
+    "c08-ex-index": {"fa": lambda v: npf.rate(3, 0, -100, v["I3"])},
+    "c08-ex-purchasing": {"R": lambda v: pv(v["f"], v["n"], v["F"])},
+    "c08-ex-market-rate": {"im": lambda v: npf.rate(1, 0, -1, (1 + v["ir"]) * (1 + v["f"]))},
+    "c08-ex-two-ways": {"P1": lambda v: npf.npv(v["im"], [-v["C"]] + [v["R"] * (1 + v["f"]) ** k for k in range(1, 5)])},
+    "c08-ex-fixed-contract": {"P": lambda v: npf.npv(v["ir"], [0] + [v["A"] / (1 + v["f"]) ** k for k in range(1, int(v["n"]) + 1)])},
+    "c08-ex-growing-cost": {"P1": lambda v: npf.npv(v["im"], [0] + [v["A1"] * (1 + v["f"]) ** (k - 1) for k in range(1, int(v["n"]) + 1)])},
+    "c08-ex-differential": {"P": lambda v: npf.npv(v["im"], [-v["C"]] + [v["R"] * (1 + v["f"]) ** k - v["E"] * (1 + v["g"]) ** k for k in range(1, 6)])},
+    "c08-ex-tax": {"P1": lambda v: npf.npv(v["im"], [-v["C"]] + [inc_cf(v["X"] * (1 + v["f"]) ** k, 0, v["C"] / v["n"], v["t"]) for k in range(1, int(v["n"]) + 1)])},
+    "c08-ex-loan": {"rr": lambda v: npf.irr([-v["L"]] + [v["A"] / (1 + v["f"]) ** k for k in (1, 2, 3)])},
+    "c08-ex-savings": {"R": lambda v: fv(v["r"], v["n"], v["P"]) / (1 + v["f"]) ** v["n"]},
+    "c08-ex-exchange": {"P": lambda v: npf.npv(v["im"], [-v["C"]] + [v["U"] * v["e0"] * (1 + v["d"]) ** k - v["O"] for k in (1, 2, 3)])},
+    "c08-ex-currency-rate": {"iu": lambda v: brentq(lambda x: (1 + x) * (1 + v["d"]) - (1 + v["idn"]), -0.5, 1.0)},
+    "c08-b-02": {"fa": lambda v: npf.rate(v["n"], 0, -100, v["In"])},
+    "c08-b-10": {"k": lambda v: npf.nper(v["f"], 0, -1, 2)},
+    "c08-c-06": {"im": lambda v: npf.rate(v["n"], 0, -v["P"], v["X"] * (1 + v["f"]) ** v["n"])},
+    "c08-c-11": {"A": lambda v: npf.pmt(v["im"], v["n"], 0, -v["X"] * (1 + v["f"]) ** v["n"])},
+    "c08-c-12": {"A1": lambda v: solve_linear(lambda a: sum(a * (1 + v["f"]) ** (k - 1) * (1 + v["im"]) ** (v["n"] - k) for k in range(1, int(v["n"]) + 1)) - v["X"] * (1 + v["f"]) ** v["n"])},
+    "c08-d-04": {"P": lambda v: npf.npv(v["im"], [0] + [v["A1"] * (1 + v["f"]) ** (k - 1) for k in range(1, int(v["n"]) + 1)])},
+    "c08-d-05": {"PW": lambda v: npf.npv(v["im"], [-v["C"]] + [v["R"] - v["O"] * (1 + v["f"]) ** k for k in range(1, 5)])},
+    "c08-d-09": {"rm": lambda v: npf.irr([-v["C"]] + [v["R"] * (1 + v["f"]) ** k for k in range(1, int(v["n"]) + 1)])},
+    "c08-d-11": {"P1": lambda v: perpetuity_growing(v["A1"], v["f"], v["im"])},
+    "c08-e-02": {"P1": lambda v: npf.npv(v["im"], [0] + [v["E1"] * (1 + v["g"]) ** (k - 1) for k in range(1, int(v["n"]) + 1)])},
+    "c08-e-05": {"k": lambda v: brentq(lambda k: v["R"] * (1 + v["f"]) ** k - v["E"] * (1 + v["g"]) ** k, 0, 500)},
+    "c08-e-11": {"g": lambda v: brentq(lambda g: npf.npv(v["im"], [-v["C"]] + [v["S1"] * (1 + g) ** (k - 1) for k in range(1, int(v["n"]) + 1)]), -0.5, 1.0)},
+    "c08-f-02": {"PW": lambda v: npf.npv(v["im"], [-v["C"]] + [inc_cf(v["X"] * (1 + v["f"]) ** k, 0, v["C"] / 3, v["t"]) for k in (1, 2, 3)])},
+    "c08-f-03": {"rr": lambda v: npf.irr([-v["C"]] + [inc_cf(v["X"] * (1 + v["f"]) ** k, 0, v["C"] / 3, v["t"]) / (1 + v["f"]) ** k for k in (1, 2, 3)])},
+    "c08-f-06": {"G": lambda v: v["L"] - npf.pv(v["im"], v["n"], -npf.pmt(v["r"], v["n"], -v["L"]))},
+    "c08-f-08": {"R": lambda v: (v["C"] * (1 + v["f"]) ** v["n"] - v["t"] * (v["C"] * (1 + v["f"]) ** v["n"] - v["C"])) / (1 + v["f"]) ** v["n"]},
+    "c08-g-05": {"P1": lambda v: npf.npv(v["idn"], [-v["C"] * v["e0"]] + [v["U"] * v["e0"] * (1 + v["d"]) ** k for k in (1, 2, 3)])},
+    "c08-g-09": {"k": lambda v: npf.irr([-1, (1 + v["ru"]) * (1 + v["d"])])},
+    "c08-h-02": {"p6": lambda v: npf.npv(v["ir"] + 0.06 + v["ir"] * 0.06, [-v["C"]] + [inc_cf(v["X"] * 1.06 ** k, 0, v["C"] / v["n"], v["t"]) for k in range(1, int(v["n"]) + 1)])},
+    "c08-j-01": {"PW": lambda v: npf.npv(1.07 * 1.06 - 1, [-120000] + [inc_cf(70000 * 1.06 ** k - 15000 * 1.1 ** k - 18000 * 1.05 ** k, 0, 24000, 0.15) for k in range(1, 6)]) + 20000 * 1.06 ** 5 * 0.85 / (1.07 * 1.06) ** 5},
+    "c08-j-02": {"A1": lambda v: solve_linear(lambda a: sum(a * 1.05 ** (k - 1) * 1.08 ** (6 - k) for k in range(1, 7)) - 30000 * 1.05 ** 6)},
+    "c08-j-03": {"Pi": lambda v: 90000 * 0.71 + npf.npv(0.12, [0] + [6000 * 1.08 ** k + 2000 * 0.71 * 1.02 ** k for k in range(1, 7)])},
 
 }
 
@@ -249,6 +290,15 @@ def equity_bullet(C, L, r, R, O, t, n):
     out = [-(C - L)] + [R - O - t * (R - O - C / n - L * r) - L * r for _ in range(n)]
     out[n] -= L
     return out
+
+def perpetuity_growing(A1, g, i, terms=5000):
+    """Sum a growing perpetuity term by term until the terms vanish."""
+    total, term = 0.0, A1 / (1 + i)
+    for _ in range(terms):
+        total += term
+        term *= (1 + g) / (1 + i)
+    return total
+
 
 def ddb_sched(B, S, n):
     """Double declining balance with the switch to straight line, written independently."""

@@ -23,10 +23,12 @@ book:
     - chapters/ch05.qmd
     - chapters/ch06.qmd
     - chapters/ch07.qmd
+    - chapters/ch08.qmd
   appendices:
     - appendices/tables.qmd
     - appendices/derivations.qmd
     - appendices/capital-budgeting.qmd
+    - appendices/cost-estimation.qmd
     - appendices/excel-functions.qmd
     - appendices/tax-countries.qmd
     - appendices/solutions-ch01.qmd
@@ -36,6 +38,7 @@ book:
     - appendices/solutions-ch05.qmd
     - appendices/solutions-ch06.qmd
     - appendices/solutions-ch07.qmd
+    - appendices/solutions-ch08.qmd
 
 lang: ar
 dir: rtl
