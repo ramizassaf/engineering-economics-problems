@@ -14,3 +14,6 @@
 \AtBeginEnvironment{verbatim}{\selectlanguage{english}\pardir TLT\textdir TLT}
 \AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}
 \setlength{\parskip}{0.45em}
+% Cover: the first page of the PDF, built from tex/cover/cover.tex.
+\usepackage{pdfpages}
+\AtBeginDocument{\includepdf[pages=1]{tex/cover/cover.pdf}}
