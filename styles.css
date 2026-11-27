@@ -49,3 +49,7 @@ details.ee-sol[open] summary { background: #1f4e8c; color: #fff; margin-bottom: 
 
 /* English inside Arabic text (glossary, references) */
 .en { unicode-bidi: isolate; }
+
+/* Authors side by side on the title block, not one below the other */
+.quarto-title-meta-contents:has(> p + p) { display: flex; flex-wrap: wrap; gap: 0 1.6em; }
+.quarto-title-meta-contents:has(> p + p) > p { margin: 0; }
