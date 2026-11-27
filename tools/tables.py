@@ -43,7 +43,7 @@ out += ["## معامل القيمة الحالية للسلسلة المتدرج
         "$$",
         r"P = A_1\,(P/A_1,\ g,\ i,\ n)",
         "$$", "",
-        "عندما تتساوى النسبتان، كل دفعة تخصم بقدر ما نمت، فيصبح المعامل n مقسومة على واحد زائد i. علامة النجمة في الجدول تدل على هذا الصف.",
+        "عندما تتساوى النسبتان، كل دفعة تخصم بقدر ما نمت، فيصبح المعامل n مقسومة على واحد زائد i. تجد ذلك في الصف الذي تساوي فيه نسبة الفائدة نسبة النمو.",
         ""]
 for g in GROWTHS:
     out += [f"### نسبة النمو {g}% {{.unnumbered}}", ""]
@@ -52,8 +52,7 @@ for g in GROWTHS:
         out.append("| --- |" + " --- |" * len(cols))
         for r in RATES:
             vals = [f"{PGEO(g / 100, r / 100, n):.4f}" for n in cols]
-            mark = "*" if r == g else ""
-            out.append(f"| {r}%{mark} | " + " | ".join(vals) + " |")
+            out.append(f"| {r}% | " + " | ".join(vals) + " |")
         out.append("")
 (ROOT / "appendices").mkdir(exist_ok=True)
 (ROOT / "appendices" / "tables.qmd").write_text("\n".join(out), encoding="utf-8")

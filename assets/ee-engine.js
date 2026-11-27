@@ -80,12 +80,25 @@
   const RATEF = (n, A, F) => bisect((r) => A * FA(r, n) - F, 1e-9, 1.0, [-0.95, 10.0]);
   const GROWTH = (A1, P, i, n) => bisect((g) => A1 * PGEO(g, i, n) - P, -0.5, 1.0, [-0.95, 5.0], 'growth rate');
   const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  // Standard normal cumulative probability; same series as ee/engine.py.
+  const NORMS = (z) => {
+    if (z < -8) return 0;
+    if (z > 8) return 1;
+    let s = z, t = z, k = 1;
+    for (;;) {
+      k += 2;
+      t = t * z * z / k;
+      if (s + t === s) break;
+      s += t;
+    }
+    return 0.5 + s * Math.exp(-z * z / 2) / Math.sqrt(2 * Math.PI);
+  };
   const r4 = (x) => Number(x.toFixed(4));
   const r2 = (x) => Number(x.toFixed(2));
   const HELPERS = {
     FP, PF, PA, AP, FA, AF, PG, AG, PGEO, RATE, RATEF, GROWTH, NPV, IRR, r4, r2,
     ln: Math.log, exp: Math.exp, abs: Math.abs, max: Math.max, min: Math.min,
-    floor: Math.floor, ceil: Math.ceil,
+    floor: Math.floor, ceil: Math.ceil, NORMS, sqrt: Math.sqrt,
     lcm: (a, b) => { a = Math.round(a); b = Math.round(b); const g = (x, y) => (y ? g(y, x % y) : x); return a / g(a, b) * b; },
     pick: (c, a, b) => (c ? a : b),
     yrs: (n) => { n = Math.round(n); return n === 1 ? 'سنة واحدة' : n === 2 ? 'سنتين' : (n >= 3 && n <= 10 ? n + ' سنوات' : n + ' سنة'); },

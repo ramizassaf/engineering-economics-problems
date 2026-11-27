@@ -174,6 +174,24 @@ def GROWTH(A1, P, i, n):
     return _bisect(lambda g: A1 * PGEO(g, i, n) - P, -0.5, 1.0, wide=(-0.95, 5.0), what="growth rate")
 
 
+def NORMS(z):
+    """Standard normal cumulative probability, like Excel NORM.S.DIST(z, TRUE).
+    Marsaglia's series: every term is positive, so there is no cancellation,
+    and the result is accurate to about 1e-15 for |z| < 8."""
+    if z < -8:
+        return 0.0
+    if z > 8:
+        return 1.0
+    s, t, k = z, z, 1
+    while True:
+        k += 2
+        t = t * z * z / k
+        if s + t == s:
+            break
+        s += t
+    return 0.5 + s * math.exp(-z * z / 2) / math.sqrt(2 * math.pi)
+
+
 def ln(x):
     return math.log(x)
 
@@ -206,6 +224,7 @@ HELPERS = {
     "PG": PG, "AG": AG, "PGEO": PGEO, "RATE": RATE, "RATEF": RATEF, "NPV": NPV, "IRR": IRR, "GROWTH": GROWTH, "ln": ln, "exp": math.exp, "abs": abs, "max": max, "min": min,
     "pick": pick, "yrs": yrs, "r4": r4, "r2": r2, "floor": math.floor, "ceil": math.ceil,
     "lcm": lambda a, b: math.lcm(int(round(a)), int(round(b))),
+    "NORMS": NORMS, "sqrt": math.sqrt,
 }
 
 _SAFE = re.compile(r"^[\w\s.+\-*/(),<>=!'\"؀-ۿ%:\[\]]*$")

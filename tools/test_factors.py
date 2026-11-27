@@ -122,6 +122,12 @@ for lo, hi in [(0.0, 0.5), (0.5, 1.0)]:
     r = E.IRR(flows2, lo, hi)
     check(f"IRR two roots in [{lo},{hi}]", E.NPV(r, flows2), 0, 1e-6, 1e-6)
 
+from scipy.stats import norm  # noqa: E402
+for z in [-9, -8.5, -6, -3.2, -1.96, -1, -0.3, 0, 0.25, 1, 1.645, 2.5, 4, 7.9, 9]:
+    w = float(norm.cdf(z))
+    check(f"NORMS({z})", E.NORMS(z), w, 1e-12, 1e-15)
+    cases.append({"f": "NORMS", "args": [z], "want": w, "tol": 1e-12})
+
 json.dump(cases, open("/tmp/ee-factor-cases.json", "w"))
 if fails:
     print("\n".join(fails))

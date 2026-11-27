@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
+from scipy.stats import norm
 import numpy_financial as npf
 from datetime import date
 from scipy.optimize import brentq
@@ -268,6 +269,38 @@ CHECKS = {
     "c09-j-02": {"Ao": lambda v: -npf.pmt(0.10, 5, npf.npv(0.10, [10400 + 18000] + [13000 * 0.8 - 0.2 * 34000 / 5] * 5))},
     "c09-j-03": {"Pc": lambda v: npf.npv(0.10, [14000, 11000, 11000 - 9000 + 60000, 2500, 2500 - 42000])},
 
+    # ch10: risk, rebuilt with numpy averages, explicit Bayes tables and scipy.stats.norm
+    "c10-ex-expected": {"sd": lambda v: wstd([v["x1"], v["x2"], v["x3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])},
+    "c10-ex-epw": {"m": lambda v: float(np.dot([v["p1"], v["p2"], v["p3"]], [npf.npv(v["i"], [-v["C"]] + [a] * int(v["n"])) for a in (v["A1"], v["A2"], v["A3"])]))},
+    "c10-ex-nonlinear": {"m": lambda v: v["p"] * npf.npv(v["i"], [-v["C"]] + [v["A"]] * int(v["na"])) + (1 - v["p"]) * npf.npv(v["i"], [-v["C"]] + [v["A"]] * int(v["nb"]))},
+    "c10-ex-independent": {"pl": lambda v: norm.cdf(0, npf.npv(v["i"], [-v["C"], v["m1"], v["m2"], v["m3"]]), np.sqrt(sum((s / (1 + v["i"]) ** t) ** 2 for t, s in enumerate([v["s1"], v["s2"], v["s3"]], 1))))},
+    "c10-ex-compare": {"sb": lambda v: wstd([v["b1"], v["b2"], v["b3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])},
+    "c10-ex-tree": {"EL": lambda v: tree_ev([[v["LH"], v["LL"]]], [v["p"], 1 - v["p"]])},
+    "c10-ex-expand": {"ES2": lambda v: v["p"] * max(v["SH"], v["SH"] + v["X"]) + (1 - v["p"]) * v["SL"]},
+    "c10-ex-evpi": {"V": lambda v: evpi([[v["LH"], v["LL"]], [v["SH"], v["SL"]]], [v["p"], 1 - v["p"]])},
+    "c10-ex-survey": {"V": lambda v: survey_value([[v["LH"], v["LL"]], [v["SH"], v["SL"]]], v["p"], v["a"])},
+    "c10-ex-normal": {"pl": lambda v: norm.cdf(v["F"] / (v["p"] - v["v"]), v["mu"], v["s"])},
+    "c10-b-02": {"sd": lambda v: wstd([v["x1"], v["x2"], v["x3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])},
+    "c10-b-04": {"m": lambda v: v["c"] * float(np.dot([0, 1, 2, 3], [v["q0"], v["q1"], v["q2"], 1 - v["q0"] - v["q1"] - v["q2"]]))},
+    "c10-b-09": {"s": lambda v: float(np.std(np.add.outer([-v["s1"], v["s1"]], [-v["s2"], v["s2"]]).ravel()))},
+    "c10-b-12": {"v": lambda v: wstd([v["x1"], v["x2"], v["x3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]]) ** 2},
+    "c10-c-06": {"m": lambda v: sum(pa * pn * npf.npv(v["i"], [-v["C"]] + [A] * int(n))
+                                    for A, pa in ((v["A1"], v["pa"]), (v["A2"], 1 - v["pa"]))
+                                    for n, pn in ((v["n1"], v["pn"]), (v["n2"], 1 - v["pn"])))},
+    "c10-c-08": {"pl": lambda v: norm.cdf(0, npf.npv(v["i"], [-v["C"], v["m1"], v["m2"]]), np.hypot(v["s1"] / (1 + v["i"]), v["s2"] / (1 + v["i"]) ** 2))},
+    "c10-c-10": {"s": lambda v: -v["m"] / norm.ppf(0.05)},
+    "c10-c-14": {"si": lambda v: np.sqrt(sum((v["s"] / (1 + v["i"]) ** t) ** 2 for t in range(1, int(v["n"]) + 1)))},
+    "c10-d-07": {"p2": lambda v: norm.cdf(0, 2 * v["m"], np.sqrt(2) * v["s"])},
+    "c10-d-09": {"mb": lambda v: max(max(a, b) - b for a, b in ((v["a1"], v["b1"]), (v["a2"], v["b2"]), (v["a3"], v["b3"])))},
+    "c10-e-06": {"E": lambda v: -v["c1"] + v["ps"] * max(0, v["ph"] * v["H"] + (1 - v["ph"]) * v["L"])},
+    "c10-f-05": {"V": lambda v: survey_value([[v["G"], v["L"]], [0, 0]], v["p"], v["a"])},
+    "c10-g-03": {"P": lambda v: norm.sf(v["K"], v["m"], v["s"])},
+    "c10-g-06": {"q": lambda v: norm.ppf(0.05, v["m"], v["s"])},
+    "c10-g-09": {"P": lambda v: norm.sf(v["K"], 4 * v["m"], np.sqrt(4) * v["s"])},
+    "c10-j-01": {"Es": lambda v: survey_value([[700000, -200000], [350000, 80000], [0, 0]], 0.5, 0.85) + max(250000, 215000)},
+    "c10-j-03": {"m": lambda v: min(600 * sum(p * max(k - d, 0) for d, p in enumerate([0.2, 0.35, 0.25, 0.15, 0.05]))
+                                    + 5000 * sum(p * max(d - k, 0) for d, p in enumerate([0.2, 0.35, 0.25, 0.15, 0.05])) for k in range(5))},
+
 }
 
 
@@ -329,6 +362,36 @@ def esl_aw(C, market, O1, G, i):
         flows[n] -= market[n - 1]
         out.append(-npf.pmt(i, n, npf.npv(i, flows)))
     return out
+
+
+def wstd(x, p):
+    """Standard deviation of a discrete distribution, with numpy."""
+    x, p = np.array(x, float), np.array(p, float)
+    mu = np.average(x, weights=p)
+    return float(np.sqrt(np.average((x - mu) ** 2, weights=p)))
+
+
+def tree_ev(payoff, p):
+    """Best expected value over alternatives (rows) and states (columns)."""
+    return float(max(np.array(payoff, float) @ np.array(p, float)))
+
+
+def evpi(payoff, p):
+    payoff, p = np.array(payoff, float), np.array(p, float)
+    return float(payoff.max(axis=0) @ p - max(payoff @ p))
+
+
+def survey_value(payoff, p_high, acc):
+    """Value of a two-state study that is right with probability acc, from the joint table."""
+    payoff = np.array(payoff, float)
+    prior = np.array([p_high, 1 - p_high])
+    like = np.array([[acc, 1 - acc], [1 - acc, acc]])     # rows: state, cols: report
+    joint = prior[:, None] * like
+    value = 0.0
+    for r in range(2):
+        post = joint[:, r] / joint[:, r].sum()
+        value += joint[:, r].sum() * max(max(payoff @ post), 0)
+    return value - max(max(payoff @ prior), 0)
 
 
 def ddb_sched(B, S, n):

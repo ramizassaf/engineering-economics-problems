@@ -7,6 +7,7 @@ c06: 9 of 90 items with a calculation have an independent check
 c07: 42 of 101 items with a calculation have an independent check
 c08: 34 of 101 items with a calculation have an independent check
 c09: 18 of 92 items with a calculation have an independent check
+c10: 27 of 92 items with a calculation have an independent check
 
 Items without an independent check:
 c01-b-01
@@ -745,3 +746,68 @@ c09-i-01
 c09-i-03
 c09-i-07
 c09-i-10
+c10-b-01
+c10-b-03
+c10-b-05
+c10-b-06
+c10-b-07
+c10-b-08
+c10-b-10
+c10-b-11
+c10-b-13
+c10-b-14
+c10-c-01
+c10-c-02
+c10-c-03
+c10-c-04
+c10-c-05
+c10-c-07
+c10-c-09
+c10-c-11
+c10-c-12
+c10-c-13
+c10-d-01
+c10-d-02
+c10-d-03
+c10-d-04
+c10-d-05
+c10-d-06
+c10-d-10
+c10-e-01
+c10-e-02
+c10-e-03
+c10-e-04
+c10-e-05
+c10-e-07
+c10-e-08
+c10-e-09
+c10-e-10
+c10-e-11
+c10-e-12
+c10-e-14
+c10-f-01
+c10-f-02
+c10-f-03
+c10-f-04
+c10-f-06
+c10-f-07
+c10-g-01
+c10-g-02
+c10-g-04
+c10-g-05
+c10-g-07
+c10-g-08
+c10-g-10
+c10-h-01
+c10-h-02
+c10-h-03
+c10-h-04
+c10-h-05
+c10-h-06
+c10-h-07
+c10-h-08
+c10-i-01
+c10-i-03
+c10-i-05
+c10-i-09
+c10-j-02
