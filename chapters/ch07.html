@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; التدفقات النقدية للمشروع – مسائل في الاقتصاد الهندسي</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/tables.html" rel="next">
+<link href="../chapters/ch06.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a87c7b8f262361b8dd4888aea5a13d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "بحث",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch07.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">مسائل في الاقتصاد الهندسي</a> 
+        <div class="sidebar-tools-main">
+    <a href="../مسائل-في-الاقتصاد-الهندسي.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمة</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نقل المال عبر الزمن</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">الدفعات المتكررة</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">القيمة الحالية والقيمة السنوية ومقارنة البدائل</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">معدل العائد الداخلي</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">الاستهلاك والضرائب</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">الملاحق</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/derivations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">اشتقاق المعادلات</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/capital-budgeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">اختيار المشاريع بميزانية محدودة</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/tax-countries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">الضرائب والاستهلاك في فلسطين والسعودية والأردن ومصر</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الأول</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثاني</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الثالث</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الرابع</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل الخامس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">المحتويات</h2>
+   
+  <ul>
+  <li><a href="#sec-7-types" id="toc-sec-7-types" class="nav-link active" data-scroll-target="#sec-7-types"><span class="header-section-number">7.1</span> ثلاثة أنواع من التدفقات</a></li>
+  <li><a href="#sec-7-operating" id="toc-sec-7-operating" class="nav-link" data-scroll-target="#sec-7-operating"><span class="header-section-number">7.2</span> التدفق النقدي التشغيلي</a></li>
+  <li><a href="#sec-7-table" id="toc-sec-7-table" class="nav-link" data-scroll-target="#sec-7-table"><span class="header-section-number">7.3</span> بناء الجدول خطوة بخطوة</a></li>
+  <li><a href="#sec-7-details" id="toc-sec-7-details" class="nav-link" data-scroll-target="#sec-7-details"><span class="header-section-number">7.4</span> أثر طريقة الاستهلاك ورأس المال العامل المتغير</a></li>
+  <li><a href="#sec-7-loan" id="toc-sec-7-loan" class="nav-link" data-scroll-target="#sec-7-loan"><span class="header-section-number">7.5</span> التمويل بقرض</a></li>
+  <li><a href="#sec-7-costs" id="toc-sec-7-costs" class="nav-link" data-scroll-target="#sec-7-costs"><span class="header-section-number">7.6</span> بدائل التكاليف بعد الضريبة</a></li>
+  <li><a href="#sec-7-marr" id="toc-sec-7-marr" class="nav-link" data-scroll-target="#sec-7-marr"><span class="header-section-number">7.7</span> الحد الأدنى للعائد بعد الضريبة</a></li>
+  <li><a href="#sec-7-python" id="toc-sec-7-python" class="nav-link" data-scroll-target="#sec-7-python"><span class="header-section-number">7.8</span> Python: جدول التدفقات</a></li>
+  <li><a href="#sec-7-problems" id="toc-sec-7-problems" class="nav-link" data-scroll-target="#sec-7-problems"><span class="header-section-number">7.9</span> مسائل</a>
+  <ul class="collapse">
+  <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
+  <li><a href="#الجزء-ب-التدفق-النقدي-التشغيلي" id="toc-الجزء-ب-التدفق-النقدي-التشغيلي" class="nav-link" data-scroll-target="#الجزء-ب-التدفق-النقدي-التشغيلي">الجزء ب: التدفق النقدي التشغيلي</a></li>
+  <li><a href="#الجزء-ج-الاستثمار-وقيمة-البيع-ورأس-المال-العامل" id="toc-الجزء-ج-الاستثمار-وقيمة-البيع-ورأس-المال-العامل" class="nav-link" data-scroll-target="#الجزء-ج-الاستثمار-وقيمة-البيع-ورأس-المال-العامل">الجزء ج: الاستثمار وقيمة البيع ورأس المال العامل</a></li>
+  <li><a href="#الجزء-د-جدول-التدفقات-الكامل-والقيمة-الحالية-بعد-الضريبة" id="toc-الجزء-د-جدول-التدفقات-الكامل-والقيمة-الحالية-بعد-الضريبة" class="nav-link" data-scroll-target="#الجزء-د-جدول-التدفقات-الكامل-والقيمة-الحالية-بعد-الضريبة">الجزء د: جدول التدفقات الكامل والقيمة الحالية بعد الضريبة</a></li>
+  <li><a href="#الجزء-هـ-التمويل-بقرض" id="toc-الجزء-هـ-التمويل-بقرض" class="nav-link" data-scroll-target="#الجزء-هـ-التمويل-بقرض">الجزء هـ: التمويل بقرض</a></li>
+  <li><a href="#الجزء-و-بدائل-التكاليف-بعد-الضريبة" id="toc-الجزء-و-بدائل-التكاليف-بعد-الضريبة" class="nav-link" data-scroll-target="#الجزء-و-بدائل-التكاليف-بعد-الضريبة">الجزء و: بدائل التكاليف بعد الضريبة</a></li>
+  <li><a href="#الجزء-ز-مسائل-excel-وpython" id="toc-الجزء-ز-مسائل-excel-وpython" class="nav-link" data-scroll-target="#الجزء-ز-مسائل-excel-وpython">الجزء ز: مسائل Excel وPython</a></li>
+  <li><a href="#الجزء-ح-اختيار-من-متعدد" id="toc-الجزء-ح-اختيار-من-متعدد" class="nav-link" data-scroll-target="#الجزء-ح-اختيار-من-متعدد">الجزء ح: اختيار من متعدد</a></li>
+  <li><a href="#الجزء-ط-حالات-مصغرة" id="toc-الجزء-ط-حالات-مصغرة" class="nav-link" data-scroll-target="#الجزء-ط-حالات-مصغرة">الجزء ط: حالات مصغرة</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ch7" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>في الفصول السابقة كانت التدفقات معطاة: تكلفة في البداية، ودخل كل سنة. في الواقع لا أحد يعطيك هذه الأرقام جاهزة. عليك أن تبنيها من معلومات متفرقة: سعر الآلة، والمبيعات المتوقعة، وتكاليف التشغيل، والاستهلاك، والضريبة، والمخزون، والقرض. هذا الفصل يجمع الفصول الخامس والسادس مع الثالث والرابع: نبني جدول التدفقات النقدية للمشروع بعد الضريبة، خطوة بخطوة، ثم نقيمه بالقيمة الحالية والمعدل.</p>
+<p>نبدأ بمشروع بسيط جدا لثلاث سنوات، ثم نضيف في كل مثال عنصرا واحدا.</p>
+<section id="sec-7-types" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sec-7-types"><span class="header-section-number">7.1</span> ثلاثة أنواع من التدفقات</h2>
+<ul>
+<li><strong>الاستثمار:</strong> شراء الأصول في البداية، وبيعها في النهاية، ورأس المال العامل.</li>
+<li><strong>التشغيل:</strong> الإيرادات والتكاليف والضريبة خلال عمر المشروع.</li>
+<li><strong>التمويل:</strong> القروض وأقساطها وفوائدها.</li>
+</ul>
+<div id="ex-7-1" class="ee-item" data-id="c07-ex-three-parts" data-kind="example" data-label="7.1">
+<p><strong>مثال 7.1: ثلاثة أنواع من التدفقات</strong></p>
+<p>صنف التدفقات التالية لمشروع خط تعبئة جديد: ثمن الآلة، وإيراد المبيعات، وأجور العمال، وقرض من البنك، وقسط القرض، وفائدة القرض، وضريبة الدخل، ومخزون المواد الأولية في بداية المشروع، وبيع الآلة في النهاية.</p>
+<p><strong>الحل:</strong></p>
+<p>كل تدفق في مشروع ينتمي إلى واحد من ثلاثة أنواع:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>التدفق</th>
+<th>النوع</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ثمن الآلة</td>
+<td>استثمار</td>
+</tr>
+<tr class="even">
+<td>مخزون المواد الأولية</td>
+<td>استثمار في رأس المال العامل</td>
+</tr>
+<tr class="odd">
+<td>بيع الآلة في النهاية</td>
+<td>استثمار، لكنه يعود</td>
+</tr>
+<tr class="even">
+<td>إيراد المبيعات</td>
+<td>تشغيل</td>
+</tr>
+<tr class="odd">
+<td>أجور العمال</td>
+<td>تشغيل</td>
+</tr>
+<tr class="even">
+<td>ضريبة الدخل</td>
+<td>تشغيل</td>
+</tr>
+<tr class="odd">
+<td>القرض</td>
+<td>تمويل</td>
+</tr>
+<tr class="even">
+<td>أصل القسط</td>
+<td>تمويل</td>
+</tr>
+<tr class="odd">
+<td>فائدة القرض</td>
+<td>تمويل، لكنها تخفض الضريبة</td>
+</tr>
+</tbody>
+</table>
+<p>هذا التقسيم يرتب العمل: نحسب التدفقات التشغيلية من قائمة الدخل، ونضيف تدفقات الاستثمار في السنة 0 وفي النهاية، ثم ندرس التمويل وحده في آخر الفصل.</p>
+</div>
+</section>
+<section id="sec-7-operating" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sec-7-operating"><span class="header-section-number">7.2</span> التدفق النقدي التشغيلي</h2>
+<p>نحسبه من قائمة الدخل: صافي الربح زائد الاستهلاك. أو بصيغة واحدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
+CF = (R - O)(1 - t) + t\,D
+</annotation></semantics></math></p>
+<div id="ex-7-2" class="ee-item" data-id="c07-ex-operating" data-kind="example" data-label="7.2">
+<p><strong>مثال 7.2: التدفق النقدي التشغيلي لسنة واحدة</strong></p>
+<p>مشروع إيراده السنوي 90,000 دينار، وتكاليف تشغيله 40,000 دينار. معداته تكلف 75,000 دينار وتستهلك بالقسط الثابت على 5 سنوات. نسبة الضريبة 20%. ما التدفق النقدي التشغيلي في سنة واحدة؟</p>
+<p><strong>الحل:</strong></p>
+<p>نبني قائمة الدخل كما في الفصل الخامس:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>المبلغ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td>90,000.00</td>
+</tr>
+<tr class="even">
+<td>تكاليف التشغيل</td>
+<td>‎-40,000.00</td>
+</tr>
+<tr class="odd">
+<td>الاستهلاك</td>
+<td>‎-15,000.00</td>
+</tr>
+<tr class="even">
+<td>الدخل الخاضع للضريبة</td>
+<td>35,000.00</td>
+</tr>
+<tr class="odd">
+<td>الضريبة</td>
+<td>‎-7,000.00</td>
+</tr>
+<tr class="even">
+<td>صافي الربح</td>
+<td>28,000.00</td>
+</tr>
+<tr class="odd">
+<td>نضيف الاستهلاك</td>
+<td>15,000.00</td>
+</tr>
+<tr class="even">
+<td>التدفق التشغيلي</td>
+<td>43,000.00</td>
+</tr>
+</tbody>
+</table>
+<p>نضيف الاستهلاك لأنه طرح ليحسب الضريبة فقط، ولم يخرج نقدا. نفس النتيجة بصيغة واحدة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi><mo>=</mo><mn>43</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+CF = (R - O)(1 - t) + t\,D = 43\mathord{,}000.00
+</annotation></semantics></math></p>
+</div>
+</section>
+<section id="sec-7-table" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="sec-7-table"><span class="header-section-number">7.3</span> بناء الجدول خطوة بخطوة</h2>
+<p>الجدول له عمود لكل سنة، وسطر لكل بند. نبدأ بأبسط مشروع.</p>
+<div id="ex-7-3" class="ee-item" data-id="c07-ex-simple" data-kind="example" data-label="7.3">
+<p><strong>مثال 7.3: أول جدول كامل: مشروع لثلاث سنوات</strong></p>
+<p>آلة تكلف 60,000 دينار، وتعطي إيرادا 55,000 دينار سنويا، بتكاليف تشغيل 25,000 دينار، لمدة 3 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى للعائد بعد الضريبة 12%. ابن جدول التدفقات، واحسب القيمة الحالية.</p>
+<p><strong>الحل:</strong></p>
+<p>الاستهلاك 20,000.00 دينار كل سنة.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>السنة 0</th>
+<th>السنة 1</th>
+<th>السنة 2</th>
+<th>السنة 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الإيراد</td>
+<td></td>
+<td>55,000</td>
+<td>55,000</td>
+<td>55,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل</td>
+<td></td>
+<td>‎-25,000</td>
+<td>‎-25,000</td>
+<td>‎-25,000</td>
+</tr>
+<tr class="odd">
+<td>الاستهلاك</td>
+<td></td>
+<td>‎-20,000</td>
+<td>‎-20,000</td>
+<td>‎-20,000</td>
+</tr>
+<tr class="even">
+<td>الدخل الخاضع</td>
+<td></td>
+<td>10,000</td>
+<td>10,000</td>
+<td>10,000</td>
+</tr>
+<tr class="odd">
+<td>الضريبة</td>
+<td></td>
+<td>‎-2,000</td>
+<td>‎-2,000</td>
+<td>‎-2,000</td>
+</tr>
+<tr class="even">
+<td>صافي الربح</td>
+<td></td>
+<td>8,000</td>
+<td>8,000</td>
+<td>8,000</td>
+</tr>
+<tr class="odd">
+<td>الاستهلاك يضاف</td>
+<td></td>
+<td>20,000</td>
+<td>20,000</td>
+<td>20,000</td>
+</tr>
+<tr class="even">
+<td>الاستثمار</td>
+<td>‎-60,000</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>صافي التدفق</td>
+<td>‎-60,000</td>
+<td>28,000</td>
+<td>28,000</td>
+<td>28,000</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>28</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>251.28</mn></mrow><annotation encoding="application/x-tex">
+PW = -60\mathord{,}000 + 28\mathord{,}000.00\,(P/A,\ 12\%,\ 3) = 7\mathord{,}251.28
+</annotation></semantics></math></p>
+<p>المشروع مقبول بعد الضريبة. الجدول طويل، لكن كل سطر فيه بسيط. هذا هو الشكل الذي ستبني عليه كل مشاريع الفصل.</p>
+</div>
+<p>نضيف الآن قيمة البيع في النهاية. إذا بيع الأصل بأكثر من قيمته الدفترية، تؤخذ ضريبة على الفرق، كما في الفصل الخامس:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">t</mi><mspace width="0.222em"></mspace><mi mathvariant="normal">s</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">v</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">e</mi></mrow><mo>=</mo><mi>M</mi><mo>−</mo><mi>t</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>−</mo><mi>B</mi><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+\mathrm{net\ salvage} = M - t\,(M - BV)
+</annotation></semantics></math></p>
+<div id="ex-7-4" class="ee-item" data-id="c07-ex-salvage" data-kind="example" data-label="7.4">
+<p><strong>مثال 7.4: إضافة قيمة البيع في النهاية</strong></p>
+<p>للمشروع السابق، تبين أن الآلة تباع في نهاية السنة 3 بمبلغ 15,000 دينار. استهلاكها الضريبي بقي على 3 سنوات بدون قيمة بيع. كيف يتغير الجدول والقيمة الحالية؟</p>
+<p><strong>الحل:</strong></p>
+<p>القيمة الدفترية في نهاية السنة 3 صفر، لأن الآلة استهلكت كاملة. فكل ثمن البيع ربح يخضع للضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">x</mi></mrow><mo>=</mo><mn>0.2</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{tax} = 0.2 \times (15\mathord{,}000 - 0) = 3\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>صافي البيع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>3</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+15\mathord{,}000 - 3\mathord{,}000.00 = 12\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>نضيف سطرا في جدول السنة 3 بصافي البيع. التدفق التشغيلي لم يتغير، 28,000.00 دينار سنويا.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>28</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>15</mn><mi>,</mi><mn>792.64</mn></mrow><annotation encoding="application/x-tex">
+PW = -60\mathord{,}000 + 28\mathord{,}000.00\,(P/A,\ 12\%,\ 3) + 12\mathord{,}000.00\,(P/F,\ 12\%,\ 3) = 15\mathord{,}792.64
+</annotation></semantics></math></p>
+</div>
+<p>ثم رأس المال العامل: المخزون والذمم المدينة والنقد التشغيلي. يخرج في البداية، ويعود في النهاية، ولا يخضع للضريبة.</p>
+<div id="ex-7-5" class="ee-item" data-id="c07-ex-working-capital" data-kind="example" data-label="7.5">
+<p><strong>مثال 7.5: إضافة رأس المال العامل</strong></p>
+<p>للمشروع السابق، يحتاج خط الإنتاج مخزونا من المواد الأولية والعبوات بقيمة 10,000 دينار في البداية، ويسترد هذا المخزون كاملا في النهاية. ما أثره على القيمة الحالية؟</p>
+<p><strong>الحل:</strong></p>
+<p>المخزون ليس مصروفا، فلا يطرح من الدخل ولا يخفض الضريبة. لكنه مال محبوس في المشروع طوال عمره. يسمى رأس المال العامل. يدخل في السنة 0 كاستثمار، ويعود في السنة الأخيرة.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>السنة 0</th>
+<th>السنة 1</th>
+<th>السنة 2</th>
+<th>السنة 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الآلة</td>
+<td>‎-60,000</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>رأس المال العامل</td>
+<td>‎-10,000</td>
+<td></td>
+<td></td>
+<td>10,000</td>
+</tr>
+<tr class="odd">
+<td>التدفق التشغيلي</td>
+<td></td>
+<td>28,000</td>
+<td>28,000</td>
+<td>28,000</td>
+</tr>
+<tr class="even">
+<td>صافي البيع</td>
+<td></td>
+<td></td>
+<td></td>
+<td>12,000</td>
+</tr>
+<tr class="odd">
+<td>صافي التدفق</td>
+<td>‎-70,000</td>
+<td>28,000</td>
+<td>28,000</td>
+<td>50,000</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>12</mn><mi>,</mi><mn>910.44</mn></mrow><annotation encoding="application/x-tex">
+PW = 12\mathord{,}910.44
+</annotation></semantics></math></p>
+<p>بدون رأس المال العامل كانت 15,792.64 دينار. الفرق 2,882.20 دينار، وهو تكلفة حبس المال ثلاث سنوات: يخرج اليوم ويعود بنفس القيمة الاسمية، لكن قيمته الحالية أقل.</p>
+</div>
+<p>الآن مشروع كامل يجمع كل العناصر، بخطوات ثابتة تصلح لأي مشروع:</p>
+<ol type="1">
+<li>احسب الاستهلاك لكل سنة.</li>
+<li>احسب التدفق التشغيلي لكل سنة.</li>
+<li>احسب صافي البيع في النهاية.</li>
+<li>ضع الاستثمار ورأس المال العامل في السنة 0، واسترداد رأس المال العامل في النهاية.</li>
+<li>اجمع كل عمود، ثم احسب القيمة الحالية والمعدل.</li>
+</ol>
+<div id="ex-7-6" class="ee-item" data-id="c07-ex-full" data-kind="example" data-label="7.6">
+<p><strong>مثال 7.6: مشروع كامل لخمس سنوات</strong></p>
+<p>مصنع يدرس خطا جديدا يكلف 150,000 دينار، ويحتاج رأس مال عامل 15,000 دينار. الإيراد 120,000 دينار سنويا، والتكاليف 60,000 دينار، لمدة 5 سنوات. الاستهلاك بالقسط الثابت على 5 سنوات بدون قيمة بيع، لكن الخط يباع فعلا بمبلغ 20,000 دينار في النهاية. نسبة الضريبة 20%، والحد الأدنى للعائد بعد الضريبة 12%. احسب القيمة الحالية والمعدل.</p>
+<p><strong>الحل:</strong></p>
+<p>نطبق نفس الخطوات:</p>
+<p><strong>الخطوة 1: الاستهلاك.</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mn>150</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>30</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+D = \frac{150\mathord{,}000}{5} = 30\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>الخطوة 2: التدفق التشغيلي، نفسه كل سنة.</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>120</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mn>30</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>54</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+CF = (120\mathord{,}000 - 60\mathord{,}000)(1 - 0.2) + 0.2 \times 30\mathord{,}000.00 = 54\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>الخطوة 3: صافي البيع في النهاية.</strong> القيمة الدفترية صفر:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+20\mathord{,}000\,(1 - 0.2) = 16\mathord{,}000.00
+</annotation></semantics></math></p>
+<p><strong>الخطوة 4: الجدول.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>صافي التدفق</td>
+<td>‎-165,000</td>
+<td>54,000</td>
+<td>54,000</td>
+<td>54,000</td>
+<td>54,000</td>
+<td>85,000</td>
+</tr>
+</tbody>
+</table>
+<p>السنة 5 تجمع التدفق التشغيلي وصافي البيع واسترداد رأس المال العامل.</p>
+<p><strong>الخطوة 5: التقييم.</strong></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>47</mn><mi>,</mi><mn>248.15</mn></mrow><annotation encoding="application/x-tex">
+PW = 47\mathord{,}248.15
+</annotation></semantics></math></p>
+<pre class="excel"><code>=B1 + NPV(12%, C1:G1)
+=IRR(B1:G1)</code></pre>
+<p>المعدل بعد الضريبة 22.29%. المشروع مقبول.</p>
+</div>
+</section>
+<section id="sec-7-details" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="sec-7-details"><span class="header-section-number">7.4</span> أثر طريقة الاستهلاك ورأس المال العامل المتغير</h2>
+<div id="ex-7-7" class="ee-item" data-id="c07-ex-ddb" data-kind="example" data-label="7.7">
+<p><strong>مثال 7.7: أثر طريقة الاستهلاك على المشروع</strong></p>
+<p>للخط السابق بدون قيمة بيع وبدون رأس مال عامل، احسب القيمة الحالية بعد الضريبة مرة بالقسط الثابت، ومرة بالمتناقص المضاعف مع التحول.</p>
+<p><strong>الحل:</strong></p>
+<p>الجزء الذي لا يتأثر بالاستهلاك نفسه في الطريقتين:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>48</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
+(R - O)(1 - t) = 48\mathord{,}000.00
+</annotation></semantics></math></p>
+<p>الفرق كله في الوفر الضريبي. المتناقص المضاعف لخمس سنوات: 40% ثم 24% ثم 14.4% ثم 10.8% و10.8% من الأساس.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>القسط الثابت</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>30,000</td>
+</tr>
+<tr class="even">
+<td>المتناقص المضاعف</td>
+<td>60,000</td>
+<td>36,000</td>
+<td>21,600</td>
+<td>16,200</td>
+<td>16,200</td>
+</tr>
+</tbody>
+</table>
+<p>القيمة الحالية بالقسط الثابت 44,657.91 دينار، وبالمتناقص المضاعف 46,455.77 دينار. نفس المشروع يصبح أفضل بمقدار 1,797.86 دينار، فقط بتغيير طريقة الاستهلاك.</p>
+</div>
+<div id="ex-7-8" class="ee-item" data-id="c07-ex-wc-sales" data-kind="example" data-label="7.8">
+<p><strong>مثال 7.8: رأس مال عامل يتغير مع المبيعات</strong></p>
+<p>مشروع مبيعاته 100,000 دينار في السنة الأولى، وتنمو 10% سنويا لمدة 4 سنوات. يحتاج رأس مال عامل يساوي 15% من مبيعات كل سنة، ويجب أن يكون جاهزا في بداية السنة. ما تدفقات رأس المال العامل؟</p>
+<p><strong>الحل:</strong></p>
+<p>رصيد رأس المال العامل المطلوب لكل سنة:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>المبيعات</th>
+<th>الرصيد المطلوب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>100,000</td>
+<td>15,000</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>110,000</td>
+<td>16,500</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>121,000</td>
+<td>18,150</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>133,100</td>
+<td>19,965</td>
+</tr>
+</tbody>
+</table>
+<p>التدفق هو الزيادة في الرصيد فقط، في بداية كل سنة، أي في نهاية السنة التي قبلها:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>تدفق رأس المال العامل</td>
+<td>‎-15,000</td>
+<td>‎-1,500</td>
+<td>‎-1,650</td>
+<td>‎-1,815</td>
+<td>19,965</td>
+</tr>
+</tbody>
+</table>
+<p>في النهاية يسترد الرصيد كله، 19,965 دينار. مجموع التدفقات صفر، لكن توقيتها يكلف المشروع.</p>
+</div>
+</section>
+<section id="sec-7-loan" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-7-loan"><span class="header-section-number">7.5</span> التمويل بقرض</h2>
+<p>نقيم المشروع أولا كأن الشركة تدفع كل شيء من مالها. هذا يحكم على المشروع نفسه. ثم ندرس أثر القرض: الفائدة تطرح من الدخل الخاضع للضريبة، فتكلفة القرض الحقيقية بعد الضريبة:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi></mrow></msub><mo>=</mo><mi>r</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+r_{after} = r\,(1 - t)
+</annotation></semantics></math></p>
+<div id="ex-7-9" class="ee-item" data-id="c07-ex-loan" data-kind="example" data-label="7.9">
+<p><strong>مثال 7.9: تمويل المشروع بقرض</strong></p>
+<p>آلة تكلف 90,000 دينار، وتعطي إيرادا 70,000 بتكاليف 30,000 دينار سنويا، لمدة 3 سنوات، وتستهلك بالقسط الثابت. الشركة تقترض 60,000 دينار بفائدة 8% تسدد بأقساط سنوية متساوية، وتدفع الباقي من مالها. نسبة الضريبة 20%، والحد الأدنى للعائد على مال الشركة 12%. ما القيمة الحالية لتدفقات مال الشركة؟</p>
+<p><strong>الحل:</strong></p>
+<p><strong>الخطوة 1: جدول القرض.</strong> القسط:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mi>,</mi><mn>282.01</mn></mrow><annotation encoding="application/x-tex">
+A = 60\mathord{,}000\,(A/P,\ 8\%,\ 3) = 23\mathord{,}282.01
+</annotation></semantics></math></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الفائدة</td>
+<td>4,800</td>
+<td>3,321</td>
+<td>1,725</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الخطوة 2: الفائدة تطرح من الدخل الخاضع للضريبة،</strong> مثل الاستهلاك. أما أصل القسط فلا يطرح.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mi>t</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo>−</mo><mi>D</mi><mo>−</mo><msub><mi>I</mi><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+T_t = t\,(R - O - D - I_t)
+</annotation></semantics></math></p>
+<p><strong>الخطوة 3: تدفق مال الشركة</strong> يساوي الإيراد ناقص التكاليف والضريبة والقسط كاملا:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>السنة</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>تدفق مال الشركة</td>
+<td>‎-30,000</td>
+<td>15,678</td>
+<td>15,382</td>
+<td>15,063</td>
+</tr>
+</tbody>
+</table>
+<p>في السنة 0 تدفع الشركة الفرق بين الثمن والقرض فقط.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>e</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>y</mi></mrow></msub><mo>=</mo><mn>6</mn><mi>,</mi><mn>982.34</mn></mrow><annotation encoding="application/x-tex">
+PW_{equity} = 6\mathord{,}982.34
+</annotation></semantics></math></p>
+<p>بدون قرض كانت القيمة الحالية 1,269.59 دينار. القرض رفعها، لأن الفائدة 8%، والفائدة بعد الضريبة أقل منها، مقارنة بالحد الأدنى للعائد 12%.</p>
+</div>
+</section>
+<section id="sec-7-costs" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="sec-7-costs"><span class="header-section-number">7.6</span> بدائل التكاليف بعد الضريبة</h2>
+<p>كثير من القرارات لا تزيد الإيراد، بل تخفض التكاليف. التوفير يرفع الربح والضريبة، والاستهلاك يخفضها.</p>
+<div id="ex-7-10" class="ee-item" data-id="c07-ex-cost-saving" data-kind="example" data-label="7.10">
+<p><strong>مثال 7.10: آلة توفر تكاليف بعد الضريبة</strong></p>
+<p>آلة تكلف 40,000 دينار، ولا تزيد الإيراد، لكنها توفر 14,000 دينار سنويا من الأجور لمدة 5 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى للعائد 10%. هل تشتريها الشركة؟</p>
+<p><strong>الحل:</strong></p>
+<p>التوفير يرفع الربح، فيرفع الضريبة. الاستهلاك يخفضها. التدفق السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mn>14</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>12</mn><mi>,</mi><mn>800.00</mn></mrow><annotation encoding="application/x-tex">
+CF = 14\mathord{,}000\,(1 - 0.2) + 0.2 \times 8\mathord{,}000.00 = 12\mathord{,}800.00
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>12</mn><mi>,</mi><mn>800.00</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>522.07</mn></mrow><annotation encoding="application/x-tex">
+PW = -40\mathord{,}000 + 12\mathord{,}800.00\,(P/A,\ 10\%,\ 5) = 8\mathord{,}522.07
+</annotation></semantics></math></p>
+<p>الشراء مقبول.</p>
+</div>
+<div id="ex-7-11" class="ee-item" data-id="c07-ex-two-machines" data-kind="example" data-label="7.11">
+<p><strong>مثال 7.11: مقارنة آلتين بالقيمة السنوية بعد الضريبة</strong></p>
+<p>الآلة أ تكلف 30,000 دينار، وتشغيلها 12,000 دينار سنويا، وعمرها 4 سنوات. الآلة ب تكلف 50,000 دينار، وتشغيلها 8,000 دينار سنويا، وعمرها 6 سنوات. كلتاهما تستهلك بالقسط الثابت على عمرها بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى للعائد 10%. أيهما أرخص؟</p>
+<p><strong>الحل:</strong></p>
+<p>نحسب التكلفة السنوية بعد الضريبة لكل آلة. ثلاثة أجزاء: استرداد الثمن، والتشغيل بعد الضريبة، ناقص الوفر الضريبي من الاستهلاك.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>7</mn><mi>,</mi><mn>500.00</mn><mo>=</mo><mn>17</mn><mi>,</mi><mn>564.12</mn></mrow><annotation encoding="application/x-tex">
+AW_a = 30\mathord{,}000\,(A/P,\ 10\%,\ 4) + 12\mathord{,}000\,(1 - 0.2) - 0.2 \times 7\mathord{,}500.00 = 17\mathord{,}564.12
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0.2</mn><mo>×</mo><mn>8</mn><mi>,</mi><mn>333.33</mn><mo>=</mo><mn>16</mn><mi>,</mi><mn>213.70</mn></mrow><annotation encoding="application/x-tex">
+AW_b = 50\mathord{,}000\,(A/P,\ 10\%,\ 6) + 8\mathord{,}000\,(1 - 0.2) - 0.2 \times 8\mathord{,}333.33 = 16\mathord{,}213.70
+</annotation></semantics></math></p>
+<p>الأرخص: الآلة ب.</p>
+</div>
+</section>
+<section id="sec-7-marr" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="sec-7-marr"><span class="header-section-number">7.7</span> الحد الأدنى للعائد بعد الضريبة</h2>
+<p>إذا قيمت المشروع بتدفقات بعد الضريبة، فاستخدم حدا أدنى للعائد بعد الضريبة. الخلط بين الاثنين خطأ شائع: تدفقات بعد الضريبة بحد أدنى قبلها ترفض مشاريع جيدة.</p>
+<div id="ex-7-12" class="ee-item" data-id="c07-ex-irr-tax" data-kind="example" data-label="7.12">
+<p><strong>مثال 7.12: المعدل قبل الضريبة وبعدها</strong></p>
+<p>استثمار يكلف 80,000 دينار، ويعطي 30,000 دينار سنويا قبل الضريبة لمدة 5 سنوات، ويستهلك بالقسط الثابت. نسبة الضريبة 20%. قارن المعدل قبل الضريبة وبعدها.</p>
+<p><strong>الحل:</strong></p>
+<p>قبل الضريبة:</p>
+<pre class="excel"><code>=RATE(5, 30000, -80000)</code></pre>
+<p>المعدل 25.41%.</p>
+<p>بعد الضريبة، التدفق السنوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mn>16</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>27</mn><mi>,</mi><mn>200.00</mn></mrow><annotation encoding="application/x-tex">
+CF = 30\mathord{,}000\,(1 - 0.2) + 0.2 \times 16\mathord{,}000.00 = 27\mathord{,}200.00
+</annotation></semantics></math></p>
+<p>والمعدل 20.76%.</p>
+<p>قاعدة تقريبية شائعة: المعدل بعد الضريبة يساوي تقريبا المعدل قبلها مضروبا في واحد ناقص نسبة الضريبة، أي 20.33% هنا. التقريب قريب، لكنه ليس دقيقا، لأن الاستهلاك يعطي وفرا ضريبيا. لذلك إذا قيمت المشروع بعد الضريبة، فقارن بحد أدنى بعد الضريبة.</p>
+</div>
+<div id="ex-7-13" class="ee-item" data-id="c07-ex-breakeven" data-kind="example" data-label="7.13">
+<p><strong>مثال 7.13: أقل إيراد يجعل المشروع مقبولا بعد الضريبة</strong></p>
+<p>مشروع يكلف 100,000 دينار، وتكاليف تشغيله 30,000 دينار سنويا، وعمره 5 سنوات، ويستهلك بالقسط الثابت. نسبة الضريبة 20%، والحد الأدنى للعائد بعد الضريبة 12%. ما أقل إيراد سنوي يجعل القيمة الحالية صفرا؟</p>
+<p><strong>الحل:</strong></p>
+<p>القيمة الحالية صفر عندما يساوي التدفق السنوي تكلفة استرداد رأس المال:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>0.2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0.2</mn><mo>×</mo><mn>20</mn><mi>,</mi><mn>000.00</mn><mo>=</mo><mn>100</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+(R - 30\mathord{,}000)(1 - 0.2) + 0.2 \times 20\mathord{,}000.00 = 100\mathord{,}000\,(A/P,\ 12\%,\ 5)
+</annotation></semantics></math></p>
+<p>نحل لـ R:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>27</mn><mi>,</mi><mn>740.97</mn><mo>−</mo><mn>4</mn><mi>,</mi><mn>000.00</mn></mrow><mrow><mn>1</mn><mo>−</mo><mn>0.2</mn></mrow></mfrac><mo>=</mo><mn>59</mn><mi>,</mi><mn>676.22</mn></mrow><annotation encoding="application/x-tex">
+R = 30\mathord{,}000 + \frac{27\mathord{,}740.97 - 4\mathord{,}000.00}{1 - 0.2} = 59\mathord{,}676.22
+</annotation></semantics></math></p>
+<p>إذا كانت المبيعات المتوقعة أعلى من هذا الرقم، فالمشروع مقبول.</p>
+</div>
+</section>
+<section id="sec-7-python" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="sec-7-python"><span class="header-section-number">7.8</span> Python: جدول التدفقات</h2>
+<p>هذا البرنامج يبني جدول المشروع الكامل في المثال الأساسي، ويحسب القيمة الحالية والمعدل. غير المدخلات في الأعلى لتجرب مشاريع أخرى:</p>
+<div id="be63aa6a" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>C, W, R, O, M <span class="op">=</span> <span class="dv">150000</span>, <span class="dv">15000</span>, <span class="dv">120000</span>, <span class="dv">60000</span>, <span class="dv">20000</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>t, i, n <span class="op">=</span> <span class="fl">0.20</span>, <span class="fl">0.12</span>, <span class="dv">5</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dep <span class="op">=</span> [C <span class="op">/</span> n] <span class="op">*</span> n</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span>C <span class="op">-</span> W]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    taxable <span class="op">=</span> R <span class="op">-</span> O <span class="op">-</span> dep[year <span class="op">-</span> <span class="dv">1</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    tax <span class="op">=</span> t <span class="op">*</span> taxable</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    cf <span class="op">=</span> R <span class="op">-</span> O <span class="op">-</span> tax</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> year <span class="op">==</span> n:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        cf <span class="op">+=</span> M <span class="op">-</span> t <span class="op">*</span> (M <span class="op">-</span> <span class="dv">0</span>) <span class="op">+</span> W</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    flows.append(cf)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([<span class="bu">round</span>(x) <span class="cf">for</span> x <span class="kw">in</span> flows])</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"PW  ="</span>, <span class="bu">round</span>(npf.npv(i, flows), <span class="dv">2</span>))</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"IRR ="</span>, <span class="bu">round</span>(npf.irr(flows), <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[-165000, 54000, 54000, 54000, 54000, 85000]
+PW  = 47248.15
+IRR = 0.2229</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-7-problems" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="sec-7-problems"><span class="header-section-number">7.9</span> مسائل</h2>
+<section id="الجزء-أ-أسئلة-مفاهيم" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</h3>
+<p>أجب بجملة أو جملتين، بدون حساب.</p>
+<div id="prob-7-1" class="ee-item" data-id="c07-a-01" data-kind="problem" data-label="7.1">
+<p><strong>7.1</strong> لماذا نضيف الاستهلاك إلى صافي الربح لنحصل على التدفق النقدي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-1">الحل</a></span></p>
+</div>
+<div id="prob-7-2" class="ee-item" data-id="c07-a-02" data-kind="problem" data-label="7.2">
+<p><strong>7.2</strong> ما الفرق بين صافي الربح والتدفق النقدي في سنة معينة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-2">الحل</a></span></p>
+</div>
+<div id="prob-7-3" class="ee-item" data-id="c07-a-03" data-kind="problem" data-label="7.3">
+<p><strong>7.3</strong> لماذا لا يخضع رأس المال العامل للضريبة، ولا يستهلك؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-3">الحل</a></span></p>
+</div>
+<div id="prob-7-4" class="ee-item" data-id="c07-a-04" data-kind="problem" data-label="7.4">
+<p><strong>7.4</strong> إذا كان رأس المال العامل يعود كاملا في النهاية، فلماذا يخفض القيمة الحالية للمشروع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-4">الحل</a></span></p>
+</div>
+<div id="prob-7-5" class="ee-item" data-id="c07-a-05" data-kind="problem" data-label="7.5">
+<p><strong>7.5</strong> لماذا نقيم المشروع أولا بدون القرض، حتى لو كانت الشركة ستقترض فعلا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-5">الحل</a></span></p>
+</div>
+<div id="prob-7-6" class="ee-item" data-id="c07-a-06" data-kind="problem" data-label="7.6">
+<p><strong>7.6</strong> هل يطرح أصل قسط القرض من الدخل الخاضع للضريبة؟ وماذا عن الفائدة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-6">الحل</a></span></p>
+</div>
+<div id="prob-7-7" class="ee-item" data-id="c07-a-07" data-kind="problem" data-label="7.7">
+<p><strong>7.7</strong> دفعت الشركة 8,000 دينار لدراسة سوق قبل أن تقرر تنفيذ المشروع. هل تضاف إلى تدفقات المشروع في السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-7">الحل</a></span></p>
+</div>
+<div id="prob-7-8" class="ee-item" data-id="c07-a-08" data-kind="problem" data-label="7.8">
+<p><strong>7.8</strong> المشروع الجديد يستخدم أرضا تملكها الشركة، ويمكن بيعها اليوم بمبلغ 50,000 دينار. هل نضع قيمة الأرض في تدفقات المشروع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-8">الحل</a></span></p>
+</div>
+<div id="prob-7-9" class="ee-item" data-id="c07-a-09" data-kind="problem" data-label="7.9">
+<p><strong>7.9</strong> مجموع الاستهلاك نفسه بالقسط الثابت والمتناقص المضاعف. لماذا تعطي الطريقة الأسرع قيمة حالية أعلى؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-9">الحل</a></span></p>
+</div>
+<div id="prob-7-10" class="ee-item" data-id="c07-a-10" data-kind="problem" data-label="7.10">
+<p><strong>7.10</strong> بيعت آلة بأقل من قيمتها الدفترية. هل تدفع الشركة ضريبة على البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-10">الحل</a></span></p>
+</div>
+<div id="prob-7-11" class="ee-item" data-id="c07-a-11" data-kind="problem" data-label="7.11">
+<p><strong>7.11</strong> آلة توفر تكاليف العمالة ولا تزيد الإيراد. لماذا يكون التوفير بعد الضريبة أقل من التوفير قبلها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-11">الحل</a></span></p>
+</div>
+<div id="prob-7-12" class="ee-item" data-id="c07-a-12" data-kind="problem" data-label="7.12">
+<p><strong>7.12</strong> منتج جديد سيأخذ جزءا من مبيعات منتج قديم للشركة نفسها. كيف نعامل هذا في تدفقات المشروع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-12">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ب-التدفق-النقدي-التشغيلي" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ب-التدفق-النقدي-التشغيلي">الجزء ب: التدفق النقدي التشغيلي</h3>
+<div id="prob-7-13" class="ee-item" data-id="c07-b-01" data-kind="problem" data-label="7.13">
+<p><strong>7.13</strong> مشروع إيراده 80,000 دينار في السنة، وتكاليف تشغيله 35,000 دينار، واستهلاكه 12,000 دينار. نسبة الضريبة 20%. ابن قائمة الدخل، واحسب التدفق النقدي التشغيلي.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-13">الحل</a></span></p>
+</div>
+<div id="prob-7-14" class="ee-item" data-id="c07-b-02" data-kind="problem" data-label="7.14">
+<p><strong>7.14</strong> للأرقام السابقة، احسب التدفق التشغيلي بالصيغة الواحدة، وبين ما يمثله كل جزء منها.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-14">الحل</a></span></p>
+</div>
+<div id="prob-7-15" class="ee-item" data-id="c07-b-03" data-kind="problem" data-label="7.15">
+<p><strong>7.15</strong> آلة تكلف 60,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بدون قيمة بيع. نسبة الضريبة 20%. ما الوفر الضريبي السنوي من الاستهلاك؟ وما قيمته الحالية بحد أدنى 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-15">الحل</a></span></p>
+</div>
+<div id="prob-7-16" class="ee-item" data-id="c07-b-04" data-kind="problem" data-label="7.16">
+<p><strong>7.16</strong> صافي ربح مشروع في سنة 26,000 دينار، والاستهلاك المطروح في قائمة الدخل 15,000 دينار. ما التدفق النقدي التشغيلي، إذا كانت كل الإيرادات والتكاليف الأخرى نقدية؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-16">الحل</a></span></p>
+</div>
+<div id="prob-7-17" class="ee-item" data-id="c07-b-05" data-kind="problem" data-label="7.17">
+<p><strong>7.17</strong> تدفق مشروع التشغيلي 42,000.00 دينار في السنة. إيراده 90,000 دينار، وتكاليفه 40,000 دينار، ونسبة الضريبة 20%. ما الاستهلاك السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-17">الحل</a></span></p>
+</div>
+<div id="prob-7-18" class="ee-item" data-id="c07-b-06" data-kind="problem" data-label="7.18">
+<p><strong>7.18</strong> ارتفعت تكاليف التشغيل في مشروع بمقدار 5,000 دينار في السنة. نسبة الضريبة 20%. بكم ينخفض التدفق النقدي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-18">الحل</a></span></p>
+</div>
+<div id="prob-7-19" class="ee-item" data-id="c07-b-07" data-kind="problem" data-label="7.19">
+<p><strong>7.19</strong> سمحت دائرة الضريبة لشركة بزيادة استهلاك أصل بمقدار 4,000 دينار هذه السنة. نسبة الضريبة 20%. بكم يتغير التدفق النقدي هذه السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-19">الحل</a></span></p>
+</div>
+<div id="prob-7-20" class="ee-item" data-id="c07-b-08" data-kind="problem" data-label="7.20">
+<p><strong>7.20</strong> آلة تكلف 50,000 دينار، وقيمة بيعها المقدرة 5,000 دينار بعد 5 سنوات، وتستهلك بالقسط الثابت. إيرادها 40,000 دينار، وتشغيلها 18,000 دينار سنويا. نسبة الضريبة 20%. ما التدفق التشغيلي السنوي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-20">الحل</a></span></p>
+</div>
+<div id="prob-7-21" class="ee-item" data-id="c07-b-09" data-kind="problem" data-label="7.21">
+<p><strong>7.21</strong> آلة تكلف 100,000 دينار، وتستهلك بالقسط المتناقص المضاعف على 5 سنوات. إيرادها 70,000 دينار وتشغيلها 30,000 دينار سنويا. نسبة الضريبة 20%. احسب التدفق التشغيلي في السنوات الثلاث الأولى.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-21">الحل</a></span></p>
+</div>
+<div id="prob-7-22" class="ee-item" data-id="c07-b-10" data-kind="problem" data-label="7.22">
+<p><strong>7.22</strong> آلة تكلف 40,000 دينار، وتستهلك بمجموع أرقام السنوات على 4 سنوات بدون قيمة بيع. إيرادها 30,000 وتشغيلها 12,000 دينار سنويا. نسبة الضريبة 20%. احسب التدفق التشغيلي لكل سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-22">الحل</a></span></p>
+</div>
+<div id="prob-7-23" class="ee-item" data-id="c07-b-11" data-kind="problem" data-label="7.23">
+<p><strong>7.23</strong> خط إنتاج يبيع 20,000 وحدة في السنة بسعر 6.00 دينار. التكلفة المتغيرة 2.00 دينار للوحدة، والتكاليف الثابتة النقدية 25,000 دينار، والاستهلاك 8,000 دينار. نسبة الضريبة 20%. ما التدفق التشغيلي؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-23">الحل</a></span></p>
+</div>
+<div id="prob-7-24" class="ee-item" data-id="c07-b-12" data-kind="problem" data-label="7.24">
+<p><strong>7.24</strong> مشروع جديد في شركة رابحة. إيراده 30,000 دينار، وتشغيله 18,000 دينار، واستهلاكه 20,000 دينار في السنة الأولى. نسبة الضريبة 20%. ما التدفق التشغيلي للمشروع في هذه السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-24">الحل</a></span></p>
+</div>
+<div id="prob-7-25" class="ee-item" data-id="c07-b-13" data-kind="problem" data-label="7.25">
+<p><strong>7.25</strong> نفس المشروع ينفذ في بلدين. إيراده 100,000 دينار، وتشغيله 45,000 دينار، واستهلاكه 15,000 دينار. نسبة الضريبة 15% في البلد الأول و25% في الثاني. قارن التدفق التشغيلي.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-25">الحل</a></span></p>
+</div>
+<div id="prob-7-26" class="ee-item" data-id="c07-b-14" data-kind="problem" data-label="7.26">
+<p><strong>7.26</strong> مشروع إيراده 60,000 دينار في السنة الأولى، ويزيد 8% كل سنة. تكاليف التشغيل ثابتة 25,000 دينار. المعدات تكلف 45,000 دينار وتستهلك بالقسط الثابت على 3 سنوات. نسبة الضريبة 20%. احسب التدفق التشغيلي لكل سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-26">الحل</a></span></p>
+</div>
+<div id="prob-7-27" class="ee-item" data-id="c07-b-15" data-kind="problem" data-label="7.27">
+<p><strong>7.27</strong> مشروع إيراده 50,000 دينار وتشغيله 20,000 دينار سنويا لمدة 5 سنوات. معداته تكلف 60,000 دينار وتستهلك بالقسط الثابت. نسبة الضريبة 20%، والحد الأدنى للعائد 12%. احسب القيمة الحالية لجزأي التدفق التشغيلي كل على حدة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-27">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ج-الاستثمار-وقيمة-البيع-ورأس-المال-العامل" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ج-الاستثمار-وقيمة-البيع-ورأس-المال-العامل">الجزء ج: الاستثمار وقيمة البيع ورأس المال العامل</h3>
+<div id="prob-7-28" class="ee-item" data-id="c07-c-01" data-kind="problem" data-label="7.28">
+<p><strong>7.28</strong> آلة قيمتها الدفترية 10,000 دينار، بيعت بمبلغ 18,000 دينار. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-28">الحل</a></span></p>
+</div>
+<div id="prob-7-29" class="ee-item" data-id="c07-c-02" data-kind="problem" data-label="7.29">
+<p><strong>7.29</strong> آلة قيمتها الدفترية 14,000 دينار، بيعت بمبلغ 6,000 دينار فقط. الشركة رابحة، ونسبة الضريبة 20%. ما صافي البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-29">الحل</a></span></p>
+</div>
+<div id="prob-7-30" class="ee-item" data-id="c07-c-03" data-kind="problem" data-label="7.30">
+<p><strong>7.30</strong> آلة تكلف 80,000 دينار، وتستهلك بالقسط الثابت على 8 سنوات بدون قيمة بيع. بيعت بعد 5 سنوات بمبلغ 30,000 دينار. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-30">الحل</a></span></p>
+</div>
+<div id="prob-7-31" class="ee-item" data-id="c07-c-04" data-kind="problem" data-label="7.31">
+<p><strong>7.31</strong> آلة تكلف 60,000 دينار، وتستهلك بالقسط المتناقص المضاعف لعمر 5 سنوات. بيعت بعد 3 سنوات بمبلغ 15,000 دينار، قبل أي تحول إلى القسط الثابت. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-31">الحل</a></span></p>
+</div>
+<div id="prob-7-32" class="ee-item" data-id="c07-c-05" data-kind="problem" data-label="7.32">
+<p><strong>7.32</strong> سعر آلة 70,000 دينار، والشحن 3,000 دينار، والتركيب 5,000 دينار. تستهلك بالقسط الثابت على 5 سنوات. ما التدفق في السنة 0؟ وما الاستهلاك السنوي؟ وما الوفر الضريبي السنوي بنسبة 20%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-32">الحل</a></span></p>
+</div>
+<div id="prob-7-33" class="ee-item" data-id="c07-c-06" data-kind="problem" data-label="7.33">
+<p><strong>7.33</strong> مشروع يحتاج مخزونا بقيمة 12,000 دينار، وذمما على الزبائن 9,000 دينار. الموردون يمهلون الشركة بمبلغ 5,000 دينار. كل هذا يسترد في نهاية المشروع بعد 4 سنوات. ما رأس المال العامل؟ وما تكلفته بالقيمة الحالية بحد أدنى 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-33">الحل</a></span></p>
+</div>
+<div id="prob-7-34" class="ee-item" data-id="c07-c-07" data-kind="problem" data-label="7.34">
+<p><strong>7.34</strong> شركة تحتاج رأس مال عامل يساوي 12% من المبيعات السنوية. المبيعات المتوقعة 150,000 دينار، ثابتة لمدة 5 سنوات. ما رأس المال العامل؟ وما تكلفته بالقيمة الحالية بحد أدنى 10%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-34">الحل</a></span></p>
+</div>
+<div id="prob-7-35" class="ee-item" data-id="c07-c-08" data-kind="problem" data-label="7.35">
+<p><strong>7.35</strong> مبيعات مشروع 80,000 ثم 100,000 ثم 90,000 دينار في سنواته الثلاث. رأس المال العامل 15% من مبيعات كل سنة، ويجب أن يكون جاهزا في بدايتها. ما تدفقات رأس المال العامل؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-35">الحل</a></span></p>
+</div>
+<div id="prob-7-36" class="ee-item" data-id="c07-c-09" data-kind="problem" data-label="7.36">
+<p><strong>7.36</strong> في السنة 0 يدفع مشروع ثمن آلة 50,000 دينار، ورأس مال عامل 8,000 دينار، وتدريب للعمال 4,000 دينار. التدريب مصروف يطرح من الدخل في نفس السنة، والشركة رابحة. نسبة الضريبة 20%. ما صافي التدفق في السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-36">الحل</a></span></p>
+</div>
+<div id="prob-7-37" class="ee-item" data-id="c07-c-10" data-kind="problem" data-label="7.37">
+<p><strong>7.37</strong> مشروع يستخدم أرضا تملكها الشركة. قيمتها السوقية اليوم 40,000 دينار، وتقدر بمبلغ 47,000 دينار بعد 6 سنوات عند نهاية المشروع. ما أثر الأرض على القيمة الحالية للمشروع بحد أدنى 10%؟ تجاهل الضريبة على الأرض.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-37">الحل</a></span></p>
+</div>
+<div id="prob-7-38" class="ee-item" data-id="c07-c-11" data-kind="problem" data-label="7.38">
+<p><strong>7.38</strong> شركة تشتري آلة جديدة بمبلغ 90,000 دينار، وتبيع الآلة القديمة اليوم بمبلغ 20,000 دينار. القيمة الدفترية للقديمة 12,000 دينار. نسبة الضريبة 20%. ما صافي الاستثمار في السنة 0؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-38">الحل</a></span></p>
+</div>
+<div id="prob-7-39" class="ee-item" data-id="c07-c-12" data-kind="problem" data-label="7.39">
+<p><strong>7.39</strong> آلة تكلف 70,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بقيمة بيع مقدرة 10,000 دينار. في النهاية بيعت فعلا بمبلغ 16,000 دينار. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-39">الحل</a></span></p>
+</div>
+<div id="prob-7-40" class="ee-item" data-id="c07-c-13" data-kind="problem" data-label="7.40">
+<p><strong>7.40</strong> قيمة آلة الدفترية 12,000 دينار. نسبة الضريبة 20%. بكم يجب أن تباع ليكون صافي البيع 20,000 دينار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-40">الحل</a></span></p>
+</div>
+<div id="prob-7-41" class="ee-item" data-id="c07-c-14" data-kind="problem" data-label="7.41">
+<p><strong>7.41</strong> شركة تدرس مشروعا. البنود التالية تتعلق بالسنة 0: ثمن الآلة 80,000 دينار، ودراسة جدوى دفعت الشهر الماضي 5,000 دينار، وتركيب الآلة 4,000 دينار، ورأس مال عامل 6,000 دينار. المشروع سيستخدم مستودعا فارغا يمكن تأجيره بمبلغ 3,000 دينار سنويا. ما الاستثمار المناسب للتحليل في السنة 0؟ وأين يذهب المستودع؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-41">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-د-جدول-التدفقات-الكامل-والقيمة-الحالية-بعد-الضريبة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-د-جدول-التدفقات-الكامل-والقيمة-الحالية-بعد-الضريبة">الجزء د: جدول التدفقات الكامل والقيمة الحالية بعد الضريبة</h3>
+<div id="prob-7-42" class="ee-item" data-id="c07-d-01" data-kind="problem" data-label="7.42">
+<p><strong>7.42</strong> آلة تكلف 45,000 دينار، وتعطي إيرادا 40,000 دينار بتكاليف 18,000 دينار سنويا لمدة 3 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى للعائد بعد الضريبة 12%. ابن الجدول واحسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-42">الحل</a></span></p>
+</div>
+<div id="prob-7-43" class="ee-item" data-id="c07-d-02" data-kind="problem" data-label="7.43">
+<p><strong>7.43</strong> مشروع لمدة 4 سنوات. الآلة تكلف 60,000 دينار، وتستهلك بالقسط الثابت بدون قيمة بيع، لكنها تباع فعلا في النهاية بمبلغ 10,000 دينار. الإيراد 45,000 والتشغيل 20,000 دينار سنويا. نسبة الضريبة 20%، والحد الأدنى للعائد 10%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-43">الحل</a></span></p>
+</div>
+<div id="prob-7-44" class="ee-item" data-id="c07-d-03" data-kind="problem" data-label="7.44">
+<p><strong>7.44</strong> مشروع لمدة 4 سنوات بدون قيمة بيع. الآلة تكلف 60,000 دينار وتستهلك بالقسط الثابت. يحتاج رأس مال عامل 9,000 دينار يسترد في النهاية. الإيراد 45,000 والتشغيل 20,000 دينار سنويا. نسبة الضريبة 20%، والحد الأدنى للعائد 10%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-44">الحل</a></span></p>
+</div>
+<div id="prob-7-45" class="ee-item" data-id="c07-d-04" data-kind="problem" data-label="7.45">
+<p><strong>7.45</strong> خط إنتاج يكلف 150,000 دينار، ويحتاج رأس مال عامل 15,000 دينار. الإيراد 120,000 والتشغيل 60,000 دينار سنويا لمدة 5 سنوات. الاستهلاك بالقسط الثابت بدون قيمة بيع، ويباع الخط في النهاية بمبلغ 20,000 دينار. نسبة الضريبة 20%، والحد الأدنى للعائد 12%. احسب القيمة الحالية والمعدل، وقرر.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-45">الحل</a></span></p>
+</div>
+<div id="prob-7-46" class="ee-item" data-id="c07-d-05" data-kind="problem" data-label="7.46">
+<p><strong>7.46</strong> خط إنتاج يكلف 150,000 دينار، ويحتاج رأس مال عامل 15,000 دينار. الإيراد 120,000 والتشغيل 60,000 دينار سنويا لمدة 5 سنوات. الاستهلاك بالقسط الثابت بدون قيمة بيع، ويباع الخط في النهاية بمبلغ 20,000 دينار. نسبة الضريبة 20%، والحد الأدنى 12%. احسب القيمة السنوية بعد الضريبة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-46">الحل</a></span></p>
+</div>
+<div id="prob-7-47" class="ee-item" data-id="c07-d-06" data-kind="problem" data-label="7.47">
+<p><strong>7.47</strong> مشروع لمدة 4 سنوات. الآلة تكلف 80,000 دينار وتستهلك بالقسط الثابت بدون قيمة بيع. الإيراد 50,000 دينار في السنة الأولى ويزيد 10% سنويا. التشغيل 20,000 دينار في السنة الأولى ويزيد 5% سنويا. نسبة الضريبة 20%، والحد الأدنى 12%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-47">الحل</a></span></p>
+</div>
+<div id="prob-7-48" class="ee-item" data-id="c07-d-07" data-kind="problem" data-label="7.48">
+<p><strong>7.48</strong> مشروع لمدة 4 سنوات. الآلة تكلف 80,000 دينار، وتستهلك بالقسط المتناقص المضاعف مع التحول إلى الثابت، بدون قيمة بيع. الإيراد 50,000 والتشغيل 20,000 دينار سنويا. نسبة الضريبة 20%، والحد الأدنى 12%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-48">الحل</a></span></p>
+</div>
+<div id="prob-7-49" class="ee-item" data-id="c07-d-08" data-kind="problem" data-label="7.49">
+<p><strong>7.49</strong> آلة تكلف 80,000 دينار وعمرها الضريبي 4 سنوات بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 12%. بكم ترتفع القيمة الحالية لأي مشروع يستخدمها إذا استهلكت بالمتناقص المضاعف مع التحول، بدلا من القسط الثابت؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-49">الحل</a></span></p>
+</div>
+<div id="prob-7-50" class="ee-item" data-id="c07-d-09" data-kind="problem" data-label="7.50">
+<p><strong>7.50</strong> آلة تكلف 90,000 دينار، وتستهلك بمجموع أرقام السنوات على 5 سنوات بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. ما القيمة الحالية للوفر الضريبي؟ قارنها بالقسط الثابت.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-50">الحل</a></span></p>
+</div>
+<div id="prob-7-51" class="ee-item" data-id="c07-d-10" data-kind="problem" data-label="7.51">
+<p><strong>7.51</strong> آلة تكلف 70,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بقيمة بيع مقدرة 10,000 دينار. في النهاية تباع فعلا بمبلغ 14,000 دينار. الإيراد 50,000 والتشغيل 22,000 دينار سنويا. نسبة الضريبة 20%، والحد الأدنى 10%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-51">الحل</a></span></p>
+</div>
+<div id="prob-7-52" class="ee-item" data-id="c07-d-11" data-kind="problem" data-label="7.52">
+<p><strong>7.52</strong> آلة تكلف 90,000 دينار، وعمرها الضريبي 6 سنوات بالقسط الثابت بدون قيمة بيع. المشروع ينتهي بعد 4 سنوات، وتباع الآلة عندها بمبلغ 40,000 دينار. الإيراد 55,000 والتشغيل 20,000 دينار سنويا. نسبة الضريبة 20%، والحد الأدنى 12%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-52">الحل</a></span></p>
+</div>
+<div id="prob-7-53" class="ee-item" data-id="c07-d-12" data-kind="problem" data-label="7.53">
+<p><strong>7.53</strong> آلة تكلف 60,000 دينار، وتعطي إيرادا 40,000 بتكاليف 15,000 دينار سنويا، لمدة 6 سنوات، وتستهلك بالقسط الثابت. نسبة الضريبة 20%. ما فترة الاسترداد البسيطة قبل الضريبة وبعدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-53">الحل</a></span></p>
+</div>
+<div id="prob-7-54" class="ee-item" data-id="c07-d-13" data-kind="problem" data-label="7.54">
+<p><strong>7.54</strong> خط ينتج 10,000 وحدة سنويا. التكلفة المتغيرة 4.00 دينار للوحدة، والثابتة النقدية 15,000 دينار سنويا. الآلة تكلف 80,000 دينار، وعمرها 5 سنوات، وتستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 12%. ما أقل سعر للوحدة يجعل المشروع مقبولا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-54">الحل</a></span></p>
+</div>
+<div id="prob-7-55" class="ee-item" data-id="c07-d-14" data-kind="problem" data-label="7.55">
+<p><strong>7.55</strong> مشروع يعطي إيرادا 40,000 بتكاليف 15,000 دينار سنويا، لمدة 5 سنوات. معداته تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 12%. ما أعلى ثمن للمعدات يجعل المشروع مقبولا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-55">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-هـ-التمويل-بقرض" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-هـ-التمويل-بقرض">الجزء هـ: التمويل بقرض</h3>
+<div id="prob-7-56" class="ee-item" data-id="c07-e-01" data-kind="problem" data-label="7.56">
+<p><strong>7.56</strong> شركة رابحة تقترض بفائدة 9%. نسبة الضريبة 20%. ما التكلفة الفعلية للقرض بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-56">الحل</a></span></p>
+</div>
+<div id="prob-7-57" class="ee-item" data-id="c07-e-02" data-kind="problem" data-label="7.57">
+<p><strong>7.57</strong> قرض 50,000 دينار بفائدة 8%، يسدد بثلاثة أقساط سنوية متساوية. نسبة الضريبة 20%. ابن جدول القرض، واحسب الوفر الضريبي من الفائدة كل سنة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-57">الحل</a></span></p>
+</div>
+<div id="prob-7-58" class="ee-item" data-id="c07-e-03" data-kind="problem" data-label="7.58">
+<p><strong>7.58</strong> قرض 60,000 دينار بفائدة 8%، يسدد أصله بثلاث دفعات متساوية، مع فائدة الرصيد كل سنة. نسبة الضريبة 20%. ما القيمة الحالية للوفر الضريبي من الفائدة بحد أدنى 12%؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-58">الحل</a></span></p>
+</div>
+<div id="prob-7-59" class="ee-item" data-id="c07-e-04" data-kind="problem" data-label="7.59">
+<p><strong>7.59</strong> في السنة الأولى لمشروع ممول بقرض: الإيراد 60,000 دينار، والتشغيل 25,000 دينار، والاستهلاك 10,000 دينار. قسط القرض 15,000 دينار، منه 4,000 دينار فائدة. نسبة الضريبة 20%. ما تدفق مال الشركة في هذه السنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-59">الحل</a></span></p>
+</div>
+<div id="prob-7-60" class="ee-item" data-id="c07-e-05" data-kind="problem" data-label="7.60">
+<p><strong>7.60</strong> قرض 50,000 دينار بفائدة 8%، يسدد بثلاثة أقساط سنوية متساوية. نسبة الضريبة 20%، والحد الأدنى للعائد على مال الشركة 12%. ما القيمة الحالية لتدفقات القرض بعد الضريبة؟ هل القرض يضيف قيمة للشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-60">الحل</a></span></p>
+</div>
+<div id="prob-7-61" class="ee-item" data-id="c07-e-06" data-kind="problem" data-label="7.61">
+<p><strong>7.61</strong> آلة تكلف 80,000 دينار، وتعطي إيرادا 55,000 بتكاليف 20,000 دينار سنويا لمدة 3 سنوات، وتستهلك بالقسط الثابت. الشركة تقترض 40,000 دينار بفائدة 8%، تدفع الفائدة فقط كل سنة، وترد الأصل في النهاية. نسبة الضريبة 20%، والحد الأدنى للعائد على مال الشركة 14%. قارن القيمة الحالية لمال الشركة مع القرض وبدونه.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-61">الحل</a></span></p>
+</div>
+<div id="prob-7-62" class="ee-item" data-id="c07-e-07" data-kind="problem" data-label="7.62">
+<p><strong>7.62</strong> بنك يقرض شركة 100,000 دينار لمدة 5 سنوات بفائدة 9%، تدفع الفائدة كل سنة ويرد الأصل في النهاية. يأخذ البنك رسوما 2.00% من القرض عند التوقيع. نسبة الضريبة 20%. ما التكلفة الفعلية للقرض بعد الضريبة؟ تجاهل الأثر الضريبي للرسوم.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-62">الحل</a></span></p>
+</div>
+<div id="prob-7-63" class="ee-item" data-id="c07-e-08" data-kind="problem" data-label="7.63">
+<p><strong>7.63</strong> قرض 80,000 دينار بفائدة 10% لمدة 4 سنوات، يسدد أصله بدفعات متساوية مع فائدة الرصيد. نسبة الضريبة 20%. ما مجموع الفائدة؟ وما مجموع الوفر الضريبي منها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-63">الحل</a></span></p>
+</div>
+<div id="prob-7-64" class="ee-item" data-id="c07-e-09" data-kind="problem" data-label="7.64">
+<p><strong>7.64</strong> مشروع يكلف 100,000 دينار، وتدفقه بعد الضريبة بدون قرض 30,000 دينار سنويا لمدة 5 سنوات. الشركة تقترض نصف التكلفة بفائدة 8%، تدفع الفائدة فقط وترد الأصل في النهاية. نسبة الضريبة 20%. قارن معدل المشروع بمعدل مال الشركة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-64">الحل</a></span></p>
+</div>
+<div id="prob-7-65" class="ee-item" data-id="c07-e-10" data-kind="problem" data-label="7.65">
+<p><strong>7.65</strong> قرض 40,000 دينار بفائدة 9% على 4 أقساط سنوية متساوية. نسبة الضريبة 20%. في السنة الأولى، كم من القسط يطرح من الدخل الخاضع للضريبة؟ وكم يوفر من الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-65">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-و-بدائل-التكاليف-بعد-الضريبة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-و-بدائل-التكاليف-بعد-الضريبة">الجزء و: بدائل التكاليف بعد الضريبة</h3>
+<div id="prob-7-66" class="ee-item" data-id="c07-f-01" data-kind="problem" data-label="7.66">
+<p><strong>7.66</strong> نظام آلي لتعبئة الأكياس يكلف 30,000 دينار، ويوفر 9,000 دينار سنويا من الأجور، لمدة 5 سنوات. يستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. هل يستحق الشراء؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-66">الحل</a></span></p>
+</div>
+<div id="prob-7-67" class="ee-item" data-id="c07-f-02" data-kind="problem" data-label="7.67">
+<p><strong>7.67</strong> آلة تكلف 30,000 دينار، وتوفر 8,000 دينار سنويا لمدة 5 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع، لكنها تباع في النهاية بمبلغ 5,000 دينار. نسبة الضريبة 20%، والحد الأدنى 10%. احسب القيمة الحالية.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-67">الحل</a></span></p>
+</div>
+<div id="prob-7-68" class="ee-item" data-id="c07-f-03" data-kind="problem" data-label="7.68">
+<p><strong>7.68</strong> معدات تكلف 40,000 دينار، وعمرها 6 سنوات، وتستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 12%. ما أقل توفير سنوي يبرر شراءها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-68">الحل</a></span></p>
+</div>
+<div id="prob-7-69" class="ee-item" data-id="c07-f-04" data-kind="problem" data-label="7.69">
+<p><strong>7.69</strong> مضخة تكلف 25,000 دينار، وتشغيلها 6,000 دينار سنويا، وعمرها 5 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. ما التكلفة السنوية بعد الضريبة؟ وما هي قبل الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-69">الحل</a></span></p>
+</div>
+<div id="prob-7-70" class="ee-item" data-id="c07-f-05" data-kind="problem" data-label="7.70">
+<p><strong>7.70</strong> بديلان لنفس العمل، عمر كل منهما 5 سنوات، ويستهلك بالقسط الثابت بدون قيمة بيع ضريبية.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>أ</th>
+<th>ب</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الثمن</td>
+<td>20,000</td>
+<td>32,000</td>
+</tr>
+<tr class="even">
+<td>التشغيل السنوي</td>
+<td>9,000</td>
+<td>5,500</td>
+</tr>
+<tr class="odd">
+<td>البيع في النهاية</td>
+<td>2,000</td>
+<td>5,000</td>
+</tr>
+</tbody>
+</table>
+<p>نسبة الضريبة 20%، والحد الأدنى 10%. أيهما أرخص بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-70">الحل</a></span></p>
+</div>
+<div id="prob-7-71" class="ee-item" data-id="c07-f-06" data-kind="problem" data-label="7.71">
+<p><strong>7.71</strong> آلة أ تكلف 18,000 دينار، وتشغيلها 7,000 دينار، وعمرها 3 سنوات. آلة ب تكلف 40,000 دينار، وتشغيلها 4,000 دينار، وعمرها 6 سنوات. كلتاهما تستهلك بالقسط الثابت على عمرها بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-71">الحل</a></span></p>
+</div>
+<div id="prob-7-72" class="ee-item" data-id="c07-f-07" data-kind="problem" data-label="7.72">
+<p><strong>7.72</strong> شركة تحتاج رافعة شوكية لمدة 5 سنوات. يمكنها شراؤها بمبلغ 50,000 دينار، تستهلك بالقسط الثابت بدون قيمة بيع. أو استئجارها بمبلغ 13,400 دينار سنويا، يدفع في نهاية كل سنة ويطرح من الدخل. الصيانة على الشركة في الحالتين. نسبة الضريبة 20%، والحد الأدنى 10%. أيهما أرخص؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-72">الحل</a></span></p>
+</div>
+<div id="prob-7-73" class="ee-item" data-id="c07-f-08" data-kind="problem" data-label="7.73">
+<p><strong>7.73</strong> آلة قديمة قيمتها الدفترية 8,000 دينار، ويمكن بيعها اليوم بمبلغ 12,000 دينار. تشغيلها 15,000 دينار سنويا. آلة جديدة تكلف 40,000 دينار، وتشغيلها 6,000 دينار. كلتاهما تخدم 4 سنوات أخرى، وتستهلك بالقسط الثابت إلى الصفر على هذه المدة، بدون قيمة بيع في النهاية. نسبة الضريبة 20%، والحد الأدنى 10%. هل تستبدل الشركة القديمة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-73">الحل</a></span></p>
+</div>
+<div id="prob-7-74" class="ee-item" data-id="c07-f-09" data-kind="problem" data-label="7.74">
+<p><strong>7.74</strong> آلة أ تكلف 20,000 دينار وتشغيلها 8,000 دينار سنويا. آلة ب تكلف 36,000 دينار وتشغيلها 4,000 دينار. عمر كل منهما 5 سنوات بالقسط الثابت بدون قيمة بيع. الحد الأدنى 10%. قارن التكلفة السنوية بدون ضريبة، ثم بنسبة ضريبة 25%. هل تغير الضريبة الاختيار؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-74">الحل</a></span></p>
+</div>
+<div id="prob-7-75" class="ee-item" data-id="c07-f-10" data-kind="problem" data-label="7.75">
+<p><strong>7.75</strong> مصنع يستبدل الإنارة القديمة بإنارة موفرة تكلف 24,000 دينار. الإنارة الجديدة توفر 6,000 دينار سنويا من الكهرباء والصيانة لمدة 8 سنوات. تستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%. ما المعدل بعد الضريبة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-75">الحل</a></span></p>
+</div>
+<div id="prob-7-76" class="ee-item" data-id="c07-f-11" data-kind="problem" data-label="7.76">
+<p><strong>7.76</strong> معدات تكلف 24,000 دينار، وتوفر 6,000 دينار سنويا، وعمرها 8 سنوات بالقسط الثابت. نسبة الضريبة 20%. ما فترة الاسترداد البسيطة قبل الضريبة وبعدها؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-76">الحل</a></span></p>
+</div>
+<div id="prob-7-77" class="ee-item" data-id="c07-f-12" data-kind="problem" data-label="7.77">
+<p><strong>7.77</strong> مورد يعرض نظاما يوفر 10,000 دينار سنويا لمدة 6 سنوات، ويستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى 10%. ما أعلى ثمن تدفعه الشركة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-77">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ز-مسائل-excel-وpython" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ز-مسائل-excel-وpython">الجزء ز: مسائل Excel وPython</h3>
+<p>حل هذه المسائل بجدول في Excel أو ببرنامج Python، وليس باليد.</p>
+<div id="prob-7-78" class="ee-item" data-id="c07-g-01" data-kind="problem" data-label="7.78">
+<p><strong>7.78</strong> ابن في Excel جدول التدفقات لمشروع يكلف 120,000 دينار، برأس مال عامل 10,000 دينار، وإيراد 90,000 وتشغيل 40,000 دينار سنويا لمدة 5 سنوات. الاستهلاك بالقسط الثابت بدون قيمة بيع، ويباع الأصل في النهاية بمبلغ 15,000 دينار. نسبة الضريبة 20%، والحد الأدنى 12%. ضع المدخلات في خلايا مستقلة، واجعل كل سطر في الجدول صيغة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-78">الحل</a></span></p>
+</div>
+<div id="prob-7-79" class="ee-item" data-id="c07-g-02" data-kind="problem" data-label="7.79">
+<p><strong>7.79</strong> في جدول المسألة السابقة، غير الاستهلاك إلى المتناقص المضاعف مع التحول، لأصل يكلف 100,000 دينار على 5 سنوات. ما الصيغة؟ وما استهلاك كل سنة؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-79">الحل</a></span></p>
+</div>
+<div id="prob-7-80" class="ee-item" data-id="c07-g-03" data-kind="problem" data-label="7.80">
+<p><strong>7.80</strong> اكتب في Python دالة تحسب القيمة الحالية بعد الضريبة لمشروع المسألة الأولى في هذا الجزء. ثم اطبع القيمة الحالية إذا جاء الإيراد 80% و90% و100% و110% من المتوقع.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-80">الحل</a></span></p>
+</div>
+<div id="prob-7-81" class="ee-item" data-id="c07-g-04" data-kind="problem" data-label="7.81">
+<p><strong>7.81</strong> في جدول Excel للمسألة الأولى، استخدم Goal Seek لإيجاد الإيراد السنوي الذي يجعل القيمة الحالية صفرا.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-81">الحل</a></span></p>
+</div>
+<div id="prob-7-82" class="ee-item" data-id="c07-g-05" data-kind="problem" data-label="7.82">
+<p><strong>7.82</strong> اكتب في Python برنامجا يحسب القيمة الحالية للوفر الضريبي لأصل يكلف 100,000 دينار على 5 سنوات، بالقسط الثابت والمتناقص المضاعف مع التحول ومجموع أرقام السنوات. نسبة الضريبة 20%، والحد الأدنى 10%.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-82">الحل</a></span></p>
+</div>
+<div id="prob-7-83" class="ee-item" data-id="c07-g-06" data-kind="problem" data-label="7.83">
+<p><strong>7.83</strong> ابن في Excel جدول قرض 60,000 دينار بفائدة 8% على 4 أقساط سنوية متساوية، مع عمود للوفر الضريبي من الفائدة بنسبة 20%. استخدم IPMT وPPMT.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-83">الحل</a></span></p>
+</div>
+<div id="prob-7-84" class="ee-item" data-id="c07-g-07" data-kind="problem" data-label="7.84">
+<p><strong>7.84</strong> اكتب في Python دالة تأخذ قائمة المبيعات السنوية ونسبة رأس المال العامل، وتعيد تدفقات رأس المال العامل من السنة 0 إلى النهاية. جربها على مبيعات 50,000 و65,000 و80,000 و70,000 دينار، ونسبة 15%.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-84">الحل</a></span></p>
+</div>
+<div id="prob-7-85" class="ee-item" data-id="c07-g-08" data-kind="problem" data-label="7.85">
+<p><strong>7.85</strong> اكتب في Python برنامجا يحسب المعدل قبل الضريبة وبعدها لاستثمار يكلف 80,000 دينار ويعطي 30,000 دينار سنويا قبل الضريبة لمدة 5 سنوات، بالقسط الثابت ونسبة ضريبة 20%. قارن المعدل بعد الضريبة بالتقريب الذي يضرب المعدل قبلها في واحد ناقص النسبة.</p>
+<p><span class="ee-sol-link"><a href="#sol-7-85">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ح-اختيار-من-متعدد" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ح-اختيار-من-متعدد">الجزء ح: اختيار من متعدد</h3>
+<p>كل خيار خاطئ في هذا الجزء مبني على خطأ يقع فيه الطلاب فعلا.</p>
+<div id="prob-7-86" class="ee-item" data-id="c07-h-01" data-kind="problem" data-label="7.86">
+<p><strong>7.86</strong> إيراد 80,000 دينار، وتشغيل 30,000 دينار، واستهلاك 10,000 دينار، ونسبة ضريبة 20%. ما التدفق النقدي التشغيلي؟</p>
+<p>أ) 32,000.00<br>
+ب) 40,000.00<br>
+ج) 42,000.00<br>
+د) 22,000.00</p>
+<p><span class="ee-sol-link"><a href="#sol-7-86">الحل</a></span></p>
+</div>
+<div id="prob-7-87" class="ee-item" data-id="c07-h-02" data-kind="problem" data-label="7.87">
+<p><strong>7.87</strong> آلة قيمتها الدفترية 8,000 دينار بيعت بمبلغ 20,000 دينار. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p>أ) 16,000.00<br>
+ب) 17,600.00<br>
+ج) 20,000.00<br>
+د) 22,400.00</p>
+<p><span class="ee-sol-link"><a href="#sol-7-87">الحل</a></span></p>
+</div>
+<div id="prob-7-88" class="ee-item" data-id="c07-h-03" data-kind="problem" data-label="7.88">
+<p><strong>7.88</strong> مشروع يحتاج رأس مال عامل 20,000 دينار يسترد كاملا في النهاية. أين يظهر في الجدول؟</p>
+<p>أ) مصروف في السنة 0 يطرح من الدخل<br>
+ب) تدفق خارج في السنة 0 وداخل في النهاية، بدون ضريبة<br>
+ج) يستهلك على عمر المشروع<br>
+د) لا يظهر لأنه يسترد</p>
+<p><span class="ee-sol-link"><a href="#sol-7-88">الحل</a></span></p>
+</div>
+<div id="prob-7-89" class="ee-item" data-id="c07-h-04" data-kind="problem" data-label="7.89">
+<p><strong>7.89</strong> عند تقييم مشروع ممول جزئيا بقرض، ما الطريقة الصحيحة لتقييم المشروع نفسه؟</p>
+<p>أ) نطرح الفائدة من التدفقات ونخصمها بالحد الأدنى<br>
+ب) نطرح القسط كاملا من التدفقات<br>
+ج) نتجاهل القرض، ونخصم تدفقات المشروع الكاملة<br>
+د) نضيف القرض إلى تدفق السنة 0</p>
+<p><span class="ee-sol-link"><a href="#sol-7-89">الحل</a></span></p>
+</div>
+<div id="prob-7-90" class="ee-item" data-id="c07-h-05" data-kind="problem" data-label="7.90">
+<p><strong>7.90</strong> قرض بفائدة 10%، ونسبة الضريبة 25%. ما تكلفة القرض بعد الضريبة؟</p>
+<p>أ) 10.00%<br>
+ب) 7.50%<br>
+ج) 12.50%<br>
+د) ‎-15.00%</p>
+<p><span class="ee-sol-link"><a href="#sol-7-90">الحل</a></span></p>
+</div>
+<div id="prob-7-91" class="ee-item" data-id="c07-h-06" data-kind="problem" data-label="7.91">
+<p><strong>7.91</strong> شركة تقيم مشروعا بتدفقات بعد الضريبة. حدها الأدنى قبل الضريبة 15%، وبعدها 12%. أي نسبة تستخدم؟</p>
+<p>أ) 15% لأنها الأعلى والأحوط<br>
+ب) 12%<br>
+ج) متوسط النسبتين<br>
+د) لا فرق في القرار</p>
+<p><span class="ee-sol-link"><a href="#sol-7-91">الحل</a></span></p>
+</div>
+<div id="prob-7-92" class="ee-item" data-id="c07-h-07" data-kind="problem" data-label="7.92">
+<p><strong>7.92</strong> غيرت شركة طريقة الاستهلاك من القسط الثابت إلى المتناقص المضاعف. ماذا يحدث للقيمة الحالية بعد الضريبة؟</p>
+<p>أ) تنخفض لأن الاستهلاك يرتفع في البداية<br>
+ب) لا تتغير لأن مجموع الاستهلاك واحد<br>
+ج) ترتفع لأن الوفر الضريبي يأتي مبكرا<br>
+د) تعتمد على الإيراد فقط</p>
+<p><span class="ee-sol-link"><a href="#sol-7-92">الحل</a></span></p>
+</div>
+<div id="prob-7-93" class="ee-item" data-id="c07-h-08" data-kind="problem" data-label="7.93">
+<p><strong>7.93</strong> آلة توفر 10,000 دينار سنويا من تكاليف التشغيل، ونسبة الضريبة 20%. ما التوفير بعد الضريبة، بدون حساب الاستهلاك؟</p>
+<p>أ) 10,000<br>
+ب) 2,000<br>
+ج) 8,000<br>
+د) 12,000</p>
+<p><span class="ee-sol-link"><a href="#sol-7-93">الحل</a></span></p>
+</div>
+<div id="prob-7-94" class="ee-item" data-id="c07-h-09" data-kind="problem" data-label="7.94">
+<p><strong>7.94</strong> أي البنود التالية لا يدخل في تدفقات مشروع جديد؟</p>
+<p>أ) الإيجار الضائع لمستودع تملكه الشركة<br>
+ب) دراسة سوق دفعت قبل القرار<br>
+ج) الربح الضائع من منتج قديم يتأثر بالمشروع<br>
+د) رأس المال العامل الإضافي</p>
+<p><span class="ee-sol-link"><a href="#sol-7-94">الحل</a></span></p>
+</div>
+<div id="prob-7-95" class="ee-item" data-id="c07-h-10" data-kind="problem" data-label="7.95">
+<p><strong>7.95</strong> آلة تكلف 50,000 دينار، وتستهلك بالقسط الثابت على 5 سنوات بدون قيمة بيع. بيعت بعد 3 سنوات بمبلغ 25,000 دينار. نسبة الضريبة 20%. ما صافي البيع؟</p>
+<p>أ) 20,000.00<br>
+ب) 26,000.00<br>
+ج) 20,000.00<br>
+د) 24,000.00</p>
+<p><span class="ee-sol-link"><a href="#sol-7-95">الحل</a></span></p>
+</div>
+</section>
+<section id="الجزء-ط-حالات-مصغرة" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="الجزء-ط-حالات-مصغرة">الجزء ط: حالات مصغرة</h3>
+<p>كل حالة مشروع كامل من البداية إلى القرار.</p>
+<div id="prob-7-96" class="ee-item" data-id="c07-i-01" data-kind="problem" data-label="7.96">
+<p><strong>7.96</strong> <strong>حالة 7.1: خط خبز آلي في نابلس</strong></p>
+<p>مخبز يدرس إضافة خط آلي للخبز المغلف. البيانات:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البند</th>
+<th>القيمة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ثمن الفرن والخط</td>
+<td>90,000</td>
+</tr>
+<tr class="even">
+<td>التركيب والتشغيل التجريبي</td>
+<td>6,000</td>
+</tr>
+<tr class="odd">
+<td>مخزون الطحين والأكياس</td>
+<td>8,000</td>
+</tr>
+<tr class="even">
+<td>المبيعات السنوية</td>
+<td>75,000</td>
+</tr>
+<tr class="odd">
+<td>الطحين والأجور والطاقة</td>
+<td>32,000</td>
+</tr>
+<tr class="even">
+<td>العمر</td>
+<td>5 سنوات</td>
+</tr>
+<tr class="odd">
+<td>البيع المتوقع في النهاية</td>
+<td>10,000</td>
+</tr>
+<tr class="even">
+<td>نسبة الضريبة</td>
+<td>15%</td>
+</tr>
+<tr class="odd">
+<td>الحد الأدنى للعائد بعد الضريبة</td>
+<td>11%</td>
+</tr>
+</tbody>
+</table>
+<p>الاستهلاك بالقسط الثابت على 5 سنوات بدون قيمة بيع ضريبية.</p>
+<p>(أ) احسب أساس الاستهلاك والتدفق التشغيلي السنوي. (ب) ابن جدول صافي التدفقات. (ج) احسب القيمة الحالية والمعدل، وقرر. (د) ماذا لو جاءت المبيعات أقل بنسبة 15%؟ (هـ) ما أقل مبيعات سنوية تجعل الخط مقبولا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-96">الحل</a></span></p>
+</div>
+<div id="prob-7-97" class="ee-item" data-id="c07-i-02" data-kind="problem" data-label="7.97">
+<p><strong>7.97</strong> <strong>حالة 7.2: استبدال آلة حقن في مصنع بلاستيك</strong></p>
+<p>آلة حقن قديمة قيمتها الدفترية 12,000 دينار، وتباع اليوم بمبلغ 9,000 دينار فقط. تكاليف تشغيلها وصيانتها والتالف منها 28,000 دينار سنويا. آلة جديدة تكلف 60,000 دينار، وتكاليفها 14,000 دينار سنويا. كلتاهما تخدم 5 سنوات أخرى، وتستهلك بالقسط الثابت إلى الصفر على هذه المدة، بدون قيمة بيع في النهاية. نسبة الضريبة 20%، والحد الأدنى 10%.</p>
+<p>(أ) ما صافي بيع القديمة اليوم؟ لماذا هو أكبر من 9,000؟ (ب) قارن التكلفة السنوية بعد الضريبة. (ج) قارن بدون ضريبة. (د) ما أعلى ثمن للجديدة يجعل الاستبدال مجديا؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-97">الحل</a></span></p>
+</div>
+<div id="prob-7-98" class="ee-item" data-id="c07-i-03" data-kind="problem" data-label="7.98">
+<p><strong>7.98</strong> <strong>حالة 7.3: طاقة شمسية لمستودع تبريد</strong></p>
+<p>شركة توزيع خضار تدرس تركيب نظام طاقة شمسية على سطح مستودع التبريد. النظام يكلف 45,000 دينار، ويوفر 11,000 دينار من الكهرباء في السنة الأولى. تعرفة الكهرباء ترتفع 4% سنويا، فيرتفع التوفير معها. عمر النظام 8 سنوات، ويستهلك بالقسط الثابت بدون قيمة بيع. نسبة الضريبة 20%، والحد الأدنى للعائد بعد الضريبة 10%.</p>
+<p>بنك يعرض تمويل 30,000 دينار من الثمن بفائدة 6%، على 4 أقساط سنوية متساوية.</p>
+<p>(أ) احسب تدفقات المشروع بدون قرض، والقيمة الحالية والمعدل. (ب) ابن جدول القرض. (ج) احسب تدفقات مال الشركة مع القرض، وقيمتها الحالية بحد أدنى 10%. (د) هل تأخذ الشركة القرض؟</p>
+<p><span class="ee-sol-link"><a href="#sol-7-98">الحل</a></span></p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+/* Load the random-numbers scripts with a path that works on every page and on GitHub Pages. */
+(function () {
+  var m = document.querySelector('meta[name="quarto:offset"]');
+  var base = (m ? m.getAttribute('content') : './') + 'assets/';
+  var files = ['katex/katex.min.js', 'marked.umd.js', 'ee-engine.js', 'ee-random.js'];
+  (function next(k) {
+    if (k >= files.length) { document.dispatchEvent(new Event('ee-ready')); return; }
+    var s = document.createElement('script');
+    s.src = base + files[k];
+    s.onload = function () { next(k + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/ch06.html" class="pagination-link" aria-label="مفاهيم التكاليف واتخاذ القرار">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/tables.html" class="pagination-link" aria-label="جداول المعاملات">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">جداول المعاملات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

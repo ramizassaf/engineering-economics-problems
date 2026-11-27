@@ -195,6 +195,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">مفاهيم التكاليف واتخاذ القرار</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">التدفقات النقدية للمشروع</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -265,6 +271,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../appendices/solutions-ch06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السادس</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/solutions-ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">L</span>&nbsp; <span class="chapter-title">حلول مسائل الفصل السابع</span></span></a>
   </div>
 </li>
       </ul>
@@ -588,7 +600,7 @@ C_{max} = 12\mathord{,}000\,(P/A,\ 10\%,\ 6) + 8\mathord{,}000\,(P/F,\ 10\%,\ 6)
 </tr>
 <tr class="even">
 <td>18%</td>
-<td>-293.55</td>
+<td>‎-293.55</td>
 </tr>
 </tbody>
 </table>
@@ -712,11 +724,11 @@ PW_b = -70\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 10\%,\ 5) = 20\mathord{,}978
 </tr>
 <tr class="even">
 <td>10%</td>
-<td>-401.33</td>
+<td>‎-401.33</td>
 </tr>
 <tr class="odd">
 <td>15%</td>
-<td>-2,969.83</td>
+<td>‎-2,969.83</td>
 </tr>
 </tbody>
 </table>
@@ -982,7 +994,7 @@ i_m = 0.80\%, \qquad A_m = 11\mathord{,}888.22\,(A/F,\ 0.80\%,\ 12) = 947.98
 </tr>
 <tr class="odd">
 <td>14%</td>
-<td>-322.80</td>
+<td>‎-322.80</td>
 </tr>
 </tbody>
 </table>
@@ -1138,27 +1150,27 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 <tr class="odd">
 <td>1</td>
 <td>3,000</td>
-<td>-17,272.73</td>
+<td>‎-17,272.73</td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td>4,000</td>
-<td>-13,966.94</td>
+<td>‎-13,966.94</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>5,000</td>
-<td>-10,210.37</td>
+<td>‎-10,210.37</td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td>6,000</td>
-<td>-6,112.29</td>
+<td>‎-6,112.29</td>
 </tr>
 <tr class="odd">
 <td>5</td>
 <td>7,000</td>
-<td>-1,765.84</td>
+<td>‎-1,765.84</td>
 </tr>
 <tr class="even">
 <td>6</td>
@@ -1216,7 +1228,7 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </tr>
 <tr class="odd">
 <td>20%</td>
-<td>-4,112.65</td>
+<td>‎-4,112.65</td>
 </tr>
 </tbody>
 </table>
@@ -1311,11 +1323,11 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 <tbody>
 <tr class="odd">
 <td>التراكمي</td>
-<td>-26,364</td>
-<td>-21,818</td>
-<td>-16,559</td>
-<td>-10,753</td>
-<td>-4,544</td>
+<td>‎-26,364</td>
+<td>‎-21,818</td>
+<td>‎-16,559</td>
+<td>‎-10,753</td>
+<td>‎-4,544</td>
 <td>1,947</td>
 <td>8,618</td>
 <td>15,383</td>
@@ -1333,7 +1345,7 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [rent] <span class="op">*</span> <span class="dv">120</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>flows[<span class="dv">120</span>] <span class="op">+=</span> S</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.npv(im, flows), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>القيمة الحالية -2,255.60 دينار. بيع الشقة في الشهر 120، فخصمه بالنسبة الشهرية على 120 شهرا يساوي خصمه بالنسبة السنوية على 10 سنوات.</p>
+<p>القيمة الحالية ‎-2,255.60 دينار. بيع الشقة في الشهر 120، فخصمه بالنسبة الشهرية على 120 شهرا يساوي خصمه بالنسبة السنوية على 10 سنوات.</p>
 <p><span id="sol-3-111"><strong>3.111</strong></span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> capitalized(C, M, R, k, i):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    af <span class="op">=</span> i <span class="op">/</span> ((<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> k <span class="op">-</span> <span class="dv">1</span>)</span>
