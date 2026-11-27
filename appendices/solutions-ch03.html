@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -280,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#الجزء-أ-أسئلة-مفاهيم" id="toc-الجزء-أ-أسئلة-مفاهيم" class="nav-link active" data-scroll-target="#الجزء-أ-أسئلة-مفاهيم">الجزء أ: أسئلة مفاهيم</a></li>
-  <li><a href="#الجزء-ب-الفائدة-الشهرية-والسنوية" id="toc-الجزء-ب-الفائدة-الشهرية-والسنوية" class="nav-link" data-scroll-target="#الجزء-ب-الفائدة-الشهرية-والسنوية">الجزء ب: الفائدة الشهرية والسنوية</a></li>
+  <li><a href="#الجزء-ب-الفائدة-الاسمية-والفعلية" id="toc-الجزء-ب-الفائدة-الاسمية-والفعلية" class="nav-link" data-scroll-target="#الجزء-ب-الفائدة-الاسمية-والفعلية">الجزء ب: الفائدة الاسمية والفعلية</a></li>
   <li><a href="#الجزء-ج-القيمة-الحالية-لمشروع-واحد" id="toc-الجزء-ج-القيمة-الحالية-لمشروع-واحد" class="nav-link" data-scroll-target="#الجزء-ج-القيمة-الحالية-لمشروع-واحد">الجزء ج: القيمة الحالية لمشروع واحد</a></li>
   <li><a href="#الجزء-د-مقارنة-بدائل-بأعمار-متساوية" id="toc-الجزء-د-مقارنة-بدائل-بأعمار-متساوية" class="nav-link" data-scroll-target="#الجزء-د-مقارنة-بدائل-بأعمار-متساوية">الجزء د: مقارنة بدائل بأعمار متساوية</a></li>
   <li><a href="#الجزء-هـ-بدائل-بأعمار-مختلفة" id="toc-الجزء-هـ-بدائل-بأعمار-مختلفة" class="nav-link" data-scroll-target="#الجزء-هـ-بدائل-بأعمار-مختلفة">الجزء هـ: بدائل بأعمار مختلفة</a></li>
@@ -329,8 +329,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span id="sol-3-9"><strong>3.9</strong></span> الفترة البسيطة تتجاهل قيمة المال مع الزمن. والفترتان تتجاهلان كل ما يحدث بعد الاسترداد، فمشروع يسترد بسرعة ثم يتوقف قد يفضل على مشروع أبطأ يعطي ربحا أكبر بكثير.</p>
 <p><span id="sol-3-10"><strong>3.10</strong></span> لأن هذه المشاريع تخدم مدة طويلة جدا، فنعاملها كأن عمرها بلا نهاية. رقمها هو المبلغ الذي يكفي اليوم لبناء المشروع وتمويل تكاليفه المتكررة إلى الأبد من فائدته.</p>
 </section>
-<section id="الجزء-ب-الفائدة-الشهرية-والسنوية" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-الفائدة-الشهرية-والسنوية">الجزء ب: الفائدة الشهرية والسنوية</h2>
+<section id="الجزء-ب-الفائدة-الاسمية-والفعلية" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="الجزء-ب-الفائدة-الاسمية-والفعلية">الجزء ب: الفائدة الاسمية والفعلية</h2>
 <p><span id="sol-3-11"><strong>3.11</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><mn>12</mn><mi>%</mi></mrow><mn>12</mn></mfrac><mo>=</mo><mn>1.00</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
 i_m = \frac{12\%}{12} = 1.00\%
@@ -455,36 +455,105 @@ m = \frac{-\ln\left(1 - \frac{50\mathord{,}000 \times 0.0067}{800}\right)}{\ln(1
 </tbody>
 </table>
 <p>النسبة الفعلية تزيد مع عدد مرات الحساب، لكن الزيادة تصغر بسرعة. الفرق بين الحساب الشهري واليومي صغير جدا في الواقع العملي.</p>
+<p><span id="sol-3-26"><strong>3.26</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>q</mi></msub><mo>=</mo><mfrac><mrow><mn>10</mn><mi>%</mi></mrow><mn>4</mn></mfrac><mo>=</mo><mn>2.50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_q = \frac{10\%}{4} = 2.50\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.0250</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>4</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.38</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = (1 + 0.0250)^4 - 1 = 10.38\%
+</annotation></semantics></math></p>
+<p><span id="sol-3-27"><strong>3.27</strong></span> النسبة الفعلية للربع:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>q</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>0.08</mn><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>3</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>2.01</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_q = \left(1 + \frac{0.08}{12}\right)^3 - 1 = 2.01\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2.01</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>16</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>27</mn><mi>,</mi><mn>987.96</mn></mrow><annotation encoding="application/x-tex">
+F = 1\mathord{,}500\,(F/A,\ 2.01\%,\ 16) = 27\mathord{,}987.96
+</annotation></semantics></math></p>
+<p><span id="sol-3-28"><strong>3.28</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>h</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>0.09</mn><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>6</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>4.59</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_h = \left(1 + \frac{0.09}{12}\right)^6 - 1 = 4.59\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4.59</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>538.18</mn></mrow><annotation encoding="application/x-tex">
+A = 20\mathord{,}000\,(A/P,\ 4.59\%,\ 10) = 2\mathord{,}538.18
+</annotation></semantics></math></p>
+<p><span id="sol-3-29"><strong>3.29</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>q</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>4</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>2.41</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_q = (1 + 0.1)^{1/4} - 1 = 2.41\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>0.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_m = (1 + 0.1)^{1/12} - 1 = 0.80\%
+</annotation></semantics></math></p>
+<p><span id="sol-3-30"><strong>3.30</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><msup><mi>e</mi><mn>0.08</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>8.33</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = e^{0.08} - 1 = 8.33\%
+</annotation></semantics></math></p>
+<p>الحساب الشهري يعطي 8.30%. الفرق 0.03% نقطة مئوية فقط.</p>
+<p><span id="sol-3-31"><strong>3.31</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>12</mn><mrow><mo stretchy="true" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.12</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>11.39</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+r = 12\left[(1 + 0.12)^{1/12} - 1\right] = 11.39\%
+</annotation></semantics></math></p>
+<pre class="excel"><code>=NOMINAL(12%, 12)</code></pre>
+<p><span id="sol-3-32"><strong>3.32</strong></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>البنك</th>
+<th>النسبة الفعلية</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>الأول</td>
+<td>10.03%</td>
+</tr>
+<tr class="even">
+<td>الثاني</td>
+<td>10.17%</td>
+</tr>
+<tr class="odd">
+<td>الثالث</td>
+<td>10.00%</td>
+</tr>
+</tbody>
+</table>
+<p>الأرخص البنك الثالث.</p>
+<p><span id="sol-3-33"><strong>3.33</strong></span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>0.1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>4</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.38</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i_a = \left(1 + \frac{0.1}{4}\right)^4 - 1 = 10.38\%
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10.38</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>31</mn><mi>,</mi><mn>570.04</mn></mrow><annotation encoding="application/x-tex">
+P = 6\mathord{,}000\,(P/A,\ 10.38\%,\ 8) = 31\mathord{,}570.04
+</annotation></semantics></math></p>
 </section>
 <section id="الجزء-ج-القيمة-الحالية-لمشروع-واحد" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ج-القيمة-الحالية-لمشروع-واحد">الجزء ج: القيمة الحالية لمشروع واحد</h2>
-<p><span id="sol-3-26"><strong>3.26</strong></span></p>
+<p><span id="sol-3-34"><strong>3.34</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>50</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>14</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn><mi>,</mi><mn>071.01</mn></mrow><annotation encoding="application/x-tex">
 PW = -50\mathord{,}000 + 14\mathord{,}000\,(P/A,\ 10\%,\ 5) = 3\mathord{,}071.01
 </annotation></semantics></math></p>
 <p>المشروع مقبول.</p>
-<p><span id="sol-3-27"><strong>3.27</strong></span></p>
+<p><span id="sol-3-35"><strong>3.35</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>75</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>16</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>543.60</mn></mrow><annotation encoding="application/x-tex">
 PW = -75\mathord{,}000 + 16\mathord{,}000\,(P/A,\ 12\%,\ 7) + 10\mathord{,}000\,(P/F,\ 12\%,\ 7) = 2\mathord{,}543.60
 </annotation></semantics></math></p>
 <p>الشراء مقبول.</p>
-<p><span id="sol-3-28"><strong>3.28</strong></span> صافي التدفق السنوي يساوي الإيراد ناقص التشغيل، أي 45,000 دينار:</p>
+<p><span id="sol-3-36"><strong>3.36</strong></span> صافي التدفق السنوي يساوي الإيراد ناقص التشغيل، أي 45,000 دينار:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>200</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>45</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>33</mn><mi>,</mi><mn>260.13</mn></mrow><annotation encoding="application/x-tex">
 PW = -200\mathord{,}000 + 45\mathord{,}000\,(P/A,\ 15\%,\ 10) + 30\mathord{,}000\,(P/F,\ 15\%,\ 10) = 33\mathord{,}260.13
 </annotation></semantics></math></p>
-<p><span id="sol-3-29"><strong>3.29</strong></span></p>
+<p><span id="sol-3-37"><strong>3.37</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>368.34</mn></mrow><annotation encoding="application/x-tex">
 PW = -40\mathord{,}000 + 8\mathord{,}000\,(P/A,\ 10\%,\ 6) + 1\mathord{,}500\,(P/G,\ 10\%,\ 6) = 9\mathord{,}368.34
 </annotation></semantics></math></p>
 <p>المشروع مقبول.</p>
-<p><span id="sol-3-30"><strong>3.30</strong></span></p>
+<p><span id="sol-3-38"><strong>3.38</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>S</mi></msub><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>×</mo><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1.05</mn><mn>1.12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>8</mn></msup></mrow><mrow><mn>0.12</mn><mo>−</mo><mn>0.05</mn></mrow></mfrac><mo>=</mo><mn>115</mn><mi>,</mi><mn>223.01</mn></mrow><annotation encoding="application/x-tex">
 P_S = 20\mathord{,}000 \times \frac{1 - \left(\frac{1.05}{1.12}\right)^{8}}{0.12 - 0.05} = 115\mathord{,}223.01
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>100</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>115</mn><mi>,</mi><mn>223.01</mn><mo>=</mo><mn>15</mn><mi>,</mi><mn>223.01</mn></mrow><annotation encoding="application/x-tex">
 PW = -100\mathord{,}000 + 115\mathord{,}223.01 = 15\mathord{,}223.01
 </annotation></semantics></math></p>
-<p><span id="sol-3-31"><strong>3.31</strong></span> نضع القيمة الحالية صفرا ونحل لقيمة البيع:</p>
+<p><span id="sol-3-39"><strong>3.39</strong></span> نضع القيمة الحالية صفرا ونحل لقيمة البيع:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>S</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
 -60\mathord{,}000 + 15\mathord{,}000\,(P/A,\ 10\%,\ 6) + S\,(P/F,\ 10\%,\ 6) = 0
 </annotation></semantics></math></p>
@@ -492,11 +561,11 @@ PW = -100\mathord{,}000 + 115\mathord{,}223.01 = 15\mathord{,}223.01
 S = -9\mathord{,}440.49
 </annotation></semantics></math></p>
 <p>القيمة سالبة، فالمشروع مقبول حتى بدون قيمة بيع.</p>
-<p><span id="sol-3-32"><strong>3.32</strong></span> أعلى سعر يجعل القيمة الحالية صفرا:</p>
+<p><span id="sol-3-40"><strong>3.40</strong></span> أعلى سعر يجعل القيمة الحالية صفرا:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>56</mn><mi>,</mi><mn>778.92</mn></mrow><annotation encoding="application/x-tex">
 C_{max} = 12\mathord{,}000\,(P/A,\ 10\%,\ 6) + 8\mathord{,}000\,(P/F,\ 10\%,\ 6) = 56\mathord{,}778.92
 </annotation></semantics></math></p>
-<p><span id="sol-3-33"><strong>3.33</strong></span></p>
+<p><span id="sol-3-41"><strong>3.41</strong></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -524,20 +593,20 @@ C_{max} = 12\mathord{,}000\,(P/A,\ 10\%,\ 6) + 8\mathord{,}000\,(P/F,\ 10\%,\ 6)
 </tbody>
 </table>
 <p>القيمة الحالية تقل كلما زادت النسبة، لأن الدخل يأتي في المستقبل ويخصم أكثر. النسبة التي تجعلها صفرا هي معدل العائد الداخلي، وهو موضوع الفصل التالي.</p>
-<p><span id="sol-3-34"><strong>3.34</strong></span></p>
+<p><span id="sol-3-42"><strong>3.42</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>35</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>5</mn><mi>,</mi><mn>988.71</mn></mrow><annotation encoding="application/x-tex">
 PW = -35\mathord{,}000 + 7\mathord{,}500\,(P/A,\ 9\%,\ 6) - 6\mathord{,}000\,(P/F,\ 9\%,\ 3) = -5\mathord{,}988.71
 </annotation></semantics></math></p>
-<p><span id="sol-3-35"><strong>3.35</strong></span> الدفعة الأولى في السنة 3. المعامل P/A يضع قيمة السلسلة في السنة 2، ثم ننقلها إلى السنة 0:</p>
+<p><span id="sol-3-43"><strong>3.43</strong></span> الدفعة الأولى في السنة 3. المعامل P/A يضع قيمة السلسلة في السنة 2، ثم ننقلها إلى السنة 0:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>3</mn><mi>,</mi><mn>779.29</mn></mrow><annotation encoding="application/x-tex">
 PW = -30\mathord{,}000 + 8\mathord{,}000\,(P/A,\ 12\%,\ 6)\,(P/F,\ 12\%,\ 2) = -3\mathord{,}779.29
 </annotation></semantics></math></p>
-<p><span id="sol-3-36"><strong>3.36</strong></span></p>
+<p><span id="sol-3-44"><strong>3.44</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>45</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>11</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn><mi>,</mi><mn>666.61</mn></mrow><annotation encoding="application/x-tex">
 FW = -45\mathord{,}000\,(F/P,\ 10\%,\ 7) + 11\mathord{,}000\,(F/A,\ 10\%,\ 7) = 16\mathord{,}666.61
 </annotation></semantics></math></p>
 <p>القيمة الحالية 8,552.61 دينار. القيمة المستقبلية تساوي القيمة الحالية مضروبة في المعامل F/P، فلهما نفس الإشارة ونفس القرار دائما.</p>
-<p><span id="sol-3-37"><strong>3.37</strong></span></p>
+<p><span id="sol-3-45"><strong>3.45</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>0.80</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
 i_m = (1 + 0.1)^{1/12} - 1 = 0.80\%
 </annotation></semantics></math></p>
@@ -545,7 +614,7 @@ i_m = (1 + 0.1)^{1/12} - 1 = 0.80\%
 PW = -25\mathord{,}000 + 600\,(P/A,\ 0.80\%,\ 60) = 3\mathord{,}523.10
 </annotation></semantics></math></p>
 <p>الشراء مقبول.</p>
-<p><span id="sol-3-38"><strong>3.38</strong></span></p>
+<p><span id="sol-3-46"><strong>3.46</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>150</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>51</mn><mi>,</mi><mn>302.44</mn></mrow><annotation encoding="application/x-tex">
 PW_1 = -150\mathord{,}000 + 30\mathord{,}000\,(P/A,\ 8\%,\ 10) = 51\mathord{,}302.44
 </annotation></semantics></math></p>
@@ -556,7 +625,7 @@ PW_2 = -150\mathord{,}000 + 30\mathord{,}000\,(P/A,\ 14\%,\ 10) = 6\mathord{,}48
 </section>
 <section id="الجزء-د-مقارنة-بدائل-بأعمار-متساوية" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-د-مقارنة-بدائل-بأعمار-متساوية">الجزء د: مقارنة بدائل بأعمار متساوية</h2>
-<p><span id="sol-3-39"><strong>3.39</strong></span></p>
+<p><span id="sol-3-47"><strong>3.47</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>25</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>47</mn><mi>,</mi><mn>744.72</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 25\mathord{,}000 + 6\mathord{,}000\,(P/A,\ 10\%,\ 5) = 47\mathord{,}744.72
 </annotation></semantics></math></p>
@@ -564,7 +633,7 @@ PW_a = 25\mathord{,}000 + 6\mathord{,}000\,(P/A,\ 10\%,\ 5) = 47\mathord{,}744.7
 PW_b = 32\mathord{,}000 + 4\mathord{,}500\,(P/A,\ 10\%,\ 5) = 49\mathord{,}058.54
 </annotation></semantics></math></p>
 <p>الأقل تكلفة الآلة أ.</p>
-<p><span id="sol-3-40"><strong>3.40</strong></span></p>
+<p><span id="sol-3-48"><strong>3.48</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>89</mn><mi>,</mi><mn>018.41</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 40\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 8\%,\ 8) - 5\mathord{,}000\,(P/F,\ 8\%,\ 8) = 89\mathord{,}018.41
 </annotation></semantics></math></p>
@@ -572,7 +641,7 @@ PW_a = 40\mathord{,}000 + 9\mathord{,}000\,(P/A,\ 8\%,\ 8) - 5\mathord{,}000\,(P
 PW_b = 52\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 8\%,\ 8) - 9\mathord{,}000\,(P/F,\ 8\%,\ 8) = 87\mathord{,}364.05
 </annotation></semantics></math></p>
 <p>الأفضل النظام ب.</p>
-<p><span id="sol-3-41"><strong>3.41</strong></span></p>
+<p><span id="sol-3-49"><strong>3.49</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>17</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>893.92</mn></mrow><annotation encoding="application/x-tex">
 PW_1 = -60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 6) = 9\mathord{,}893.92
 </annotation></semantics></math></p>
@@ -580,7 +649,7 @@ PW_1 = -60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 6) = 9\mathord{,}893.
 PW_2 = -90\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 12\%,\ 6) = 8\mathord{,}673.78
 </annotation></semantics></math></p>
 <p>القرار: المشروع الأول.</p>
-<p><span id="sol-3-42"><strong>3.42</strong></span> الاستثمار الإضافي 30,000 دينار، والدخل الإضافي 7,000 دينار سنويا:</p>
+<p><span id="sol-3-50"><strong>3.50</strong></span> الاستثمار الإضافي 30,000 دينار، والدخل الإضافي 7,000 دينار سنويا:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mn>2</mn><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>−</mi><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>1</mn><mi>,</mi><mn>220.15</mn></mrow><annotation encoding="application/x-tex">
 PW_{2-1} = -30\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 12\%,\ 6) = -1\mathord{,}220.15
 </annotation></semantics></math></p>
@@ -589,7 +658,7 @@ PW_{2-1} = -30\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 12\%,\ 6) = -1\mathord{,}
 8\mathord{,}673.78 - 9\mathord{,}893.92 = -1\mathord{,}220.15
 </annotation></semantics></math></p>
 <p>إذا كانت موجبة فالاستثمار الإضافي يستحق. هذه فكرة التحليل التزايدي في الفصل التالي.</p>
-<p><span id="sol-3-43"><strong>3.43</strong></span> القيمة الحالية لتكلفة الشراء:</p>
+<p><span id="sol-3-51"><strong>3.51</strong></span> القيمة الحالية لتكلفة الشراء:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>b</mi><mi>u</mi><mi>y</mi></mrow></msub><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>900</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn><mi>,</mi><mn>801.43</mn></mrow><annotation encoding="application/x-tex">
 PW_{buy} = 12\mathord{,}000 + 900\,(P/A,\ 10\%,\ 8) = 16\mathord{,}801.43
 </annotation></semantics></math></p>
@@ -601,7 +670,7 @@ PW_{lease} = X\,(P/A,\ 10\%,\ 8)\,(1 + 0.1)
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mfrac><mrow><mn>16</mn><mi>,</mi><mn>801.43</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>1.1</mn></mfrac><mo>=</mo><mn>2</mn><mi>,</mi><mn>863.03</mn></mrow><annotation encoding="application/x-tex">
 X = \frac{16\mathord{,}801.43\,(A/P,\ 10\%,\ 8)}{1.1} = 2\mathord{,}863.03
 </annotation></semantics></math></p>
-<p><span id="sol-3-44"><strong>3.44</strong></span> تكلفة الكهرباء السنوية تساوي القدرة مضروبة في الساعات والسعر، مقسومة على الكفاءة:</p>
+<p><span id="sol-3-52"><strong>3.52</strong></span> تكلفة الكهرباء السنوية تساوي القدرة مضروبة في الساعات والسعر، مقسومة على الكفاءة:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>O</mi><mi>a</mi></msub><mo>=</mo><mfrac><mrow><mn>30</mn><mo>×</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.15</mn></mrow><mn>0.85</mn></mfrac><mo>=</mo><mn>21</mn><mi>,</mi><mn>176.47</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>O</mi><mi>b</mi></msub><mo>=</mo><mfrac><mrow><mn>30</mn><mo>×</mo><mn>4</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.15</mn></mrow><mn>0.93</mn></mfrac><mo>=</mo><mn>19</mn><mi>,</mi><mn>354.84</mn></mrow><annotation encoding="application/x-tex">
 O_a = \frac{30 \times 4\mathord{,}000 \times 0.15}{0.85} = 21\mathord{,}176.47, \qquad O_b = \frac{30 \times 4\mathord{,}000 \times 0.15}{0.93} = 19\mathord{,}354.84
 </annotation></semantics></math></p>
@@ -612,7 +681,7 @@ PW_a = 8\mathord{,}000 + 21\mathord{,}176.47\,(P/A,\ 10\%,\ 10) = 138\mathord{,}
 PW_b = 11\mathord{,}000 + 19\mathord{,}354.84\,(P/A,\ 10\%,\ 10) = 129\mathord{,}927.11
 </annotation></semantics></math></p>
 <p>الأقل تكلفة: المحرك ب. فرق صغير في الكفاءة يصنع فرقا كبيرا في تكلفة الكهرباء على 10 سنوات.</p>
-<p><span id="sol-3-45"><strong>3.45</strong></span> نساوي القيمتين الحاليتين:</p>
+<p><span id="sol-3-53"><strong>3.53</strong></span> نساوي القيمتين الحاليتين:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>42</mn><mi>,</mi><mn>000</mn><mo>+</mo><msub><mi>O</mi><mi>b</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 30\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 10\%,\ 6) = 42\mathord{,}000 + O_b\,(P/A,\ 10\%,\ 6)
 </annotation></semantics></math></p>
@@ -620,7 +689,7 @@ PW_b = 11\mathord{,}000 + 19\mathord{,}354.84\,(P/A,\ 10\%,\ 10) = 129\mathord{,
 O_b = 7\mathord{,}000 - 12\mathord{,}000\,(A/P,\ 10\%,\ 6) = 4\mathord{,}244.71
 </annotation></semantics></math></p>
 <p>إذا كان تشغيل الآلة ب أقل من هذا المبلغ فهي الأفضل.</p>
-<p><span id="sol-3-46"><strong>3.46</strong></span></p>
+<p><span id="sol-3-54"><strong>3.54</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mi>−</mi><mn>70</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>23</mn><mi>,</mi><mn>138.20</mn></mrow><annotation encoding="application/x-tex">
 PW_a = -70\mathord{,}000 + 30\mathord{,}000\,(P/A,\ 10\%,\ 5) - 3\mathord{,}000\,(P/G,\ 10\%,\ 5) = 23\mathord{,}138.20
 </annotation></semantics></math></p>
@@ -628,7 +697,7 @@ PW_a = -70\mathord{,}000 + 30\mathord{,}000\,(P/A,\ 10\%,\ 5) - 3\mathord{,}000\
 PW_b = -70\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 10\%,\ 5) = 20\mathord{,}978.88
 </annotation></semantics></math></p>
 <p>القرار: الخيار أ.</p>
-<p><span id="sol-3-47"><strong>3.47</strong></span></p>
+<p><span id="sol-3-55"><strong>3.55</strong></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -652,7 +721,7 @@ PW_b = -70\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 10\%,\ 5) = 20\mathord{,}978
 </tbody>
 </table>
 <p>القرار يتغير عندما تتغير إشارة القيمة الحالية. لذلك يجب تحديد الحد الأدنى للعائد بعناية قبل المقارنة.</p>
-<p><span id="sol-3-48"><strong>3.48</strong></span></p>
+<p><span id="sol-3-56"><strong>3.56</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>4.3553</mn></mrow><annotation encoding="application/x-tex">
 (P/A,\ 10\%,\ 6) = 4.3553
 </annotation></semantics></math></p>
@@ -683,12 +752,12 @@ PW_b = -70\mathord{,}000 + 24\mathord{,}000\,(P/A,\ 10\%,\ 5) = 20\mathord{,}978
 </tbody>
 </table>
 <p>الخيار الأفضل: المشروع 2.</p>
-<p><span id="sol-3-49"><strong>3.49</strong></span> المشاريع المستقلة يمكن تنفيذ أكثر من واحد منها. المجموعتان تكلفان 80,000 دينار. القيمة الحالية لمجموعة تساوي مجموع قيم مشاريعها:</p>
+<p><span id="sol-3-57"><strong>3.57</strong></span> المشاريع المستقلة يمكن تنفيذ أكثر من واحد منها. المجموعتان تكلفان 80,000 دينار. القيمة الحالية لمجموعة تساوي مجموع قيم مشاريعها:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>973.65</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>842.09</mn><mo>=</mo><mn>15</mn><mi>,</mi><mn>815.74</mn></mrow><annotation encoding="application/x-tex">
 PW_{1+3} = 10\mathord{,}973.65 + 4\mathord{,}842.09 = 15\mathord{,}815.74
 </annotation></semantics></math></p>
 <p>القيمة الحالية للمشروع 2 وحده 11,460.47 دينار. تختار الشركة المجموعة صاحبة القيمة الأكبر، بشرط أن تكون موجبة.</p>
-<p><span id="sol-3-50"><strong>3.50</strong></span></p>
+<p><span id="sol-3-58"><strong>3.58</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>n</mi><mi>e</mi><mi>w</mi></mrow></msub><mo>=</mo><mn>45</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>47</mn><mi>,</mi><mn>058.54</mn></mrow><annotation encoding="application/x-tex">
 PW_{new} = 45\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 5) - 15\mathord{,}000\,(P/F,\ 10\%,\ 5) = 47\mathord{,}058.54
 </annotation></semantics></math></p>
@@ -696,7 +765,7 @@ PW_{new} = 45\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 5) - 15\mathord{,}0
 PW_{used} = 20\mathord{,}000 + 7\mathord{,}000\,(P/A,\ 10\%,\ 5) - 4\mathord{,}000\,(P/F,\ 10\%,\ 5) = 44\mathord{,}051.82
 </annotation></semantics></math></p>
 <p>الأفضل الحفارة المستعملة.</p>
-<p><span id="sol-3-51"><strong>3.51</strong></span></p>
+<p><span id="sol-3-59"><strong>3.59</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mrow><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi></mrow></msub><mo>=</mo><mn>15</mn><mi>,</mi><mn>582.01</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>100</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 PW_{inst} = 15\mathord{,}582.01\,(P/A,\ 9\%,\ 10) = 100\mathord{,}000.00
 </annotation></semantics></math></p>
@@ -704,7 +773,7 @@ PW_{inst} = 15\mathord{,}582.01\,(P/A,\ 9\%,\ 10) = 100\mathord{,}000.00
 </section>
 <section id="الجزء-هـ-بدائل-بأعمار-مختلفة" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-هـ-بدائل-بأعمار-مختلفة">الجزء هـ: بدائل بأعمار مختلفة</h2>
-<p><span id="sol-3-52"><strong>3.52</strong></span> المضاعف المشترك 6 سنوات. الآلة أ تشترى في السنوات 0 و2 و4، والآلة ب في السنتين 0 و3:</p>
+<p><span id="sol-3-60"><strong>3.60</strong></span> المضاعف المشترك 6 سنوات. الآلة أ تشترى في السنوات 0 و2 و4، والآلة ب في السنتين 0 و3:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mrow><mo stretchy="true" form="prefix">[</mo><mn>1</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mn>2</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>35</mn><mi>,</mi><mn>982.75</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 10\mathord{,}000\left[1 + (P/F,\ 10\%,\ 2) + (P/F,\ 10\%,\ 4)\right] + 2\mathord{,}500\,(P/A,\ 10\%,\ 6) = 35\mathord{,}982.75
 </annotation></semantics></math></p>
@@ -712,7 +781,7 @@ PW_a = 10\mathord{,}000\left[1 + (P/F,\ 10\%,\ 2) + (P/F,\ 10\%,\ 4)\right] + 2\
 PW_b = 16\mathord{,}000\left[1 + (P/F,\ 10\%,\ 3)\right] + 2\mathord{,}000\,(P/A,\ 10\%,\ 6) = 36\mathord{,}731.56
 </annotation></semantics></math></p>
 <p>الأقل تكلفة الآلة أ.</p>
-<p><span id="sol-3-53"><strong>3.53</strong></span></p>
+<p><span id="sol-3-61"><strong>3.61</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>261.90</mn></mrow><annotation encoding="application/x-tex">
 AW_a = 10\mathord{,}000\,(A/P,\ 10\%,\ 2) + 2\mathord{,}500 = 8\mathord{,}261.90
 </annotation></semantics></math></p>
@@ -724,7 +793,7 @@ AW_b = 16\mathord{,}000\,(A/P,\ 10\%,\ 3) + 2\mathord{,}000 = 8\mathord{,}433.84
 8\mathord{,}261.90\,(P/A,\ 10\%,\ 6) = 35\mathord{,}982.75, \qquad 8\mathord{,}433.84\,(P/A,\ 10\%,\ 6) = 36\mathord{,}731.56
 </annotation></semantics></math></p>
 <p>نفس نتائج المسألة السابقة، بحساب أقصر.</p>
-<p><span id="sol-3-54"><strong>3.54</strong></span> المضاعف المشترك 12 سنة. البديل أ يتكرر 6 مرات، والبديل ب 4 مرات:</p>
+<p><span id="sol-3-62"><strong>3.62</strong></span> المضاعف المشترك 12 سنة. البديل أ يتكرر 6 مرات، والبديل ب 4 مرات:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>95</mn><mi>,</mi><mn>544.09</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>93</mn><mi>,</mi><mn>436.88</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 95\mathord{,}544.09, \qquad PW_b = 93\mathord{,}436.88
 </annotation></semantics></math></p>
@@ -736,7 +805,7 @@ AW_a = 24\mathord{,}000\,(A/P,\ 12\%,\ 4) - 3\mathord{,}000\,(A/F,\ 12\%,\ 4) + 
 AW_b = 38\mathord{,}000\,(A/P,\ 12\%,\ 6) - 6\mathord{,}000\,(A/F,\ 12\%,\ 6) + 3\mathord{,}500 = 12\mathord{,}003.22
 </annotation></semantics></math></p>
 <p>الطريقتان تختاران البديل ب.</p>
-<p><span id="sol-3-55"><strong>3.55</strong></span> فترة الدراسة مدة المشروع، 4 سنوات:</p>
+<p><span id="sol-3-63"><strong>3.63</strong></span> فترة الدراسة مدة المشروع، 4 سنوات:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>18</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>7</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>22</mn><mi>,</mi><mn>728.50</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 18\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 4) - 7\mathord{,}000\,(P/F,\ 10\%,\ 4) = 22\mathord{,}728.50
 </annotation></semantics></math></p>
@@ -744,7 +813,7 @@ PW_a = 18\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 4) - 7\mathord{,}000\,(
 PW_b = 12\mathord{,}000 + 4\mathord{,}200\,(P/A,\ 10\%,\ 4) - 1\mathord{,}000\,(P/F,\ 10\%,\ 4) = 24\mathord{,}630.42
 </annotation></semantics></math></p>
 <p>الأقل تكلفة الرافعة أ.</p>
-<p><span id="sol-3-56"><strong>3.56</strong></span> نساوي القيمتين الحاليتين ونحل للقيمة السوقية:</p>
+<p><span id="sol-3-64"><strong>3.64</strong></span> نساوي القيمتين الحاليتين ونحل للقيمة السوقية:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>M</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>24</mn><mi>,</mi><mn>630.42</mn></mrow><annotation encoding="application/x-tex">
 18\mathord{,}000 + 3\mathord{,}000\,(P/A,\ 10\%,\ 4) - M\,(P/F,\ 10\%,\ 4) = 24\mathord{,}630.42
 </annotation></semantics></math></p>
@@ -752,7 +821,7 @@ PW_b = 12\mathord{,}000 + 4\mathord{,}200\,(P/A,\ 10\%,\ 4) - 1\mathord{,}000\,(
 M = 4\mathord{,}215.40
 </annotation></semantics></math></p>
 <p>إذا كانت القيمة السوقية المتوقعة أعلى من هذا الرقم، فالرافعة أ أفضل.</p>
-<p><span id="sol-3-57"><strong>3.57</strong></span> المضاعف المشترك 15 سنة، والحساب عليه طويل. القيمة السنوية أسرع:</p>
+<p><span id="sol-3-65"><strong>3.65</strong></span> المضاعف المشترك 15 سنة، والحساب عليه طويل. القيمة السنوية أسرع:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1</mn><mi>,</mi><mn>200</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>140.17</mn></mrow><annotation encoding="application/x-tex">
 AW_a = 5\mathord{,}000\,(A/P,\ 8\%,\ 3) + 1\mathord{,}200 = 3\mathord{,}140.17
 </annotation></semantics></math></p>
@@ -760,7 +829,7 @@ AW_a = 5\mathord{,}000\,(A/P,\ 8\%,\ 3) + 1\mathord{,}200 = 3\mathord{,}140.17
 AW_b = 9\mathord{,}000\,(A/P,\ 8\%,\ 5) + 800 = 3\mathord{,}054.11
 </annotation></semantics></math></p>
 <p>الأرخص النوع ب.</p>
-<p><span id="sol-3-58"><strong>3.58</strong></span> فترة الدراسة 5 سنوات:</p>
+<p><span id="sol-3-66"><strong>3.66</strong></span> فترة الدراسة 5 سنوات:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>59</mn><mi>,</mi><mn>640.11</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>65</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>61</mn><mi>,</mi><mn>535.51</mn></mrow><annotation encoding="application/x-tex">
 PW_a = 59\mathord{,}640.11, \qquad PW_b = 65\mathord{,}000 + 4\mathord{,}000\,(P/A,\ 10\%,\ 5) - 30\mathord{,}000\,(P/F,\ 10\%,\ 5) = 61\mathord{,}535.51
 </annotation></semantics></math></p>
@@ -769,7 +838,7 @@ PW_a = 59\mathord{,}640.11, \qquad PW_b = 65\mathord{,}000 + 4\mathord{,}000\,(P
 AW_a = 15\mathord{,}732.91, \qquad AW_b = 13\mathord{,}951.00
 </annotation></semantics></math></p>
 <p>فترة الدراسة تختار أ، والقيمة السنوية تختار ب. القراران مختلفان. الطريقتان مبنيتان على افتراضين مختلفين: الأولى تفترض أن الحاجة تنتهي بعد 5 سنوات، والثانية تفترض أن الحاجة مستمرة.</p>
-<p><span id="sol-3-59"><strong>3.59</strong></span></p>
+<p><span id="sol-3-67"><strong>3.67</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>400</mn><mo>=</mo><mn>2</mn><mi>,</mi><mn>128.57</mn></mrow><annotation encoding="application/x-tex">
 AW_1 = 3\mathord{,}000\,(A/P,\ 10\%,\ 2) + 400 = 2\mathord{,}128.57
 </annotation></semantics></math></p>
@@ -777,7 +846,7 @@ AW_1 = 3\mathord{,}000\,(A/P,\ 10\%,\ 2) + 400 = 2\mathord{,}128.57
 AW_2 = 4\mathord{,}500\,(A/P,\ 10\%,\ 3) + 300 = 2\mathord{,}109.52
 </annotation></semantics></math></p>
 <p>الأرخص الجهاز الثاني.</p>
-<p><span id="sol-3-60"><strong>3.60</strong></span></p>
+<p><span id="sol-3-68"><strong>3.68</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mn>16</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>,</mi><mn>129.51</mn></mrow><annotation encoding="application/x-tex">
 AW_1 = 16\mathord{,}000 - 50\mathord{,}000\,(A/P,\ 12\%,\ 5) = 2\mathord{,}129.51
 </annotation></semantics></math></p>
@@ -785,7 +854,7 @@ AW_1 = 16\mathord{,}000 - 50\mathord{,}000\,(A/P,\ 12\%,\ 5) = 2\mathord{,}129.5
 AW_2 = 18\mathord{,}000 - 80\mathord{,}000\,(A/P,\ 12\%,\ 10) = 3\mathord{,}841.27
 </annotation></semantics></math></p>
 <p>القرار: المشروع الثاني.</p>
-<p><span id="sol-3-61"><strong>3.61</strong></span> المقارنة المباشرة:</p>
+<p><span id="sol-3-69"><strong>3.69</strong></span> المقارنة المباشرة:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>676.42</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><msub><mi>W</mi><mn>2</mn></msub><mo>=</mo><mn>21</mn><mi>,</mi><mn>704.01</mn></mrow><annotation encoding="application/x-tex">
 PW_1 = 7\mathord{,}676.42, \qquad PW_2 = 21\mathord{,}704.01
 </annotation></semantics></math></p>
@@ -794,7 +863,7 @@ PW_1 = 7\mathord{,}676.42, \qquad PW_2 = 21\mathord{,}704.01
 PW_1 = 7\mathord{,}676.42\left[1 + (P/F,\ 12\%,\ 5)\right] = 12\mathord{,}032.23
 </annotation></semantics></math></p>
 <p>الآن تصح المقارنة مع 21,704.01 دينار للمشروع الثاني.</p>
-<p><span id="sol-3-62"><strong>3.62</strong></span></p>
+<p><span id="sol-3-70"><strong>3.70</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mrow><mi>m</mi><mi>e</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>3</mn><mi>,</mi><mn>500</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>150</mn><mo>=</mo><mn>614.43</mn></mrow><annotation encoding="application/x-tex">
 AW_{metal} = 3\mathord{,}500\,(A/P,\ 8\%,\ 12) + 150 = 614.43
 </annotation></semantics></math></p>
@@ -802,7 +871,7 @@ AW_{metal} = 3\mathord{,}500\,(A/P,\ 8\%,\ 12) + 150 = 614.43
 AW_{plastic} = 900\,(A/P,\ 8\%,\ 3) + 120 = 469.23
 </annotation></semantics></math></p>
 <p>الأرخص الخزان البلاستيكي.</p>
-<p><span id="sol-3-63"><strong>3.63</strong></span> بافتراض تكرار الأسعار:</p>
+<p><span id="sol-3-71"><strong>3.71</strong></span> بافتراض تكرار الأسعار:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>309.42</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><msub><mi>W</mi><mi>b</mi></msub><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>388.22</mn></mrow><annotation encoding="application/x-tex">
 AW_a = 20\mathord{,}000\,(A/P,\ 10\%,\ 4) + 2\mathord{,}000 = 8\mathord{,}309.42, \qquad AW_b = 30\mathord{,}000\,(A/P,\ 10\%,\ 6) + 1\mathord{,}500 = 8\mathord{,}388.22
 </annotation></semantics></math></p>
@@ -814,16 +883,16 @@ AW_a = 20\mathord{,}000\left[1 + 1.25\,(P/F,\ 10\%,\ 4) + 1.5625\,(P/F,\ 10\%,\ 
 </section>
 <section id="الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-و-القيمة-السنوية-وتكلفة-استرداد-رأس-المال">الجزء و: القيمة السنوية وتكلفة استرداد رأس المال</h2>
-<p><span id="sol-3-64"><strong>3.64</strong></span></p>
+<p><span id="sol-3-72"><strong>3.72</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>406.65</mn></mrow><annotation encoding="application/x-tex">
 CR = 40\mathord{,}000\,(A/P,\ 10\%,\ 6) - 6\mathord{,}000\,(A/F,\ 10\%,\ 6) = 8\mathord{,}406.65
 </annotation></semantics></math></p>
-<p><span id="sol-3-65"><strong>3.65</strong></span></p>
+<p><span id="sol-3-73"><strong>3.73</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>34</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.1</mn><mo>=</mo><mn>8</mn><mi>,</mi><mn>406.65</mn></mrow><annotation encoding="application/x-tex">
 CR = 34\mathord{,}000\,(A/P,\ 10\%,\ 6) + 6\mathord{,}000 \times 0.1 = 8\mathord{,}406.65
 </annotation></semantics></math></p>
 <p>الحد الأول يسترد الجزء الذي يضيع من قيمة الأصل. الحد الثاني فائدة سنوية على قيمة البيع، لأن هذا المبلغ محبوس في الأصل حتى يباع.</p>
-<p><span id="sol-3-66"><strong>3.66</strong></span></p>
+<p><span id="sol-3-74"><strong>3.74</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>70</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13</mn><mi>,</mi><mn>278.17</mn></mrow><annotation encoding="application/x-tex">
 CR = 70\mathord{,}000\,(A/P,\ 12\%,\ 8) - 10\mathord{,}000\,(A/F,\ 12\%,\ 8) = 13\mathord{,}278.17
 </annotation></semantics></math></p>
@@ -831,16 +900,16 @@ CR = 70\mathord{,}000\,(A/P,\ 12\%,\ 8) - 10\mathord{,}000\,(A/F,\ 12\%,\ 8) = 1
 AW = 20\mathord{,}000 - 4\mathord{,}000 - 13\mathord{,}278.17 = 2\mathord{,}721.83
 </annotation></semantics></math></p>
 <p>المشروع مقبول.</p>
-<p><span id="sol-3-67"><strong>3.67</strong></span></p>
+<p><span id="sol-3-75"><strong>3.75</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>55</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>400</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>9</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14</mn><mi>,</mi><mn>990.94</mn></mrow><annotation encoding="application/x-tex">
 AW = 55\mathord{,}000\,(A/P,\ 9\%,\ 7) + 3\mathord{,}000 + 400\,(A/G,\ 9\%,\ 7) = 14\mathord{,}990.94
 </annotation></semantics></math></p>
-<p><span id="sol-3-68"><strong>3.68</strong></span></p>
+<p><span id="sol-3-76"><strong>3.76</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>25</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>4</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>939.75</mn></mrow><annotation encoding="application/x-tex">
 CR = 25\mathord{,}000\,(A/P,\ 10\%,\ 5) - 4\mathord{,}000\,(A/F,\ 10\%,\ 5) = 5\mathord{,}939.75
 </annotation></semantics></math></p>
 <p>حوالي 494.98 دينار شهريا. هذا تقريب، لأن الدخل الشهري يأتي قبل نهاية السنة. للحساب الدقيق استخدم نسبة شهرية كما في قسم الفائدة الشهرية.</p>
-<p><span id="sol-3-69"><strong>3.69</strong></span></p>
+<p><span id="sol-3-77"><strong>3.77</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>150</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>S</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
 40\mathord{,}000 - 150\mathord{,}000\,(A/P,\ 12\%,\ 10) + S\,(A/F,\ 12\%,\ 10) = 0
 </annotation></semantics></math></p>
@@ -848,21 +917,21 @@ CR = 25\mathord{,}000\,(A/P,\ 10\%,\ 5) - 4\mathord{,}000\,(A/F,\ 10\%,\ 5) = 5\
 S = -236\mathord{,}072.17
 </annotation></semantics></math></p>
 <p>الناتج سالب، فالمشروع مقبول حتى بدون قيمة بيع.</p>
-<p><span id="sol-3-70"><strong>3.70</strong></span></p>
+<p><span id="sol-3-78"><strong>3.78</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>016.94</mn></mrow><annotation encoding="application/x-tex">
 PW = 2\mathord{,}016.94
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>2</mn><mi>,</mi><mn>016.94</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>636.29</mn></mrow><annotation encoding="application/x-tex">
 AW = 2\mathord{,}016.94\,(A/P,\ 10\%,\ 4) = 636.29
 </annotation></semantics></math></p>
-<p><span id="sol-3-71"><strong>3.71</strong></span> تكلفة التجديد مبلغ واحد في السنة 4. ننقله إلى السنة 0، ثم نوزعه على 8 سنوات:</p>
+<p><span id="sol-3-79"><strong>3.79</strong></span> تكلفة التجديد مبلغ واحد في السنة 4. ننقله إلى السنة 0، ثم نوزعه على 8 سنوات:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>80</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 AW = 80\mathord{,}000\,(A/P,\ 10\%,\ 8) + 12\mathord{,}000 + 15\mathord{,}000\,(P/F,\ 10\%,\ 4)\,(A/P,\ 10\%,\ 8) - 10\mathord{,}000\,(A/F,\ 10\%,\ 8)
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>28</mn><mi>,</mi><mn>041.48</mn></mrow><annotation encoding="application/x-tex">
 AW = 28\mathord{,}041.48
 </annotation></semantics></math></p>
-<p><span id="sol-3-72"><strong>3.72</strong></span></p>
+<p><span id="sol-3-80"><strong>3.80</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>5</mn><mi>,</mi><mn>000</mn><mo>=</mo><mn>11</mn><mi>,</mi><mn>888.22</mn></mrow><annotation encoding="application/x-tex">
 AW = 30\mathord{,}000\,(A/P,\ 10\%,\ 6) + 5\mathord{,}000 = 11\mathord{,}888.22
 </annotation></semantics></math></p>
@@ -870,7 +939,7 @@ AW = 30\mathord{,}000\,(A/P,\ 10\%,\ 6) + 5\mathord{,}000 = 11\mathord{,}888.22
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>0.80</mn><mi>%</mi><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>A</mi><mi>m</mi></msub><mo>=</mo><mn>11</mn><mi>,</mi><mn>888.22</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>0.80</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>947.98</mn></mrow><annotation encoding="application/x-tex">
 i_m = 0.80\%, \qquad A_m = 11\mathord{,}888.22\,(A/F,\ 0.80\%,\ 12) = 947.98
 </annotation></semantics></math></p>
-<p><span id="sol-3-73"><strong>3.73</strong></span></p>
+<p><span id="sol-3-81"><strong>3.81</strong></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -894,7 +963,7 @@ i_m = 0.80\%, \qquad A_m = 11\mathord{,}888.22\,(A/F,\ 0.80\%,\ 12) = 947.98
 </tbody>
 </table>
 <p>قسمة السعر على العمر تعطي 2,400.00 دينار، وهي تكلفة استرداد بنسبة صفر. الفرق بينها وبين كل رقم في الجدول هو العائد على المال المستثمر في الأصل.</p>
-<p><span id="sol-3-74"><strong>3.74</strong></span></p>
+<p><span id="sol-3-82"><strong>3.82</strong></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -918,7 +987,7 @@ i_m = 0.80\%, \qquad A_m = 11\mathord{,}888.22\,(A/F,\ 0.80\%,\ 12) = 947.98
 </tbody>
 </table>
 <p>المشروع مقبول عند كل نسبة تعطي قيمة سنوية موجبة.</p>
-<p><span id="sol-3-75"><strong>3.75</strong></span></p>
+<p><span id="sol-3-83"><strong>3.83</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>300</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>15</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>32</mn><mi>,</mi><mn>938.39</mn></mrow><annotation encoding="application/x-tex">
 A = 300\mathord{,}000\,(A/P,\ 7\%,\ 15) = 32\mathord{,}938.39
 </annotation></semantics></math></p>
@@ -931,7 +1000,7 @@ A = 300\mathord{,}000\,(A/P,\ 7\%,\ 15) = 32\mathord{,}938.39
 300\mathord{,}000\,(A/F,\ 7\%,\ 15) = 11\mathord{,}938.39
 </annotation></semantics></math></p>
 <p>المجموع يساوي القسط، وهذا معنى العلاقة بين المعاملين A/P وA/F.</p>
-<p><span id="sol-3-76"><strong>3.76</strong></span></p>
+<p><span id="sol-3-84"><strong>3.84</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>W</mi><mn>1</mn></msub><mo>=</mo><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1</mn><mi>,</mi><mn>800</mn><mo>=</mo><mn>3</mn><mi>,</mi><mn>866.47</mn></mrow><annotation encoding="application/x-tex">
 AW_1 = 9\mathord{,}000\,(A/P,\ 10\%,\ 6) + 1\mathord{,}800 = 3\mathord{,}866.47
 </annotation></semantics></math></p>
@@ -939,14 +1008,14 @@ AW_1 = 9\mathord{,}000\,(A/P,\ 10\%,\ 6) + 1\mathord{,}800 = 3\mathord{,}866.47
 AW_2 = 14\mathord{,}000\,(A/P,\ 10\%,\ 6) + 1\mathord{,}100 = 4\mathord{,}314.50
 </annotation></semantics></math></p>
 <p>الخيار الأول أرخص بمقدار 448.04 دينار سنويا.</p>
-<p><span id="sol-3-77"><strong>3.77</strong></span> لا يوجد معامل جاهز يحول السلسلة النسبية إلى سلسلة متساوية. نحسب القيمة الحالية أولا:</p>
+<p><span id="sol-3-85"><strong>3.85</strong></span> لا يوجد معامل جاهز يحول السلسلة النسبية إلى سلسلة متساوية. نحسب القيمة الحالية أولا:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mi>−</mi><mn>60</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>15</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>6.0259</mn><mo>=</mo><mn>30</mn><mi>,</mi><mn>388.11</mn></mrow><annotation encoding="application/x-tex">
 PW = -60\mathord{,}000 + 15\mathord{,}000 \times 6.0259 = 30\mathord{,}388.11
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>W</mi><mo>=</mo><mn>30</mn><mi>,</mi><mn>388.11</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn><mi>,</mi><mn>696.07</mn></mrow><annotation encoding="application/x-tex">
 AW = 30\mathord{,}388.11\,(A/P,\ 10\%,\ 8) = 5\mathord{,}696.07
 </annotation></semantics></math></p>
-<p><span id="sol-3-78"><strong>3.78</strong></span></p>
+<p><span id="sol-3-86"><strong>3.86</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>50</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn><mi>,</mi><mn>443.51</mn></mrow><annotation encoding="application/x-tex">
 CR = 50\mathord{,}000\,(A/P,\ 10\%,\ 6) - 8\mathord{,}000\,(A/F,\ 10\%,\ 6) = 10\mathord{,}443.51
 </annotation></semantics></math></p>
@@ -958,26 +1027,26 @@ CR = 50\mathord{,}000\,(A/P,\ 10\%,\ 6) - 8\mathord{,}000\,(A/F,\ 10\%,\ 6) = 10
 </section>
 <section id="الجزء-ز-التكلفة-المرسملة" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ز-التكلفة-المرسملة">الجزء ز: التكلفة المرسملة</h2>
-<p><span id="sol-3-79"><strong>3.79</strong></span></p>
+<p><span id="sol-3-87"><strong>3.87</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow><mn>0.08</mn></mfrac><mo>=</mo><mn>250</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 P = \frac{20\mathord{,}000}{0.08} = 250\mathord{,}000.00
 </annotation></semantics></math></p>
-<p><span id="sol-3-80"><strong>3.80</strong></span> المنحة الأولى تدفع اليوم من المبلغ نفسه، والباقي سلسلة دائمة تبدأ بعد سنة:</p>
+<p><span id="sol-3-88"><strong>3.88</strong></span> المنحة الأولى تدفع اليوم من المبلغ نفسه، والباقي سلسلة دائمة تبدأ بعد سنة:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>20</mn><mi>,</mi><mn>000</mn></mrow><mn>0.08</mn></mfrac><mo>=</mo><mn>270</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 P = 20\mathord{,}000 + \frac{20\mathord{,}000}{0.08} = 270\mathord{,}000.00
 </annotation></semantics></math></p>
-<p><span id="sol-3-81"><strong>3.81</strong></span></p>
+<p><span id="sol-3-89"><strong>3.89</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>C</mi><mo>=</mo><mn>1</mn><mi>,</mi><mn>500</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>40</mn><mi>,</mi><mn>000</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>2</mn><mi>,</mi><mn>166</mn><mi>,</mi><mn>666.67</mn></mrow><annotation encoding="application/x-tex">
 CC = 1\mathord{,}500\mathord{,}000 + \frac{40\mathord{,}000}{0.06} = 2\mathord{,}166\mathord{,}666.67
 </annotation></semantics></math></p>
-<p><span id="sol-3-82"><strong>3.82</strong></span></p>
+<p><span id="sol-3-90"><strong>3.90</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>R</mi></msub><mo>=</mo><mn>80</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>7</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn><mi>,</mi><mn>797.42</mn></mrow><annotation encoding="application/x-tex">
 A_R = 80\mathord{,}000\,(A/F,\ 7\%,\ 8) = 7\mathord{,}797.42
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>C</mi><mo>=</mo><mn>600</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>15</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>7</mn><mi>,</mi><mn>797.42</mn></mrow><mn>0.07</mn></mfrac><mo>=</mo><mn>925</mn><mi>,</mi><mn>677.44</mn></mrow><annotation encoding="application/x-tex">
 CC = 600\mathord{,}000 + \frac{15\mathord{,}000 + 7\mathord{,}797.42}{0.07} = 925\mathord{,}677.44
 </annotation></semantics></math></p>
-<p><span id="sol-3-83"><strong>3.83</strong></span></p>
+<p><span id="sol-3-91"><strong>3.91</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>900</mn><mi>,</mi><mn>000</mn><mo>+</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>1</mn><mi>,</mi><mn>400</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 CC_1 = 900\mathord{,}000 + \frac{30\mathord{,}000}{0.06} = 1\mathord{,}400\mathord{,}000.00
 </annotation></semantics></math></p>
@@ -985,19 +1054,19 @@ CC_1 = 900\mathord{,}000 + \frac{30\mathord{,}000}{0.06} = 1\mathord{,}400\matho
 CC_2 = 1\mathord{,}200\mathord{,}000 + \frac{12\mathord{,}000}{0.06} = 1\mathord{,}400\mathord{,}000.00
 </annotation></semantics></math></p>
 <p>الأرخص الخيار الأول.</p>
-<p><span id="sol-3-84"><strong>3.84</strong></span> كل دورة تبدأ ببناء في أولها. نحول تكلفة الدورة إلى دفعة سنوية بالمعامل A/P، لأن البناء في بداية الدورة:</p>
+<p><span id="sol-3-92"><strong>3.92</strong></span> كل دورة تبدأ ببناء في أولها. نحول تكلفة الدورة إلى دفعة سنوية بالمعامل A/P، لأن البناء في بداية الدورة:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>250</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>25</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>19</mn><mi>,</mi><mn>556.68</mn></mrow><annotation encoding="application/x-tex">
 A = 250\mathord{,}000\,(A/P,\ 6\%,\ 25) = 19\mathord{,}556.68
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>C</mi><mo>=</mo><mfrac><mrow><mn>19</mn><mi>,</mi><mn>556.68</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>325</mn><mi>,</mi><mn>944.66</mn></mrow><annotation encoding="application/x-tex">
 CC = \frac{19\mathord{,}556.68}{0.06} = 325\mathord{,}944.66
 </annotation></semantics></math></p>
-<p><span id="sol-3-85"><strong>3.85</strong></span></p>
+<p><span id="sol-3-93"><strong>3.93</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>500</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.07</mn><mo>=</mo><mn>35</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 A = 500\mathord{,}000 \times 0.07 = 35\mathord{,}000.00
 </annotation></semantics></math></p>
 <p>أي مبلغ أكبر يأكل من الأصل، فينقص العائد في السنوات التالية حتى ينتهي الوقف.</p>
-<p><span id="sol-3-86"><strong>3.86</strong></span> صيانة أول 10 سنوات سلسلة عادية:</p>
+<p><span id="sol-3-94"><strong>3.94</strong></span> صيانة أول 10 سنوات سلسلة عادية:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>=</mo><mn>10</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>73</mn><mi>,</mi><mn>600.87</mn></mrow><annotation encoding="application/x-tex">
 P_1 = 10\mathord{,}000\,(P/A,\ 6\%,\ 10) = 73\mathord{,}600.87
 </annotation></semantics></math></p>
@@ -1011,14 +1080,14 @@ CC = 700\mathord{,}000 + 73\mathord{,}600.87 + 232\mathord{,}664.49 = 1\mathord{
 </section>
 <section id="الجزء-ح-فترة-الاسترداد-ونقطة-التعادل" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ح-فترة-الاسترداد-ونقطة-التعادل">الجزء ح: فترة الاسترداد ونقطة التعادل</h2>
-<p><span id="sol-3-87"><strong>3.87</strong></span></p>
+<p><span id="sol-3-95"><strong>3.95</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>24</mn><mi>,</mi><mn>000</mn></mrow><mrow><mn>6</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo>=</mo><mn>4.00</mn></mrow><annotation encoding="application/x-tex">
 n_s = \frac{24\mathord{,}000}{6\mathord{,}000} = 4.00
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mi>−</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mn>24</mn><mi>,</mi><mn>000</mn><mo>×</mo><mn>0.1</mn></mrow><mrow><mn>6</mn><mi>,</mi><mn>000</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1.1</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mn>5.36</mn></mrow><annotation encoding="application/x-tex">
 n_d = \frac{-\ln\left(1 - \frac{24\mathord{,}000 \times 0.1}{6\mathord{,}000}\right)}{\ln(1.1)} = 5.36
 </annotation></semantics></math></p>
-<p><span id="sol-3-88"><strong>3.88</strong></span> المشروع أ يسترد تكلفته في 3 سنوات بالضبط. المشروع ب يجمع 24,000 دينار في 3 سنوات، ويكمل في السنة الرابعة، فاسترداده 3.5 سنة. فترة الاسترداد تفضل المشروع أ.</p>
+<p><span id="sol-3-96"><strong>3.96</strong></span> المشروع أ يسترد تكلفته في 3 سنوات بالضبط. المشروع ب يجمع 24,000 دينار في 3 سنوات، ويكمل في السنة الرابعة، فاسترداده 3.5 سنة. فترة الاسترداد تفضل المشروع أ.</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>W</mi><mi>a</mi></msub><mo>=</mo><mi>−</mi><mn>30</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>10</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mn>5</mn><mi>,</mi><mn>131.48</mn></mrow><annotation encoding="application/x-tex">
 PW_a = -30{,}000 + 10{,}000\,(P/A,\ 10\%,\ 3) = -5\mathord{,}131.48
 </annotation></semantics></math></p>
@@ -1026,11 +1095,11 @@ PW_a = -30{,}000 + 10{,}000\,(P/A,\ 10\%,\ 3) = -5\mathord{,}131.48
 PW_b = 6\mathord{,}468.32
 </annotation></semantics></math></p>
 <p>القيمة الحالية تفضل المشروع ب بوضوح. فترة الاسترداد تجاهلت السنتين الأخيرتين من المشروع ب، وتجاهلت أن المشروع أ لا يعطي إلا عائدا صغيرا.</p>
-<p><span id="sol-3-89"><strong>3.89</strong></span></p>
+<p><span id="sol-3-97"><strong>3.97</strong></span></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>35</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>0</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>12</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>8</mn><mi>,</mi><mn>512.90</mn></mrow><annotation encoding="application/x-tex">
 R = 35\mathord{,}000\,(A/P,\ 12\%,\ 6) - 0\,(A/F,\ 12\%,\ 6) = 8\mathord{,}512.90
 </annotation></semantics></math></p>
-<p><span id="sol-3-90"><strong>3.90</strong></span> أقل عمر هو فترة الاسترداد المخصومة: عدد السنوات الذي يجعل القيمة الحالية صفرا.</p>
+<p><span id="sol-3-98"><strong>3.98</strong></span> أقل عمر هو فترة الاسترداد المخصومة: عدد السنوات الذي يجعل القيمة الحالية صفرا.</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
 9\mathord{,}000\,(P/A,\ 10\%,\ n) = 40\mathord{,}000
 </annotation></semantics></math></p>
@@ -1039,7 +1108,7 @@ R = 35\mathord{,}000\,(A/P,\ 12\%,\ 6) - 0\,(A/F,\ 12\%,\ 6) = 8\mathord{,}512.9
 n = 6.17
 </annotation></semantics></math></p>
 <p>إذا كان عمر المشروع أقل من 7 سنة فهو مرفوض.</p>
-<p><span id="sol-3-91"><strong>3.91</strong></span> التكلفة السنوية لكل طريقة تساوي تكلفة استرداد القالب، زائد تكلفة القطعة مضروبة في عدد القطع x:</p>
+<p><span id="sol-3-99"><strong>3.99</strong></span> التكلفة السنوية لكل طريقة تساوي تكلفة استرداد القالب، زائد تكلفة القطعة مضروبة في عدد القطع x:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>12</mn><mspace width="0.167em"></mspace><mi>x</mi><mo>=</mo><mn>6</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>8</mn><mspace width="0.167em"></mspace><mi>x</mi></mrow><annotation encoding="application/x-tex">
 2\mathord{,}000\,(A/P,\ 10\%,\ 5) + 12\,x = 6\mathord{,}000\,(A/P,\ 10\%,\ 5) + 8\,x
 </annotation></semantics></math></p>
@@ -1047,7 +1116,7 @@ n = 6.17
 527.59 + 12\,x = 1\mathord{,}582.78 + 8\,x \quad\Rightarrow\quad x = 263.80
 </annotation></semantics></math></p>
 <p>إذا زاد الإنتاج عن 264 قطعة سنويا فالطريقة ب أرخص، لأن تكلفة قطعتها أقل.</p>
-<p><span id="sol-3-92"><strong>3.92</strong></span> التحويل يستحق عندما يساوي التوفير السنوي تكلفة استرداد رأس المال:</p>
+<p><span id="sol-3-100"><strong>3.100</strong></span> التحويل يستحق عندما يساوي التوفير السنوي تكلفة استرداد رأس المال:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>,</mi><mn>499.55</mn></mrow><annotation encoding="application/x-tex">
 8\mathord{,}000\,(A/P,\ 10\%,\ 8) = 1\mathord{,}499.55
 </annotation></semantics></math></p>
@@ -1056,7 +1125,7 @@ n = 6.17
 x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </annotation></semantics></math></p>
 <p>السائق يقطع 15,000 كيلومتر، فالتحويل لا يستحق.</p>
-<p><span id="sol-3-93"><strong>3.93</strong></span></p>
+<p><span id="sol-3-101"><strong>3.101</strong></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1102,25 +1171,25 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </section>
 <section id="الجزء-ط-مسائل-excel-وpython" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ط-مسائل-excel-وpython">الجزء ط: مسائل Excel وPython</h2>
-<p><span id="sol-3-94"><strong>3.94</strong></span> التدفقات في الخلايا من B1 إلى B6:</p>
+<p><span id="sol-3-102"><strong>3.102</strong></span> التدفقات في الخلايا من B1 إلى B6:</p>
 <pre class="excel"><code>=B1 + NPV(10%, B2:B6)</code></pre>
 <p>القيمة الحالية 3,283.87 دينار.</p>
 <p>الصيغة الخاطئة:</p>
 <pre class="excel"><code>=NPV(10%, B1:B6)</code></pre>
 <p>تعطي 2,985.33 دينار، لأن الدالة تخصم كل التدفقات سنة زائدة.</p>
-<p><span id="sol-3-95"><strong>3.95</strong></span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>C, R, S, n <span class="op">=</span> <span class="dv">60000</span>, <span class="dv">16000</span>, <span class="dv">8000</span>, <span class="dv">6</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="dv">51</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> [<span class="op">-</span>C <span class="op">+</span> npf.pv(r, n, <span class="op">-</span>R, <span class="op">-</span>S) <span class="cf">for</span> r <span class="kw">in</span> rates]</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.plot(rates <span class="op">*</span> <span class="dv">100</span>, pw)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"rate %"</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"PW"</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="sol-3-103"><strong>3.103</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>C, R, S, n <span class="op">=</span> <span class="dv">60000</span>, <span class="dv">16000</span>, <span class="dv">8000</span>, <span class="dv">6</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="dv">51</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>pw <span class="op">=</span> [<span class="op">-</span>C <span class="op">+</span> npf.pv(r, n, <span class="op">-</span>R, <span class="op">-</span>S) <span class="cf">for</span> r <span class="kw">in</span> rates]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.plot(rates <span class="op">*</span> <span class="dv">100</span>, pw)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"gray"</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"rate %"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"PW"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1152,24 +1221,24 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </tbody>
 </table>
 <p>النقطة التي يقطع فيها المنحنى المحور الأفقي هي معدل العائد الداخلي.</p>
-<p><span id="sol-3-96"><strong>3.96</strong></span> القسط في خلية ثابتة:</p>
+<p><span id="sol-3-104"><strong>3.104</strong></span> القسط في خلية ثابتة:</p>
 <pre class="excel"><code>=PMT(9%/12, 36, -20000)</code></pre>
 <p>فائدة كل شهر تساوي الرصيد في بداية الشهر مضروبا في نسبة الشهر، والباقي من القسط يسدد الأصل. القسط 635.99 دينار.</p>
 <p>الرصيد بعد 12 شهرا:</p>
 <pre class="excel"><code>=PV(9%/12, 24, -635.99)</code></pre>
 <p>الرصيد 13,921.38 دينار. فوائد السنة الأولى 1,553.32 دينار، ويمكن حسابها مباشرة:</p>
 <pre class="excel"><code>=-CUMIPMT(9%/12, 36, 20000, 1, 12, 0)</code></pre>
-<p><span id="sol-3-97"><strong>3.97</strong></span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aw_cost(cost, oper, salvage, life, i):</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> npf.pmt(i, life, <span class="op">-</span>cost, salvage) <span class="op">+</span> oper</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="fl">0.1</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, m <span class="kw">in</span> [(<span class="st">"A"</span>, (<span class="dv">18000</span>, <span class="dv">4000</span>, <span class="dv">2000</span>, <span class="dv">4</span>)),</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"B"</span>, (<span class="dv">30000</span>, <span class="dv">3000</span>, <span class="dv">4000</span>, <span class="dv">6</span>)),</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"C"</span>, (<span class="dv">45000</span>, <span class="dv">2200</span>, <span class="dv">6000</span>, <span class="dv">9</span>))]:</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name, <span class="bu">round</span>(aw_cost(<span class="op">*</span>m, i), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="sol-3-105"><strong>3.105</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aw_cost(cost, oper, salvage, life, i):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> npf.pmt(i, life, <span class="op">-</span>cost, salvage) <span class="op">+</span> oper</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, m <span class="kw">in</span> [(<span class="st">"A"</span>, (<span class="dv">18000</span>, <span class="dv">4000</span>, <span class="dv">2000</span>, <span class="dv">4</span>)),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"B"</span>, (<span class="dv">30000</span>, <span class="dv">3000</span>, <span class="dv">4000</span>, <span class="dv">6</span>)),</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>                (<span class="st">"C"</span>, (<span class="dv">45000</span>, <span class="dv">2200</span>, <span class="dv">6000</span>, <span class="dv">9</span>))]:</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name, <span class="bu">round</span>(aw_cost(<span class="op">*</span>m, i), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1193,26 +1262,26 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </tbody>
 </table>
 <p>الأرخص الآلة أ.</p>
-<p><span id="sol-3-98"><strong>3.98</strong></span></p>
+<p><span id="sol-3-106"><strong>3.106</strong></span></p>
 <pre class="excel"><code>=EFFECT(10%, 12)
 =NOMINAL(B1, 12)</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">0.1</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ia <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> r <span class="op">/</span> <span class="dv">12</span>) <span class="op">**</span> <span class="dv">12</span> <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>back <span class="op">=</span> <span class="dv">12</span> <span class="op">*</span> ((<span class="dv">1</span> <span class="op">+</span> ia) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">12</span>) <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(ia, <span class="dv">6</span>), <span class="bu">round</span>(back, <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ia <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> r <span class="op">/</span> <span class="dv">12</span>) <span class="op">**</span> <span class="dv">12</span> <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>back <span class="op">=</span> <span class="dv">12</span> <span class="op">*</span> ((<span class="dv">1</span> <span class="op">+</span> ia) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">12</span>) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(ia, <span class="dv">6</span>), <span class="bu">round</span>(back, <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>النسبة الفعلية 10.47%، والرجوع يعطي 10.00% كما بدأنا.</p>
-<p><span id="sol-3-99"><strong>3.99</strong></span> ضع النسب في الصف الأول من B1، والأعمار في العمود الأول من A2، ثم اكتب في B2 واسحب:</p>
+<p><span id="sol-3-107"><strong>3.107</strong></span> ضع النسب في الصف الأول من B1، والأعمار في العمود الأول من A2، ثم اكتب في B2 واسحب:</p>
 <pre class="excel"><code>=PMT(B$1, $A2, -45000, 5000)</code></pre>
 <p>عند عمر 7 سنوات: 8,082.90 دينار بنسبة 8%، و9,364.71 دينار بنسبة 12%.</p>
-<p><span id="sol-3-100"><strong>3.100</strong></span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>C, A1, G, i <span class="op">=</span> <span class="dv">30000</span>, <span class="dv">4000</span>, <span class="dv">1500</span>, <span class="fl">0.1</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>cum, year <span class="op">=</span> <span class="op">-</span>C, <span class="dv">0</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> cum <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> year <span class="op">&lt;</span> <span class="dv">50</span>:</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    year <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    flow <span class="op">=</span> (A1 <span class="op">+</span> G <span class="op">*</span> (year <span class="op">-</span> <span class="dv">1</span>)) <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> year</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cum <span class="op">+</span> flow <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="bu">round</span>(year <span class="op">-</span> <span class="dv">1</span> <span class="op">+</span> (<span class="op">-</span>cum) <span class="op">/</span> flow, <span class="dv">2</span>))</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    cum <span class="op">+=</span> flow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="sol-3-108"><strong>3.108</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>C, A1, G, i <span class="op">=</span> <span class="dv">30000</span>, <span class="dv">4000</span>, <span class="dv">1500</span>, <span class="fl">0.1</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>cum, year <span class="op">=</span> <span class="op">-</span>C, <span class="dv">0</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> cum <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> year <span class="op">&lt;</span> <span class="dv">50</span>:</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    year <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    flow <span class="op">=</span> (A1 <span class="op">+</span> G <span class="op">*</span> (year <span class="op">-</span> <span class="dv">1</span>)) <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> year</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cum <span class="op">+</span> flow <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="bu">round</span>(year <span class="op">-</span> <span class="dv">1</span> <span class="op">+</span> (<span class="op">-</span>cum) <span class="op">/</span> flow, <span class="dv">2</span>))</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    cum <span class="op">+=</span> flow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>التراكمي المخصوم في أول 8 سنوات:</p>
 <table class="caption-top table">
 <colgroup>
@@ -1253,25 +1322,25 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </tr>
 </tbody>
 </table>
-<p><span id="sol-3-101"><strong>3.101</strong></span> ضع نسبة تجريبية في B1، واكتب في B2 الفرق بين القيمتين الحاليتين:</p>
+<p><span id="sol-3-109"><strong>3.109</strong></span> ضع نسبة تجريبية في B1، واكتب في B2 الفرق بين القيمتين الحاليتين:</p>
 <pre class="excel"><code>=(20000 + PV(B1, 8, -5000)) - (32000 + PV(B1, 8, -3000))</code></pre>
 <p>ثم Goal Seek: اجعل B2 صفرا بتغيير B1. النسبة 6.88%. تحتها الآلة ب أرخص، وفوقها الآلة أ أرخص. الدالة RATE تعطي نفس الجواب مباشرة:</p>
 <pre class="excel"><code>=RATE(8, 2000, -12000)</code></pre>
-<p><span id="sol-3-102"><strong>3.102</strong></span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>C, rent, S, ia <span class="op">=</span> <span class="dv">75000</span>, <span class="dv">400</span>, <span class="dv">85000</span>, <span class="fl">0.08</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> ia) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">12</span>) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [rent] <span class="op">*</span> <span class="dv">120</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>flows[<span class="dv">120</span>] <span class="op">+=</span> S</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.npv(im, flows), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="sol-3-110"><strong>3.110</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>C, rent, S, ia <span class="op">=</span> <span class="dv">75000</span>, <span class="dv">400</span>, <span class="dv">85000</span>, <span class="fl">0.08</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> ia) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">12</span>) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> [<span class="op">-</span>C] <span class="op">+</span> [rent] <span class="op">*</span> <span class="dv">120</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>flows[<span class="dv">120</span>] <span class="op">+=</span> S</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(npf.npv(im, flows), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>القيمة الحالية -2,255.60 دينار. بيع الشقة في الشهر 120، فخصمه بالنسبة الشهرية على 120 شهرا يساوي خصمه بالنسبة السنوية على 10 سنوات.</p>
-<p><span id="sol-3-103"><strong>3.103</strong></span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> capitalized(C, M, R, k, i):</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    af <span class="op">=</span> i <span class="op">/</span> ((<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> k <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> C <span class="op">+</span> (M <span class="op">+</span> R <span class="op">*</span> af) <span class="op">/</span> i</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="fl">0.04</span>, <span class="fl">0.06</span>, <span class="fl">0.08</span>]:</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i, <span class="bu">round</span>(capitalized(<span class="dv">100000</span>, <span class="dv">12000</span>, <span class="dv">50000</span>, <span class="dv">10</span>, i), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="sol-3-111"><strong>3.111</strong></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> capitalized(C, M, R, k, i):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    af <span class="op">=</span> i <span class="op">/</span> ((<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> k <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> C <span class="op">+</span> (M <span class="op">+</span> R <span class="op">*</span> af) <span class="op">/</span> i</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="fl">0.04</span>, <span class="fl">0.06</span>, <span class="fl">0.08</span>]:</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i, <span class="bu">round</span>(capitalized(<span class="dv">100000</span>, <span class="dv">12000</span>, <span class="dv">50000</span>, <span class="dv">10</span>, i), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1298,39 +1367,39 @@ x = \frac{1\mathord{,}499.55}{0.06} = 24\mathord{,}993
 </section>
 <section id="الجزء-ي-اختيار-من-متعدد" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ي-اختيار-من-متعدد">الجزء ي: اختيار من متعدد</h2>
-<p><span id="sol-3-104"><strong>3.104</strong></span> الجواب (ب).</p>
+<p><span id="sol-3-112"><strong>3.112</strong></span> الجواب (ب).</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>20</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1.00</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>36</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>664.29</mn></mrow><annotation encoding="application/x-tex">
 A = 20\mathord{,}000\,(A/P,\ 1.00\%,\ 36) = 664.29
 </annotation></semantics></math></p>
 <p>الخيار (أ) حسب قسطا سنويا وقسمه على 12. الخيار (ج) استخدم النسبة السنوية مع عدد الأشهر. الخيار (د) استخدم فائدة بسيطة.</p>
-<p><span id="sol-3-105"><strong>3.105</strong></span> الجواب (ج).</p>
+<p><span id="sol-3-113"><strong>3.113</strong></span> الجواب (ج).</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>a</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>0.12</mn><mn>12</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>12</mn></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>12.68</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
 i_a = \left(1 + \frac{0.12}{12}\right)^{12} - 1 = 12.68\%
 </annotation></semantics></math></p>
-<p><span id="sol-3-106"><strong>3.106</strong></span> الجواب (ج). القيمة السنوية لعمر واحد تكافئ المقارنة على المضاعف المشترك، وهو 12 سنة هنا. الخيار (أ) يقارن مددا مختلفة. الخيار (ب) ليست مضاعفا مشتركا للأعمار الثلاثة. الخيار (د) لا يقيس التكلفة.</p>
-<p><span id="sol-3-107"><strong>3.107</strong></span> الجواب (ج).</p>
+<p><span id="sol-3-114"><strong>3.114</strong></span> الجواب (ج). القيمة السنوية لعمر واحد تكافئ المقارنة على المضاعف المشترك، وهو 12 سنة هنا. الخيار (أ) يقارن مددا مختلفة. الخيار (ب) ليست مضاعفا مشتركا للأعمار الثلاثة. الخيار (د) لا يقيس التكلفة.</p>
+<p><span id="sol-3-115"><strong>3.115</strong></span> الجواب (ج).</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mn>30</mn><mi>,</mi><mn>000</mn></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>500</mn><mi>,</mi><mn>000.00</mn></mrow><annotation encoding="application/x-tex">
 P = \frac{30\mathord{,}000}{0.06} = 500\mathord{,}000.00
 </annotation></semantics></math></p>
 <p>الخيار (ب) قريب لأن 50 سنة مدة طويلة، لكنه ليس الجواب الدقيق.</p>
-<p><span id="sol-3-108"><strong>3.108</strong></span> الجواب (ج). في المشروع العادي، التكلفة في البداية والدخل في المستقبل. تخفيض النسبة يقلل خصم الدخل، فتزيد القيمة الحالية. لكنها قد تبقى سالبة أو تصبح موجبة، حسب المشروع.</p>
-<p><span id="sol-3-109"><strong>3.109</strong></span> الجواب (د).</p>
+<p><span id="sol-3-116"><strong>3.116</strong></span> الجواب (ج). في المشروع العادي، التكلفة في البداية والدخل في المستقبل. تخفيض النسبة يقلل خصم الدخل، فتزيد القيمة الحالية. لكنها قد تبقى سالبة أو تصبح موجبة، حسب المشروع.</p>
+<p><span id="sol-3-117"><strong>3.117</strong></span> الجواب (د).</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>R</mi><mo>=</mo><mn>40</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>5</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>10</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>9</mn><mi>,</mi><mn>732.91</mn></mrow><annotation encoding="application/x-tex">
 CR = 40\mathord{,}000\,(A/P,\ 10\%,\ 5) - 5\mathord{,}000\,(A/F,\ 10\%,\ 5) = 9\mathord{,}732.91
 </annotation></semantics></math></p>
 <p>الخيار (أ) يتجاهل الفائدة. الخيار (ب) عامل قيمة البيع كأنها في السنة 0. الخيار (ج) نسي قيمة البيع.</p>
-<p><span id="sol-3-110"><strong>3.110</strong></span> الجواب (ب). في بدائل التكاليف نختار الأقل تكلفة. خيار عدم التنفيذ غير متاح، لأن الخدمة مطلوبة على أي حال.</p>
-<p><span id="sol-3-111"><strong>3.111</strong></span> الجواب (ب).</p>
+<p><span id="sol-3-118"><strong>3.118</strong></span> الجواب (ب). في بدائل التكاليف نختار الأقل تكلفة. خيار عدم التنفيذ غير متاح، لأن الخدمة مطلوبة على أي حال.</p>
+<p><span id="sol-3-119"><strong>3.119</strong></span> الجواب (ب).</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.09</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>1</mn><mi>/</mi><mn>12</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>0.72</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
 i_m = (1 + 0.09)^{1/12} - 1 = 0.72\%
 </annotation></semantics></math></p>
 <p>الخيار (أ) قسم النسبة الفعلية على 12، فأعطى نسبة أعلى من الصحيحة.</p>
-<p><span id="sol-3-112"><strong>3.112</strong></span> الجواب (ب). القيمة الحالية هي معيار القرار. فترة الاسترداد معيار مساعد يهم عندما تكون السيولة قليلة أو الخطر كبيرا.</p>
-<p><span id="sol-3-113"><strong>3.113</strong></span> الجواب (ج). الآلة ما زالت صالحة في نهاية الفترة ولها قيمة سوقية. هذه القيمة تطرح من التكاليف في نهاية الفترة.</p>
+<p><span id="sol-3-120"><strong>3.120</strong></span> الجواب (ب). القيمة الحالية هي معيار القرار. فترة الاسترداد معيار مساعد يهم عندما تكون السيولة قليلة أو الخطر كبيرا.</p>
+<p><span id="sol-3-121"><strong>3.121</strong></span> الجواب (ج). الآلة ما زالت صالحة في نهاية الفترة ولها قيمة سوقية. هذه القيمة تطرح من التكاليف في نهاية الفترة.</p>
 </section>
 <section id="الجزء-ك-حالات-مصغرة" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="الجزء-ك-حالات-مصغرة">الجزء ك: حالات مصغرة</h2>
-<p><span id="sol-3-114"><strong>3.114</strong></span> (أ) قرض 900,000 دينار على 180 شهرا بنسبة شهرية:</p>
+<p><span id="sol-3-122"><strong>3.122</strong></span> (أ) قرض 900,000 دينار على 180 شهرا بنسبة شهرية:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><mn>7.5</mn><mi>%</mi></mrow><mn>12</mn></mfrac><mo>=</mo><mn>0.625</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
 i_m = \frac{7.5\%}{12} = 0.625\%
 </annotation></semantics></math></p>
@@ -1347,7 +1416,7 @@ PW_{buy} = 1{,}200{,}000 + 28{,}000\,(P/A,\ 10\%,\ 15) - 600{,}000\,(P/F,\ 10\%,
 </annotation></semantics></math></p>
 <p>(د) المصنع يبقى مستأجرا، لأن تكلفة الاستئجار أقل. الفرق 348,999.38 دينار بالقيمة الحالية.</p>
 <p>(هـ) القرض بنسبة 7.5% أقل من الحد الأدنى للعائد 10%. لكن مقارنة طريقة التمويل قرار منفصل عن قرار الشراء. نقيم الشراء أولا بسعره النقدي. إذا أردنا إدخال القرض، فالقيمة الحالية لأقساطه بنسبة 10% أقل من 900,000 دينار، وهذا يجعل الشراء أفضل قليلا. القاعدة العملية: لا تخلط قرار الاستثمار بقرار التمويل، إلا إذا كان التمويل مرتبطا بالمشروع وحده.</p>
-<p><span id="sol-3-115"><strong>3.115</strong></span> (أ) تكلفة الطاقة للديزل:</p>
+<p><span id="sol-3-123"><strong>3.123</strong></span> (أ) تكلفة الطاقة للديزل:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>55</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>0.35</mn><mo>×</mo><mn>1.2</mn><mo>=</mo><mn>23</mn><mi>,</mi><mn>100.00</mn></mrow><annotation encoding="application/x-tex">
 55{,}000 \times 0.35 \times 1.2 = 23\mathord{,}100.00
 </annotation></semantics></math></p>
@@ -1375,7 +1444,7 @@ CR_d = 24\mathord{,}493.28, \qquad CR_e = 33\mathord{,}921.63
 x = \frac{33\mathord{,}921.63 + 4{,}000 - 24\mathord{,}493.28}{0.42 - 0.144} = 48\mathord{,}653
 </annotation></semantics></math></p>
 <p>إذا قطعت الحافلة أكثر من 48,653 كيلومتر سنويا فالكهربائية أرخص. الخطوط الطويلة تناسب الحافلة الكهربائية، لأن الاستثمار الإضافي يسترد من كل كيلومتر.</p>
-<p><span id="sol-3-116"><strong>3.116</strong></span> (أ) نحول التجديد إلى دفعة سنوية بالمعامل A/F، ثم نقسم كل التكاليف السنوية على النسبة:</p>
+<p><span id="sol-3-124"><strong>3.124</strong></span> (أ) نحول التجديد إلى دفعة سنوية بالمعامل A/F، ثم نقسم كل التكاليف السنوية على النسبة:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo>,</mo><mn>500</mn><mo>,</mo><mn>000</mn><mo>+</mo><mfrac><mrow><mn>60</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>300</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>6</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>20</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>0.06</mn></mfrac><mo>=</mo><mn>3</mn><mi>,</mi><mn>635</mn><mi>,</mi><mn>922.78</mn></mrow><annotation encoding="application/x-tex">
 CC_1 = 2{,}500{,}000 + \frac{60{,}000 + 300{,}000\,(A/F,\ 6\%,\ 20)}{0.06} = 3\mathord{,}635\mathord{,}922.78
 </annotation></semantics></math></p>

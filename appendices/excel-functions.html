@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D — الدوال المالية في Excel – مسائل في الاقتصاد الهندسي</title>
+<title>Appendix D — الدوال المالية في Excel وGoogle Sheets – مسائل في الاقتصاد الهندسي</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/excel-functions.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/excel-functions.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/excel-functions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -245,7 +245,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-x-rules" id="toc-sec-x-rules" class="nav-link active" data-scroll-target="#sec-x-rules"><span class="header-section-number">D.1</span> قواعد مشتركة</a></li>
-  <li><a href="#sec-x-five" id="toc-sec-x-five" class="nav-link" data-scroll-target="#sec-x-five"><span class="header-section-number">D.2</span> الدوال الخمس الأساسية</a>
+  <li><a href="#sec-x-sheets" id="toc-sec-x-sheets" class="nav-link" data-scroll-target="#sec-x-sheets"><span class="header-section-number">D.2</span> في Google Sheets</a></li>
+  <li><a href="#sec-x-five" id="toc-sec-x-five" class="nav-link" data-scroll-target="#sec-x-five"><span class="header-section-number">D.3</span> الدوال الخمس الأساسية</a>
   <ul class="collapse">
   <li><a href="#الدالة-pv" id="toc-الدالة-pv" class="nav-link" data-scroll-target="#الدالة-pv">الدالة PV</a></li>
   <li><a href="#الدالة-fv" id="toc-الدالة-fv" class="nav-link" data-scroll-target="#الدالة-fv">الدالة FV</a></li>
@@ -253,47 +254,47 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#الدالة-nper" id="toc-الدالة-nper" class="nav-link" data-scroll-target="#الدالة-nper">الدالة NPER</a></li>
   <li><a href="#الدالة-rate" id="toc-الدالة-rate" class="nav-link" data-scroll-target="#الدالة-rate">الدالة RATE</a></li>
   </ul></li>
-  <li><a href="#sec-x-loan" id="toc-sec-x-loan" class="nav-link" data-scroll-target="#sec-x-loan"><span class="header-section-number">D.3</span> تفصيل أقساط القرض</a>
+  <li><a href="#sec-x-loan" id="toc-sec-x-loan" class="nav-link" data-scroll-target="#sec-x-loan"><span class="header-section-number">D.4</span> تفصيل أقساط القرض</a>
   <ul class="collapse">
   <li><a href="#الدالتان-ipmt-وppmt" id="toc-الدالتان-ipmt-وppmt" class="nav-link" data-scroll-target="#الدالتان-ipmt-وppmt">الدالتان IPMT وPPMT</a></li>
   <li><a href="#الدالتان-cumipmt-وcumprinc" id="toc-الدالتان-cumipmt-وcumprinc" class="nav-link" data-scroll-target="#الدالتان-cumipmt-وcumprinc">الدالتان CUMIPMT وCUMPRINC</a></li>
   </ul></li>
-  <li><a href="#sec-x-rates" id="toc-sec-x-rates" class="nav-link" data-scroll-target="#sec-x-rates"><span class="header-section-number">D.4</span> النسب</a>
+  <li><a href="#sec-x-rates" id="toc-sec-x-rates" class="nav-link" data-scroll-target="#sec-x-rates"><span class="header-section-number">D.5</span> النسب</a>
   <ul class="collapse">
   <li><a href="#الدالتان-effect-وnominal" id="toc-الدالتان-effect-وnominal" class="nav-link" data-scroll-target="#الدالتان-effect-وnominal">الدالتان EFFECT وNOMINAL</a></li>
   <li><a href="#الدالة-rri" id="toc-الدالة-rri" class="nav-link" data-scroll-target="#الدالة-rri">الدالة RRI</a></li>
   <li><a href="#الدالة-fvschedule" id="toc-الدالة-fvschedule" class="nav-link" data-scroll-target="#الدالة-fvschedule">الدالة FVSCHEDULE</a></li>
   </ul></li>
-  <li><a href="#sec-x-flows" id="toc-sec-x-flows" class="nav-link" data-scroll-target="#sec-x-flows"><span class="header-section-number">D.5</span> تدفقات نقدية غير منتظمة</a>
+  <li><a href="#sec-x-flows" id="toc-sec-x-flows" class="nav-link" data-scroll-target="#sec-x-flows"><span class="header-section-number">D.6</span> تدفقات نقدية غير منتظمة</a>
   <ul class="collapse">
   <li><a href="#الدالة-npv" id="toc-الدالة-npv" class="nav-link" data-scroll-target="#الدالة-npv">الدالة NPV</a></li>
   <li><a href="#الدالة-irr" id="toc-الدالة-irr" class="nav-link" data-scroll-target="#الدالة-irr">الدالة IRR</a></li>
   <li><a href="#الدالة-mirr" id="toc-الدالة-mirr" class="nav-link" data-scroll-target="#الدالة-mirr">الدالة MIRR</a></li>
   <li><a href="#الدالتان-xnpv-وxirr" id="toc-الدالتان-xnpv-وxirr" class="nav-link" data-scroll-target="#الدالتان-xnpv-وxirr">الدالتان XNPV وXIRR</a></li>
   </ul></li>
-  <li><a href="#sec-x-dep" id="toc-sec-x-dep" class="nav-link" data-scroll-target="#sec-x-dep"><span class="header-section-number">D.6</span> الاستهلاك</a></li>
-  <li><a href="#sec-x-whatif" id="toc-sec-x-whatif" class="nav-link" data-scroll-target="#sec-x-whatif"><span class="header-section-number">D.7</span> أدوات تحليل ماذا لو</a>
+  <li><a href="#sec-x-dep" id="toc-sec-x-dep" class="nav-link" data-scroll-target="#sec-x-dep"><span class="header-section-number">D.7</span> الاستهلاك</a></li>
+  <li><a href="#sec-x-whatif" id="toc-sec-x-whatif" class="nav-link" data-scroll-target="#sec-x-whatif"><span class="header-section-number">D.8</span> أدوات تحليل ماذا لو</a>
   <ul class="collapse">
   <li><a href="#goal-seek" id="toc-goal-seek" class="nav-link" data-scroll-target="#goal-seek">Goal Seek</a></li>
   <li><a href="#data-table" id="toc-data-table" class="nav-link" data-scroll-target="#data-table">Data Table</a></li>
   <li><a href="#scenario-manager-وsolver" id="toc-scenario-manager-وsolver" class="nav-link" data-scroll-target="#scenario-manager-وsolver">Scenario Manager وSolver</a></li>
   </ul></li>
-  <li><a href="#sec-x-modern" id="toc-sec-x-modern" class="nav-link" data-scroll-target="#sec-x-modern"><span class="header-section-number">D.8</span> دوال Excel الحديثة</a>
+  <li><a href="#sec-x-modern" id="toc-sec-x-modern" class="nav-link" data-scroll-target="#sec-x-modern"><span class="header-section-number">D.9</span> دوال Excel الحديثة</a>
   <ul class="collapse">
   <li><a href="#الدالة-sequence" id="toc-الدالة-sequence" class="nav-link" data-scroll-target="#الدالة-sequence">الدالة SEQUENCE</a></li>
   <li><a href="#الدالة-let" id="toc-الدالة-let" class="nav-link" data-scroll-target="#الدالة-let">الدالة LET</a></li>
   <li><a href="#الدالة-lambda" id="toc-الدالة-lambda" class="nav-link" data-scroll-target="#الدالة-lambda">الدالة LAMBDA</a></li>
   </ul></li>
-  <li><a href="#sec-x-errors" id="toc-sec-x-errors" class="nav-link" data-scroll-target="#sec-x-errors"><span class="header-section-number">D.9</span> أخطاء شائعة</a></li>
+  <li><a href="#sec-x-errors" id="toc-sec-x-errors" class="nav-link" data-scroll-target="#sec-x-errors"><span class="header-section-number">D.10</span> أخطاء شائعة</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/excel-functions.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/tables.html">الملاحق</a></li><li class="breadcrumb-item"><a href="../appendices/excel-functions.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">الدوال المالية في Excel وGoogle Sheets</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-excel" class="quarto-section-identifier">Appendix D — الدوال المالية في Excel</span></h1>
+<h1 class="title"><span id="sec-excel" class="quarto-section-identifier">Appendix D — الدوال المالية في Excel وGoogle Sheets</span></h1>
 </div>
 
 
@@ -353,8 +354,60 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="sec-x-five" class="level2" data-number="D.2">
-<h2 data-number="D.2" class="anchored" data-anchor-id="sec-x-five"><span class="header-section-number">D.2</span> الدوال الخمس الأساسية</h2>
+<section id="sec-x-sheets" class="level2" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="sec-x-sheets"><span class="header-section-number">D.2</span> في Google Sheets</h2>
+<p>كل الدوال في هذا الملحق موجودة في Google Sheets بنفس الأسماء ونفس ترتيب المدخلات، وتعطي نفس النتائج. هذا يشمل الدوال الخمس الأساسية، ودوال تفصيل القرض، والنسب، وNPV وIRR وMIRR وXNPV وXIRR، ودوال الاستهلاك الخمس، والدوال الحديثة SEQUENCE وLET وLAMBDA. فتستطيع حل كل مسائل الكتاب من المتصفح أو الهاتف، بدون نسخة Excel.</p>
+<p>الفروق التي تحتاج انتباها:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>الأداة</th>
+<th>في Excel</th>
+<th>في Google Sheets</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Goal Seek</td>
+<td>مدمجة</td>
+<td>إضافة من Google Workspace Marketplace</td>
+</tr>
+<tr class="even">
+<td>Solver</td>
+<td>إضافة مجانية من Excel</td>
+<td>إضافة من Google Workspace Marketplace</td>
+</tr>
+<tr class="odd">
+<td>Data Table</td>
+<td>مدمجة</td>
+<td>غير موجودة، استخدم صيغة بمراجع مختلطة تسحب في الاتجاهين</td>
+</tr>
+<tr class="even">
+<td>Scenario Manager</td>
+<td>مدمجة</td>
+<td>غير موجودة</td>
+</tr>
+<tr class="odd">
+<td>LAMBDA بالاسم</td>
+<td>من Name Manager</td>
+<td>من قائمة Data ثم Named functions</td>
+</tr>
+<tr class="even">
+<td>SORTBY</td>
+<td>موجودة</td>
+<td>غير موجودة، استخدم SORT</td>
+</tr>
+</tbody>
+</table>
+<p>في Google Sheets تكتب المدخلات بالفاصلة نفسها إذا كانت لغة الجدول الإنجليزية. إذا كانت لغة الحساب عربية أو أوروبية، قد يطلب الجدول الفاصلة المنقوطة بين المدخلات. غيرها من قائمة File ثم Settings ثم Locale.</p>
+</section>
+<section id="sec-x-five" class="level2" data-number="D.3">
+<h2 data-number="D.3" class="anchored" data-anchor-id="sec-x-five"><span class="header-section-number">D.3</span> الدوال الخمس الأساسية</h2>
 <p>هذه الدوال الخمس تربط المتغيرات الخمسة rate وnper وpmt وpv وfv. كل دالة تحسب واحدا منها إذا عرفت الأربعة الباقية.</p>
 <section id="الدالة-pv" class="level3">
 <h3 class="anchored" data-anchor-id="الدالة-pv">الدالة PV</h3>
@@ -394,8 +447,8 @@ ul.task-list li input[type="checkbox"] {
 <p>النتيجة 9.43%. إذا ظهر الخطأ #NUM فالسبب غالبا أن الإشارات كلها متشابهة، أو أن الدالة تحتاج قيمة تخمينية في المدخل السادس.</p>
 </section>
 </section>
-<section id="sec-x-loan" class="level2" data-number="D.3">
-<h2 data-number="D.3" class="anchored" data-anchor-id="sec-x-loan"><span class="header-section-number">D.3</span> تفصيل أقساط القرض</h2>
+<section id="sec-x-loan" class="level2" data-number="D.4">
+<h2 data-number="D.4" class="anchored" data-anchor-id="sec-x-loan"><span class="header-section-number">D.4</span> تفصيل أقساط القرض</h2>
 <section id="الدالتان-ipmt-وppmt" class="level3">
 <h3 class="anchored" data-anchor-id="الدالتان-ipmt-وppmt">الدالتان IPMT وPPMT</h3>
 <p>القسط ثابت، لكن نصيب الفائدة منه يقل كل فترة. الدالة IPMT تعطي الفائدة في فترة محددة، والدالة PPMT تعطي سداد الأصل فيها. المدخل الثاني رقم الفترة.</p>
@@ -412,8 +465,8 @@ ul.task-list li input[type="checkbox"] {
 <p>للقرض الشهري السابق في السنة الأولى: فوائد 1,665.40 دينار، وسداد أصل 3,316.60 دينار. النتيجتان سالبتان لأنهما مال يخرج.</p>
 </section>
 </section>
-<section id="sec-x-rates" class="level2" data-number="D.4">
-<h2 data-number="D.4" class="anchored" data-anchor-id="sec-x-rates"><span class="header-section-number">D.4</span> النسب</h2>
+<section id="sec-x-rates" class="level2" data-number="D.5">
+<h2 data-number="D.5" class="anchored" data-anchor-id="sec-x-rates"><span class="header-section-number">D.5</span> النسب</h2>
 <section id="الدالتان-effect-وnominal" class="level3">
 <h3 class="anchored" data-anchor-id="الدالتان-effect-وnominal">الدالتان EFFECT وNOMINAL</h3>
 <p>الدالة EFFECT تحول نسبة اسمية إلى فعلية، والدالة NOMINAL تعمل العكس. المدخل الثاني عدد مرات حساب الفائدة في السنة:</p>
@@ -434,8 +487,8 @@ ul.task-list li input[type="checkbox"] {
 <p>النتيجة 11,909.10 دينار. يمكن وضع النسب في خلايا وكتابة نطاقها بدل القائمة.</p>
 </section>
 </section>
-<section id="sec-x-flows" class="level2" data-number="D.5">
-<h2 data-number="D.5" class="anchored" data-anchor-id="sec-x-flows"><span class="header-section-number">D.5</span> تدفقات نقدية غير منتظمة</h2>
+<section id="sec-x-flows" class="level2" data-number="D.6">
+<h2 data-number="D.6" class="anchored" data-anchor-id="sec-x-flows"><span class="header-section-number">D.6</span> تدفقات نقدية غير منتظمة</h2>
 <p>نستخدم في هذا القسم مشروعا تدفقاته من السنة 0 إلى السنة 5 في الخلايا من B1 إلى B6:</p>
 <table class="caption-top table">
 <thead>
@@ -519,8 +572,8 @@ ul.task-list li input[type="checkbox"] {
 <p>النتيجتان 2,089.50 دينار و37.49%. الدالة XNPV تخصم إلى التاريخ الأول، وتأخذ تدفقه كما هو، على عكس الدالة NPV.</p>
 </section>
 </section>
-<section id="sec-x-dep" class="level2" data-number="D.6">
-<h2 data-number="D.6" class="anchored" data-anchor-id="sec-x-dep"><span class="header-section-number">D.6</span> الاستهلاك</h2>
+<section id="sec-x-dep" class="level2" data-number="D.7">
+<h2 data-number="D.7" class="anchored" data-anchor-id="sec-x-dep"><span class="header-section-number">D.7</span> الاستهلاك</h2>
 <p>نستخدم أصلا تكلفته 50,000 دينار، وقيمته في النهاية 5,000 دينار، وعمره 5 سنوات. الفصل الخامس يشرح طرق الاستهلاك بالتفصيل.</p>
 <table class="caption-top table">
 <thead>
@@ -566,8 +619,8 @@ ul.task-list li input[type="checkbox"] {
 =VDB(50000, 5000, 5, 0, 1)</code></pre>
 <p>المدخل الأخير في الدوال SYD وDDB وDB رقم السنة. الدالة VDB تأخذ سنة بداية وسنة نهاية، فتعطي استهلاك فترة كاملة بصيغة واحدة.</p>
 </section>
-<section id="sec-x-whatif" class="level2" data-number="D.7">
-<h2 data-number="D.7" class="anchored" data-anchor-id="sec-x-whatif"><span class="header-section-number">D.7</span> أدوات تحليل ماذا لو</h2>
+<section id="sec-x-whatif" class="level2" data-number="D.8">
+<h2 data-number="D.8" class="anchored" data-anchor-id="sec-x-whatif"><span class="header-section-number">D.8</span> أدوات تحليل ماذا لو</h2>
 <section id="goal-seek" class="level3">
 <h3 class="anchored" data-anchor-id="goal-seek">Goal Seek</h3>
 <p>يبحث عن قيمة خلية تجعل خلية أخرى تساوي رقما محددا. من قائمة Data اختر What-If Analysis ثم Goal Seek. تحدد ثلاثة أشياء: الخلية الهدف، والقيمة المطلوبة، والخلية التي يغيرها Excel. استخدمناه في الكتاب لإيجاد نسبة النمو التي تجعل عرضي عمل متساويين، والنسبة التي تجعل آلتين متساويتين.</p>
@@ -583,8 +636,8 @@ ul.task-list li input[type="checkbox"] {
 <p>أداة Scenario Manager تحفظ مجموعات من المدخلات، مثل حالة متفائلة وحالة متوقعة وحالة متشائمة، وتعرض النتائج جنبا إلى جنب. أداة Solver تبحث عن أفضل قيمة لهدف مع قيود، مثل اختيار مجموعة مشاريع بأكبر قيمة حالية ضمن ميزانية محددة. تحتاج تفعيلها من Add-ins.</p>
 </section>
 </section>
-<section id="sec-x-modern" class="level2" data-number="D.8">
-<h2 data-number="D.8" class="anchored" data-anchor-id="sec-x-modern"><span class="header-section-number">D.8</span> دوال Excel الحديثة</h2>
+<section id="sec-x-modern" class="level2" data-number="D.9">
+<h2 data-number="D.9" class="anchored" data-anchor-id="sec-x-modern"><span class="header-section-number">D.9</span> دوال Excel الحديثة</h2>
 <p>هذه الدوال متوفرة في Excel 365 وExcel 2021 وما بعدهما.</p>
 <section id="الدالة-sequence" class="level3">
 <h3 class="anchored" data-anchor-id="الدالة-sequence">الدالة SEQUENCE</h3>
@@ -609,8 +662,8 @@ ul.task-list li input[type="checkbox"] {
 <p>فتحصل على 3.7908. بنفس الطريقة تصنع دوالا للمعاملات PF وAP وAF وPG، فيصبح ملف Excel نسخة من جداول الملحق الأول تقبل أي نسبة وأي مدة.</p>
 </section>
 </section>
-<section id="sec-x-errors" class="level2" data-number="D.9">
-<h2 data-number="D.9" class="anchored" data-anchor-id="sec-x-errors"><span class="header-section-number">D.9</span> أخطاء شائعة</h2>
+<section id="sec-x-errors" class="level2" data-number="D.10">
+<h2 data-number="D.10" class="anchored" data-anchor-id="sec-x-errors"><span class="header-section-number">D.10</span> أخطاء شائعة</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
