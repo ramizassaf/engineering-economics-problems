@@ -1,13 +1,13 @@
 c01: 99 of 118 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c02: 102 of 118 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c03: 104 of 133 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c04: 46 of 102 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c05: 66 of 103 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c04: 102 of 102 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c05: 103 of 103 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c06: 101 of 112 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c07: 97 of 115 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c08: 85 of 101 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c09: 67 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c10: 74 of 104 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c09: 87 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c10: 101 of 104 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c11: 87 of 96 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c12: 59 of 70 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c13: 42 of 44 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
@@ -77,99 +77,6 @@ c03-i-06
 c03-i-07
 c03-i-09
 c03-i-10
-c04-b-01
-c04-b-03
-c04-b-04
-c04-b-05
-c04-b-06
-c04-c-04
-c04-c-05
-c04-c-06
-c04-c-07
-c04-c-08
-c04-d-01
-c04-d-02
-c04-d-03
-c04-d-05
-c04-d-06
-c04-d-07
-c04-d-08
-c04-d-09
-c04-d-10
-c04-d-11
-c04-d-12
-c04-d-14
-c04-e-01
-c04-e-02
-c04-e-03
-c04-e-04
-c04-e-05
-c04-e-06
-c04-e-07
-c04-e-08
-c04-e-09
-c04-e-10
-c04-ex-crossover
-c04-ex-incremental-cost
-c04-ex-multiple-irr
-c04-ex-ranking-trap
-c04-ex-unrecovered
-c04-f-03
-c04-f-08
-c04-f-09
-c04-f-12
-c04-g-05
-c04-g-07
-c04-g-09
-c04-g-10
-c04-h-01
-c04-h-02
-c04-h-03
-c04-h-04
-c04-h-05
-c04-h-07
-c04-h-08
-c04-h-09
-c04-h-10
-c04-i-01
-c04-i-07
-c05-b-07
-c05-c-03
-c05-c-04
-c05-c-05
-c05-c-06
-c05-c-10
-c05-c-11
-c05-c-12
-c05-c-13
-c05-d-03
-c05-d-07
-c05-d-08
-c05-d-09
-c05-e-01
-c05-e-03
-c05-e-06
-c05-e-07
-c05-e-09
-c05-e-10
-c05-ex-loss-carry
-c05-f-12
-c05-g-06
-c05-g-07
-c05-g-08
-c05-g-10
-c05-h-01
-c05-h-02
-c05-h-03
-c05-h-04
-c05-h-05
-c05-h-06
-c05-h-07
-c05-h-08
-c05-h-09
-c05-h-10
-c05-i-01
-c05-j-03
 c06-b-06
 c06-b-08
 c06-b-10
@@ -216,60 +123,13 @@ c08-h-06
 c08-h-07
 c08-i-04
 c09-b-01
-c09-c-02
-c09-d-03
-c09-d-04
-c09-d-08
-c09-d-10
-c09-d-11
-c09-d-12
-c09-d-13
-c09-d-14
-c09-e-02
-c09-e-05
-c09-e-06
-c09-e-10
-c09-e-11
-c09-f-09
 c09-g-10
-c09-h-01
-c09-h-02
-c09-h-03
-c09-h-04
 c09-h-05
 c09-h-06
-c09-h-07
 c09-i-01
-c10-c-01
-c10-c-02
-c10-c-04
-c10-c-05
-c10-c-12
-c10-d-01
-c10-d-03
-c10-d-04
-c10-d-05
-c10-d-06
-c10-d-10
-c10-e-02
-c10-e-03
-c10-e-05
-c10-e-12
 c10-f-03
 c10-f-06
-c10-g-02
-c10-g-04
-c10-g-10
-c10-h-01
-c10-h-02
-c10-h-03
-c10-h-05
-c10-h-06
-c10-h-07
-c10-h-08
-c10-i-05
 c10-i-09
-c10-j-02
 c11-ex-risk-class
 c11-f-02
 c11-f-09

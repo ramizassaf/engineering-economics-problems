@@ -113,7 +113,7 @@ CHECKS = {
     "c03-f-08": {"AW": lambda v: npf.pmt(v["i"], 8, -npf.npv(v["i"], [v["C"]] + [v["O"]] * 3 + [v["O"] + v["H"]] + [v["O"]] * 3 + [v["O"] - v["S"]]))},
     "c03-g-08": {"CC": lambda v: v["C"] + npf.npv(v["i"], [0] + [v["M1"]] * 10) + v["M2"] / v["i"] / (1 + v["i"]) ** 10},
     "c03-h-05": {"x": lambda v: solve_linear(lambda x: npf.pmt(v["i"], v["n"], -v["Fa"]) + v["va"] * x - npf.pmt(v["i"], v["n"], -v["Fb"]) - v["vb"] * x)},
-    "c03-i-08": {"r": lambda v: npf.rate(v["n"], v["Oa"] - v["Ob"], -(v["Cb"] - v["Ca"]), 0)},
+    "c03-i-08": {"r": lambda v: rate_(v["n"], v["Oa"] - v["Ob"], v["Cb"] - v["Ca"])},
     "c03-k-02": {"kmx": lambda v: solve_linear(lambda x: npf.pmt(0.10, 8, -140000, 20000) + 0.42 * x - npf.pmt(0.10, 10, -220000, 30000) - 4000 - 0.144 * x)},
     # ---------------------------------------------------------------- chapter 4
     "c04-ex-irr-trial": {"r": lambda v: npf.irr([-v["C"]] + [v["R"]] * 5 + [v["R"] + v["S"]])},
@@ -175,7 +175,7 @@ CHECKS = {
     "c07-ex-irr-tax": {"ra": lambda v: npf.irr(proj(v["C"], 0, v["R"], 0, 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
     "c07-ex-breakeven": {"R": lambda v: solve_linear(lambda R: npf.npv(v["i"], proj(v["C"], 0, R, v["O"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))))},
     "c07-ex-sensitivity": {"xR": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"], v["W"], v["R"] * (1 + x), v["O"], v["M"], v["t"], [v["C"] / 5] * 5)), -5, 5),
-                           "xC": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"] * (1 + x), v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] * (1 + x) / 5] * 5)), -5, 5)},
+                           "xC": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"] * (1 + x), v["W"], v["R"], v["O"], v["M"], v["t"], [v["C"] * (1 + x) / 5] * 5)), -5, 500)},
     "c07-ex-scenarios": {"Pp": lambda v: npf.npv(v["i"], proj(v["C"], v["W"], 0.85 * v["R"], 1.1 * v["O"], 0.5 * v["M"], v["t"], [v["C"] / 5] * 5))},
     "c07-d-17": {"xO": lambda v: brentq(lambda x: npf.npv(v["i"], proj(v["C"], 0, v["R"], v["O"] * (1 + x), 0, v["t"], [v["C"] / v["n"]] * int(v["n"]))), -50, 50)},
     "c07-d-19": {"r": lambda v: npf.irr(proj(v["C"], 0, v["R"], v["O"], 0, v["t"], [v["C"] / v["n"]] * int(v["n"])))},
@@ -640,6 +640,314 @@ CHECKS.update({
 })
 
 
+# ---------------------------------------------------------------- chapters 4 and 5: remaining items
+def irr_(flows, guess=None):
+    return float(npf.irr(flows))
+
+
+def rate_(n, R, C):
+    """Rate where the uniform series R over n years is worth C today (bisection, no guess)."""
+    return brentq(lambda r: R * (1 - (1 + r) ** -n) / r - C if abs(r) > 1e-12 else R * n - C, -0.99, 50)
+
+
+def pv_(i, n, A=1.0, F=0.0):
+    return float(-npf.pv(i, n, A, F))
+
+
+def npv_(i, flows):
+    return float(npf.npv(i, flows))
+
+
+def roots(flows, lo, hi):
+    """IRR roots of flows inside [lo, hi], found from the polynomial in x = 1/(1+r)."""
+    xs = np.roots(flows[::-1])
+    rs = sorted(1 / x.real - 1 for x in xs if abs(x.imag) < 1e-9 and x.real > 0)
+    rs = [r for r in rs if lo <= r <= hi]
+    return rs[0]
+
+
+def taxes_cf(results, rate, years=None, cap=None):
+    """Tax each year with losses carried forward (FIFO), optional expiry and cap."""
+    bank, out = [], []
+    for y, x in enumerate(results):
+        bank = [(yy, amt) for yy, amt in bank if years is None or y - yy <= years]
+        if x <= 0:
+            if x < 0:
+                bank.append((y, -x))
+            out.append(0.0)
+            continue
+        room = x if cap is None else cap * x
+        used, nb = 0.0, []
+        for yy, amt in bank:
+            take = min(amt, room - used)
+            used += take
+            if amt - take > 1e-9:
+                nb.append((yy, amt - take))
+        bank = nb
+        out.append(rate * (x - used))
+    return out
+
+
+def db_table(B, d, k):
+    out, b = [], B
+    for _ in range(k):
+        D = d * b
+        out.append(D)
+        b -= D
+    return out
+
+
+CHECKS.update({
+    "c04-ex-unrecovered": {"r": lambda v: rate_(4, v["R"], v["C"]), "B4": lambda v: 0.0},
+    "c04-ex-ranking-trap": {"PX": lambda v: npv_(0.10, [-10000] + [4000] * 5), "rY": lambda v: rate_(5, 10000, 30000)},
+    "c04-ex-incremental-cost": {"rd": lambda v: rate_(6, v["dO"], v["dC"]), "Pb": lambda v: v["Cb"] + pv_(v["i"], 6, v["Ob"])},
+    "c04-ex-crossover": {"rc": lambda v: roots([-20000] + [6000] * 5, 0.01, 0.9), "y15": lambda v: npv_(0.15, [-30000] + [10000] * 5)},
+    "c04-ex-multiple-irr": {"p10": lambda v: npv_(0.10, [-1000, 2300, -1320])},
+    "c04-b-01": {"r": lambda v: rate_(v["n"], v["R"], v["C"])},
+    "c04-b-03": {"r": lambda v: irr_([-v["C"]] + [v["R"]] * 4 + [v["R"] + v["S"]])},
+    "c04-b-04": {"P1": lambda v: npv_(v["i1"], [-v["C"]] + [v["R"]] * 4 + [v["R"] + v["S"]])},
+    "c04-b-05": {"r": lambda v: irr_([-v["c0"], v["c1"], v["c2"], v["c3"], v["c4"]])},
+    "c04-b-06": {"r": lambda v: irr_([-v["C"]] + [v["A1"] + k * v["G"] for k in range(6)])},
+    "c04-c-04": {"r": lambda v: rate_(v["n"], v["R"], v["C"])},
+    "c04-c-05": {"r0": lambda v: irr_([-v["C"]] + [v["R"]] * 4 + [v["R"] + v["S"]]), "r1": lambda v: rate_(5, v["R"], v["C"])},
+    "c04-c-06": {"rl": lambda v: rate_(v["n"], v["R"] * (1 - v["t"]), v["C"])},
+    "c04-c-07": {"n": lambda v: float(npf.nper(v["i"], v["R"], -v["C"]))},
+    "c04-c-08": {"FW": lambda v: npv_(v["i"], [-v["C"]] + [v["R"]] * int(v["n"])) * (1 + v["i"]) ** v["n"], "r": lambda v: rate_(v["n"], v["R"], v["C"])},
+    "c04-d-01": {"rdd": lambda v: rate_(6, v["dR"], v["dC"])},
+    "c04-d-02": {"P2": lambda v: npv_(v["i"], [-v["C2"]] + [v["R2"]] * 6)},
+    "c04-d-03": {"rd": lambda v: rate_(7, v["dO"], v["dC"])},
+    "c04-d-05": {"rd": lambda v: rate_(4, 4500, 15000), "PB_": lambda v: npv_(0.08, [-25000] + [8000] * 4)},
+    "c04-d-06": {"rc": lambda v: roots([-15000] + [4500] * 4, 0.0, 0.5)},
+    "c04-d-07": {"rd": lambda v: rate_(5, v["R2"] - v["R1"], v["C2"] - v["C"])},
+    "c04-d-08": {"rd": lambda v: rate_(5, v["Oa"] - v["Ob"], v["Cb"] - v["Ca"]), "Pb": lambda v: v["Cb"] + pv_(v["i"], 5, v["Ob"])},
+    "c04-d-09": {"rd": lambda v: rate_(6, v["R2"] - v["R1"], v["C2"] - v["C1"])},
+    "c04-d-10": {"rd": lambda v: rate_(8, v["dR"], v["dC"]), "r2": lambda v: rate_(8, v["R1"] + v["dR"], v["C1"] + v["dC"])},
+    "c04-d-11": {"rd": lambda v: rate_(10, v["Oa"] - v["Ob"], v["Cb"] - v["Ca"]), "Ab": lambda v: v["Cb"] / pv_(v["i"], 10) + v["Ob"]},
+    "c04-d-12": {"rk": lambda v: rate_(5, v["R"], v["C"])},
+    "c04-d-14": {"ra": lambda v: irr_([-20000, 15000, 8000, 2000]), "pb10": lambda v: npv_(0.10, [-20000, 2000, 9000, 16000])},
+    "c04-e-01": {"P3": lambda v: npv_(v["i"], [-40000] + [10800] * 6), "r32": lambda v: rate_(6, 3000, 15000)},
+    "c04-e-02": {"r31": lambda v: rate_(5, 3800, 15000), "P3": lambda v: npv_(0.10, [-25000] + [6800] * 5)},
+    "c04-e-03": {"r43": lambda v: rate_(8, 1200, 7000), "P4": lambda v: 29000 + pv_(0.10, 8, 1400)},
+    "c04-e-04": {"r3": lambda v: rate_(10, 6900, 40000)},
+    "c04-e-05": {"P2": lambda v: npv_(0.09, [-30000] + [5100] * 10), "r32": lambda v: rate_(10, 1800, 10000)},
+    "c04-e-06": {"best": lambda v: max(npv_(v["i"], [-50000] + [14000] * 6), npv_(v["i"], [-80000] + [20500] * 6), npv_(v["i"], [-65000] + [17500] * 6))},
+    "c04-e-07": {"rdc": lambda v: rate_(5, 1100, 5000)},
+    "c04-e-08": {"r30": lambda v: rate_(4, 1000, 3000)},
+    "c04-e-09": {"rc": lambda v: rate_(4, 3700, 10000)},
+    "c04-e-10": {"best": lambda v: max(npv_(v["i"], [-20000] + [6000] * 8), npv_(v["i"], [-30000] + [8500] * 8), npv_(v["i"], [-45000] + [11500] * 8))},
+    "c04-f-03": {"r1": lambda v: roots([-100, 230, -132], 0.05, 0.15), "r2": lambda v: roots([-100, 230, -132], 0.15, 0.5)},
+    "c04-f-08": {"r": lambda v: roots([10000] + [-2600] * 5, 0.0, 0.5)},
+    "c04-f-09": {"p25": lambda v: npv_(0.25, [-1600, 10000, -10000])},
+    "c04-f-12": {"r1": lambda v: roots([-1000, 3900, -5030, 2145], 0.05, 0.15), "r2": lambda v: roots([-1000, 3900, -5030, 2145], 0.2, 0.4), "r3": lambda v: roots([-1000, 3900, -5030, 2145], 0.4, 0.8)},
+    "c04-g-05": {"b6": lambda v: v["B"] / (v["I"] * 0.06 + v["M"])},
+    "c04-g-07": {"d32": lambda v: 25000 * pv_(0.06, 15) / 250000},
+    "c04-g-09": {"BCr": lambda v: 300000 * pv_(0.06, 20) / (2000000 + 30000 * pv_(0.06, 20))},
+    "c04-g-10": {"ib": lambda v: rate_(25, v["B"] - v["M"], v["I"])},
+    "c04-h-01": {"r": lambda v: irr_([-v["c0"], v["c1"], v["c2"], v["c3"], v["c4"], v["c5"]])},
+    "c04-h-02": {"r": lambda v: rate_(v["n"], v["R"], v["C"])},
+    "c04-h-03": {"r": lambda v: irr_([-30000, 18000, -10000, 20000, 12000]), "p20": lambda v: npv_(0.20, [-30000, 18000, -10000, 20000, 12000])},
+    "c04-h-04": {"r32": lambda v: rate_(8, 3000, 15000)},
+    "c04-h-05": {"ia": lambda v: (1 + float(npf.rate(v["N"], v["A"], -v["P"], 0))) ** 12 - 1},
+    "c04-h-07": {"rm": lambda v: rate_(v["n"], v["R"] * 0.9, v["C"]), "rc": lambda v: rate_(v["n"], v["R"], v["C"] * 1.1)},
+    "c04-h-08": {"M12": lambda v: float(npf.mirr([-v["c0"], v["c1"], v["c2"], v["c3"], v["c4"], v["c5"]], 0.12, 0.12))},
+    "c04-h-09": {"b8": lambda v: v["B"] * pv_(0.08, 25) / (v["I"] + v["M"] * pv_(0.08, 25))},
+    "c04-h-10": {"re": lambda v: float(npf.rate(v["n"], float(npf.pmt(v["r"], v["n"], -v["L"])), -v["L"] * (1 - v["f"]), 0))},
+    "c04-i-01": {"r": lambda v: rate_(v["n"], v["R"], v["C"])},
+    "c04-i-07": {"re": lambda v: float(npf.rate(3, float(npf.pmt(v["r"], 3, -v["L"])), -v["L"] * (1 - v["f"]), 0))},
+    "c05-b-07": {"b3": lambda v: v["B"] - 3 * (v["B"] - v["S"]) / v["n"]},
+    "c05-c-03": {"Dk": lambda v: db_table(v["B"], 2 / v["n"], int(v["k"]))[-1]},
+    "c05-c-04": {"D3": lambda v: db_table(v["B"], v["d"], 3)[-1]},
+    "c05-c-05": {"n": lambda v: brentq(lambda n: (1 - v["d"]) ** n - 0.1, 0, 200)},
+    "c05-c-10": {"d": lambda v: brentq(lambda d: v["B"] * (1 - d) ** v["n"] - v["S"], 0, 1)},
+    "c05-c-11": {"S": lambda v: sum(db_table(v["B"], v["d"], int(v["k"])))},
+    "c05-c-12": {"s1": lambda v: v["t"] * 2 / v["n"] * v["B"]},
+    "c05-d-03": {"BV": lambda v: v["B"] - sum((v["n"] - j) / (v["n"] * (v["n"] + 1) / 2) * (v["B"] - v["S"]) for j in range(int(v["k"])))},
+    "c05-d-07": {"sy1": lambda v: 5 / 15 * (v["B"] - v["S"])},
+    "c05-d-08": {"D2": lambda v: 2 / 6 * v["B"]},
+    "c05-d-09": {"D1u": lambda v: (v["B"] - v["S"]) * v["u1"] / v["U"]},
+    "c05-e-06": {"D3": lambda v: db_table(v["B"], v["d"], 3)[-1]},
+    "c05-e-10": {"pl": lambda v: v["t"] * npv_(v["i"], [0] + db_table(v["B"], 0.25, 5))},
+    "c05-g-06": {"T4": lambda v: taxes_cf([-50000, -30000, 70000, 60000, 70000], 0.20, 5)[3], "T5": lambda v: taxes_cf([-50000, -30000, 70000, 60000, 70000], 0.20, 5)[4]},
+    "c05-g-07": {"T4": lambda v: taxes_cf([-120000, 100000, 100000, 100000, 100000], 0.20, None, 0.25)[4]},
+    "c05-g-08": {"lost": lambda v: 90000 - sum([10000, 15000, 20000, 25000, 0])},
+    "c05-h-03": {"s10": lambda v: v["t"] * npv_(0.10, [0] + [v["B"] / 5] * 5)},
+    "c05-h-05": {"D3": lambda v: 0.25 * ((v["O"] + v["A1"]) * 0.75 * 0.75 + v["A2"] * 0.75 + v["A3"])},
+    "c05-h-08": {"T4": lambda v: taxes_cf([-40000, 15000, 20000, 30000, 35000], 0.15, 5)[3]},
+    "c05-h-09": {"a": lambda v: v["t"] * npv_(v["i"], [0] + db_table(v["B"], 0.25, 10))},
+    "c05-j-03": {"T4": lambda v: taxes_cf([-60000, -20000, 30000, 70000, 90000, 90000], 0.15)[3],
+                 "T4b": lambda v: taxes_cf([-60000, -20000, 30000, 70000, 90000, 90000], 0.15, None, 0.25)[3],
+                 "T6b": lambda v: taxes_cf([-60000, -20000, 30000, 70000, 90000, 90000], 0.15, None, 0.25)[5]},
+})
+
+
+# ---------------------------------------------------------------- chapter 5: depreciation tables
+def ddb_floor(B, S, n, k):
+    """Book value after k years of double declining balance that never goes below S."""
+    b = B
+    for _ in range(k):
+        b -= max(min(2 / n * b, b - S), 0)
+    return b
+
+
+def ddb_switch(B, S, n):
+    """Yearly charges of double declining balance with a switch to straight line (VDB logic)."""
+    out, b = [], B
+    for y in range(n):
+        D = max(2 / n * b, (b - S) / (n - y))
+        D = min(D, b - S)
+        out.append(D)
+        b -= D
+    return out
+
+
+def excel_db_rate(B, S, n):
+    from decimal import Decimal, ROUND_HALF_UP
+    return float(Decimal(str(1 - (S / B) ** (1 / n))).quantize(Decimal("0.001"), ROUND_HALF_UP))
+
+
+def syd(B, S, n, y):
+    return (B - S) * (n - y + 1) / (n * (n + 1) / 2)
+
+
+CHECKS.update({
+    "c05-ex-loss-carry": {"c4": lambda v: 40000 - 15000 - 20000,
+                          "T4": lambda v: taxes_cf([-40000, 15000, 20000, 30000, 35000], 0.15, 5)[3],
+                          "T5": lambda v: taxes_cf([-40000, 15000, 20000, 30000, 35000], 0.15, 5)[4]},
+    "c05-c-06": {"b3": lambda v: ddb_floor(v["B"], v["S"], 5, 3), "b5": lambda v: ddb_floor(v["B"], v["S"], 5, 5)},
+    "c05-c-13": {"r": lambda v: excel_db_rate(v["B"], v["S"], 5),
+                 "D2": lambda v: db_table(v["B"], excel_db_rate(v["B"], v["S"], 5), 2)[-1]},
+    "c05-e-01": {"D": lambda v: 2 * (v["B"] / v["n"] / 2)},
+    "c05-e-03": {"D1": lambda v: v["B"] / v["n"] * (1 if v["m"] <= 6 else 0.5)},
+    "c05-e-07": {"E": lambda v: max(0.0, v["X"] - v["O"])},
+    "c05-e-09": {"D": lambda v: 0.20 * v["f"] * v["B"]},
+    "c05-f-12": {"Tsl": lambda v: v["t"] * (v["R"] - v["O"] - (v["B"] - 0) / 5),
+                 "Tdd": lambda v: v["t"] * (v["R"] - v["O"] - db_table(v["B"], 2 / 5, 1)[0])},
+    "c05-g-10": {"ns": lambda v: v["M"] - v["t"] * (v["M"] - (v["B"] - 2 * v["B"] / 5)),
+                 "nd": lambda v: v["M"] - v["t"] * (v["M"] - (v["B"] - sum(db_table(v["B"], 0.4, 2))))},
+    "c05-h-01": {"D": lambda v: (v["B"] - v["S"]) / v["n"], "y1": lambda v: syd(v["B"], v["S"], int(v["n"]), 1)},
+    "c05-h-02": {"D1": lambda v: ddb_switch(v["B"], v["S"], 5)[0], "D2": lambda v: ddb_switch(v["B"], v["S"], 5)[1],
+                 "D3": lambda v: ddb_switch(v["B"], v["S"], 5)[2]},
+    "c05-h-04": {"CF": lambda v: (v["R"] - v["O"]) * (1 - v["t"]) + v["t"] * v["B"] / 5},
+    "c05-h-06": {"r": lambda v: excel_db_rate(v["B"], v["S"], 4), "D1": lambda v: v["B"] * excel_db_rate(v["B"], v["S"], 4)},
+    "c05-h-07": {"net": lambda v: v["M"] * (1 - v["t"]) + v["t"] * v["B"] * (1 - 3 / v["n"])},
+    "c05-h-10": {"sy3": lambda v: syd(v["B"], v["S"], 5, 3)},
+    "c05-i-01": {"B": lambda v: v["P"] + v["T"] + v["I"]},
+    "c05-ex-ddb": {"b5": lambda v: ddb_floor(v["B"], v["S"], 5, 5), "b3": lambda v: ddb_floor(v["B"], v["S"], 5, 3)},
+    "c05-ex-ddb-switch": {"D%d" % k: (lambda k: lambda v: ddb_switch(v["B"], v["S"], 6)[k - 1])(k) for k in range(1, 7)},
+})
+
+
+# ---------------------------------------------------------------- chapter 9: economic life from raw cash flows
+def aw_life(C, S, ops, i, extra=None):
+    """Equivalent annual cost of keeping an asset len(ops) years: buy at C, pay ops[k] in year k+1,
+    sell for S at the end, plus any extra {year: amount} costs."""
+    n = len(ops)
+    P = C - S / (1 + i) ** n + sum(o / (1 + i) ** (k + 1) for k, o in enumerate(ops))
+    for y, x in (extra or {}).items():
+        P += x / (1 + i) ** y
+    return float(npf.pmt(i, n, -P))
+
+
+def lin(a, g, k):
+    return [a + g * j for j in range(k)]
+
+
+def life_checks(C, salv, op1, g, i, names):
+    return {nm: (lambda k: lambda v: aw_life(C(v), salv(v, k), lin(op1(v), g(v), k), i(v)))(k) for k, nm in names}
+
+
+CHECKS.update({
+    "c09-c-02": {"Ad": lambda v: aw_life(v["M"], v["Sd"], [v["Od"]] * int(v["nd"]), v["i"]),
+                 "Ac": lambda v: aw_life(v["C"], v["Sc"], [v["Oc"]] * int(v["nc"]), v["i"])},
+    "c09-d-03": {**life_checks(lambda v: v["C"], lambda v, k: v["C"] * (v["a"] - (k - 1) * v["b"]), lambda v: v["O1"], lambda v: v["G"], lambda v: v["i"],
+                               [(k, "t%d" % k) for k in range(1, 6)]),
+                 "ns": lambda v: 1 + min(range(5), key=lambda j: aw_life(v["C"], v["C"] * (v["a"] - j * v["b"]), lin(v["O1"], v["G"], j + 1), v["i"]))},
+    "c09-d-04": life_checks(lambda v: v["C"], lambda v, k: v["C"] * (v["a"] - (k - 1) * v["b"]), lambda v: v["O"], lambda v: 0, lambda v: v["i"],
+                            [(k, "t%d" % k) for k in range(1, 5)]),
+    "c09-d-08": {**life_checks(lambda v: 30000, lambda v, k: 21000 - 3000 * (k - 1), lambda v: 4000, lambda v: 2000, lambda v: 0.05, [(k, "a%d" % k) for k in range(1, 5)]),
+                 **life_checks(lambda v: 30000, lambda v, k: 21000 - 3000 * (k - 1), lambda v: 4000, lambda v: 2000, lambda v: 0.15, [(k, "b%d" % k) for k in range(1, 5)])},
+    "c09-d-10": life_checks(lambda v: v["C"], lambda v, k: v["C"] * (v["a"] - (k - 1) * v["b"]), lambda v: v["O1"], lambda v: v["G"], lambda v: v["i"],
+                            [(3, "t3"), (8, "t8")]),
+    "c09-d-11": {**life_checks(lambda v: v["Ca"], lambda v, k: 0, lambda v: v["Oa"], lambda v: v["Ga"], lambda v: v["i"], [(k, "a%d" % k) for k in range(1, 7)]),
+                 **life_checks(lambda v: v["Cb"], lambda v, k: 0, lambda v: v["Ob"], lambda v: v["Gb"], lambda v: v["i"], [(k, "b%d" % k) for k in (4, 6, 8, 10, 12)])},
+    "c09-d-12": {"t4": lambda v: aw_life(v["C"], 18400, lin(v["O1"], v["G"], 4), v["i"])},
+    "c09-d-13": {"t2": lambda v: aw_life(v["C"], 0, [v["O"]] * 2, v["i"]),
+                 **{"t%d" % k: (lambda k: lambda v: aw_life(v["C"], 0, [v["O"]] * k, v["i"], {3: v["X"]}))(k) for k in (3, 4, 5)}},
+    "c09-d-14": {"k3": lambda v: aw_life(v["C"], v["C"] * (v["a"] - 2 * v["b"]), [0] * 3, v["i"]),
+                 "o5": lambda v: aw_life(0, 0, lin(v["O1"], v["G"], 5), v["i"])},
+    "c09-e-02": {"c2": lambda v: v["M0"] * (1 - v["d"]) * v["d"] + v["i"] * v["M0"] * (1 - v["d"]) + v["O1"] + v["G"],
+                 "k": lambda v: next((j for j, c in enumerate([v["M0"] * (1 - v["d"]) ** j * (v["d"] + v["i"]) + v["O1"] + j * v["G"] for j in range(3)]) if c > v["Ac"]), 3)},
+    "c09-e-05": {"k": lambda v: max(j for j in range(1, 100) if v["i"] * v["M"] + v["O1"] + (j - 1) * v["G"] <= v["Ac"])},
+    "c09-e-06": {"aw": lambda v: float(npf.pmt(0.10, 3, -npf.npv(0.10, [0, 12000, 8600, 9050])))},
+    "c09-e-10": {"k": lambda v: max(j for j in range(1, 100) if v["O1"] + (j - 1) * v["G"] <= v["Ac"])},
+    "c09-e-11": {"c1": lambda v: v["M0"] * v["d"] + v["i"] * v["M0"] + v["O1"]},
+    "c09-f-09": {"A3": lambda v: aw_life(v["C"], v["Sc3"], [v["Oc"]] * 3, v["i"]), "A5": lambda v: aw_life(v["C"], v["Sc5"], [v["Oc"]] * 5, v["i"])},
+    "c09-h-01": life_checks(lambda v: 40000, lambda v, k: 28000 - 3200 * (k - 1), lambda v: 6000, lambda v: 2000, lambda v: 0.1, [(k, "t%d" % k) for k in range(1, 7)]),
+    "c09-h-02": {"c%d" % k: (lambda k: lambda v: 12000 * 0.75 ** (k - 1) * (0.25 + 0.10) + 8000 + 1500 * (k - 1))(k) for k in range(1, 5)},
+    "c09-h-03": {"Ad": lambda v: aw_life(9000, 3000, [9000] * 3, 0.1), "Ac": lambda v: aw_life(35000, 5000, [4000] * 8, 0.1)},
+    "c09-h-04": {"m": lambda v: min(aw_life(30000, 0, lin(3000, 1500, k), 0.1) for k in range(1, 9))},
+    "c09-h-07": {"Pa": lambda v: npv_(0.1, [35000] + [4000] * 4 + [4000 - 8000])},
+})
+
+
+# ---------------------------------------------------------------- chapter 10: discrete and normal risk
+from scipy.stats import norm as _norm
+
+
+def wstats(vals, probs):
+    vals, probs = np.array(vals, float), np.array(probs, float)
+    m = float(np.average(vals, weights=probs))
+    return m, float(np.sqrt(np.average((vals - m) ** 2, weights=probs)))
+
+
+def pw_u(C, A, i, n):
+    return npv_(i, [-C] + [A] * int(n))
+
+
+CHECKS.update({
+    "c10-c-01": {"m": lambda v: wstats([pw_u(v["C"], v["A1"], v["i"], v["n"]), pw_u(v["C"], v["A2"], v["i"], v["n"])], [v["p"], 1 - v["p"]])[0],
+                 "sd": lambda v: wstats([pw_u(v["C"], v["A1"], v["i"], v["n"]), pw_u(v["C"], v["A2"], v["i"], v["n"])], [v["p"], 1 - v["p"]])[1]},
+    "c10-c-02": {"m": lambda v: wstats([pw_u(v["C"], v[a], v["i"], v["n"]) for a in ("A1", "A2", "A3")], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[0],
+                 "sd": lambda v: wstats([pw_u(v["C"], v[a], v["i"], v["n"]) for a in ("A1", "A2", "A3")], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[1]},
+    "c10-c-04": {"m": lambda v: v["p"] * pw_u(v["C"], v["A"], v["i1"], v["n"]) + (1 - v["p"]) * pw_u(v["C"], v["A"], v["i2"], v["n"]),
+                 "Pe": lambda v: pw_u(v["C"], v["A"], v["p"] * v["i1"] + (1 - v["p"]) * v["i2"], v["n"])},
+    "c10-c-05": {"m": lambda v: v["p"] * pw_u(v["C"], v["S"], v["i"], v["na"]) + (1 - v["p"]) * pw_u(v["C"], v["S"], v["i"], v["nb"])},
+    "c10-c-12": {"m": lambda v: wstats([v["P1"], v["P2"], v["P3"], v["P4"]], [v["p1"], v["p2"], v["p3"], 1 - v["p1"] - v["p2"] - v["p3"]])[0]},
+    "c10-d-01": {"sa": lambda v: wstats([v["a1"], v["a2"], v["a3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[1],
+                 "sb": lambda v: wstats([v["b1"], v["b2"], v["b3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[1]},
+    "c10-d-03": {"ca": lambda v: v["sa"] / v["ma"], "cb": lambda v: v["sb"] / v["mb"]},
+    "c10-d-04": {"ma": lambda v: wstats([v["a1"], v["a2"], v["a3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[0],
+                 "mb": lambda v: wstats([v["b1"], v["b2"], v["b3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[0]},
+    "c10-d-05": {"pa": lambda v: _norm.cdf(0, v["ma"], v["sa"]), "pb": lambda v: _norm.cdf(0, v["mb"], v["sb"])},
+    "c10-d-06": {"P1": lambda v: pw_u(v["C"], v["A"], v["i"] + v["rp"], v["n"])},
+    "c10-d-10": {"pa": lambda v: _norm.sf(v["T"], v["ma"], v["sa"]), "pb": lambda v: _norm.sf(v["T"], v["mb"], v["sb"])},
+    "c10-e-02": {"B": lambda v: max(v["p"] * v[h] + (1 - v["p"]) * v[l] for h, l in (("aH", "aL"), ("bH", "bL"), ("cH", "cL")))},
+    "c10-e-03": {"Ea": lambda v: wstats([v["a1"], v["a2"], v["a3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[0],
+                 "Eb": lambda v: wstats([v["b1"], v["b2"], v["b3"]], [v["p1"], v["p2"], 1 - v["p1"] - v["p2"]])[0]},
+    "c10-e-05": {"Em": lambda v: v["F"] + v["vm"] * (v["p"] * v["Q1"] + (1 - v["p"]) * v["Q2"]),
+                 "Eb": lambda v: v["vb"] * (v["p"] * v["Q1"] + (1 - v["p"]) * v["Q2"])},
+    "c10-e-12": {"Ea": lambda v: v["p"] * v["aH"] + (1 - v["p"]) * v["aL"], "Eb": lambda v: v["p"] * v["bH"] + (1 - v["p"]) * v["bL"]},
+    "c10-g-02": {"P": lambda v: _norm.cdf(v["b"], v["m"], v["s"]) - _norm.cdf(v["a"], v["m"], v["s"])},
+    "c10-g-04": {"P": lambda v: _norm.cdf(v["T"], v["m"], v["s"])},
+    "c10-g-10": {"P": lambda v: _norm.sf(0, v["m"], v["s"])},
+    "c10-h-01": {"v": lambda v: wstats([40000, 60000, 75000], [0.25, 0.5, 0.25])[1] ** 2},
+    "c10-h-02": {"P": lambda v: _norm.cdf(0, 25000, 15000), "q": lambda v: _norm.ppf(0.05, 25000, 15000)},
+    "c10-h-03": {"m": lambda v: wstats([pw_u(100000, a, 0.12, 5) for a in (15000, 28000, 40000)], [0.3, 0.5, 0.2])[0]},
+    "c10-h-05": {"P": lambda v: _norm.cdf(0, npv_(0.1, [-50000, 22000, 24000, 26000]),
+                                          float(np.sqrt(sum((sd / 1.1 ** t) ** 2 for t, sd in ((1, 3000), (2, 5000), (3, 7000))))))},
+    "c10-h-06": {"EL": lambda v: 0.6 * 900000 - 0.4 * 250000, "ES": lambda v: 0.6 * 450000 + 0.4 * 50000},
+    "c10-h-07": {"P": lambda v: _norm.cdf(0, pw_u(60000, 16000, 0.10, 5), 4000 * pv_(0.10, 5))},
+    "c10-h-08": {"Ep": lambda v: 0.6 * max(900000, 450000) + 0.4 * max(-250000, 50000)},
+    "c10-i-05": {"P": lambda v: _norm.cdf(0, v["m"], v["s"])},
+    "c10-j-02": {**dict(zip(("m", "v"), (lambda f: (lambda v: f()[0], lambda v: f()[1] ** 2))(
+                     lambda: wstats([pw_u(140000, r * q - 4000, 0.10, 15) for r in (0.08, 0.11, 0.14) for q in (180000, 220000)],
+                                    [pr * pq for pr in (0.3, 0.5, 0.2) for pq in (0.4, 0.6)])))),
+                 "pl": lambda v: sum(
+                     pr * pq for r, pr in ((0.08, 0.3), (0.11, 0.5), (0.14, 0.2)) for q, pq in ((180000, 0.4), (220000, 0.6))
+                     if pw_u(140000, r * q - 4000, 0.10, 15) < 0)},
+})
+
+
 def main():
     items = {}
     for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):
@@ -649,12 +957,17 @@ def main():
     bad = n = 0
     for iid, checks in CHECKS.items():
         it = items[iid]
-        runs = [{}] + [draw(it, rng) for _ in range(20 if it.get("random") else 0)]
+        runs = [{}] + [draw(it, rng) for _ in range(80 if it.get("random") else 0)]
         for vals in runs:
             env = compute(it, vals)
             for var, f in checks.items():
                 n += 1
-                got, exp = env[var], float(f(env))
+                try:
+                    got, exp = env[var], float(f(env))
+                except Exception as e:  # a broken check counts as a difference
+                    bad += 1
+                    print(f"{iid} {var}: check failed ({type(e).__name__}: {e})  values={vals}")
+                    continue
                 if not math.isclose(got, exp, rel_tol=1e-9, abs_tol=1e-6):
                     bad += 1
                     print(f"{iid} {var}: bank {got} vs independent {exp}  values={vals}")
