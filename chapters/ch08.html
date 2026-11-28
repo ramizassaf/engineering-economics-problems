@@ -491,9 +491,11 @@ f_k = \frac{I_k}{I_{k-1}} - 1
 <section id="sec-8-dinar" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="sec-8-dinar"><span class="header-section-number">8.2</span> الدينار الفعلي والدينار الثابت</h2>
 <p>نفس المبلغ له قيمتان: المبلغ المكتوب، وما يشتريه. نحول بينهما بنسبة التضخم، بنفس معاملات الفصل الأول:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>k</mi></msub><mo>=</mo><msub><mi>A</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>f</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 R_k = A_k\,(P/F,\ f,\ k)
 </annotation></semantics></math></p>
+</div>
 <p>حيث A مبلغ بالدينار الفعلي في السنة k، و R نفس المبلغ بالدينار الثابت بأسعار السنة 0.</p>
 <div id="ex-8-2" class="ee-item" data-id="c08-ex-purchasing" data-kind="example" data-label="8.2">
 <p><strong>مثال 8.2: الدينار الفعلي والدينار الثابت</strong></p>
@@ -535,9 +537,12 @@ R = 10\mathord{,}000\,(P/F,\ 5\%,\ 10) = 6\mathord{,}139.13
 <section id="sec-8-rates" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="sec-8-rates"><span class="header-section-number">8.3</span> النسبة الحقيقية والنسبة السوقية</h2>
 <p>البنوك تعلن نسبة واحدة، لكنها تتكون من جزأين: عائد حقيقي يزيد قوة الشراء، وتعويض عن التضخم.</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-1 + i_m = (1 + i_r)(1 + f)
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>i</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>i</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+1 + i = (1 + i')(1 + f)
 </annotation></semantics></math></p>
+</div>
+<p>حيث i النسبة السوقية، و i’ النسبة الحقيقية، و f نسبة التضخم.</p>
 <div id="ex-8-4" class="ee-item" data-id="c08-ex-market-rate" data-kind="example" data-label="8.4">
 <p><strong>مثال 8.4: النسبة الحقيقية والنسبة السوقية</strong></p>
 <p>(أ) مستثمر يريد عائدا حقيقيا 6% فوق التضخم. التضخم المتوقع 4%. ما النسبة التي يطلبها من البنك؟ (ب) بنك يعطي 12% على الودائع، والتضخم 4%. ما العائد الحقيقي؟</p>
@@ -549,19 +554,19 @@ R = 10\mathord{,}000\,(P/F,\ 5\%,\ 10) = 6\mathord{,}139.13
 <li><strong>النسبة السوقية:</strong> ما يعلنه البنك فعلا. تجمع الاثنتين.</li>
 </ul>
 <p>كل دينار يجب أن ينمو بالنسبة الحقيقية، ثم ينمو مرة أخرى ليعوض التضخم:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-1 + i_m = (1 + i_r)(1 + f)
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>i</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>i</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+1 + i = (1 + i')(1 + f)
 </annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><msub><mi>i</mi><mi>r</mi></msub><mo>+</mo><mi>f</mi><mo>+</mo><msub><mi>i</mi><mi>r</mi></msub><mspace width="0.167em"></mspace><mi>f</mi></mrow><annotation encoding="application/x-tex">
-i_m = i_r + f + i_r\,f
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><msup><mi>i</mi><mo>′</mo></msup><mo>+</mo><mi>f</mi><mo>+</mo><msup><mi>i</mi><mo>′</mo></msup><mspace width="0.167em"></mspace><mi>f</mi></mrow><annotation encoding="application/x-tex">
+i = i' + f + i'\,f
 </annotation></semantics></math></p>
 <p>(أ)</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
-i_m = (1 + 0.06)(1 + 0.04) - 1 = 10.24\%
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.06</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.04</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>10.24</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i = (1 + 0.06)(1 + 0.04) - 1 = 10.24\%
 </annotation></semantics></math></p>
 <p>(ب)</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.12</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
-i_r = \frac{1 + 0.12}{1 + 0.04} - 1 = 7.69\%
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>0.12</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>0.04</mn></mrow></mfrac><mo>−</mo><mn>1</mn><mo>=</mo><mn>7.69</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i' = \frac{1 + 0.12}{1 + 0.04} - 1 = 7.69\%
 </annotation></semantics></math></p>
 <p>التقريب الشائع يطرح التضخم من النسبة السوقية، فيعطي 8.00%.</p>
 </div>
@@ -597,8 +602,8 @@ i_r = \frac{1 + 0.12}{1 + 0.04} - 1 = 7.69\%
 PW = -50\mathord{,}000 + 16\mathord{,}000\,(P/A,\ 8\%,\ 4) = 2\mathord{,}994.03
 </annotation></semantics></math></p>
 <p><strong>الطريقة الثانية: دينار فعلي ونسبة سوقية.</strong> النسبة السوقية:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.08</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>13.40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
-i_m = (1 + 0.08)(1 + 0.05) - 1 = 13.40\%
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.08</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mn>1</mn><mo>=</mo><mn>13.40</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i = (1 + 0.08)(1 + 0.05) - 1 = 13.40\%
 </annotation></semantics></math></p>
 <p>الوفر الفعلي يرتفع كل سنة:</p>
 <table class="caption-top table">
@@ -637,8 +642,8 @@ PW = 2\mathord{,}994.03
 <p>شركة توقع عقد إيجار لمستودع بمبلغ 12,000 دينار سنويا لمدة 5 سنوات، يدفع في نهاية كل سنة، ولا يتغير مع الأسعار. التضخم المتوقع 7%، والحد الأدنى للعائد الحقيقي 6%. ما القيمة الحالية لدفعات العقد؟</p>
 <p><strong>الحل:</strong></p>
 <p>المبلغ ثابت بالدينار الفعلي، فنخصمه بالنسبة السوقية:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>m</mi></msub><mo>=</mo><mn>13.42</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
-i_m = 13.42\%
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>13.42</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
+i = 13.42\%
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mo>=</mo><mn>12</mn><mi>,</mi><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>13.42</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>41</mn><mi>,</mi><mn>777.82</mn></mrow><annotation encoding="application/x-tex">
 PW = 12\mathord{,}000\,(P/A,\ 13.42\%,\ 5) = 41\mathord{,}777.82
@@ -863,7 +868,7 @@ i_{\mathrm{dollar}} = \frac{1.1200}{1.0400} - 1 = 7.69\%
 <section id="sec-8-python" class="level2" data-number="8.9">
 <h2 data-number="8.9" class="anchored" data-anchor-id="sec-8-python"><span class="header-section-number">8.9</span> Python: الطريقتان معا</h2>
 <p>هذا البرنامج يقيم مشروعا بالطريقتين، ويبين أن النتيجة واحدة. ثم يعيد الحساب بخطأ شائع: وفر بأسعار اليوم مع نسبة سوقية.</p>
-<div id="2cfc32b3" class="cell" data-execution_count="1">
+<div id="ff886a83" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>C, R, n <span class="op">=</span> <span class="dv">50000</span>, <span class="dv">16000</span>, <span class="dv">4</span></span>

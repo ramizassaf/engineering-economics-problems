@@ -437,9 +437,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.1" class="anchored" data-anchor-id="sec-1-interest"><span class="header-section-number">1.1</span> الفائدة البسيطة والفائدة المركبة</h2>
 <p>الفائدة ثمن استخدام المال. المقترض يدفعها للمقرض، والمستثمر يحصل عليها. نسبة الفائدة i هي الفائدة في سنة واحدة مقسومة على المبلغ.</p>
 <p>في الفائدة البسيطة تحسب الفائدة كل سنة على المبلغ الأصلي فقط:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mspace width="0.167em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 F = P\,(1 + i\,n)
 </annotation></semantics></math></p>
+</div>
 <p>في الفائدة المركبة تحسب الفائدة كل سنة على الرصيد كله، أي على المبلغ الأصلي مع الفوائد المتراكمة. البنوك والمشاريع تعمل بالفائدة المركبة، وكل الكتاب بعد هذا القسم يستخدمها.</p>
 <div id="ex-1-1" class="ee-item" data-id="c01-ex-simple-compound" data-kind="example" data-label="1.1">
 <p><strong>مثال 1.1: الفائدة البسيطة والمركبة على قرض</strong></p>
@@ -523,13 +525,17 @@ F = P\,(1+i)^n = 1\mathord{,}000 \times (1 + 0.08)^{20} = 4\mathord{,}660.96
 <section id="sec-1-fp" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="sec-1-fp"><span class="header-section-number">1.2</span> القيمة المستقبلية لمبلغ واحد</h2>
 <p>الحساب سنة بسنة كما في الجدول السابق يطول عندما تكون المدة طويلة. في كل سنة يضرب الرصيد في المقدار التالي:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">
 1 + i
 </annotation></semantics></math></p>
+</div>
 <p>فبعد n سنة يصبح الرصيد:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">
 F = P\,(1 + i)^n
 </annotation></semantics></math></p>
+</div>
 <p>حيث:</p>
 <table class="caption-top table">
 <thead>
@@ -558,13 +564,17 @@ F = P\,(1 + i)^n
 </tbody>
 </table>
 <p>المضروب في P يسمى معامل القيمة المستقبلية لمبلغ واحد، ويكتب بالرمز التالي، ويقرأ “F إلى P عند i و n”:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">
 (F/P,\ i,\ n) = (1 + i)^n
 </annotation></semantics></math></p>
+</div>
 <p>فيصبح القانون:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 F = P\,(F/P,\ i,\ n)
 </annotation></semantics></math></p>
+</div>
 <p>جداول المعاملات في الملحق تعطي قيم المعامل لنسب وسنوات مختلفة. القانون والجداول يعطيان نفس الجواب، والفرق الوحيد أن الجداول مقربة لأربع خانات عشرية.</p>
 <div id="ex-1-4" class="ee-item" data-id="c01-ex-fp-saving" data-kind="example" data-label="1.4">
 <p><strong>مثال 1.4: حساب توفير</strong></p>
@@ -622,13 +632,17 @@ F = 840 \times (1 + 0.05)^{6} = 840 \times 1.3401 = 1\mathord{,}125.68
 <section id="sec-1-pf" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sec-1-pf"><span class="header-section-number">1.3</span> القيمة الحالية لمبلغ واحد</h2>
 <p>أحيانا تعرف المبلغ في المستقبل وتريد قيمته اليوم. نقسم طرفي قانون القيمة المستقبلية على معامل القيمة المستقبلية:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mi>F</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow></mfrac><mo>=</mo><mi>F</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 P = \frac{F}{(1+i)^n} = F\,(P/F,\ i,\ n)
 </annotation></semantics></math></p>
+</div>
 <p>المعاملان مقلوبان لبعضهما:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
 (P/F,\ i,\ n) = \frac{1}{(F/P,\ i,\ n)}
 </annotation></semantics></math></p>
+</div>
 <p>نقل المال للأمام في الزمن يكبره، ونقله للخلف يصغره. هذه قاعدة تحقق سريعة: إذا نقلت مبلغا للخلف وظهر جوابك أكبر منه، فهناك خطأ.</p>
 <div id="ex-1-7" class="ee-item" data-id="c01-ex-pf-target" data-kind="example" data-label="1.7">
 <p><strong>مثال 1.7: كم تستثمر اليوم لهدف مستقبلي؟</strong></p>
@@ -1019,13 +1033,17 @@ X = 52\mathord{,}187.28, \qquad \frac{X}{2} = 26\mathord{,}093.64
 <section id="sec-1-find" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="sec-1-find"><span class="header-section-number">1.8</span> إيجاد نسبة الفائدة وعدد السنوات</h2>
 <p>قانون القيمة المستقبلية فيه أربعة متغيرات: P و F و i و n.&nbsp;إذا عرفت ثلاثة منها، تستطيع إيجاد الرابع. لإيجاد نسبة الفائدة:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>F</mi><mi>P</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
 i = \left(\frac{F}{P}\right)^{1/n} - 1
 </annotation></semantics></math></p>
+</div>
 <p>ولإيجاد عدد السنوات نأخذ اللوغاريتم الطبيعي للطرفين:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
 n = \frac{\ln(F/P)}{\ln(1+i)}
 </annotation></semantics></math></p>
+</div>
 <p>في Excel الدالة RATE تعطي نسبة الفائدة، والدالة NPER تعطي عدد السنوات.</p>
 <div id="ex-1-17" class="ee-item" data-id="c01-ex-find-i" data-kind="example" data-label="1.17">
 <p><strong>مثال 1.17: إيجاد نسبة العائد</strong></p>

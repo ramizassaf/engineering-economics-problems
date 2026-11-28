@@ -388,7 +388,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#الاستهلاك-والضرائب" id="toc-الاستهلاك-والضرائب" class="nav-link" data-scroll-target="#الاستهلاك-والضرائب">الاستهلاك والضرائب</a></li>
   <li><a href="#التكاليف-وتقديرها" id="toc-التكاليف-وتقديرها" class="nav-link" data-scroll-target="#التكاليف-وتقديرها">التكاليف وتقديرها</a></li>
   <li><a href="#التمويل-والمشاريع-العامة-والمعايير-المتعددة" id="toc-التمويل-والمشاريع-العامة-والمعايير-المتعددة" class="nav-link" data-scroll-target="#التمويل-والمشاريع-العامة-والمعايير-المتعددة">التمويل والمشاريع العامة والمعايير المتعددة</a></li>
-  <li><a href="#حروف-لها-أكثر-من-معنى" id="toc-حروف-لها-أكثر-من-معنى" class="nav-link" data-scroll-target="#حروف-لها-أكثر-من-معنى">حروف لها أكثر من معنى</a></li>
   </ul></li>
   <li><a href="#sec-factor-guide" id="toc-sec-factor-guide" class="nav-link" data-scroll-target="#sec-factor-guide"><span class="header-section-number">A.2</span> دليل اختيار المعامل</a>
   <ul class="collapse">
@@ -423,7 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>هذا الملحق مرجعان سريعان لكل الكتاب: جدول الرموز ومعانيها، ودليل يختار لك المعامل المناسب لأي مسألة.</p>
 <section id="sec-s-symbols" class="level2" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="sec-s-symbols"><span class="header-section-number">A.1</span> الرموز</h2>
-<p>العمود الأخير يبين الفصل الذي يستخدم الرمز بهذا المعنى. بعض الحروف لها معنيان في فصلين مختلفين، لأن كل مجال يستخدم رموزه المعتادة في المراجع. هذه الحروف مجموعة في آخر القسم.</p>
+<p>لكل رمز في الكتاب معنى واحد في كل الفصول. عندما يستخدم Park رمزا لمفهوم، نستخدم رمزه. العمود الأخير يبين الفصول التي يظهر فيها الرمز.</p>
 <section id="الفائدة-والزمن" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="الفائدة-والزمن">الفائدة والزمن</h3>
 <table class="caption-top table">
@@ -442,13 +441,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
-<td>القيمة المستقبلية: مبلغ في نهاية السنة n</td>
-<td><a href="../chapters/ch01.html">1</a>، <a href="../chapters/ch02.html">2</a></td>
+<td>القيمة المستقبلية: مبلغ في نهاية السنة n، ومنه القيمة الاسمية للسند</td>
+<td><a href="../chapters/ch01.html">1</a>، <a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math></td>
-<td>دفعة متساوية في نهاية كل فترة، من الفترة 1 إلى الفترة n</td>
-<td><a href="../chapters/ch02.html">2</a></td>
+<td>دفعة متساوية في نهاية كل فترة، من الفترة 1 إلى الفترة n، ومنها فائدة السند السنوية</td>
+<td><a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>1</mn></msub><annotation encoding="application/x-tex">A_1</annotation></semantics></math></td>
@@ -456,34 +455,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch02.html">2</a></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>t</mi></msub><annotation encoding="application/x-tex">A_t</annotation></semantics></math></td>
-<td>الدفعة في السنة t</td>
-<td><a href="../chapters/ch02.html">2</a></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>k</mi></msub><annotation encoding="application/x-tex">A_k</annotation></semantics></math></td>
+<td>الدفعة في السنة k، بالدينار الفعلي في الفصل 8</td>
+<td><a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch08.html">8</a></td>
 </tr>
 <tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>k</mi></msub><annotation encoding="application/x-tex">R_k</annotation></semantics></math></td>
+<td>الدفعة في السنة k بالدينار الثابت بأسعار السنة 0</td>
+<td><a href="../chapters/ch08.html">8</a></td>
+</tr>
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math></td>
 <td>الزيادة الثابتة كل سنة في السلسلة المتدرجة خطيا</td>
 <td><a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch09.html">9</a></td>
 </tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math></td>
-<td>نسبة الزيادة كل سنة في السلسلة المتدرجة نسبيا</td>
-<td><a href="../chapters/ch02.html">2</a></td>
-</tr>
 <tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math></td>
+<td>نسبة الزيادة كل سنة في السلسلة المتدرجة نسبيا، ومنها نمو التوزيعات</td>
+<td><a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch11.html">11</a></td>
+</tr>
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math></td>
-<td>نسبة الفائدة في الفترة الواحدة</td>
+<td>نسبة الفائدة في الفترة الواحدة، وهي في الفصل 8 النسبة السوقية التي تشمل التضخم</td>
 <td>كل الفصول</td>
 </tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>i</mi><mo>′</mo></msup><annotation encoding="application/x-tex">i'</annotation></semantics></math></td>
+<td>النسبة الحقيقية، بعد إزالة التضخم</td>
+<td><a href="../chapters/ch08.html">8</a></td>
+</tr>
 <tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></td>
+<td>نسبة التضخم السنوية</td>
+<td><a href="../chapters/ch08.html">8</a></td>
+</tr>
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></td>
 <td>عدد الفترات</td>
 <td>كل الفصول</td>
 </tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math></td>
+<td>رقم السنة</td>
+<td>كل الفصول</td>
+</tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math></td>
-<td>رقم السنة في المجاميع والجداول</td>
-<td><a href="../chapters/ch02.html">2</a>، <a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch04.html">4</a></td>
+<td>نسبة الضريبة</td>
+<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch09.html">9</a>، <a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math></td>
@@ -508,32 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mi>m</mi></msub><annotation encoding="application/x-tex">i_m</annotation></semantics></math></td>
 <td>النسبة الشهرية المكافئة</td>
-<td><a href="../chapters/ch03.html">3</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></td>
-<td>نسبة التضخم السنوية</td>
-<td><a href="../chapters/ch08.html">8</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mi>m</mi></msub><annotation encoding="application/x-tex">i_m</annotation></semantics></math></td>
-<td>النسبة السوقية، وهي تشمل التضخم</td>
-<td><a href="../chapters/ch08.html">8</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mi>r</mi></msub><annotation encoding="application/x-tex">i_r</annotation></semantics></math></td>
-<td>النسبة الحقيقية، بعد إزالة التضخم</td>
-<td><a href="../chapters/ch08.html">8</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>k</mi></msub><annotation encoding="application/x-tex">A_k</annotation></semantics></math></td>
-<td>مبلغ بالدينار الفعلي في السنة k</td>
-<td><a href="../chapters/ch08.html">8</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>k</mi></msub><annotation encoding="application/x-tex">R_k</annotation></semantics></math></td>
-<td>نفس المبلغ بالدينار الثابت بأسعار السنة 0</td>
-<td><a href="../chapters/ch08.html">8</a></td>
+<td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch04.html">4</a></td>
 </tr>
 </tbody>
 </table>
@@ -550,8 +544,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">CF_t</annotation></semantics></math></td>
-<td>صافي التدفق النقدي في السنة t</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>F</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">CF_k</annotation></semantics></math></td>
+<td>صافي التدفق النقدي في السنة k</td>
 <td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch04.html">4</a></td>
 </tr>
 <tr class="even">
@@ -570,54 +564,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch03.html">3</a></td>
 </tr>
 <tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math></td>
+<td>الاستثمار الأولي، وهو أساس الاستهلاك في الفصل 5</td>
+<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch12.html">12</a></td>
+</tr>
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math></td>
 <td>الإيراد السنوي</td>
+<td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>O</mi><annotation encoding="application/x-tex">O</annotation></semantics></math></td>
+<td>تكاليف التشغيل النقدية في السنة</td>
 <td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math></td>
 <td>القيمة المقدرة للأصل في نهاية عمره</td>
-<td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch09.html">9</a></td>
+<td><a href="../chapters/ch03.html">3</a>، <a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch09.html">9</a>، <a href="../chapters/ch12.html">12</a></td>
 </tr>
 <tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math></td>
+<td>سعر بيع الأصل في السوق</td>
+<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch09.html">9</a></td>
+</tr>
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>i</mi><mo>*</mo></msup><annotation encoding="application/x-tex">i^*</annotation></semantics></math></td>
 <td>معدل العائد الداخلي</td>
 <td><a href="../chapters/ch04.html">4</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>I</mi><mi>R</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">MIRR</annotation></semantics></math></td>
 <td>معدل العائد الداخلي المعدل</td>
 <td><a href="../chapters/ch04.html">4</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><msub><mi>V</mi><mo>+</mo></msub></mrow><annotation encoding="application/x-tex">FV_+</annotation></semantics></math></td>
 <td>قيمة التدفقات الموجبة في نهاية المدة</td>
 <td><a href="../chapters/ch04.html">4</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msub><mi>V</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">PV_-</annotation></semantics></math></td>
 <td>قيمة التدفقات السالبة في السنة 0</td>
 <td><a href="../chapters/ch04.html">4</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">PI</annotation></semantics></math></td>
 <td>مؤشر الربحية</td>
 <td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">B/C</annotation></semantics></math></td>
-<td>نسبة المنافع إلى التكاليف</td>
-<td><a href="../chapters/ch12.html">12</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\Delta B/\Delta C</annotation></semantics></math></td>
-<td>النسبة الإضافية بين بديلين</td>
-<td><a href="../chapters/ch12.html">12</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>/</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">C/E</annotation></semantics></math></td>
-<td>التكلفة لكل وحدة من الأثر</td>
-<td><a href="../chapters/ch12.html">12</a></td>
 </tr>
 </tbody>
 </table>
@@ -634,33 +628,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math></td>
-<td>أساس الاستهلاك: ثمن الأصل مع النقل والتركيب</td>
-<td><a href="../chapters/ch05.html">5</a></td>
-</tr>
-<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math></td>
 <td>الاستهلاك السنوي بالقسط الثابت</td>
-<td><a href="../chapters/ch05.html">5</a></td>
+<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>k</mi></msub><annotation encoding="application/x-tex">D_k</annotation></semantics></math></td>
 <td>استهلاك السنة k</td>
 <td><a href="../chapters/ch05.html">5</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math></td>
 <td>نسبة القسط المتناقص</td>
 <td><a href="../chapters/ch05.html">5</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">BV_k</annotation></semantics></math></td>
 <td>القيمة الدفترية في نهاية السنة k</td>
-<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>O</mi><annotation encoding="application/x-tex">O</annotation></semantics></math></td>
-<td>تكاليف التشغيل النقدية في السنة</td>
 <td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
 <tr class="odd">
@@ -671,46 +655,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math></td>
 <td>الضريبة المدفوعة</td>
-<td><a href="../chapters/ch05.html">5</a></td>
+<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math></td>
-<td>نسبة الضريبة</td>
-<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">CF</annotation></semantics></math></td>
 <td>التدفق النقدي بعد الضريبة</td>
 <td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math></td>
-<td>سعر بيع الأصل في السوق</td>
-<td><a href="../chapters/ch05.html">5</a>، <a href="../chapters/ch07.html">7</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math></td>
-<td>ربح بيع الأصل: سعر البيع ناقص القيمة الدفترية</td>
-<td><a href="../chapters/ch05.html">5</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math></td>
-<td>الاستثمار الأولي</td>
-<td><a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch12.html">12</a></td>
-</tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math></td>
 <td>الأجرة السنوية في عقد الاستئجار</td>
-<td><a href="../chapters/ch07.html">7</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math></td>
-<td>نسبة فائدة القرض</td>
-<td><a href="../chapters/ch07.html">7</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi></mrow></msub><annotation encoding="application/x-tex">r_{after}</annotation></semantics></math></td>
-<td>نسبة فائدة القرض بعد الضريبة</td>
 <td><a href="../chapters/ch07.html">7</a></td>
 </tr>
 </tbody>
@@ -729,13 +683,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
-<td>التكلفة الكلية</td>
-<td><a href="../chapters/ch06.html">6</a></td>
+<td>التكلفة</td>
+<td><a href="../chapters/ch06.html">6</a>، <a href="../chapters/ch12.html">12</a></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">FC</annotation></semantics></math></td>
 <td>التكاليف الثابتة في السنة</td>
-<td><a href="../chapters/ch06.html">6</a></td>
+<td><a href="../chapters/ch06.html">6</a>، <a href="../chapters/ch07.html">7</a></td>
 </tr>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math></td>
@@ -744,7 +698,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math></td>
-<td>عدد الوحدات</td>
+<td>عدد الوحدات، أو الحجم في قاعدة الستة أعشار</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
 <tr class="odd">
@@ -753,33 +707,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
 <tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>R</mi><mo>*</mo></msup><annotation encoding="application/x-tex">R^*</annotation></semantics></math></td>
+<td>المبيعات بالدينار عند نقطة التعادل</td>
+<td><a href="../chapters/ch06.html">6</a></td>
+</tr>
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math></td>
 <td>سعر بيع الوحدة</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AC</annotation></semantics></math></td>
 <td>متوسط تكلفة الوحدة</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math></td>
 <td>مؤشر التكلفة في السنة n</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math></td>
 <td>ثمن المعدات واصلة إلى الموقع</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>m</mi></msub><annotation encoding="application/x-tex">f_m</annotation></semantics></math></td>
-<td>نسبة بند من ثمن المعدات</td>
-<td><a href="../chapters/ch06.html">6</a></td>
-</tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math></td>
-<td>الحجم أو الطاقة الإنتاجية</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>m</mi></msub><annotation encoding="application/x-tex">f_m</annotation></semantics></math></td>
+<td>نسبة البند m من ثمن المعدات</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
 <tr class="even">
@@ -804,7 +758,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></td>
-<td>أس منحنى التعلم، أو ميل خط الانحدار</td>
+<td>أس منحنى التعلم</td>
+<td><a href="../chapters/ch06.html">6</a></td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mn>0</mn></msub><annotation encoding="application/x-tex">b_0</annotation></semantics></math></td>
+<td>ثابت خط الانحدار</td>
+<td><a href="../chapters/ch06.html">6</a></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mn>1</mn></msub><annotation encoding="application/x-tex">b_1</annotation></semantics></math></td>
+<td>ميل خط الانحدار</td>
 <td><a href="../chapters/ch06.html">6</a></td>
 </tr>
 </tbody>
@@ -823,8 +787,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>d</mi></msub><annotation encoding="application/x-tex">k_d</annotation></semantics></math></td>
-<td>تكلفة الدين قبل الضريبة</td>
-<td><a href="../chapters/ch11.html">11</a></td>
+<td>نسبة فائدة الدين قبل الضريبة</td>
+<td><a href="../chapters/ch07.html">7</a>، <a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>e</mi></msub><annotation encoding="application/x-tex">k_e</annotation></semantics></math></td>
@@ -837,42 +801,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
-<td>الفائدة السنوية التي يدفعها السند</td>
-<td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
-<td>القيمة الاسمية للسند، تدفع عند الاستحقاق</td>
-<td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math></td>
 <td>سعر السهم اليوم</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>0</mn></msub><annotation encoding="application/x-tex">D_0</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>0</mn></msub><annotation encoding="application/x-tex">\mathrm{Div}_0</annotation></semantics></math></td>
 <td>آخر توزيع دفع للسهم</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>1</mn></msub><annotation encoding="application/x-tex">D_1</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>1</mn></msub><annotation encoding="application/x-tex">\mathrm{Div}_1</annotation></semantics></math></td>
 <td>التوزيع المتوقع بعد سنة</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math></td>
-<td>نسبة نمو التوزيعات</td>
-<td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></td>
-<td>نسبة تكلفة إصدار الأسهم</td>
-<td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mi>p</mi></msub><annotation encoding="application/x-tex">D_p</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mi>p</mi></msub><annotation encoding="application/x-tex">\mathrm{Div}_p</annotation></semantics></math></td>
 <td>توزيع السهم الممتاز</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
@@ -882,72 +826,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>c</mi></msub><annotation encoding="application/x-tex">f_c</annotation></semantics></math></td>
+<td>نسبة تكلفة إصدار الأسهم</td>
+<td><a href="../chapters/ch11.html">11</a></td>
+</tr>
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>f</mi></msub><annotation encoding="application/x-tex">r_f</annotation></semantics></math></td>
 <td>العائد الخالي من المخاطر</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>m</mi></msub><annotation encoding="application/x-tex">r_m</annotation></semantics></math></td>
 <td>عائد السوق</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math></td>
 <td>حساسية عائد السهم لعائد السوق</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>d</mi></msub><annotation encoding="application/x-tex">V_d</annotation></semantics></math></td>
+<td>القيمة السوقية للدين</td>
+<td><a href="../chapters/ch11.html">11</a></td>
+</tr>
 <tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>e</mi></msub><annotation encoding="application/x-tex">V_e</annotation></semantics></math></td>
+<td>القيمة السوقية لحقوق الملكية</td>
+<td><a href="../chapters/ch11.html">11</a></td>
+</tr>
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>d</mi></msub><annotation encoding="application/x-tex">w_d</annotation></semantics></math></td>
 <td>وزن الدين في التمويل</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>p</mi></msub><annotation encoding="application/x-tex">w_p</annotation></semantics></math></td>
 <td>وزن الأسهم الممتازة في التمويل</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>e</mi></msub><annotation encoding="application/x-tex">w_e</annotation></semantics></math></td>
 <td>وزن حقوق الملكية في التمويل</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mi>A</mi><mi>C</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">WACC</annotation></semantics></math></td>
 <td>المتوسط المرجح لتكلفة رأس المال</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mi>j</mi></msub><annotation encoding="application/x-tex">x_j</annotation></semantics></math></td>
 <td>قرار المشروع j: 1 للقبول و 0 للرفض</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">c_{jk}</annotation></semantics></math></td>
+<td>تكلفة المشروع j في السنة k</td>
+<td><a href="../chapters/ch11.html">11</a></td>
+</tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mrow><mi>j</mi><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">c_{jt}</annotation></semantics></math></td>
-<td>تكلفة المشروع j في السنة t</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>k</mi></msub><annotation encoding="application/x-tex">C_k</annotation></semantics></math></td>
+<td>الميزانية المتاحة في السنة k</td>
 <td><a href="../chapters/ch11.html">11</a></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mi>t</mi></msub><annotation encoding="application/x-tex">B_t</annotation></semantics></math></td>
-<td>الميزانية المتاحة في السنة t</td>
-<td><a href="../chapters/ch11.html">11</a></td>
-</tr>
-<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math></td>
 <td>المنافع السنوية للجمهور</td>
 <td><a href="../chapters/ch12.html">12</a></td>
 </tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math></td>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">s</mi></mrow><annotation encoding="application/x-tex">\mathrm{Dis}</annotation></semantics></math></td>
 <td>الأضرار السنوية على الجمهور</td>
 <td><a href="../chapters/ch12.html">12</a></td>
 </tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math></td>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mo>′</mo></msup><annotation encoding="application/x-tex">C'</annotation></semantics></math></td>
 <td>تكاليف التشغيل والصيانة في السنة</td>
 <td><a href="../chapters/ch12.html">12</a></td>
 </tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">B/C</annotation></semantics></math></td>
+<td>نسبة المنافع إلى التكاليف</td>
+<td><a href="../chapters/ch12.html">12</a></td>
+</tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>B</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\Delta B/\Delta C</annotation></semantics></math></td>
+<td>النسبة الإضافية بين بديلين</td>
+<td><a href="../chapters/ch12.html">12</a></td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>/</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">C/E</annotation></semantics></math></td>
+<td>التكلفة لكل وحدة من الأثر</td>
+<td><a href="../chapters/ch12.html">12</a></td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math></td>
 <td>الدرجة الموحدة للقيمة x، بين 0 و1</td>
 <td><a href="../chapters/ch13.html">13</a></td>
 </tr>
@@ -957,89 +931,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="../chapters/ch13.html">13</a></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">s_{kj}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">u_{kj}</annotation></semantics></math></td>
 <td>درجة البديل k في المعيار j</td>
 <td><a href="../chapters/ch13.html">13</a></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>k</mi></msub><annotation encoding="application/x-tex">S_k</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mi>k</mi></msub><annotation encoding="application/x-tex">U_k</annotation></semantics></math></td>
 <td>الدرجة الكلية للبديل k</td>
 <td><a href="../chapters/ch13.html">13</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="حروف-لها-أكثر-من-معنى" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="حروف-لها-أكثر-من-معنى">حروف لها أكثر من معنى</h3>
-<p>المعنى يتحدد من الفصل. انتبه لهذه الحروف عند الانتقال من فصل إلى آخر:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>الرمز</th>
-<th>المعنى الأول</th>
-<th>المعنى الثاني</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
-<td>القيمة المستقبلية، الفصول 1 إلى 4</td>
-<td>التكاليف الثابتة في الفصل 6، والقيمة الاسمية للسند في الفصل 11</td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math></td>
-<td>زيادة السلسلة المتدرجة، الفصلان 2 و9</td>
-<td>ربح بيع الأصل في الفصل 5</td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math></td>
-<td>رقم السنة، الفصول 2 إلى 4</td>
-<td>نسبة الضريبة في الفصول 5 و7 و11</td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></td>
-<td>نسبة التضخم في الفصل 8</td>
-<td>تكلفة إصدار الأسهم في الفصل 11</td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mi>m</mi></msub><annotation encoding="application/x-tex">i_m</annotation></semantics></math></td>
-<td>النسبة الشهرية في الفصل 3</td>
-<td>النسبة السوقية في الفصل 8</td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math></td>
-<td>القيمة المقدرة في نهاية العمر</td>
-<td>الحجم في الفصل 6، والدرجة الكلية في الفصل 13</td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math></td>
-<td>أساس الاستهلاك في الفصل 5</td>
-<td>المنافع في الفصل 12، والميزانية في الفصل 11</td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math></td>
-<td>الاستهلاك في الفصل 5</td>
-<td>الأضرار في الفصل 12، والتوزيعات في الفصل 11</td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math></td>
-<td>سعر البيع في السوق، الفصلان 5 و7</td>
-<td>التشغيل والصيانة في الفصل 12</td>
-</tr>
-<tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math></td>
-<td>النسبة الاسمية في الفصل 3</td>
-<td>نسبة فائدة القرض في الفصل 7</td>
-</tr>
-<tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></td>
-<td>أس منحنى التعلم في الفصل 6</td>
-<td>ميل خط الانحدار في نفس الفصل</td>
 </tr>
 </tbody>
 </table>
@@ -1139,9 +1038,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>10</td>
 <td>بلا نمط</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">CF_t</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>F</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">CF_k</annotation></semantics></math></td>
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mo>∑</mo><mi>t</mi></msub><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P = \sum_t CF_t\,(P/F,\ i,\ t)</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mo>∑</mo><mi>k</mi></msub><mi>C</mi><msub><mi>F</mi><mi>k</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P = \sum_k CF_k\,(P/F,\ i,\ k)</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>11</td>
@@ -1211,15 +1110,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="unnumbered anchored" data-anchor-id="مثال">مثال</h3>
 <p>شركة تقترض 50,000 دينار بفائدة 8% سنويا، وتسدد القرض بخمسة أقساط سنوية متساوية في نهاية كل سنة. كم القسط؟</p>
 <p>المعلوم مبلغ واحد P في السنة 0، والمجهول سلسلة متساوية A من السنة 1 إلى السنة 5. هذا الصف 4 في الجدول، والناتج يبدأ بعد P بسنة، وهو المطلوب:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 A = P\,(A/P,\ i,\ n)
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>50</mn><mo>,</mo><mn>000</mn><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>8</mn><mi>%</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 A = 50{,}000\,(A/P,\ 8\%,\ 5)
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>50</mn><mo>,</mo><mn>000</mn><mo>×</mo><mn>0.25046</mn><mo>=</mo><mn>12</mn><mo>,</mo><mn>523</mn></mrow><annotation encoding="application/x-tex">
 A = 50{,}000 \times 0.25046 = 12{,}523
 </annotation></semantics></math></p>
+</div>
 <p>القسط 12,523 دينار تقريبا. وفي Excel، من الصف 4:</p>
 <pre class="excel"><code>=PMT(8%, 5, -50000)</code></pre>
 <p>النتيجة 12,522.82 دينار. الفرق دينار واحد تقريبا سببه تقريب المعامل إلى خمس خانات.</p>

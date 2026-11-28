@@ -382,12 +382,16 @@ ul.task-list li input[type="checkbox"] {
 
 <p>في كل جدول: الصف هو نسبة الفائدة، والعمود هو عدد السنوات. ابحث عن صف النسبة، ثم انتقل إلى عمود السنوات. كل جدول مقسوم إلى جزأين حسب عدد السنوات.</p>
 <p>باقي المعاملات تحسبها من هذه الجداول الثلاثة:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
 (F/P) = \frac{1}{(P/F)} \qquad (A/P) = \frac{1}{(P/A)} \qquad (F/A) = \frac{(P/A)}{(P/F)}
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>F</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>i</mi><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>G</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>G</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
 (A/F) = (A/P) - i \qquad (A/G) = \frac{(P/G)}{(P/A)}
 </annotation></semantics></math></p>
+</div>
 <p>الجداول تغطي النسب والسنوات الأكثر استخداما في الكتاب فقط. لأي نسبة أو مدة غير موجودة، احسب المعامل من معادلته في الفصلين الأول والثاني، أو بدالة في Excel. لا تستخدم الاستيفاء بين عمودين متباعدين، لأن المعاملات ليست خطية في عدد السنوات.</p>
 <p>صف 0% يعطي قيم المعاملات بدون فائدة: مجموع المبالغ كما هي.</p>
 <section id="معامل-القيمة-الحالية-لمبلغ-واحد-pf" class="level2 unnumbered">
@@ -1418,9 +1422,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="معامل-القيمة-الحالية-للسلسلة-المتدرجة-نسبيا-pa1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="معامل-القيمة-الحالية-للسلسلة-المتدرجة-نسبيا-pa1">معامل القيمة الحالية للسلسلة المتدرجة نسبيا (P/A1)</h2>
 <p>الدفعة الأولى في نهاية السنة 1، وتنمو بنسبة ثابتة g كل سنة. القيمة الحالية تساوي الدفعة الأولى مضروبة في المعامل:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>g</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>i</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 P = A_1\,(P/A_1,\ g,\ i,\ n)
 </annotation></semantics></math></p>
+</div>
 <p>عندما تتساوى النسبتان، كل دفعة تخصم بقدر ما نمت، فيصبح المعامل n مقسومة على واحد زائد i. تجد ذلك في الصف الذي تساوي فيه نسبة الفائدة نسبة النمو.</p>
 <section id="نسبة-النمو-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="نسبة-النمو-3">نسبة النمو 3%</h3>

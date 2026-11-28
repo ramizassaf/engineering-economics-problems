@@ -452,9 +452,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="11.2" class="anchored" data-anchor-id="sec-11-debt"><span class="header-section-number">11.2</span> تكلفة الدين</h2>
 <p>تكلفة القرض هي نسبة الفائدة إذا استلمت الشركة المبلغ كاملا. إذا دفعت رسوما في البداية، فهي تستلم أقل وتسدد نفس الأقساط، فتكلفتها أعلى. نحسبها بنفس طريقة معدل العائد في الفصل الرابع: النسبة التي تجعل الأقساط تساوي ما استلمته الشركة فعلا.</p>
 <p>الفائدة تخفض الضريبة. بنفس افتراضات قسم التمويل بقرض في <a href="ch07.html" class="quarto-xref"><span>الفصل 7</span></a>، تكلفة الدين بعد الضريبة:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 k_d\,(1 - t)
 </annotation></semantics></math></p>
+</div>
 <div id="ex-11-1" class="ee-item" data-id="c11-ex-loan-fee" data-kind="example" data-label="11.1">
 <p><strong>مثال 11.1: تكلفة قرض عليه رسوم</strong></p>
 <p>شركة تقترض 200,000 دينار بفائدة 9% سنويا، تسدد بأقساط سنوية متساوية على 5 سنوات. البنك يأخذ رسوم إصدار 2% من القرض عند الاستلام. نسبة الضريبة 20%. ما تكلفة القرض قبل الضريبة وبعدها؟</p>
@@ -479,9 +481,11 @@ k_d\,(1 - t) = 9.78\% \times (1 - 20\%) = 7.83\%
 <p>هذه تكلفة الدين التي تدخل في المتوسط المرجح لاحقا.</p>
 </div>
 <p>السند قرض تقسمه الشركة على مستثمرين كثيرين. كل سند له قيمة اسمية، مثل 1,000 دينار، ترد في تاريخ الاستحقاق، ونسبة كوبون تعطي الفائدة السنوية. سعر السند في السوق قد يكون أعلى من قيمته الاسمية أو أقل. تكلفة الدين بالسندات هي العائد حتى الاستحقاق: النسبة التي تجعل القيمة الحالية للكوبونات والقيمة الاسمية تساوي ما تستلمه الشركة من بيع السند.</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>C</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>F</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><mi>F</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 P = C\,(P/A,\ k_d,\ n) + F\,(P/F,\ k_d,\ n)
 </annotation></semantics></math></p>
+</div>
 <div id="ex-11-2" class="ee-item" data-id="c11-ex-bond" data-kind="example" data-label="11.2">
 <p><strong>مثال 11.2: تكلفة الدين بالسندات</strong></p>
 <p>شركة تصدر سندات جديدة. القيمة الاسمية للسند 1,000 دينار، تستحق بعد 10 سنوات، ونسبة الكوبون 7% تدفع في نهاية كل سنة. سعر السند في السوق 945 دينار، وتكاليف الإصدار 20 دينار لكل سند. نسبة الضريبة 20%. ما تكلفة الدين بالسندات قبل الضريبة وبعدها؟</p>
@@ -515,20 +519,24 @@ C = 7\% \times 1000 = 70
 <h2 data-number="11.3" class="anchored" data-anchor-id="sec-11-equity"><span class="header-section-number">11.3</span> تكلفة حقوق الملكية</h2>
 <p>لا يوجد عقد يحدد ما يطلبه المساهم. نقدره بطريقتين.</p>
 <p><strong>نموذج نمو التوزيعات:</strong> المساهم يشتري السهم بسعره اليوم، ويتوقع توزيعات تنمو بنسبة ثابتة. العائد الذي يطلبه هو النسبة التي تجعل القيمة الحالية لهذه التوزيعات تساوي السعر. من معادلة السلسلة المتدرجة نسبيا بلا نهاية، في الفصل الثاني:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><msub><mi>P</mi><mn>0</mn></msub></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
-k_e = \frac{D_1}{P_0} + g
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>1</mn></msub><msub><mi>P</mi><mn>0</mn></msub></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{\mathrm{Div}_1}{P_0} + g
 </annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><msub><mi>D</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-D_1 = D_0\,(1 + g)
+</div>
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>1</mn></msub><mo>=</mo><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+\mathrm{Div}_1 = \mathrm{Div}_0\,(1 + g)
 </annotation></semantics></math></p>
+</div>
 <p>الرمز D0 هو آخر توزيع دفع، وD1 التوزيع المتوقع بعد سنة.</p>
 <div id="ex-11-3" class="ee-item" data-id="c11-ex-gordon" data-kind="example" data-label="11.3">
 <p><strong>مثال 11.3: تكلفة حقوق الملكية بنموذج نمو التوزيعات</strong></p>
 <p>سعر سهم شركة اليوم 25 دينار. آخر توزيع دفعته 1.43 دينار للسهم، وتتوقع أن تنمو التوزيعات 5% سنويا. ما تكلفة الأرباح المحتجزة؟ وما تكلفة أسهم جديدة إذا كانت تكاليف إصدارها 6% من سعرها؟</p>
 <p><strong>الحل:</strong></p>
 <p>التوزيع المتوقع بعد سنة:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>1.43</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.5015</mn></mrow><annotation encoding="application/x-tex">
-D_1 = 1.43 \times (1 + 5\%) = 1.5015
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>1</mn></msub><mo>=</mo><mn>1.43</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mn>5</mn><mi>%</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1.5015</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{Div}_1 = 1.43 \times (1 + 5\%) = 1.5015
 </annotation></semantics></math></p>
 <p><strong>الأرباح المحتجزة:</strong> بدون تكاليف إصدار:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1.5015</mn><mn>25</mn></mfrac><mo>+</mo><mn>5</mn><mi>%</mi><mo>=</mo><mn>11.01</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">
@@ -541,14 +549,19 @@ k_e = \frac{1.5015}{25 \times (1 - 6\%)} + 5\% = 11.39\%
 <p>الأسهم الجديدة أغلى من الأرباح المحتجزة. لذلك تمول الشركات مشاريعها من الأرباح المحتجزة أولا، ثم تصدر أسهما جديدة إذا لم تكف.</p>
 </div>
 <p>إذا باعت الشركة أسهما جديدة، تدفع تكاليف إصدار، فتستلم أقل من سعر السهم:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mn>1</mn></msub><mrow><msub><mi>P</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
-k_e = \frac{D_1}{P_0\,(1 - f)} + g
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mn>1</mn></msub><mrow><msub><mi>P</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>f</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>+</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">
+k_e = \frac{\mathrm{Div}_1}{P_0\,(1 - f_c)} + g
 </annotation></semantics></math></p>
+</div>
+<p>حيث f_c نسبة تكاليف الإصدار من سعر السهم.</p>
 <p>الأرباح المحتجزة ليس لها تكاليف إصدار، لكن لها تكلفة: لو وزعتها الشركة لاستثمرها المساهم بنفسه. تكلفتها هي تكلفة حقوق الملكية بدون تكاليف الإصدار.</p>
 <p><strong>نموذج تسعير الأصول الرأسمالية:</strong> المساهم يطلب العائد الخالي من المخاطرة، زائد علاوة بقدر مخاطرة السهم. معامل بيتا يقيس هذه المخاطرة: بيتا 1 تعني أن السهم يتحرك مثل السوق، وبيتا 1.5 تعني أنه يتحرك أكثر منه بنصف المرة.</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>r</mi><mi>f</mi></msub><mo>+</mo><mi>β</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mi>m</mi></msub><mo>−</mo><msub><mi>r</mi><mi>f</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
 k_e = r_f + \beta\,(r_m - r_f)
 </annotation></semantics></math></p>
+</div>
 <div id="ex-11-4" class="ee-item" data-id="c11-ex-capm" data-kind="example" data-label="11.4">
 <p><strong>مثال 11.4: تكلفة حقوق الملكية بنموذج تسعير الأصول الرأسمالية</strong></p>
 <p>العائد على سندات الحكومة القصيرة 4%، والعائد المتوقع للسوق 11%. معامل بيتا لسهم شركة 1.30. ما تكلفة حقوق الملكية؟ وما تكلفتها لشركة أخرى بيتا سهمها 0.8؟</p>
@@ -569,17 +582,21 @@ k_e = 4\% + 0.8 \times 7\% = 9.60\%
 </div>
 <p>الطريقتان تقديران، وقد يختلفان. كثير من الشركات تحسب الاثنين وتأخذ متوسطهما.</p>
 <p><strong>الأسهم الممتازة:</strong> توزيعها ثابت بلا نمو، فتكلفتها:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mi>D</mi><mi>p</mi></msub><mrow><msub><mi>P</mi><mi>p</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
-k_p = \frac{D_p}{P_p\,(1 - f)}
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">v</mi></mrow><mi>p</mi></msub><mrow><msub><mi>P</mi><mi>p</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>f</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+k_p = \frac{\mathrm{Div}_p}{P_p\,(1 - f_c)}
 </annotation></semantics></math></p>
+</div>
 <p>لا نضرب في واحد ناقص الضريبة، لأن التوزيعات لا تطرح من الدخل الخاضع للضريبة.</p>
 </section>
 <section id="sec-11-wacc" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="sec-11-wacc"><span class="header-section-number">11.4</span> المتوسط المرجح لتكلفة رأس المال</h2>
 <p>نجمع تكاليف المصادر، كل منها بوزن حصته من التمويل:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">W</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><msub><mi>w</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>d</mi></msub><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msub><mi>w</mi><mi>p</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>p</mi></msub><mo>+</mo><msub><mi>w</mi><mi>e</mi></msub><mspace width="0.167em"></mspace><msub><mi>k</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">
 \mathrm{WACC} = w_d\,k_d\,(1 - t) + w_p\,k_p + w_e\,k_e
 </annotation></semantics></math></p>
+</div>
 <p>مجموع الأوزان 1. الأفضل أن نأخذ الأوزان من القيم السوقية: سعر السند ضرب عددها، وسعر السهم ضرب عددها. القيم الدفترية في قائمة المركز المالي تعكس ما دفع في الماضي، وليس ما يطلبه المستثمرون اليوم. إذا كان للشركة هيكل تمويل مستهدف، نأخذ أوزانه.</p>
 <div id="ex-11-5" class="ee-item" data-id="c11-ex-wacc" data-kind="example" data-label="11.5">
 <p><strong>مثال 11.5: المتوسط المرجح بالقيم السوقية والدفترية</strong></p>
@@ -869,9 +886,11 @@ D = 20\mathord{,}000 \times 1000 = 20\mathord{,}000\mathord{,}000 \qquad E = 1\m
 <section id="sec-11-cb-enum" class="level3">
 <h3 class="anchored" data-anchor-id="sec-11-cb-enum">الطريقة الأولى: الحصر الكامل</h3>
 <p>نكتب كل المجموعات الممكنة. لكل مشروع خياران: ينفذ أو لا ينفذ. فعدد المجموعات لخمسة مشاريع:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>=</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">
 2^5 = 32
 </annotation></semantics></math></p>
+</div>
 <p>نستبعد كل مجموعة تزيد تكلفتها على الميزانية، ونختار الأكبر قيمة من الباقي. أفضل خمس مجموعات:</p>
 <table class="caption-top table">
 <thead>
@@ -911,7 +930,7 @@ D = 20\mathord{,}000 \times 1000 = 20\mathord{,}000\mathord{,}000 \qquad E = 1\m
 </table>
 <p>الحل الأمثل: المشاريع A وD وE، بقيمة حالية 31,500 دينار.</p>
 <p>الحصر الكامل يضمن الحل الأمثل، لكنه لا يصلح للمشاريع الكثيرة: 20 مشروعا تعطي أكثر من مليون مجموعة. في Python يبقى الحصر سهلا حتى نحو 20 مشروعا:</p>
-<div id="a10bd2ad" class="cell" data-execution_count="1">
+<div id="1ec63272" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> combinations</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>projects <span class="op">=</span> {<span class="st">"A"</span>: (<span class="dv">30000</span>, <span class="dv">9000</span>), <span class="st">"B"</span>: (<span class="dv">40000</span>, <span class="dv">14000</span>), <span class="st">"C"</span>: (<span class="dv">25000</span>, <span class="dv">6500</span>),</span>
@@ -939,9 +958,11 @@ D = 20\mathord{,}000 \times 1000 = 20\mathord{,}000\mathord{,}000 \qquad E = 1\m
 <section id="sec-11-cb-pi" class="level3">
 <h3 class="anchored" data-anchor-id="sec-11-cb-pi">الطريقة الثانية: مؤشر الربحية</h3>
 <p>مؤشر الربحية يقيس القيمة الحالية للتدفقات الداخلة لكل دينار مستثمر. إذا كان PW صافي القيمة الحالية للمشروع، و I استثماره في السنة 0:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>I</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mi>W</mi><mo>+</mo><mi>I</mi></mrow><mi>I</mi></mfrac><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mi>P</mi><mi>W</mi></mrow><mi>I</mi></mfrac></mrow><annotation encoding="application/x-tex">
 PI = \frac{PW + I}{I} = 1 + \frac{PW}{I}
 </annotation></semantics></math></p>
+</div>
 <p>المشروع مقبول إذا كان المؤشر أكبر من 1. بعض الكتب تستخدم النسبة PW على I مباشرة، وتسميها نسبة صافي القيمة الحالية إلى الاستثمار. الفرق بينهما 1 دائما، فالترتيب واحد، لكن الأفضل ألا نسمي الاثنين بنفس الاسم.</p>
 <p>الطريقة: نرتب المشاريع تنازليا حسب المؤشر، ثم نختار من الأعلى ما دامت الميزانية تكفي.</p>
 <table class="caption-top table">
@@ -992,19 +1013,27 @@ PI = \frac{PW + I}{I} = 1 + \frac{PW}{I}
 <section id="sec-11-cb-ip" class="level3">
 <h3 class="anchored" data-anchor-id="sec-11-cb-ip">الطريقة الثالثة: البرمجة الخطية بالأعداد الصحيحة</h3>
 <p>نعرف متغيرا لكل مشروع j، يساوي 1 إذا اختير المشروع، و0 إذا لم يختر:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>j</mi></msub><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">
 x_j \in \{0, 1\}
 </annotation></semantics></math></p>
+</div>
 <p>النموذج:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">max</mi><mo>⁡</mo></mrow><mspace width="0.278em"></mspace><mi>Z</mi><mo>=</mo><mn>9000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>A</mi></msub><mo>+</mo><mn>14000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>B</mi></msub><mo>+</mo><mn>6500</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>C</mi></msub><mo>+</mo><mn>15500</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>D</mi></msub><mo>+</mo><mn>7000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">
 \max \; Z = 9000\,x_A + 14000\,x_B + 6500\,x_C + 15500\,x_D + 7000\,x_E
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>A</mi></msub><mo>+</mo><mn>40000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>B</mi></msub><mo>+</mo><mn>25000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>C</mi></msub><mo>+</mo><mn>50000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>D</mi></msub><mo>+</mo><mn>20000</mn><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>E</mi></msub><mo>≤</mo><mn>100000</mn></mrow><annotation encoding="application/x-tex">
 30000\,x_A + 40000\,x_B + 25000\,x_C + 50000\,x_D + 20000\,x_E \le 100000
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>j</mi></msub><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">
 x_j \in \{0, 1\}
 </annotation></semantics></math></p>
+</div>
 <p>هذا نموذج حقيبة الظهر المعروف في بحوث العمليات. يحل بدقة حتى لمئات المشاريع.</p>
 <section id="الحل-في-excel-بأداة-solver" class="level4">
 <h4 class="anchored" data-anchor-id="الحل-في-excel-بأداة-solver">الحل في Excel بأداة Solver</h4>
@@ -1022,7 +1051,7 @@ x_j \in \{0, 1\}
 </section>
 <section id="الحل-في-python-بمكتبة-pulp" class="level4">
 <h4 class="anchored" data-anchor-id="الحل-في-python-بمكتبة-pulp">الحل في Python بمكتبة PuLP</h4>
-<div id="33a0f1d9" class="cell" data-execution_count="2">
+<div id="2396675f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pulp</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> pulp.LpProblem(<span class="st">"capital_budgeting"</span>, pulp.LpMaximize)</span>
@@ -1080,10 +1109,12 @@ x_j \in \{0, 1\}
 </tr>
 </tbody>
 </table>
-<p>وإذا كانت التكاليف موزعة على أكثر من سنة، نضيف قيد ميزانية لكل سنة t، حيث c تكلفة المشروع j في تلك السنة:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>c</mi><mrow><mi>j</mi><mi>t</mi></mrow></msub><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>j</mi></msub><mo>≤</mo><msub><mi>B</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">
-\sum_j c_{jt}\,x_j \le B_t
+<p>وإذا كانت التكاليف موزعة على أكثر من سنة، نضيف قيد ميزانية لكل سنة k، حيث c تكلفة المشروع j في تلك السنة، و C الميزانية المتاحة فيها:</p>
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>c</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><mspace width="0.167em"></mspace><msub><mi>x</mi><mi>j</mi></msub><mo>≤</mo><msub><mi>C</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">
+\sum_j c_{jk}\,x_j \le C_k
 </annotation></semantics></math></p>
+</div>
 </section>
 </section>
 <section id="sec-11-leverage" class="level2" data-number="11.8">
@@ -1177,7 +1208,7 @@ A = 300\mathord{,}000\,(A/P,\ 8\%,\ 5) = 75\mathord{,}136.94
 <section id="sec-11-python" class="level2" data-number="11.9">
 <h2 data-number="11.9" class="anchored" data-anchor-id="sec-11-python"><span class="header-section-number">11.9</span> Python: تكلفة رأس المال</h2>
 <p>البرنامج التالي يحسب تكلفة الدين من سعر السند، وتكلفة حقوق الملكية بالطريقتين، ثم المتوسط المرجح لعدة نسب دين:</p>
-<div id="31fdf1be" class="cell" data-execution_count="3">
+<div id="02ca3c32" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># bond: 10 years, coupon 70 a year, face 1000, net price 940</span></span>
@@ -1462,8 +1493,8 @@ debt 60%: WACC 12.88%</code></pre>
 </div>
 <div id="prob-11-53" class="ee-item" data-id="c11-e-02" data-kind="problem" data-label="11.53">
 <p><strong>11.53</strong> تكلفة حقوق الملكية لشركة بلا ديون 12%. إذا اقترضت حتى تصبح نسبة الدين إلى حقوق الملكية 0.60، بتكلفة دين 7%، فإن تكلفة حقوق الملكية ترتفع حسب المعادلة:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><msub><mi>V</mi><mi>d</mi></msub><msub><mi>V</mi><mi>e</mi></msub></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{V_d}{V_e}\,(1 - t)
 </annotation></semantics></math></p>
 <p>الضريبة 20%. احسب تكلفة حقوق الملكية والمتوسط المرجح بعد القرض.</p>
 <p><span class="ee-sol-link"><a href="#sol-11-53">الحل</a></span></p>
@@ -2014,8 +2045,8 @@ k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
 </div>
 <div id="prob-11-102" class="ee-item" data-id="c11-h-02" data-kind="problem" data-label="11.102">
 <p><strong>11.102</strong> اكتب برنامج Python يحسب المتوسط المرجح لنسب دين من 0% إلى 70% بخطوة 10%، إذا كانت تكلفة الدين قبل الضريبة 6% زائد 0.1 ضرب مربع نسبة الدين، وتكلفة حقوق الملكية تتبع المعادلة التالية، بتكلفة بلا دين 12% وضريبة 20%:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><msub><mi>V</mi><mi>d</mi></msub><msub><mi>V</mi><mi>e</mi></msub></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{V_d}{V_e}\,(1 - t)
 </annotation></semantics></math></p>
 <p>ما أفضل نسبة دين؟</p>
 <p><span class="ee-sol-link"><a href="#sol-11-102">الحل</a></span></p>
@@ -2253,8 +2284,8 @@ k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
 <div id="prob-11-124" class="ee-item" data-id="c11-j-04" data-kind="problem" data-label="11.124">
 <p><strong>11.124</strong> <strong>حالة 11.4: هل ترفع شركة الأدوية ديونها؟</strong></p>
 <p>شركة أدوية تمول 20% من رأس مالها بالدين، بتكلفة 6%. مديرها المالي يقترح رفع الدين إلى 50%، لكن البنوك ستطلب عندها 8.5%. تكلفة حقوق الملكية بلا دين 12%، وتتغير مع الدين حسب:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><mi>D</mi><mi>E</mi></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-k_e = k_u + (k_u - k_d)\,\frac{D}{E}\,(1 - t)
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><msub><mi>k</mi><mi>u</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>u</mi></msub><mo>−</mo><msub><mi>k</mi><mi>d</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mfrac><msub><mi>V</mi><mi>d</mi></msub><msub><mi>V</mi><mi>e</mi></msub></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+k_e = k_u + (k_u - k_d)\,\frac{V_d}{V_e}\,(1 - t)
 </annotation></semantics></math></p>
 <p>الضريبة 20%. تدفق الشركة الحر بعد الضريبة 1,500,000 دينار سنويا، ويتوقع أن يستمر بلا نمو.</p>
 <p>(أ) احسب تكلفة حقوق الملكية والمتوسط المرجح في الحالتين. (ب) قيمة الشركة هي القيمة الحالية لتدفقها الحر بالمتوسط المرجح. احسبها في الحالتين. (ج) هل تنصح بالاقتراح؟</p>

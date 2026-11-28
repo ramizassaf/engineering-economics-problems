@@ -9,12 +9,17 @@ pre.excel, div.sourceCode:has(> pre.excel) { background: #f1f6f1; }
 
 /* Worked examples and problems */
 .ee-item { margin: 1.4em 0; }
+/* Same palette as the cover and the PDF: navy examples, gold equation frames */
 .ee-item[data-kind="example"] {
-  border-inline-start: 4px solid #1f4e8c;
+  border-inline-start: 4px solid #12324E;
   padding: 0.3em 1em 0.6em;
-  background: #f8fafc;
+  background: #EAF1F8;
   border-radius: 4px;
 }
+.ee-eqbox { text-align: center; margin: 0.9em 0; }
+.ee-eqbox > p { display: inline-block; max-width: 100%; overflow-x: auto; margin: 0;
+  background: #FCF5E3; border: 1px solid #E0B04A; border-radius: 4px; padding: 0.15em 1em; }
+.ee-eqbox math[display="block"] { margin: 0.3em auto; }
 .ee-item[data-kind="problem"] { border-bottom: 1px solid #e5e7eb; padding-bottom: 0.6em; }
 .ee-sol-link { font-size: 0.9em; }
 .ee-item svg, .ee-fig svg { max-width: 100%; height: auto; direction: ltr; }
@@ -53,3 +58,8 @@ details.ee-sol[open] summary { background: #1f4e8c; color: #fff; margin-bottom: 
 /* Authors side by side on the title block, not one below the other */
 .quarto-title-meta-contents:has(> p + p) { display: flex; flex-wrap: wrap; gap: 0 1.6em; }
 .quarto-title-meta-contents:has(> p + p) > p { margin: 0; }
+
+/* Right to left: the previous chapter sits on the right, so its arrow points right,
+   and the next chapter's arrow points left */
+[dir="rtl"] .page-navigation .bi-arrow-left-short::before,
+[dir="rtl"] .page-navigation .bi-arrow-right-short::before { display: inline-block; transform: scaleX(-1); }

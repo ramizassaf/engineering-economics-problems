@@ -433,7 +433,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5.1" class="anchored" data-anchor-id="sec-5-concept"><span class="header-section-number">5.1</span> ما الاستهلاك؟</h2>
 <p>الآلة تخدم سنوات، فلا يصح أن نحمل ثمنها كاملا على سنة الشراء. الاستهلاك يوزع تكلفة الأصل على سنوات عمره. أربعة مصطلحات نحتاجها:</p>
 <ul>
-<li>أساس الاستهلاك B: تكلفة الأصل جاهزا للعمل، أي السعر والنقل والتركيب والتجربة.</li>
+<li>أساس الاستهلاك I: تكلفة الأصل جاهزا للعمل، أي السعر والنقل والتركيب والتجربة.</li>
 <li>القيمة المقدرة S: ما نتوقع أن يباع به الأصل في نهاية عمره.</li>
 <li>العمر n: عدد السنوات التي يسمح القانون أو المحاسبة بتوزيع التكلفة عليها.</li>
 <li>القيمة الدفترية BV: الأساس ناقص الاستهلاك المتراكم حتى تاريخه.</li>
@@ -444,8 +444,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>اشترى مصنع آلة سعرها 85,000 دينار. دفع 3,000 دينار للنقل، و4,500 دينار للتركيب، و1,500 دينار لتجربة التشغيل. ودفع أيضا 2,000 دينار لتدريب العمال على الآلة. ما أساس الاستهلاك؟</p>
 <p><strong>الحل:</strong></p>
 <p>أساس الاستهلاك هو كل ما ينفق لجعل الأصل جاهزا للعمل في مكانه: السعر والنقل والتركيب والتجربة.</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>85</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>94</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
-B = 85\mathord{,}000 + 3\mathord{,}000 + 4\mathord{,}500 + 1\mathord{,}500 = 94\mathord{,}000
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>85</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>3</mn><mi>,</mi><mn>000</mn><mo>+</mo><mn>4</mn><mi>,</mi><mn>500</mn><mo>+</mo><mn>1</mn><mi>,</mi><mn>500</mn><mo>=</mo><mn>94</mn><mi>,</mi><mn>000</mn></mrow><annotation encoding="application/x-tex">
+I = 85\mathord{,}000 + 3\mathord{,}000 + 4\mathord{,}500 + 1\mathord{,}500 = 94\mathord{,}000
 </annotation></semantics></math></p>
 <p>التدريب لا يدخل في الأساس، لأنه يزيد مهارة العمال وليس قيمة الآلة. يسجل مصروفا في سنته.</p>
 </div>
@@ -453,20 +453,24 @@ B = 85\mathord{,}000 + 3\mathord{,}000 + 4\mathord{,}500 + 1\mathord{,}500 = 94\
 <section id="sec-5-sl" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-5-sl"><span class="header-section-number">5.2</span> القسط الثابت</h2>
 <p>أبسط طريقة وأكثرها استخداما. الاستهلاك نفسه كل سنة:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">
-D = \frac{B - S}{n}
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>I</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">
+D = \frac{I - S}{n}
 </annotation></semantics></math></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><mi>B</mi><mo>−</mo><mi>k</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
-BV_k = B - k\,D
+</div>
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><mi>I</mi><mo>−</mo><mi>k</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
+BV_k = I - k\,D
 </annotation></semantics></math></p>
+</div>
 <p>حيث k رقم السنة. في هذا الفصل نرمز للسنة بالحرف k، لأن الحرف t محجوز لنسبة الضريبة.</p>
 <div id="ex-5-2" class="ee-item" data-id="c05-ex-sl" data-kind="example" data-label="5.2">
 <p><strong>مثال 5.2: القسط الثابت</strong></p>
 <p>آلة أساسها 60,000 دينار، وقيمتها المقدرة في نهاية عمرها 8,000 دينار، وعمرها 5 سنوات. احسب الاستهلاك السنوي بالقسط الثابت، والقيمة الدفترية بعد سنتين.</p>
 <p><strong>الحل:</strong></p>
 <p>القسط الثابت يوزع القيمة التي تضيع بالتساوي على سنوات العمر:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>B</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>10</mn><mi>,</mi><mn>400.00</mn></mrow><annotation encoding="application/x-tex">
-D = \frac{B - S}{n} = \frac{60\mathord{,}000 - 8\mathord{,}000}{5} = 10\mathord{,}400.00
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mrow><mi>I</mi><mo>−</mo><mi>S</mi></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>8</mn><mi>,</mi><mn>000</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>10</mn><mi>,</mi><mn>400.00</mn></mrow><annotation encoding="application/x-tex">
+D = \frac{I - S}{n} = \frac{60\mathord{,}000 - 8\mathord{,}000}{5} = 10\mathord{,}400.00
 </annotation></semantics></math></p>
 <p>القيمة الدفترية هي الأساس ناقص الاستهلاك المتراكم:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><mn>60</mn><mi>,</mi><mn>000</mn><mo>−</mo><mn>2</mn><mo>×</mo><mn>10</mn><mi>,</mi><mn>400.00</mn><mo>=</mo><mn>39</mn><mi>,</mi><mn>200.00</mn></mrow><annotation encoding="application/x-tex">
@@ -478,13 +482,17 @@ BV_2 = 60\mathord{,}000 - 2 \times 10\mathord{,}400.00 = 39\mathord{,}200.00
 <section id="sec-5-db" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-5-db"><span class="header-section-number">5.3</span> القسط المتناقص</h2>
 <p>نستهلك كل سنة نسبة ثابتة d من القيمة الدفترية في بداية السنة. الاستهلاك كبير في البداية ويصغر مع الزمن:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>=</mo><mi>d</mi><mo>×</mo><mi>B</mi><msub><mi>V</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">
 D_k = d \times BV_{k-1}
 </annotation></semantics></math></p>
+</div>
 <p>أشهر صورة هي القسط المتناقص المضاعف، ونسبته ضعف نسبة القسط الثابت:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mn>2</mn><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">
 d = \frac{2}{n}
 </annotation></semantics></math></p>
+</div>
 <div id="ex-5-3" class="ee-item" data-id="c05-ex-ddb" data-kind="example" data-label="5.3">
 <p><strong>مثال 5.3: القسط المتناقص المضاعف</strong></p>
 <p>آلة أساسها 50,000 دينار، وعمرها 5 سنوات، وقيمتها المقدرة 5,000 دينار. ابن جدول الاستهلاك بالقسط المتناقص المضاعف.</p>
@@ -612,9 +620,11 @@ d = \frac{2}{n} = \frac{2}{5} = 40\%
 <section id="sec-5-syd" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-5-syd"><span class="header-section-number">5.4</span> مجموع أرقام السنوات ووحدات الإنتاج</h2>
 <p>طريقة مجموع أرقام السنوات سريعة في البداية مثل المتناقص، لكنها تصل إلى القيمة المقدرة بالضبط:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>−</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-D_k = \frac{n - k + 1}{n(n+1)/2}\,(B - S)
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></mfrac><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>I</mi><mo>−</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+D_k = \frac{n - k + 1}{n(n+1)/2}\,(I - S)
 </annotation></semantics></math></p>
+</div>
 <div id="ex-5-5" class="ee-item" data-id="c05-ex-syd" data-kind="example" data-label="5.5">
 <p><strong>مثال 5.5: مجموع أرقام السنوات</strong></p>
 <p>معدات أساسها 40,000 دينار، وعمرها 5 سنوات، وقيمتها المقدرة 4,000 دينار. احسب الاستهلاك بطريقة مجموع أرقام السنوات.</p>
@@ -769,16 +779,22 @@ D = 0.25 \times 245\mathord{,}000 = 61\mathord{,}250.00
 <section id="sec-5-tax" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="sec-5-tax"><span class="header-section-number">5.6</span> ضريبة الدخل</h2>
 <p>الضريبة تحسب على الدخل الخاضع للضريبة:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>I</mi><mo>=</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo>−</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">
 TI = R - O - D
 </annotation></semantics></math></p>
+</div>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>t</mi><mo>×</mo><mi>T</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">
 T = t \times TI
 </annotation></semantics></math></p>
+</div>
 <p>حيث R الإيراد، وO تكاليف التشغيل النقدية، وD الاستهلاك، وt نسبة الضريبة. التدفق النقدي بعد الضريبة:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>F</mi><mo>=</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo>−</mo><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mi>O</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mspace width="0.167em"></mspace><mi>D</mi></mrow><annotation encoding="application/x-tex">
 CF = R - O - T = (R - O)(1 - t) + t\,D
 </annotation></semantics></math></p>
+</div>
 <p>الحد الأخير هو الوفر الضريبي من الاستهلاك.</p>
 <p><strong>افتراضات هذه المعادلة:</strong> الشركة رابحة من مجمل أعمالها، فتستفيد من كل وفر ضريبي في نفس السنة، حتى لو كان المشروع وحده خاسرا فيها. والاستهلاك مقبول ضريبيا بالمبلغ المحسوب. والضريبة تدفع في نفس سنة الدخل. إذا كانت الشركة خاسرة، يتأخر الوفر إلى السنوات التي تنقل إليها الخسارة، فتنخفض قيمته الحالية. قواعد نقل الخسائر في كل دولة في ملحق الضرائب، <a href="../appendices/tax-countries.html" class="quarto-xref"><span>الملحق F</span></a>.</p>
 <div id="ex-5-10" class="ee-item" data-id="c05-ex-tax-basic" data-kind="example" data-label="5.10">
@@ -853,9 +869,11 @@ P = 2\mathord{,}000.00\,(P/A,\ 10\%,\ 8) = 10\mathord{,}669.85
 <section id="sec-5-disposal" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="sec-5-disposal"><span class="header-section-number">5.7</span> بيع الأصل وترحيل الخسائر</h2>
 <p>عندما يباع أصل بأكثر من قيمته الدفترية، فالفرق ربح يخضع للضريبة. وإذا بيع بأقل، فالفرق خسارة تخفض الضريبة.</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mi>M</mi><mo>−</mo><mi>B</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">
-G = M - BV
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">g</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi></mrow><mo>=</mo><mi>M</mi><mo>−</mo><mi>B</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{gain} = M - BV
 </annotation></semantics></math></p>
+</div>
 <div id="ex-5-12" class="ee-item" data-id="c05-ex-disposal-gain" data-kind="example" data-label="5.12">
 <p><strong>مثال 5.12: بيع أصل بأكثر من قيمته الدفترية</strong></p>
 <p>آلة أساسها 60,000 دينار، وتستهلك بالقسط الثابت على 6 سنوات بدون قيمة مقدرة. بيعت بعد 4 سنوات بمبلغ 25,000 دينار. نسبة الضريبة 20%. ما الربح أو الخسارة الضريبية؟ وما صافي ما يبقى من ثمن البيع؟</p>
@@ -988,7 +1006,7 @@ t = t_2 + t_1(1 - t_2) = t_1 + t_2(1 - t_1) = 20.80\%
 <section id="sec-5-python" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="sec-5-python"><span class="header-section-number">5.8</span> Python: جداول الاستهلاك</h2>
 <p>هذا البرنامج يبني جداول الطرق الأربع لنفس الأصل، ويقارن القيمة الحالية للاستهلاك بنسبة 10%:</p>
-<div id="0cd3ed4a" class="cell" data-execution_count="1">
+<div id="72fec5c3" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> straight_line(B, S, n):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(B <span class="op">-</span> S) <span class="op">/</span> n] <span class="op">*</span> n</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>

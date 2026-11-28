@@ -432,9 +432,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sec-4-irr" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-4-irr"><span class="header-section-number">4.1</span> تعريف المعدل وحسابه</h2>
 <p>معدل العائد الداخلي هو النسبة التي تجعل القيمة الحالية للمشروع صفرا:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>C</mi><msub><mi>F</mi><mi>t</mi></msub></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>i</mi><mo>*</mo></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
-\sum_{t=0}^{n} \frac{CF_t}{(1+i^*)^t} = 0
+<div class="ee-eqbox">
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>C</mi><msub><mi>F</mi><mi>k</mi></msub></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>i</mi><mo>*</mo></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">
+\sum_{k=0}^{n} \frac{CF_k}{(1+i^*)^k} = 0
 </annotation></semantics></math></p>
+</div>
 <p>المعادلة لا تحل مباشرة إلا في حالات بسيطة. باليد نجرب نسبا حتى تتغير إشارة القيمة الحالية، ثم نستكمل بين النسبتين. في Excel الدالة IRR تعمل ذلك تلقائيا.</p>
 <div id="ex-4-1" class="ee-item" data-id="c04-ex-irr-trial" data-kind="example" data-label="4.1">
 <p><strong>مثال 4.1: حساب المعدل بالتجربة والاستكمال</strong></p>
@@ -826,9 +828,11 @@ PW_a = 82\mathord{,}263.13, \qquad PW_b = 82\mathord{,}019.72
 <section id="sec-4-mirr" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-4-mirr"><span class="header-section-number">4.5</span> المعدل المعدل</h2>
 <p>المعدل المعدل يستخدم نسبتين واقعيتين: نسبة تمويل تنقل بها التكاليف إلى البداية، ونسبة إعادة استثمار تنقل بها الدخل إلى النهاية. النتيجة نسبة واحدة دائما:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>I</mi><mi>R</mi><mi>R</mi><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>F</mi><msub><mi>V</mi><mo>+</mo></msub></mrow><mrow><mi>P</mi><msub><mi>V</mi><mo>−</mo></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
 MIRR = \left(\frac{FV_+}{PV_-}\right)^{1/n} - 1
 </annotation></semantics></math></p>
+</div>
 <div id="ex-4-13" class="ee-item" data-id="c04-ex-mirr" data-kind="example" data-label="4.13">
 <p><strong>مثال 4.13: معدل العائد الداخلي المعدل</strong></p>
 <p>مشروع يكلف 50,000 دينار، ويعطي في السنوات من 1 إلى 5 المبالغ 12,000 و15,000 و18,000 و15,000 و12,000 دينار. الشركة تعيد استثمار الدخل بنسبة 10%. احسب المعدل والمعدل المعدل.</p>
@@ -975,7 +979,7 @@ A = 20\mathord{,}000\,(A/P,\ 8\%,\ 5) = 5\mathord{,}009.13
 <section id="sec-4-python" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="sec-4-python"><span class="header-section-number">4.8</span> Python: حساب المعدل بالتنصيف</h2>
 <p>الدالة irr في numpy_financial تحسب المعدل مباشرة. لكن فهم طريقة الحساب يساعدك عندما تفشل الدالة، كما في المشاريع التي لها أكثر من معدل. أبسط طريقة هي التنصيف: نبدأ بنسبتين قيمتاهما الحاليتان بإشارتين مختلفتين، ثم نقسم المسافة بينهما إلى نصفين مرة بعد مرة:</p>
-<div id="edd11f26" class="cell" data-execution_count="1">
+<div id="0177c69b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> npv(i, flows):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(cf <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> t <span class="cf">for</span> t, cf <span class="kw">in</span> <span class="bu">enumerate</span>(flows))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1002,7 +1006,7 @@ A = 20\mathord{,}000\,(A/P,\ 8\%,\ 5) = 5\mathord{,}009.13
 </div>
 <p>البرنامج يجد المعدلين في المشروع الثاني، لأننا حددنا له مجالين منفصلين. هذا يبين لماذا تعطي الدالة IRR في Excel معدلا واحدا فقط: هي تبدأ من تخمين واحد، وتقف عند أول جذر تصل إليه.</p>
 <p>ورسم منحنى القيمة الحالية أفضل طريقة لرؤية كل المعدلات معا:</p>
-<div id="0e3f9ba4" class="cell" data-execution_count="2">
+<div id="8ff5aee2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">0.3</span>, <span class="dv">7</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> rates:</span>

@@ -527,9 +527,9 @@ P = \frac{A}{i}
 </section>
 <section id="sec-d-pg" class="level2" data-number="C.5">
 <h2 data-number="C.5" class="anchored" data-anchor-id="sec-d-pg"><span class="header-section-number">C.5</span> المعاملان P/G وA/G: الدفعات المتدرجة خطيا</h2>
-<p>الدفعة في السنة t تساوي:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
-G(t-1)
+<p>الدفعة في السنة k تساوي:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
+G(k-1)
 </annotation></semantics></math></p>
 <p>أي صفر في السنة 1، ثم G في السنة 2، ثم 2G في السنة 3، وهكذا حتى السنة n.&nbsp;الجزء الثابت A1 نعالجه وحده بالمعامل P/A، فنشتق هنا للجزء المتدرج فقط.</p>
 <p>الفكرة: هذا الدرج مجموع سلاسل متساوية متراكبة. سلسلة قيمتها G تبدأ في السنة 2، وفوقها سلسلة ثانية قيمتها G تبدأ في السنة 3، وهكذا حتى سلسلة أخيرة فيها دفعة واحدة في السنة n.&nbsp;السلسلة التي تبدأ في السنة k طولها:</p>
@@ -559,9 +559,9 @@ A = G\left[\frac{1}{i} - \frac{n}{(1+i)^n - 1}\right] = G\,(A/G,\ i,\ n)
 </section>
 <section id="sec-d-geometric" class="level2" data-number="C.6">
 <h2 data-number="C.6" class="anchored" data-anchor-id="sec-d-geometric"><span class="header-section-number">C.6</span> معامل السلسلة المتدرجة نسبيا</h2>
-<p>الدفعة الأولى A1 في السنة 1، وكل دفعة تزيد بنسبة g عن التي قبلها. الدفعة في السنة t وقيمتها الحالية:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo><mspace width="2.0em"></mspace><mfrac><msub><mi>A</mi><mi>t</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mfrac><msub><mi>A</mi><mn>1</mn></msub><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>g</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
-A_t = A_1(1+g)^{t-1}, \qquad \frac{A_t}{(1+i)^t} = \frac{A_1}{1+i}\left(\frac{1+g}{1+i}\right)^{t-1}
+<p>الدفعة الأولى A1 في السنة 1، وكل دفعة تزيد بنسبة g عن التي قبلها. الدفعة في السنة k وقيمتها الحالية:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>=</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>g</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo><mspace width="2.0em"></mspace><mfrac><msub><mi>A</mi><mi>k</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow></mfrac><mo>=</mo><mfrac><msub><mi>A</mi><mn>1</mn></msub><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>g</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
+A_k = A_1(1+g)^{k-1}, \qquad \frac{A_k}{(1+i)^k} = \frac{A_1}{1+i}\left(\frac{1+g}{1+i}\right)^{k-1}
 </annotation></semantics></math></p>
 <p>اجمع من السنة 1 إلى السنة n.&nbsp;المجموع متتالية هندسية أساسها:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>g</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
@@ -621,7 +621,7 @@ CR = P\,(A/P,\ i,\ n) - S\left[(A/P,\ i,\ n) - i\right] = (P - S)\,(A/P,\ i,\ n)
 <section id="sec-d-python" class="level2" data-number="C.9">
 <h2 data-number="C.9" class="anchored" data-anchor-id="sec-d-python"><span class="header-section-number">C.9</span> تحقق بالأرقام في Python</h2>
 <p>الاشتقاق الصحيح يجب أن يعطي نفس نتيجة الجمع المباشر، دفعة دفعة. هذا البرنامج يقارن الطريقتين لكل معامل:</p>
-<div id="0750832f" class="cell" data-execution_count="1">
+<div id="5c2126e0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>i, n, g <span class="op">=</span> <span class="fl">0.08</span>, <span class="dv">10</span>, <span class="fl">0.05</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pa_formula <span class="op">=</span> ((<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> n <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> (i <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> i) <span class="op">**</span> n)</span>

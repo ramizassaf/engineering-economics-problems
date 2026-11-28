@@ -610,12 +610,12 @@ PW_{7} = -60\mathord{,}000 + 17\mathord{,}000\,(P/A,\ 12\%,\ 7) = 17\mathord{,}5
 <p>الحد الأدنى 10%. ما القيمة الحالية المتوقعة وانحرافها المعياري؟ وما احتمال الخسارة إذا كان توزيع القيمة الحالية طبيعيا تقريبا؟</p>
 <p><strong>الحل:</strong></p>
 <p><strong>القيمة المتوقعة:</strong> نخصم القيم المتوقعة:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>C</mi><mo>+</mo><mo>∑</mo><mfrac><msub><mi>μ</mi><mi>t</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mn>9</mn><mi>,</mi><mn>368.90</mn></mrow><annotation encoding="application/x-tex">
-\mathrm{E}(PW) = -C + \sum \frac{\mu_t}{(1 + i)^t} = 9\mathord{,}368.90
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">E</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>W</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>C</mi><mo>+</mo><mo>∑</mo><mfrac><msub><mi>μ</mi><mi>k</mi></msub><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow></mfrac><mo>=</mo><mn>9</mn><mi>,</mi><mn>368.90</mn></mrow><annotation encoding="application/x-tex">
+\mathrm{E}(PW) = -C + \sum \frac{\mu_k}{(1 + i)^k} = 9\mathord{,}368.90
 </annotation></semantics></math></p>
 <p><strong>التباين:</strong> كل تدفق مضروب في معامل الخصم، فتباينه يضرب في مربع المعامل. والتدفقات مستقلة، فتجمع التباينات:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mo>∑</mo><mfrac><msubsup><mi>σ</mi><mi>t</mi><mn>2</mn></msubsup><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>2</mn><mi>t</mi></mrow></msup></mrow></mfrac><mo>=</mo><mn>52</mn><mi>,</mi><mn>172</mn><mi>,</mi><mn>575</mn></mrow><annotation encoding="application/x-tex">
-\sigma^2_{PW} = \sum \frac{\sigma_t^2}{(1 + i)^{2t}} = 52\mathord{,}172\mathord{,}575
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow><mn>2</mn></msubsup><mo>=</mo><mo>∑</mo><mfrac><msubsup><mi>σ</mi><mi>k</mi><mn>2</mn></msubsup><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mn>2</mn><mi>k</mi></mrow></msup></mrow></mfrac><mo>=</mo><mn>52</mn><mi>,</mi><mn>172</mn><mi>,</mi><mn>575</mn></mrow><annotation encoding="application/x-tex">
+\sigma^2_{PW} = \sum \frac{\sigma_k^2}{(1 + i)^{2k}} = 52\mathord{,}172\mathord{,}575
 </annotation></semantics></math></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>P</mi><mi>W</mi></mrow></msub><mo>=</mo><mn>7</mn><mi>,</mi><mn>223.06</mn></mrow><annotation encoding="application/x-tex">
 \sigma_{PW} = 7\mathord{,}223.06
@@ -858,9 +858,11 @@ P(\mathrm{H} \mid \mathrm{low}) = \frac{0.60 \times 0.20}{0.4400} = 0.2727
 <li><strong>خيار الإيقاف:</strong> إذا فشل المشروع، نوقفه ونبيع أصوله، بدل أن نستمر في الخسارة.</li>
 </ul>
 <p>القيمة الحالية العادية تفترض أن الشركة ستلتزم بخطة واحدة مهما حدث. لذلك تقلل قيمة المشاريع التي فيها مرونة. قيمة الخيار هي الفرق:</p>
+<div class="ee-eqbox">
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">o</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mspace width="0.222em"></mspace><mi mathvariant="normal">v</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">e</mi></mrow><mo>=</mo><mi>P</mi><msub><mi>W</mi><mrow><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mspace width="0.222em"></mspace><mi>o</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub><mo>−</mo><mi>P</mi><msub><mi>W</mi><mrow><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>o</mi><mi>u</mi><mi>t</mi><mspace width="0.222em"></mspace><mi>o</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">
 \mathrm{option\ value} = PW_{with\ option} - PW_{without\ option}
 </annotation></semantics></math></p>
+</div>
 <p>نحسب القيمة مع الخيار بشجرة القرار: عند كل نقطة بعد ظهور المعلومات، نختار الأفضل.</p>
 <div id="ex-10-10" class="ee-item" data-id="c10-ex-delay" data-kind="example" data-label="10.10">
 <p><strong>مثال 10.10: خيار التأجيل</strong></p>
@@ -973,7 +975,7 @@ z = \frac{12\mathord{,}000.00 - 15\mathord{,}000}{3\mathord{,}000} = -1.00
 </tbody>
 </table>
 <p>الضريبة 20%، والحد الأدنى 12%، والعمر 5 سنوات، والاستهلاك بالقسط الثابت.</p>
-<div id="721850ea" class="cell" data-execution_count="1">
+<div id="e296d8ed" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy_financial <span class="im">as</span> npf</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
