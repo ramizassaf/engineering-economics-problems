@@ -80,7 +80,7 @@ map:
   ch07: {park: [10, 12], blank: [17, 18], sullivan: [7, 11]}
   ch08: {park: [11], blank: [14], sullivan: [8]}
   ch09: {park: [14], blank: [11], sullivan: [9]}
-  ch10: {park: [12], blank: [18, 19], sullivan: [12]}
+  ch10: {park: [12, 13], blank: [18, 19], sullivan: [12]}
   ch11: {park: [15], blank: [10, 12], sullivan: [13]}
   ch12: {park: [16], blank: [9], sullivan: [10]}
   ch13: {blank: [10], sullivan: [14]}

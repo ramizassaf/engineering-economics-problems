@@ -603,6 +603,43 @@ for _iid, _dirs in {
     CHECKS[_iid] = {"Sb": (lambda d: (lambda v: mcda_best(v, d)))(_dirs)}
 
 
+# ---------------------------------------------------------------- lease or buy (ch07), real options (ch10)
+def lease_buy(v):
+    i, n, t = v["i"], int(v["n"]), v["t"]
+    buy = [-v["C"]] + [t * v["C"] / n] * n
+    buy[-1] += v.get("S", 0) * (1 - t)
+    return float(npf.npv(i, buy)), float(npf.npv(i, [0] + [-v["L"] * (1 - t)] * n))
+
+
+def opt_delay(v):
+    i, n = v["i"], int(v["n"])
+    ph = float(npf.npv(i, [-v["C"]] + [v["AH"]] * n))
+    pl = float(npf.npv(i, [-v["C"]] + [v["AL"]] * n))
+    return v["p"] * max(ph, 0) / (1 + i) - max(v["p"] * ph + (1 - v["p"]) * pl, 0)
+
+
+def opt_abandon(v):
+    i, n = v["i"], int(v["n"])
+    ph = float(npf.npv(i, [-v["C"]] + [v["AH"]] * n))
+    keep = float(npf.npv(i, [0] + [v["AL"]] * (n - 1)))
+    pl_keep = float(npf.npv(i, [-v["C"]] + [v["AL"]] * n))
+    pl_opt = -v["C"] + (v["AL"] + max(keep, v["S"])) / (1 + i)
+    return v["p"] * ph + (1 - v["p"]) * pl_opt - (v["p"] * ph + (1 - v["p"]) * pl_keep)
+
+
+CHECKS.update({
+    "c07-ex-lease": {"PB": lambda v: lease_buy(v)[0], "PL": lambda v: lease_buy(v)[1]},
+    "c07-l-04": {"PB": lambda v: lease_buy(v)[0], "PL": lambda v: lease_buy(v)[1]},
+    "c07-l-05": {"Lmax": lambda v: brentq(lambda L: lease_buy(dict(v, L=L))[1] - lease_buy(dict(v, L=0))[0], 0, 1e7)},
+    "c07-l-09": {"Smin": lambda v: brentq(lambda S: lease_buy(dict(v, S=S))[0] - lease_buy(v)[1], -1e7, 1e7)},
+    "c07-ex-lease-loan": {"PB": lambda v: -v["C"] + v["t"] * v["C"] / 3 * float(-npf.pv(v["r"] * (1 - v["t"]), 3, 1))},
+    "c10-ex-delay": {"V": opt_delay},
+    "c10-k-02": {"V": opt_delay},
+    "c10-ex-abandon": {"V": opt_abandon},
+    "c10-k-03": {"P1": lambda v: opt_abandon(v) + v["p"] * float(npf.npv(v["i"], [-v["C"]] + [v["AH"]] * int(v["n"]))) + (1 - v["p"]) * float(npf.npv(v["i"], [-v["C"]] + [v["AL"]] * int(v["n"])))},
+})
+
+
 def main():
     items = {}
     for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):

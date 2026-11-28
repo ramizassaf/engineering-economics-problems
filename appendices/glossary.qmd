@@ -10,6 +10,7 @@
 
 | المصطلح | English | التعريف | الفصل |
 | ---------------- | ---------------- | ---------------------------------- | ------ |
+| الأجرة | [lease payment]{.en dir="ltr"} | الدفعة الدورية للمؤجر، وتطرح من الدخل الخاضع للضريبة. | [7](#sec-ch7) |
 | إجمالي الربح | [gross margin (gross profit)]{.en dir="ltr"} | الإيراد ناقص تكلفة البضاعة المباعة. | [ملحق المحاسبة](#sec-accounting) |
 | الاحتمال | [probability]{.en dir="ltr"} | رقم بين 0 و1 يقيس إمكانية حدوث نتيجة. | [10](#sec-ch10) |
 | احتمال الخسارة | [probability of loss]{.en dir="ltr"} | احتمال أن تكون القيمة الحالية أقل من صفر. | [10](#sec-ch10) |
@@ -19,6 +20,7 @@
 | الاستثمار الإضافي | [incremental investment]{.en dir="ltr"} | الفرق في الاستثمار بين البديل الأغلى والأرخص. | [4](#sec-ch4) |
 | الاستهلاك | [depreciation]{.en dir="ltr"} | توزيع تكلفة الأصل على سنوات عمره كمصروف محاسبي. | [5](#sec-ch5) |
 | الاستهلاك المتراكم | [accumulated depreciation]{.en dir="ltr"} | مجموع الاستهلاك من بداية عمر الأصل حتى تاريخه. | [5](#sec-ch5) |
+| الاستئجار | [leasing]{.en dir="ltr"} | استخدام أصل يملكه غيرك مقابل أجرة دورية، بدل شرائه. | [7](#sec-ch7) |
 | الأسهم العادية | [common stock]{.en dir="ltr"} | حصص ملكية لها حق في الأرباح بعد الدائنين وأصحاب الأسهم الممتازة. | [11](#sec-ch11) |
 | الأسهم الممتازة | [preferred stock]{.en dir="ltr"} | أسهم لها توزيع ثابت يدفع قبل أصحاب الأسهم العادية. | [11](#sec-ch11) |
 | الأصل | [asset]{.en dir="ltr"} | شيء تملكه الشركة وله قيمة، مثل آلة أو مبنى. | [5](#sec-ch5) |
@@ -109,6 +111,10 @@
 | الخصم | [discounting]{.en dir="ltr"} | نقل مبلغ مستقبلي إلى قيمته الحالية بنسبة الفائدة. | [1](#sec-ch1) |
 | الخصوم | [liabilities]{.en dir="ltr"} | ما على الشركة من التزامات للغير. | [ملحق المحاسبة](#sec-accounting) |
 | الخصوم المتداولة | [current liabilities]{.en dir="ltr"} | التزامات تستحق خلال سنة. | [ملحق المحاسبة](#sec-accounting) |
+| خيار الإيقاف | [option to abandon]{.en dir="ltr"} | إيقاف المشروع وبيع أصوله إذا فشل، بدل الاستمرار في الخسارة. | [10](#sec-ch10) |
+| خيار التأجيل | [option to defer]{.en dir="ltr"} | الانتظار حتى تتضح الظروف، ثم الاستثمار فقط إذا كانت جيدة. | [10](#sec-ch10) |
+| خيار التوسعة | [option to expand]{.en dir="ltr"} | البدء بمشروع صغير، وتوسيعه إذا نجح. | [10](#sec-ch10) |
+| الخيار الحقيقي | [real option]{.en dir="ltr"} | حق، لا التزام، في تغيير قرار المشروع بعد أن تتضح المعلومات. | [10](#sec-ch10) |
 
 ### د {.unnumbered}
 
@@ -279,6 +285,7 @@
 | المنافع | [benefits]{.en dir="ltr"} | ما يكسبه الناس من المشروع العام، مثل توفير الوقت وقلة الحوادث. | [12](#sec-ch12) |
 | منحنى التعلم | [learning curve]{.en dir="ltr"} | ينخفض زمن الوحدة بنسبة ثابتة كلما تضاعف عدد الوحدات المنتجة. | [6](#sec-ch6) |
 | المنفعة الصافية | [net benefit]{.en dir="ltr"} | المنافع ناقص الأضرار ناقص التكاليف، بالقيمة الحالية أو السنوية. | [12](#sec-ch12) |
+| المؤجر | [lessor]{.en dir="ltr"} | مالك الأصل الذي يؤجره، ويأخذ الاستهلاك وقيمة البيع. | [7](#sec-ch7) |
 | مؤشر الربحية | [profitability index (PI)]{.en dir="ltr"} | القيمة الحالية للتدفقات الداخلة على الاستثمار. | [11](#sec-ch11) |
 | الميزانية المحدودة | [capital rationing (budget limitation)]{.en dir="ltr"} | ميزانية لا تكفي لكل المشاريع المقبولة. | [11](#sec-ch11) |
 
@@ -446,7 +453,10 @@
 | [inventory turnover]{.en dir="ltr"} | دوران المخزون |
 | [irregular (uneven) cash flows]{.en dir="ltr"} | تدفقات غير منتظمة |
 | [learning curve]{.en dir="ltr"} | منحنى التعلم |
+| [lease payment]{.en dir="ltr"} | الأجرة |
+| [leasing]{.en dir="ltr"} | الاستئجار |
 | [least common multiple of lives]{.en dir="ltr"} | المضاعف المشترك |
+| [lessor]{.en dir="ltr"} | المؤجر |
 | [lexicography]{.en dir="ltr"} | الترتيب المعجمي |
 | [liabilities]{.en dir="ltr"} | الخصوم |
 | [life-cycle cost]{.en dir="ltr"} | تكلفة دورة الحياة |
@@ -476,6 +486,9 @@
 | [operating cash flow]{.en dir="ltr"} | التدفق النقدي التشغيلي |
 | [operating income]{.en dir="ltr"} | الربح التشغيلي |
 | [opportunity cost]{.en dir="ltr"} | تكلفة الفرصة البديلة |
+| [option to abandon]{.en dir="ltr"} | خيار الإيقاف |
+| [option to defer]{.en dir="ltr"} | خيار التأجيل |
+| [option to expand]{.en dir="ltr"} | خيار التوسعة |
 | [outsider viewpoint]{.en dir="ltr"} | وجهة نظر شخص من الخارج |
 | [overhaul]{.en dir="ltr"} | الإصلاح الشامل |
 | [pairwise comparison (AHP)]{.en dir="ltr"} | المقارنة الزوجية |
@@ -494,6 +507,7 @@
 | [rank-order weights]{.en dir="ltr"} | أوزان الترتيب |
 | [rate of return (ROR)]{.en dir="ltr"} | معدل العائد |
 | [real (inflation-free) interest rate]{.en dir="ltr"} | النسبة الحقيقية |
+| [real option]{.en dir="ltr"} | الخيار الحقيقي |
 | [reinvestment rate]{.en dir="ltr"} | نسبة إعادة الاستثمار |
 | [remaining balance]{.en dir="ltr"} | الرصيد المتبقي |
 | [replacement]{.en dir="ltr"} | الاستبدال |
