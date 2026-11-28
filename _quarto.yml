@@ -33,6 +33,7 @@ book:
     - chapters/ch12.qmd
     - chapters/ch13.qmd
   appendices:
+    - appendices/symbols.qmd
     - appendices/tables.qmd
     - appendices/derivations.qmd
     - appendices/accounting.qmd

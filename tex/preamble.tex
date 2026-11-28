@@ -11,8 +11,13 @@
 % Numbers set as English runs use the Latin shapes of the same font.
 \babelfont[english]{rm}{Amiri}
 \AtBeginEnvironment{Shaded}{\bodydir TLT\pardir TLT\textdir TLT}
-\AtBeginEnvironment{verbatim}{\selectlanguage{english}\pardir TLT\textdir TLT}
-\AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}
+% Plain blocks (```excel, program output) become fvextra Verbatim so they wrap too.
+\AtBeginDocument{\RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere,formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}
+% Long code lines wrap inside the text width (fvextra), with a small arrow
+% at the end of the broken line and the rest indented under it.
+\usepackage{fvextra}
+\fvset{breaklines=true,breakanywhere=true,breaksymbolleft={\tiny$\hookleftarrow$},breaksymbolindentleft=1.2em}
+\AtBeginDocument{\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines,breakanywhere,formatcom={\selectlanguage{english}\pardir TLT\textdir TLT}}}
 \setlength{\parskip}{0.45em}
 % Cover: the first page of the PDF, built from tex/cover/cover.tex.
 \usepackage{pdfpages}
