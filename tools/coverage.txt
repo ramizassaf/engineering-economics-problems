@@ -3,8 +3,8 @@ c02: 102 of 118 items with a calculation are checked independently (a recomputed
 c03: 104 of 133 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c04: 102 of 102 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c05: 103 of 103 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c06: 101 of 112 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
-c07: 97 of 115 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c06: 110 of 112 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
+c07: 115 of 115 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c08: 85 of 101 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c09: 87 of 92 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
 c10: 101 of 104 items with a calculation are checked independently (a recomputed answer, or printed steps that recompute)
@@ -77,35 +77,8 @@ c03-i-06
 c03-i-07
 c03-i-09
 c03-i-10
-c06-b-06
-c06-b-08
-c06-b-10
-c06-b-12
-c06-c-07
-c06-e-10
 c06-ex-average-cost
 c06-ex-sunk
-c06-f-01
-c06-i-01
-c06-i-06
-c07-b-09
-c07-b-14
-c07-c-08
-c07-d-03
-c07-d-18
-c07-e-03
-c07-ex-wc-sales
-c07-f-05
-c07-f-09
-c07-g-01
-c07-g-02
-c07-g-03
-c07-g-05
-c07-g-06
-c07-g-07
-c07-g-08
-c07-h-08
-c07-l-11
 c08-b-06
 c08-b-12
 c08-c-09

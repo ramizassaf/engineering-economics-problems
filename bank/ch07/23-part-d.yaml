@@ -373,7 +373,7 @@ items:
     القيمة الحالية صفر عندما:
 
     $$
-    \left(Q\,(p - v) - F\right)(1 - t) + t\,D = C\,(A/P,\ i,\ n)
+    \left(Q\,(p - v) - FC\right)(1 - t) + t\,D = C\,(A/P,\ i,\ n)
     $$
 
     نحل لـ p:

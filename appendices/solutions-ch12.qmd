@@ -95,7 +95,7 @@ $$
 [**12.21**]{#sol-12-21} نعم. المجتمع فقد إنتاج الأرض:
 
 $$
-D = 120 \times 900 = 108\mathord{,}000
+\mathrm{Dis} = 120 \times 900 = 108\mathord{,}000
 $$
 
 التعويض نقل مال من الحكومة إلى المزارعين، فهو تكلفة على الحكومة. لكنه لا يعيد الإنتاج المفقود. نحسب واحدا فقط: إما ثمن الأرض تكلفة في السنة 0، إذا كان يعكس قيمة إنتاجها، وإما الدخل الضائع ضررا سنويا. لا الاثنين.
@@ -129,7 +129,7 @@ $$
 $$
 
 $$
-\frac{B - D}{I + M - S} = \frac{(700\mathord{,}000 - 80\mathord{,}000) \times 15.3725}{6\mathord{,}000\mathord{,}000 + 150\mathord{,}000 \times 15.3725 - 1\mathord{,}000\mathord{,}000 \times 0.2314} = 1.1804
+\frac{B - \mathrm{Dis}}{I + C' - S} = \frac{(700\mathord{,}000 - 80\mathord{,}000) \times 15.3725}{6\mathord{,}000\mathord{,}000 + 150\mathord{,}000 \times 15.3725 - 1\mathord{,}000\mathord{,}000 \times 0.2314} = 1.1804
 $$
 
 [**12.25**]{#sol-12-25} المنافع سلسلة متدرجة خطيا، كما في الفصل الثاني:
@@ -273,11 +273,11 @@ $$
 [**12.35**]{#sol-12-35}
 
 $$
-\frac{B - D}{I + M - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000}{3\mathord{,}000\mathord{,}000 + 1\mathord{,}200\mathord{,}000 - 200\mathord{,}000} = 1.3750
+\frac{B - \mathrm{Dis}}{I + C' - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000}{3\mathord{,}000\mathord{,}000 + 1\mathord{,}200\mathord{,}000 - 200\mathord{,}000} = 1.3750
 $$
 
 $$
-\frac{B - D - M}{I - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000 - 1\mathord{,}200\mathord{,}000}{3\mathord{,}000\mathord{,}000 - 200\mathord{,}000} = 1.5357
+\frac{B - \mathrm{Dis} - C'}{I - S} = \frac{6\mathord{,}000\mathord{,}000 - 500\mathord{,}000 - 1\mathord{,}200\mathord{,}000}{3\mathord{,}000\mathord{,}000 - 200\mathord{,}000} = 1.5357
 $$
 
 القرار واحد: مجد.
@@ -315,11 +315,11 @@ $$
 [**12.38**]{#sol-12-38} المشروع مجد ما دامت المنافع ناقص الأضرار لا تقل عن التكاليف:
 
 $$
-5\mathord{,}000\mathord{,}000 - D \ge 4\mathord{,}000\mathord{,}000
+5\mathord{,}000\mathord{,}000 - \mathrm{Dis} \ge 4\mathord{,}000\mathord{,}000
 $$
 
 $$
-D \le 1\mathord{,}000\mathord{,}000
+\mathrm{Dis} \le 1\mathord{,}000\mathord{,}000
 $$
 
 إذا قدرت الأضرار بأكثر من 1,000,000 دينار، يصبح المشروع غير مجد. هذا الرقم يحدد كم يستحق أن تنفق الجهة على عزل الضجيج.
@@ -521,7 +521,7 @@ $$
 الأول مجد منفردا. الإضافة:
 
 $$
-\frac{\Delta (B - D)}{\Delta C} = \frac{4\mathord{,}600\mathord{,}000 - 3\mathord{,}400\mathord{,}000}{4\mathord{,}200\mathord{,}000 - 3\mathord{,}000\mathord{,}000} = 1.0000
+\frac{\Delta (B - \mathrm{Dis})}{\Delta C} = \frac{4\mathord{,}600\mathord{,}000 - 3\mathord{,}400\mathord{,}000}{4\mathord{,}200\mathord{,}000 - 3\mathord{,}000\mathord{,}000} = 1.0000
 $$
 
 الثاني يبرر الإضافة. الأضرار الأكبر قرب المدينة تؤثر في الفرق، لا في كل بديل وحده فقط.
@@ -891,7 +891,7 @@ $$
 $$
 
 $$
-\frac{B - D}{C} = \frac{2\mathord{,}210\mathord{,}000 \times 15.3725}{30000000 + (350000 - 120000) \times 15.3725} = 1.0130
+\frac{B - \mathrm{Dis}}{C} = \frac{2\mathord{,}210\mathord{,}000 \times 15.3725}{30000000 + (350000 - 120000) \times 15.3725} = 1.0130
 $$
 
 المشروع مجد، لكن النسبة قريبة جدا من 1.

@@ -81,7 +81,7 @@ format:
     default-image-extension: svg
     number-depth: 2
     include-after-body: tex/load-scripts.html
-    filters: [tex/minus-ltr.lua]
+    filters: [tex/minus-ltr.lua, tex/boxes.lua]
   pdf:
     documentclass: scrbook
     classoption: [oneside]
@@ -97,4 +97,4 @@ format:
     default-image-extension: pdf
     number-depth: 2
     include-in-header: tex/preamble.tex
-    filters: [tex/percent-ltr.lua, tex/en-ltr.lua]
+    filters: [tex/percent-ltr.lua, tex/en-ltr.lua, tex/boxes.lua]

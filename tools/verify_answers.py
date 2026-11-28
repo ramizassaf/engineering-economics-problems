@@ -948,6 +948,64 @@ CHECKS.update({
 })
 
 
+# ---------------------------------------------------------------- chapters 6 and 7: remaining items, from income statements
+def project_pw(i, C, W, rev, ops, deps, M=0.0, t=0.0):
+    """PW of an after-tax project built line by line: tax on R - O - D each year,
+    working capital out at 0 and back at the end, sale taxed on M - book value."""
+    n = len(rev)
+    flows = [-C - W]
+    for k in range(n):
+        taxable = rev[k] - ops[k] - deps[k]
+        flows.append(rev[k] - ops[k] - t * taxable)
+    bv = C - sum(deps)
+    flows[-1] += M - t * (M - bv) + W
+    return npv_(i, flows)
+
+
+def loan_interest(L, r, n, equal_principal=False):
+    if equal_principal:
+        return [(L - k * L / n) * r for k in range(n)]
+    return [float(-npf.ipmt(r, k, n, L)) for k in range(1, n + 1)]
+
+
+CHECKS.update({
+    "c06-b-06": {"a%d" % q: (lambda q: lambda v: (v["F"] + v["v"] * q * 1000) / (q * 1000))(q) for q in (1, 5, 10)},
+    "c06-b-08": {"inc": lambda v: (v["v"] * v["Q"] * v["g"]) / (v["F"] + v["v"] * v["Q"])},
+    "c06-b-10": {"D": lambda v: v["B"] / v["n"], "Dh": lambda v: v["B"] / (v["n"] * v["h"])},
+    "c06-b-12": {"g": lambda v: (0.1 * (v["p"] - v["v"]) * v["Q"]) / ((v["p"] - v["v"]) * v["Q"] - v["F"]) if (v["p"] - v["v"]) * v["Q"] > v["F"] else 0.0},
+    "c06-c-07": {"m": lambda v: 1 - v["F"] / (v["p"] - v["v"]) / v["Q"]},
+    "c06-e-10": {"m1": lambda v: v["b"] * 2001, "m2": lambda v: v["b"] * 4001},
+    "c06-f-01": {"keep": lambda v: v["R"] - v["O"]},
+    "c06-i-01": {"Q": lambda v: brentq(lambda q: v["p"] * q - v["F"] - v["v"] * q, 0, 1e7)},
+    "c06-i-06": {"p%d" % r: (lambda r: lambda v: npv_(r / 100, [v["Ca"]] + [v["Ea"] + v["M"]] * 10) - npv_(r / 100, [v["Cb"]] + [v["Eb"] + v["M"]] * 10))(r) for r in (6, 12)},
+    "c07-ex-wc-sales": {"W%d" % k: (lambda k: lambda v: v["w"] * v["S"] * (1 + v["g"]) ** (k - 1))(k) for k in range(1, 5)},
+    "c07-b-09": {"c%d" % k: (lambda k: lambda v: (v["R"] - v["O"]) - v["t"] * (v["R"] - v["O"] - db_table(v["C"], 0.4, k)[-1]))(k) for k in (1, 2, 3)},
+    "c07-b-14": {"c%d" % k: (lambda k: lambda v: v["R"] * (1 + v["g"]) ** (k - 1) - v["O"] - v["t"] * (v["R"] * (1 + v["g"]) ** (k - 1) - v["O"] - v["C"] / 3))(k) for k in (1, 2, 3)},
+    "c07-c-08": {"W%d" % k: (lambda k: lambda v: v["w"] * v["S%d" % k])(k) for k in (1, 2, 3)},
+    "c07-d-03": {"PW": lambda v: project_pw(v["i"], v["C"], v["W"], [v["R"]] * 4, [v["O"]] * 4, [v["C"] / 4] * 4, 0, v["t"])},
+    "c07-d-18": {"Pm": lambda v: project_pw(v["i"], v["C"], 0, [v["R"]] * int(v["n"]), [v["O"]] * int(v["n"]), [v["C"] / v["n"]] * int(v["n"]), v["M"], v["t"]),
+                 "Pp": lambda v: project_pw(v["i"], v["C"], 0, [0.8 * v["R"]] * int(v["n"]), [1.1 * v["O"]] * int(v["n"]), [v["C"] / v["n"]] * int(v["n"]), 0, v["t"]),
+                 "Po": lambda v: project_pw(v["i"], v["C"], 0, [1.1 * v["R"]] * int(v["n"]), [0.9 * v["O"]] * int(v["n"]), [v["C"] / v["n"]] * int(v["n"]), 1.5 * v["M"], v["t"])},
+    "c07-e-03": {"P": lambda v: v["t"] * npv_(v["i"], [0] + loan_interest(v["L"], v["r"], 3, True))},
+    "c07-f-05": {"Aa": lambda v: -float(npf.pmt(v["i"], 5, -project_pw(v["i"], v["Ca"], 0, [0] * 5, [v["Oa"]] * 5, [v["Ca"] / 5] * 5, v["Ma"], v["t"]))),
+                 "Ab": lambda v: -float(npf.pmt(v["i"], 5, -project_pw(v["i"], v["Cb"], 0, [0] * 5, [v["Ob"]] * 5, [v["Cb"] / 5] * 5, v["Mb"], v["t"])))},
+    "c07-f-09": {"a0": lambda v: aw_life(v["Ca"], 0, [v["Oa"]] * 5, v["i"]), "b0": lambda v: aw_life(v["Cb"], 0, [v["Ob"]] * 5, v["i"]),
+                 "a1": lambda v: -float(npf.pmt(v["i"], 5, -project_pw(v["i"], v["Ca"], 0, [0] * 5, [v["Oa"]] * 5, [v["Ca"] / 5] * 5, 0, v["t"]))),
+                 "b1": lambda v: -float(npf.pmt(v["i"], 5, -project_pw(v["i"], v["Cb"], 0, [0] * 5, [v["Ob"]] * 5, [v["Cb"] / 5] * 5, 0, v["t"])))},
+    "c07-g-01": {"PW": lambda v: project_pw(0.12, 120000, 10000, [90000] * 5, [40000] * 5, [24000] * 5, 15000, 0.2)},
+    "c07-g-02": {"d%d" % k: (lambda k: lambda v: ddb_switch(100000, 0, 5)[k - 1])(k) for k in range(1, 5)},
+    "c07-g-03": {"P%d" % q: (lambda q: lambda v: project_pw(0.12, 120000, 10000, [90000 * q / 100] * 5, [40000] * 5, [24000] * 5, 15000, 0.2))(q) for q in (80, 90, 100, 110)},
+    "c07-g-05": {"Psl": lambda v: 0.2 * npv_(0.1, [0] + [20000] * 5), "Pdd": lambda v: 0.2 * npv_(0.1, [0] + ddb_switch(100000, 0, 5)),
+                 "Psy": lambda v: 0.2 * npv_(0.1, [0] + [syd(100000, 0, 5, y) for y in range(1, 6)])},
+    "c07-g-06": {"I%d" % k: (lambda k: lambda v: loan_interest(60000, 0.08, 4)[k - 1])(k) for k in range(1, 5)},
+    "c07-g-07": {"W2": lambda v: 0.15 * 65000},
+    "c07-g-08": {"rb": lambda v: rate_(5, 30000, 80000), "ra": lambda v: rate_(5, 30000 - 0.2 * (30000 - 16000), 80000)},
+    "c07-h-08": {"a": lambda v: v["Sv"] - v["t"] * v["Sv"]},
+    "c07-l-11": {"B20": lambda v: project_pw(v["i"], v["C"], 0, [0] * int(v["n"]), [0] * int(v["n"]), [v["C"] / v["n"]] * int(v["n"]), 0, 0.2),
+                 "L20": lambda v: npv_(v["i"], [0] + [-v["L"] * 0.8] * int(v["n"])), "L0": lambda v: npv_(v["i"], [0] + [-v["L"]] * int(v["n"]))},
+})
+
+
 def main():
     items = {}
     for f in sorted((ROOT / "bank").glob("ch*/*.yaml")):
